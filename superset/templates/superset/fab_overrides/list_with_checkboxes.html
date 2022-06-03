@@ -16,8 +16,8 @@
   specific language governing permissions and limitations
   under the License.
 #}
-{% import 'appbuilder/general/lib.html' as lib %}
-{% extends 'appbuilder/general/widgets/base_list.html' %}
+{% import "appbuilder/general/lib.html" as lib %}
+{% extends "appbuilder/general/widgets/base_list.html" %}
 
 
     {% block begin_content scoped %}
@@ -75,14 +75,14 @@
                 {% endif %}
                 {% for value in include_columns %}
                     <td>
-                    {% if item[value].__class__.__name__ == 'bool' %}
+                    {% if item[value].__class__.__name__ == "bool" %}
                       <input
                           class="form-control"
                           type="checkbox"
-                          data-toggle="tooltip" rel="tooltip" title="{{_('Use the edit button to change this field')}}"
-                          {{'checked' if item[value] }}
-                          name="{{ '{}__{}'.format(pk, value) }}"
-                          id="{{ '{}__{}'.format(pk, value) }}"
+                          data-toggle="tooltip" rel="tooltip" title="{{_("Use the edit button to change this field")}}"
+                          {{"checked" if item[value] }}
+                          name="{{ "{}__{}".format(pk, value) }}"
+                          id="{{ "{}__{}".format(pk, value) }}"
                           disabled readonly/>
                     {% else %}
                       {{ item[value] }}

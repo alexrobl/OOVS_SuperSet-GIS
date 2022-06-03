@@ -16,8 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React from 'react';
-import { t } from '@superset-ui/core';
+import React from "react";
+import { t } from "@superset-ui/core";
 import {
   ControlPanelConfig,
   D3_FORMAT_OPTIONS,
@@ -25,9 +25,9 @@ import {
   sharedControls,
   ControlStateMapping,
   emitFilterControl,
-} from '@superset-ui/chart-controls';
-import { DEFAULT_FORM_DATA, EchartsFunnelLabelTypeType } from './types';
-import { legendSection } from '../controls';
+} from "@superset-ui/chart-controls";
+import { DEFAULT_FORM_DATA, EchartsFunnelLabelTypeType } from "./types";
+import { legendSection } from "../controls";
 
 const { labelType, numberFormat, showLabels } = DEFAULT_FORM_DATA;
 
@@ -38,16 +38,16 @@ const config: ControlPanelConfig = {
   controlPanelSections: [
     sections.legacyRegularTime,
     {
-      label: t('Query'),
+      label: t("Query"),
       expanded: true,
       controlSetRows: [
-        ['groupby'],
-        ['metric'],
-        ['adhoc_filters'],
+        ["groupby"],
+        ["metric"],
+        ["adhoc_filters"],
         emitFilterControl,
         [
           {
-            name: 'row_limit',
+            name: "row_limit",
             config: {
               ...sharedControls.row_limit,
               default: 10,
@@ -56,13 +56,13 @@ const config: ControlPanelConfig = {
         ],
         [
           {
-            name: 'sort_by_metric',
+            name: "sort_by_metric",
             config: {
               default: true,
-              type: 'CheckboxControl',
-              label: t('Sort by metric'),
+              type: "CheckboxControl",
+              label: t("Sort by metric"),
               description: t(
-                'Whether to sort results by the selected metric in descending order.',
+                "Whether to sort results by the selected metric in descending order.",
               ),
             },
           },
@@ -70,64 +70,64 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('Chart Options'),
+      label: t("Chart Options"),
       expanded: true,
       controlSetRows: [
-        ['color_scheme'],
+        ["color_scheme"],
         ...funnelLegendSection,
         // eslint-disable-next-line react/jsx-key
-        [<div className="section-header">{t('Labels')}</div>],
+        [<div className="section-header">{t("Labels")}</div>],
         [
           {
-            name: 'label_type',
+            name: "label_type",
             config: {
-              type: 'SelectControl',
-              label: t('Label Type'),
+              type: "SelectControl",
+              label: t("Label Type"),
               default: labelType,
               renderTrigger: true,
               choices: [
-                [EchartsFunnelLabelTypeType.Key, 'Category Name'],
-                [EchartsFunnelLabelTypeType.Value, 'Value'],
-                [EchartsFunnelLabelTypeType.Percent, 'Percentage'],
-                [EchartsFunnelLabelTypeType.KeyValue, 'Category and Value'],
+                [EchartsFunnelLabelTypeType.Key, "Category Name"],
+                [EchartsFunnelLabelTypeType.Value, "Value"],
+                [EchartsFunnelLabelTypeType.Percent, "Percentage"],
+                [EchartsFunnelLabelTypeType.KeyValue, "Category and Value"],
                 [
                   EchartsFunnelLabelTypeType.KeyPercent,
-                  'Category and Percentage',
+                  "Category and Percentage",
                 ],
                 [
                   EchartsFunnelLabelTypeType.KeyValuePercent,
-                  'Category, Value and Percentage',
+                  "Category, Value and Percentage",
                 ],
               ],
-              description: t('What should be shown on the label?'),
+              description: t("What should be shown on the label?"),
             },
           },
         ],
         [
           {
-            name: 'number_format',
+            name: "number_format",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('Number format'),
+              label: t("Number format"),
               renderTrigger: true,
               default: numberFormat,
               choices: D3_FORMAT_OPTIONS,
               description: `${t(
-                'D3 format syntax: https://github.com/d3/d3-format',
-              )} ${t('Only applies when "Label Type" is set to show values.')}`,
+                "D3 format syntax: https://github.com/d3/d3-format",
+              )} ${t("Only applies when "Label Type" is set to show values.")}`,
             },
           },
         ],
         [
           {
-            name: 'show_labels',
+            name: "show_labels",
             config: {
-              type: 'CheckboxControl',
-              label: t('Show Labels'),
+              type: "CheckboxControl",
+              label: t("Show Labels"),
               renderTrigger: true,
               default: showLabels,
-              description: t('Whether to display the labels.'),
+              description: t("Whether to display the labels."),
             },
           },
         ],

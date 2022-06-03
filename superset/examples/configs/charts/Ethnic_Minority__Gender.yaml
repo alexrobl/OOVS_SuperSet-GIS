@@ -19,21 +19,21 @@ viz_type: sankey
 params:
   adhoc_filters:
   - clause: WHERE
-    comparator: 'NULL'
+    comparator: "NULL"
     expressionType: SIMPLE
     filterOptionName: filter_of9xf5uks2_5pisp1se9r5
     isExtra: false
     isNew: false
-    operator: '!='
+    operator: "!="
     sqlExpression: null
     subject: ethnic_minority
   - clause: WHERE
-    comparator: 'NULL'
+    comparator: "NULL"
     expressionType: SIMPLE
     filterOptionName: filter_9ikn7htywfm_2579he7pk5x
     isExtra: false
     isNew: false
-    operator: '!='
+    operator: "!="
     sqlExpression: null
     subject: gender
   color_scheme: supersetColors

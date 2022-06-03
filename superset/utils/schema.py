@@ -24,7 +24,7 @@ from superset.utils import core as utils
 
 class OneOfCaseInsensitive(validate.OneOf):
     """
-    Marshmallow validator that's based on the built-in `OneOf`, but performs
+    Marshmallow validator that"s based on the built-in `OneOf`, but performs
     validation case insensitively.
     """
 
@@ -43,7 +43,7 @@ class OneOfCaseInsensitive(validate.OneOf):
 
 def validate_json(value: Union[bytes, bytearray, str]) -> None:
     """
-    JSON Validator that can be passed to a Marshmallow `Field`'s validate argument.
+    JSON Validator that can be passed to a Marshmallow `Field`"s validate argument.
 
     :raises ValidationError: if value is not serializable to JSON
     :param value: an object that should be parseable to JSON

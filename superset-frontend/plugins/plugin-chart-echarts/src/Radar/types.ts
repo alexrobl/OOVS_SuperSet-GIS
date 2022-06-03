@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { EChartsCoreOption } from 'echarts';
+import { EChartsCoreOption } from "echarts";
 import {
   ChartDataResponseResult,
   ChartProps,
@@ -25,14 +25,14 @@ import {
   QueryFormData,
   QueryFormMetric,
   SetDataMaskHook,
-} from '@superset-ui/core';
+} from "@superset-ui/core";
 import {
   DEFAULT_LEGEND_FORM_DATA,
   EchartsLegendFormData,
   LabelPositionEnum,
   LegendOrientation,
   LegendType,
-} from '../types';
+} from "../types";
 
 type RadarColumnConfig = Record<string, { radarMetricMaxValue?: number }>;
 
@@ -55,8 +55,8 @@ export type EchartsRadarFormData = QueryFormData &
   };
 
 export enum EchartsRadarLabelType {
-  Value = 'value',
-  KeyValue = 'key_value',
+  Value = "value",
+  KeyValue = "key_value",
 }
 
 export interface EchartsRadarChartProps extends ChartProps {
@@ -72,10 +72,10 @@ export const DEFAULT_FORM_DATA: EchartsRadarFormData = {
   labelPosition: LabelPositionEnum.Top,
   legendOrientation: LegendOrientation.Top,
   legendType: LegendType.Scroll,
-  numberFormat: 'SMART_NUMBER',
+  numberFormat: "SMART_NUMBER",
   showLabels: true,
   emitFilter: false,
-  dateFormat: 'smart_date',
+  dateFormat: "smart_date",
   isCircle: false,
 };
 

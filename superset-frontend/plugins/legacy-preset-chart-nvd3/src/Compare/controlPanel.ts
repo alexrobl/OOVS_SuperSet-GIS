@@ -16,8 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t } from '@superset-ui/core';
-import { ControlPanelConfig, sections } from '@superset-ui/chart-controls';
+import { t } from "@superset-ui/core";
+import { ControlPanelConfig, sections } from "@superset-ui/chart-controls";
 import {
   xAxisLabel,
   yAxisLabel,
@@ -30,19 +30,19 @@ import {
   yAxisShowMinmax,
   leftMargin,
   timeSeriesSection,
-} from '../NVD3Controls';
+} from "../NVD3Controls";
 
 const config: ControlPanelConfig = {
   controlPanelSections: [
     sections.legacyTimeseriesTime,
     timeSeriesSection[0],
     {
-      label: t('Chart Options'),
+      label: t("Chart Options"),
       expanded: true,
-      controlSetRows: [['color_scheme']],
+      controlSetRows: [["color_scheme"]],
     },
     {
-      label: t('X Axis'),
+      label: t("X Axis"),
       expanded: true,
       controlSetRows: [
         [xAxisLabel, bottomMargin],
@@ -51,12 +51,12 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('Y Axis'),
+      label: t("Y Axis"),
       expanded: true,
       controlSetRows: [
         [yAxisLabel, leftMargin],
         [yAxisShowMinmax, yLogScale],
-        ['y_axis_format', yAxisBounds],
+        ["y_axis_format", yAxisBounds],
       ],
     },
     timeSeriesSection[1],

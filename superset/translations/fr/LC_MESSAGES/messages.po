@@ -32,13 +32,13 @@ msgstr ""
 #: superset-frontend/src/explore/components/controls/OptionControls/index.tsx:323
 msgid ""
 "\n"
-"                This filter was inherited from the dashboard's context.\n"
-"                It won't be saved when saving the chart.\n"
+"                This filter was inherited from the dashboard"s context.\n"
+"                It won"t be saved when saving the chart.\n"
 "              "
 msgstr ""
 "\n"
 "                Ce filtre est hérite du contexte du tableau de bord.\n"
-"                Il ne sera pas sauvé à l'enregistrement du graphique.\n"
+"                Il ne sera pas sauvé à l"enregistrement du graphique.\n"
 "              "
 
 #: superset/tasks/schedules.py:184
@@ -120,9 +120,9 @@ msgid ""
 "defaults on a per\n"
 "                      database/column name level via the extra parameter."
 msgstr ""
-" standard pour s'assurer que l'ordre lexicographique\n"
-"                      coïncide avec l'ordre chronologique. Si le format\n"
-"                      de temps n’adhère pas à l'ISO 8601 standard\n"
+" standard pour s"assurer que l"ordre lexicographique\n"
+"                      coïncide avec l"ordre chronologique. Si le format\n"
+"                      de temps n’adhère pas à l"ISO 8601 standard\n"
 "                      dont vous aurez besoin pour définir une expression "
 "ou type\n"
 "                      pour transformer une chaine en date ou "
@@ -131,27 +131,27 @@ msgstr ""
 " temps est stocké\n"
 "                      en format epoch, mettez `epoch_s` ou `epoch_ms`. Si"
 " aucun pattern\n"
-"                      n'est spécifié, nous revenons à utiliser les "
+"                      n"est spécifié, nous revenons à utiliser les "
 "options par défauts\n"
-"                      de niveau database / nom de colonne via l'extra "
+"                      de niveau database / nom de colonne via l"extra "
 "parameter."
 
 #: superset-frontend/src/views/CRUD/alert/AlertReportModal.tsx:111
 msgid "!= (Is not equal)"
-msgstr "!= (N'est pas égal)"
+msgstr "!= (N"est pas égal)"
 
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:125
 msgid ""
 "${tableName\n"
-"                      .split('')\n"
+"                      .split("")\n"
 "                      .slice(0, tableName.length - 1)\n"
-"                      .join('')}\n"
+"                      .join("")}\n"
 "                    "
 msgstr ""
 "${tableName\n"
-"                      .split('')\n"
+"                      .split("")\n"
 "                      .slice(0, tableName.length - 1)\n"
-"                      .join('')}\n"
+"                      .join("")}\n"
 "                    "
 
 #: superset/security/analytics_db_safety.py:44
@@ -177,7 +177,7 @@ msgstr "%(name)s.csv"
 #: superset/db_engine_specs/snowflake.py:99
 #, python-format
 msgid "%(object)s does not exist in this database."
-msgstr "%(object)s n'existe pas dans cette base de données."
+msgstr "%(object)s n"existe pas dans cette base de données."
 
 #: superset/reports/notifications/email.py:126 superset/tasks/schedules.py:296
 #: superset/tasks/schedules.py:465
@@ -214,7 +214,7 @@ msgstr "%(user)s a obtenu le profil %(role)s qui donne accès à %(datasource)s"
 
 #: superset/views/core.py:2773
 #, python-format
-msgid "%(user)s's profile"
+msgid "%(user)s"s profile"
 msgstr "Le profil de %(user)s"
 
 #: superset/views/core.py:2442
@@ -224,7 +224,7 @@ msgid ""
 "Please recheck your query.\n"
 "Exception: %(ex)s"
 msgstr ""
-"%(validator)s n'a pas pu vérifier votre requête.\n"
+"%(validator)s n"a pas pu vérifier votre requête.\n"
 "Merci de vérifier à nouveau votre requête.\n"
 "Exception: %(ex)s"
 
@@ -328,7 +328,7 @@ msgid ""
 "(optional) default value for the filter, when using the multiple option, "
 "you can use a semicolon-delimited list of options."
 msgstr ""
-"(optionnel) valeur pas défaut pour le filtre, avec l'option multiple, "
+"(optionnel) valeur pas défaut pour le filtre, avec l"option multiple, "
 "vous pouvez utiliser un point virgule pour séparer les options."
 
 #: superset/reports/notifications/slack.py:50
@@ -539,8 +539,8 @@ msgstr "Un nom facile à comprendre"
 #: superset-frontend/src/explore/components/PropertiesModal/index.tsx:300
 msgid "A list of users who can alter the chart. Searchable by name or username."
 msgstr ""
-"Une liste d'utilisateurs qui peuvent modifier le graphique. Il est "
-"possible de chercher par nom de graphique ou d'utilisateur."
+"Une liste d"utilisateurs qui peuvent modifier le graphique. Il est "
+"possible de chercher par nom de graphique ou d"utilisateur."
 
 #: superset-frontend/plugins/legacy-plugin-chart-world-map/src/index.js:29
 msgid "A map of the world, that can indicate values in different countries."
@@ -569,8 +569,8 @@ msgid "A reference to the [Time] configuration, taking granularity into account"
 msgstr "Une référence à la configuration [Time] prends la granularité en compte"
 
 #: superset/views/alerts.py:189
-msgid "A semicolon ';' delimited list of email addresses"
-msgstr "Une liste d'e-mail séparée par un ';'"
+msgid "A semicolon ";" delimited list of email addresses"
+msgstr "Une liste d"e-mail séparée par un ";""
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:789
 #: superset/connectors/sqla/views.py:469
@@ -589,19 +589,19 @@ msgstr ""
 
 #: superset/reports/commands/exceptions.py:198
 msgid "A timeout occurred while executing the query."
-msgstr "Un timeout s'est produit lors de l'exécution de la requête."
+msgstr "Un timeout s"est produit lors de l"exécution de la requête."
 
 #: superset/reports/commands/exceptions.py:206
 msgid "A timeout occurred while generating a csv."
-msgstr "Dépassement de délai lors de la génération d'un CSV."
+msgstr "Dépassement de délai lors de la génération d"un CSV."
 
 #: superset/reports/commands/exceptions.py:210
 msgid "A timeout occurred while generating a dataframe."
-msgstr "Dépassement de délai lors de la génération d'un dataframe."
+msgstr "Dépassement de délai lors de la génération d"un dataframe."
 
 #: superset/reports/commands/exceptions.py:202
 msgid "A timeout occurred while taking a screenshot."
-msgstr "Dépassement de délai lors d'une capture d'écran."
+msgstr "Dépassement de délai lors d"une capture d"écran."
 
 #: superset-frontend/src/dashboard/components/PropertiesModal/index.jsx:168
 msgid "A valid color scheme is required"
@@ -636,7 +636,7 @@ msgstr "Accès"
 
 #: superset/initialization/__init__.py:491
 msgid "Access requests"
-msgstr "Requêtes d'accès"
+msgstr "Requêtes d"accès"
 
 #: superset/views/core.py:300
 msgid "Access was requested"
@@ -648,7 +648,7 @@ msgstr "Action"
 
 #: superset/initialization/__init__.py:419
 msgid "Action Log"
-msgstr "Journaux d'actions"
+msgstr "Journaux d"actions"
 
 #: superset-frontend/src/views/CRUD/alert/AlertList.tsx:335
 #: superset-frontend/src/views/CRUD/annotation/AnnotationList.tsx:189
@@ -695,11 +695,11 @@ msgstr "alerte"
 
 #: superset/views/annotations.py:60
 msgid "Add Annotation"
-msgstr "Ajouter une couche d'annotation"
+msgstr "Ajouter une couche d"annotation"
 
 #: superset/views/annotations.py:119
 msgid "Add Annotation Layer"
-msgstr "Ajouter une couche d'annotation"
+msgstr "Ajouter une couche d"annotation"
 
 #: superset/views/css_templates.py:38
 msgid "Add CSS Template"
@@ -782,7 +782,7 @@ msgstr "Ajouter une annotation"
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/index.jsx:213
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayerModal.tsx:238
 msgid "Add annotation layer"
-msgstr "Ajouter une couche d'annotations"
+msgstr "Ajouter une couche d"annotations"
 
 #: superset-frontend/src/views/CRUD/data/dataset/AddDatasetModal.tsx:121
 msgid "Add dataset"
@@ -830,7 +830,7 @@ msgstr "Ajouté"
 
 #: superset/connectors/druid/models.py:256
 msgid "Adding new datasource [{}]"
-msgstr "Ajout d'une nouvelle source de données [{}]"
+msgstr "Ajout d"une nouvelle source de données [{}]"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/DatabaseConnectionForm/CommonParameters.tsx:173
 #, fuzzy
@@ -970,19 +970,19 @@ msgstr "Alerte déclenchée, -période de grâce"
 
 #: superset-frontend/src/views/CRUD/alert/AlertReportModal.tsx:1123
 msgid "Alert condition"
-msgstr "Condition d'alerte"
+msgstr "Condition d"alerte"
 
 #: superset-frontend/src/views/CRUD/alert/AlertReportModal.tsx:1215
 msgid "Alert condition schedule"
-msgstr "Planification de la condition d'alerte"
+msgstr "Planification de la condition d"alerte"
 
 #: superset/reports/commands/exceptions.py:218
 msgid "Alert ended grace period."
-msgstr "L'alerte a mis fin à la période de grâce."
+msgstr "L"alerte a mis fin à la période de grâce."
 
 #: superset-frontend/src/views/CRUD/alert/components/AlertStatusIcon.tsx:82
 msgid "Alert failed"
-msgstr "L'alerte a échoué"
+msgstr "L"alerte a échoué"
 
 #: superset/reports/commands/exceptions.py:214
 msgid "Alert fired during grace period."
@@ -990,12 +990,12 @@ msgstr "Alerte déclenchée pendant la période de grâce."
 
 #: superset/reports/commands/exceptions.py:194
 msgid "Alert found an error while executing a query."
-msgstr "Une erreur a été rencontrée lors de l'exécution de la requête."
+msgstr "Une erreur a été rencontrée lors de l"exécution de la requête."
 
 #: superset-frontend/src/views/CRUD/alert/AlertReportModal.tsx:1064
 #: superset-frontend/src/views/CRUD/alert/AlertReportModal.tsx:1072
 msgid "Alert name"
-msgstr "Nom de l'alerte"
+msgstr "Nom de l"alerte"
 
 #: superset/reports/commands/exceptions.py:222
 msgid "Alert on grace period"
@@ -1007,21 +1007,21 @@ msgstr "La requête a retourné une valeur non numérique."
 
 #: superset/reports/commands/exceptions.py:186
 msgid "Alert query returned more then one column."
-msgstr "La requête a retourné plus d'une colonne."
+msgstr "La requête a retourné plus d"une colonne."
 
 #: superset/reports/commands/alert.py:105
 #, python-format
 msgid "Alert query returned more then one column. %s columns returned"
-msgstr "La requête a retourné plus d'une colonne. %s colonnes retournées"
+msgstr "La requête a retourné plus d"une colonne. %s colonnes retournées"
 
 #: superset/reports/commands/exceptions.py:177
 msgid "Alert query returned more then one row."
-msgstr "La requête a retourné plus d'une ligne."
+msgstr "La requête a retourné plus d"une ligne."
 
 #: superset/reports/commands/alert.py:96
 #, python-format
 msgid "Alert query returned more then one row. %s rows returned"
-msgstr "La requête a retourné plus d'une ligne. %s lignes retournées"
+msgstr "La requête a retourné plus d"une ligne. %s lignes retournées"
 
 #: superset-frontend/src/views/CRUD/alert/components/AlertStatusIcon.tsx:75
 msgid "Alert running"
@@ -1099,7 +1099,7 @@ msgstr "Autoriser CREATE TABLE AS"
 
 #: superset/views/database/mixins.py:113
 msgid "Allow CREATE TABLE AS option in SQL Lab"
-msgstr "Autorise l'option CREATE TABLE AS dans SQL Lab"
+msgstr "Autorise l"option CREATE TABLE AS dans SQL Lab"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:109
 #: superset/views/database/mixins.py:188
@@ -1108,7 +1108,7 @@ msgstr "Autoriser CREATE VIEW AS"
 
 #: superset/views/database/mixins.py:114
 msgid "Allow CREATE VIEW AS option in SQL Lab"
-msgstr "Autorise l'option CREATE VIEW AS dans SQL Lab"
+msgstr "Autorise l"option CREATE VIEW AS dans SQL Lab"
 
 #: superset/views/database/mixins.py:201
 msgid "Allow Csv Upload"
@@ -1220,7 +1220,7 @@ msgid ""
 "An engine must be specified when passing individual parameters to a "
 "database."
 msgstr ""
-"Un moteur doit être fournit lorsque l'on passe des paramètres individuels"
+"Un moteur doit être fournit lorsque l"on passe des paramètres individuels"
 " à la base de données."
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:623
@@ -1236,140 +1236,140 @@ msgstr "Une erreur est survenue"
 #: superset-frontend/src/components/TableLoader/index.tsx:48
 #: superset-frontend/src/utils/getClientErrorObject.ts:135
 msgid "An error occurred"
-msgstr "Un erreur s'est produite"
+msgstr "Un erreur s"est produite"
 
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:347
 msgid "An error occurred saving dataset"
-msgstr "Une erreur s'est produite durant la sauvegarde du jeu de données"
+msgstr "Une erreur s"est produite durant la sauvegarde du jeu de données"
 
 #: superset-frontend/src/SqlLab/components/QuerySearch/index.tsx:132
 msgid "An error occurred when refreshing queries"
-msgstr "Une erreur s'est produite en rafaîchissant les requêtes"
+msgstr "Une erreur s"est produite en rafaîchissant les requêtes"
 
 #: superset/key_value/commands/exceptions.py:33
 #, fuzzy
 msgid "An error occurred while accessing the value."
-msgstr "Une erreur s'est produite durant la création de la source de donnée"
+msgstr "Une erreur s"est produite durant la création de la source de donnée"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1165
 msgid ""
 "An error occurred while collapsing the table schema. Please contact your "
 "administrator."
 msgstr ""
-"Une erreur s'est produite en repliant le schéma de la table. Veuillez "
+"Une erreur s"est produite en repliant le schéma de la table. Veuillez "
 "contacter votre administrateur."
 
 #: superset-frontend/src/views/CRUD/hooks.ts:301
 #, fuzzy, python-format
 msgid "An error occurred while creating %ss: %s"
-msgstr "Une erreur s'est produite durant la récupération des jeux de données : %s"
+msgstr "Une erreur s"est produite durant la récupération des jeux de données : %s"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1313
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1335
 msgid "An error occurred while creating the data source"
-msgstr "Une erreur s'est produite durant la création de la source de donnée"
+msgstr "Une erreur s"est produite durant la création de la source de donnée"
 
 #: superset/key_value/commands/exceptions.py:29
 #, fuzzy
 msgid "An error occurred while creating the value."
-msgstr "Une erreur s'est produite durant la création de la source de donnée"
+msgstr "Une erreur s"est produite durant la création de la source de donnée"
 
 #: superset/key_value/commands/exceptions.py:37
 #, fuzzy, python-format
 msgid "An error occurred while deleting the value."
-msgstr "Une erreur s'est produit en récupérant les valeurs du schéma : %s"
+msgstr "Une erreur s"est produit en récupérant les valeurs du schéma : %s"
 
 #: superset-frontend/src/reports/actions/reports.js:138
 msgid "An error occurred while editing this report."
-msgstr "Une erreur s'est produite durant la modification de ce rapport."
+msgstr "Une erreur s"est produite durant la modification de ce rapport."
 
 #: superset-frontend/src/reports/actions/reports.js:120
 #, python-format
 msgid "An error occurred while editing this report: %s"
-msgstr "Une erreur s'est produite durant la modification du rapport : %s"
+msgstr "Une erreur s"est produite durant la modification du rapport : %s"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1141
 msgid ""
 "An error occurred while expanding the table schema. Please contact your "
 "administrator."
 msgstr ""
-"Une erreur s'est produite en développant le schéma de la table. Veuillez "
+"Une erreur s"est produite en développant le schéma de la table. Veuillez "
 "contacter votre administrateur."
 
 #: superset-frontend/src/views/CRUD/hooks.ts:103
 #, fuzzy, python-format
 msgid "An error occurred while fetching %s info: %s"
-msgstr "Une erreur s'est produite durant la récupération des tableaux de bord : %s"
+msgstr "Une erreur s"est produite durant la récupération des tableaux de bord : %s"
 
 #: superset-frontend/src/views/CRUD/hooks.ts:171
 #: superset-frontend/src/views/CRUD/hooks.ts:258
 #: superset-frontend/src/views/CRUD/hooks.ts:344
 #, fuzzy, python-format
 msgid "An error occurred while fetching %ss: %s"
-msgstr "Une erreur s'est produite durant la récupération des jeux de données : %s"
+msgstr "Une erreur s"est produite durant la récupération des jeux de données : %s"
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:132
 msgid "An error occurred while fetching available CSS templates"
 msgstr ""
-"Une erreur s'est produite lors de l'extraction des modèles de CSS "
+"Une erreur s"est produite lors de l"extraction des modèles de CSS "
 "disponibles"
 
 #: superset-frontend/src/views/CRUD/chart/ChartList.tsx:484
 #, python-format
 msgid "An error occurred while fetching chart created by values: %s"
 msgstr ""
-"Une erreur s'est produite durant la récupération du graphique créé par "
+"Une erreur s"est produite durant la récupération du graphique créé par "
 "les valeurs : %s"
 
 #: superset-frontend/src/views/CRUD/chart/ChartList.tsx:463
 #, python-format
 msgid "An error occurred while fetching chart owners values: %s"
 msgstr ""
-"Une erreur s'est produite durant la récupération des propriétaires du "
+"Une erreur s"est produite durant la récupération des propriétaires du "
 "graphique : %s"
 
 #: superset-frontend/src/views/CRUD/alert/AlertList.tsx:392
 #, python-format
 msgid "An error occurred while fetching created by values: %s"
-msgstr "Une erreur s'est produite en récupérant les valeurs créées : %s"
+msgstr "Une erreur s"est produite en récupérant les valeurs créées : %s"
 
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:481
 #, python-format
 msgid "An error occurred while fetching dashboard created by values: %s"
 msgstr ""
-"Une erreur s'est produite lors de la récupération du tableau de bord créé"
+"Une erreur s"est produite lors de la récupération du tableau de bord créé"
 " avec les valeurs : %s"
 
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:460
 #, python-format
 msgid "An error occurred while fetching dashboard owner values: %s"
 msgstr ""
-"Une erreur s'est produite durant la récupération des propriétaires du "
+"Une erreur s"est produite durant la récupération des propriétaires du "
 "tableau de bord : %s"
 
 #: superset-frontend/src/components/OmniContainer/getDashboards.ts:48
 #, fuzzy, python-format
 msgid "An error occurred while fetching dashboards"
-msgstr "Une erreur s'est produite durant la récupération des tableaux de bord : %s"
+msgstr "Une erreur s"est produite durant la récupération des tableaux de bord : %s"
 
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:200
 #: superset-frontend/src/views/CRUD/welcome/DashboardTable.tsx:127
 #, python-format
 msgid "An error occurred while fetching dashboards: %s"
-msgstr "Une erreur s'est produite durant la récupération des tableaux de bord : %s"
+msgstr "Une erreur s"est produite durant la récupération des tableaux de bord : %s"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:129
 #, python-format
 msgid "An error occurred while fetching database related data: %s"
 msgstr ""
-"Une erreur s'est produite lors de la récupération des données de la base "
+"Une erreur s"est produite lors de la récupération des données de la base "
 ":  %s"
 
 #: superset-frontend/src/views/CRUD/data/query/QueryList.tsx:341
 #, python-format
 msgid "An error occurred while fetching database values: %s"
 msgstr ""
-"Une erreur s'est produite durant la récupération des valeurs de la base "
+"Une erreur s"est produite durant la récupération des valeurs de la base "
 "de données : %s"
 
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayersList.tsx:295
@@ -1378,54 +1378,54 @@ msgstr ""
 #, python-format
 msgid "An error occurred while fetching dataset datasource values: %s"
 msgstr ""
-"Une erreur s'est produite durant la récupération les sources de données  "
+"Une erreur s"est produite durant la récupération les sources de données  "
 "du jeu de données : %s"
 
 #: superset-frontend/src/views/CRUD/data/dataset/DatasetList.tsx:426
 #, python-format
 msgid "An error occurred while fetching dataset owner values: %s"
 msgstr ""
-"Une erreur s'est produite durant la récupération des valeurs du "
+"Une erreur s"est produite durant la récupération des valeurs du "
 "propriétaire du jeu de données : %s"
 
 #: superset-frontend/src/views/CRUD/data/dataset/DatasetList.tsx:184
 msgid "An error occurred while fetching dataset related data"
 msgstr ""
-"Une erreur s'est produite lors de la récupération des données relatives "
+"Une erreur s"est produite lors de la récupération des données relatives "
 "au jeu de données"
 
 #: superset-frontend/src/views/CRUD/data/dataset/DatasetList.tsx:204
 #, python-format
 msgid "An error occurred while fetching dataset related data: %s"
 msgstr ""
-"Une erreur s'est produite lors de la récupération des données relatives "
+"Une erreur s"est produite lors de la récupération des données relatives "
 "au jeu de données : %s"
 
 #: superset-frontend/src/views/CRUD/data/dataset/DatasetList.tsx:445
 #, python-format
 msgid "An error occurred while fetching datasets: %s"
-msgstr "Une erreur s'est produite durant la récupération des jeux de données : %s"
+msgstr "Une erreur s"est produite durant la récupération des jeux de données : %s"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1356
 msgid "An error occurred while fetching function names."
-msgstr "Une erreur s'est produite lors de la récupération des noms des fonctions."
+msgstr "Une erreur s"est produite lors de la récupération des noms des fonctions."
 
 #: superset-frontend/src/views/CRUD/data/dataset/DatasetList.tsx:460
 #: superset-frontend/src/views/CRUD/data/query/QueryList.tsx:358
 #: superset-frontend/src/views/CRUD/data/savedquery/SavedQueryList.tsx:454
 #, python-format
 msgid "An error occurred while fetching schema values: %s"
-msgstr "Une erreur s'est produit en récupérant les valeurs du schéma : %s"
+msgstr "Une erreur s"est produit en récupérant les valeurs du schéma : %s"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:662
 msgid "An error occurred while fetching tab state"
-msgstr "Une erreur s'est produite lors de la récupération de l'état de l'onglet"
+msgstr "Une erreur s"est produite lors de la récupération de l"état de l"onglet"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1027
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1052
 msgid "An error occurred while fetching table metadata"
 msgstr ""
-"Une erreur s'est produite lors de l'extraction des méta-données de la "
+"Une erreur s"est produite lors de l"extraction des méta-données de la "
 "table"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1093
@@ -1433,46 +1433,46 @@ msgid ""
 "An error occurred while fetching table metadata. Please contact your "
 "administrator."
 msgstr ""
-"Une erreur s'est produite lors de l'extraction des méta-données de la "
+"Une erreur s"est produite lors de l"extraction des méta-données de la "
 "table. Veuillez contacter votre administrateur."
 
 #: superset-frontend/src/views/CRUD/data/query/QueryList.tsx:375
 #, python-format
 msgid "An error occurred while fetching user values: %s"
-msgstr "Une erreur s'est produit en récupérant les valeurs d'utilisateur : %s"
+msgstr "Une erreur s"est produit en récupérant les valeurs d"utilisateur : %s"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:698
 msgid ""
 "An error occurred while hiding the left bar. Please contact your "
 "administrator."
 msgstr ""
-"Une erreur s'est produite en masquant la barre de gauche. Veuillez "
+"Une erreur s"est produite en masquant la barre de gauche. Veuillez "
 "contacter votre administrateur."
 
 #: superset-frontend/src/views/CRUD/hooks.ts:438
 #: superset-frontend/src/views/CRUD/hooks.ts:451
 #, fuzzy, python-format
 msgid "An error occurred while importing %s: %s"
-msgstr "Une erreur s'est produite le traitement des logs "
+msgstr "Une erreur s"est produite le traitement des logs "
 
 #: superset-frontend/src/chart/chartAction.js:569
 msgid "An error occurred while loading the SQL"
-msgstr "Une erreur s'est produite durant le chargement du SQL"
+msgstr "Une erreur s"est produite durant le chargement du SQL"
 
 #: superset/reports/commands/exceptions.py:242
 msgid "An error occurred while pruning logs "
-msgstr "Une erreur s'est produite le traitement des logs "
+msgstr "Une erreur s"est produite le traitement des logs "
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:744
 msgid "An error occurred while removing query. Please contact your administrator."
 msgstr ""
-"Une erreur s'est produite en supprimant la requête. Veuillez contacter "
+"Une erreur s"est produite en supprimant la requête. Veuillez contacter "
 "votre administrateur."
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:720
 msgid "An error occurred while removing tab. Please contact your administrator."
 msgstr ""
-"Une erreur s'est produite en supprimant l'onglet. Veuillez contacter "
+"Une erreur s"est produite en supprimant l"onglet. Veuillez contacter "
 "votre administrateur."
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1188
@@ -1480,20 +1480,20 @@ msgid ""
 "An error occurred while removing the table schema. Please contact your "
 "administrator."
 msgstr ""
-"Une erreur s'est produite en enlevant le schéma de la table. Veuillez "
+"Une erreur s"est produite en enlevant le schéma de la table. Veuillez "
 "contacter votre administrateur."
 
 #: superset-frontend/src/chart/chartReducer.ts:94
 #, fuzzy, python-format
 msgid "An error occurred while rendering the visualization: %s"
-msgstr "Une erreur s'est produite durant la modification du rapport : %s"
+msgstr "Une erreur s"est produite durant la modification du rapport : %s"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:575
 msgid ""
 "An error occurred while setting the active tab. Please contact your "
 "administrator."
 msgstr ""
-"Une erreur s'est produite en positionnant l'onglet actif. Veuillez "
+"Une erreur s"est produite en positionnant l"onglet actif. Veuillez "
 "contacter votre administrateur."
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:825
@@ -1501,7 +1501,7 @@ msgid ""
 "An error occurred while setting the tab autorun. Please contact your "
 "administrator."
 msgstr ""
-"Une erreur s'est produite durant l'initialisation de l'onglet Autorun. "
+"Une erreur s"est produite durant l"initialisation de l"onglet Autorun. "
 "Veuillez contacter votre administrateur."
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:767
@@ -1509,7 +1509,7 @@ msgid ""
 "An error occurred while setting the tab database ID. Please contact your "
 "administrator."
 msgstr ""
-"Une erreur s'est produite en positionnant l'id de l'onglet Base de "
+"Une erreur s"est produite en positionnant l"id de l"onglet Base de "
 "données. Veuillez contacter votre administrateur."
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:792
@@ -1517,7 +1517,7 @@ msgid ""
 "An error occurred while setting the tab schema. Please contact your "
 "administrator."
 msgstr ""
-"Une erreur s'est produite durant l'initialisation de l'onglet Schéma. "
+"Une erreur s"est produite durant l"initialisation de l"onglet Schéma. "
 "Veuillez contacter votre administrateur."
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:967
@@ -1525,8 +1525,8 @@ msgid ""
 "An error occurred while setting the tab template parameters. Please "
 "contact your administrator."
 msgstr ""
-"Une erreur s'est produite durant l'initialisation des paramètres de "
-"template de l'onglet. Veuillez contacter votre administrateur."
+"Une erreur s"est produite durant l"initialisation des paramètres de "
+"template de l"onglet. Veuillez contacter votre administrateur."
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:850
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:941
@@ -1534,13 +1534,13 @@ msgid ""
 "An error occurred while setting the tab title. Please contact your "
 "administrator."
 msgstr ""
-"Une erreur s'est produite durant l'initialisation du titre de l'onglet. "
+"Une erreur s"est produite durant l"initialisation du titre de l"onglet. "
 "Veuillez contacter votre administrateur."
 
 #: superset-frontend/src/explore/actions/exploreActions.ts:95
 #, fuzzy
 msgid "An error occurred while starring this chart"
-msgstr "Une erreur s'est produite durant la modification de ce rapport."
+msgstr "Une erreur s"est produite durant la modification de ce rapport."
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:232
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:258
@@ -1548,7 +1548,7 @@ msgid ""
 "An error occurred while storing the latest query id in the backend. "
 "Please contact your administrator if this problem persists."
 msgstr ""
-"Une erreur s'est produite en enregistrant l'id de la dernière requête "
+"Une erreur s"est produite en enregistrant l"id de la dernière requête "
 "dans le backend. Veuillez contacter votre administrateur si le problème "
 "persiste."
 
@@ -1558,22 +1558,22 @@ msgid ""
 "losing your changes, please save your query using the \"Save Query\" "
 "button."
 msgstr ""
-"Une erreur s'est produite en stockant la requête dans le backend. Pour "
+"Une erreur s"est produite en stockant la requête dans le backend. Pour "
 "éviter de perdre vos modifications, sauver votre requête en utilisant le "
 "bouton \"Enresigtrer requête\"."
 
 #: superset/key_value/commands/exceptions.py:41
 #, fuzzy
 msgid "An error occurred while updating the value."
-msgstr "Une erreur s'est produite durant la création de la source de donnée"
+msgstr "Une erreur s"est produite durant la création de la source de donnée"
 
 #: superset/views/core.py:711
 msgid "An unknown error occurred. Please contact your Superset administrator"
-msgstr "Une erreur s'est produite. Contactez votre admin superset"
+msgstr "Une erreur s"est produite. Contactez votre admin superset"
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/components/CustomFrame.tsx:223
 msgid "Anchor to"
-msgstr "S'ancrer à"
+msgstr "S"ancrer à"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Gauge/controlPanel.tsx:121
 msgid "Angle at which to end progress axis"
@@ -1595,122 +1595,122 @@ msgstr "Annotation"
 
 #: superset-frontend/src/views/CRUD/annotation/AnnotationList.tsx:263
 msgid "Annotation Layer ${annotationLayerName}"
-msgstr "Couche d'annotations ${annotationLayerName}"
+msgstr "Couche d"annotations ${annotationLayerName}"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/annotationsAndLayers.tsx:35
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/sections.tsx:124
 #: superset-frontend/plugins/plugin-chart-echarts/src/MixedTimeseries/controlPanel.tsx:271
 #: superset/initialization/__init__.py:229 superset/views/annotations.py:117
 msgid "Annotation Layers"
-msgstr "Couches d'annotations"
+msgstr "Couches d"annotations"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:465
 msgid "Annotation Slice Configuration"
-msgstr "Configuration de l'annotation de graphique"
+msgstr "Configuration de l"annotation de graphique"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:758
 msgid "Annotation Source"
-msgstr "Source de l'Annotation"
+msgstr "Source de l"Annotation"
 
 #: superset/annotation_layers/annotations/commands/exceptions.py:64
 msgid "Annotation could not be created."
-msgstr "L'annotation n'a pas pu être créée."
+msgstr "L"annotation n"a pas pu être créée."
 
 #: superset/annotation_layers/annotations/commands/exceptions.py:68
 msgid "Annotation could not be updated."
-msgstr "L'annotation n'a pas pu être mise à jour."
+msgstr "L"annotation n"a pas pu être mise à jour."
 
 #: superset/annotation_layers/annotations/commands/exceptions.py:72
 msgid "Annotation delete failed."
-msgstr "La suppression de l'annotation a échoué."
+msgstr "La suppression de l"annotation a échoué."
 
 #: superset/views/annotations.py:47
 msgid "Annotation end time must be no earlier than start time."
-msgstr "L'heure de fin doit être postérieure à l'heure de début pour l'annotation."
+msgstr "L"heure de fin doit être postérieure à l"heure de début pour l"annotation."
 
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayersList.tsx:265
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayersList.tsx:322
 msgid "Annotation layer"
-msgstr "Couches d'annotations"
+msgstr "Couches d"annotations"
 
 #: superset/annotation_layers/commands/exceptions.py:37
 msgid "Annotation layer could not be created."
-msgstr "La couche d'annotations n'a pas pu être créée."
+msgstr "La couche d"annotations n"a pas pu être créée."
 
 #: superset/annotation_layers/commands/exceptions.py:33
 msgid "Annotation layer could not be deleted."
-msgstr "La couche d'annotations n'a pas pu être supprimée."
+msgstr "La couche d"annotations n"a pas pu être supprimée."
 
 #: superset/annotation_layers/commands/exceptions.py:41
 msgid "Annotation layer could not be updated."
-msgstr "La couche d'annotations n'a pas pu être mise à jour."
+msgstr "La couche d"annotations n"a pas pu être mise à jour."
 
 #: superset/annotation_layers/commands/exceptions.py:49
 msgid "Annotation layer delete failed."
-msgstr "La suppression de la couche d'annotations a échoué."
+msgstr "La suppression de la couche d"annotations a échoué."
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:517
 msgid "Annotation layer description columns"
-msgstr "Colonnes de description de la couche d'annotations"
+msgstr "Colonnes de description de la couche d"annotations"
 
 #: superset/annotation_layers/commands/exceptions.py:53
 #: superset/annotation_layers/commands/exceptions.py:57
 msgid "Annotation layer has associated annotations."
-msgstr "La couche d'annotations a des annotations associées."
+msgstr "La couche d"annotations a des annotations associées."
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:492
 msgid "Annotation layer interval end"
-msgstr "Fin de l'intervalle de la couche d'annotations"
+msgstr "Fin de l"intervalle de la couche d"annotations"
 
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayerModal.tsx:247
 msgid "Annotation layer name"
-msgstr "Nom de la couche d'annotations"
+msgstr "Nom de la couche d"annotations"
 
 #: superset/annotation_layers/commands/exceptions.py:45
 msgid "Annotation layer not found."
-msgstr "Couche d'annotations non trouvée."
+msgstr "Couche d"annotations non trouvée."
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:634
 msgid "Annotation layer opacity"
-msgstr "Opacité de la couche d'annotations"
+msgstr "Opacité de la couche d"annotations"
 
 #: superset/annotation_layers/commands/exceptions.py:29
 msgid "Annotation layer parameters are invalid."
-msgstr "Les paramètres de la couche d'annotations sont invalides."
+msgstr "Les paramètres de la couche d"annotations sont invalides."
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:619
 msgid "Annotation layer stroke"
-msgstr "Trait de la couche d'annotations"
+msgstr "Trait de la couche d"annotations"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:472
 msgid "Annotation layer time column"
-msgstr "Colonne temporelle de la couche d'annotations"
+msgstr "Colonne temporelle de la couche d"annotations"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:506
 msgid "Annotation layer title column"
-msgstr "Colonne de titre de la couche d'annotations"
+msgstr "Colonne de titre de la couche d"annotations"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:743
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:746
 msgid "Annotation layer type"
-msgstr "Type de couche d'annotations"
+msgstr "Type de couche d"annotations"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:403
 msgid "Annotation layer value"
-msgstr "Valeur de la couche d'annotations"
+msgstr "Valeur de la couche d"annotations"
 
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayersList.tsx:72
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayersList.tsx:343
 msgid "Annotation layers"
-msgstr "Couches d'annotations"
+msgstr "Couches d"annotations"
 
 #: superset-frontend/src/dashboard/components/SliceHeader/index.tsx:45
 msgid "Annotation layers are still loading."
-msgstr "Les couches d'annotation sont toujours en cours de chargement."
+msgstr "Les couches d"annotation sont toujours en cours de chargement."
 
 #: superset-frontend/src/views/CRUD/annotation/AnnotationModal.tsx:292
 msgid "Annotation name"
-msgstr "Nom de l'annotation"
+msgstr "Nom de l"annotation"
 
 #: superset/annotation_layers/annotations/commands/exceptions.py:56
 msgid "Annotation not found."
@@ -1718,11 +1718,11 @@ msgstr "Annotation non trouvée."
 
 #: superset/annotation_layers/annotations/commands/exceptions.py:60
 msgid "Annotation parameters are invalid."
-msgstr "Les paramètres d'annotation sont invalides."
+msgstr "Les paramètres d"annotation sont invalides."
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:755
 msgid "Annotation source type"
-msgstr "Type de source de la couche d'annotations"
+msgstr "Type de source de la couche d"annotations"
 
 #: superset/views/annotations.py:58
 msgid "Annotations"
@@ -1741,7 +1741,7 @@ msgstr "Annotations et couches"
 
 #: superset/annotation_layers/annotations/commands/exceptions.py:52
 msgid "Annotations could not be deleted."
-msgstr "Les annotations n'ont pas pu être supprimées."
+msgstr "Les annotations n"ont pas pu être supprimées."
 
 #: superset-frontend/src/views/CRUD/chart/ChartList.tsx:441
 #: superset-frontend/src/views/CRUD/chart/ChartList.tsx:535
@@ -1759,7 +1759,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/ColorSchemeControlWrapper.jsx:56
 msgid ""
 "Any color palette selected here will override the colors applied to this "
-"dashboard's individual charts"
+"dashboard"s individual charts"
 msgstr ""
 "Une palette de couleur sélectionnée ici écrasera les couleurs appliquées "
 "aux graphiques de ce tableau de bord"
@@ -1794,7 +1794,7 @@ msgid ""
 "Applied rolling window did not return any data. Please make sure the "
 "source query satisfies the minimum periods defined in the rolling window."
 msgstr ""
-"La fenêtre glissante appliquée n'a pas retourné de données. Assurez-vous "
+"La fenêtre glissante appliquée n"a pas retourné de données. Assurez-vous "
 "que la requête source satisfasse les périodes minimum définies dans la "
 "fenêtre glissante."
 
@@ -2082,7 +2082,7 @@ msgstr ""
 msgid ""
 "Bounds for the Y-axis. When left empty, the bounds are dynamically "
 "defined based on the min/max of the data. Note that this feature will "
-"only expand the axis range. It won't narrow the data's extent."
+"only expand the axis range. It won"t narrow the data"s extent."
 msgstr ""
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/BoxPlot/index.js:26
@@ -2115,7 +2115,7 @@ msgstr "Port du Broker"
 
 #: superset/connectors/druid/views.py:235
 msgid "Broker Username"
-msgstr "Nom d'utilisateur du Broker"
+msgstr "Nom d"utilisateur du Broker"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Bubble/index.js:30
 #: superset/viz.py:1139
@@ -2228,7 +2228,7 @@ msgstr "Templates CSS"
 
 #: superset/css_templates/commands/exceptions.py:23
 msgid "CSS template could not be deleted."
-msgstr "Le template CSS n'a pas pu être supprimé."
+msgstr "Le template CSS n"a pas pu être supprimé."
 
 #: superset-frontend/src/views/CRUD/csstemplates/CssTemplateModal.tsx:241
 msgid "CSS template name"
@@ -2274,9 +2274,9 @@ msgid ""
 " statement is a SELECT. Please make sure your query has a SELECT as its "
 "last statement. Then, try running your query again."
 msgstr ""
-"Le CTAS (create table as select) n'a pas d'instruction SELECT à la fin. "
+"Le CTAS (create table as select) n"a pas d"instruction SELECT à la fin. "
 "Assurez-vous que la requête a bien un SELECT en dernière instruction. "
-"Puis essayez d'exécuter votre requête à nouveau."
+"Puis essayez d"exécuter votre requête à nouveau."
 
 #: superset/views/database/mixins.py:190
 msgid "CTAS Schema"
@@ -2288,18 +2288,18 @@ msgid ""
 "SELECT statement. Please make sure your query has only a SELECT "
 "statement. Then, try running your query again."
 msgstr ""
-"Le CVAS (create view as select) ne peut être exécuté qu'avec une requête "
+"Le CVAS (create view as select) ne peut être exécuté qu"avec une requête "
 "contenant une seule instruction SELECT. Assurez-vous que la requête a "
-"bien une seule instruction SELECT. Puis essayez d'exécuter votre requête "
+"bien une seule instruction SELECT. Puis essayez d"exécuter votre requête "
 "à nouveau."
 
 #: superset/errors.py:123
 msgid "CVAS (create view as select) query has more than one statement."
-msgstr "La requête CVAS (create view as select) a plus d'une instruction."
+msgstr "La requête CVAS (create view as select) a plus d"une instruction."
 
 #: superset/errors.py:124
 msgid "CVAS (create view as select) query is not a SELECT statement."
-msgstr "La requête CVAS (create view as select) n'est pas une instruction SELECT."
+msgstr "La requête CVAS (create view as select) n"est pas une instruction SELECT."
 
 #: superset/connectors/druid/views.py:239
 #: superset/connectors/druid/views.py:351 superset/connectors/sqla/views.py:497
@@ -2363,19 +2363,19 @@ msgstr "On ne peut déplacer un onglet top level vers des onglets imbriqués"
 
 #: superset/views/core.py:2010
 #, python-format
-msgid "Can't find DruidCluster with cluster_name = '%(name)s'"
-msgstr "Impossible de trouver le DruidCluster avec cluster_name = '%(name)s"
+msgid "Can"t find DruidCluster with cluster_name = "%(name)s""
+msgstr "Impossible de trouver le DruidCluster avec cluster_name = "%(name)s"
 
 #: superset/views/core.py:1998
 #, python-format
-msgid "Can't find User '%(name)s', please ask your admin to create one."
+msgid "Can"t find User "%(name)s", please ask your admin to create one."
 msgstr ""
-"Impossible de trouver l'utilisateur '%(name)s', demandez à votre "
+"Impossible de trouver l"utilisateur "%(name)s", demandez à votre "
 "administrateur de le créer."
 
 #: superset/viz.py:1778
-msgid "Can't have overlap between Series and Breakdowns"
-msgstr "Il ne faut pas avoir d'élement en commun entre Série et Breakdowns"
+msgid "Can"t have overlap between Series and Breakdowns"
+msgstr "Il ne faut pas avoir d"élement en commun entre Série et Breakdowns"
 
 #: superset-frontend/src/SqlLab/components/SaveQuery/index.tsx:173
 #: superset-frontend/src/components/Datasource/DatasourceModal.tsx:218
@@ -2415,8 +2415,8 @@ msgid ""
 "Cannot import dashboard: %(db_error)s.\n"
 "Make sure to create the database before importing the dashboard."
 msgstr ""
-"Impossible d'importer le tableau de bord : %(db_error)s.\n"
-"Assurez vous de créer d'abord la base de données avant d'importer le "
+"Impossible d"importer le tableau de bord : %(db_error)s.\n"
+"Assurez vous de créer d"abord la base de données avant d"importer le "
 "tableau de bord."
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterControls/FilterValue.tsx:242
@@ -2553,7 +2553,7 @@ msgid ""
 "or metadata that does not exist in the target dataset"
 msgstr ""
 "Changer le jeu de données peut mettre en erreur le graphiquesi celui-ci "
-"s'appuie sur des colonnes ou une métadonnées qui n'existe pas dans le jeu"
+"s"appuie sur des colonnes ou une métadonnées qui n"existe pas dans le jeu"
 " de données cible"
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:1176
@@ -2563,7 +2563,7 @@ msgid ""
 msgstr ""
 "La modification de ces paramètres affectera tous les graphiques qui "
 "utilisent ce jeu de données, y compris les graphiques qui appartiennent à"
-" d'autres personnes."
+" d"autres personnes."
 
 #: superset/dashboards/commands/exceptions.py:78
 msgid "Changing this Dashboard is forbidden"
@@ -2722,39 +2722,39 @@ msgid ""
 " to can be fine tuned as well in the dashboard view.\n"
 "\n"
 "    Note that this plugin is being replaced with the new Filters feature "
-"that lives in the dashboard view itself. It's easier to use and has more "
+"that lives in the dashboard view itself. It"s easier to use and has more "
 "capabilities!"
 msgstr ""
 "Composant graphique sui vous laisse ajouter un filtre personnalisé dans "
 "votre tableau de bord. Quand elle est ajouteé au tableau de bord, une "
-"boîte de filtrage permet à l'utilisateur de choisir des valeurs ou plages"
+"boîte de filtrage permet à l"utilisateur de choisir des valeurs ou plages"
 " spécifiques pour filtrer les graphiques. Les graphiques concernés par "
 "chaque filtre peuvent être réglés finement dans la vue Tableau de bord.\n"
 "\n"
 "    Notez que ce plugin est remplacé par la nouvelle fonction Filtres  "
-"qui est présente dans cette vue Tableau de bord. C'est plus facile à  "
+"qui est présente dans cette vue Tableau de bord. C"est plus facile à  "
 "utiliser et offre plus de possibilités !"
 
 #: superset/charts/commands/exceptions.py:115
 msgid "Chart could not be created."
-msgstr "Le graphique n'a pas pu être créé."
+msgstr "Le graphique n"a pas pu être créé."
 
 #: superset/charts/commands/exceptions.py:123
 msgid "Chart could not be deleted."
-msgstr "Le graphique n'a pas pu être supprimé."
+msgstr "Le graphique n"a pas pu être supprimé."
 
 #: superset/charts/commands/exceptions.py:119
 msgid "Chart could not be updated."
-msgstr "Le graphique n'a pas pu être mis à jour."
+msgstr "Le graphique n"a pas pu être mis à jour."
 
 #: superset/reports/commands/exceptions.py:53
 msgid "Chart does not exist"
-msgstr "Le graphique n'existe pas"
+msgstr "Le graphique n"existe pas"
 
 #: superset/charts/data/api.py:125
 msgid "Chart has no query context saved. Please save the chart again."
 msgstr ""
-"Le graphique n'a pas de contexte de requête sauvegardé. Veuillez sauver "
+"Le graphique n"a pas de contexte de requête sauvegardé. Veuillez sauver "
 "le graphique à nouveau."
 
 #: superset-frontend/src/explore/components/SaveModal.tsx:247
@@ -2787,7 +2787,7 @@ msgstr "Graphiques"
 
 #: superset/charts/commands/exceptions.py:135
 msgid "Charts could not be deleted."
-msgstr "Les graphiques n'ont pas pu être supprimés."
+msgstr "Les graphiques n"ont pas pu être supprimés."
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterControls/FilterValue.tsx:162
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:488
@@ -2823,8 +2823,8 @@ msgid ""
 "Check to apply filters instantly as they change instead of displaying "
 "[Apply] button"
 msgstr ""
-"Cocher pour appliquer les filtres instantanément dès qu'ils changent "
-"aulieu d'afficher le bouton [Appliquer]"
+"Cocher pour appliquer les filtres instantanément dès qu"ils changent "
+"aulieu d"afficher le bouton [Appliquer]"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:219
 msgid "Check to force date partitions to have the same height"
@@ -2848,7 +2848,7 @@ msgstr "Cocher pour inclure la liste déroulante de granularité de temps"
 
 #: superset-frontend/src/visualizations/FilterBox/controlPanel.jsx:46
 msgid "Check to include time origin dropdown"
-msgstr "Cocher pour inclure la liste déroulante de l'origine du temps"
+msgstr "Cocher pour inclure la liste déroulante de l"origine du temps"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Tree/controlPanel.tsx:173
 msgid "Child label position"
@@ -2884,18 +2884,18 @@ msgstr "Choisissez un jeu de donnée"
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/DualLine/controlPanel.ts:69
 #, fuzzy
 msgid "Choose a metric for left axis"
-msgstr "Choisir une mesure pour l'axe de droite"
+msgstr "Choisir une mesure pour l"axe de droite"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:120
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:185
 #: superset-frontend/src/explore/controls.jsx:217
 msgid "Choose a metric for right axis"
-msgstr "Choisir une mesure pour l'axe de droite"
+msgstr "Choisir une mesure pour l"axe de droite"
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/controlPanel.ts:57
 #, fuzzy
 msgid "Choose a number format"
-msgstr "Choisir une mesure pour l'axe de droite"
+msgstr "Choisir une mesure pour l"axe de droite"
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/controlPanel.ts:63
 #, fuzzy
@@ -2921,16 +2921,16 @@ msgstr "Choisissez un type de graphique"
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/LineMulti/controlPanel.ts:100
 #, fuzzy
 msgid "Choose one or more charts for left axis"
-msgstr "Choisir une mesure pour l'axe de droite"
+msgstr "Choisir une mesure pour l"axe de droite"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/LineMulti/controlPanel.ts:135
 #, fuzzy
 msgid "Choose one or more charts for right axis"
-msgstr "Choisir une mesure pour l'axe de droite"
+msgstr "Choisir une mesure pour l"axe de droite"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:745
 msgid "Choose the annotation layer type"
-msgstr "Choisir le type de couche d'annotations"
+msgstr "Choisir le type de couche d"annotations"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:757
 msgid "Choose the source of your annotations"
@@ -2997,7 +2997,7 @@ msgstr "Cliquez sur le cadenas pour apporter des modifications."
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:1000
 msgid "Click the lock to prevent further changes."
-msgstr "Cliquez sur le cadenas pour empêcher d'autres modifications."
+msgstr "Cliquez sur le cadenas pour empêcher d"autres modifications."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:1306
 msgid ""
@@ -3005,7 +3005,7 @@ msgid ""
 "the SQLAlchemy URL for this database manually."
 msgstr ""
 "Cliquez sur ce lien pour basculer sur un autre formulaire qui vous "
-"permettra d'entrer manuellement l'URL SQLAlchemy pour cette base de "
+"permettra d"entrer manuellement l"URL SQLAlchemy pour cette base de "
 "données."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:1071
@@ -3060,7 +3060,7 @@ msgstr "Fermer tous les autres onglets"
 
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors/index.jsx:339
 msgid "Close tab"
-msgstr "Fermer l'onglet"
+msgstr "Fermer l"onglet"
 
 #: superset/connectors/druid/views.py:344
 msgid "Cluster"
@@ -3158,7 +3158,7 @@ msgid ""
 "Column \"%(column)s\" is not numeric or does not exists in the query "
 "results."
 msgstr ""
-"La colonne \"%(column)s\" n'est pas numérique ou n'existe pas dans les "
+"La colonne \"%(column)s\" n"est pas numérique ou n"existe pas dans les "
 "résultats de requêtes."
 
 #: superset/views/database/forms.py:224 superset/views/database/forms.py:357
@@ -3190,8 +3190,8 @@ msgid ""
 "Column label for index column(s). If None is given and Dataframe Index is"
 " True, Index Names are used."
 msgstr ""
-"Label de colonne pour l'index de colonne(s). Si aucun label est donné et "
-"que l'index du tableau de données est Vrai, alors les noms d'Index sont "
+"Label de colonne pour l"index de colonne(s). Si aucun label est donné et "
+"que l"index du tableau de données est Vrai, alors les noms d"Index sont "
 "utilisés."
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:652
@@ -3206,11 +3206,11 @@ msgstr "Nom(s) de colonne "
 #: superset/utils/pandas_postprocessing.py:168
 #, python-format
 msgid "Column referenced by aggregate is undefined: %(column)s"
-msgstr "La colonne référencée dans l'agrégat est indéfinie: %(column)s"
+msgstr "La colonne référencée dans l"agrégat est indéfinie: %(column)s"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/ColumnSelect.tsx:130
 msgid "Column select"
-msgstr "Sélection d'une colonne"
+msgstr "Sélection d"une colonne"
 
 #: superset/views/database/forms.py:163 superset/views/database/forms.py:316
 msgid ""
@@ -3218,7 +3218,7 @@ msgid ""
 " column."
 msgstr ""
 "Colonne à utiliser comme labelle de ligne du tableau de données. Laissez "
-"vide si pas d'index de colonne."
+"vide si pas d"index de colonne."
 
 #: superset/views/database/forms.py:385
 msgid "Columnar File"
@@ -3402,11 +3402,11 @@ msgstr "Informations additionnelles"
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/forecastInterval.tsx:70
 #, fuzzy
 msgid "Confidence interval"
-msgstr "Intervalle d'actualisation"
+msgstr "Intervalle d"actualisation"
 
 #: superset/utils/pandas_postprocessing.py:827
 msgid "Confidence interval must be between 0 and 1 (exclusive)"
-msgstr "L'intervalle de confiance doit être entre 0 et 1 (exclusif)"
+msgstr "L"intervalle de confiance doit être entre 0 et 1 (exclusif)"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:252
 #: superset-frontend/src/explore/components/PropertiesModal/index.tsx:276
@@ -3435,7 +3435,7 @@ msgstr "Configurer la portée du filtre"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:718
 msgid "Configure the basics of your Annotation Layer."
-msgstr "Configurer les bases de votre couche d'annotations."
+msgstr "Configurer les bases de votre couche d"annotations."
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:616
 msgid "Configure your how you overlay is displayed here."
@@ -3532,7 +3532,7 @@ msgstr "Copier"
 
 #: superset-frontend/src/SqlLab/components/TableElement/index.tsx:192
 msgid "Copy SELECT statement to the clipboard"
-msgstr "Copier l'étape SELECT vers le presse-papier"
+msgstr "Copier l"étape SELECT vers le presse-papier"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/DatabaseConnectionForm/EncryptedField.tsx:106
 msgid "Copy and Paste JSON credentials"
@@ -3544,15 +3544,15 @@ msgstr "Copier et coller ici le fichier de service .json en entier"
 
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:316
 msgid "Copy chart URL"
-msgstr "Copier l'URL du graphique"
+msgstr "Copier l"URL du graphique"
 
 #: superset-frontend/src/explore/components/ExploreActionButtons.tsx:103
 msgid "Copy chart URL to clipboard"
-msgstr "Copier l'URL du graphique vers le presse-papier"
+msgstr "Copier l"URL du graphique vers le presse-papier"
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:263
 msgid "Copy dashboard URL"
-msgstr "Copier l'URL du tableau de bord"
+msgstr "Copier l"URL du tableau de bord"
 
 #: superset-frontend/src/SqlLab/components/ShareSqlLabQuery/index.tsx:98
 msgid "Copy link"
@@ -3574,7 +3574,7 @@ msgstr "Copier la requête de partition vers le presse-papier"
 
 #: superset-frontend/src/views/CRUD/data/savedquery/SavedQueryList.tsx:390
 msgid "Copy query URL"
-msgstr "Copier l'URL de la requête"
+msgstr "Copier l"URL de la requête"
 
 #: superset-frontend/src/SqlLab/components/ShareSqlLabQuery/index.tsx:88
 msgid "Copy query link to your clipboard"
@@ -3625,11 +3625,11 @@ msgstr "Impossible de récupérer tous les graphiques sauvegardés"
 
 #: superset/views/utils.py:563
 msgid "Could not find viz object"
-msgstr "Impossible de trouver l'objet viz"
+msgstr "Impossible de trouver l"objet viz"
 
 #: superset/databases/commands/exceptions.py:130
 msgid "Could not load database driver"
-msgstr "Le driver de la base de données n'a pas pu être chargé"
+msgstr "Le driver de la base de données n"a pas pu être chargé"
 
 #: superset/views/core.py:1366
 #, python-format
@@ -3638,7 +3638,7 @@ msgstr "Impossible de charger le driver de base de donnée: %(driver_name)s"
 
 #: superset/databases/commands/test_connection.py:99
 msgid "Could not load database driver: {}"
-msgstr "Ce driver de la base de données n'a pas pu être chargé : {}"
+msgstr "Ce driver de la base de données n"a pas pu être chargé : {}"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:97
 msgid "Could not verify the host"
@@ -3875,19 +3875,19 @@ msgstr "Le tableau de bord [{}] a été créé et le graphique [{}] y a été aj
 
 #: superset/dashboards/commands/exceptions.py:54
 msgid "Dashboard could not be created."
-msgstr "Le tableau de bord n'a pas pu être créé."
+msgstr "Le tableau de bord n"a pas pu être créé."
 
 #: superset/dashboards/commands/exceptions.py:70
 msgid "Dashboard could not be deleted."
-msgstr "Le tableau de bord n'a pas pu être supprimé."
+msgstr "Le tableau de bord n"a pas pu être supprimé."
 
 #: superset/dashboards/commands/exceptions.py:66
 msgid "Dashboard could not be updated."
-msgstr "Le tableau de bord n'a pas pu être mis à jour."
+msgstr "Le tableau de bord n"a pas pu être mis à jour."
 
 #: superset/reports/commands/exceptions.py:44
 msgid "Dashboard does not exist"
-msgstr "Le tableau de bord n'existe pas"
+msgstr "Le tableau de bord n"existe pas"
 
 #: superset/dashboards/commands/exceptions.py:43
 msgid "Dashboard parameters are invalid."
@@ -3913,11 +3913,11 @@ msgstr "Tableaux de bord"
 
 #: superset/dashboards/commands/exceptions.py:58
 msgid "Dashboards could not be deleted."
-msgstr "Les tableaux de bord n'ont pas pu être supprimés."
+msgstr "Les tableaux de bord n"ont pas pu être supprimés."
 
 #: superset/charts/commands/exceptions.py:91
 msgid "Dashboards do not exist"
-msgstr "Les tableaux de bord n'existent pas"
+msgstr "Les tableaux de bord n"existent pas"
 
 #: superset-frontend/src/explore/components/ControlPanelsContainer.tsx:401
 #: superset-frontend/src/explore/components/DataTablesPane/index.tsx:388
@@ -4017,7 +4017,7 @@ msgid ""
 "Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed "
 "for columnar uploads. Please contact your Superset Admin."
 msgstr ""
-"La base de données \"%(database_name)s\" schéma \"%(schema_name)s\" n'est"
+"La base de données \"%(database_name)s\" schéma \"%(schema_name)s\" n"est"
 " pas autorisée pour les téléversements en colonne. Contactez votre "
 "administrateur Superset."
 
@@ -4027,7 +4027,7 @@ msgid ""
 "Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed "
 "for csv uploads. Please contact your Superset Admin."
 msgstr ""
-"La base de données \"%(database_name)s\" schéma \"%(schema_name)s\" n'est"
+"La base de données \"%(database_name)s\" schéma \"%(schema_name)s\" n"est"
 " pas autorisée pour les téléversements csv. Contactez votre "
 "administrateur Superset."
 
@@ -4037,7 +4037,7 @@ msgid ""
 "Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed "
 "for excel uploads. Please contact your Superset Admin."
 msgstr ""
-"La base de données \"%(database_name)s\" schéma \"%(schema_name)s\" n'est"
+"La base de données \"%(database_name)s\" schéma \"%(schema_name)s\" n"est"
 " pas autorisée pour les téléversements Excel. Contactez votre "
 "administrateur Superset."
 
@@ -4052,15 +4052,15 @@ msgstr "URL de la base de données"
 
 #: superset/databases/commands/exceptions.py:95
 msgid "Database could not be created."
-msgstr "La base de données n'a pas pu être créée."
+msgstr "La base de données n"a pas pu être créée."
 
 #: superset/databases/commands/exceptions.py:113
 msgid "Database could not be deleted."
-msgstr "La base de données n'a pas pu être supprimée."
+msgstr "La base de données n"a pas pu être supprimée."
 
 #: superset/databases/commands/exceptions.py:99
 msgid "Database could not be updated."
-msgstr "La base de données n'a pas pu être mise à jour."
+msgstr "La base de données n"a pas pu être mise à jour."
 
 #: superset/errors.py:117
 msgid "Database does not allow data manipulation."
@@ -4070,11 +4070,11 @@ msgstr "La base de données ne permet pas la manipulation de données."
 #: superset/datasets/commands/exceptions.py:41
 #: superset/reports/commands/exceptions.py:35
 msgid "Database does not exist"
-msgstr "La base de données n'existe pas"
+msgstr "La base de données n"existe pas"
 
 #: superset/connectors/sqla/models.py:1478
 msgid "Database does not support subqueries"
-msgstr "La base de données n'autorise pas les sous-requêtes"
+msgstr "La base de données n"autorise pas les sous-requêtes"
 
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:688
 msgid "Database error"
@@ -4147,21 +4147,21 @@ msgstr "Colonne du jeu de données introuvable."
 
 #: superset/datasets/commands/exceptions.py:157
 msgid "Dataset could not be created."
-msgstr "Le jeu de données n'a pas pu être créé."
+msgstr "Le jeu de données n"a pas pu être créé."
 
 #: superset/datasets/commands/exceptions.py:165
 msgid "Dataset could not be deleted."
-msgstr "Le jeu de données n'a pas pu être supprimé."
+msgstr "Le jeu de données n"a pas pu être supprimé."
 
 #: superset/datasets/commands/exceptions.py:161
 #: superset/datasets/commands/exceptions.py:173
 msgid "Dataset could not be updated."
-msgstr "Le jeu de données n'a pas pu être mis à jour."
+msgstr "Le jeu de données n"a pas pu être mis à jour."
 
 #: superset/commands/exceptions.py:119
 #: superset/datasets/commands/exceptions.py:149
 msgid "Dataset does not exist"
-msgstr "Le jeu de données n'existe pas"
+msgstr "Le jeu de données n"existe pas"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:843
 msgid "Dataset is required"
@@ -4186,7 +4186,7 @@ msgstr "Les paramètres du jeu de données sont invalides."
 
 #: superset/datasets/commands/exceptions.py:169
 msgid "Dataset(s) could not be bulk deleted."
-msgstr "Les jeux de données n'ont pas pu être supprimés par lot."
+msgstr "Les jeux de données n"ont pas pu être supprimés par lot."
 
 #: superset-frontend/src/profile/components/Security.tsx:60
 #: superset-frontend/src/views/CRUD/data/common.ts:32
@@ -4256,7 +4256,7 @@ msgid ""
 "Datetime column not provided as part table configuration and is required "
 "by this type of chart"
 msgstr ""
-"Colonne Datetime non fournie dans la configuration alors qu'elle est "
+"Colonne Datetime non fournie dans la configuration alors qu"elle est "
 "requise pour ce type de graphique"
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:227
@@ -4274,7 +4274,7 @@ msgstr "A exécuté %s"
 
 #: superset/connectors/sqla/models.py:1593
 msgid "Db engine did not return all queried columns"
-msgstr "La base de données n'a pas retourné toutes les colonnes demandées"
+msgstr "La base de données n"a pas retourné toutes les colonnes demandées"
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:77
 msgid "December"
@@ -4318,7 +4318,7 @@ msgstr "Deck.gl - Nuage de points"
 
 #: superset/viz.py:2677
 msgid "Deck.gl - Screen Grid"
-msgstr "Deck.gl - Grille d'écran"
+msgstr "Deck.gl - Grille d"écran"
 
 #: superset-frontend/src/explore/components/controls/FilterBoxItemControl/index.jsx:167
 msgid "Default"
@@ -4355,7 +4355,7 @@ msgstr "Valeur par défaut"
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:91
 msgid ""
 "Default minimal column width in pixels, actual width may still be larger "
-"than this if other columns don't need much space"
+"than this if other columns don"t need much space"
 msgstr ""
 
 #: superset-frontend/src/filters/components/Select/controlPanel.ts:105
@@ -4403,7 +4403,7 @@ msgid ""
 "Defines the grouping of entities. Each series is shown as a specific "
 "color on the chart and has a legend toggle"
 msgstr ""
-"Définit le regroupement d'entités. Chaque série est représentée par une "
+"Définit le regroupement d"entités. Chaque série est représentée par une "
 "couleur spécifique sur le graphique et masquée/affichée en cliquant sur "
 "sa légende"
 
@@ -4413,7 +4413,7 @@ msgid ""
 "Defines the origin where time buckets start, accepts natural dates as in "
 "`now`, `sunday` or `1970-01-01`"
 msgstr ""
-"Définir l'origine des intervalles de temps, accepte les dates naturelles "
+"Définir l"origine des intervalles de temps, accepte les dates naturelles "
 "comme dans`now`, `sunday` ou `1970-01-01`"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:58
@@ -4462,7 +4462,7 @@ msgstr "Effacer %s ?"
 
 #: superset-frontend/src/views/CRUD/annotation/AnnotationList.tsx:296
 msgid "Delete Annotation?"
-msgstr "Supprimer l'annotation ?"
+msgstr "Supprimer l"annotation ?"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:453
 msgid "Delete Database?"
@@ -4499,7 +4499,7 @@ msgstr "Supprimer annotation"
 
 #: superset-frontend/src/dashboard/components/gridComponents/Tabs.jsx:202
 msgid "Delete dashboard tab?"
-msgstr "Supprimer l'onglet du tableau de bord ?"
+msgstr "Supprimer l"onglet du tableau de bord ?"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:332
 msgid "Delete database"
@@ -4533,8 +4533,8 @@ msgstr[1] "%(num)d annotations supprimées"
 #, python-format
 msgid "Deleted %(num)d annotation layer"
 msgid_plural "Deleted %(num)d annotation layers"
-msgstr[0] "%(num)d couche d'annotations supprimée"
-msgstr[1] "%(num)d couches d'annotations supprimées"
+msgstr[0] "%(num)d couche d"annotations supprimée"
+msgstr[1] "%(num)d couches d"annotations supprimées"
 
 #: superset/charts/api.py:480
 #, python-format
@@ -4748,7 +4748,7 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:615
 msgid "Display configuration"
-msgstr "Configuration d'affichage"
+msgstr "Configuration d"affichage"
 
 #: superset-frontend/plugins/legacy-plugin-chart-pivot-table/src/controlPanel.ts:98
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:187
@@ -4809,7 +4809,7 @@ msgid "Domain"
 msgstr "Comparaison"
 
 #: superset-frontend/src/dashboard/components/RefreshIntervalModal.tsx:29
-msgid "Don't refresh"
+msgid "Don"t refresh"
 msgstr "Ne pas actualiser"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Pie/controlPanel.ts:83
@@ -4919,7 +4919,7 @@ msgid ""
 "[auth](http://druid.io/docs/latest/design/auth.html) and druid-basic-"
 "security extension"
 msgstr ""
-"Druid supporte l'authentification basique. Voir "
+"Druid supporte l"authentification basique. Voir "
 "[auth](http://druid.io/docs/latest/design/auth.html) et druid-basic-"
 "security extension"
 
@@ -4944,7 +4944,7 @@ msgstr ""
 
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors/index.jsx:366
 msgid "Duplicate tab"
-msgstr "Dupliquer l'onglet"
+msgstr "Dupliquer l"onglet"
 
 #: superset-frontend/src/views/CRUD/alert/ExecutionLog.tsx:135
 msgid "Duration"
@@ -4958,16 +4958,16 @@ msgid ""
 "defaults to the global timeout if undefined."
 msgstr ""
 "Durée (en secondes) du timeout de cache pour les graphiques cette base de"
-" données. Un timeout de 0 indique que le cache n'expire jamais. Noter que"
-" s'il n'est pas défini, c'est le timeout global qui est pris en compte."
+" données. Un timeout de 0 indique que le cache n"expire jamais. Noter que"
+" s"il n"est pas défini, c"est le timeout global qui est pris en compte."
 
 #: superset-frontend/src/explore/components/PropertiesModal/index.tsx:282
 msgid ""
 "Duration (in seconds) of the caching timeout for this chart. Note this "
-"defaults to the dataset's timeout if undefined."
+"defaults to the dataset"s timeout if undefined."
 msgstr ""
 "Durée (en secondes) du timeout du cache pour ce graphique. Notez que "
-"c'est par défaut le timeout du jeu de données si indéfinie."
+"c"est par défaut le timeout du jeu de données si indéfinie."
 
 #: superset/views/chart/mixin.py:70
 msgid ""
@@ -4982,7 +4982,7 @@ msgid ""
 "global timeout if undefined."
 msgstr ""
 "Durée (en secondes) du timeout du cache pour ce cluster. Un timeout de 0 "
-"indique que le cache n'expire jamais. Notez que s'il est indéfini, il "
+"indique que le cache n"expire jamais. Notez que s"il est indéfini, il "
 "prend comme valeur par défaut celui du timeout global."
 
 #: superset/connectors/druid/views.py:334
@@ -4992,7 +4992,7 @@ msgid ""
 "to the cluster timeout if undefined."
 msgstr ""
 "Durée (en secondes) du timeout du cache pour cette source de données. Un "
-"timeout de 0 indique que le cache n'expire jamais. Notez que s'il est "
+"timeout de 0 indique que le cache n"expire jamais. Notez que s"il est "
 "indéfini, il prend comme valeur par défaut le timeout du cluster."
 
 #: superset/connectors/sqla/views.py:473
@@ -5002,7 +5002,7 @@ msgid ""
 "database timeout if undefined."
 msgstr ""
 "Durée (en secondes) du timeout du cache pour cette table. Un timeout à 0 "
-"indique que le cache n'expire jamais. Notez que le timeout de la base de "
+"indique que le cache n"expire jamais. Notez que le timeout de la base de "
 "données par défaut est undefined."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:250
@@ -5011,7 +5011,7 @@ msgid ""
 " database. If left unset, the cache never expires."
 msgstr ""
 "Durée (en seconds) du délai de mise en cache pour les schémas de base de "
-"données. Si vide, le cache n'expire jamais."
+"données. Si vide, le cache n"expire jamais."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:272
 msgid ""
@@ -5019,7 +5019,7 @@ msgid ""
 "database. If left unset, the cache never expires. "
 msgstr ""
 "Durée (en secondes) du délai de mise en cache pour les métadonnées des "
-"tables de cette base de données. Si vide, le cache n'expire jamais. "
+"tables de cette base de données. Si vide, le cache n"expire jamais. "
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:41
 msgid "Duration in ms (1.40008 => 1ms 400µs 80ns)"
@@ -5079,7 +5079,7 @@ msgstr ""
 #: superset-frontend/plugins/plugin-chart-echarts/src/Graph/controlPanel.tsx:226
 #, fuzzy
 msgid "Edge width"
-msgstr "L'épaisseur de la ligne"
+msgstr "L"épaisseur de la ligne"
 
 #: superset-frontend/src/SqlLab/components/QueryTable/index.jsx:197
 #: superset-frontend/src/dashboard/components/menu/MarkdownModeDropdown.tsx:35
@@ -5103,11 +5103,11 @@ msgstr "Éditer la table"
 
 #: superset/views/annotations.py:61
 msgid "Edit Annotation"
-msgstr "Editer l'annotation"
+msgstr "Editer l"annotation"
 
 #: superset/views/annotations.py:120
 msgid "Edit Annotation Layer"
-msgstr "Editer la couche d'annotation"
+msgstr "Editer la couche d"annotation"
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:309
 msgid "Edit CSS"
@@ -5197,11 +5197,11 @@ msgstr "Modifier annotation"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/index.jsx:170
 msgid "Edit annotation layer"
-msgstr "Modifier une couche d'annotations"
+msgstr "Modifier une couche d"annotations"
 
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayerModal.tsx:237
 msgid "Edit annotation layer properties"
-msgstr "Couches d'annotation"
+msgstr "Couches d"annotation"
 
 #: superset-frontend/src/explore/components/ExploreChartHeader/index.jsx:305
 #: superset-frontend/src/explore/components/ExploreChartHeader/index.jsx:308
@@ -5259,11 +5259,11 @@ msgstr "Édité"
 
 #: superset-frontend/src/dashboard/components/filterscope/FilterScopeSelector.jsx:484
 msgid "Editing 1 filter:"
-msgstr "Édition d'un filtre :"
+msgstr "Édition d"un filtre :"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterSets/EditSection.tsx:119
 msgid "Editing filter set:"
-msgstr "Modifier l'ensemble de filtre :"
+msgstr "Modifier l"ensemble de filtre :"
 
 #: superset/errors.py:110
 msgid "Either the database is spelled incorrectly or does not exist."
@@ -5273,7 +5273,7 @@ msgstr "Base de données inexistante ou nom incorrect."
 #: superset/db_engine_specs/redshift.py:63
 #, python-format
 msgid "Either the username \"%(username)s\" or the password is incorrect."
-msgstr "L'utilisateur \"%(username)s\" ou le mot de passe est incorrect."
+msgstr "L"utilisateur \"%(username)s\" ou le mot de passe est incorrect."
 
 #: superset/db_engine_specs/mssql.py:74
 #, python-format
@@ -5281,22 +5281,22 @@ msgid ""
 "Either the username \"%(username)s\", password, or database name "
 "\"%(database)s\" is incorrect."
 msgstr ""
-"Soit l'utilisateur \"%(username)s\", le mot de passe, ou le nom de la "
+"Soit l"utilisateur \"%(username)s\", le mot de passe, ou le nom de la "
 "base de données \"%(database)s\" est incorrect."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:114
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:118
 #, fuzzy, python-format
 msgid "Either the username or password is incorrect."
-msgstr "L'utilisateur \"%(username)s\" ou le mot de passe est incorrect."
+msgstr "L"utilisateur \"%(username)s\" ou le mot de passe est incorrect."
 
 #: superset/errors.py:109
 msgid "Either the username or the password is wrong."
-msgstr "Le nom d'utilisateur ou le mot de passe est incorrect."
+msgstr "Le nom d"utilisateur ou le mot de passe est incorrect."
 
 #: superset/views/schedules.py:326
 msgid "Email Format"
-msgstr "Format d'e-mail"
+msgstr "Format d"e-mail"
 
 #: superset-frontend/src/components/ReportModal/HeaderReportActionsDropdown/index.tsx:64
 msgid "Email reports active"
@@ -5374,7 +5374,7 @@ msgstr ""
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:176
 msgid "Enable query cost estimation"
-msgstr "Activer l'estimation du coût de la requête"
+msgstr "Activer l"estimation du coût de la requête"
 
 #: superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx:290
 msgid "Enable server side pagination of results (experimental feature)"
@@ -5406,7 +5406,7 @@ msgstr "Intervalle de Temps"
 #: superset-frontend/src/explore/components/controls/DateFilterControl/components/AdvancedFrame.tsx:78
 #: superset-frontend/src/explore/components/controls/DateFilterControl/components/CustomFrame.tsx:171
 msgid "End date excluded from time range"
-msgstr "Date de fin exclue de l'intervalle de temps"
+msgstr "Date de fin exclue de l"intervalle de temps"
 
 #: superset/annotation_layers/annotations/commands/exceptions.py:35
 msgid "End date must be after start date"
@@ -5420,7 +5420,7 @@ msgstr "Le moteur \"%(engine)s\" ne peut pas être configuré via des paramètre
 #: superset/databases/commands/validate.py:59 superset/databases/schemas.py:308
 #, python-format
 msgid "Engine \"%(engine)s\" is not a valid engine."
-msgstr "Le moteur \"%(engine)s\" n'est pas un moteur valide."
+msgstr "Le moteur \"%(engine)s\" n"est pas un moteur valide."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:459
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:464
@@ -5432,7 +5432,7 @@ msgid ""
 "Engine spec \"InvalidEngine\" does not support being configured via "
 "individual parameters."
 msgstr ""
-"La spec moteur  \"InvalidEngine\" ne supporte pas d'être configuré via "
+"La spec moteur  \"InvalidEngine\" ne supporte pas d"être configuré via "
 "des paramètres individuels."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:356
@@ -5445,7 +5445,7 @@ msgstr "Entrée un nom pour cette feuille"
 
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors/index.jsx:238
 msgid "Enter a new title for the tab"
-msgstr "Entrée un nouveau titre pour l'onglet"
+msgstr "Entrée un nouveau titre pour l"onglet"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:222
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:244
@@ -5479,28 +5479,28 @@ msgstr "Opérateur"
 
 #: superset/views/alerts.py:83
 msgid "Error Message"
-msgstr "Message d'erreur"
+msgstr "Message d"erreur"
 
 #: superset/connectors/sqla/models.py:1349
 #, python-format
 msgid "Error in jinja expression in HAVING clause: %(msg)s"
-msgstr "Erreur d'expression jinja dans la clause HAVING : %(msg)s"
+msgstr "Erreur d"expression jinja dans la clause HAVING : %(msg)s"
 
 #: superset/connectors/sqla/models.py:976
 #, python-format
 msgid "Error in jinja expression in RLS filters: %(msg)s"
-msgstr "Erreur dans l'expression jinja des filtres RLS : %(msg)s"
+msgstr "Erreur dans l"expression jinja des filtres RLS : %(msg)s"
 
 #: superset/connectors/sqla/models.py:1337
 #, python-format
 msgid "Error in jinja expression in WHERE clause: %(msg)s"
-msgstr "Erreur d'expression jinja dans la clause WHERE : %(msg)s"
+msgstr "Erreur d"expression jinja dans la clause WHERE : %(msg)s"
 
 #: superset/connectors/sqla/models.py:735
 #, python-format
 msgid "Error in jinja expression in fetch values predicate: %(msg)s"
 msgstr ""
-"Erreur dans l'expression jinja dans la réupération du prédicat des "
+"Erreur dans l"expression jinja dans la réupération du prédicat des "
 "valeurs : %(msg)s"
 
 #: superset-frontend/src/dashboard/containers/DashboardPage.tsx:190
@@ -5511,18 +5511,18 @@ msgstr ""
 
 #: superset-frontend/src/views/CRUD/alert/ExecutionLog.tsx:144
 msgid "Error message"
-msgstr "Message d'erreur"
+msgstr "Message d"erreur"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/LineMulti/controlPanel.ts:104
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/LineMulti/controlPanel.ts:139
 #, fuzzy, python-format
 msgid "Error while fetching charts"
-msgstr "Une erreur s'est produite durant la récupération des tableaux de bord : %s"
+msgstr "Une erreur s"est produite durant la récupération des tableaux de bord : %s"
 
 #: superset-frontend/src/explore/components/controls/SelectAsyncControl/index.tsx:89
 #, fuzzy, python-format
 msgid "Error while fetching data: %s"
-msgstr "Une erreur s'est produite durant la récupération des jeux de données : %s"
+msgstr "Une erreur s"est produite durant la récupération des jeux de données : %s"
 
 #: superset/connectors/sqla/models.py:842
 #, python-format
@@ -5539,12 +5539,12 @@ msgstr "Estimer le coût estimé de la requête sélectionnée"
 
 #: superset-frontend/src/SqlLab/components/SqlEditor/index.jsx:648
 msgid "Estimate the cost before running a query"
-msgstr "Estimer le coût avant d'exécuter une requête"
+msgstr "Estimer le coût avant d"exécuter une requête"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/index.ts:29
 #, fuzzy
 msgid "Event Flow"
-msgstr "Flot d'événements"
+msgstr "Flot d"événements"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:43
 #, fuzzy
@@ -5557,7 +5557,7 @@ msgstr ""
 
 #: superset/viz.py:2896
 msgid "Event flow"
-msgstr "Flot d'événements"
+msgstr "Flot d"événements"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:478
 msgid "Event time column"
@@ -5601,7 +5601,7 @@ msgstr "Exemple"
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:92
 #, fuzzy, python-format
 msgid "Example %(tableName)s will appear here"
-msgstr "Les ${tableName.toLowerCase()} d'exemple apparaîtront ici"
+msgstr "Les ${tableName.toLowerCase()} d"exemple apparaîtront ici"
 
 #: superset-frontend/src/explore/components/controls/VizTypeControl/VizTypeGallery.tsx:759
 #: superset-frontend/src/views/CRUD/welcome/ChartTable.tsx:180
@@ -5641,11 +5641,11 @@ msgstr "Lancer la requête sélectionnée"
 
 #: superset-frontend/src/views/CRUD/alert/ExecutionLog.tsx:105
 msgid "Execution ID"
-msgstr "ID d'exécution"
+msgstr "ID d"exécution"
 
 #: superset-frontend/src/views/CRUD/alert/AlertList.tsx:307
 msgid "Execution log"
-msgstr "Log d'exécution"
+msgstr "Log d"exécution"
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:326
 msgid "Exit fullscreen"
@@ -5662,7 +5662,7 @@ msgstr "Supprimer la Prévisualisation de la table"
 
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors/index.jsx:351
 msgid "Expand tool bar"
-msgstr "Etendre la barre d'outil"
+msgstr "Etendre la barre d"outil"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/MixedTimeseries/index.ts:72
 #: superset-frontend/src/filters/components/GroupBy/index.ts:31
@@ -5692,7 +5692,7 @@ msgstr "Explorer dans Superset"
 #: superset-frontend/src/SqlLab/components/ExploreCtasResultsButton/index.jsx:91
 #: superset-frontend/src/SqlLab/components/ExploreResultsButton/index.jsx:161
 msgid "Explore the result set in the data exploration view"
-msgstr "Explorer le résultat dans la vue d'exploration des données"
+msgstr "Explorer le résultat dans la vue d"exploration des données"
 
 #: superset-frontend/src/views/CRUD/chart/ChartCard.tsx:116
 #: superset-frontend/src/views/CRUD/chart/ChartList.tsx:388
@@ -6043,20 +6043,20 @@ msgid ""
 "while different filter groups will be ANDed together. Undefined group "
 "keys are treated as unique groups, i.e. are not grouped together. For "
 "example, if a table has three filters, of which two are for departments "
-"Finance and Marketing (group key = 'department'), and one refers to the "
-"region Europe (group key = 'region'), the filter clause would apply the "
-"filter (department = 'Finance' OR department = 'Marketing') AND (region ="
-" 'Europe')."
+"Finance and Marketing (group key = "department"), and one refers to the "
+"region Europe (group key = "region"), the filter clause would apply the "
+"filter (department = "Finance" OR department = "Marketing") AND (region ="
+" "Europe")."
 msgstr ""
-"Les filtres d'un groupe qui ont la même clé vont se combiner avec des OU,"
+"Les filtres d"un groupe qui ont la même clé vont se combiner avec des OU,"
 " alors que des filtres de groupes différents vont se combiner avec des "
 "ET. Les groupes qui ont une clé indéfinie sont traités comme des groupes "
-"uniques, c'est-à-dire qu'ils ne sont pas regroupés. Par exemple, si une "
+"uniques, c"est-à-dire qu"ils ne sont pas regroupés. Par exemple, si une "
 "table a 3 filtres dont 2 sont pour les départements Finance et Marketing "
-"(clé de groupe 'department', et 1 se réfère à la région Europe (clé de "
-"groupe = 'region'), la clause du filtre qui s'appliquerait serait "
-"(department = 'Finance' OR department = 'Marketing') AND (region = "
-"'Europe')."
+"(clé de groupe "department", et 1 se réfère à la région Europe (clé de "
+"groupe = "region"), la clause du filtre qui s"appliquerait serait "
+"(department = "Finance" OR department = "Marketing") AND (region = "
+""Europe")."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:794
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:808
@@ -6118,7 +6118,7 @@ msgid ""
 "query."
 msgstr ""
 "Pour Presto et Postgres, affiche un bouton pour calculer le coût avant "
-"d'exécuter une requête."
+"d"exécuter une requête."
 
 #: superset/connectors/sqla/views.py:342
 msgid ""
@@ -6127,9 +6127,9 @@ msgid ""
 "e.g. Admin if admin should see all data."
 msgstr ""
 "Pour les filtres réguliers, ce sont les profils sur lesquels vont "
-"s'appliquer les filtres. Pour les filtres de base, ce sont les profis sur"
-" lesquels les  filtres NE VONT PAS s'appliquer, par exemple Admin si "
-"l'admin devrait voir toutes les données."
+"s"appliquer les filtres. Pour les filtres de base, ce sont les profis sur"
+" lesquels les  filtres NE VONT PAS s"appliquer, par exemple Admin si "
+"l"admin devrait voir toutes les données."
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Graph/controlPanel.tsx:111
 #, fuzzy
@@ -6174,7 +6174,7 @@ msgstr "Clefs pour la table"
 
 #: superset-frontend/src/components/ReportModal/index.tsx:296
 msgid "Formatted CSV attached in email"
-msgstr "CSV formatté attaché dans l'e-mail"
+msgstr "CSV formatté attaché dans l"e-mail"
 
 #: superset-frontend/packages/superset-ui-core/src/query/extractQueryFields.ts:130
 msgid "Found invalid orderby options"
@@ -6238,7 +6238,7 @@ msgstr "Geohash"
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/components/DateFunctionTooltip.tsx:75
 msgid "Get the last date by the date unit."
-msgstr "Récupérer la dernière date par l'unité de date."
+msgstr "Récupérer la dernière date par l"unité de date."
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/components/DateFunctionTooltip.tsx:88
 msgid "Get the specify date for the holiday"
@@ -6275,8 +6275,8 @@ msgid "Group By filter plugin"
 msgstr ""
 
 #: superset/viz.py:895
-msgid "Group By' and 'Columns' can't overlap"
-msgstr "'Grouper par' et 'Colonnes' ne peuvent pas se chevaucher"
+msgid "Group By" and "Columns" can"t overlap"
+msgstr ""Grouper par" et "Colonnes" ne peuvent pas se chevaucher"
 
 #: superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx:83
 msgid "Group By, Metrics or Percentage Metrics must have a value"
@@ -6302,11 +6302,11 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/gridComponents/new/NewHeader.jsx:31
 msgid "Header"
-msgstr "Ligne d'en-tête"
+msgstr "Ligne d"en-tête"
 
 #: superset/views/database/forms.py:152 superset/views/database/forms.py:305
 msgid "Header Row"
-msgstr "Ligne d'en-tête"
+msgstr "Ligne d"en-tête"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/index.js:38
 #: superset/viz.py:2212
@@ -6327,7 +6327,7 @@ msgstr "Masquer la couche"
 
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors/index.jsx:351
 msgid "Hide tool bar"
-msgstr "Masquer la barre d'outil"
+msgstr "Masquer la barre d"outil"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sunburst/src/controlPanel.ts:81
 #, fuzzy
@@ -6362,7 +6362,7 @@ msgstr ""
 
 #: superset/db_engine_specs/base.py:1390
 msgid "Hostname or IP address"
-msgstr "Nom d'hôte ou adresse IP"
+msgstr "Nom d"hôte ou adresse IP"
 
 #: superset/db_engine_specs/base.py:94
 msgid "Hour"
@@ -6437,10 +6437,10 @@ msgid ""
 "hive.server2.proxy.user property."
 msgstr ""
 "Si Presto ou Trino, toutes les requêtes dans SQL Lab sont en cours "
-"d'exécution sous le compte de l'utilisateur actuellement connecté qui "
+"d"exécution sous le compte de l"utilisateur actuellement connecté qui "
 "doit avoir les permissions requises pour les exécuter. Si Hive et "
 "hive.server2.enable.doAs est activé, les requêtes seront exécutées sous "
-"le compte du service, mais en impersonnifiant l'utilisateur actuellement "
+"le compte du service, mais en impersonnifiant l"utilisateur actuellement "
 "connecté via la propriété hive.server2.proxy.user."
 
 #: superset/views/database/mixins.py:163
@@ -6451,11 +6451,11 @@ msgid ""
 "service account, but impersonate the currently logged on user via "
 "hive.server2.proxy.user property."
 msgstr ""
-"Si Presto, toutes les requêtes dans SQL Lab sont en cours d'exécution "
-"sous le compte de l'utilisateur actuellement connecté qui doit avoir les "
+"Si Presto, toutes les requêtes dans SQL Lab sont en cours d"exécution "
+"sous le compte de l"utilisateur actuellement connecté qui doit avoir les "
 "premissions requises.<br/>Si Hive et hive.server2.enable.doAs sont "
 "activés, les requêtes seront exécutées sous le compte du service, mais "
-"impersonnifiant l'utilisateur actuellement connecté via la propriété "
+"impersonnifiant l"utilisateur actuellement connecté via la propriété "
 "hive.server2.proxy.user."
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:1201
@@ -6485,7 +6485,7 @@ msgid ""
 " and recreate table) or Append (insert data)."
 msgstr ""
 "Si la table existe, faire une des actions suivantes : Echec (pas "
-"d'actions), Remplacer (supprimer et recréer la table) ou Ajouter (insérer"
+"d"actions), Remplacer (supprimer et recréer la table) ou Ajouter (insérer"
 " les données)."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:48
@@ -6500,7 +6500,7 @@ msgstr ""
 
 #: superset-frontend/src/components/ReportModal/index.tsx:293
 msgid "Image (PNG) embedded in email"
-msgstr "Image (PNG) encapsulée dans l'e-mail"
+msgstr "Image (PNG) encapsulée dans l"e-mail"
 
 #: superset-frontend/src/utils/downloadAsImage.ts:63
 msgid "Image download failed, please refresh and try again."
@@ -6509,12 +6509,12 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:395
 msgid "Impersonate logged in user (Presto, Trino, Drill, Hive, and GSheets)"
 msgstr ""
-"Impersonnaliser l'utilisateur connecté (Presto, Trino, Drill, Hive, and "
+"Impersonnaliser l"utilisateur connecté (Presto, Trino, Drill, Hive, and "
 "GSheets)"
 
 #: superset/views/database/mixins.py:200
 msgid "Impersonate the logged on user"
-msgstr "Impersonnaliser la connexion de l'utilisateur"
+msgstr "Impersonnaliser la connexion de l"utilisateur"
 
 #: superset-frontend/src/components/ImportModal/index.tsx:282
 msgid "Import"
@@ -6535,11 +6535,11 @@ msgstr "Importer des tableaux de bord"
 
 #: superset/connectors/sqla/views.py:397
 msgid "Import a table definition"
-msgstr "Importer la définition d'une table"
+msgstr "Importer la définition d"une table"
 
 #: superset/charts/commands/exceptions.py:151
 msgid "Import chart failed for an unknown reason"
-msgstr "L'import du graphique a échoué pour une raison inconnue"
+msgstr "L"import du graphique a échoué pour une raison inconnue"
 
 #: superset-frontend/src/views/CRUD/chart/ChartList.tsx:621
 msgid "Import charts"
@@ -6547,7 +6547,7 @@ msgstr "Importer des graphiques"
 
 #: superset/dashboards/commands/exceptions.py:82
 msgid "Import dashboard failed for an unknown reason"
-msgstr "L'import du tableau de bord a échoué pour une raison inconnue"
+msgstr "L"import du tableau de bord a échoué pour une raison inconnue"
 
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:596
 #: superset/templates/superset/import_dashboards.html:21
@@ -6556,7 +6556,7 @@ msgstr "Import des tableaux de bord"
 
 #: superset/databases/commands/exceptions.py:139
 msgid "Import database failed for an unknown reason"
-msgstr "L'import de la base de données a échoué pour une raison inconnue"
+msgstr "L"import de la base de données a échoué pour une raison inconnue"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:195
 msgid "Import databases"
@@ -6564,7 +6564,7 @@ msgstr "Importer la base de données"
 
 #: superset/datasets/commands/exceptions.py:181
 msgid "Import dataset failed for an unknown reason"
-msgstr "L'import du jeu de données a échoué pour une raison inconnue"
+msgstr "L"import du jeu de données a échoué pour une raison inconnue"
 
 #: superset-frontend/src/views/CRUD/data/dataset/DatasetList.tsx:517
 msgid "Import datasets"
@@ -6576,7 +6576,7 @@ msgstr "Importer des requêtes"
 
 #: superset/queries/saved_queries/commands/exceptions.py:36
 msgid "Import saved query failed for an unknown reason."
-msgstr "L'import de la requête sauvegardée a échoué pour une raison inconnue."
+msgstr "L"import de la requête sauvegardée a échoué pour une raison inconnue."
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:64
 msgid ""
@@ -6657,7 +6657,7 @@ msgstr "Entité"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:495
 msgid "Interval End column"
-msgstr "Dernière colonne de l'intervalle"
+msgstr "Dernière colonne de l"intervalle"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Gauge/controlPanel.tsx:286
 #, fuzzy
@@ -6671,12 +6671,12 @@ msgstr "Schéma de couleurs linéaire"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:477
 msgid "Interval start column"
-msgstr "Première colonne de l'intervalle"
+msgstr "Première colonne de l"intervalle"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Gauge/controlPanel.tsx:280
 #, fuzzy
 msgid "Intervals"
-msgstr "Intervalle d'actualisation"
+msgstr "Intervalle d"actualisation"
 
 #: superset-frontend/src/SqlLab/components/TemplateParamsEditor/index.tsx:109
 msgid "Invalid JSON"
@@ -6699,11 +6699,11 @@ msgstr "Certificat invalide"
 #: superset/views/core.py:1375
 msgid ""
 "Invalid connection string, a valid string usually follows:\n"
-"'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'"
+""DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME""
 msgstr ""
-"Chaine de connexion incorrecte, une chaine correcte s'écrit "
+"Chaine de connexion incorrecte, une chaine correcte s"écrit "
 "habituellement\n"
-"'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'"
+""DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME""
 
 #: superset/databases/schemas.py:148
 msgid ""
@@ -6716,13 +6716,13 @@ msgstr ""
 #: superset/views/database/validators.py:40
 msgid ""
 "Invalid connection string, a valid string usually "
-"follows:'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-"
-"NAME'<p>Example:'postgresql://user:password@your-postgres-"
-"db/database'</p>"
+"follows:"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-"
+"NAME"<p>Example:"postgresql://user:password@your-postgres-"
+"db/database"</p>"
 msgstr ""
 "Chaîne de connexion invalide, une chaîne valide a généralement cette "
-"forme : DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'<p>Exemple : \" "
-"\"'postgresql://user:password@your-postgres-db/database'</p>"
+"forme : DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME"<p>Exemple : \" "
+"\""postgresql://user:password@your-postgres-db/database"</p>"
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:52
 msgid "Invalid cron expression"
@@ -6744,7 +6744,7 @@ msgstr "Configuration du filtre invalide, veuillez sélectionner une colonne"
 #: superset/connectors/sqla/models.py:1326
 #, python-format
 msgid "Invalid filter operation type: %(op)s"
-msgstr "Type d'opération de filtrage invalide : %(op)s"
+msgstr "Type d"opération de filtrage invalide : %(op)s"
 
 #: superset/utils/pandas_postprocessing.py:679
 msgid "Invalid geodetic string"
@@ -6835,8 +6835,8 @@ msgstr "La base de données est soumise à une charge inhabituelle."
 #: superset-frontend/src/SqlLab/components/QuerySearch/index.tsx:180
 #: superset-frontend/src/SqlLab/components/SqlEditorLeftBar/index.jsx:125
 #: superset-frontend/src/components/DatabaseSelector/index.tsx:183
-msgid "It seems you don't have access to any database"
-msgstr "Il semble que vous n'ayez accès à aucune Base de Données"
+msgid "It seems you don"t have access to any database"
+msgstr "Il semble que vous n"ayez accès à aucune Base de Données"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/Regular/Bar/controlPanel.tsx:221
 msgid "It’s not recommended to truncate y-axis in Bar chart."
@@ -6901,7 +6901,7 @@ msgid ""
 msgstr ""
 "Json liste de valeur à traiter comme NULL. Examples: [\"\"], [\"None\", "
 "\"N/A\"], [\"nan\", \"null\"]. Attention: Hive database ne supporte "
-"qu'une seule valeur. Use [\"\"] for empty string."
+"qu"une seule valeur. Use [\"\"] for empty string."
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:72
 msgid "July"
@@ -7085,12 +7085,12 @@ msgstr "alerte"
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/LineMulti/controlPanel.ts:166
 #, fuzzy
 msgid "Left Axis Format"
-msgstr "Format de l'axe Y"
+msgstr "Format de l"axe Y"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/DualLine/controlPanel.ts:68
 #, fuzzy
 msgid "Left Axis Metric"
-msgstr "Mesure de l'axe de droite"
+msgstr "Mesure de l"axe de droite"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/LineMulti/controlPanel.ts:97
 msgid "Left Axis chart(s)"
@@ -7230,7 +7230,7 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:667
 msgid "Line width"
-msgstr "L'épaisseur de la ligne"
+msgstr "L"épaisseur de la ligne"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:190
 #, fuzzy
@@ -7403,7 +7403,7 @@ msgstr "Gérer les rapports par e-mail pour les graphiques"
 
 #: superset/views/schedules.py:198
 msgid "Manage Email Reports for Dashboards"
-msgstr "Gérer l'envoi de rapport par e-mail pour les tableaux de Bord"
+msgstr "Gérer l"envoi de rapport par e-mail pour les tableaux de Bord"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:726
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:763
@@ -7600,8 +7600,8 @@ msgstr "Métrique"
 #: superset/connectors/sqla/models.py:1079
 #: superset/connectors/sqla/models.py:1509
 #, python-format
-msgid "Metric '%(metric)s' does not exist"
-msgstr "La métrique '%(metric)s' n'existe pas"
+msgid "Metric "%(metric)s" does not exist"
+msgstr "La métrique "%(metric)s" n"existe pas"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:38
 #, fuzzy
@@ -7612,13 +7612,13 @@ msgstr "Tri croissant"
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:407
 #: superset-frontend/src/explore/controls.jsx:422
 msgid "Metric assigned to the [X] axis"
-msgstr "Métrique assignée à l'axe [X]"
+msgstr "Métrique assignée à l"axe [X]"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:154
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:415
 #: superset-frontend/src/explore/controls.jsx:430
 msgid "Metric assigned to the [Y] axis"
-msgstr "Métrique assignée à l'axe [Y]"
+msgstr "Métrique assignée à l"axe [Y]"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:103
 msgid "Metric change in value from `since` to `until`"
@@ -7724,7 +7724,7 @@ msgstr "Périodes min"
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:90
 #, fuzzy
 msgid "Min Width"
-msgstr "L'épaisseur de la ligne"
+msgstr "L"épaisseur de la ligne"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:73
 #: superset-frontend/src/explore/controlPanels/sections.tsx:189
@@ -7843,7 +7843,7 @@ msgstr "mois"
 
 #: superset-frontend/src/explore/components/controls/DatasourceControl/index.jsx:238
 msgid "More dataset related options"
-msgstr "Plus d'options sur les jeux de données"
+msgstr "Plus d"options sur les jeux de données"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Graph/controlPanel.tsx:167
 #: superset-frontend/plugins/plugin-chart-echarts/src/Tree/controlPanel.tsx:276
@@ -7852,7 +7852,7 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/components/DateFunctionTooltip.tsx:43
 msgid "Moves the given set of dates by a specified interval."
-msgstr "Décale l'ensemble de dates d'un intervalle spécifié."
+msgstr "Décale l"ensemble de dates d"un intervalle spécifié."
 
 #: superset-frontend/plugins/legacy-plugin-chart-world-map/src/index.js:40
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Bubble/index.js:32
@@ -7925,8 +7925,8 @@ msgid "Must be unique"
 msgstr "Doit être unique"
 
 #: superset/viz.py:2309
-msgid "Must have a [Group By] column to have 'count' as the [Label]"
-msgstr "Il faut une colonne [Grouper par] pour avoir 'count' comme [Label]"
+msgid "Must have a [Group By] column to have "count" as the [Label]"
+msgstr "Il faut une colonne [Grouper par] pour avoir "count" comme [Label]"
 
 #: superset/viz.py:1720
 msgid "Must have at least one numeric column specified"
@@ -8089,7 +8089,7 @@ msgstr "Pas encore de %s"
 
 #: superset/templates/superset/request_access.html:20
 msgid "No Access!"
-msgstr "Pas d'accès !"
+msgstr "Pas d"accès !"
 
 #: superset-frontend/src/components/ListView/ListView.tsx:398
 msgid "No Data"
@@ -8102,11 +8102,11 @@ msgstr "Visualiser les résultats"
 
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayersList.tsx:328
 msgid "No annotation layers yet"
-msgstr "Pas encore de couches d'annotations"
+msgstr "Pas encore de couches d"annotations"
 
 #: superset-frontend/src/views/CRUD/annotation/AnnotationList.tsx:254
 msgid "No annotation yet"
-msgstr "Pas encore d'annotations"
+msgstr "Pas encore d"annotations"
 
 #: superset-frontend/src/profile/components/CreatedContent.tsx:45
 msgid "No charts"
@@ -8168,7 +8168,7 @@ msgstr "Copie de %s"
 
 #: superset-frontend/src/SqlLab/components/QueryHistory/index.tsx:49
 msgid "No query history yet..."
-msgstr "Pas d'historique de requête..."
+msgstr "Pas d"historique de requête..."
 
 #: superset-frontend/plugins/plugin-chart-table/src/TableChart.tsx:494
 #: superset/templates/appbuilder/general/widgets/base_list.html:64
@@ -8193,8 +8193,8 @@ msgstr "Pas de résultat existant trouvé, re-jouez votre requête"
 #: superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopoverSimpleTabContent/index.tsx:268
 msgid "No such column found. To filter on a metric, try the Custom SQL tab."
 msgstr ""
-"Aucune colonne de ce type n'a été trouvée. Pour filtrer sur une métrique,"
-" essayer l'onglet Custom SQL."
+"Aucune colonne de ce type n"a été trouvée. Pour filtrer sur une métrique,"
+" essayer l"onglet Custom SQL."
 
 #: superset-frontend/src/filters/components/TimeColumn/TimeColumnFilterPlugin.tsx:81
 msgid "No time columns"
@@ -8441,7 +8441,7 @@ msgstr "Une ou plusieurs colonnes sont dupliquées"
 
 #: superset/datasets/commands/exceptions.py:70
 msgid "One or more columns do not exist"
-msgstr "Une ou plusieurs colonnes n'existent pas"
+msgstr "Une ou plusieurs colonnes n"existent pas"
 
 #: superset/datasets/commands/exceptions.py:119
 msgid "One or more metrics already exist"
@@ -8453,7 +8453,7 @@ msgstr "Une ou plusieurs métriques sont dupliquées"
 
 #: superset/datasets/commands/exceptions.py:99
 msgid "One or more metrics do not exist"
-msgstr "Une ou plusieurs métriques n'existent pas"
+msgstr "Une ou plusieurs métriques n"existent pas"
 
 #: superset/errors.py:113
 msgid "One or more parameters needed to configure a database are missing."
@@ -8477,7 +8477,7 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/SliceHeader/index.tsx:46
 msgid "One ore more annotation layers failed loading."
-msgstr "Une ou plusieurs couches d'annotation ont échoué au chargement."
+msgstr "Une ou plusieurs couches d"annotation ont échoué au chargement."
 
 #: superset/sql_lab.py:201
 msgid "Only SELECT statements are allowed against this database."
@@ -8535,7 +8535,7 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/ExploreViewContainer.jsx:550
 msgid "Open Datasource tab"
-msgstr "Ouvrir l'onglet Source de données"
+msgstr "Ouvrir l"onglet Source de données"
 
 #: superset-frontend/src/views/CRUD/data/query/QueryPreviewModal.tsx:141
 #: superset-frontend/src/views/CRUD/data/savedquery/SavedQueryPreviewModal.tsx:121
@@ -8553,11 +8553,11 @@ msgid ""
 "assumes that you have a Celery worker setup as well as a results backend."
 " Refer to the installation docs for more information."
 msgstr ""
-"Faire fonctionner la base de données en mode asynhrone, c'est-à-dire que "
+"Faire fonctionner la base de données en mode asynhrone, c"est-à-dire que "
 "les requêtes sont exécutées dans un processus distant au lieu de les "
 "exécuter sur le serveur Web lui-même. Cela suppose que vous avez "
-"configuré un processus Celery ainsi qu'un backend de résultats. Se "
-"référer aux docs d'installation pour plus d'informations."
+"configuré un processus Celery ainsi qu"un backend de résultats. Se "
+"référer aux docs d"installation pour plus d"informations."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:288
 msgid ""
@@ -8566,11 +8566,11 @@ msgid ""
 "assumes that you have a Celery worker setup as well as a results backend."
 " Refer to the installation docs for more information."
 msgstr ""
-"Faire fonctionner la base de données en mode asynchrone, c'est-à-dire que"
+"Faire fonctionner la base de données en mode asynchrone, c"est-à-dire que"
 " les requêtes sont exécutées dans un processus distant au lieu de les "
 "exécuter sur le serveur Web lui-même. Cela suppose que vous avez "
-"configuré un processus Celery ainsi qu'un backend de résultats. Se "
-"référer aux docs d'installation pour plus d'informations."
+"configuré un processus Celery ainsi qu"un backend de résultats. Se "
+"référer aux docs d"installation pour plus d"informations."
 
 #: superset-frontend/src/explore/components/controls/ConditionalFormattingControl/FormattingPopoverContent.tsx:125
 #: superset-frontend/src/explore/components/controls/ConditionalFormattingControl/FormattingPopoverContent.tsx:130
@@ -8580,7 +8580,7 @@ msgstr "Opérateur"
 #: superset/utils/pandas_postprocessing.py:175
 #, python-format
 msgid "Operator undefined for aggregator: %(name)s"
-msgstr "Opérateur indéfini pour l'agrégat: %(name)s"
+msgstr "Opérateur indéfini pour l"agrégat: %(name)s"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:361
 msgid ""
@@ -8599,12 +8599,12 @@ msgid ""
 "Optional time column if time range should apply to another column than "
 "the default time column"
 msgstr ""
-"Colonne de temps optionnelle si l'intervalle de temps doit s'appliquer à "
+"Colonne de temps optionnelle si l"intervalle de temps doit s"appliquer à "
 "une autre colonne que celle par défaut"
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:1092
 msgid "Optional warning about use of this metric"
-msgstr "Avertissement optionnel à propos de l'utilisation de cette métrique"
+msgstr "Avertissement optionnel à propos de l"utilisation de cette métrique"
 
 #: superset-frontend/plugins/legacy-plugin-chart-parallel-coordinates/src/controlPanel.ts:49
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:75
@@ -8640,7 +8640,7 @@ msgstr "Tri décroissant"
 #: superset-frontend/plugins/plugin-chart-echarts/src/Tree/controlPanel.tsx:142
 #, fuzzy
 msgid "Orientation of tree"
-msgstr "Source de l'Annotation"
+msgstr "Source de l"Annotation"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/constants.ts:27
 #: superset-frontend/src/explore/constants.ts:116
@@ -8651,7 +8651,7 @@ msgstr "Connexion"
 #: superset-frontend/src/explore/components/ExportToCSVDropdown/index.tsx:74
 #, fuzzy
 msgid "Original"
-msgstr "Valeur d'origine"
+msgstr "Valeur d"origine"
 
 #: superset-frontend/src/SqlLab/components/TableElement/index.tsx:183
 msgid "Original table column order"
@@ -8660,7 +8660,7 @@ msgstr "Ordre de colonne de table original"
 #: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:29
 #: superset/db_engine_specs/base.py:85
 msgid "Original value"
-msgstr "Valeur d'origine"
+msgstr "Valeur d"origine"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Tree/controlPanel.tsx:120
 msgid "Orthogonal"
@@ -8678,7 +8678,7 @@ msgstr ""
 #: superset-frontend/plugins/plugin-chart-echarts/src/Pie/controlPanel.tsx:199
 #, fuzzy
 msgid "Outer edge of Pie chart"
-msgstr "L'identifiant du graphique actif"
+msgstr "L"identifiant du graphique actif"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Gauge/controlPanel.tsx:257
 #, fuzzy
@@ -8695,7 +8695,7 @@ msgid ""
 "relative time deltas in natural language (example:  24 hours, 7 days, 52 "
 "weeks, 365 days). Free text is supported."
 msgstr ""
-"Superposer une ou plusieurs séries temporelles d'une période relative. "
+"Superposer une ou plusieurs séries temporelles d"une période relative. "
 "Attend des écarts temporels relatifs en langage naturel en anglais "
 "(exemple :  24 hours, 7 days, 52 weeks, 365 days). Le texte libre est "
 "supporté."
@@ -8715,7 +8715,7 @@ msgstr "Ecraser le Tableau de Bord [%s]"
 
 #: superset-frontend/src/SqlLab/components/QueryTable/index.jsx:264
 msgid "Overwrite text in the editor with a query on this table"
-msgstr "Ecraser le texte dans l'éditeur avec une requête sur cette table"
+msgstr "Ecraser le texte dans l"éditeur avec une requête sur cette table"
 
 #: superset-frontend/src/views/CRUD/chart/ChartList.tsx:453
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:450
@@ -8748,7 +8748,7 @@ msgstr "Les propriétaires sont invalides"
 #: superset/views/dashboard/mixin.py:65
 msgid "Owners is a list of users who can alter the dashboard."
 msgstr ""
-"Owners est une liste d'utilisateurs qui peuvent modifier le tableau de "
+"Owners est une liste d"utilisateurs qui peuvent modifier le tableau de "
 "bord."
 
 #: superset-frontend/src/dashboard/components/PropertiesModal/index.jsx:367
@@ -8757,8 +8757,8 @@ msgid ""
 "Owners is a list of users who can alter the dashboard. Searchable by name"
 " or username."
 msgstr ""
-"Owners est une liste d'utilisateurs qui peuvent modifier le tableau de "
-"bord. Interrogeable par nom ou nom d'utilisateur."
+"Owners est une liste d"utilisateurs qui peuvent modifier le tableau de "
+"bord. Interrogeable par nom ou nom d"utilisateur."
 
 #: superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx:388
 msgid "Page length"
@@ -8860,7 +8860,7 @@ msgstr "Mot de passe"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/DatabaseConnectionForm/TableCatalog.tsx:79
 msgid "Paste the shareable Google Sheet URL here"
-msgstr "Coller ici l'URL partageable de Google Sheet"
+msgstr "Coller ici l"URL partageable de Google Sheet"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/index.js:35
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/index.js:38
@@ -8940,18 +8940,18 @@ msgid "Physical dataset"
 msgstr "Jeu de données physique"
 
 #: superset/viz.py:742
-msgid "Pick a granularity in the Time section or uncheck 'Include Time'"
+msgid "Pick a granularity in the Time section or uncheck "Include Time""
 msgstr ""
-"Choississez une granularité dans la section Temps ou décochez 'Inclure le"
-" temps'"
+"Choississez une granularité dans la section Temps ou décochez "Inclure le"
+" temps""
 
 #: superset/viz.py:1573
 msgid "Pick a metric for left axis!"
-msgstr "Choisissez une métrique pour l'axe de gauche !"
+msgstr "Choisissez une métrique pour l"axe de gauche !"
 
 #: superset/viz.py:1575
 msgid "Pick a metric for right axis!"
-msgstr "Choisissez une métrique pour l'axe de droite !"
+msgstr "Choisissez une métrique pour l"axe de droite !"
 
 #: superset/viz.py:1163
 msgid "Pick a metric for x, y and size"
@@ -8972,7 +8972,7 @@ msgstr "Choisissez un nom pour vous aider à identifier cette base de données."
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/DatabaseConnectionForm/CommonParameters.tsx:151
 msgid "Pick a nickname for this database to display as in Superset."
 msgstr ""
-"Choisissez un alias pour l'affichage de cette base de données dans "
+"Choisissez un alias pour l"affichage de cette base de données dans "
 "Superset."
 
 #: superset/viz.py:1358 superset/viz.py:1621
@@ -8998,10 +8998,10 @@ msgstr "Choisissez exactement 2 colonnes pour [Source / Target]"
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:521
 msgid ""
 "Pick one or more columns that should be shown in the annotation. If you "
-"don't select a column all of them will be shown."
+"don"t select a column all of them will be shown."
 msgstr ""
 "Choisissez une ou plusieurs colonnes qui doivent être montrées dans "
-"l'annotation. Si vous n'en sélectionnez aucune, elles seront toutes "
+"l"annotation. Si vous n"en sélectionnez aucune, elles seront toutes "
 "affichées."
 
 #: superset-frontend/src/explore/controlPanels/Separator.js:37
@@ -9041,11 +9041,11 @@ msgstr "Table pivot"
 
 #: superset/utils/pandas_postprocessing.py:260
 msgid "Pivot operation must include at least one aggregate"
-msgstr "L'opération de pivot nécessite au moins un agrégat"
+msgstr "L"opération de pivot nécessite au moins un agrégat"
 
 #: superset/utils/pandas_postprocessing.py:256
 msgid "Pivot operation requires at least one index"
-msgstr "L'opération de pivot nécessite au moins un index"
+msgstr "L"opération de pivot nécessite au moins un index"
 
 #: superset-frontend/src/explore/components/ExportToCSVDropdown/index.tsx:80
 #, fuzzy
@@ -9092,8 +9092,8 @@ msgstr ""
 "\"%(server_error)s\". Puis essayez de relancer la requête."
 
 #: superset/viz.py:879
-msgid "Please choose at least one 'Group by' field "
-msgstr "Merci de choisir au moins un champ dans 'Grouper par' "
+msgid "Please choose at least one "Group by" field "
+msgstr "Merci de choisir au moins un champ dans "Grouper par" "
 
 #: superset/viz.py:891
 msgid "Please choose at least one metric"
@@ -9132,7 +9132,7 @@ msgstr "Veuillez saisir un nom de graphique"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterSets/Footer.tsx:81
 msgid "Please filter set name"
-msgstr "Veuillez saisir un nom d'ensemble de filtre"
+msgstr "Veuillez saisir un nom d"ensemble de filtre"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:122
 msgid "Please make sure all fields are filled out correctly"
@@ -9145,7 +9145,7 @@ msgstr "Veuillez re-saisir le mot de passe."
 #: superset-frontend/src/components/ErrorMessage/DatabaseErrorMessage.tsx:59
 #: superset-frontend/src/components/ErrorMessage/TimeoutErrorMessage.tsx:72
 msgid "Please reach out to the Chart Owner for assistance."
-msgstr "Contactez le propriétaire du graphique pour obtenir de l'aide."
+msgstr "Contactez le propriétaire du graphique pour obtenir de l"aide."
 
 #: superset-frontend/src/SqlLab/components/ShareSqlLabQuery/index.tsx:75
 msgid "Please save the query to enable sharing"
@@ -9154,13 +9154,13 @@ msgstr "Sauver votre requête pour pouvoir la partager"
 #: superset/reports/commands/exceptions.py:90
 msgid "Please save your chart first, then try creating a new email report."
 msgstr ""
-"Merci de sauvegarder votre graphique d'abord, créez ensuite un nouveau "
+"Merci de sauvegarder votre graphique d"abord, créez ensuite un nouveau "
 "rapport email."
 
 #: superset/reports/commands/exceptions.py:102
 msgid "Please save your dashboard first, then try creating a new email report."
 msgstr ""
-"Merci de sauvegarder votre tableau de bord d'abord, créez ensuite un "
+"Merci de sauvegarder votre tableau de bord d"abord, créez ensuite un "
 "nouveau rapport email."
 
 #: superset-frontend/src/addSlice/AddSliceContainer.tsx:322
@@ -9207,7 +9207,7 @@ msgstr ""
 
 #: superset/views/sql_lab.py:74
 msgid "Pop Tab Link"
-msgstr "Retirer le lien de l'onglet"
+msgstr "Retirer le lien de l"onglet"
 
 #: superset-frontend/plugins/legacy-plugin-chart-world-map/src/index.js:44
 #: superset-frontend/plugins/legacy-preset-chart-big-number/src/BigNumber/index.ts:40
@@ -9238,7 +9238,7 @@ msgstr ""
 #: superset/db_engine_specs/redshift.py:73
 #, python-format
 msgid "Port %(port)s on hostname \"%(hostname)s\" refused the connection."
-msgstr "Le port %(port)s sur l'hôte \"%(hostname)s\" a refusé la connexion."
+msgstr "Le port %(port)s sur l"hôte \"%(hostname)s\" a refusé la connexion."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:103
 #, fuzzy
@@ -9289,7 +9289,7 @@ msgid ""
 msgstr ""
 "Prédicat appliqué à la récupération des valeurs distinctes pour remplir "
 "le filtre de contrôle des composants. Supporte la syntaxe Jinja. "
-"S'applique uniquement si `Activer le filtre` est coché."
+"S"applique uniquement si `Activer le filtre` est coché."
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/index.js:44
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Compare/index.js:39
@@ -9580,7 +9580,7 @@ msgid "Radar Chart"
 msgstr "Enregistrer un graphique"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Radar/controlPanel.tsx:201
-msgid "Radar render type, whether to display 'circle' shape."
+msgid "Radar render type, whether to display "circle" shape."
 msgstr ""
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Tree/controlPanel.tsx:121
@@ -9603,7 +9603,7 @@ msgstr "Gestion"
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:295
 #: superset-frontend/src/filters/components/Range/index.ts:28
 msgid "Range filter"
-msgstr "Filtre d'intervalle"
+msgstr "Filtre d"intervalle"
 
 #: superset-frontend/src/filters/components/Range/index.ts:29
 msgid "Range filter plugin using AntD"
@@ -9693,7 +9693,7 @@ msgstr "Tags recommandés"
 
 #: superset/templates/appbuilder/general/widgets/base_list.html:55
 msgid "Record Count"
-msgstr "Nombre d'enregistrements"
+msgstr "Nombre d"enregistrements"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Tree/controlPanel.tsx:222
 #, fuzzy
@@ -9765,7 +9765,7 @@ msgstr "Fréquence de rafraichissement"
 #: superset-frontend/src/dashboard/components/RefreshIntervalModal.tsx:114
 #: superset-frontend/src/dashboard/components/RefreshIntervalModal.tsx:119
 msgid "Refresh interval"
-msgstr "Intervalle d'actualisation"
+msgstr "Intervalle d"actualisation"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:976
 msgid "Refresh the default values"
@@ -9790,8 +9790,8 @@ msgstr ""
 "utilisateur appartient à un profil référencé dans le filtre. Les filtres "
 "de base appliquent les filtres à toutes les requêtes sauf pour les "
 "profils définis dans le filtre, et peuvent être utilisés pour définir ce "
-"que les utilisateurs peuvent voir si aucun filtre RLS au sein d'un groupe"
-" de filtres ne s'appliquent à eux."
+"que les utilisateurs peuvent voir si aucun filtre RLS au sein d"un groupe"
+" de filtres ne s"appliquent à eux."
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/index.js:40
 #: superset-frontend/plugins/legacy-plugin-chart-parallel-coordinates/src/index.js:31
@@ -9853,7 +9853,7 @@ msgstr "Colonnes supprimées : %s"
 
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors/index.jsx:345
 msgid "Rename tab"
-msgstr "Renommer l'onglet"
+msgstr "Renommer l"onglet"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:146
 #, fuzzy
@@ -9881,53 +9881,53 @@ msgstr "rapport"
 
 #: superset/reports/commands/exceptions.py:118
 msgid "Report Schedule could not be created."
-msgstr "La planification de rapport n'a pas pu être créée."
+msgstr "La planification de rapport n"a pas pu être créée."
 
 #: superset/reports/commands/exceptions.py:114
 msgid "Report Schedule could not be deleted."
-msgstr "La planification de rapport n'a pas pu être supprimée."
+msgstr "La planification de rapport n"a pas pu être supprimée."
 
 #: superset/reports/commands/exceptions.py:122
 msgid "Report Schedule could not be updated."
-msgstr "La planification de rapport n'a pas pu être mise à jour."
+msgstr "La planification de rapport n"a pas pu être mise à jour."
 
 #: superset/reports/commands/exceptions.py:130
 msgid "Report Schedule delete failed."
-msgstr "La planification de rapport n'a pas être supprimée."
+msgstr "La planification de rapport n"a pas être supprimée."
 
 #: superset/reports/commands/exceptions.py:142
 msgid "Report Schedule execution failed when generating a csv."
 msgstr ""
-"L'exécution de la planification de rapport a échoué à la génération d'un "
+"L"exécution de la planification de rapport a échoué à la génération d"un "
 "csv."
 
 #: superset/reports/commands/exceptions.py:146
 msgid "Report Schedule execution failed when generating a dataframe."
 msgstr ""
-"L'exécution de la planification de rapport a échoué à la génération d'un "
+"L"exécution de la planification de rapport a échoué à la génération d"un "
 "dataframe."
 
 #: superset/reports/commands/exceptions.py:138
 msgid "Report Schedule execution failed when generating a screenshot."
 msgstr ""
-"L'exécution de la planification de rapport a échoué à la génération de la"
-" copie d'écran."
+"L"exécution de la planification de rapport a échoué à la génération de la"
+" copie d"écran."
 
 #: superset/reports/commands/exceptions.py:150
 msgid "Report Schedule execution got an unexpected error."
 msgstr ""
-"L'exécution de la planification de rapport a rencontré une erreur "
+"L"exécution de la planification de rapport a rencontré une erreur "
 "inattendue."
 
 #: superset/reports/commands/exceptions.py:154
 msgid "Report Schedule is still working, refusing to re-compute."
 msgstr ""
-"La planification de rapport est toujours en cours d'exécution, refus de "
+"La planification de rapport est toujours en cours d"exécution, refus de "
 "re-traiter."
 
 #: superset/reports/commands/exceptions.py:134
 msgid "Report Schedule log prune failed."
-msgstr "Le log de la planification de rapport n'a pas pu être élagué."
+msgstr "Le log de la planification de rapport n"a pas pu être élagué."
 
 #: superset/reports/commands/exceptions.py:126
 msgid "Report Schedule not found."
@@ -9939,7 +9939,7 @@ msgstr "Les paramètres des planification de rapport sont invalides."
 
 #: superset/reports/commands/exceptions.py:158
 msgid "Report Schedule reached a working timeout."
-msgstr "La planification de rapport a atteint un timeout d'exécution."
+msgstr "La planification de rapport a atteint un timeout d"exécution."
 
 #: superset/reports/commands/exceptions.py:226
 msgid "Report Schedule sellenium user not found"
@@ -9972,7 +9972,7 @@ msgstr "Erreur inattendue du programme de rapport"
 
 #: superset-frontend/src/views/CRUD/alert/components/AlertStatusIcon.tsx:74
 msgid "Report sending"
-msgstr "Envoi d'un rapport"
+msgstr "Envoi d"un rapport"
 
 #: superset-frontend/src/views/CRUD/alert/components/AlertStatusIcon.tsx:67
 msgid "Report sent"
@@ -10003,7 +10003,7 @@ msgstr "La requête est incorrecte : %(error)s"
 
 #: superset/charts/data/api.py:222
 msgid "Request is not JSON"
-msgstr "La requête n'est pas JSON"
+msgstr "La requête n"est pas JSON"
 
 #: superset/views/datasource/views.py:71
 msgid "Request missing data field."
@@ -10029,7 +10029,7 @@ msgstr "Voir exemples"
 
 #: superset-frontend/src/SqlLab/components/SqlEditorLeftBar/index.jsx:231
 msgid "Reset state"
-msgstr "Réinitialiser l'état"
+msgstr "Réinitialiser l"état"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/RemovedFilter.tsx:46
 msgid "Restore Filter"
@@ -10041,12 +10041,12 @@ msgstr "Résultats"
 
 #: superset/sql_lab.py:375 superset/views/core.py:2251
 msgid "Results backend is not configured."
-msgstr "Le backend des résultats n'est pas configuré."
+msgstr "Le backend des résultats n"est pas configuré."
 
 #: superset/errors.py:116
 msgid "Results backend needed for asynchronous queries is not configured."
 msgstr ""
-"Le backend des résultats pour les requêtes asynchrones n'est pas "
+"Le backend des résultats pour les requêtes asynchrones n"est pas "
 "configuré."
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/components/DateFunctionTooltip.tsx:29
@@ -10076,13 +10076,13 @@ msgstr "Hauteur"
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:53
 #, fuzzy
 msgid "Right Axis Format"
-msgstr "Mesure de l'axe de droite"
+msgstr "Mesure de l"axe de droite"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:119
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:183
 #, fuzzy
 msgid "Right Axis Metric"
-msgstr "Mesure de l'axe de droite"
+msgstr "Mesure de l"axe de droite"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/LineMulti/controlPanel.ts:132
 #, fuzzy
@@ -10091,7 +10091,7 @@ msgstr "Chercher tous les graphiques"
 
 #: superset-frontend/src/explore/controls.jsx:215
 msgid "Right axis metric"
-msgstr "Mesure de l'axe de droite"
+msgstr "Mesure de l"axe de droite"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Tree/controlPanel.tsx:138
 msgid "Right to Left"
@@ -10109,7 +10109,7 @@ msgstr "Profil"
 #, python-format
 msgid "Role %(r)s was extended to provide the access to the datasource %(ds)s"
 msgstr ""
-"Le profil %(r)s a été étendu pour donner l'accès à la source de données "
+"Le profil %(r)s a été étendu pour donner l"accès à la source de données "
 "%(ds)s"
 
 #: superset-frontend/src/dashboard/components/PropertiesModal/index.jsx:421
@@ -10126,8 +10126,8 @@ msgid ""
 "defined then the dashboard is available to all roles."
 msgstr ""
 "Roles est une liste qui défini ceux qui accède au tableau de bord .Donner"
-" un droit d'accès à un tableau de bord surpasse les contrôles de droit de"
-" niveau jeu de donnée. Si roles n'est pas défini, le tableau de bord est "
+" un droit d"accès à un tableau de bord surpasse les contrôles de droit de"
+" niveau jeu de donnée. Si roles n"est pas défini, le tableau de bord est "
 "accessible à tous les profils."
 
 #: superset/views/dashboard/mixin.py:66
@@ -10137,8 +10137,8 @@ msgid ""
 "defined then the dashboard is available to all roles."
 msgstr ""
 "Roles est une liste qui défini ceux qui accède au tableau de bord .Donner"
-" un droit d'accès à un tableau de bord surpasse les contrôles de droit de"
-" niveau jeu de donnée. Si aucun rôle n'est défini, le tableau de bord est"
+" un droit d"accès à un tableau de bord surpasse les contrôles de droit de"
+" niveau jeu de donnée. Si aucun rôle n"est défini, le tableau de bord est"
 " accessible à tous les profils."
 
 #: superset/views/access_requests.py:45
@@ -10212,8 +10212,8 @@ msgid ""
 "Row containing the headers to use as column names (0 is first line of "
 "data). Leave empty if there is no header row."
 msgstr ""
-"Ligne contenant l'en-tête à utiliser en nom de colonne (0 est la première"
-" ligne de données). Laissez à vide s'il n'y a pas de ligne d'en-tête."
+"Ligne contenant l"en-tête à utiliser en nom de colonne (0 est la première"
+" ligne de données). Laissez à vide s"il n"y a pas de ligne d"en-tête."
 
 #: superset/connectors/sqla/views.py:314
 msgid "Row level security filter"
@@ -10325,7 +10325,7 @@ msgstr "Vue SQL Lab"
 #: superset-frontend/src/SqlLab/components/App/index.jsx:91
 #, python-format
 msgid ""
-"SQL Lab uses your browser's local storage to store queries and results.\n"
+"SQL Lab uses your browser"s local storage to store queries and results.\n"
 "Currently, you are using %(currentUsage)s KB out of %(maxStorage)d KB "
 "storage space.\n"
 "To keep SQL Lab from crashing, please delete some query tabs.\n"
@@ -10540,7 +10540,7 @@ msgstr "Prévoir des rapports par e-mail pour les graphiques"
 
 #: superset/views/schedules.py:196
 msgid "Schedule Email Reports for Dashboards"
-msgstr "Prévoir l'envoi de rapport par e-mail pour les tableaux de Bord"
+msgstr "Prévoir l"envoi de rapport par e-mail pour les tableaux de Bord"
 
 #: superset-frontend/src/dashboard/components/Header/index.jsx:423
 #: superset-frontend/src/explore/components/ExploreChartHeader/index.jsx:218
@@ -10812,7 +10812,7 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopoverSimpleTabContent/index.tsx:303
 msgid "Select operator"
-msgstr "Sélectionner l'opérateur"
+msgstr "Sélectionner l"opérateur"
 
 #: superset-frontend/src/components/ListView/Filters/Select.tsx:84
 msgid "Select or type a value"
@@ -10937,7 +10937,7 @@ msgstr "Compte de service"
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:286
 msgid "Set auto-refresh interval"
-msgstr "Définir l'interval d'auto-refresh"
+msgstr "Définir l"interval d"auto-refresh"
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:295
 msgid "Set filter mapping"
@@ -10997,11 +10997,11 @@ msgstr ""
 
 #: superset/views/annotations.py:59
 msgid "Show Annotation"
-msgstr "Montrer l'annotation"
+msgstr "Montrer l"annotation"
 
 #: superset/views/annotations.py:118
 msgid "Show Annotation Layer"
-msgstr "Montrer la couche d'annotation"
+msgstr "Montrer la couche d"annotation"
 
 #: superset-frontend/plugins/legacy-plugin-chart-world-map/src/controlPanel.ts:80
 #, fuzzy
@@ -11010,7 +11010,7 @@ msgstr "Afficher les tables"
 
 #: superset-frontend/src/SqlLab/components/TableElement/index.tsx:204
 msgid "Show CREATE VIEW statement"
-msgstr "Voir l'ordre CREATE VIEW"
+msgstr "Voir l"ordre CREATE VIEW"
 
 #: superset/views/css_templates.py:37
 msgid "Show CSS Template"
@@ -11054,7 +11054,7 @@ msgstr "Afficher la liste déroulante de la granularité Druid"
 
 #: superset-frontend/src/visualizations/FilterBox/controlPanel.jsx:44
 msgid "Show Druid time origin"
-msgstr "Afficher l'origine du temps Druid"
+msgstr "Afficher l"origine du temps Druid"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Pie/controlPanel.ts:96
 #: superset-frontend/plugins/plugin-chart-echarts/src/Funnel/controlPanel.tsx:127
@@ -11088,12 +11088,12 @@ msgstr "Afficher la métrique"
 
 #: superset/views/alerts.py:76
 msgid "Show Observation"
-msgstr "Voir l'observation"
+msgstr "Voir l"observation"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:132
 #, fuzzy
 msgid "Show Range Filter"
-msgstr "Filtre d'intervalle"
+msgstr "Filtre d"intervalle"
 
 #: superset/connectors/sqla/views.py:315
 msgid "Show Row level security filter"
@@ -11363,7 +11363,7 @@ msgstr "Sauter les lignes vides"
 
 #: superset/views/database/forms.py:184
 msgid "Skip Initial Space"
-msgstr "Supprimer l'espace initial"
+msgstr "Supprimer l"espace initial"
 
 #: superset/views/database/forms.py:187 superset/views/database/forms.py:328
 msgid "Skip Rows"
@@ -11375,7 +11375,7 @@ msgstr "Sauter les lignes vides au lieu des les interpréter comme des valeurs N
 
 #: superset/views/database/forms.py:184
 msgid "Skip spaces after delimiter."
-msgstr "Supprimer l'espace après le délimiteur."
+msgstr "Supprimer l"espace après le délimiteur."
 
 #: superset/views/schedules.py:243 superset/views/schedules.py:323
 msgid "Slack Channel"
@@ -11397,30 +11397,30 @@ msgstr ""
 
 #: superset/commands/exceptions.py:112
 msgid "Some roles do not exist"
-msgstr "Des profils n'existent pas"
+msgstr "Des profils n"existent pas"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:623
 #, python-format
 msgid "Sorry there was an error fetching database information: %s"
 msgstr ""
-"Désolé, une erreur s'est produite lors de la récupération des "
+"Désolé, une erreur s"est produite lors de la récupération des "
 "informations de cette base de données : %s"
 
 #: superset-frontend/src/dashboard/actions/sliceEntities.js:121
 msgid "Sorry there was an error fetching saved charts: "
 msgstr ""
-"Désolé, une erreur s'est produite lors de la récupération des graphiques "
+"Désolé, une erreur s"est produite lors de la récupération des graphiques "
 "sauvegardés : "
 
 #: superset-frontend/src/explore/components/DataTablesPane/index.tsx:273
 #: superset-frontend/src/explore/components/controls/ViewQueryModal.tsx:84
 msgid "Sorry, An error occurred"
-msgstr "Désolén une erreur s'est produite"
+msgstr "Désolén une erreur s"est produite"
 
 #: superset-frontend/src/dashboard/components/menu/ShareMenuItems/index.tsx:65
 #: superset-frontend/src/explore/components/ExploreActionButtons.tsx:126
 msgid "Sorry, something went wrong. Try again later."
-msgstr "Une erreur s'est produite. Ré essayez plus tard."
+msgstr "Une erreur s"est produite. Ré essayez plus tard."
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/EventFlow.tsx:50
 msgid "Sorry, there appears to be no data"
@@ -11430,7 +11430,7 @@ msgstr ""
 #, fuzzy, python-format
 msgid "Sorry, there was an error saving this dashboard: %s"
 msgstr ""
-"Désolé, une erreur s'est produite lors de la récupération des graphiques "
+"Désolé, une erreur s"est produite lors de la récupération des graphiques "
 "sauvegardés : "
 
 #: superset-frontend/src/dashboard/components/menu/ShareMenuItems/index.tsx:55
@@ -11607,7 +11607,7 @@ msgid ""
 " enable query cost estimation."
 msgstr ""
 "Spécifier la version de la base de données. Ceci doit être utilisé avec "
-"Presto afin d'autoriser l'estimation du coût de requête."
+"Presto afin d"autoriser l"estimation du coût de requête."
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Gauge/controlPanel.tsx:230
 #, fuzzy
@@ -11672,7 +11672,7 @@ msgstr "Début à (UTC)"
 #: superset-frontend/src/explore/components/controls/DateFilterControl/components/AdvancedFrame.tsx:66
 #: superset-frontend/src/explore/components/controls/DateFilterControl/components/CustomFrame.tsx:117
 msgid "Start date included in time range"
-msgstr "Date de début incluse de l'intervalle de temps"
+msgstr "Date de début incluse de l"intervalle de temps"
 
 #: superset-frontend/plugins/legacy-preset-chart-big-number/src/BigNumber/controlPanel.tsx:109
 msgid "Start y-axis at 0"
@@ -11716,7 +11716,7 @@ msgstr "Arrêter la requête"
 
 #: superset-frontend/src/SqlLab/components/RunQueryActionButton/index.tsx:115
 msgid "Stop running (Ctrl + x)"
-msgstr "Arrêter l'exécution (Ctrl + x)"
+msgstr "Arrêter l"exécution (Ctrl + x)"
 
 #: superset/databases/commands/exceptions.py:126
 msgid "Stopped an unsafe database connection"
@@ -11757,7 +11757,7 @@ msgstr ""
 #: superset-frontend/plugins/legacy-preset-chart-big-number/src/BigNumberTotal/controlPanel.ts:46
 #, fuzzy
 msgid "Subheader"
-msgstr "Ligne d'en-tête"
+msgstr "Ligne d"en-tête"
 
 #: superset-frontend/plugins/legacy-preset-chart-big-number/src/sharedControls.ts:62
 msgid "Subheader Font Size"
@@ -11805,7 +11805,7 @@ msgstr "Tableau de bord superset"
 
 #: superset/errors.py:105
 msgid "Superset encountered an error while running a command."
-msgstr "Superset a rencontré une erreur lors de l'exécution d'une commande."
+msgstr "Superset a rencontré une erreur lors de l"exécution d"une commande."
 
 #: superset/errors.py:106
 msgid "Superset encountered an unexpected error."
@@ -11877,7 +11877,7 @@ msgstr "MAR"
 #: superset-frontend/src/views/CRUD/data/query/QueryList.tsx:218
 #: superset-frontend/src/views/CRUD/data/query/QueryPreviewModal.tsx:145
 msgid "Tab name"
-msgstr "Nom de l'onglet"
+msgstr "Nom de l"onglet"
 
 #: superset-frontend/src/dashboard/util/newComponentFactory.js:56
 #: superset-frontend/src/dashboard/util/newComponentFactory.js:57
@@ -11897,7 +11897,7 @@ msgstr "Table"
 
 #: superset/views/core.py:1761
 #, python-format
-msgid "Table %(table)s wasn't found in the database %(db)s"
+msgid "Table %(table)s wasn"t found in the database %(db)s"
 msgstr "Table %(table)s pas trouvée dans la base de données %(db)s"
 
 #: superset/views/database/forms.py:138 superset/views/database/forms.py:291
@@ -11920,7 +11920,7 @@ msgid ""
 "Table [%(table_name)s] could not be found, please double check your "
 "database connection, schema, and table name"
 msgstr ""
-"La table [%(table_name)s] n'a pu être trouvée, vérifiez à nouveau votre "
+"La table [%(table_name)s] n"a pu être trouvée, vérifiez à nouveau votre "
 "connexion à votre base de données, le schéma et le nom de la table"
 
 #: superset/views/base.py:251
@@ -11928,7 +11928,7 @@ msgid ""
 "Table [%{table}s] could not be found, please double check your database "
 "connection, schema, and table name, error: {}"
 msgstr ""
-"La table [%{table}s] n'a pu être trouvée, vérifiez à nouveau votre la "
+"La table [%{table}s] n"a pu être trouvée, vérifiez à nouveau votre la "
 "connexion à votre base de données, le schéma et le nom de la table, "
 "error: {}"
 
@@ -12004,10 +12004,10 @@ msgstr "Les paramètres du modèle"
 
 #: superset-frontend/src/explore/controlPanels/TimeTable.js:52
 msgid ""
-"Templated link, it's possible to include {{ metric }} or other values "
+"Templated link, it"s possible to include {{ metric }} or other values "
 "coming from the controls."
 msgstr ""
-"Lien template, il est possible d'inclure {{ metric }} or autres valeurs "
+"Lien template, il est possible d"inclure {{ metric }} or autres valeurs "
 "provenant de ces contrôles."
 
 #: superset/models/sql_types/base.py:54
@@ -12043,7 +12043,7 @@ msgstr ""
 
 #: superset-frontend/src/components/ReportModal/index.tsx:289
 msgid "Text embedded in email"
-msgstr "Text encapsulé dans l'e-mail"
+msgstr "Text encapsulé dans l"e-mail"
 
 #: superset/views/dashboard/mixin.py:53
 msgid ""
@@ -12056,13 +12056,13 @@ msgstr ""
 
 #: superset/errors.py:118
 msgid ""
-"The CTAS (create table as select) doesn't have a SELECT statement at the "
+"The CTAS (create table as select) doesn"t have a SELECT statement at the "
 "end. Please make sure your query has a SELECT as its last statement. "
 "Then, try running your query again."
 msgstr ""
-"Le CTAS (create table as select) n'a pas d'instruction SELECT à la fin. "
+"Le CTAS (create table as select) n"a pas d"instruction SELECT à la fin. "
 "Assurez-vous que la requête a bien un SELECT en dernière instruction. "
-"Puis essayez d'exécuter votre requête à nouveau."
+"Puis essayez d"exécuter votre requête à nouveau."
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:921
 msgid "The JSON metric or post aggregation definition."
@@ -12076,7 +12076,7 @@ msgstr ""
 
 #: superset/views/core.py:354
 msgid "The access requests seem to have been deleted"
-msgstr "L'accée à cette requête semble avoir été effacé"
+msgstr "L"accée à cette requête semble avoir été effacé"
 
 #: superset-frontend/src/views/CRUD/annotation/AnnotationModal.tsx:168
 msgid "The annotation has been saved"
@@ -12094,7 +12094,7 @@ msgstr ""
 
 #: superset/common/query_context_processor.py:449
 msgid "The chart does not exist"
-msgstr "Le graphique n'existe pas"
+msgstr "Le graphique n"existe pas"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Pie/index.ts:54
 msgid ""
@@ -12148,7 +12148,7 @@ msgid ""
 msgstr ""
 "Le type de donnée inféré par la base de données. Il peut être nécessaire "
 "de le rentrer manuellement pour les colonnes définissant des expressions "
-"dans certains cas. Dans la plupart des cas il n'est pas nécessaire de le "
+"dans certains cas. Dans la plupart des cas il n"est pas nécessaire de le "
 "modifier."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:439
@@ -12177,8 +12177,8 @@ msgid ""
 "administrator for further assistance or try again."
 msgstr ""
 "Impossible de trouver la base de données référencée dans cette requête. "
-"Merci de contacter un administrateur pour obtenir davantage d'aide ou "
-"bien d'essayer à nouveau."
+"Merci de contacter un administrateur pour obtenir davantage d"aide ou "
+"bien d"essayer à nouveau."
 
 #: superset/errors.py:94
 msgid "The database returned an unexpected error."
@@ -12205,7 +12205,7 @@ msgstr ""
 
 #: superset-frontend/src/chart/Chart.jsx:73 superset/views/utils.py:268
 msgid "The dataset associated with this chart no longer exists"
-msgstr "Le jeu de donnée associé à ce graphique n'existe plus"
+msgstr "Le jeu de donnée associé à ce graphique n"existe plus"
 
 #: superset-frontend/src/components/Datasource/DatasourceModal.tsx:167
 msgid ""
@@ -12216,10 +12216,10 @@ msgid ""
 "                in undesirable ways."
 msgstr ""
 "La configuration du jeu de donnée indiqué ici\n"
-"                s'applique à tous les graphiques utilisant ce jeu de "
+"                s"applique à tous les graphiques utilisant ce jeu de "
 "données.\n"
 "                Rappelez vous que changer ces paramètres\n"
-"                peut affecter d'autres graphiques\n"
+"                peut affecter d"autres graphiques\n"
 "                de manière non voulue."
 
 #: superset-frontend/src/components/Datasource/DatasourceModal.tsx:128
@@ -12232,7 +12232,7 @@ msgid "The dataset linked to this chart may have been deleted."
 msgstr "Le jeu de données lié à ce graphique semble avoir été effacé."
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1283
-msgid "The datasource couldn't be loaded"
+msgid "The datasource couldn"t be loaded"
 msgstr "La requête ne peut pas être chargée"
 
 #: superset/errors.py:92
@@ -12244,7 +12244,7 @@ msgid ""
 "The description can be displayed as widget headers in the dashboard view."
 " Supports markdown."
 msgstr ""
-"La description peut être affichée comme des widgets d'entête dans la vue "
+"La description peut être affichée comme des widgets d"entête dans la vue "
 "tableau de bord. Prend en charge le Markdown."
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:104
@@ -12253,14 +12253,14 @@ msgstr ""
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:772
 msgid "The duration of time in seconds before the cache is invalidated"
-msgstr "Le nombre de secondes avant l'expiration du cache"
+msgstr "Le nombre de secondes avant l"expiration du cache"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:474
 msgid ""
 "The engine_params object gets unpacked into the sqlalchemy.create_engine "
 "call."
 msgstr ""
-"L'objet engine_params contient les paramètres envoyés à "
+"L"objet engine_params contient les paramètres envoyés à "
 "sqlalchemy.create_engine."
 
 #: superset/common/query_object.py:295
@@ -12291,9 +12291,9 @@ msgstr ""
 
 #: superset/db_engine_specs/mysql.py:134
 #, python-format
-msgid "The host \"%(hostname)s\" might be down and can't be reached."
+msgid "The host \"%(hostname)s\" might be down and can"t be reached."
 msgstr ""
-"L'hôte \"%(hostname)s\" est peut-être hors-dervice et ne peut être "
+"L"hôte \"%(hostname)s\" est peut-être hors-dervice et ne peut être "
 "atteint."
 
 #: superset/db_engine_specs/mssql.py:92
@@ -12302,10 +12302,10 @@ msgstr ""
 #: superset/db_engine_specs/redshift.py:78
 #, python-format
 msgid ""
-"The host \"%(hostname)s\" might be down, and can't be reached on port "
+"The host \"%(hostname)s\" might be down, and can"t be reached on port "
 "%(port)s."
 msgstr ""
-"L'hôte \"%(hostname)s\" est peut-être hors-dervice et ne peut être "
+"L"hôte \"%(hostname)s\" est peut-être hors-dervice et ne peut être "
 "atteint sur le port %(port)s."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:98
@@ -12313,8 +12313,8 @@ msgid "The host is invalid. Please verify that this field is entered correctly."
 msgstr ""
 
 #: superset/errors.py:104
-msgid "The host might be down, and can't be reached on the provided port."
-msgstr "L'hôte est peut-être HS et ne peut pas être atteint sur le port."
+msgid "The host might be down, and can"t be reached on the provided port."
+msgstr "L"hôte est peut-être HS et ne peut pas être atteint sur le port."
 
 #: superset/db_engine_specs/mssql.py:82
 #: superset/db_engine_specs/postgres.py:127
@@ -12322,16 +12322,16 @@ msgstr "L'hôte est peut-être HS et ne peut pas être atteint sur le port."
 #: superset/db_engine_specs/redshift.py:68
 #, python-format
 msgid "The hostname \"%(hostname)s\" cannot be resolved."
-msgstr "Le nom d'hôte \"%(hostname)s\" ne peut pas être résolu."
+msgstr "Le nom d"hôte \"%(hostname)s\" ne peut pas être résolu."
 
 #: superset/errors.py:102
-msgid "The hostname provided can't be resolved."
-msgstr "Le nom d'hôte ne peut pas être résolu."
+msgid "The hostname provided can"t be resolved."
+msgstr "Le nom d"hôte ne peut pas être résolu."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/sections.tsx:60
 #: superset-frontend/src/explore/controlPanels/sections.tsx:44
 msgid "The id of the active chart"
-msgstr "L'identifiant du graphique actif"
+msgstr "L"identifiant du graphique actif"
 
 #: superset-frontend/src/components/ImportModal/index.tsx:187
 msgid "The import was successful"
@@ -12343,15 +12343,15 @@ msgid ""
 "datasource, you may change how these associated charts behave. Also note "
 "that charts need to point to a datasource, so this form will fail at "
 "saving if removing charts from a datasource. If you want to change the "
-"datasource for a chart, overwrite the chart from the 'explore view'"
+"datasource for a chart, overwrite the chart from the "explore view""
 msgstr ""
 "La liste des graphiques associés à cette table. En alterant cette source "
 "de données, vous pouvez changer le comportement des graphiques associés. "
 "Aussi notez que les graphiques doivent pointer vers une source de "
 "données, alors ce formulaire ne pourra pas être enregistré si des "
-"graphiques sont retirés d'une source de données. Si vous voulez changer "
-"la source de données d'un graphique, écraser le graphique depuis la 'vue "
-"d'exploration'"
+"graphiques sont retirés d"une source de données. Si vous voulez changer "
+"la source de données d"un graphique, écraser le graphique depuis la "vue "
+"d"exploration""
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:130
 msgid "The maximum number of events to return, equivalent to the number of rows"
@@ -12373,7 +12373,7 @@ msgid ""
 "The metadata_params in Extra field is not configured correctly. The key "
 "%(key)s is invalid."
 msgstr ""
-"Le paramètre metadata_params dans Champ supplémentaire n'est pas "
+"Le paramètre metadata_params dans Champ supplémentaire n"est pas "
 "correctement configuré. La clé %(key)s est invalide."
 
 #: superset/databases/commands/exceptions.py:79
@@ -12382,7 +12382,7 @@ msgid ""
 "The metadata_params in Extra field is not configured correctly. The key "
 "%{key}s is invalid."
 msgstr ""
-"Le paramètre metadata_params dans Champ supplémentaire n'est pas "
+"Le paramètre metadata_params dans Champ supplémentaire n"est pas "
 "correctement configuré. La clé %(key)s est invalide."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:452
@@ -12390,7 +12390,7 @@ msgid ""
 "The metadata_params object gets unpacked into the sqlalchemy.MetaData "
 "call."
 msgstr ""
-"L'objet metadata_params contient les paramètres envoyés à "
+"L"objet metadata_params contient les paramètres envoyés à "
 "sqlalchemy.MetaData."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:75
@@ -12422,7 +12422,7 @@ msgid ""
 "The number of hours, negative or positive, to shift the time column. This"
 " can be used to move UTC time to local time."
 msgstr ""
-"Nombre d'heures, négatif ou positif, pour décaler la colonne de temps. "
+"Nombre d"heures, négatif ou positif, pour décaler la colonne de temps. "
 "Cela peut être utilisé pour passer du temps UTC au temps local."
 
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:583
@@ -12470,11 +12470,11 @@ msgstr "Le nombre de lignes affichées est limité à %s par la liste déroulant
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/sections.tsx:69
 #: superset-frontend/src/explore/controlPanels/sections.tsx:53
 msgid "The number of seconds before expiring the cache"
-msgstr "Le nombre de secondes avant l'expiration du cache"
+msgstr "Le nombre de secondes avant l"expiration du cache"
 
 #: superset/errors.py:128
 msgid "The object does not exist in the given database."
-msgstr "L'objet n'existe pas dans la base de données."
+msgstr "L"objet n"existe pas dans la base de données."
 
 #: superset/sqllab/query_render.py:97
 #, python-format
@@ -12486,7 +12486,7 @@ msgstr[1] "Les paramètres suivants de votre requête sont indéfinis : %(parame
 #: superset/db_engine_specs/postgres.py:117
 #, python-format
 msgid "The password provided for username \"%(username)s\" is incorrect."
-msgstr "Le mot de passe fourni pour l'utilisateur \"%(username)s\" est incorrect."
+msgstr "Le mot de passe fourni pour l"utilisateur \"%(username)s\" est incorrect."
 
 #: superset/errors.py:108
 msgid "The password provided when connecting to a database is not valid."
@@ -12504,7 +12504,7 @@ msgstr ""
 "pour les importer en même temps que les graphiques. Notez que les "
 "sections \"Securité Supplémentaire\" et  \"Certificat\" de la "
 "configuration de la base de données ne sont pas présents dans les "
-"fichiers d'export et doivent être ajoutés manuellement après l'import si "
+"fichiers d"export et doivent être ajoutés manuellement après l"import si "
 "nécessaire."
 
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:57
@@ -12519,7 +12519,7 @@ msgstr ""
 "pour les importer en même temps que les tableaux de bord. Notez que les "
 "sections \"Securité Supplémentaire\" et  \"Certificat\" de la "
 "configuration de la base de données ne sont pas présents dans les "
-"fichiers d'export et doivent être ajoutés manuellement après l'import si "
+"fichiers d"export et doivent être ajoutés manuellement après l"import si "
 "nécessaire."
 
 #: superset-frontend/src/views/CRUD/data/dataset/constants.ts:23
@@ -12535,7 +12535,7 @@ msgstr ""
 "pour les importer en même temps que les graphiques. Notez que les "
 "sections \"Securité Supplémentaire\" et  \"Certificat\" de la "
 "configuration de la base de données ne sont pas présents dans les "
-"fichiers d'export et doivent être ajoutés manuellement après l'import si "
+"fichiers d"export et doivent être ajoutés manuellement après l"import si "
 "nécessaire."
 
 #: superset-frontend/src/views/CRUD/data/savedquery/SavedQueryList.tsx:56
@@ -12550,7 +12550,7 @@ msgstr ""
 "pour les importer en même temps que les requêtes sauvegardées. Notez que "
 "les sections \"Securité Supplémentaire\" et  \"Certificat\" de la "
 "configuration de la base de données ne sont pas présents dans les "
-"fichiers d'export et doivent être ajoutés manuellement après l'import si "
+"fichiers d"export et doivent être ajoutés manuellement après l"import si "
 "nécessaire."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:39
@@ -12563,8 +12563,8 @@ msgstr ""
 "Les mots de passe pour les bases de données ci-dessous sont nécessaires "
 "pour les importer. Notez que les sections \"Securité Supplémentaire\" et "
 "\"Certificat\" de la configuration de la base de données ne sont pas "
-"présents dans les fichiers d'export et doivent être ajoutés manuellement "
-"après l'import si nécessaire."
+"présents dans les fichiers d"export et doivent être ajoutés manuellement "
+"après l"import si nécessaire."
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:231
 msgid "The pattern of timestamp format. For strings use "
@@ -12588,7 +12588,7 @@ msgid ""
 " associated to this Superset logical table, and this logical table points"
 " the physical table referenced here."
 msgstr ""
-"Pointeur vers une table physique (ou une vue). Gardez à l'esprit que le "
+"Pointeur vers une table physique (ou une vue). Gardez à l"esprit que le "
 "graphique est associé à cette table logique de superset et que cette "
 "table logique pointe vers la table physique décrite ici."
 
@@ -12611,7 +12611,7 @@ msgstr ""
 
 #: superset/views/core.py:2330
 msgid "The provided `rows` argument is not a valid integer."
-msgstr "L'argument `rows` n'est pas un entier valide."
+msgstr "L"argument `rows` n"est pas un entier valide."
 
 #: superset/errors.py:131
 msgid "The query associated with the results was deleted."
@@ -12622,7 +12622,7 @@ msgid ""
 "The query associated with these results could not be find. You need to "
 "re-run the original query."
 msgstr ""
-"La requête associée à ces résultats n'a pu être trouvée. Rejouez la "
+"La requête associée à ces résultats n"a pu être trouvée. Rejouez la "
 "requête originale."
 
 #: superset/sqllab/query_render.py:113
@@ -12630,7 +12630,7 @@ msgid "The query contains one or more malformed template parameters."
 msgstr "Cette requête contient un ou plusieurs paramètres de modèle malformé(s)."
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:106
-msgid "The query couldn't be loaded"
+msgid "The query couldn"t be loaded"
 msgstr "La requête ne peut pas être chargée"
 
 #: superset/errors.py:129
@@ -12639,7 +12639,7 @@ msgstr "La requête a une erreur de syntaxe."
 
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:771
 msgid "The query returned no data"
-msgstr "La requête n'a pas retourné de résultat"
+msgstr "La requête n"a pas retourné de résultat"
 
 #: superset/sql_lab.py:265
 #, python-format
@@ -12671,7 +12671,7 @@ msgstr "Le rapport a été créé"
 
 #: superset/errors.py:130
 msgid "The results backend no longer has the data from the query."
-msgstr "Le backend des résultats n'a plus les données de la requête."
+msgstr "Le backend des résultats n"a plus les données de la requête."
 
 #: superset/errors.py:132
 msgid ""
@@ -12693,7 +12693,7 @@ msgid ""
 "The schema \"%(schema)s\" does not exist. A valid schema must be used to "
 "run this query."
 msgstr ""
-"Le schéma \"%(schema)s\" n'existe pas. Un schéma valide doit être utilisé"
+"Le schéma \"%(schema)s\" n"existe pas. Un schéma valide doit être utilisé"
 " pour cette requête."
 
 #: superset/db_engine_specs/presto.py:187
@@ -12702,7 +12702,7 @@ msgid ""
 "The schema \"%(schema_name)s\" does not exist. A valid schema must be "
 "used to run this query."
 msgstr ""
-"Le schéma \"%(schema_name)s\" n'existe pas. Un schéma valide doit être "
+"Le schéma \"%(schema_name)s\" n"existe pas. Un schéma valide doit être "
 "utilisé pour cette requête."
 
 #: superset/errors.py:111
@@ -12727,7 +12727,7 @@ msgid ""
 "The table \"%(table)s\" does not exist. A valid table must be used to run"
 " this query."
 msgstr ""
-"La table \"%(table)s\" n'existe pas. Une table valide doit être utilisée "
+"La table \"%(table)s\" n"existe pas. Une table valide doit être utilisée "
 "pour cette requête."
 
 #: superset/db_engine_specs/presto.py:179
@@ -12736,7 +12736,7 @@ msgid ""
 "The table \"%(table_name)s\" does not exist. A valid table must be used "
 "to run this query."
 msgstr ""
-"La table \"%(table_name)s\" n'existe pas. Une table valide doit être "
+"La table \"%(table_name)s\" n"existe pas. Une table valide doit être "
 "utilisée pour cette requête."
 
 #: superset/connectors/sqla/views.py:540
@@ -12745,7 +12745,7 @@ msgid ""
 "you should now click the edit button by the new table to configure it."
 msgstr ""
 "La table a été créée. Dans le cadre de cette configuration en deux "
-"étapes, vous devez maintenant cliquer sur le bouton d'édition de la "
+"étapes, vous devez maintenant cliquer sur le bouton d"édition de la "
 "nouvelle table pour la configurer."
 
 #: superset/errors.py:100
@@ -12761,7 +12761,7 @@ msgid ""
 "the filter below is applied against this column or expression"
 msgstr ""
 "La colonne temps pour la visualisation. Notez que vous pouvez définir "
-"arbitrairement l'expression que retourne la colonne DATETIME dans la "
+"arbitrairement l"expression que retourne la colonne DATETIME dans la "
 "table. Aussi noter que le filtre ci-dessous est appliqué à cette colonne "
 "ou expression"
 
@@ -12785,7 +12785,7 @@ msgid ""
 msgstr ""
 "Le granularité de temps pour la visualisation. Ceci applique une "
 "transformation de date pour modifier votre colonne de temps et définit "
-"une nouvelle granularité d'heure. Les options ici sont définies pour "
+"une nouvelle granularité d"heure. Les options ici sont définies pour "
 "chaque type de SGBD dans le code source de Superset."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:314
@@ -12793,20 +12793,20 @@ msgstr ""
 msgid ""
 "The time range for the visualization. All relative times, e.g. \"Last "
 "month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using"
-" the server's local time (sans timezone). All tooltips and placeholder "
+" the server"s local time (sans timezone). All tooltips and placeholder "
 "times are expressed in UTC (sans timezone). The timestamps are then "
-"evaluated by the database using the engine's local timezone. Note one can"
+"evaluated by the database using the engine"s local timezone. Note one can"
 " explicitly set the timezone per the ISO 8601 format if specifying either"
 " the start and/or end time."
 msgstr ""
-"L'intervalle de temps pour la visualisation. Tous les temps relatifs, par"
+"L"intervalle de temps pour la visualisation. Tous les temps relatifs, par"
 " exemple \"Mois dernier\", \"7 derniers jours\", \"maintenant\", etc. "
-"sont évalués sur le serveur en utilisant l'heure locale du serveur (sans "
+"sont évalués sur le serveur en utilisant l"heure locale du serveur (sans "
 "fuseau horaire). Toutes les infobulles et les heures des \"placeholders\""
 " sont exprimées en UTC (sans fuseau). Les timestamps sont alors évalués "
 "par la base données en utilisant le fuseau horaire local du serveur. "
-"Notez que l'on peut indiquer explicitement la fuseau horaire dans le "
-"format ISO 8601 quand on spécifie l'heure de début et/ou de fin."
+"Notez que l"on peut indiquer explicitement la fuseau horaire dans le "
+"format ISO 8601 quand on spécifie l"heure de début et/ou de fin."
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:65
 msgid ""
@@ -12829,16 +12829,16 @@ msgstr ""
 
 #: superset/views/core.py:183
 msgid "The user seems to have been deleted"
-msgstr "L'utilisateur semble avoir été effacé"
+msgstr "L"utilisateur semble avoir été effacé"
 
 #: superset/db_engine_specs/postgres.py:112
 #, python-format
 msgid "The username \"%(username)s\" does not exist."
-msgstr "L'utilisateur \"%(username)s\" n'existe pas."
+msgstr "L"utilisateur \"%(username)s\" n"existe pas."
 
 #: superset/errors.py:107
 msgid "The username provided when connecting to a database is not valid."
-msgstr "Le nom d'utilisateur fourni à une base de données est invalide."
+msgstr "Le nom d"utilisateur fourni à une base de données est invalide."
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:206
 #: superset-frontend/plugins/plugin-chart-echarts/src/BoxPlot/controlPanel.ts:89
@@ -12884,7 +12884,7 @@ msgid ""
 "There is no chart definition associated with this component, could it "
 "have been deleted?"
 msgstr ""
-"Il n'y a pas de définition de graphique associé à ce composanta-t-il été "
+"Il n"y a pas de définition de graphique associé à ce composanta-t-il été "
 "supprimé ?"
 
 #: superset-frontend/src/dashboard/actions/dashboardLayout.js:180
@@ -12903,12 +12903,12 @@ msgstr "Erreur à la récupération du statut favori de ce Tableau de Bord."
 #: superset-frontend/src/views/CRUD/utils.tsx:181
 msgid "There was an error fetching your recent activity:"
 msgstr ""
-"Une erreur s'est produite lors de lors de la récupération de votre "
+"Une erreur s"est produite lors de lors de la récupération de votre "
 "activité récente :"
 
 #: superset-frontend/src/components/DatabaseSelector/index.tsx:230
 msgid "There was an error loading the schemas"
-msgstr "Une erreur s'est produite lors de la récupération des schémas"
+msgstr "Une erreur s"est produite lors de la récupération des schémas"
 
 #: superset-frontend/src/components/TableSelector/index.tsx:218
 msgid "There was an error loading the tables"
@@ -12958,7 +12958,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:226
 msgid "There was an issue deleting the selected dashboards: "
 msgstr ""
-"Une erreur s'est produite durant la sauvegarde du tableau de bord "
+"Une erreur s"est produite durant la sauvegarde du tableau de bord "
 "sélectionné : "
 
 #: superset-frontend/src/views/CRUD/data/dataset/DatasetList.tsx:568
@@ -12992,12 +12992,12 @@ msgstr "Il y a eu un problème lors de la suppression de : %s"
 
 #: superset-frontend/src/dashboard/actions/dashboardState.js:100
 msgid "There was an issue favoriting this dashboard."
-msgstr "Un problème est survenu lors de l'activation de ce tableau de bord."
+msgstr "Un problème est survenu lors de l"activation de ce tableau de bord."
 
 #: superset-frontend/src/reports/actions/reports.js:68
 msgid "There was an issue fetching reports attached to this dashboard."
 msgstr ""
-"Désolé, une erreur s'est produite lors de la récupération des rapports de"
+"Désolé, une erreur s"est produite lors de la récupération des rapports de"
 " ce tableau de bord."
 
 #: superset-frontend/src/dashboard/actions/dashboardState.js:79
@@ -13008,7 +13008,7 @@ msgstr "Erreur à la récupération du statut favori de ce Tableau de Bord."
 #, python-format
 msgid "There was an issue fetching your recent activity: %s"
 msgstr ""
-"Une erreur s'est produite lors de la récupération de votre activité "
+"Une erreur s"est produite lors de la récupération de votre activité "
 "récente : %s"
 
 #: superset-frontend/src/views/CRUD/data/savedquery/SavedQueryList.tsx:152
@@ -13026,36 +13026,36 @@ msgstr "Il y a eu un problème de prévisualisation de la requête sélectionné
 #: superset-frontend/src/views/CRUD/welcome/Welcome.tsx:222
 #, python-format
 msgid "There was an issues fetching your chart: %s"
-msgstr "Une erreur s'est produite lors de la récupération de votre graphique : %s"
+msgstr "Une erreur s"est produite lors de la récupération de votre graphique : %s"
 
 #: superset-frontend/src/views/CRUD/welcome/Welcome.tsx:211
 #, python-format
 msgid "There was an issues fetching your dashboards: %s"
 msgstr ""
-"Une erreur s'est produite lors de la récupération de votre tableau de "
+"Une erreur s"est produite lors de la récupération de votre tableau de "
 "bord  : %s"
 
 #: superset-frontend/src/views/CRUD/welcome/Welcome.tsx:233
 #, python-format
 msgid "There was an issues fetching your saved queries: %s"
 msgstr ""
-"Une erreur s'est produite lors de la récupération de vos requêtes "
+"Une erreur s"est produite lors de la récupération de vos requêtes "
 "sauvegardées : %s"
 
 #: superset/viz.py:1955
 msgid ""
-"There's a loop in your Sankey, please provide a tree. Here's a faulty "
+"There"s a loop in your Sankey, please provide a tree. Here"s a faulty "
 "link: {}"
 msgstr "Il y a une boucle dans votre Sankey, il faut un arbre. Lien fautif: {}"
 
 #: superset/connectors/sqla/views.py:341
 msgid "These are the tables this filter will be applied to."
-msgstr "Ce sont les tables sur lesquelles vont s'appliquer les filtres."
+msgstr "Ce sont les tables sur lesquelles vont s"appliquer les filtres."
 
 #: superset-frontend/src/visualizations/FilterBox/controlPanel.jsx:135
 msgid "These filters apply to the values available in the dropdowns"
 msgstr ""
-"Ces filtres s'appliquent aux valeurs disponibles dans les listes "
+"Ces filtres s"appliquent aux valeurs disponibles dans les listes "
 "déroulantes"
 
 #: superset/views/chart/mixin.py:64
@@ -13066,7 +13066,7 @@ msgid ""
 "parameters."
 msgstr ""
 "Ces paramètres sont généré dynamiquement quand vous cliquez sur "
-"Sauvegarder ou forcer dans la page d'exploration. Cet objet JSON est "
+"Sauvegarder ou forcer dans la page d"exploration. Cet objet JSON est "
 "exposé ici comme une référence et pour les experts qui voudraient "
 "modifier des paramètres."
 
@@ -13111,10 +13111,10 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/actions/dashboardLayout.js:258
 msgid "This chart has been moved to a different filter scope."
-msgstr "Ce graphique a été déplacé vers un autre champ d'application du filtre."
+msgstr "Ce graphique a été déplacé vers un autre champ d"application du filtre."
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FilterScope/utils.ts:56
-msgid "This chart might be incompatible with the filter (datasets don't match)"
+msgid "This chart might be incompatible with the filter (datasets don"t match)"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/ColorSchemeControl/index.jsx:127
@@ -13143,7 +13143,7 @@ msgid ""
 "list of dashboards. Favorite it to see it there or access it by using the"
 " URL directly."
 msgstr ""
-"Ce tableau de bord n'est pas publié, il ne sera pas visible dans la liste"
+"Ce tableau de bord n"est pas publié, il ne sera pas visible dans la liste"
 " des tableaux de bord. Rendez le favori pour le voir ici ou utilisez son "
 "URL pour y avoir accès."
 
@@ -13152,7 +13152,7 @@ msgid ""
 "This dashboard is not published, it will not show up in the list of "
 "dashboards. Click here to publish this dashboard."
 msgstr ""
-"Ce tableau de bord n'est pas publié, il ne sera pas visible dans la liste"
+"Ce tableau de bord n"est pas publié, il ne sera pas visible dans la liste"
 " des tableaux de bord. Cliquez ici pour publier ce tableau de bord."
 
 #: superset-frontend/src/dashboard/actions/dashboardState.js:125
@@ -13185,25 +13185,25 @@ msgstr "Ce Tableau de Bord a été sauvegardé avec succès."
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:401
 #: superset-frontend/src/explore/controls.jsx:416
 msgid "This defines the element to be plotted on the chart"
-msgstr "Ceci définit l'élément à tracer sur le graphique"
+msgstr "Ceci définit l"élément à tracer sur le graphique"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sunburst/src/controlPanel.ts:82
 #, fuzzy
 msgid "This defines the level of the hierarchy"
-msgstr "Ceci définit l'élément à tracer sur le graphique"
+msgstr "Ceci définit l"élément à tracer sur le graphique"
 
 #: superset/views/alerts.py:232 superset/views/schedules.py:253
 #: superset/views/schedules.py:334
 msgid ""
 "This feature is deprecated and will be removed on 2.0. Take a look at the"
 " replacement feature <a "
-"href='https://superset.apache.org/docs/installation/alerts-"
-"reports'>Alerts & Reports documentation</a>"
+"href="https://superset.apache.org/docs/installation/alerts-"
+"reports">Alerts & Reports documentation</a>"
 msgstr ""
 "Cette fonctionnalité est obsolète et sera supprimée en 2.0 Regardez "
 "replacement feature dans <a "
-"href='https://superset.apache.org/docs/installation/alerts-"
-"reports'>Alerts & Reports documentation</a>"
+"href="https://superset.apache.org/docs/installation/alerts-"
+"reports">Alerts & Reports documentation</a>"
 
 #: superset/connectors/sqla/views.py:447
 msgid ""
@@ -13214,8 +13214,8 @@ msgstr ""
 "requête pour cette expression comme une sous-requête."
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterSets/FiltersHeader.tsx:105
-msgid "This filter doesn't exist in dashboard. It will not be applied."
-msgstr "Ce filtre n'existe pas dans le tableau de bord. Il ne sera pas appliqué."
+msgid "This filter doesn"t exist in dashboard. It will not be applied."
+msgstr "Ce filtre n"existe pas dans le tableau de bord. Il ne sera pas appliqué."
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterSets/EditSection.tsx:165
 #, python-format
@@ -13231,9 +13231,9 @@ msgid ""
 "the clause `1 = 0` (always false)."
 msgstr ""
 "Ceci est la condition qui sera ajoutée à la clause WHERE. Par exemple,  "
-"pour ne retourner que les lignes d'un client particulier, vous pouvez "
+"pour ne retourner que les lignes d"un client particulier, vous pouvez "
 "définir un filtre régulier avec la clause `client_id = 9`. Pour "
-"n'afficher aucune ligne sauf pour les utilisateurs qui appartiennent à un"
+"n"afficher aucune ligne sauf pour les utilisateurs qui appartiennent à un"
 " role de filtre RLS, un filtre de base peut être créé avec la  clause `1 "
 "= 0` (toujours faux)."
 
@@ -13263,7 +13263,7 @@ msgstr "Cela peut être déclenché par:"
 #: superset-frontend/src/SqlLab/components/ExploreResultsButton/index.jsx:109
 #, python-format
 msgid "This query took %s seconds to run, "
-msgstr "Cette requête s'est exécutée en %s secondes, "
+msgstr "Cette requête s"est exécutée en %s secondes, "
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:466
 msgid ""
@@ -13295,7 +13295,7 @@ msgstr "Cette valeur devrait être plus petite que la valeur cible de droite"
 
 #: superset-frontend/src/explore/components/controls/VizTypeControl/index.tsx:67
 msgid "This visualization type is not supported."
-msgstr "Ce type de visualisation n'est pas supporté."
+msgstr "Ce type de visualisation n"est pas supporté."
 
 #: superset-frontend/src/components/ErrorMessage/ParameterErrorMessage.tsx:61
 msgid "This was triggered by:"
@@ -13434,7 +13434,7 @@ msgstr "Colonne de temps"
 #: superset/connectors/sqla/models.py:1173
 #, python-format
 msgid "Time column \"%(col)s\" does not exist in dataset"
-msgstr "La colonne temporelle \"%(col)s\"  n'existe pas dans le jeu de données"
+msgstr "La colonne temporelle \"%(col)s\"  n"existe pas dans le jeu de données"
 
 #: superset-frontend/src/filters/components/TimeColumn/index.ts:29
 msgid "Time column filter plugin"
@@ -13462,7 +13462,7 @@ msgid ""
 "filter will be populated based on the distinct value over the past week"
 msgstr ""
 "Expression temporelle à utiliser comme un prédicat pour récupérer les "
-"valeurs distinctes pour remplir le filtre. S'applique uniquement quand "
+"valeurs distinctes pour remplir le filtre. S"applique uniquement quand "
 "`Activier le filtre` est coché. Si vous entrez `7 days ago`, les listes "
 "de valeurs distinctes dans le filtre seront remplies en se basant sur les"
 " valeurs distinctes trouvées la semaine passée"
@@ -13696,7 +13696,7 @@ msgstr "Titre"
 
 #: superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopoverSimpleTabContent/index.tsx:287
 msgid "To filter on a metric, use Custom SQL tab."
-msgstr "Pour filtrer sur une métrique, utiliser l'onglet Custom SQL."
+msgstr "Pour filtrer sur une métrique, utiliser l"onglet Custom SQL."
 
 #: superset/views/dashboard/mixin.py:58
 msgid "To get a readable URL for your dashboard"
@@ -13830,7 +13830,7 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/components/DateFunctionTooltip.tsx:58
 msgid "Truncates the specified date to the accuracy specified by the date unit."
-msgstr "Tronquer la date spécifiée à la précision spécifiée par l'unité de date."
+msgstr "Tronquer la date spécifiée à la précision spécifiée par l"unité de date."
 
 #: superset-frontend/plugins/legacy-preset-chart-big-number/src/BigNumber/BigNumber.tsx:222
 msgid "Try applying different filters or ensuring your datasource has data"
@@ -13899,7 +13899,7 @@ msgstr "Paramètres URL"
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:125
 #, fuzzy
 msgid "URL could not be identified"
-msgstr "Le graphique n'a pas pu être supprimé."
+msgstr "Le graphique n"a pas pu être supprimé."
 
 #: superset-frontend/src/explore/controlPanels/sections.tsx:60
 msgid "URL parameters"
@@ -13912,7 +13912,7 @@ msgstr "URL Slug"
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:531
 msgid "Unable to add a new tab to the backend. Please contact your administrator."
 msgstr ""
-"Impossible d'ajouter une table dans le backend. Veuillez contacter votre "
+"Impossible d"ajouter une table dans le backend. Veuillez contacter votre "
 "administrateur."
 
 #: superset/db_engine_specs/presto.py:218
@@ -13936,7 +13936,7 @@ msgid ""
 "Unable to migrate query editor state to backend. Superset will retry "
 "later. Please contact your administrator if this problem persists."
 msgstr ""
-"Impossible de migrer l'état de l'éditeur de requêtes dans le backend. "
+"Impossible de migrer l"état de l"éditeur de requêtes dans le backend. "
 "Superset réessayera plus tard. Veuillez contacter votre administrateur si"
 " le problème persiste."
 
@@ -13945,7 +13945,7 @@ msgid ""
 "Unable to migrate query state to backend. Superset will retry later. "
 "Please contact your administrator if this problem persists."
 msgstr ""
-"Impossible de migrer l'état de la requête dans le backend. Superset "
+"Impossible de migrer l"état de la requête dans le backend. Superset "
 "réessayera plus tard. Veuillez contacter votre administrateur si le "
 "problème persiste."
 
@@ -13954,7 +13954,7 @@ msgid ""
 "Unable to migrate table schema state to backend. Superset will retry "
 "later. Please contact your administrator if this problem persists."
 msgstr ""
-"Impossible de migrer l'état du schéma de la table dans le backend. "
+"Impossible de migrer l"état du schéma de la table dans le backend. "
 "Superset réessayera plus tard. Veuillez contacter votre administrateur si"
 " le problème persiste."
 
@@ -13971,7 +13971,7 @@ msgid ""
 msgstr ""
 "Impossible de téléverser le fichier CSV \"%(filename)s\" dans la table "
 "\"%(table_name)s\" de la base de données \"%(db_name)s\". Message "
-"d'erreur : %(error_msg)s"
+"d"erreur : %(error_msg)s"
 
 #: superset/views/database/views.py:538
 #, python-format
@@ -13982,7 +13982,7 @@ msgid ""
 msgstr ""
 "Impossible de charger le fichier en colonnes \"%(filename)s\" dans la "
 "table \"%(table_name)s\" de la base de données \"%(db_name)s\". Message "
-"d'erreur : %(error_msg)s"
+"d"erreur : %(error_msg)s"
 
 #: superset/views/database/views.py:386
 #, python-format
@@ -13992,7 +13992,7 @@ msgid ""
 msgstr ""
 "Impossible de charger le fichier Excel \"%(filename)s\" dans la table "
 "\"%(table_name)s\" de la base de données \"%(db_name)s\". Message "
-"d'erreur : %(error_msg)s"
+"d"erreur : %(error_msg)s"
 
 #: superset-frontend/src/SqlLab/components/SaveQuery/index.tsx:75
 #: superset-frontend/src/SqlLab/components/ScheduleQueryButton/index.tsx:114
@@ -14001,7 +14001,7 @@ msgstr "Indéfini"
 
 #: superset/utils/pandas_postprocessing.py:391
 msgid "Undefined window for rolling operation"
-msgstr "Fenêtre indéfinie pour l'opération de roulement"
+msgstr "Fenêtre indéfinie pour l"opération de roulement"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FilterTitleContainer.tsx:126
 msgid "Undo?"
@@ -14171,7 +14171,7 @@ msgstr "Utiliser une connexion cryptée vers la base de données"
 
 #: superset-frontend/src/components/Datasource/DatasourceModal.tsx:209
 msgid "Use legacy datasource editor"
-msgstr "Utiliser l'ancien éditeur de source de données"
+msgstr "Utiliser l"ancien éditeur de source de données"
 
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:85
 msgid "Use metrics as a top level group for columns or for rows"
@@ -14242,17 +14242,17 @@ msgid "User Roles"
 msgstr "Profils utilisateurs"
 
 #: superset/errors.py:112
-msgid "User doesn't have the proper permissions."
-msgstr "L'utilisateur n'a pas les droits."
+msgid "User doesn"t have the proper permissions."
+msgstr "L"utilisateur n"a pas les droits."
 
 #: superset-frontend/src/filters/components/Select/controlPanel.ts:94
 #, fuzzy
 msgid "User must select a value before applying the filter"
-msgstr "L'utilisateur doit sélectionner une valeur pour ce filtre"
+msgstr "L"utilisateur doit sélectionner une valeur pour ce filtre"
 
 #: superset-frontend/src/explore/components/controls/FilterBoxItemControl/index.jsx:253
 msgid "User must select a value for this filter"
-msgstr "L'utilisateur doit sélectionner une valeur pour ce filtre"
+msgstr "L"utilisateur doit sélectionner une valeur pour ce filtre"
 
 #: superset-frontend/src/filters/components/GroupBy/controlPanel.ts:76
 #: superset-frontend/src/filters/components/Range/controlPanel.ts:58
@@ -14261,7 +14261,7 @@ msgstr "L'utilisateur doit sélectionner une valeur pour ce filtre"
 #: superset-frontend/src/filters/components/TimeGrain/controlPanel.ts:36
 #, fuzzy
 msgid "User must select a value for this filter."
-msgstr "L'utilisateur doit sélectionner une valeur pour ce filtre"
+msgstr "L"utilisateur doit sélectionner une valeur pour ce filtre"
 
 #: superset-frontend/src/views/CRUD/data/query/QueryPreviewModal.tsx:154
 msgid "User query"
@@ -14270,7 +14270,7 @@ msgstr "Requête utilisateur"
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/DatabaseConnectionForm/CommonParameters.tsx:109
 #: superset/db_engine_specs/base.py:1388
 msgid "Username"
-msgstr "Nom d'utilisateur"
+msgstr "Nom d"utilisateur"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Gauge/index.ts:39
 msgid ""
@@ -14301,7 +14301,7 @@ msgstr ""
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:329
 #, fuzzy
 msgid "Value Format"
-msgstr "Format d'e-mail"
+msgstr "Format d"e-mail"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:235
 msgid "Value bounds"
@@ -14311,7 +14311,7 @@ msgstr ""
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:206
 #, fuzzy
 msgid "Value format"
-msgstr "Format d'e-mail"
+msgstr "Format d"e-mail"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/DefaultValue.tsx:75
 msgid "Value is required"
@@ -14499,14 +14499,14 @@ msgstr ""
 msgid ""
 "Visualizes how a metric has changed over a time using a color scale and a"
 " calendar view. Gray values are used to indicate missing values and the "
-"linear color scheme is used to encode the magnitude of each day's value."
+"linear color scheme is used to encode the magnitude of each day"s value."
 msgstr ""
 
 #: superset-frontend/plugins/legacy-plugin-chart-country-map/src/index.js:27
 msgid ""
-"Visualizes how a single metric varies across a country's principal "
+"Visualizes how a single metric varies across a country"s principal "
 "subdivisions (states, provinces, etc) on a chloropleth map. Each "
-"subdivision's value is elevated when you hover over the corresponding "
+"subdivision"s value is elevated when you hover over the corresponding "
 "geographic boundary."
 msgstr ""
 
@@ -14519,7 +14519,7 @@ msgstr ""
 
 #: superset-frontend/plugins/legacy-plugin-chart-sankey/src/index.js:29
 msgid ""
-"Visualizes the flow of different group's values through different stages "
+"Visualizes the flow of different group"s values through different stages "
 "of a system. New stages in the pipeline are visualized as nodes or "
 "layers. The thickness of the bars or edges represent the metric being "
 "visualized."
@@ -14553,7 +14553,7 @@ msgstr "Avertissement"
 
 #: superset/connectors/druid/views.py:193 superset/connectors/sqla/views.py:263
 msgid "Warning Message"
-msgstr "Message d'avertissement"
+msgstr "Message d"avertissement"
 
 #: superset-frontend/src/components/Datasource/ChangeDatasourceModal.tsx:285
 msgid "Warning!"
@@ -14565,25 +14565,25 @@ msgid ""
 "not exist."
 msgstr ""
 "Attention ! Changer le jeu de données peut mettre en erreur le graphique "
-"si la métadonnées n'existe pas."
+"si la métadonnées n"existe pas."
 
 #: superset/db_engine_specs/bigquery.py:166
 #, python-format
-msgid "We can't seem to resolve column \"%(column)s\" at line %(location)s."
+msgid "We can"t seem to resolve column \"%(column)s\" at line %(location)s."
 msgstr ""
 "Nous ne pouvons résoudre  la colonne \"%(column)s\" à la ligne "
 "%(location)s."
 
 #: superset/db_engine_specs/sqlite.py:63
 #, python-format
-msgid "We can't seem to resolve the column \"%(column_name)s\""
+msgid "We can"t seem to resolve the column \"%(column_name)s\""
 msgstr "Nous ne pouvons résoudre  la colonne \"%(column_name)s\""
 
 #: superset/db_engine_specs/postgres.py:150
 #: superset/db_engine_specs/presto.py:171
 #, python-format
 msgid ""
-"We can't seem to resolve the column \"%(column_name)s\" at line "
+"We can"t seem to resolve the column \"%(column_name)s\" at line "
 "%(location)s."
 msgstr ""
 "Nous ne pouvons résoudre la colonne \"%(column_name)s\" à la ligne "
@@ -14591,11 +14591,11 @@ msgstr ""
 
 #: superset-frontend/src/SqlLab/components/ExploreResultsButton/index.jsx:118
 msgid "We recommend your summarize your data further before following that flow. "
-msgstr "Nous recommandons d'agréger vos données avant de suivre ce flux. "
+msgstr "Nous recommandons d"agréger vos données avant de suivre ce flux. "
 
 #: superset-frontend/src/reports/actions/reports.js:156
 msgid "We were unable to active or deactivate this report."
-msgstr "Nous n'avons pas pu activer ou désactiver ce rapport."
+msgstr "Nous n"avons pas pu activer ou désactiver ce rapport."
 
 #: superset/db_engine_specs/redshift.py:86
 #, python-format
@@ -14603,7 +14603,7 @@ msgid ""
 "We were unable to connect to your database named \"%(database)s\". Please"
 " verify your database name and try again."
 msgstr ""
-"Nous n'avons pas pu nous connecter à votre base de données "
+"Nous n"avons pas pu nous connecter à votre base de données "
 "\"%(database)s\". Veuillez vérfier le nom de la base et réessayez."
 
 #: superset/db_engine_specs/bigquery.py:149
@@ -14611,7 +14611,7 @@ msgid ""
 "We were unable to connect to your database. Please confirm that your "
 "service account has the Viewer and Job User roles on the project."
 msgstr ""
-"Nous n'avons pas pu nous connecter à votre base de données. Veuillez "
+"Nous n"avons pas pu nous connecter à votre base de données. Veuillez "
 "confirmer que votre compte de service a les profils Viewer et Job User "
 "sur le projet."
 
@@ -14654,7 +14654,7 @@ msgid ""
 "We’re having trouble loading these results. Queries are set to timeout "
 "after %s second."
 msgstr ""
-"Erreur au chargement de ces résultats. Les requêtes s'interrompent au "
+"Erreur au chargement de ces résultats. Les requêtes s"interrompent au "
 "bout de %s secondes."
 
 #: superset-frontend/src/components/ErrorMessage/TimeoutErrorMessage.tsx:46
@@ -14663,7 +14663,7 @@ msgid ""
 "We’re having trouble loading this visualization. Queries are set to "
 "timeout after %s second."
 msgstr ""
-"Erreur au chargement de cette visu. Les requêtes s'interrompent au bout "
+"Erreur au chargement de cette visu. Les requêtes s"interrompent au bout "
 "de %s secondes."
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Pie/controlPanel.ts:58
@@ -14681,7 +14681,7 @@ msgid ""
 "Format is forced to `.1%`"
 msgstr ""
 "Lorsque `Type de calcul` vaut \"Pourcentage de changement\", le format de"
-" l'axe Y est à forcé à `.1%`"
+" l"axe Y est à forcé à `.1%`"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sunburst/src/controlPanel.ts:76
 msgid "When a secondary metric is provided, a linear color scale is used."
@@ -14692,7 +14692,7 @@ msgid ""
 "When allowing CREATE TABLE AS option in SQL Lab, this option forces the "
 "table to be created in this schema"
 msgstr ""
-"Quand l'option autoriser CREATE TABLE AS dans SQL Lab est cochée, force "
+"Quand l"option autoriser CREATE TABLE AS dans SQL Lab est cochée, force "
 "la table a être créée dans le schéma"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:195
@@ -14731,16 +14731,16 @@ msgstr ""
 "partitionné ou indexé."
 
 #: superset/viz.py:834
-msgid "When using 'Group By' you are limited to use a single metric"
-msgstr "Quand vous utilisez 'Grouper par' vous êtes limité à une seule métrique"
+msgid "When using "Group By" you are limited to use a single metric"
+msgstr "Quand vous utilisez "Grouper par" vous êtes limité à une seule métrique"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Gauge/controlPanel.tsx:258
 msgid "Whether the progress bar overlaps when there are multiple groups of data"
 msgstr ""
 
 #: superset/connectors/sqla/views.py:466
-msgid "Whether the table was generated by the 'Visualize' flow in SQL Lab"
-msgstr "Si la table a été générée par le flow 'Visualiser' dans SQL Lab"
+msgid "Whether the table was generated by the "Visualize" flow in SQL Lab"
+msgstr "Si la table a été générée par le flow "Visualiser" dans SQL Lab"
 
 #: superset/connectors/druid/views.py:98 superset/connectors/sqla/views.py:99
 msgid ""
@@ -14862,16 +14862,16 @@ msgstr "Métrique servant à trier les résultats"
 #: superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx:406
 #, fuzzy
 msgid "Whether to include a client-side search box"
-msgstr "S'il faut inclure un filtre de temps"
+msgstr "S"il faut inclure un filtre de temps"
 
 #: superset-frontend/src/visualizations/FilterBox/controlPanel.jsx:81
 msgid "Whether to include a time filter"
-msgstr "S'il faut inclure un filtre de temps"
+msgstr "S"il faut inclure un filtre de temps"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:289
 #, fuzzy
 msgid "Whether to include the percentage in the tooltip"
-msgstr "S'il faut inclure un filtre de temps"
+msgstr "S"il faut inclure un filtre de temps"
 
 #: superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx:326
 msgid "Whether to include the time granularity as defined in the time section"
@@ -14886,8 +14886,8 @@ msgid ""
 "Whether to make this column available as a [Time Granularity] option, "
 "column has to be DATETIME or DATETIME-like"
 msgstr ""
-"S'il faut que cette colonne soit accessible comme une option [Time "
-"Granularity], elle doit être DATETIME ou d'un format équivalent"
+"S"il faut que cette colonne soit accessible comme une option [Time "
+"Granularity], elle doit être DATETIME ou d"un format équivalent"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:143
 msgid "Whether to normalize the histogram"
@@ -14895,16 +14895,16 @@ msgstr ""
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:709
 msgid "Whether to populate autocomplete filters options"
-msgstr "S'il faut remplir les options des filtres de saisie semi-automatique"
+msgstr "S"il faut remplir les options des filtres de saisie semi-automatique"
 
 #: superset/connectors/druid/views.py:325 superset/connectors/sqla/views.py:461
 msgid ""
-"Whether to populate the filter's dropdown in the explore view's filter "
+"Whether to populate the filter"s dropdown in the explore view"s filter "
 "section with a list of distinct values fetched from the backend on the "
 "fly"
 msgstr ""
 "Faut-il remplir à la volée les choix du filtre de la section filtre de la"
-" page d'exploration avec la liste des valeurs distinctes répérées depuis "
+" page d"exploration avec la liste des valeurs distinctes répérées depuis "
 "le backend"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:163
@@ -15000,7 +15000,7 @@ msgstr "Largeur"
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/forecastInterval.tsx:73
 #, fuzzy
 msgid "Width of the confidence interval. Should be between 0 and 1"
-msgstr "L'intervalle de confiance doit être entre 0 et 1 (exclusif)"
+msgstr "L"intervalle de confiance doit être entre 0 et 1 (exclusif)"
 
 #: superset/utils/pandas_postprocessing.py:393
 msgid "Window must be > 0"
@@ -15026,7 +15026,7 @@ msgstr ""
 
 #: superset-frontend/src/views/CRUD/alert/AlertReportModal.tsx:1258
 msgid "Working timeout"
-msgstr "Timeout d'exécution"
+msgstr "Timeout d"exécution"
 
 #: superset-frontend/plugins/legacy-plugin-chart-world-map/src/index.js:33
 #: superset/viz.py:2042
@@ -15040,7 +15040,7 @@ msgstr "Ecrire une description à votre requête"
 #: superset/views/database/forms.py:221 superset/views/database/forms.py:354
 #: superset/views/database/forms.py:442
 msgid "Write dataframe index as a column."
-msgstr "Ecrire l'index du tableau de données en colonne."
+msgstr "Ecrire l"index du tableau de données en colonne."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/chartTitle.tsx:51
 msgid "X AXIS TITLE BOTTOM MARGIN"
@@ -15071,7 +15071,7 @@ msgstr "Axe X"
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:215
 #, fuzzy
 msgid "X Axis Format"
-msgstr "Format de l'axe Y"
+msgstr "Format de l"axe Y"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:107
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:175
@@ -15100,7 +15100,7 @@ msgstr ""
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:114
 #, fuzzy
 msgid "XScale Interval"
-msgstr "Intervalle d'actualisation"
+msgstr "Intervalle d"actualisation"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:102
 msgid "Y 2 bounds"
@@ -15161,7 +15161,7 @@ msgstr ""
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:428
 #: superset-frontend/src/explore/controls.jsx:442
 msgid "Y Axis Format"
-msgstr "Format de l'axe Y"
+msgstr "Format de l"axe Y"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:118
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:333
@@ -15192,7 +15192,7 @@ msgstr ""
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:130
 #, fuzzy
 msgid "YScale Interval"
-msgstr "Intervalle d'actualisation"
+msgstr "Intervalle d"actualisation"
 
 #: superset/db_engine_specs/base.py:100
 msgid "Year"
@@ -15220,7 +15220,7 @@ msgid ""
 "might cause you to lose some of your work. Are you sure you want to "
 "overwrite?"
 msgstr ""
-"Vous importez un ou plusieurs graphiques qui existent déjà. L'écrasement "
+"Vous importez un ou plusieurs graphiques qui existent déjà. L"écrasement "
 "peut vous conduire à perdre une partie de votre travail. Etes-vous sûr de"
 " vouloir ce remplacement ?"
 
@@ -15231,7 +15231,7 @@ msgid ""
 "overwrite?"
 msgstr ""
 "Vous importez un ou plusieurs tableaux de bord qui existent déjà. "
-"L'écrasement peut vous conduire à perdre une partie de votre travail. "
+"L"écrasement peut vous conduire à perdre une partie de votre travail. "
 "Etes-vous sûr de vouloir ce remplacement ?"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:45
@@ -15241,7 +15241,7 @@ msgid ""
 "overwrite?"
 msgstr ""
 "Vous importez une ou plusieurs bases de données qui existent déjà. "
-"L'écrasement peut vous conduire à perdre une partie de votre travail. "
+"L"écrasement peut vous conduire à perdre une partie de votre travail. "
 "Etes-vous sûr de vouloir ce remplacement ?"
 
 #: superset-frontend/src/views/CRUD/data/dataset/constants.ts:30
@@ -15252,7 +15252,7 @@ msgid ""
 "overwrite?"
 msgstr ""
 "Vous importez une ou plusieurs bases de données qui existent déjà. "
-"L'écrasement peut vous conduire à perdre une partie de votre travail. "
+"L"écrasement peut vous conduire à perdre une partie de votre travail. "
 "Etes-vous sûr de vouloir ce remplacement ?"
 
 #: superset-frontend/src/views/CRUD/data/savedquery/SavedQueryList.tsx:63
@@ -15262,7 +15262,7 @@ msgid ""
 "want to overwrite?"
 msgstr ""
 "Vous importez une ou plusieurs requêtes sauvegardées qui existent déjà. "
-"L'écrasement peut vous conduire à perdre une partie de votre travail. "
+"L"écrasement peut vous conduire à perdre une partie de votre travail. "
 "Etes-vous sûr de vouloir ce remplacement ?"
 
 #: superset/views/core.py:2175
@@ -15270,16 +15270,16 @@ msgid ""
 "You are not authorized to fetch samples from this table. If you think "
 "this is an error, please reach out to your administrator."
 msgstr ""
-"Vous n'avez pas le droit d'utiliser cette table. Contactez votre "
-"administrateur si vous pensez que c'est une erreur."
+"Vous n"avez pas le droit d"utiliser cette table. Contactez votre "
+"administrateur si vous pensez que c"est une erreur."
 
 #: superset/views/core.py:2295
 msgid ""
 "You are not authorized to see this query. If you think this is an error, "
 "please reach out to your administrator."
 msgstr ""
-"Vous n'avez pas le droit de voir cette requête. Contactez votre "
-"administrateur si vous pensez que c'est une erreur."
+"Vous n"avez pas le droit de voir cette requête. Contactez votre "
+"administrateur si vous pensez que c"est une erreur."
 
 #: superset/views/database/views.py:463
 msgid ""
@@ -15309,7 +15309,7 @@ msgid ""
 msgstr ""
 "Vous ne pouvez pas spécifier un namespace à la fois dans le nom de la "
 "table : \"%(excel_table.table)s\" et dans le champ du schéma : "
-"\"%(excel_table.schema)s\". Merci d'en enlever un"
+"\"%(excel_table.schema)s\". Merci d"en enlever un"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Vis.js:366
 msgid "You cannot use 45° tick layout along with the time range filter"
@@ -15321,54 +15321,54 @@ msgid ""
 "By]/[Metrics]/[Percentage Metrics]. Please choose one or the other."
 msgstr ""
 "Vous ne pouvez pas utiliser [Colonnes] en même temps que [Grouper "
-"par]/[Métriques]/[Métriques de Pourcentages]. Veuillez choisir l'un ou "
-"l'autre."
+"par]/[Métriques]/[Métriques de Pourcentages]. Veuillez choisir l"un ou "
+"l"autre."
 
 #: superset-frontend/src/explore/components/PropertiesModal/index.tsx:66
 msgid "You do not have permission to edit this chart"
-msgstr "Vous n'avez pas les permission pour modifier ce graphique"
+msgstr "Vous n"avez pas les permission pour modifier ce graphique"
 
 #: superset-frontend/src/dashboard/components/PropertiesModal/index.jsx:77
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/ColumnSelect.tsx:118
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/DatasetSelect.tsx:48
 msgid "You do not have permission to edit this dashboard"
-msgstr "Vous n'avez pas le droit de modifier ce tableau de bord"
+msgstr "Vous n"avez pas le droit de modifier ce tableau de bord"
 
 #: superset/templates/superset/request_access.html:25
 #, python-format
 msgid "You do not have permissions to access the datasource(s): %(name)s."
-msgstr "Vous n'avez pas les permissions pour accéder à(aux) source(s) : %(name)s."
+msgstr "Vous n"avez pas les permissions pour accéder à(aux) source(s) : %(name)s."
 
 #: superset-frontend/src/dashboard/actions/dashboardState.js:133
 msgid "You do not have permissions to edit this dashboard."
-msgstr "Vous n'avez pas les droits pour modifier ce tableau de bord."
+msgstr "Vous n"avez pas les droits pour modifier ce tableau de bord."
 
 #: superset/dashboards/commands/exceptions.py:86
-msgid "You don't have access to this dashboard."
-msgstr "Vous n'avez pas accès à ce tableau de bord."
+msgid "You don"t have access to this dashboard."
+msgstr "Vous n"avez pas accès à ce tableau de bord."
 
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:144
-msgid "You don't have any favorites yet!"
-msgstr "Vous n'avez pas encore de favoris !"
+msgid "You don"t have any favorites yet!"
+msgstr "Vous n"avez pas encore de favoris !"
 
 #: superset/key_value/commands/exceptions.py:45
 #, fuzzy
-msgid "You don't have permission to modify the value."
-msgstr "Vous n'avez pas les permission pour modifier ce graphique"
+msgid "You don"t have permission to modify the value."
+msgstr "Vous n"avez pas les permission pour modifier ce graphique"
 
 #: superset/views/core.py:618 superset/views/core.py:823
 #: superset/views/core.py:829 superset/views/core.py:999
 #: superset/views/core.py:1017
-msgid "You don't have the rights to "
-msgstr "Vous n'avez pas les droits pour "
+msgid "You don"t have the rights to "
+msgstr "Vous n"avez pas les droits pour "
 
 #: superset-frontend/src/components/EditableTitle/index.tsx:199
-msgid "You don't have the rights to alter this title."
-msgstr "Vous n'avez pas les droits pour modifier ce titre."
+msgid "You don"t have the rights to alter this title."
+msgstr "Vous n"avez pas les droits pour modifier ce titre."
 
 #: superset/views/core.py:406
 msgid "You have no permission to approve this request"
-msgstr "Vous n'avez pas les permission pour approuver cette requête"
+msgstr "Vous n"avez pas les permission pour approuver cette requête"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/RemovedFilter.tsx:39
 msgid "You have removed this filter."
@@ -15384,7 +15384,7 @@ msgstr "Vous devez entrer un nom pour le nouveau Tableau de Bord"
 
 #: superset-frontend/src/SqlLab/components/SqlEditor/index.jsx:518
 msgid "You must run the query successfully first"
-msgstr "Vous devez d'abord exécuter la requête avec succès"
+msgstr "Vous devez d"abord exécuter la requête avec succès"
 
 #: superset-frontend/src/dashboard/components/Header/index.jsx:382
 msgid "Your dashboard is too large. Please reduce its size before saving it."
@@ -15394,7 +15394,7 @@ msgstr ""
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:876
 msgid "Your query could not be saved"
-msgstr "Votre requête n'a pas pu être enregistrée"
+msgstr "Votre requête n"a pas pu être enregistrée"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:166
 msgid "Your query could not be scheduled"
@@ -15402,7 +15402,7 @@ msgstr "Votre requête ne peut pas être planifiée"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:892
 msgid "Your query could not be updated"
-msgstr "Votre requête n'a pas pu être mise à jour"
+msgstr "Votre requête n"a pas pu être mise à jour"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:159
 msgid ""
@@ -15422,7 +15422,7 @@ msgstr "Votre requête a été mise à jour"
 
 #: superset-frontend/src/reports/actions/reports.js:172
 msgid "Your report could not be deleted"
-msgstr "Votre rapport n'a pas pu être supprimé"
+msgstr "Votre rapport n"a pas pu être supprimé"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:306
 msgid "Zoom"
@@ -15500,7 +15500,7 @@ msgstr ""
 
 #: superset/common/query_object.py:388
 msgid "`operation` property of post processing object undefined"
-msgstr "La propriété `operation` de l'objet de post-traitement est indéfinie"
+msgstr "La propriété `operation` de l"objet de post-traitement est indéfinie"
 
 #: superset/utils/pandas_postprocessing.py:765
 msgid "`prophet` package not installed"
@@ -15553,7 +15553,7 @@ msgstr "et"
 #: superset-frontend/src/SqlLab/components/ExploreResultsButton/index.jsx:111
 #, python-format
 msgid "and the explore view times out at %s seconds "
-msgstr "et la vue d'exploration expire à %s secondes "
+msgstr "et la vue d"exploration expire à %s secondes "
 
 #: superset-frontend/src/views/CRUD/annotation/AnnotationList.tsx:64
 #: superset-frontend/src/views/CRUD/annotation/AnnotationModal.tsx:106
@@ -15562,7 +15562,7 @@ msgstr "annotation"
 
 #: superset/views/annotations.py:40
 msgid "annotation start time or end time is required."
-msgstr "l'heure de démarrage ou de fin est obligatoire pour l'annotation."
+msgstr "l"heure de démarrage ou de fin est obligatoire pour l"annotation."
 
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayerModal.tsx:102
 msgid "annotation_layer"
@@ -15606,9 +15606,9 @@ msgid ""
 msgstr ""
 "ne peut pas être utilisé comme nom de colonne. Le nom/alias de la colonne"
 " \"__timestamp\"\n"
-"          est réservé pour l'expression temporelle principale, et les "
+"          est réservé pour l"expression temporelle principale, et les "
 "alias  de colonnes terminant\n"
-"          par des doubles underscores suivis d'une valeur numérique (ex: "
+"          par des doubles underscores suivis d"une valeur numérique (ex: "
 "\"colonne__1\") sont réservés\n"
 "          pour dédupliquer les noms de colonnes dupliqués. Utilisez des "
 "alias pour renommer\n"
@@ -15809,7 +15809,7 @@ msgstr "suivre ce flux va très probablement conduire la requête à un timeout.
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/SqlAlchemyForm.tsx:86
 msgid "for more information on how to structure your URI."
-msgstr "pour plus d'information sur comment strcuturer votre URI."
+msgstr "pour plus d"information sur comment strcuturer votre URI."
 
 #: superset-frontend/src/explore/components/controls/ConditionalFormattingControl/FormattingPopoverContent.tsx:41
 msgid "green"
@@ -15858,8 +15858,8 @@ msgid "joined"
 msgstr "relié"
 
 #: superset/views/base.py:527
-msgid "json isn't valid"
-msgstr "le json n'est pas valide"
+msgid "json isn"t valid"
+msgstr "le json n"est pas valide"
 
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:233
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:261

@@ -110,10 +110,10 @@ class TableColumnInlineView(CompactCRUDMixin, SupersetModelView):
         "python_date_format": utils.markdown(
             Markup(
                 "The pattern of timestamp format. For strings use "
-                '<a href="https://docs.python.org/2/library/'
-                'datetime.html#strftime-strptime-behavior">'
+                "<a href="https://docs.python.org/2/library/"
+                "datetime.html#strftime-strptime-behavior">"
                 "python datetime string pattern</a> expression which needs to "
-                'adhere to the <a href="https://en.wikipedia.org/wiki/ISO_8601">'
+                "adhere to the <a href="https://en.wikipedia.org/wiki/ISO_8601">"
                 "ISO 8601</a> standard to ensure that the lexicographical ordering "
                 "coincides with the chronological ordering. If the timestamp "
                 "format does not adhere to the ISO 8601 standard you will need to "
@@ -128,8 +128,8 @@ class TableColumnInlineView(CompactCRUDMixin, SupersetModelView):
         ),
         "extra": utils.markdown(
             "Extra data to specify column metadata. Currently supports "
-            'certification data of the format: `{ "certification": "certified_by": '
-            '"Taylor Swift", "details": "This column is the source of truth." '
+            "certification data of the format: `{ "certification": "certified_by": "
+            ""Taylor Swift", "details": "This column is the source of truth." "
             "} }`. This should be modified from the edit datasource model in "
             "Explore to ensure correct formatting.",
             True,
@@ -151,7 +151,7 @@ class TableColumnInlineView(CompactCRUDMixin, SupersetModelView):
     validators_columns = {
         "python_date_format": [
             # Restrict viable values to epoch_s, epoch_ms, or a strftime format
-            # which adhere's to the ISO 8601 format (without time zone).
+            # which adhere"s to the ISO 8601 format (without time zone).
             Regexp(
                 re.compile(
                     r"""
@@ -218,9 +218,9 @@ class SqlMetricInlineView(CompactCRUDMixin, SupersetModelView):
         ),
         "extra": utils.markdown(
             "Extra data to specify metric metadata. Currently supports "
-            'metadata of the format: `{ "certification": { "certified_by": '
-            '"Data Platform Team", "details": "This metric is the source of truth." '
-            '}, "warning_markdown": "This is a warning." }`. This should be modified '
+            "metadata of the format: `{ "certification": { "certified_by": "
+            ""Data Platform Team", "details": "This metric is the source of truth." "
+            "}, "warning_markdown": "This is a warning." }`. This should be modified "
             "from the edit datasource model in Explore to ensure correct formatting.",
             True,
         ),
@@ -305,10 +305,10 @@ class RowLevelSecurityFiltersModelView(SupersetModelView, DeleteMixin):
             "while different filter groups will be ANDed together. Undefined group "
             "keys are treated as unique groups, i.e. are not grouped together. "
             "For example, if a table has three filters, of which two are for "
-            "departments Finance and Marketing (group key = 'department'), and one "
-            "refers to the region Europe (group key = 'region'), the filter clause "
-            "would apply the filter (department = 'Finance' OR department = "
-            "'Marketing') AND (region = 'Europe')."
+            "departments Finance and Marketing (group key = "department"), and one "
+            "refers to the region Europe (group key = "region"), the filter clause "
+            "would apply the filter (department = "Finance" OR department = "
+            ""Marketing") AND (region = "Europe")."
         ),
         "clause": _(
             "This is the condition that will be added to the WHERE clause. "
@@ -379,7 +379,7 @@ class TableModelView(  # pylint: disable=too-many-ancestors
             "Also note that charts need to point to a datasource, so "
             "this form will fail at saving if removing charts from a "
             "datasource. If you want to change the datasource for a chart, "
-            "overwrite the chart from the 'explore view'"
+            "overwrite the chart from the "explore view""
         ),
         "offset": _("Timezone offset (in hours) for this datasource"),
         "table_name": _("Name of the table that exists in the source database"),
@@ -387,7 +387,7 @@ class TableModelView(  # pylint: disable=too-many-ancestors
             "Schema, as used only in some databases like Postgres, Redshift " "and DB2"
         ),
         "description": Markup(
-            'Supports <a href="https://daringfireball.net/projects/markdown/">'
+            "Supports <a href="https://daringfireball.net/projects/markdown/">"
             "markdown</a>"
         ),
         "sql": _(
@@ -405,12 +405,12 @@ class TableModelView(  # pylint: disable=too-many-ancestors
             "from the table list"
         ),
         "filter_select_enabled": _(
-            "Whether to populate the filter's dropdown in the explore "
-            "view's filter section with a list of distinct values fetched "
+            "Whether to populate the filter"s dropdown in the explore "
+            "view"s filter section with a list of distinct values fetched "
             "from the backend on the fly"
         ),
         "is_sqllab_view": _(
-            "Whether the table was generated by the 'Visualize' flow " "in SQL Lab"
+            "Whether the table was generated by the "Visualize" flow " "in SQL Lab"
         ),
         "template_params": _(
             "A set of parameters that become available in the query using "
@@ -423,9 +423,9 @@ class TableModelView(  # pylint: disable=too-many-ancestors
         ),
         "extra": utils.markdown(
             "Extra data to specify table metadata. Currently supports "
-            'metadata of the format: `{ "certification": { "certified_by": '
-            '"Data Platform Team", "details": "This table is the source of truth." '
-            '}, "warning_markdown": "This is a warning." }`.',
+            "metadata of the format: `{ "certification": { "certified_by": "
+            ""Data Platform Team", "details": "This table is the source of truth." "
+            "}, "warning_markdown": "This is a warning." }`.",
             True,
         ),
     }

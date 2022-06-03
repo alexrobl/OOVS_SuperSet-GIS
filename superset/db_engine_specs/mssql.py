@@ -52,7 +52,7 @@ class MssqlEngineSpec(BaseEngineSpec):
 
     _time_grain_expressions = {
         None: "{col}",
-        "PT1S": "DATEADD(SECOND, DATEDIFF(SECOND, '2000-01-01', {col}), '2000-01-01')",
+        "PT1S": "DATEADD(SECOND, DATEDIFF(SECOND, "2000-01-01", {col}), "2000-01-01")",
         "PT1M": "DATEADD(MINUTE, DATEDIFF(MINUTE, 0, {col}), 0)",
         "PT5M": "DATEADD(MINUTE, DATEDIFF(MINUTE, 0, {col}) / 5 * 5, 0)",
         "PT10M": "DATEADD(MINUTE, DATEDIFF(MINUTE, 0, {col}) / 10 * 10, 0)",
@@ -74,25 +74,25 @@ class MssqlEngineSpec(BaseEngineSpec):
     custom_errors: Dict[Pattern[str], Tuple[str, SupersetErrorType, Dict[str, Any]]] = {
         CONNECTION_ACCESS_DENIED_REGEX: (
             __(
-                'Either the username "%(username)s", password, '
-                'or database name "%(database)s" is incorrect.'
+                "Either the username "%(username)s", password, "
+                "or database name "%(database)s" is incorrect."
             ),
             SupersetErrorType.CONNECTION_ACCESS_DENIED_ERROR,
             {},
         ),
         CONNECTION_INVALID_HOSTNAME_REGEX: (
-            __('The hostname "%(hostname)s" cannot be resolved.'),
+            __("The hostname "%(hostname)s" cannot be resolved."),
             SupersetErrorType.CONNECTION_INVALID_HOSTNAME_ERROR,
             {},
         ),
         CONNECTION_PORT_CLOSED_REGEX: (
-            __('Port %(port)s on hostname "%(hostname)s" refused the connection.'),
+            __("Port %(port)s on hostname "%(hostname)s" refused the connection."),
             SupersetErrorType.CONNECTION_PORT_CLOSED_ERROR,
             {},
         ),
         CONNECTION_HOST_DOWN_REGEX: (
             __(
-                'The host "%(hostname)s" might be down, and can\'t be '
+                "The host "%(hostname)s" might be down, and can\"t be "
                 "reached on port %(port)s."
             ),
             SupersetErrorType.CONNECTION_HOST_DOWN_ERROR,
@@ -102,7 +102,7 @@ class MssqlEngineSpec(BaseEngineSpec):
 
     @classmethod
     def epoch_to_dttm(cls) -> str:
-        return "dateadd(S, {col}, '1970-01-01')"
+        return "dateadd(S, {col}, "1970-01-01")"
 
     @classmethod
     def convert_dttm(
@@ -110,13 +110,13 @@ class MssqlEngineSpec(BaseEngineSpec):
     ) -> Optional[str]:
         tt = target_type.upper()
         if tt == utils.TemporalType.DATE:
-            return f"CONVERT(DATE, '{dttm.date().isoformat()}', 23)"
+            return f"CONVERT(DATE, "{dttm.date().isoformat()}", 23)"
         if tt == utils.TemporalType.DATETIME:
             datetime_formatted = dttm.isoformat(timespec="milliseconds")
-            return f"""CONVERT(DATETIME, '{datetime_formatted}', 126)"""
+            return f"""CONVERT(DATETIME, "{datetime_formatted}", 126)"""
         if tt == utils.TemporalType.SMALLDATETIME:
             datetime_formatted = dttm.isoformat(sep=" ", timespec="seconds")
-            return f"""CONVERT(SMALLDATETIME, '{datetime_formatted}', 20)"""
+            return f"""CONVERT(SMALLDATETIME, "{datetime_formatted}", 20)"""
         return None
 
     @classmethod

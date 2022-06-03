@@ -102,16 +102,16 @@ class HiveEngineSpec(PrestoEngineSpec):
     # pylint: disable=line-too-long
     _time_grain_expressions = {
         None: "{col}",
-        "PT1S": "from_unixtime(unix_timestamp({col}), 'yyyy-MM-dd HH:mm:ss')",
-        "PT1M": "from_unixtime(unix_timestamp({col}), 'yyyy-MM-dd HH:mm:00')",
-        "PT1H": "from_unixtime(unix_timestamp({col}), 'yyyy-MM-dd HH:00:00')",
-        "P1D": "from_unixtime(unix_timestamp({col}), 'yyyy-MM-dd 00:00:00')",
-        "P1W": "date_format(date_sub({col}, CAST(7-from_unixtime(unix_timestamp({col}),'u') as int)), 'yyyy-MM-dd 00:00:00')",
-        "P1M": "from_unixtime(unix_timestamp({col}), 'yyyy-MM-01 00:00:00')",
-        "P3M": "date_format(add_months(trunc({col}, 'MM'), -(month({col})-1)%3), 'yyyy-MM-dd 00:00:00')",
-        "P1Y": "from_unixtime(unix_timestamp({col}), 'yyyy-01-01 00:00:00')",
-        "P1W/1970-01-03T00:00:00Z": "date_format(date_add({col}, INT(6-from_unixtime(unix_timestamp({col}), 'u'))), 'yyyy-MM-dd 00:00:00')",
-        "1969-12-28T00:00:00Z/P1W": "date_format(date_add({col}, -INT(from_unixtime(unix_timestamp({col}), 'u'))), 'yyyy-MM-dd 00:00:00')",
+        "PT1S": "from_unixtime(unix_timestamp({col}), "yyyy-MM-dd HH:mm:ss")",
+        "PT1M": "from_unixtime(unix_timestamp({col}), "yyyy-MM-dd HH:mm:00")",
+        "PT1H": "from_unixtime(unix_timestamp({col}), "yyyy-MM-dd HH:00:00")",
+        "P1D": "from_unixtime(unix_timestamp({col}), "yyyy-MM-dd 00:00:00")",
+        "P1W": "date_format(date_sub({col}, CAST(7-from_unixtime(unix_timestamp({col}),"u") as int)), "yyyy-MM-dd 00:00:00")",
+        "P1M": "from_unixtime(unix_timestamp({col}), "yyyy-MM-01 00:00:00")",
+        "P3M": "date_format(add_months(trunc({col}, "MM"), -(month({col})-1)%3), "yyyy-MM-dd 00:00:00")",
+        "P1Y": "from_unixtime(unix_timestamp({col}), "yyyy-01-01 00:00:00")",
+        "P1W/1970-01-03T00:00:00Z": "date_format(date_add({col}, INT(6-from_unixtime(unix_timestamp({col}), "u"))), "yyyy-MM-dd 00:00:00")",
+        "1969-12-28T00:00:00Z/P1W": "date_format(date_add({col}, -INT(from_unixtime(unix_timestamp({col}), "u"))), "yyyy-MM-dd 00:00:00")",
     }
 
     # Scoping regex at class level to avoid recompiling
@@ -199,14 +199,14 @@ class HiveEngineSpec(PrestoEngineSpec):
 
         if to_sql_kwargs["if_exists"] == "fail":
 
-            # Ensure table doesn't already exist.
+            # Ensure table doesn"t already exist.
             if table.schema:
                 table_exists = not database.get_df(
-                    f"SHOW TABLES IN {table.schema} LIKE '{table.table}'"
+                    f"SHOW TABLES IN {table.schema} LIKE "{table.table}""
                 ).empty
             else:
                 table_exists = not database.get_df(
-                    f"SHOW TABLES LIKE '{table.table}'"
+                    f"SHOW TABLES LIKE "{table.table}""
                 ).empty
 
             if table_exists:
@@ -256,10 +256,10 @@ class HiveEngineSpec(PrestoEngineSpec):
     ) -> Optional[str]:
         tt = target_type.upper()
         if tt == utils.TemporalType.DATE:
-            return f"CAST('{dttm.date().isoformat()}' AS DATE)"
+            return f"CAST("{dttm.date().isoformat()}" AS DATE)"
         if tt == utils.TemporalType.TIMESTAMP:
-            return f"""CAST('{dttm
-                .isoformat(sep=" ", timespec="microseconds")}' AS TIMESTAMP)"""
+            return f"""CAST("{dttm
+                .isoformat(sep=" ", timespec="microseconds")}" AS TIMESTAMP)"""
         return None
 
     @classmethod
@@ -276,14 +276,14 @@ class HiveEngineSpec(PrestoEngineSpec):
     @classmethod
     def _extract_error_message(cls, ex: Exception) -> str:
         msg = str(ex)
-        match = re.search(r'errorMessage="(.*?)(?<!\\)"', msg)
+        match = re.search(r"errorMessage="(.*?)(?<!\\)"", msg)
         if match:
             msg = match.group(1)
         return msg
 
     @classmethod
     def progress(cls, log_lines: List[str]) -> int:
-        total_jobs = 1  # assuming there's at least 1 job
+        total_jobs = 1  # assuming there"s at least 1 job
         current_job = 1
         stages: Dict[int, float] = {}
         for line in log_lines:
@@ -338,7 +338,7 @@ class HiveEngineSpec(PrestoEngineSpec):
         job_id = None
         query_id = query.id
         while polled.operationState in unfinished_states:
-            # Queries don't terminate when user clicks the STOP button on SQL LAB.
+            # Queries don"t terminate when user clicks the STOP button on SQL LAB.
             # Refresh session so that the `query.status` modified in stop_query in
             # views/core.py is reflected here.
             session.refresh(query)
@@ -518,7 +518,7 @@ class HiveEngineSpec(PrestoEngineSpec):
 
         # Must be Hive connection, enable impersonation, and set optional param
         # auth=LDAP|KERBEROS
-        # this will set hive.server2.proxy.user=$effective_username on connect_args['configuration']
+        # this will set hive.server2.proxy.user=$effective_username on connect_args["configuration"]
         if backend_name == "hive" and username is not None:
             configuration = connect_args.get("configuration", {})
             configuration["hive.server2.proxy.user"] = username
@@ -562,7 +562,7 @@ class HiveEngineSpec(PrestoEngineSpec):
 
     @classmethod
     def is_readonly_query(cls, parsed_query: ParsedQuery) -> bool:
-        """Pessimistic readonly, 100% sure statement won't mutate anything"""
+        """Pessimistic readonly, 100% sure statement won"t mutate anything"""
         return (
             super().is_readonly_query(parsed_query)
             or parsed_query.is_set()

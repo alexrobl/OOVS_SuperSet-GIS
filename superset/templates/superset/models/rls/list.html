@@ -16,8 +16,8 @@
   specific language governing permissions and limitations
   under the License.
 #}
-{% extends 'appbuilder/general/widgets/base_list.html' %}
-{% import 'appbuilder/general/lib.html' as lib %}
+{% extends "appbuilder/general/widgets/base_list.html" %}
+{% import "appbuilder/general/lib.html" as lib %}
 
     {% block begin_content scoped %}
         <div class="table-responsive">
@@ -76,9 +76,9 @@
                     <td>
                     {% if value == "roles" and item["filter_type"] == "Base" and not item[value] %}
                       All
-                    {% elif value == "roles" and item["filter_type"] == 'Base' %}
+                    {% elif value == "roles" and item["filter_type"] == "Base" %}
                       Not {{ item[value] }}
-                    {% elif value == "roles" and item["filter_type"] == 'Regular' and not item[value] %}
+                    {% elif value == "roles" and item["filter_type"] == "Regular" and not item[value] %}
                       None
                     {% elif value == "group_key" and item[value] == None %}
                     {% else %}

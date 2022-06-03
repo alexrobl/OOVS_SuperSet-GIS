@@ -46,19 +46,19 @@ from superset.utils.core import ColumnSpec, GenericDataType
 
 # Regular expressions to catch custom errors
 CONNECTION_ACCESS_DENIED_REGEX = re.compile(
-    "Access denied for user '(?P<username>.*?)'@'(?P<hostname>.*?)'"
+    "Access denied for user "(?P<username>.*?)"@"(?P<hostname>.*?)""
 )
 CONNECTION_INVALID_HOSTNAME_REGEX = re.compile(
-    "Unknown MySQL server host '(?P<hostname>.*?)'"
+    "Unknown MySQL server host "(?P<hostname>.*?)""
 )
 CONNECTION_HOST_DOWN_REGEX = re.compile(
-    "Can't connect to MySQL server on '(?P<hostname>.*?)'"
+    "Can"t connect to MySQL server on "(?P<hostname>.*?)""
 )
-CONNECTION_UNKNOWN_DATABASE_REGEX = re.compile("Unknown database '(?P<database>.*?)'")
+CONNECTION_UNKNOWN_DATABASE_REGEX = re.compile("Unknown database "(?P<database>.*?)"")
 
 SYNTAX_ERROR_REGEX = re.compile(
     "check the manual that corresponds to your MySQL server "
-    "version for the right syntax to use near '(?P<server_error>.*)"
+    "version for the right syntax to use near "(?P<server_error>.*)"
 )
 
 
@@ -149,28 +149,28 @@ class MySQLEngineSpec(BaseEngineSpec, BasicParametersMixin):
 
     custom_errors: Dict[Pattern[str], Tuple[str, SupersetErrorType, Dict[str, Any]]] = {
         CONNECTION_ACCESS_DENIED_REGEX: (
-            __('Either the username "%(username)s" or the password is incorrect.'),
+            __("Either the username "%(username)s" or the password is incorrect."),
             SupersetErrorType.CONNECTION_ACCESS_DENIED_ERROR,
             {"invalid": ["username", "password"]},
         ),
         CONNECTION_INVALID_HOSTNAME_REGEX: (
-            __('Unknown MySQL server host "%(hostname)s".'),
+            __("Unknown MySQL server host "%(hostname)s"."),
             SupersetErrorType.CONNECTION_INVALID_HOSTNAME_ERROR,
             {"invalid": ["host"]},
         ),
         CONNECTION_HOST_DOWN_REGEX: (
-            __('The host "%(hostname)s" might be down and can\'t be reached.'),
+            __("The host "%(hostname)s" might be down and can\"t be reached."),
             SupersetErrorType.CONNECTION_HOST_DOWN_ERROR,
             {"invalid": ["host", "port"]},
         ),
         CONNECTION_UNKNOWN_DATABASE_REGEX: (
-            __('Unable to connect to database "%(database)s".'),
+            __("Unable to connect to database "%(database)s"."),
             SupersetErrorType.CONNECTION_UNKNOWN_DATABASE_ERROR,
             {"invalid": ["database"]},
         ),
         SYNTAX_ERROR_REGEX: (
             __(
-                'Please check your query for syntax errors near "%(server_error)s". '
+                "Please check your query for syntax errors near "%(server_error)s". "
                 "Then, try running your query again."
             ),
             SupersetErrorType.SYNTAX_ERROR,
@@ -184,10 +184,10 @@ class MySQLEngineSpec(BaseEngineSpec, BasicParametersMixin):
     ) -> Optional[str]:
         tt = target_type.upper()
         if tt == utils.TemporalType.DATE:
-            return f"STR_TO_DATE('{dttm.date().isoformat()}', '%Y-%m-%d')"
+            return f"STR_TO_DATE("{dttm.date().isoformat()}", "%Y-%m-%d")"
         if tt == utils.TemporalType.DATETIME:
             datetime_formatted = dttm.isoformat(sep=" ", timespec="microseconds")
-            return f"""STR_TO_DATE('{datetime_formatted}', '%Y-%m-%d %H:%i:%s.%f')"""
+            return f"""STR_TO_DATE("{datetime_formatted}", "%Y-%m-%d %H:%i:%s.%f")"""
         return None
 
     @classmethod

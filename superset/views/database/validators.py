@@ -39,9 +39,9 @@ def sqlalchemy_uri_validator(
             [
                 _(
                     "Invalid connection string, a valid string usually follows:"
-                    "'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'"
+                    ""DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME""
                     "<p>"
-                    "Example:'postgresql://user:password@your-postgres-db/database'"
+                    "Example:"postgresql://user:password@your-postgres-db/database""
                     "</p>"
                 )
             ]

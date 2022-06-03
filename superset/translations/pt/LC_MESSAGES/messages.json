@@ -29,24 +29,24 @@
         "Data de inicio não pode ser posterior à data de fim"
       ],
       "Table View": ["Vista de tabela"],
-      "Pick a granularity in the Time section or uncheck 'Include Time'": [
-        "Escolha uma granularidade na secção Tempo ou desmarque 'Incluir hora'"
+      "Pick a granularity in the Time section or uncheck "Include Time"": [
+        "Escolha uma granularidade na secção Tempo ou desmarque "Incluir hora""
       ],
       "Choose either fields to [Group By] and [Metrics] or [Columns], not both": [
         "Escolha apenas entre os campos [Agrupar por] e [Métricas] ou o campo [Colunas]"
       ],
       "Time Table View": ["Visualização da tabela de tempo"],
       "Pick at least one metric": ["Selecione pelo menos uma métrica"],
-      "When using 'Group By' you are limited to use a single metric": [
-        "Utilizando 'Agrupar por' só é possível utilizar uma única métrica"
+      "When using "Group By" you are limited to use a single metric": [
+        "Utilizando "Agrupar por" só é possível utilizar uma única métrica"
       ],
       "Pivot Table": ["Tabela Pivot"],
       "Please choose at least one \"Group by\" field ": [
         "Selecione pelo menos um campo \"Agrupar por\" "
       ],
       "Please choose at least one metric": ["Selecione pelo menos uma métrica"],
-      "'Group By' and 'Columns' can't overlap": [
-        "Os campos 'Agrupar por' e 'Colunas' não se podem sobrepor"
+      ""Group By" and "Columns" can"t overlap": [
+        "Os campos "Agrupar por" e "Colunas" não se podem sobrepor"
       ],
       "Markup": ["Marcação"],
       "Separator": ["Separador"],
@@ -90,7 +90,7 @@
         "Deve ser especificada uma coluna númerica"
       ],
       "Distribution - Bar Chart": ["Gráfico de barras"],
-      "Can't have overlap between Series and Breakdowns": [
+      "Can"t have overlap between Series and Breakdowns": [
         "Não pode haver sobreposição entre Séries e Desagregação"
       ],
       "Pick at least one field for [Series]": [
@@ -101,8 +101,8 @@
       "Pick exactly 2 columns as [Source / Target]": [
         "Selecione exatamente 2 colunas [Origem e Alvo]"
       ],
-      "Pick exactly 2 columns to 'Group By'": [
-        "Selecione exatamente 2 colunas para 'Agrupar por'"
+      "Pick exactly 2 columns to "Group By"": [
+        "Selecione exatamente 2 colunas para "Agrupar por""
       ],
       "Country Map": ["Mapa de País"],
       "World Map": ["Mapa Mundo"],
@@ -113,8 +113,8 @@
       "Heatmap": ["Mapa de Calor"],
       "Horizon Charts": ["Gráfico de Horizonte"],
       "Mapbox": ["Mapbox"],
-      "Must have a [Group By] column to have 'count' as the [Label]": [
-        "Deve ter uma coluna [Agrupar por] para ter 'count' como [Label]"
+      "Must have a [Group By] column to have "count" as the [Label]": [
+        "Deve ter uma coluna [Agrupar por] para ter "count" como [Label]"
       ],
       "Choice of [Label] must be present in [Group By]": [
         "A escolha do [Rótulo] deve estar presente em [Agrupar por]"
@@ -156,7 +156,7 @@
       "Source SQL": ["Fonte SQL"],
       "SQL": ["SQL"],
       "No query history yet...": ["Ainda não há histórico de queries ..."],
-      "It seems you don't have access to any database": [
+      "It seems you don"t have access to any database": [
         "Parece que não tem acesso a nenhuma base de dados"
       ],
       "Search Results": ["Procurar Resultados"],
@@ -239,12 +239,12 @@
       "Copy to clipboard": ["Copiar para área de transferência"],
       "Not successful": ["Não foi bem sucedido"],
       "Sorry, your browser does not support copying. Use Ctrl / Cmd + C!": [
-        "Desculpe, o seu navegador não suporta 'copiar'. Use Ctrl+C ou Cmd+C!"
+        "Desculpe, o seu navegador não suporta "copiar". Use Ctrl+C ou Cmd+C!"
       ],
       "Copied!": ["Copiado!"],
       "Title": ["Título"],
       "click to edit title": ["clique para editar o título"],
-      "You don't have the rights to alter this title.": [
+      "You don"t have the rights to alter this title.": [
         "Não tem direitos para alterar este título."
       ],
       "Click to favorite/unfavorite": ["Clique para tornar favorito"],
@@ -264,12 +264,12 @@
       "Active Dashboard Filters": ["Filtros Dashboard Ativo"],
       "Checkout this dashboard: %s": ["Verificar dashboard: %s"],
       "Force refresh the whole dashboard": ["Forçar atualização do dashboard"],
-      "Edit this dashboard's properties": ["Editar propriedades do dashboard"],
+      "Edit this dashboard"s properties": ["Editar propriedades do dashboard"],
       "Load a template": ["Carregue um modelo"],
       "Load a CSS template": ["Carregue um modelo CSS"],
       "CSS": ["CSS"],
       "Live CSS Editor": ["Editor CSS em tempo real"],
-      "Don't refresh": ["Não atualize"],
+      "Don"t refresh": ["Não atualize"],
       "10 seconds": ["10 segundos"],
       "30 seconds": ["30 segundos"],
       "1 minute": ["1 minuto"],
@@ -354,7 +354,7 @@
       "Click to point to another datasource": [
         "Clique para indicar outra origem de dados"
       ],
-      "Edit the datasource's configuration": [
+      "Edit the datasource"s configuration": [
         "Edite a configuração da origem de dados"
       ],
       "Select a datasource": ["Selecione uma origem de dados"],
@@ -397,7 +397,7 @@
         "Métricas para qual porcentagem do total deve ser exibida"
       ],
       "Y Axis Bounds": ["Limites para o Eixo Y"],
-      "Bounds for the Y axis. When left empty, the bounds are dynamically defined based on the min/max of the data. Note that this feature will only expand the axis range. It won't narrow the data's extent.": [
+      "Bounds for the Y axis. When left empty, the bounds are dynamically defined based on the min/max of the data. Note that this feature will only expand the axis range. It won"t narrow the data"s extent.": [
         "Limites para o eixo Y. Quando deixados vazios, os limites são definidos dinamicamente com base no min / max dos dados. Observe que esse recurso expandirá apenas o alcance do eixo. Não restringirá a extensão dos dados."
       ],
       "Ordering": ["Encomenda"],
@@ -582,7 +582,7 @@
       "Y Axis Label": ["Rótulo Eixo YY"],
       "Custom WHERE clause": ["Cláusula WHERE personalizada"],
       "Custom HAVING clause": ["Cláusula HAVING personalizada"],
-      "The text in this box gets included in your query's HAVING clause, as an AND to other criteria. You can include complex expression, parenthesis and anything else supported by the backend it is directed towards.": [
+      "The text in this box gets included in your query"s HAVING clause, as an AND to other criteria. You can include complex expression, parenthesis and anything else supported by the backend it is directed towards.": [
         "O texto nesta caixa é incluído na cláusula HAVING da query, como um AND para outros critérios. É possível incluir uma expressão complexa, parênteses ou qualquer outra coisa suportada pelo seu backend."
       ],
       "Comparison Period Lag": ["Atraso do período de comparação"],
@@ -891,7 +891,7 @@
         "Use esta seção se desejar query linhas atómicas"
       ],
       "Time Series Table": ["Tabela de séries temporais"],
-      "Templated link, it's possible to include {{ metric }} or other values coming from the controls.": [
+      "Templated link, it"s possible to include {{ metric }} or other values coming from the controls.": [
         "Ligação predefinida, é possível incluir {{ metric }} ou outros valores provenientes dos controlos."
       ],
       "Pivot Options": ["Opções de pivot"],
@@ -927,7 +927,7 @@
       "ISO 3166-2 codes of region/province/department": [
         "ISO 3166-2 códigos de região / província / departamento"
       ],
-      "It's ISO 3166-2 of your region/province/department in your table. (see documentation for list of ISO 3166-2)": [
+      "It"s ISO 3166-2 of your region/province/department in your table. (see documentation for list of ISO 3166-2)": [
         "É o código ISO 3166-2 da sua região / província / departamento na sua tabela. (ver documentação para obter a lista de ISO 3166-2)"
       ],
       "Country Control": ["Controlo de País"],
@@ -1033,8 +1033,8 @@
       "Show Druid Metric": ["Mostrar Métrica Druid"],
       "Add Druid Metric": ["Adicionar Métrica Druid"],
       "Edit Druid Metric": ["Editar Métrica Druid"],
-      "Whether the access to this metric is restricted to certain roles. Only roles with the permission 'metric access on XXX (the name of this metric)' are allowed to access this metric": [
-        "Se o acesso a esta métrica é restrito a determinadas funções. Somente cargos com permissão 'acesso à métrica em XXX (nome da métrica)' estão autorizados a aceder a esta métrica"
+      "Whether the access to this metric is restricted to certain roles. Only roles with the permission "metric access on XXX (the name of this metric)" are allowed to access this metric": [
+        "Se o acesso a esta métrica é restrito a determinadas funções. Somente cargos com permissão "acesso à métrica em XXX (nome da métrica)" estão autorizados a aceder a esta métrica"
       ],
       "Verbose Name": ["Nome Detalhado"],
       "JSON": ["JSON"],
@@ -1055,9 +1055,9 @@
         "Diferença do fuso horário (em horas) para esta fonte de dados"
       ],
       "Time expression to use as a predicate when retrieving distinct values to populate the filter component. Only applies when `Enable Filter Select` is on. If you enter `7 days ago`, the distinct list of values in the filter will be populated based on the distinct value over the past week": [
-        "Expressão temporal a ser utilizada como predicado ao recuperar valores distintos para preencher o componente do filtro. Apenas aplicável quando \"Permitir Seleção de Filtro\" estiver ativado. Ao inserir `7 dias atrás ', a lista distinta de valores no filtro será preenchida com base no valor distinto da semana passada"
+        "Expressão temporal a ser utilizada como predicado ao recuperar valores distintos para preencher o componente do filtro. Apenas aplicável quando \"Permitir Seleção de Filtro\" estiver ativado. Ao inserir `7 dias atrás ", a lista distinta de valores no filtro será preenchida com base no valor distinto da semana passada"
       ],
-      "Whether to populate the filter's dropdown in the explore view's filter section with a list of distinct values fetched from the backend on the fly": [
+      "Whether to populate the filter"s dropdown in the explore view"s filter section with a list of distinct values fetched from the backend on the fly": [
         "Preencher a lista de filtros, na vista de exploração, com valores distintos carregados em tempo real a partir do backend"
       ],
       "Redirects to this endpoint when clicking on the datasource from the datasource list": [
@@ -1078,8 +1078,8 @@
         "Coluna datahora não definida como parte da configuração da tabela e obrigatória para este tipo de gráfico"
       ],
       "Empty query?": ["Query vazia?"],
-      "Metric '{}' is not valid": ["A métrica '{}' não é válida"],
-      "Table [{}] doesn't seem to exist in the specified database, couldn't fetch column information": [
+      "Metric "{}" is not valid": ["A métrica "{}" não é válida"],
+      "Table [{}] doesn"t seem to exist in the specified database, couldn"t fetch column information": [
         "A tabela [{}] não parece existir na base de dados especificada, não foi possível carregar informações da coluna"
       ],
       "List Columns": ["Lista de Colunas"],
@@ -1151,7 +1151,7 @@
       "Test Connection": ["Conexão de teste"],
       "Manage": ["Gerir"],
       "Dataset %(name)s already exists": ["Origem de dados %(name)s já existe"],
-      "json isn't valid": ["json não é válido"],
+      "json isn"t valid": ["json não é válido"],
       "Delete": ["Eliminar"],
       "Delete all Really?": ["Tem a certeza que pretende eliminar tudo?"],
       "This endpoint requires the `all_datasource_access` permission": [
@@ -1166,14 +1166,14 @@
       "The user seems to have been deleted": [
         "O utilizador parece ter sido eliminado"
       ],
-      "You don't have access to this datasource": [
+      "You don"t have access to this datasource": [
         "Não tem acesso a esta origem de dados"
       ],
       "This view requires the database %(name)s or `all_datasource_access` permission": [
-        "A visualização requer o permissão da base de dados %(name) s ou 'all_datasource_access' permissão"
+        "A visualização requer o permissão da base de dados %(name) s ou "all_datasource_access" permissão"
       ],
       "This endpoint requires the datasource %(name)s, database or `all_datasource_access` permission": [
-        "Este ponto final requer a fonte de dados %(name)s, permissão 'all_datasource_access' ou base de dados"
+        "Este ponto final requer a fonte de dados %(name)s, permissão "all_datasource_access" ou base de dados"
       ],
       "List Databases": ["Listar Base de Dados"],
       "Show Database": ["Mostrar Base de Dados"],
@@ -1272,14 +1272,14 @@
         "Pedido mal formado. Os argumentos slice_id ou table_name e db_name não foram preenchidos"
       ],
       "Slice %(id)s not found": ["Visualização %(id)s não encontrada"],
-      "Table %(t)s wasn't found in the database %(d)s": [
+      "Table %(t)s wasn"t found in the database %(d)s": [
         "A tabela %(t)s não foi encontrada na base de dados %(d)s"
       ],
-      "Can't find User '%(name)s', please ask your admin to create one.": [
-        "Não foi possível encontrar o utilizador '%(name)s', por favor entre em contacto com o administrador."
+      "Can"t find User "%(name)s", please ask your admin to create one.": [
+        "Não foi possível encontrar o utilizador "%(name)s", por favor entre em contacto com o administrador."
       ],
-      "Can't find DruidCluster with cluster_name = '%(name)s'": [
-        "Não foi possível encontrar DruidCluster com cluster_name = '%(name)s'"
+      "Can"t find DruidCluster with cluster_name = "%(name)s"": [
+        "Não foi possível encontrar DruidCluster com cluster_name = "%(name)s""
       ],
       "Query record was not created as expected.": [
         "O registo da query não foi criado conforme o esperado."

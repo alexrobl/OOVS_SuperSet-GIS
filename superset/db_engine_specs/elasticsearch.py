@@ -86,10 +86,10 @@ class ElasticSearchEngineSpec(BaseEngineSpec):  # pylint: disable=abstract-metho
             if supports_dttm_parse:
                 datetime_formatted = dttm.isoformat(sep=" ", timespec="seconds")
                 return (
-                    f"""DATETIME_PARSE('{datetime_formatted}', 'yyyy-MM-dd HH:mm:ss')"""
+                    f"""DATETIME_PARSE("{datetime_formatted}", "yyyy-MM-dd HH:mm:ss")"""
                 )
 
-            return f"""CAST('{dttm.isoformat(timespec="seconds")}' AS DATETIME)"""
+            return f"""CAST("{dttm.isoformat(timespec="seconds")}" AS DATETIME)"""
 
         return None
 
@@ -104,12 +104,12 @@ class OpenDistroEngineSpec(BaseEngineSpec):  # pylint: disable=abstract-method
 
     _time_grain_expressions = {
         None: "{col}",
-        "PT1S": "date_format({col}, 'yyyy-MM-dd HH:mm:ss.000')",
-        "PT1M": "date_format({col}, 'yyyy-MM-dd HH:mm:00.000')",
-        "PT1H": "date_format({col}, 'yyyy-MM-dd HH:00:00.000')",
-        "P1D": "date_format({col}, 'yyyy-MM-dd 00:00:00.000')",
-        "P1M": "date_format({col}, 'yyyy-MM-01 00:00:00.000')",
-        "P1Y": "date_format({col}, 'yyyy-01-01 00:00:00.000')",
+        "PT1S": "date_format({col}, "yyyy-MM-dd HH:mm:ss.000")",
+        "PT1M": "date_format({col}, "yyyy-MM-dd HH:mm:00.000")",
+        "PT1H": "date_format({col}, "yyyy-MM-dd HH:00:00.000")",
+        "P1D": "date_format({col}, "yyyy-MM-dd 00:00:00.000")",
+        "P1M": "date_format({col}, "yyyy-MM-01 00:00:00.000")",
+        "P1Y": "date_format({col}, "yyyy-01-01 00:00:00.000")",
     }
 
     engine = "odelasticsearch"
@@ -120,7 +120,7 @@ class OpenDistroEngineSpec(BaseEngineSpec):  # pylint: disable=abstract-method
         cls, target_type: str, dttm: datetime, db_extra: Optional[Dict[str, Any]] = None
     ) -> Optional[str]:
         if target_type.upper() == utils.TemporalType.DATETIME:
-            return f"""'{dttm.isoformat(timespec="seconds")}'"""
+            return f""""{dttm.isoformat(timespec="seconds")}""""
         return None
 
     @staticmethod

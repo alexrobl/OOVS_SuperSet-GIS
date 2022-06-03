@@ -65,7 +65,7 @@ def upgrade():
         .filter(
             and_(
                 Slice.viz_type == "pivot_table_v2",
-                Slice.params.like('%"tableRenderer%'),
+                Slice.params.like("%"tableRenderer%"),
             )
         )
         .all()
@@ -77,7 +77,7 @@ def upgrade():
             table_renderer = params.pop("tableRenderer", None)
             conditional_formatting = params.get("conditional_formatting")
 
-            # don't update unless table_renderer is valid and
+            # don"t update unless table_renderer is valid and
             # conditional_formatting is undefined
             if table_renderer in VALID_RENDERERS and conditional_formatting is None:
                 metric_labels = [
@@ -104,5 +104,5 @@ def upgrade():
 
 
 def downgrade():
-    # slices can't be downgraded
+    # slices can"t be downgraded
     pass

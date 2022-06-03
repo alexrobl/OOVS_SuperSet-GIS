@@ -238,7 +238,7 @@ class Dashboard(Model, AuditMixinNullable, ImportExportMixin):
     @renders("dashboard_title")
     def dashboard_link(self) -> Markup:
         title = escape(self.dashboard_title or "<empty>")
-        return Markup(f'<a href="{self.url}">{title}</a>')
+        return Markup(f"<a href="{self.url}">{title}</a>")
 
     @property
     def digest(self) -> str:
@@ -384,7 +384,7 @@ class Dashboard(Model, AuditMixinNullable, ImportExportMixin):
                 datasource_ids.add((slc.datasource_id, slc.datasource_type))
                 copied_slc = slc.copy()
                 # save original id into json
-                # we need it to update dashboard's json metadata on import
+                # we need it to update dashboard"s json metadata on import
                 copied_slc.id = slc.id
                 # add extra params for the import
                 copied_slc.alter_params(

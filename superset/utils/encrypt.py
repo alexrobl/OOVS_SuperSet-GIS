@@ -82,7 +82,7 @@ class SecretsMigrator:
 
     def discover_encrypted_fields(self) -> Dict[str, Dict[str, EncryptedType]]:
         """
-        Iterates over SqlAlchemy's metadata, looking for EncryptedType
+        Iterates over SqlAlchemy"s metadata, looking for EncryptedType
         columns along the way. Builds up a dict of
         table_name -> dict of col_name: enc type instance
         :return:
@@ -102,20 +102,20 @@ class SecretsMigrator:
     def _read_bytes(col_name: str, value: Any) -> Optional[bytes]:
         if value is None or isinstance(value, bytes):
             return value
-        # Note that the Postgres Driver returns memoryview's for BLOB types
+        # Note that the Postgres Driver returns memoryview"s for BLOB types
         if isinstance(value, memoryview):
             return value.tobytes()
         if isinstance(value, str):
             return bytes(value.encode("utf8"))
 
-        # Just bail if we haven't seen this type before...
+        # Just bail if we haven"t seen this type before...
         raise ValueError(f"DB column {col_name} has unknown type: {type(value)}")
 
     @staticmethod
     def _select_columns_from_table(
         conn: Connection, column_names: List[str], table_name: str
     ) -> RowProxy:
-        return conn.execute(f"SELECT id, {','.join(column_names)} FROM {table_name}")
+        return conn.execute(f"SELECT id, {",".join(column_names)} FROM {table_name}")
 
     def _re_encrypt_row(
         self,

@@ -20,7 +20,7 @@ import {
   buildQueryContext,
   QueryFormData,
   ensureIsArray,
-} from '@superset-ui/core';
+} from "@superset-ui/core";
 
 export default function buildQuery(formData: QueryFormData) {
   const { timeseries_limit_metric } = formData;

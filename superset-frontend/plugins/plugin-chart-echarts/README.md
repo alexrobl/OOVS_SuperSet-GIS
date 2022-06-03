@@ -36,10 +36,10 @@ lookup this chart throughout the app.
 import {
   EchartsTimeseriesChartPlugin,
   EchartsPieChartPlugin,
-} from '@superset-ui/plugin-chart-echarts';
+} from "@superset-ui/plugin-chart-echarts";
 
-new EchartsTimeseriesChartPlugin().configure({ key: 'echarts-ts' }).register();
-new EchartsPieChartPlugin().configure({ key: 'echarts-pie' }).register();
+new EchartsTimeseriesChartPlugin().configure({ key: "echarts-ts" }).register();
+new EchartsPieChartPlugin().configure({ key: "echarts-pie" }).register();
 ```
 
 Then use it via `SuperChart`. See

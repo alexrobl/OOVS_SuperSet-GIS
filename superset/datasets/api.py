@@ -230,7 +230,7 @@ class DatasetRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/{{self.__class__.__name__}}.post'
+                  $ref: "#/components/schemas/{{self.__class__.__name__}}.post"
           responses:
             201:
               description: Dataset added
@@ -242,15 +242,15 @@ class DatasetRestApi(BaseSupersetModelRestApi):
                       id:
                         type: number
                       result:
-                        $ref: '#/components/schemas/{{self.__class__.__name__}}.post'
+                        $ref: "#/components/schemas/{{self.__class__.__name__}}.post"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             item = self.add_model_schema.load(request.json)
@@ -302,7 +302,7 @@ class DatasetRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/{{self.__class__.__name__}}.put'
+                  $ref: "#/components/schemas/{{self.__class__.__name__}}.put"
           responses:
             200:
               description: Dataset changed
@@ -314,19 +314,19 @@ class DatasetRestApi(BaseSupersetModelRestApi):
                       id:
                         type: number
                       result:
-                        $ref: '#/components/schemas/{{self.__class__.__name__}}.put'
+                        $ref: "#/components/schemas/{{self.__class__.__name__}}.put"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         override_columns = (
             parse_boolean_string(request.args["override_columns"])
@@ -391,15 +391,15 @@ class DatasetRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             DeleteDatasetCommand(g.user, pk).run()
@@ -438,7 +438,7 @@ class DatasetRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_export_ids_schema'
+                  $ref: "#/components/schemas/get_export_ids_schema"
           responses:
             200:
               description: Dataset export
@@ -447,13 +447,13 @@ class DatasetRestApi(BaseSupersetModelRestApi):
                   schema:
                     type: string
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         requested_ids = kwargs["rison"]
 
@@ -531,15 +531,15 @@ class DatasetRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             RefreshDatasetCommand(g.user, pk).run()
@@ -586,11 +586,11 @@ class DatasetRestApi(BaseSupersetModelRestApi):
                   schema:
                     $ref: "#/components/schemas/DatasetRelatedObjectsResponse"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         dataset = DatasetDAO.find_by_id(pk)
         if not dataset:
@@ -640,7 +640,7 @@ class DatasetRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_delete_ids_schema'
+                  $ref: "#/components/schemas/get_delete_ids_schema"
           responses:
             200:
               description: Dataset bulk delete
@@ -652,17 +652,17 @@ class DatasetRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         item_ids = kwargs["rison"]
         try:
@@ -727,13 +727,13 @@ class DatasetRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         upload = request.files.get("formData")
         if not upload:

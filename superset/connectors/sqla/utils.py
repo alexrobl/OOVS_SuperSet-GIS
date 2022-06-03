@@ -130,7 +130,7 @@ def get_virtual_table_metadata(dataset: "SqlaTable") -> List[ResultSetColumnType
                 level=ErrorLevel.ERROR,
             )
         )
-    # TODO(villebro): refactor to use same code that's used by
+    # TODO(villebro): refactor to use same code that"s used by
     #  sql_lab.py:execute_sql_statements
     try:
         with closing(engine.raw_connection()) as conn:

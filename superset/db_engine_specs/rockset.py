@@ -31,14 +31,14 @@ class RocksetEngineSpec(BaseEngineSpec):
 
     _time_grain_expressions = {
         None: "{col}",
-        "PT1S": "DATE_TRUNC('second', {col})",
-        "PT1M": "DATE_TRUNC('minute', {col})",
-        "PT1H": "DATE_TRUNC('hour', {col})",
-        "P1D": "DATE_TRUNC('day', {col})",
-        "P1W": "DATE_TRUNC('week', {col})",
-        "P1M": "DATE_TRUNC('month', {col})",
-        "P3M": "DATE_TRUNC('quarter', {col})",
-        "P1Y": "DATE_TRUNC('year', {col})",
+        "PT1S": "DATE_TRUNC("second", {col})",
+        "PT1M": "DATE_TRUNC("minute", {col})",
+        "PT1H": "DATE_TRUNC("hour", {col})",
+        "P1D": "DATE_TRUNC("day", {col})",
+        "P1W": "DATE_TRUNC("week", {col})",
+        "P1M": "DATE_TRUNC("month", {col})",
+        "P3M": "DATE_TRUNC("quarter", {col})",
+        "P1Y": "DATE_TRUNC("year", {col})",
     }
 
     @classmethod
@@ -55,13 +55,13 @@ class RocksetEngineSpec(BaseEngineSpec):
     ) -> Optional[str]:
         tt = target_type.upper()
         if tt == utils.TemporalType.DATE:
-            return f"DATE '{dttm.date().isoformat()}'"
+            return f"DATE "{dttm.date().isoformat()}""
         if tt == utils.TemporalType.DATETIME:
             dttm_formatted = dttm.isoformat(sep=" ", timespec="microseconds")
-            return f"""DATETIME '{dttm_formatted}'"""
+            return f"""DATETIME "{dttm_formatted}""""
         if tt == utils.TemporalType.TIMESTAMP:
             dttm_formatted = dttm.isoformat(timespec="microseconds")
-            return f"""TIMESTAMP '{dttm_formatted}'"""
+            return f"""TIMESTAMP "{dttm_formatted}""""
         return None
 
     @classmethod

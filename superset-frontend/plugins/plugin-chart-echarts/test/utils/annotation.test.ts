@@ -25,52 +25,52 @@ import {
   AnnotationType,
   FormulaAnnotationLayer,
   TimeseriesDataRecord,
-} from '@superset-ui/core';
+} from "@superset-ui/core";
 import {
   evalFormula,
   extractAnnotationLabels,
   formatAnnotationLabel,
   parseAnnotationOpacity,
-} from '../../src/utils/annotation';
+} from "../../src/utils/annotation";
 
-describe('formatAnnotationLabel', () => {
-  it('should handle default cases properly', () => {
-    expect(formatAnnotationLabel('name')).toEqual('name');
-    expect(formatAnnotationLabel('name', 'title')).toEqual('name - title');
-    expect(formatAnnotationLabel('name', 'title', ['description'])).toEqual(
-      'name - title\n\ndescription',
+describe("formatAnnotationLabel", () => {
+  it("should handle default cases properly", () => {
+    expect(formatAnnotationLabel("name")).toEqual("name");
+    expect(formatAnnotationLabel("name", "title")).toEqual("name - title");
+    expect(formatAnnotationLabel("name", "title", ["description"])).toEqual(
+      "name - title\n\ndescription",
     );
   });
 
-  it('should handle missing cases properly', () => {
-    expect(formatAnnotationLabel()).toEqual('');
-    expect(formatAnnotationLabel(undefined, 'title')).toEqual('title');
-    expect(formatAnnotationLabel('name', undefined, ['description'])).toEqual(
-      'name\n\ndescription',
+  it("should handle missing cases properly", () => {
+    expect(formatAnnotationLabel()).toEqual("");
+    expect(formatAnnotationLabel(undefined, "title")).toEqual("title");
+    expect(formatAnnotationLabel("name", undefined, ["description"])).toEqual(
+      "name\n\ndescription",
     );
     expect(
-      formatAnnotationLabel(undefined, undefined, ['description']),
-    ).toEqual('description');
+      formatAnnotationLabel(undefined, undefined, ["description"]),
+    ).toEqual("description");
   });
 
-  it('should handle multiple descriptions properly', () => {
+  it("should handle multiple descriptions properly", () => {
     expect(
-      formatAnnotationLabel('name', 'title', [
-        'description 1',
-        'description 2',
+      formatAnnotationLabel("name", "title", [
+        "description 1",
+        "description 2",
       ]),
-    ).toEqual('name - title\n\ndescription 1\ndescription 2');
+    ).toEqual("name - title\n\ndescription 1\ndescription 2");
     expect(
       formatAnnotationLabel(undefined, undefined, [
-        'description 1',
-        'description 2',
+        "description 1",
+        "description 2",
       ]),
-    ).toEqual('description 1\ndescription 2');
+    ).toEqual("description 1\ndescription 2");
   });
 });
 
-describe('extractForecastSeriesContext', () => {
-  it('should extract the correct series name and type', () => {
+describe("extractForecastSeriesContext", () => {
+  it("should extract the correct series name and type", () => {
     expect(parseAnnotationOpacity(AnnotationOpacity.Low)).toEqual(0.2);
     expect(parseAnnotationOpacity(AnnotationOpacity.Medium)).toEqual(0.5);
     expect(parseAnnotationOpacity(AnnotationOpacity.High)).toEqual(0.8);
@@ -79,28 +79,28 @@ describe('extractForecastSeriesContext', () => {
   });
 });
 
-describe('extractAnnotationLabels', () => {
-  it('should extract all annotations that can be added to the legend', () => {
+describe("extractAnnotationLabels", () => {
+  it("should extract all annotations that can be added to the legend", () => {
     const layers: AnnotationLayer[] = [
       {
         annotationType: AnnotationType.Formula,
-        name: 'My Formula',
+        name: "My Formula",
         show: true,
         style: AnnotationStyle.Solid,
-        value: 'sin(x)',
+        value: "sin(x)",
         showLabel: true,
       },
       {
         annotationType: AnnotationType.Formula,
-        name: 'My Hidden Formula',
+        name: "My Hidden Formula",
         show: false,
         style: AnnotationStyle.Solid,
-        value: 'sin(2x)',
+        value: "sin(2x)",
         showLabel: true,
       },
       {
         annotationType: AnnotationType.Interval,
-        name: 'My Interval',
+        name: "My Interval",
         sourceType: AnnotationSourceType.Table,
         show: true,
         style: AnnotationStyle.Solid,
@@ -109,7 +109,7 @@ describe('extractAnnotationLabels', () => {
       },
       {
         annotationType: AnnotationType.Timeseries,
-        name: 'My Line',
+        name: "My Line",
         show: true,
         style: AnnotationStyle.Dashed,
         sourceType: AnnotationSourceType.Line,
@@ -118,7 +118,7 @@ describe('extractAnnotationLabels', () => {
       },
       {
         annotationType: AnnotationType.Timeseries,
-        name: 'My Hidden Line',
+        name: "My Hidden Line",
         show: false,
         style: AnnotationStyle.Dashed,
         sourceType: AnnotationSourceType.Line,
@@ -127,34 +127,34 @@ describe('extractAnnotationLabels', () => {
       },
     ];
     const results: AnnotationData = {
-      'My Interval': {
-        columns: ['col'],
+      "My Interval": {
+        columns: ["col"],
         records: [{ col: 1 }],
       },
-      'My Line': [
-        { key: 'Line 1', values: [] },
-        { key: 'Line 2', values: [] },
+      "My Line": [
+        { key: "Line 1", values: [] },
+        { key: "Line 2", values: [] },
       ],
     };
 
     expect(extractAnnotationLabels(layers, results)).toEqual([
-      'My Formula',
-      'Line 1',
-      'Line 2',
+      "My Formula",
+      "Line 1",
+      "Line 2",
     ]);
   });
 });
 
-describe('evalFormula', () => {
+describe("evalFormula", () => {
   const layer: FormulaAnnotationLayer = {
     annotationType: AnnotationType.Formula,
-    name: 'My Formula',
+    name: "My Formula",
     show: true,
     style: AnnotationStyle.Solid,
-    value: 'x+1',
+    value: "x+1",
     showLabel: true,
   };
-  it('Should evaluate a regular formula', () => {
+  it("Should evaluate a regular formula", () => {
     const data: TimeseriesDataRecord[] = [
       { __timestamp: 0 },
       { __timestamp: 10 },
@@ -166,13 +166,13 @@ describe('evalFormula', () => {
     ]);
   });
 
-  it('Should evaluate a formula containing redundant characters', () => {
+  it("Should evaluate a formula containing redundant characters", () => {
     const data: TimeseriesDataRecord[] = [
       { __timestamp: 0 },
       { __timestamp: 10 },
     ];
 
-    expect(evalFormula({ ...layer, value: 'y  = x* 2   -1' }, data)).toEqual([
+    expect(evalFormula({ ...layer, value: "y  = x* 2   -1" }, data)).toEqual([
       [0, -1],
       [10, 19],
     ]);

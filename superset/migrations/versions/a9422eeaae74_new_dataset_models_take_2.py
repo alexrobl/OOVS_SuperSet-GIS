@@ -217,7 +217,7 @@ class NewColumn(AuxiliaryColumnsMixin, Base):
     __tablename__ = "sl_columns"
 
     id = sa.Column(sa.Integer, primary_key=True)
-    # A temporary column to link physical columns with tables so we don't
+    # A temporary column to link physical columns with tables so we don"t
     # have to insert a record in the relationship table while creating new columns.
     table_id = sa.Column(sa.Integer, nullable=True)
 
@@ -284,7 +284,7 @@ def find_tables(
     tables: Set[Table],
 ) -> List[int]:
     """
-    Look for NewTable's of from a specific database
+    Look for NewTable"s of from a specific database
     """
     if not tables:
         return []
@@ -327,7 +327,7 @@ def copy_tables(session: Session) -> None:
             [
                 # Tables need different uuid than datasets, since they are different
                 # entities. When INSERT FROM SELECT, we must provide a value for `uuid`,
-                # otherwise it'd use the default generated on Python side, which
+                # otherwise it"d use the default generated on Python side, which
                 # will cause duplicate values. They will be replaced by `assign_uuids` later.
                 SqlaTable.uuid,
                 SqlaTable.id.label("sqlatable_id"),
@@ -579,7 +579,7 @@ def postprocess_datasets(session: Session) -> None:
                 if quoted_expression != expression:
                     updates["expression"] = quoted_expression
 
-            # add schema name to `dataset.extra_json` so we don't have to join
+            # add schema name to `dataset.extra_json` so we don"t have to join
             # tables in order to use datasets
             if schema:
                 try:
@@ -777,7 +777,7 @@ def postprocess_columns(session: Session) -> None:
                     "metric_type": metric_type,
                 }
             ).items():
-                # save the original val, including if it's `false`
+                # save the original val, including if it"s `false`
                 if val is not None:
                     updated_extra[key] = val
 
@@ -857,7 +857,7 @@ def reset_postgres_id_sequence(table: str) -> None:
     op.execute(
         f"""
         SELECT setval(
-            pg_get_serial_sequence('{table}', 'id'),
+            pg_get_serial_sequence("{table}", "id"),
             COALESCE(max(id) + 1, 1),
             false
         )

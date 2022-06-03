@@ -16,17 +16,17 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t, ChartMetadata, ChartPlugin } from '@superset-ui/core';
-import transformProps from '../transformProps';
-import thumbnail from './images/thumbnail.png';
-import controlPanel from './controlPanel';
+import { t, ChartMetadata, ChartPlugin } from "@superset-ui/core";
+import transformProps from "../transformProps";
+import thumbnail from "./images/thumbnail.png";
+import controlPanel from "./controlPanel";
 
 const metadata = new ChartMetadata({
-  category: t('Evolution'),
-  credits: ['http://nvd3.org'],
-  description: '',
-  name: t('Time-series Period Pivot'),
-  tags: [t('Legacy'), t('Time'), t('nvd3')],
+  category: t("Evolution"),
+  credits: ["http://nvd3.org"],
+  description: "",
+  name: t("Time-series Period Pivot"),
+  tags: [t("Legacy"), t("Time"), t("nvd3")],
   thumbnail,
   useLegacyApi: true,
 });
@@ -34,7 +34,7 @@ const metadata = new ChartMetadata({
 export default class TimePivotChartPlugin extends ChartPlugin {
   constructor() {
     super({
-      loadChart: () => import('../ReactNVD3'),
+      loadChart: () => import("../ReactNVD3"),
       metadata,
       transformProps,
       controlPanel,

@@ -24,10 +24,10 @@ import {
   QueryFormData,
   QueryFormMetric,
   SetDataMaskHook,
-} from '@superset-ui/core';
-import { EChartsCoreOption } from 'echarts';
-import { CallbackDataParams } from 'echarts/types/src/util/types';
-import { LabelPositionEnum } from '../types';
+} from "@superset-ui/core";
+import { EChartsCoreOption } from "echarts";
+import { CallbackDataParams } from "echarts/types/src/util/types";
+import { LabelPositionEnum } from "../types";
 
 export type EchartsTreemapFormData = QueryFormData & {
   colorScheme?: string;
@@ -44,9 +44,9 @@ export type EchartsTreemapFormData = QueryFormData & {
 };
 
 export enum EchartsTreemapLabelType {
-  Key = 'key',
-  Value = 'value',
-  KeyValue = 'key_value',
+  Key = "key",
+  Value = "value",
+  KeyValue = "key_value",
 }
 
 export interface EchartsTreemapChartProps
@@ -59,10 +59,10 @@ export const DEFAULT_FORM_DATA: Partial<EchartsTreemapFormData> = {
   groupby: [],
   labelType: EchartsTreemapLabelType.KeyValue,
   labelPosition: LabelPositionEnum.InsideTopLeft,
-  numberFormat: 'SMART_NUMBER',
+  numberFormat: "SMART_NUMBER",
   showLabels: true,
   showUpperLabels: true,
-  dateFormat: 'smart_date',
+  dateFormat: "smart_date",
   emitFilter: false,
 };
 

@@ -17,12 +17,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { Behavior, ChartMetadata, ChartPlugin, t } from '@superset-ui/core';
-import buildQuery from './buildQuery';
-import controlPanel from './controlPanel';
-import transformProps from './transformProps';
-import thumbnail from './images/thumbnail.png';
-import { EchartsRadarChartProps, EchartsRadarFormData } from './types';
+import { Behavior, ChartMetadata, ChartPlugin, t } from "@superset-ui/core";
+import buildQuery from "./buildQuery";
+import controlPanel from "./controlPanel";
+import transformProps from "./transformProps";
+import thumbnail from "./images/thumbnail.png";
+import { EchartsRadarChartProps, EchartsRadarFormData } from "./types";
 
 export default class EchartsRadarChartPlugin extends ChartPlugin<
   EchartsRadarFormData,
@@ -42,23 +42,23 @@ export default class EchartsRadarChartPlugin extends ChartPlugin<
     super({
       buildQuery,
       controlPanel,
-      loadChart: () => import('./EchartsRadar'),
+      loadChart: () => import("./EchartsRadar"),
       metadata: new ChartMetadata({
         behaviors: [Behavior.INTERACTIVE_CHART],
-        category: t('Ranking'),
-        credits: ['https://echarts.apache.org'],
+        category: t("Ranking"),
+        credits: ["https://echarts.apache.org"],
         description: t(
-          'Visualize a parallel set of metrics across multiple groups. Each group is visualized using its own line of points and each metric is represented as an edge in the chart.',
+          "Visualize a parallel set of metrics across multiple groups. Each group is visualized using its own line of points and each metric is represented as an edge in the chart.",
         ),
-        name: t('Radar Chart'),
+        name: t("Radar Chart"),
         tags: [
-          t('Business'),
-          t('Comparison'),
-          t('Coordinates'),
-          t('Multi-Variables'),
-          t('Report'),
-          t('Web'),
-          t('ECharts'),
+          t("Business"),
+          t("Comparison"),
+          t("Coordinates"),
+          t("Multi-Variables"),
+          t("Report"),
+          t("Web"),
+          t("ECharts"),
         ],
         thumbnail,
       }),

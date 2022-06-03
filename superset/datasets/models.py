@@ -21,7 +21,7 @@ This model was introduced in SIP-68 (https://github.com/apache/superset/issues/1
 and represents a "dataset" -- either a physical table or a virtual. In addition to a
 dataset, new models for columns, metrics, and tables were also introduced.
 
-These models are not fully implemented, and shouldn't be used yet.
+These models are not fully implemented, and shouldn"t be used yet.
 """
 
 from typing import List

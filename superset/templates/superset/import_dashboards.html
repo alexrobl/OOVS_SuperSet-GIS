@@ -31,7 +31,7 @@
           type="hidden"
           name="csrf_token"
           id="csrf_token"
-          value="{{ csrf_token() if csrf_token else '' }}" />
+          value="{{ csrf_token() if csrf_token else "" }}" />
           <table class="table table-bordered">
             <tr>
               <td>{{ _("File") }}</td>
@@ -43,10 +43,10 @@
                     name="file"
                     accept=".json"
                     style="display:none;"
-                    onchange="$('#upload-file-info').html(this.files[0].name)"/>
+                    onchange="$("#upload-file-info").html(this.files[0].name)"/>
                   {{ _("Choose File") }}
                 </label>
-                <span class='label label-info' id="upload-file-info"></span>
+                <span class="label label-info" id="upload-file-info"></span>
               </td>
             </tr>
             <tr>

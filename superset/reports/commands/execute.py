@@ -429,7 +429,7 @@ class BaseReportState:
 
     def is_in_grace_period(self) -> bool:
         """
-        Checks if an alert is in it's grace period
+        Checks if an alert is in it"s grace period
         """
         last_success = ReportScheduleDAO.find_last_success_log(
             self._report_schedule, session=self._session
@@ -444,7 +444,7 @@ class BaseReportState:
 
     def is_in_error_grace_period(self) -> bool:
         """
-        Checks if an alert/report on error is in it's notification grace period
+        Checks if an alert/report on error is in it"s notification grace period
         """
         last_success = ReportScheduleDAO.find_last_error_notification(
             self._report_schedule, session=self._session
@@ -495,7 +495,7 @@ class ReportNotTriggeredErrorState(BaseReportState):
     def next(self) -> None:
         self.update_report_schedule_and_log(ReportState.WORKING)
         try:
-            # If it's an alert check if the alert is triggered
+            # If it"s an alert check if the alert is triggered
             if self._report_schedule.type == ReportScheduleType.ALERT:
                 if not AlertCommand(self._report_schedule).run():
                     self.update_report_schedule_and_log(ReportState.NOOP)

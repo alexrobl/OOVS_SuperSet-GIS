@@ -92,20 +92,20 @@
       "You cannot use [Columns] in combination with [Group By]/[Metrics]/[Percentage Metrics]. Please choose one or the other.": [
         "不能将 [列] 与 [分组]/[指标]/[百分比度量] 结合使用。请选择其中一个。"
       ],
-      "Pick a granularity in the Time section or uncheck 'Include Time'": [
+      "Pick a granularity in the Time section or uncheck "Include Time"": [
         "在“时间”部分选择一个粒度，或取消选中“包含时间”"
       ],
       "Time Table View": ["时间表视图"],
       "Pick at least one metric": ["选择至少一个指标"],
-      "When using 'Group By' you are limited to use a single metric": [
+      "When using "Group By" you are limited to use a single metric": [
         "当使用“Group by”时，只限于使用单个度量。"
       ],
       "Pivot Table": ["透视表"],
-      "Please choose at least one 'Group by' field ": [
+      "Please choose at least one "Group by" field ": [
         "请至少选择一个分组字段 "
       ],
       "Please choose at least one metric": ["请至少选择一个指标"],
-      "Group By' and 'Columns' can't overlap": ["“Group by”列和字段不能重叠"],
+      "Group By" and "Columns" can"t overlap": ["“Group by”列和字段不能重叠"],
       "Treemap": ["树状图"],
       "Calendar Heatmap": ["时间热力图"],
       "Bubble Chart": ["气泡图"],
@@ -139,7 +139,7 @@
         "必须至少指明一个数值列"
       ],
       "Distribution - Bar Chart": ["分布 - 柱状图"],
-      "Can't have overlap between Series and Breakdowns": [
+      "Can"t have overlap between Series and Breakdowns": [
         "Series 和 Breakdown 之间不能有重叠"
       ],
       "Pick at least one field for [Series]": ["为 [序列] 选择至少一个字段"],
@@ -148,11 +148,11 @@
       "Pick exactly 2 columns as [Source / Target]": [
         "为 [来源 / 目标] 选择两个列"
       ],
-      "There's a loop in your Sankey, please provide a tree. Here's a faulty link: {}": [
+      "There"s a loop in your Sankey, please provide a tree. Here"s a faulty link: {}": [
         "桑基图里面有一个循环，请提供一棵树。这是一个错误的链接：{}"
       ],
       "Directed Force Layout": ["有向图"],
-      "Pick exactly 2 columns to 'Group By'": ["为 “Group By” 选择两个列"],
+      "Pick exactly 2 columns to "Group By"": ["为 “Group By” 选择两个列"],
       "Country Map": ["国家地图"],
       "World Map": ["世界地图"],
       "Filters": ["过滤"],
@@ -166,7 +166,7 @@
       "[Longitude] and [Latitude] must be set": [
         "[经度] 和 [纬度] 的选择项必须出现在 [Group By]"
       ],
-      "Must have a [Group By] column to have 'count' as the [Label]": [
+      "Must have a [Group By] column to have "count" as the [Label]": [
         "[Group By] 列必须要有 ‘count’字段作为 [标签]"
       ],
       "Choice of [Label] must be present in [Group By]": [
@@ -312,7 +312,7 @@
       "Show Druid Datasource": ["显示 Druid 数据源"],
       "Add Druid Datasource": ["添加 Druid 数据源"],
       "Edit Druid Datasource": ["编辑 Druid 数据源"],
-      "The list of charts associated with this table. By altering this datasource, you may change how these associated charts behave. Also note that charts need to point to a datasource, so this form will fail at saving if removing charts from a datasource. If you want to change the datasource for a chart, overwrite the chart from the 'explore view'": [
+      "The list of charts associated with this table. By altering this datasource, you may change how these associated charts behave. Also note that charts need to point to a datasource, so this form will fail at saving if removing charts from a datasource. If you want to change the datasource for a chart, overwrite the chart from the "explore view"": [
         "与此表关联的图表列表。通过更改此数据源，您可以更改这些相关图表的行为。还要注意，图表需要指向数据源，如果从数据源中删除图表，则此窗体将无法保存。如果要为图表更改数据源，请从“浏览视图”更改该图表。"
       ],
       "Timezone offset (in hours) for this datasource": [
@@ -321,7 +321,7 @@
       "Time expression to use as a predicate when retrieving distinct values to populate the filter component. Only applies when `Enable Filter Select` is on. If you enter `7 days ago`, the distinct list of values in the filter will be populated based on the distinct value over the past week": [
         "当检索不同的值以填充过滤器组件时，时间表达式用作条件。只适用于`启用过滤器选择`。如果您输入`7天前`，将根据过去一周的不同值来填充ilter中不同的值列表"
       ],
-      "Whether to populate the filter's dropdown in the explore view's filter section with a list of distinct values fetched from the backend on the fly": [
+      "Whether to populate the filter"s dropdown in the explore view"s filter section with a list of distinct values fetched from the backend on the fly": [
         "是否在浏览视图的过滤器部分中填充过滤器的下拉列表，并提供从后端获取的不同值的列表"
       ],
       "Redirects to this endpoint when clicking on the datasource from the datasource list": [
@@ -362,7 +362,7 @@
         "没有提供该表配置的日期时间列，它是此类型图表所必需的"
       ],
       "Empty query?": ["查询为空？"],
-      "Metric '%(metric)s' does not exist": ["指标 '%(metric)s' 不存在"],
+      "Metric "%(metric)s" does not exist": ["指标 "%(metric)s" 不存在"],
       "Invalid filter operation type: %(op)s": ["选择框的操作类型无效: %(op)s"],
       "Error in jinja expression in WHERE clause: %(msg)s": [
         "jinja表达式中的WHERE子句出错：%(msg)s"
@@ -403,8 +403,8 @@
       "For regular filters, these are the roles this filter will be applied to. For base filters, these are the roles that the filter DOES NOT apply to, e.g. Admin if admin should see all data.": [
         "对于常规过滤，这些是此过滤将应用于的角色。对于基本过滤，这些是过滤不适用的角色，例如Admin代表admin应该查看所有数据。"
       ],
-      "Filters with the same group key will be ORed together within the group, while different filter groups will be ANDed together. Undefined group keys are treated as unique groups, i.e. are not grouped together. For example, if a table has three filters, of which two are for departments Finance and Marketing (group key = 'department'), and one refers to the region Europe (group key = 'region'), the filter clause would apply the filter (department = 'Finance' OR department = 'Marketing') AND (region = 'Europe').": [
-        "具有相同组key的过滤将在组中一起进行\"OR\"运算，而不同的过滤组将一起进行\"AND\"运算。未定义的组的key被视为唯一组，即不分组在一起。例如，如果表有三个过滤，其中两个用于财务部门和市场营销 (group key = 'department')，其中一个表示欧洲地区(group key = 'region')，filter子句将应用过滤 (department = 'Finance' OR department = 'Marketing') 和 (region = 'Europe')"
+      "Filters with the same group key will be ORed together within the group, while different filter groups will be ANDed together. Undefined group keys are treated as unique groups, i.e. are not grouped together. For example, if a table has three filters, of which two are for departments Finance and Marketing (group key = "department"), and one refers to the region Europe (group key = "region"), the filter clause would apply the filter (department = "Finance" OR department = "Marketing") AND (region = "Europe").": [
+        "具有相同组key的过滤将在组中一起进行\"OR\"运算，而不同的过滤组将一起进行\"AND\"运算。未定义的组的key被视为唯一组，即不分组在一起。例如，如果表有三个过滤，其中两个用于财务部门和市场营销 (group key = "department")，其中一个表示欧洲地区(group key = "region")，filter子句将应用过滤 (department = "Finance" OR department = "Marketing") 和 (region = "Europe")"
       ],
       "This is the condition that will be added to the WHERE clause. For example, to only return rows for a particular client, you might define a regular filter with the clause `client_id = 9`. To display no rows unless a user belongs to a RLS filter role, a base filter can be created with the clause `1 = 0` (always false).": [
         "这是将会添加到WHERE子句的条件。例如，要仅返回特定客户端的行，可以使用子句 `client_id = 9` 定义常规过滤。若要在用户不属于RLS过滤角色的情况下不显示行，可以使用子句 `1 = 0`（始终为false）创建基本过滤。"
@@ -431,7 +431,7 @@
       "Redirects to this endpoint when clicking on the table from the table list": [
         "点击表列表中的表时将重定向到此端点"
       ],
-      "Whether the table was generated by the 'Visualize' flow in SQL Lab": [
+      "Whether the table was generated by the "Visualize" flow in SQL Lab": [
         "表是否由 sql 实验室中的 \"可视化\" 流生成"
       ],
       "A set of parameters that become available in the query using Jinja templating syntax": [
@@ -549,7 +549,7 @@
         "因为未知的原因导入数据集失败"
       ],
       "Unknown Presto Error": ["未知 Presto 错误"],
-      "We can't seem to resolve the column \"%(column_name)s\" at line %(location)s.": [
+      "We can"t seem to resolve the column \"%(column_name)s\" at line %(location)s.": [
         "我们似乎无法解析行 %(location)s 所处的列 \"%(column_name)s\" 。"
       ],
       "The table \"%(table_name)s\" does not exist. A valid table must be used to run this query.": [
@@ -708,8 +708,8 @@
       "Show Observation": ["显示观察结果"],
       "Error Message": ["错误消息"],
       "Log Retentions (days)": ["日志保留（天）"],
-      "A semicolon ';' delimited list of email addresses": [
-        "以分号 ';' 分隔的电子邮件地址列表"
+      "A semicolon ";" delimited list of email addresses": [
+        "以分号 ";" 分隔的电子邮件地址列表"
       ],
       "How long to keep the logs around for this alert": [
         "这个警报的日志要保存多久"
@@ -743,7 +743,7 @@
       "Table [%{table}s] could not be found, please double check your database connection, schema, and table name, error: {}": [
         "找不到 [%{table}s] 表，请仔细检查您的数据库连接、Schema 和 表名"
       ],
-      "json isn't valid": ["无效 JSON"],
+      "json isn"t valid": ["无效 JSON"],
       "Export to YAML": ["导出到YAML"],
       "Export to YAML?": ["导出到YAML？"],
       "Delete": ["删除"],
@@ -771,7 +771,7 @@
       "Error occurred when opening the chart: %(error)s": [
         "打开图表时出错： %(error)s"
       ],
-      "You don't have the rights to ": ["您没有授权 "],
+      "You don"t have the rights to ": ["您没有授权 "],
       "alter this ": ["修改这个 "],
       "chart": ["图表"],
       "create a ": ["创建一个 "],
@@ -791,21 +791,21 @@
       "Could not load database driver: %(driver_name)s": [
         "无法加载数据库驱动程序：%(driver_name)s"
       ],
-      "Invalid connection string, a valid string usually follows:\n'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'": [
-        "连接字符串无效，有效字符串的格式通常如下：\n'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'"
+      "Invalid connection string, a valid string usually follows:\n"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME"": [
+        "连接字符串无效，有效字符串的格式通常如下：\n"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME""
       ],
       "Malformed request. slice_id or table_name and db_name arguments are expected": [
         "格式错误的请求。需要使用 slice_id 或 table_name 和 db_name 参数"
       ],
       "Chart %(id)s not found": ["图表 %(id)s 没有找到"],
-      "Table %(table)s wasn't found in the database %(db)s": [
+      "Table %(table)s wasn"t found in the database %(db)s": [
         "在数据库 %(db)s 中找不到表 %(table)s"
       ],
-      "Can't find User '%(name)s', please ask your admin to create one.": [
+      "Can"t find User "%(name)s", please ask your admin to create one.": [
         "用户’%(name)s’没有找到，请联系管理员创建。"
       ],
-      "Can't find DruidCluster with cluster_name = '%(name)s'": [
-        "不能找到具有 cluster_name = '%(name)s' 的 Druid 集群"
+      "Can"t find DruidCluster with cluster_name = "%(name)s"": [
+        "不能找到具有 cluster_name = "%(name)s" 的 Druid 集群"
       ],
       "Data could not be deserialized. You may want to re-run the query.": [
         "无法反序列化数据。您可能需要重新运行查询。"
@@ -820,7 +820,7 @@
       "The parameter %(parameters)s in your query is undefined.": [
         "查询中的以下参数未定义：%(parameters)s 。"
       ],
-      "%(user)s's profile": ["%(user)s 的信息"],
+      "%(user)s"s profile": ["%(user)s 的信息"],
       "Show CSS Template": ["查看CSS模板"],
       "Add CSS Template": ["新增CSS模板"],
       "Edit CSS Template": ["编辑CSS模板"],
@@ -1023,8 +1023,8 @@
       "Extra field cannot be decoded by JSON. %(msg)s": [
         "JSON无法解码额外字段。%(msg)s"
       ],
-      "Invalid connection string, a valid string usually follows:'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'<p>Example:'postgresql://user:password@your-postgres-db/database'</p>": [
-        "连接字符串无效，有效字符串格式通常如下：'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'<p>例如:'postgresql://user:password@your-postgres-db/database'</p>"
+      "Invalid connection string, a valid string usually follows:"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME"<p>Example:"postgresql://user:password@your-postgres-db/database"</p>": [
+        "连接字符串无效，有效字符串格式通常如下："DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME"<p>例如:"postgresql://user:password@your-postgres-db/database"</p>"
       ],
       "CSV to Database configuration": ["csv 到数据库配置"],
       "Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed for csv uploads. Please contact your Superset Admin.": [
@@ -1059,7 +1059,7 @@
       "Action": ["操作"],
       "dttm": ["dttm"],
       "Add item": ["增加条件"],
-      "The query couldn't be loaded": ["这个查询无法被加载"],
+      "The query couldn"t be loaded": ["这个查询无法被加载"],
       "Your query has been scheduled. To see details of your query, navigate to Saved queries": [
         "您的查询已被调度。要查看查询的详细信息，请跳转到保存查询页面查看。"
       ],
@@ -1131,11 +1131,11 @@
         "删除表结构时出错。请与管理员联系。"
       ],
       "Shared query": ["已分享的查询"],
-      "The datasource couldn't be loaded": ["这个查询无法被加载"],
+      "The datasource couldn"t be loaded": ["这个查询无法被加载"],
       "An error occurred while creating the data source": [
         "创建数据源时发生错误"
       ],
-      "SQL Lab uses your browser's local storage to store queries and results.\n Currently, you are using ${currentUsage.toFixed(\n            2,\n          )} KB out of ${LOCALSTORAGE_MAX_USAGE_KB} KB. storage space.\n To keep SQL Lab from crashing, please delete some query tabs.\n You can re-access these queries by using the Save feature before you delete the tab. Note that you will need to close other SQL Lab windows before you do this.": [
+      "SQL Lab uses your browser"s local storage to store queries and results.\n Currently, you are using ${currentUsage.toFixed(\n            2,\n          )} KB out of ${LOCALSTORAGE_MAX_USAGE_KB} KB. storage space.\n To keep SQL Lab from crashing, please delete some query tabs.\n You can re-access these queries by using the Save feature before you delete the tab. Note that you will need to close other SQL Lab windows before you do this.": [
         "SQL Lab 使用浏览器的本地存储来存储查询和结果。\n目前，您正在使用${currentUsage.toFixed(\n            2,\n          )} KB / ${LOCALSTORAGE_MAX_USAGE_KB} KB 的存储空间。\n为了防止SQLLab崩溃，请删除一些查询tab页。\n在删除tab页之前，可以使用 \"保存\" 功能重新访问这些查询。请注意，在执行此操作之前，需要关闭其他SQLLab窗口。"
       ],
       "Estimate selected query cost": ["运行选定的查询"],
@@ -1171,7 +1171,7 @@
       "Source SQL": ["源 SQL"],
       "SQL": ["SQL"],
       "No query history yet...": ["暂无历史查询..."],
-      "It seems you don't have access to any database": [
+      "It seems you don"t have access to any database": [
         "貌似您没有访问到任何数据库"
       ],
       "An error occurred when refreshing queries": ["创建数据源时发生错误"],
@@ -1385,7 +1385,7 @@
       "Type \"%s\" to confirm": ["键入 \"%s\" 来确认"],
       "DELETE": ["删除"],
       "Click to edit": ["点击编辑"],
-      "You don't have the rights to alter this title.": [
+      "You don"t have the rights to alter this title.": [
         "您没有权利修改这个标题。"
       ],
       "Unexpected error": ["意外错误。"],
@@ -1463,7 +1463,7 @@
       "Data source": ["数据源"],
       "Added": ["已添加"],
       "Components": ["组件"],
-      "Any color palette selected here will override the colors applied to this dashboard's individual charts": [
+      "Any color palette selected here will override the colors applied to this dashboard"s individual charts": [
         "此处选择的任何调色板都将覆盖应用于此看板的各个图表的颜色"
       ],
       "Color scheme": ["配色方案"],
@@ -1524,7 +1524,7 @@
         "此看板已发布。单击以使其成为草稿。"
       ],
       "Draft": ["草稿"],
-      "Don't refresh": ["不要刷新"],
+      "Don"t refresh": ["不要刷新"],
       "10 seconds": ["10秒钟"],
       "30 seconds": ["30秒钟"],
       "1 minute": ["1分钟"],
@@ -1753,7 +1753,7 @@
         "可视化的时间粒度。这将应用日期转换来更改时间列，并定义新的时间粒度。这里的选项是在 Superset 源代码中的每个数据库引擎基础上定义的。"
       ],
       "Last week": ["上周"],
-      "The time range for the visualization. All relative times, e.g. \"Last month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using the server's local time (sans timezone). All tooltips and placeholder times are expressed in UTC (sans timezone). The timestamps are then evaluated by the database using the engine's local timezone. Note one can explicitly set the timezone per the ISO 8601 format if specifying either the start and/or end time.": [
+      "The time range for the visualization. All relative times, e.g. \"Last month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using the server"s local time (sans timezone). All tooltips and placeholder times are expressed in UTC (sans timezone). The timestamps are then evaluated by the database using the engine"s local timezone. Note one can explicitly set the timezone per the ISO 8601 format if specifying either the start and/or end time.": [
         "可视化的时间范围。所有相关的时间，例如\"上个月\"、\"过去7天\"、\"现在\"等，都在服务器上使用服务器的本地时间（sans时区）进行计算。所有工具提示和占位符时间均以UTC（无时区）表示。然后，数据库使用引擎的本地时区来评估时间戳。注：如果指定开始时间和、或者结束时间，可以根据ISO 8601格式显式设置时区。"
       ],
       "Row limit": ["行限制"],
@@ -1811,7 +1811,7 @@
         "作为为小部件标题可以在仪表板视图中显示的描述，支持markdown格式语法。"
       ],
       "Configuration": ["配置"],
-      "Duration (in seconds) of the caching timeout for this chart. Note this defaults to the dataset's timeout if undefined.": [
+      "Duration (in seconds) of the caching timeout for this chart. Note this defaults to the dataset"s timeout if undefined.": [
         "此图表的缓存超时前的持续时间（秒）。请注意，如果未定义则默认为数据集的超时时间。"
       ],
       "A list of users who can alter the chart. Searchable by name or username.": [
@@ -1925,7 +1925,7 @@
       "choose WHERE or HAVING...": ["选择WHERE或HAVING子句..."],
       "Filters by columns": ["按列过滤"],
       "Filters by metrics": ["按指标过滤"],
-      "\n                This filter was inherited from the dashboard's context.\n                It won't be saved when saving the chart.\n              ": [
+      "\n                This filter was inherited from the dashboard"s context.\n                It won"t be saved when saving the chart.\n              ": [
         "此过滤条件是从看板上下文继承的。保存图表时不会保存。"
       ],
       "%s aggregates(s)": ["%s 聚合"],
@@ -1942,7 +1942,7 @@
       "Put your code here": ["把您的代码放在这里"],
       "Query": ["查询"],
       "URL": ["URL 地址"],
-      "Templated link, it's possible to include {{ metric }} or other values coming from the controls.": [
+      "Templated link, it"s possible to include {{ metric }} or other values coming from the controls.": [
         "模板链接，可以包含{{度量}}或来自控件的其他值。"
       ],
       "Time": ["时间"],
@@ -2063,11 +2063,11 @@
         "收件人之间用 \",\" 或者 \";\" 隔开"
       ],
       "Add": ["新增"],
-      "Edit ${isReport ? 'Report' : 'Alert'}": [
-        "编辑 ${isReport ? '报告' : '警报'}"
+      "Edit ${isReport ? "Report" : "Alert"}": [
+        "编辑 ${isReport ? "报告" : "警报"}"
       ],
-      "Add ${isReport ? 'Report' : 'Alert'}": [
-        "新增 ${isReport ? '报告' : '警报'}"
+      "Add ${isReport ? "Report" : "Alert"}": [
+        "新增 ${isReport ? "报告" : "警报"}"
       ],
       "Report name": ["报告名称"],
       "Alert name": ["警报名称"],
@@ -2303,7 +2303,7 @@
       "3. The schemas_allowed_for_file_upload is a comma separated list of schemas that CSVs are allowed to upload to. Specify it as \"schemas_allowed_for_file_upload\": [\"public\", \"csv_upload\"]. If database flavor does not support schema or any schema is allowed to be accessed, just leave the list empty.": [
         "3. schemas_allowed_for_file_upload 是CSV文件允许上传的schema，该结构以逗号进行分割。 可以这样进行设置：\"schemas_allowed_for_file_upload\": [\"public\", \"csv_upload\"]。如果数据库风格不支持schema或任何schema都被允许，请将列表留空。"
       ],
-      "4. The version field is a string specifying this db's version. This should be used with Presto DBs so that the syntax is correct.": [
+      "4. The version field is a string specifying this db"s version. This should be used with Presto DBs so that the syntax is correct.": [
         "4. version 字段是指定此数据库版本的字符串。这应该与Presto DBs一起使用，以便语法正确。"
       ],
       "5. The allows_virtual_table_explore field is a boolean specifying whether or not the Explore button in SQL Lab results is shown.": [
@@ -2409,7 +2409,7 @@
       ],
       "DASHBOARD": ["看板"],
       "CHART": ["图表"],
-      "You don't have any favorites yet!": ["您还没有任何的收藏！"],
+      "You don"t have any favorites yet!": ["您还没有任何的收藏！"],
       "SQL Lab queries": ["SQL工具箱查询"],
       "See all": ["查看所有"],
       "saved queries": ["已保存查询"],
@@ -2828,8 +2828,8 @@
       "Use another existing chart as a source for annotations and overlays. Your chart must be one of these visualization types: [%s]": [
         "使用预定义的图表作为注释和覆盖的源。图表必须是以下可视化类型之一： [%s]"
       ],
-      "Expects a formula with depending time parameter 'x'\n        in milliseconds since epoch. mathjs is used to evaluate the formulas.\n        Example: '2x+5'": [
-        "需要一个从Epoch（1970年1月1日00:00:00 UTC）时间点开始的时间参数“x”，并以此来计算的公式（以毫秒为单位）。我们使用“mathjs”来进行公式的计算。例如：'2x+5'"
+      "Expects a formula with depending time parameter "x"\n        in milliseconds since epoch. mathjs is used to evaluate the formulas.\n        Example: "2x+5"": [
+        "需要一个从Epoch（1970年1月1日00:00:00 UTC）时间点开始的时间参数“x”，并以此来计算的公式（以毫秒为单位）。我们使用“mathjs”来进行公式的计算。例如："2x+5""
       ],
       "No of Bins": ["直方图容器数"],
       "Select number of bins for the histogram": ["选择直方图的容器数"],
@@ -2858,7 +2858,7 @@
       "Y Log Scale": ["Y经度标度"],
       "Use a log scale for the Y-axis": ["使用Y轴的对数刻度"],
       "Y Axis Bounds": ["Y 轴界限"],
-      "Bounds for the Y axis. When left empty, the bounds are dynamically defined based on the min/max of the data. Note that this feature will only expand the axis range. It won't narrow the data's extent.": [
+      "Bounds for the Y axis. When left empty, the bounds are dynamically defined based on the min/max of the data. Note that this feature will only expand the axis range. It won"t narrow the data"s extent.": [
         "Y轴的边界。当空时，边界是根据数据的最小/最大值动态定义的。请注意，此功能只会扩展轴范围。它不会缩小数据范围。"
       ],
       "X bounds": ["X界限"],

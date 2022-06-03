@@ -119,8 +119,8 @@ def load_world_bank_health_n_pop(  # pylint: disable=too-many-locals, too-many-s
     for slc in slices:
         merge_slice(slc)
 
-    print("Creating a World's Health Bank dashboard")
-    dash_name = "World Bank's Data"
+    print("Creating a World"s Health Bank dashboard")
+    dash_name = "World Bank"s Data"
     slug = "world_health"
     dash = db.session.query(Dashboard).filter_by(slug=slug).first()
 
@@ -199,7 +199,7 @@ def create_slices(tbl: BaseDatasource) -> List[Slice]:
             ),
         ),
         Slice(
-            slice_name="World's Population",
+            slice_name="World"s Population",
             viz_type="big_number",
             datasource_type="table",
             datasource_id=tbl.id,
@@ -311,7 +311,7 @@ def create_slices(tbl: BaseDatasource) -> List[Slice]:
             ),
         ),
         Slice(
-            slice_name="World's Pop Growth",
+            slice_name="World"s Pop Growth",
             viz_type="area",
             datasource_type="table",
             datasource_id=tbl.id,
@@ -386,7 +386,7 @@ dashboard_positions = {
         "meta": {
             "chartId": 41,
             "height": 25,
-            "sliceName": "World's Population",
+            "sliceName": "World"s Population",
             "width": 2,
         },
         "type": "CHART",
@@ -442,7 +442,7 @@ dashboard_positions = {
         "meta": {
             "chartId": 47,
             "height": 50,
-            "sliceName": "World's Pop Growth",
+            "sliceName": "World"s Pop Growth",
             "width": 4,
         },
         "type": "CHART",
@@ -478,7 +478,7 @@ dashboard_positions = {
     },
     "HEADER_ID": {
         "id": "HEADER_ID",
-        "meta": {"text": "World's Bank Data"},
+        "meta": {"text": "World"s Bank Data"},
         "type": "HEADER",
     },
     "ROOT_ID": {"children": ["GRID_ID"], "id": "ROOT_ID", "type": "ROOT"},

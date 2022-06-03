@@ -16,33 +16,33 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { ChartProps, supersetTheme } from '@superset-ui/core';
-import transformProps from '../../src/Graph/transformProps';
-import { DEFAULT_GRAPH_SERIES_OPTION } from '../../src/Graph/constants';
+import { ChartProps, supersetTheme } from "@superset-ui/core";
+import transformProps from "../../src/Graph/transformProps";
+import { DEFAULT_GRAPH_SERIES_OPTION } from "../../src/Graph/constants";
 
-describe('EchartsGraph transformProps', () => {
-  it('should transform chart props for viz without category', () => {
+describe("EchartsGraph transformProps", () => {
+  it("should transform chart props for viz without category", () => {
     const formData = {
-      colorScheme: 'bnbColors',
-      datasource: '3__table',
-      granularity_sqla: 'ds',
-      metric: 'count',
-      source: 'source_column',
-      target: 'target_column',
+      colorScheme: "bnbColors",
+      datasource: "3__table",
+      granularity_sqla: "ds",
+      metric: "count",
+      source: "source_column",
+      target: "target_column",
       category: null,
     };
     const queriesData = [
       {
-        colnames: ['source_column', 'target_column', 'count'],
+        colnames: ["source_column", "target_column", "count"],
         data: [
           {
-            source_column: 'source_value_1',
-            target_column: 'target_value_1',
+            source_column: "source_value_1",
+            target_column: "target_value_1",
             count: 6,
           },
           {
-            source_column: 'source_value_2',
-            target_column: 'target_value_2',
+            source_column: "source_value_2",
+            target_column: "target_value_2",
             count: 5,
           },
         ],
@@ -70,54 +70,54 @@ describe('EchartsGraph transformProps', () => {
               data: [
                 {
                   category: undefined,
-                  id: '0',
+                  id: "0",
                   label: { show: true },
-                  name: 'source_value_1',
+                  name: "source_value_1",
                   select: {
                     itemStyle: { borderWidth: 3, opacity: 1 },
-                    label: { fontWeight: 'bolder' },
+                    label: { fontWeight: "bolder" },
                   },
                   symbolSize: 50,
-                  tooltip: { formatter: '{b}: {c}' },
+                  tooltip: { formatter: "{b}: {c}" },
                   value: 6,
                 },
                 {
                   category: undefined,
-                  id: '1',
+                  id: "1",
                   label: { show: true },
-                  name: 'target_value_1',
+                  name: "target_value_1",
                   select: {
                     itemStyle: { borderWidth: 3, opacity: 1 },
-                    label: { fontWeight: 'bolder' },
+                    label: { fontWeight: "bolder" },
                   },
                   symbolSize: 50,
-                  tooltip: { formatter: '{b}: {c}' },
+                  tooltip: { formatter: "{b}: {c}" },
                   value: 6,
                 },
                 {
                   category: undefined,
-                  id: '2',
+                  id: "2",
                   label: { show: true },
-                  name: 'source_value_2',
+                  name: "source_value_2",
                   select: {
                     itemStyle: { borderWidth: 3, opacity: 1 },
-                    label: { fontWeight: 'bolder' },
+                    label: { fontWeight: "bolder" },
                   },
                   symbolSize: 10,
-                  tooltip: { formatter: '{b}: {c}' },
+                  tooltip: { formatter: "{b}: {c}" },
                   value: 5,
                 },
                 {
                   category: undefined,
-                  id: '3',
+                  id: "3",
                   label: { show: true },
-                  name: 'target_value_2',
+                  name: "target_value_2",
                   select: {
                     itemStyle: { borderWidth: 3, opacity: 1 },
-                    label: { fontWeight: 'bolder' },
+                    label: { fontWeight: "bolder" },
                   },
                   symbolSize: 10,
-                  tooltip: { formatter: '{b}: {c}' },
+                  tooltip: { formatter: "{b}: {c}" },
                   value: 5,
                 },
               ],
@@ -130,16 +130,16 @@ describe('EchartsGraph transformProps', () => {
                   select: {
                     lineStyle: { opacity: 1, width: 9.600000000000001 },
                   },
-                  source: '0',
-                  target: '1',
+                  source: "0",
+                  target: "1",
                   value: 6,
                 },
                 {
                   emphasis: { lineStyle: { width: 5 } },
                   lineStyle: { width: 1.5 },
                   select: { lineStyle: { opacity: 1, width: 5 } },
-                  source: '2',
-                  target: '3',
+                  source: "2",
+                  target: "3",
                   value: 5,
                 },
               ],
@@ -150,39 +150,39 @@ describe('EchartsGraph transformProps', () => {
     );
   });
 
-  it('should transform chart props for viz with category and falsey normalization', () => {
+  it("should transform chart props for viz with category and falsey normalization", () => {
     const formData = {
-      colorScheme: 'bnbColors',
-      datasource: '3__table',
-      granularity_sqla: 'ds',
-      metric: 'count',
-      source: 'source_column',
-      target: 'target_column',
-      sourceCategory: 'source_category_column',
-      targetCategory: 'target_category_column',
+      colorScheme: "bnbColors",
+      datasource: "3__table",
+      granularity_sqla: "ds",
+      metric: "count",
+      source: "source_column",
+      target: "target_column",
+      sourceCategory: "source_category_column",
+      targetCategory: "target_category_column",
     };
     const queriesData = [
       {
         colnames: [
-          'source_column',
-          'target_column',
-          'source_category_column',
-          'target_category_column',
-          'count',
+          "source_column",
+          "target_column",
+          "source_category_column",
+          "target_category_column",
+          "count",
         ],
         data: [
           {
-            source_column: 'source_value',
-            target_column: 'target_value',
-            source_category_column: 'category_value_1',
-            target_category_column: 'category_value_2',
+            source_column: "source_value",
+            target_column: "target_value",
+            source_category_column: "category_value_1",
+            target_category_column: "category_value_2",
             count: 6,
           },
           {
-            source_column: 'source_value',
-            target_column: 'target_value',
-            source_category_column: 'category_value_1',
-            target_category_column: 'category_value_2',
+            source_column: "source_value",
+            target_column: "target_value",
+            source_category_column: "category_value_1",
+            target_category_column: "category_value_2",
             count: 5,
           },
         ],
@@ -203,27 +203,27 @@ describe('EchartsGraph transformProps', () => {
         height: 600,
         echartOptions: expect.objectContaining({
           legend: expect.objectContaining({
-            data: ['category_value_1', 'category_value_2'],
+            data: ["category_value_1", "category_value_2"],
           }),
           series: expect.arrayContaining([
             expect.objectContaining({
               data: [
                 {
-                  id: '0',
-                  name: 'source_value',
+                  id: "0",
+                  name: "source_value",
                   value: 11,
                   symbolSize: 10,
-                  category: 'category_value_1',
+                  category: "category_value_1",
                   select: DEFAULT_GRAPH_SERIES_OPTION.select,
                   tooltip: DEFAULT_GRAPH_SERIES_OPTION.tooltip,
                   label: { show: true },
                 },
                 {
-                  id: '1',
-                  name: 'target_value',
+                  id: "1",
+                  name: "target_value",
                   value: 11,
                   symbolSize: 10,
-                  category: 'category_value_2',
+                  category: "category_value_2",
                   select: DEFAULT_GRAPH_SERIES_OPTION.select,
                   tooltip: DEFAULT_GRAPH_SERIES_OPTION.tooltip,
                   label: { show: true },

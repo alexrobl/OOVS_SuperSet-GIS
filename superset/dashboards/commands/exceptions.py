@@ -83,4 +83,4 @@ class DashboardImportError(ImportFailedError):
 
 
 class DashboardAccessDeniedError(ForbiddenError):
-    message = _("You don't have access to this dashboard.")
+    message = _("You don"t have access to this dashboard.")

@@ -33,8 +33,8 @@ import {
   TimeFormatter,
   TimeseriesAnnotationLayer,
   TimeseriesDataRecord,
-} from '@superset-ui/core';
-import { SeriesOption } from 'echarts';
+} from "@superset-ui/core";
+import { SeriesOption } from "echarts";
 import {
   CallbackDataParams,
   DefaultStatesMixin,
@@ -44,25 +44,25 @@ import {
   SeriesLabelOption,
   SeriesLineLabelOption,
   ZRLineType,
-} from 'echarts/types/src/util/types';
+} from "echarts/types/src/util/types";
 import {
   MarkArea1DDataItemOption,
   MarkArea2DDataItemOption,
-} from 'echarts/types/src/component/marker/MarkAreaModel';
-import { MarkLine1DDataItemOption } from 'echarts/types/src/component/marker/MarkLineModel';
+} from "echarts/types/src/component/marker/MarkAreaModel";
+import { MarkLine1DDataItemOption } from "echarts/types/src/component/marker/MarkLineModel";
 
-import { extractForecastSeriesContext } from '../utils/forecast';
-import { ForecastSeriesEnum, LegendOrientation } from '../types';
-import { EchartsTimeseriesSeriesType } from './types';
+import { extractForecastSeriesContext } from "../utils/forecast";
+import { ForecastSeriesEnum, LegendOrientation } from "../types";
+import { EchartsTimeseriesSeriesType } from "./types";
 
 import {
   evalFormula,
   extractRecordAnnotations,
   formatAnnotationLabel,
   parseAnnotationOpacity,
-} from '../utils/annotation';
-import { currentSeries, getChartPadding } from '../utils/series';
-import { OpacityEnum, TIMESERIES_CONSTANTS } from '../constants';
+} from "../utils/annotation";
+import { currentSeries, getChartPadding } from "../utils/series";
+import { OpacityEnum, TIMESERIES_CONSTANTS } from "../constants";
 
 export function transformSeries(
   series: SeriesOption,
@@ -111,13 +111,13 @@ export function transformSeries(
     sliceId,
     isHorizontal = false,
   } = opts;
-  const contexts = seriesContexts[name || ''] || [];
+  const contexts = seriesContexts[name || ""] || [];
   const hasForecast =
     contexts.includes(ForecastSeriesEnum.ForecastTrend) ||
     contexts.includes(ForecastSeriesEnum.ForecastLower) ||
     contexts.includes(ForecastSeriesEnum.ForecastUpper);
 
-  const forecastSeries = extractForecastSeriesContext(name || '');
+  const forecastSeries = extractForecastSeriesContext(name || "");
   const isConfidenceBand =
     forecastSeries.type === ForecastSeriesEnum.ForecastLower ||
     forecastSeries.type === ForecastSeriesEnum.ForecastUpper;
@@ -127,7 +127,7 @@ export function transformSeries(
     ? OpacityEnum.SemiTransparent
     : OpacityEnum.NonTransparent;
 
-  // don't create a series if doing a stack or area chart and the result
+  // don"t create a series if doing a stack or area chart and the result
   // is a confidence band
   if ((stack || area) && isConfidenceBand) return undefined;
 
@@ -137,22 +137,22 @@ export function transformSeries(
   if (isConfidenceBand) {
     stackId = forecastSeries.name;
   } else if (stack && isObservation) {
-    // the suffix of the observation series is '' (falsy), which disables
+    // the suffix of the observation series is "" (falsy), which disables
     // stacking. Therefore we need to set something that is truthy.
-    stackId = 'obs';
+    stackId = "obs";
   } else if (stack && isTrend) {
     stackId = forecastSeries.type;
   }
   let plotType;
   if (
     !isConfidenceBand &&
-    (seriesType === 'scatter' || (hasForecast && isObservation))
+    (seriesType === "scatter" || (hasForecast && isObservation))
   ) {
-    plotType = 'scatter';
+    plotType = "scatter";
   } else if (isConfidenceBand) {
-    plotType = 'line';
+    plotType = "line";
   } else {
-    plotType = seriesType === 'bar' ? 'bar' : 'line';
+    plotType = seriesType === "bar" ? "bar" : "line";
   }
   // forcing the colorScale to return a different color for same metrics across different queries
   const itemStyle = {
@@ -162,14 +162,14 @@ export function transformSeries(
   let emphasis = {};
   let showSymbol = false;
   if (!isConfidenceBand) {
-    if (plotType === 'scatter') {
+    if (plotType === "scatter") {
       showSymbol = true;
     } else if (hasForecast && isObservation) {
       showSymbol = true;
-    } else if (plotType === 'line' && showValue) {
+    } else if (plotType === "line" && showValue) {
       showSymbol = true;
-    } else if (plotType === 'line' && !richTooltip && !markerEnabled) {
-      // this is hack to make timeseries line chart clickable when tooltip trigger is 'item'
+    } else if (plotType === "line" && !richTooltip && !markerEnabled) {
+      // this is hack to make timeseries line chart clickable when tooltip trigger is "item"
       // so that the chart can emit cross-filtering
       showSymbol = true;
       itemStyle.opacity = 0;
@@ -192,10 +192,10 @@ export function transformSeries(
     itemStyle,
     // @ts-ignore
     type: plotType,
-    smooth: seriesType === 'smooth',
+    smooth: seriesType === "smooth",
     triggerLineEvent: true,
     // @ts-ignore
-    step: ['start', 'middle', 'end'].includes(seriesType as string)
+    step: ["start", "middle", "end"].includes(seriesType as string)
       ? seriesType
       : undefined,
     stack: stackId,
@@ -211,7 +211,7 @@ export function transformSeries(
       // https://apache.github.io/echarts-handbook/en/basics/release-note/5-3-0/#removing-the-default-bolding-emphasis-effect-in-the-line-chart
       // TODO: should consider only adding emphasis to currently hovered series
       lineStyle: {
-        width: 'bolder',
+        width: "bolder",
       },
       ...emphasis,
     },
@@ -219,7 +219,7 @@ export function transformSeries(
     symbolSize: markerSize,
     label: {
       show: !!showValue,
-      position: isHorizontal ? 'right' : 'top',
+      position: isHorizontal ? "right" : "top",
       formatter: (params: any) => {
         const { value, dataIndex, seriesIndex, seriesName } = params;
         const numericValue = isHorizontal ? value[0] : value[1];
@@ -230,12 +230,12 @@ export function transformSeries(
           if (numericValue >= thresholdValues[dataIndex]) {
             return formatter(numericValue);
           }
-          return '';
+          return "";
         }
         if (seriesIndex === showValueIndexes[dataIndex]) {
           return formatter(totalStackedValues[dataIndex]);
         }
-        return '';
+        return "";
       },
     },
   };
@@ -259,7 +259,7 @@ export function transformFormulaAnnotation(
       type: style as ZRLineType,
       width,
     },
-    type: 'line',
+    type: "line",
     smooth: true,
     data: evalFormula(layer, data),
     symbolSize: 0,
@@ -298,13 +298,13 @@ export function transformIntervalAnnotation(
       ? {
           show: true,
           color: theme.colors.grayscale.dark2,
-          position: 'insideTop',
-          verticalAlign: 'top',
-          fontWeight: 'bold',
+          position: "insideTop",
+          verticalAlign: "top",
+          fontWeight: "bold",
           // @ts-ignore
           emphasis: {
-            position: 'insideTop',
-            verticalAlign: 'top',
+            position: "insideTop",
+            verticalAlign: "top",
             backgroundColor: theme.colors.grayscale.light5,
           },
         }
@@ -313,16 +313,16 @@ export function transformIntervalAnnotation(
           color: theme.colors.grayscale.dark2,
           // @ts-ignore
           emphasis: {
-            fontWeight: 'bold',
+            fontWeight: "bold",
             show: true,
-            position: 'insideTop',
-            verticalAlign: 'top',
+            position: "insideTop",
+            verticalAlign: "top",
             backgroundColor: theme.colors.grayscale.light5,
           },
         };
     series.push({
       id: `Interval - ${label}`,
-      type: 'line',
+      type: "line",
       animation: false,
       markArea: {
         silent: false,
@@ -362,7 +362,7 @@ export function transformEventAnnotation(
       },
     ];
 
-    const lineStyle: LineStyleOption & DefaultStatesMixin['emphasis'] = {
+    const lineStyle: LineStyleOption & DefaultStatesMixin["emphasis"] = {
       width,
       type: style as ZRLineType,
       color: color || colorScale(name, sliceId),
@@ -377,8 +377,8 @@ export function transformEventAnnotation(
       ? {
           show: true,
           color: theme.colors.grayscale.dark2,
-          position: 'insideEndTop',
-          fontWeight: 'bold',
+          position: "insideEndTop",
+          fontWeight: "bold",
           formatter: (params: CallbackDataParams) => params.name,
           // @ts-ignore
           emphasis: {
@@ -388,11 +388,11 @@ export function transformEventAnnotation(
       : {
           show: false,
           color: theme.colors.grayscale.dark2,
-          position: 'insideEndTop',
+          position: "insideEndTop",
           // @ts-ignore
           emphasis: {
             formatter: (params: CallbackDataParams) => params.name,
-            fontWeight: 'bold',
+            fontWeight: "bold",
             show: true,
             backgroundColor: theme.colors.grayscale.light5,
           },
@@ -400,11 +400,11 @@ export function transformEventAnnotation(
 
     series.push({
       id: `Event - ${label}`,
-      type: 'line',
+      type: "line",
       animation: false,
       markLine: {
         silent: false,
-        symbol: 'none',
+        symbol: "none",
         lineStyle,
         label: eventLabel,
         data: eventData,
@@ -429,7 +429,7 @@ export function transformTimeseriesAnnotation(
     result.forEach(annotation => {
       const { key, values } = annotation;
       series.push({
-        type: 'line',
+        type: "line",
         id: key,
         name: key,
         data: values.map(row => [row.x, row.y] as [OptionName, number]),
@@ -468,14 +468,14 @@ export function getPadding(
   const xAxisOffset = addXAxisTitleOffset ? Number(xAxisTitleMargin) || 0 : 0;
   return getChartPadding(showLegend, legendOrientation, margin, {
     top:
-      yAxisTitlePosition && yAxisTitlePosition === 'Top'
+      yAxisTitlePosition && yAxisTitlePosition === "Top"
         ? TIMESERIES_CONSTANTS.gridOffsetTop + (Number(yAxisTitleMargin) || 0)
         : TIMESERIES_CONSTANTS.gridOffsetTop + yAxisOffset,
     bottom: zoomable
       ? TIMESERIES_CONSTANTS.gridOffsetBottomZoomable + xAxisOffset
       : TIMESERIES_CONSTANTS.gridOffsetBottom + xAxisOffset,
     left:
-      yAxisTitlePosition === 'Left'
+      yAxisTitlePosition === "Left"
         ? TIMESERIES_CONSTANTS.gridOffsetLeft + (Number(yAxisTitleMargin) || 0)
         : TIMESERIES_CONSTANTS.gridOffsetLeft,
     right:

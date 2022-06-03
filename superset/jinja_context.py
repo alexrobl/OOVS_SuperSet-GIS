@@ -160,10 +160,10 @@ class ExtraCache:
         """
         Read a url or post parameter and use it in your SQL Lab query.
 
-        When in SQL Lab, it's possible to add arbitrary URL "query string" parameters,
+        When in SQL Lab, it"s possible to add arbitrary URL "query string" parameters,
         and use those in your SQL code. For instance you can alter your url and add
         `?foo=bar`, as in `{domain}/superset/sqllab?foo=bar`. Then if your query is
-        something like SELECT * FROM foo = '{{ url_param('foo') }}', it will be parsed
+        something like SELECT * FROM foo = "{{ url_param("foo") }}", it will be parsed
         at runtime and replaced by the value in the URL.
 
         As you create a visualization form this SQL Lab query, you can pass parameters
@@ -171,7 +171,7 @@ class ExtraCache:
         to your queries.
 
         Default values for URL parameters can be defined in chart metadata by adding the
-        key-value pair `url_params: {'foo': 'bar'}`
+        key-value pair `url_params: {"foo": "bar"}`
 
         :param param: the parameter to lookup
         :param default: the value to return in the absence of the parameter
@@ -205,7 +205,7 @@ class ExtraCache:
 
         This is useful if:
             - you want to use a filter component to filter a query where the name of
-             filter component column doesn't match the one in the select statement
+             filter component column doesn"t match the one in the select statement
             - you want to have the ability for filter inside the main query for speed
             purposes
 
@@ -214,11 +214,11 @@ class ExtraCache:
             SELECT action, count(*) as times
             FROM logs
             WHERE
-                action in ({{ "'" + "','".join(filter_values('action_type')) + "'" }})
+                action in ({{ """ + "","".join(filter_values("action_type")) + """ }})
             GROUP BY action
 
         :param column: column/filter name to lookup
-        :param default: default value to return if there's no matching columns
+        :param default: default value to return if there"s no matching columns
         :param remove_filter: When set to true, mark the filter as processed,
             removing it from the outer query. Useful when a filter should
             only apply to the inner query
@@ -266,14 +266,14 @@ class ExtraCache:
                 WHERE
                 1=1
                 {# Render a blank line #}
-                {%- for filter in get_filters('full_name', remove_filter=True) -%}
-                {%- if filter.get('op') == 'IN' -%}
+                {%- for filter in get_filters("full_name", remove_filter=True) -%}
+                {%- if filter.get("op") == "IN" -%}
                     AND
-                    full_name IN ( {{ "'" + "', '".join(filter.get('val')) + "'" }} )
+                    full_name IN ( {{ """ + "", "".join(filter.get("val")) + """ }} )
                 {%- endif -%}
-                {%- if filter.get('op') == 'LIKE' -%}
+                {%- if filter.get("op") == "LIKE" -%}
                     AND
-                    full_name LIKE {{ "'" + filter.get('val') + "'" }}
+                    full_name LIKE {{ """ + filter.get("val") + """ }}
                 {%- endif -%}
                 {%- endfor -%}
                 UNION ALL
@@ -401,12 +401,12 @@ def validate_template_context(
     return validate_context_types(context)
 
 
-def where_in(values: List[Any], mark: str = "'") -> str:
+def where_in(values: List[Any], mark: str = """) -> str:
     """
     Given a list of values, build a parenthesis list suitable for an IN expression.
 
         >>> where_in([1, "b", 3])
-        (1, 'b', 3)
+        (1, "b", 3)
 
     """
 
@@ -462,9 +462,9 @@ class BaseTemplateProcessor:
     def process_template(self, sql: str, **kwargs: Any) -> str:
         """Processes a sql template
 
-        >>> sql = "SELECT '{{ datetime(2017, 1, 1).isoformat() }}'"
+        >>> sql = "SELECT "{{ datetime(2017, 1, 1).isoformat() }}""
         >>> process_template(sql)
-        "SELECT '2017-01-01T00:00:00'"
+        "SELECT "2017-01-01T00:00:00""
         """
         template = self._env.from_string(sql)
         kwargs.update(self._context)
@@ -506,7 +506,7 @@ class PrestoTemplateProcessor(JinjaTemplateProcessor):
     """Presto Jinja context
 
     The methods described here are namespaced under ``presto`` in the
-    jinja context as in ``SELECT '{{ presto.some_macro_call() }}'``
+    jinja context as in ``SELECT "{{ presto.some_macro_call() }}"``
     """
 
     engine = "presto"

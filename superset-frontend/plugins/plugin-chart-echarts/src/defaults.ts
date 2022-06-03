@@ -1,4 +1,4 @@
-import { LegendOrientation } from './types';
+import { LegendOrientation } from "./types";
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

@@ -233,7 +233,7 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/{{self.__class__.__name__}}.post'
+                  $ref: "#/components/schemas/{{self.__class__.__name__}}.post"
           responses:
             201:
               description: Database added
@@ -245,15 +245,15 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
                       id:
                         type: number
                       result:
-                        $ref: '#/components/schemas/{{self.__class__.__name__}}.post'
+                        $ref: "#/components/schemas/{{self.__class__.__name__}}.post"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             item = self.add_model_schema.load(request.json)
@@ -310,7 +310,7 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/{{self.__class__.__name__}}.put'
+                  $ref: "#/components/schemas/{{self.__class__.__name__}}.put"
           responses:
             200:
               description: Database changed
@@ -322,19 +322,19 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
                       id:
                         type: number
                       result:
-                        $ref: '#/components/schemas/{{self.__class__.__name__}}.put'
+                        $ref: "#/components/schemas/{{self.__class__.__name__}}.put"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             item = self.edit_model_schema.load(request.json)
@@ -393,15 +393,15 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             DeleteDatabaseCommand(g.user, pk).run()
@@ -444,7 +444,7 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/database_schemas_query_schema'
+                  $ref: "#/components/schemas/database_schemas_query_schema"
           responses:
             200:
               description: A List of all schemas from the database
@@ -453,13 +453,13 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
                   schema:
                     $ref: "#/components/schemas/SchemasResponseSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         database = self.datamodel.get(pk, self._base_filters)
         if not database:
@@ -518,15 +518,15 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
                   schema:
                     $ref: "#/components/schemas/TableMetadataResponseSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         self.incr_stats("init", self.table_metadata.__name__)
         try:
@@ -581,15 +581,15 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
                   schema:
                     $ref: "#/components/schemas/TableExtraMetadataResponseSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         self.incr_stats("init", self.table_metadata.__name__)
 
@@ -641,15 +641,15 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
                   schema:
                     $ref: "#/components/schemas/SelectStarResponseSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         self.incr_stats("init", self.select_star.__name__)
         try:
@@ -695,11 +695,11 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             item = DatabaseTestConnectionSchema().load(request.json)
@@ -737,11 +737,11 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
                   schema:
                     $ref: "#/components/schemas/DatabaseRelatedObjectsResponse"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         database = DatabaseDAO.find_by_id(pk)
         if not database:
@@ -804,7 +804,7 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/ValidateSQLRequest'
+                  $ref: "#/components/schemas/ValidateSQLRequest"
           responses:
             200:
               description: Validation result
@@ -818,15 +818,15 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
                           A List of SQL errors found on the statement
                         type: array
                         items:
-                          $ref: '#/components/schemas/ValidateSQLResponse'
+                          $ref: "#/components/schemas/ValidateSQLResponse"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             sql_request = ValidateSQLRequest().load(request.json)
@@ -858,7 +858,7 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_export_ids_schema'
+                  $ref: "#/components/schemas/get_export_ids_schema"
           responses:
             200:
               description: A zip file with database(s) and dataset(s) as YAML
@@ -868,11 +868,11 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
                     type: string
                     format: binary
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         token = request.args.get("token")
         requested_ids = kwargs["rison"]
@@ -947,13 +947,13 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         upload = request.files.get("formData")
         if not upload:
@@ -1005,11 +1005,11 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
                   schema:
                     $ref: "#/components/schemas/DatabaseFunctionNamesResponse"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         database = DatabaseDAO.find_by_id(pk)
         if not database:
@@ -1066,9 +1066,9 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
                           description: JSON schema defining the needed parameters
                           type: object
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         preferred_databases: List[str] = app.config.get("PREFERRED_DATABASES", [])
         available_databases = []
@@ -1154,11 +1154,11 @@ class DatabaseRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             payload = DatabaseValidateParametersSchema().load(request.json)

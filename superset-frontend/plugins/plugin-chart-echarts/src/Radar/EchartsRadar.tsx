@@ -16,10 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React, { useCallback } from 'react';
-import { RadarChartTransformedProps } from './types';
-import Echart from '../components/Echart';
-import { EventHandlers } from '../types';
+import React, { useCallback } from "react";
+import { RadarChartTransformedProps } from "./types";
+import Echart from "../components/Echart";
+import { EventHandlers } from "../types";
 
 export default function EchartsRadar({
   height,
@@ -49,11 +49,11 @@ export default function EchartsRadar({
                   if (val === null || val === undefined)
                     return {
                       col,
-                      op: 'IS NULL',
+                      op: "IS NULL",
                     };
                   return {
                     col,
-                    op: 'IN',
+                    op: "IN",
                     val: val as (string | number | boolean)[],
                   };
                 }),

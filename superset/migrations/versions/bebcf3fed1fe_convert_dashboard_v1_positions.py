@@ -430,8 +430,8 @@ def convert_to_layout(positions):
 
     convert(positions, 0, root[DASHBOARD_GRID_ID], root)
 
-    # remove row's width, height and col's height from its meta data
-    # and make sure every row's width <= GRID_COLUMN_COUNT
+    # remove row"s width, height and col"s height from its meta data
+    # and make sure every row"s width <= GRID_COLUMN_COUNT
     # Each item is a dashboard component:
     # row_container, or col_container, or chart_holder
     for item in root.values():
@@ -515,14 +515,14 @@ def merge_position(position, bottom_line, last_column_start):
         bottom_line[i] = current_row_value + size_y
 
 
-# In original position data, a lot of position's row attribute are problematic,
+# In original position data, a lot of position"s row attribute are problematic,
 # for example, same positions are assigned to more than 1 chart.
 # The convert function depends on row id, col id to split the whole dashboard into
 # nested rows and columns. Bad row id will lead to many empty spaces, or a few charts
 # are overlapped in the same row.
 # This function read positions by row first.
 # Then based on previous col id, width and height attribute,
-# re-calculate next position's row id.
+# re-calculate next position"s row id.
 def scan_dashboard_positions_data(positions):
     positions_by_row_id = {}
     for position in positions:
@@ -609,7 +609,7 @@ def upgrade():
             for slice in slices:
                 position = position_dict.get(str(slice.id))
 
-                # some dashboard didn't have position_json
+                # some dashboard didn"t have position_json
                 # place 3 charts in a row
                 if not position:
                     position = {

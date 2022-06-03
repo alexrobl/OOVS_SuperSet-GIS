@@ -314,5 +314,6 @@ yarl==1.6.3
 zipp==3.4.1
     # via -r requirements/base.in
 
+pymssql
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

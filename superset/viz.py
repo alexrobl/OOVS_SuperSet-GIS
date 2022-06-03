@@ -15,7 +15,7 @@
 # specific language governing permissions and limitations
 # under the License.
 # pylint: disable=too-many-lines
-"""This module contains the 'Viz' objects
+"""This module contains the "Viz" objects
 
 These objects represent the backend of all the visualizations that
 Superset can render.
@@ -211,14 +211,14 @@ class BaseViz:  # pylint: disable=too-many-public-methods
         main `get_payload` method gets called, so that the overall caching
         metadata can be right. The way it works here is that if any of
         the previous `get_df_payload` calls hit the cache, the main
-        payload's metadata will reflect that.
+        payload"s metadata will reflect that.
 
         The multi-query support may need more work to become a first class
         use case in the framework, and for the UI to reflect the subtleties
         (show that only some of the queries were served from cache for
         instance). In the meantime, since multi-query is rare, we treat
         it with a bit of a hack. Note that the hack became necessary
-        when moving from caching the visualization's data itself, to caching
+        when moving from caching the visualization"s data itself, to caching
         the underlying query(ies).
         """
 
@@ -688,7 +688,7 @@ class TableViz(BaseViz):
 
     viz_type = "table"
     verbose_name = _("Table View")
-    credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
+    credits = "a <a href="https://github.com/airbnb/superset">Superset</a> original"
     is_timeseries = False
     enforce_numerical_metrics = False
 
@@ -758,7 +758,7 @@ class TableViz(BaseViz):
         )
         if self.form_data.get("include_time") and not conditions_met:
             raise QueryObjectValidationError(
-                _("Pick a granularity in the Time section or " "uncheck 'Include Time'")
+                _("Pick a granularity in the Time section or " "uncheck "Include Time"")
             )
         return bool(self.form_data.get("include_time"))
 
@@ -839,7 +839,7 @@ class TimeTableViz(BaseViz):
 
     viz_type = "time_table"
     verbose_name = _("Time Table View")
-    credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
+    credits = "a <a href="https://github.com/airbnb/superset">Superset</a> original"
     is_timeseries = True
 
     def query_obj(self) -> QueryObjectDict:
@@ -850,7 +850,7 @@ class TimeTableViz(BaseViz):
 
         if self.form_data.get("groupby") and len(self.form_data["metrics"]) > 1:
             raise QueryObjectValidationError(
-                _("When using 'Group By' you are limited to use a single metric")
+                _("When using "Group By" you are limited to use a single metric")
             )
 
         sort_by = utils.get_first_metric_name(query_obj["metrics"])
@@ -884,7 +884,7 @@ class PivotTableViz(BaseViz):
 
     viz_type = "pivot_table"
     verbose_name = _("Pivot Table")
-    credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
+    credits = "a <a href="https://github.com/airbnb/superset">Superset</a> original"
     is_timeseries = False
     enforce_numerical_metrics = False
 
@@ -900,14 +900,14 @@ class PivotTableViz(BaseViz):
             groupby = []
         if not groupby:
             raise QueryObjectValidationError(
-                _("Please choose at least one 'Group by' field ")
+                _("Please choose at least one "Group by" field ")
             )
         if transpose and not columns:
             raise QueryObjectValidationError(
                 _(
                     (
-                        "Please choose at least one 'Columns' field when "
-                        "select 'Transpose Pivot' option"
+                        "Please choose at least one "Columns" field when "
+                        "select "Transpose Pivot" option"
                     )
                 )
             )
@@ -916,7 +916,7 @@ class PivotTableViz(BaseViz):
         deduped_cols = self.dedup_columns(groupby, columns)
 
         if len(deduped_cols) < (len(groupby) + len(columns)):
-            raise QueryObjectValidationError(_("Group By' and 'Columns' can't overlap"))
+            raise QueryObjectValidationError(_("Group By" and "Columns" can"t overlap"))
         sort_by = self.form_data.get("timeseries_limit_metric")
         if sort_by:
             sort_by_label = utils.get_metric_name(sort_by)
@@ -934,7 +934,7 @@ class PivotTableViz(BaseViz):
     ) -> Union[str, Callable[[Any], Any]]:
         aggfunc = form_data.get("pandas_aggfunc") or "sum"
         if pd.api.types.is_numeric_dtype(df[metric]):
-            # Ensure that Pandas's sum function mimics that of SQL.
+            # Ensure that Pandas"s sum function mimics that of SQL.
             if aggfunc == "sum":
                 return lambda x: x.sum(min_count=1)
         # only min and max work properly for non-numerics
@@ -1025,7 +1025,7 @@ class TreemapViz(BaseViz):
 
     viz_type = "treemap"
     verbose_name = _("Treemap")
-    credits = '<a href="https://d3js.org">d3.js</a>'
+    credits = "<a href="https://d3js.org">d3.js</a>"
     is_timeseries = False
 
     def query_obj(self) -> QueryObjectDict:
@@ -1149,7 +1149,7 @@ class NVD3Viz(BaseViz):
 
     """Base class for all nvd3 vizs"""
 
-    credits = '<a href="http://nvd3.org/">NVD3.org</a>'
+    credits = "<a href="http://nvd3.org/">NVD3.org</a>"
     viz_type: Optional[str] = None
     verbose_name = "Base NVD3 Viz"
     is_timeseries = False
@@ -1242,7 +1242,7 @@ class BigNumberViz(BaseViz):
 
     viz_type = "big_number"
     verbose_name = _("Big Number with Trendline")
-    credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
+    credits = "a <a href="https://github.com/airbnb/superset">Superset</a> original"
     is_timeseries = True
 
     def query_obj(self) -> QueryObjectDict:
@@ -1276,7 +1276,7 @@ class BigNumberTotalViz(BaseViz):
 
     viz_type = "big_number_total"
     verbose_name = _("Big Number")
-    credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
+    credits = "a <a href="https://github.com/airbnb/superset">Superset</a> original"
     is_timeseries = False
 
     def query_obj(self) -> QueryObjectDict:
@@ -1799,7 +1799,7 @@ class DistributionBarViz(BaseViz):
             self.form_data.get("columns") or []
         ):
             raise QueryObjectValidationError(
-                _("Can't have overlap between Series and Breakdowns")
+                _("Can"t have overlap between Series and Breakdowns")
             )
         if not self.form_data.get("metrics"):
             raise QueryObjectValidationError(_("Pick at least one metric"))
@@ -1881,7 +1881,7 @@ class SunburstViz(BaseViz):
     is_timeseries = False
     credits = (
         "Kerry Rodden "
-        '@<a href="https://bl.ocks.org/kerryrodden/7090426">bl.ocks.org</a>'
+        "@<a href="https://bl.ocks.org/kerryrodden/7090426">bl.ocks.org</a>"
     )
 
     def get_data(self, df: pd.DataFrame) -> VizData:
@@ -1926,7 +1926,7 @@ class SankeyViz(BaseViz):
     viz_type = "sankey"
     verbose_name = _("Sankey")
     is_timeseries = False
-    credits = '<a href="https://www.npmjs.com/package/d3-sankey">d3-sankey on npm</a>'
+    credits = "<a href="https://www.npmjs.com/package/d3-sankey">d3-sankey on npm</a>"
 
     def query_obj(self) -> QueryObjectDict:
         query_obj = super().query_obj()
@@ -1961,7 +1961,7 @@ class SankeyViz(BaseViz):
             hierarchy[row["source"]].add(row["target"])
 
         def find_cycle(graph: Dict[str, Set[str]]) -> Optional[Tuple[str, str]]:
-            """Whether there's a cycle in a directed graph"""
+            """Whether there"s a cycle in a directed graph"""
             path = set()
 
             def visit(vertex: str) -> Optional[Tuple[str, str]]:
@@ -1982,8 +1982,8 @@ class SankeyViz(BaseViz):
         if cycle:
             raise QueryObjectValidationError(
                 _(
-                    "There's a loop in your Sankey, please provide a tree. "
-                    "Here's a faulty link: {}"
+                    "There"s a loop in your Sankey, please provide a tree. "
+                    "Here"s a faulty link: {}"
                 ).format(cycle)
             )
         return recs
@@ -1995,7 +1995,7 @@ class ChordViz(BaseViz):
 
     viz_type = "chord"
     verbose_name = _("Directed Force Layout")
-    credits = '<a href="https://github.com/d3/d3-chord">Bostock</a>'
+    credits = "<a href="https://github.com/d3/d3-chord">Bostock</a>"
     is_timeseries = False
 
     def query_obj(self) -> QueryObjectDict:
@@ -2070,7 +2070,7 @@ class WorldMapViz(BaseViz):
     viz_type = "world_map"
     verbose_name = _("World Map")
     is_timeseries = False
-    credits = 'datamaps on <a href="https://www.npmjs.com/package/datamaps">npm</a>'
+    credits = "datamaps on <a href="https://www.npmjs.com/package/datamaps">npm</a>"
 
     def query_obj(self) -> QueryObjectDict:
         query_obj = super().query_obj()
@@ -2133,7 +2133,7 @@ class FilterBoxViz(BaseViz):
     viz_type = "filter_box"
     verbose_name = _("Filters")
     is_timeseries = False
-    credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
+    credits = "a <a href="https://github.com/airbnb/superset">Superset</a> original"
     cache_type = "get_data"
     filter_row_limit = 1000
 
@@ -2210,8 +2210,8 @@ class ParallelCoordinatesViz(BaseViz):
     viz_type = "para"
     verbose_name = _("Parallel Coordinates")
     credits = (
-        '<a href="https://syntagmatic.github.io/parallel-coordinates/">'
-        "Syntagmatic's library</a>"
+        "<a href="https://syntagmatic.github.io/parallel-coordinates/">"
+        "Syntagmatic"s library</a>"
     )
     is_timeseries = False
 
@@ -2241,7 +2241,7 @@ class HeatmapViz(BaseViz):
     verbose_name = _("Heatmap")
     is_timeseries = False
     credits = (
-        'inspired from mbostock @<a href="http://bl.ocks.org/mbostock/3074470">'
+        "inspired from mbostock @<a href="http://bl.ocks.org/mbostock/3074470">"
         "bl.ocks.org</a>"
     )
 
@@ -2301,7 +2301,7 @@ class HorizonViz(NVD3TimeSeriesViz):
     viz_type = "horizon"
     verbose_name = _("Horizon Charts")
     credits = (
-        '<a href="https://www.npmjs.com/package/d3-horizon-chart">'
+        "<a href="https://www.npmjs.com/package/d3-horizon-chart">"
         "d3-horizon-chart</a>"
     )
 
@@ -2336,7 +2336,7 @@ class MapboxViz(BaseViz):
                 if label_col[0] == "count":
                     raise QueryObjectValidationError(
                         _(
-                            "Must have a [Group By] column to have 'count' as the "
+                            "Must have a [Group By] column to have "count" as the "
                             + "[Label]"
                         )
                     )
@@ -2460,7 +2460,7 @@ class DeckGLMultiLayer(BaseViz):
     verbose_name = _("Deck.gl - Multiple Layers")
 
     is_timeseries = False
-    credits = '<a href="https://uber.github.io/deck.gl/">deck.gl</a>'
+    credits = "<a href="https://uber.github.io/deck.gl/">deck.gl</a>"
 
     def query_obj(self) -> QueryObjectDict:
         return {}
@@ -2484,7 +2484,7 @@ class BaseDeckGLViz(BaseViz):
     """Base class for deck.gl visualizations"""
 
     is_timeseries = False
-    credits = '<a href="https://uber.github.io/deck.gl/">deck.gl</a>'
+    credits = "<a href="https://uber.github.io/deck.gl/">deck.gl</a>"
     spatial_control_keys: List[str] = []
 
     def get_metrics(self) -> List[str]:
@@ -2648,7 +2648,7 @@ class BaseDeckGLViz(BaseViz):
 
 class DeckScatterViz(BaseDeckGLViz):
 
-    """deck.gl's ScatterLayer"""
+    """deck.gl"s ScatterLayer"""
 
     viz_type = "deck_scatter"
     verbose_name = _("Deck.gl - Scatter plot")
@@ -2700,7 +2700,7 @@ class DeckScatterViz(BaseDeckGLViz):
 
 class DeckScreengrid(BaseDeckGLViz):
 
-    """deck.gl's ScreenGridLayer"""
+    """deck.gl"s ScreenGridLayer"""
 
     viz_type = "deck_screengrid"
     verbose_name = _("Deck.gl - Screen Grid")
@@ -2729,7 +2729,7 @@ class DeckScreengrid(BaseDeckGLViz):
 
 class DeckGrid(BaseDeckGLViz):
 
-    """deck.gl's DeckLayer"""
+    """deck.gl"s DeckLayer"""
 
     viz_type = "deck_grid"
     verbose_name = _("Deck.gl - 3D Grid")
@@ -2761,7 +2761,7 @@ def geohash_to_json(geohash_code: str) -> List[List[float]]:
 
 class DeckPathViz(BaseDeckGLViz):
 
-    """deck.gl's PathLayer"""
+    """deck.gl"s PathLayer"""
 
     viz_type = "deck_path"
     verbose_name = _("Deck.gl - Paths")
@@ -2811,7 +2811,7 @@ class DeckPathViz(BaseDeckGLViz):
 
 class DeckPolygon(DeckPathViz):
 
-    """deck.gl's Polygon Layer"""
+    """deck.gl"s Polygon Layer"""
 
     viz_type = "deck_polygon"
     deck_viz_key = "polygon"
@@ -2845,7 +2845,7 @@ class DeckPolygon(DeckPathViz):
 
 class DeckHex(BaseDeckGLViz):
 
-    """deck.gl's DeckLayer"""
+    """deck.gl"s DeckLayer"""
 
     viz_type = "deck_hex"
     verbose_name = _("Deck.gl - 3D HEX")
@@ -2866,7 +2866,7 @@ class DeckHex(BaseDeckGLViz):
 
 class DeckGeoJson(BaseDeckGLViz):
 
-    """deck.gl's GeoJSONLayer"""
+    """deck.gl"s GeoJSONLayer"""
 
     viz_type = "deck_geojson"
     verbose_name = _("Deck.gl - GeoJSON")
@@ -2885,7 +2885,7 @@ class DeckGeoJson(BaseDeckGLViz):
 
 class DeckArc(BaseDeckGLViz):
 
-    """deck.gl's Arc Layer"""
+    """deck.gl"s Arc Layer"""
 
     viz_type = "deck_arc"
     verbose_name = _("Deck.gl - Arc")
@@ -2923,7 +2923,7 @@ class EventFlowViz(BaseViz):
 
     viz_type = "event_flow"
     verbose_name = _("Event flow")
-    credits = 'from <a href="https://github.com/williaster/data-ui">@data-ui</a>'
+    credits = "from <a href="https://github.com/williaster/data-ui">@data-ui</a>"
     is_timeseries = True
 
     def query_obj(self) -> QueryObjectDict:
@@ -2975,9 +2975,9 @@ class PairedTTestViz(BaseViz):
         """
         Transform received data frame into an object of the form:
         {
-            'metric1': [
+            "metric1": [
                 {
-                    groups: ('groupA', ... ),
+                    groups: ("groupA", ... ),
                     values: [ {x, y}, ... ],
                 }, ...
             ], ...

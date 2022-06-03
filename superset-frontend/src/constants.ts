@@ -16,68 +16,68 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-export const DATETIME_WITH_TIME_ZONE = 'YYYY-MM-DD HH:mm:ssZ';
-export const TIME_WITH_MS = 'HH:mm:ss.SSS';
+export const DATETIME_WITH_TIME_ZONE = "YYYY-MM-DD HH:mm:ssZ";
+export const TIME_WITH_MS = "HH:mm:ss.SSS";
 
-export const BOOL_TRUE_DISPLAY = 'True';
-export const BOOL_FALSE_DISPLAY = 'False';
+export const BOOL_TRUE_DISPLAY = "True";
+export const BOOL_FALSE_DISPLAY = "False";
 
 export const URL_PARAMS = {
   migrationState: {
-    name: 'migration_state',
-    type: 'string',
+    name: "migration_state",
+    type: "string",
   },
   standalone: {
-    name: 'standalone',
-    type: 'number',
+    name: "standalone",
+    type: "number",
   },
   uiConfig: {
-    name: 'uiConfig',
-    type: 'number',
+    name: "uiConfig",
+    type: "number",
   },
   preselectFilters: {
-    name: 'preselect_filters',
-    type: 'object',
+    name: "preselect_filters",
+    type: "object",
   },
   nativeFilters: {
-    name: 'native_filters',
-    type: 'rison',
+    name: "native_filters",
+    type: "rison",
   },
   nativeFiltersKey: {
-    name: 'native_filters_key',
-    type: 'string',
+    name: "native_filters_key",
+    type: "string",
   },
   filterSet: {
-    name: 'filter_set',
-    type: 'string',
+    name: "filter_set",
+    type: "string",
   },
   showFilters: {
-    name: 'show_filters',
-    type: 'boolean',
+    name: "show_filters",
+    type: "boolean",
   },
   expandFilters: {
-    name: 'expand_filters',
-    type: 'boolean',
+    name: "expand_filters",
+    type: "boolean",
   },
   formDataKey: {
-    name: 'form_data_key',
-    type: 'string',
+    name: "form_data_key",
+    type: "string",
   },
   sliceId: {
-    name: 'slice_id',
-    type: 'string',
+    name: "slice_id",
+    type: "string",
   },
   datasetId: {
-    name: 'dataset_id',
-    type: 'string',
+    name: "dataset_id",
+    type: "string",
   },
   force: {
-    name: 'force',
-    type: 'boolean',
+    name: "force",
+    type: "boolean",
   },
   permalinkKey: {
-    name: 'permalink_key',
-    type: 'string',
+    name: "permalink_key",
+    type: "string",
   },
 } as const;
 
@@ -106,4 +106,4 @@ export const SLOW_DEBOUNCE = 500;
 /**
  * Display null as `N/A`
  */
-export const NULL_DISPLAY = 'N/A';
+export const NULL_DISPLAY = "N/A";

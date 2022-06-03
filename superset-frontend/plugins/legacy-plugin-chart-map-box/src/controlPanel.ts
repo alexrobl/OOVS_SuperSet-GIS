@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { FeatureFlag, isFeatureEnabled, t } from '@superset-ui/core';
+import { FeatureFlag, isFeatureEnabled, t } from "@superset-ui/core";
 import {
   columnChoices,
   ControlPanelConfig,
@@ -24,10 +24,10 @@ import {
   formatSelectOptions,
   sections,
   dndEntity,
-} from '@superset-ui/chart-controls';
+} from "@superset-ui/chart-controls";
 
 const allColumns = {
-  type: 'SelectControl',
+  type: "SelectControl",
   default: null,
   mapStateToProps: (state: ControlPanelState) => ({
     choices: columnChoices(state.datasource),
@@ -39,92 +39,92 @@ const columnsConfig = isFeatureEnabled(FeatureFlag.ENABLE_EXPLORE_DRAG_AND_DROP)
   : allColumns;
 
 const colorChoices = [
-  ['rgb(0, 139, 139)', 'Dark Cyan'],
-  ['rgb(128, 0, 128)', 'Purple'],
-  ['rgb(255, 215, 0)', 'Gold'],
-  ['rgb(69, 69, 69)', 'Dim Gray'],
-  ['rgb(220, 20, 60)', 'Crimson'],
-  ['rgb(34, 139, 34)', 'Forest Green'],
+  ["rgb(0, 139, 139)", "Dark Cyan"],
+  ["rgb(128, 0, 128)", "Purple"],
+  ["rgb(255, 215, 0)", "Gold"],
+  ["rgb(69, 69, 69)", "Dim Gray"],
+  ["rgb(220, 20, 60)", "Crimson"],
+  ["rgb(34, 139, 34)", "Forest Green"],
 ];
 
 const config: ControlPanelConfig = {
   controlPanelSections: [
     sections.legacyRegularTime,
     {
-      label: t('Query'),
+      label: t("Query"),
       expanded: true,
       controlSetRows: [
         [
           {
-            name: 'all_columns_x',
+            name: "all_columns_x",
             config: {
               ...columnsConfig,
-              label: t('Longitude'),
-              description: t('Column containing longitude data'),
+              label: t("Longitude"),
+              description: t("Column containing longitude data"),
             },
           },
         ],
         [
           {
-            name: 'all_columns_y',
+            name: "all_columns_y",
             config: {
               ...columnsConfig,
-              label: t('Latitude'),
-              description: t('Column containing latitude data'),
+              label: t("Latitude"),
+              description: t("Column containing latitude data"),
             },
           },
         ],
         [
           {
-            name: 'clustering_radius',
+            name: "clustering_radius",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('Clustering Radius'),
-              default: '60',
+              label: t("Clustering Radius"),
+              default: "60",
               choices: formatSelectOptions([
-                '0',
-                '20',
-                '40',
-                '60',
-                '80',
-                '100',
-                '200',
-                '500',
-                '1000',
+                "0",
+                "20",
+                "40",
+                "60",
+                "80",
+                "100",
+                "200",
+                "500",
+                "1000",
               ]),
               description: t(
-                'The radius (in pixels) the algorithm uses to define a cluster. ' +
-                  'Choose 0 to turn off clustering, but beware that a large ' +
-                  'number of points (>1000) will cause lag.',
+                "The radius (in pixels) the algorithm uses to define a cluster. " +
+                  "Choose 0 to turn off clustering, but beware that a large " +
+                  "number of points (>1000) will cause lag.",
               ),
             },
           },
         ],
-        ['row_limit'],
-        ['adhoc_filters'],
-        ['groupby'],
+        ["row_limit"],
+        ["adhoc_filters"],
+        ["groupby"],
       ],
     },
     {
-      label: t('Points'),
+      label: t("Points"),
       controlSetRows: [
         [
           {
-            name: 'point_radius',
+            name: "point_radius",
             config: {
-              type: 'SelectControl',
-              label: t('Point Radius'),
-              default: 'Auto',
+              type: "SelectControl",
+              label: t("Point Radius"),
+              default: "Auto",
               description: t(
-                'The radius of individual points (ones that are not in a cluster). ' +
-                  'Either a numerical column or `Auto`, which scales the point based ' +
-                  'on the largest cluster',
+                "The radius of individual points (ones that are not in a cluster). " +
+                  "Either a numerical column or `Auto`, which scales the point based " +
+                  "on the largest cluster",
               ),
               mapStateToProps: state => {
                 const datasourceChoices = columnChoices(state.datasource);
                 const choices: [string, string][] = formatSelectOptions([
-                  'Auto',
+                  "Auto",
                 ]);
                 return {
                   choices: choices.concat(datasourceChoices),
@@ -135,14 +135,14 @@ const config: ControlPanelConfig = {
         ],
         [
           {
-            name: 'point_radius_unit',
+            name: "point_radius_unit",
             config: {
-              type: 'SelectControl',
-              label: t('Point Radius Unit'),
-              default: 'Pixels',
-              choices: formatSelectOptions(['Pixels', 'Miles', 'Kilometers']),
+              type: "SelectControl",
+              label: t("Point Radius Unit"),
+              default: "Pixels",
+              choices: formatSelectOptions(["Pixels", "Miles", "Kilometers"]),
               description: t(
-                'The unit of measure for the specified point radius',
+                "The unit of measure for the specified point radius",
               ),
             },
           },
@@ -150,21 +150,21 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('Labelling'),
+      label: t("Labelling"),
       controlSetRows: [
         [
           {
-            name: 'mapbox_label',
+            name: "mapbox_label",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               multi: true,
-              label: t('label'),
+              label: t("label"),
               default: [],
               description: t(
-                '`count` is COUNT(*) if a group by is used. ' +
-                  'Numerical columns will be aggregated with the aggregator. ' +
-                  'Non-numerical columns will be used to label points. ' +
-                  'Leave empty to get a count of points in each cluster.',
+                "`count` is COUNT(*) if a group by is used. " +
+                  "Numerical columns will be aggregated with the aggregator. " +
+                  "Non-numerical columns will be used to label points. " +
+                  "Leave empty to get a count of points in each cluster.",
               ),
               mapStateToProps: state => ({
                 choices: columnChoices(state.datasource),
@@ -174,23 +174,23 @@ const config: ControlPanelConfig = {
         ],
         [
           {
-            name: 'pandas_aggfunc',
+            name: "pandas_aggfunc",
             config: {
-              type: 'SelectControl',
-              label: t('Cluster label aggregator'),
+              type: "SelectControl",
+              label: t("Cluster label aggregator"),
               clearable: false,
               choices: formatSelectOptions([
-                'sum',
-                'mean',
-                'min',
-                'max',
-                'std',
-                'var',
+                "sum",
+                "mean",
+                "min",
+                "max",
+                "std",
+                "var",
               ]),
-              default: 'sum',
+              default: "sum",
               description: t(
-                'Aggregate function applied to the list of points ' +
-                  'in each cluster to produce the cluster label.',
+                "Aggregate function applied to the list of points " +
+                  "in each cluster to produce the cluster label.",
               ),
             },
           },
@@ -198,120 +198,120 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('Visual Tweaks'),
+      label: t("Visual Tweaks"),
       controlSetRows: [
         [
           {
-            name: 'render_while_dragging',
+            name: "render_while_dragging",
             config: {
-              type: 'CheckboxControl',
-              label: t('Live render'),
+              type: "CheckboxControl",
+              label: t("Live render"),
               default: true,
               description: t(
-                'Points and clusters will update as the viewport is being changed',
+                "Points and clusters will update as the viewport is being changed",
               ),
             },
           },
         ],
         [
           {
-            name: 'mapbox_style',
+            name: "mapbox_style",
             config: {
-              type: 'SelectControl',
-              label: t('Map Style'),
+              type: "SelectControl",
+              label: t("Map Style"),
               clearable: false,
               renderTrigger: true,
               choices: [
-                ['mapbox://styles/mapbox/streets-v9', 'Streets'],
-                ['mapbox://styles/mapbox/dark-v9', 'Dark'],
-                ['mapbox://styles/mapbox/light-v9', 'Light'],
+                ["mapbox://styles/mapbox/streets-v9", "Streets"],
+                ["mapbox://styles/mapbox/dark-v9", "Dark"],
+                ["mapbox://styles/mapbox/light-v9", "Light"],
                 [
-                  'mapbox://styles/mapbox/satellite-streets-v9',
-                  'Satellite Streets',
+                  "mapbox://styles/mapbox/satellite-streets-v9",
+                  "Satellite Streets",
                 ],
-                ['mapbox://styles/mapbox/satellite-v9', 'Satellite'],
-                ['mapbox://styles/mapbox/outdoors-v9', 'Outdoors'],
+                ["mapbox://styles/mapbox/satellite-v9", "Satellite"],
+                ["mapbox://styles/mapbox/outdoors-v9", "Outdoors"],
               ],
-              default: 'mapbox://styles/mapbox/light-v9',
-              description: t('Base layer map style'),
+              default: "mapbox://styles/mapbox/light-v9",
+              description: t("Base layer map style"),
             },
           },
         ],
         [
           {
-            name: 'global_opacity',
+            name: "global_opacity",
             config: {
-              type: 'TextControl',
-              label: t('Opacity'),
+              type: "TextControl",
+              label: t("Opacity"),
               default: 1,
               isFloat: true,
               description: t(
-                'Opacity of all clusters, points, and labels. Between 0 and 1.',
+                "Opacity of all clusters, points, and labels. Between 0 and 1.",
               ),
             },
           },
         ],
         [
           {
-            name: 'mapbox_color',
+            name: "mapbox_color",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('RGB Color'),
+              label: t("RGB Color"),
               default: colorChoices[0][0],
               choices: colorChoices,
-              description: t('The color for points and clusters in RGB'),
+              description: t("The color for points and clusters in RGB"),
             },
           },
         ],
       ],
     },
     {
-      label: t('Viewport'),
+      label: t("Viewport"),
       expanded: true,
       controlSetRows: [
         [
           {
-            name: 'viewport_longitude',
+            name: "viewport_longitude",
             config: {
-              type: 'TextControl',
-              label: t('Default longitude'),
+              type: "TextControl",
+              label: t("Default longitude"),
               renderTrigger: true,
               default: -122.405293,
               isFloat: true,
-              description: t('Longitude of default viewport'),
+              description: t("Longitude of default viewport"),
               places: 8,
-              // Viewport longitude changes shouldn't prompt user to re-run query
+              // Viewport longitude changes shouldn"t prompt user to re-run query
               dontRefreshOnChange: true,
             },
           },
           {
-            name: 'viewport_latitude',
+            name: "viewport_latitude",
             config: {
-              type: 'TextControl',
-              label: t('Default latitude'),
+              type: "TextControl",
+              label: t("Default latitude"),
               renderTrigger: true,
               default: 37.772123,
               isFloat: true,
-              description: t('Latitude of default viewport'),
+              description: t("Latitude of default viewport"),
               places: 8,
-              // Viewport latitude changes shouldn't prompt user to re-run query
+              // Viewport latitude changes shouldn"t prompt user to re-run query
               dontRefreshOnChange: true,
             },
           },
         ],
         [
           {
-            name: 'viewport_zoom',
+            name: "viewport_zoom",
             config: {
-              type: 'TextControl',
-              label: t('Zoom'),
+              type: "TextControl",
+              label: t("Zoom"),
               renderTrigger: true,
               isFloat: true,
               default: 11,
-              description: t('Zoom level of the map'),
+              description: t("Zoom level of the map"),
               places: 8,
-              // Viewport zoom shouldn't prompt user to re-run query
+              // Viewport zoom shouldn"t prompt user to re-run query
               dontRefreshOnChange: true,
             },
           },
@@ -323,8 +323,8 @@ const config: ControlPanelConfig = {
   controlOverrides: {
     groupby: {
       description: t(
-        'One or many controls to group by. If grouping, latitude ' +
-          'and longitude columns must be present.',
+        "One or many controls to group by. If grouping, latitude " +
+          "and longitude columns must be present.",
       ),
     },
   },

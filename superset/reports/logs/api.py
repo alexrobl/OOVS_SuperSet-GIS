@@ -115,7 +115,7 @@ class ReportExecutionLogRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_list_schema'
+                  $ref: "#/components/schemas/get_list_schema"
           responses:
             200:
               description: Items from logs
@@ -139,15 +139,15 @@ class ReportExecutionLogRestApi(BaseSupersetModelRestApi):
                           The result from the get list query
                         type: array
                         items:
-                          $ref: '#/components/schemas/{{self.__class__.__name__}}.get_list'  # pylint: disable=line-too-long
+                          $ref: "#/components/schemas/{{self.__class__.__name__}}.get_list"  # pylint: disable=line-too-long
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         self._apply_layered_relation_to_rison(pk, kwargs["rison"])
         return self.get_list_headless(**kwargs)
@@ -181,7 +181,7 @@ class ReportExecutionLogRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_item_schema'
+                  $ref: "#/components/schemas/get_item_schema"
           responses:
             200:
               description: Item log
@@ -194,17 +194,17 @@ class ReportExecutionLogRestApi(BaseSupersetModelRestApi):
                         description: The log id
                         type: string
                       result:
-                        $ref: '#/components/schemas/{{self.__class__.__name__}}.get'
+                        $ref: "#/components/schemas/{{self.__class__.__name__}}.get"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         self._apply_layered_relation_to_rison(pk, kwargs["rison"])
         return self.get_headless(log_id, **kwargs)

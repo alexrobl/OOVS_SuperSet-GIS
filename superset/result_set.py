@@ -38,10 +38,10 @@ def dedup(l: List[str], suffix: str = "__", case_sensitive: bool = True) -> List
     Always returns the same number of entries as provided, and always returns
     unique values. Case sensitive comparison by default.
 
-    >>> print(','.join(dedup(['foo', 'bar', 'bar', 'bar', 'Bar'])))
+    >>> print(",".join(dedup(["foo", "bar", "bar", "bar", "Bar"])))
     foo,bar,bar__1,bar__2,Bar
     >>> print(
-        ','.join(dedup(['foo', 'bar', 'bar', 'bar', 'Bar'], case_sensitive=False))
+        ",".join(dedup(["foo", "bar", "bar", "bar", "Bar"], case_sensitive=False))
     )
     foo,bar,bar__1,bar__2,Bar__3
     """

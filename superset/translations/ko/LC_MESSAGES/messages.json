@@ -51,9 +51,9 @@
       "Issue 1006 - One or more parameters specified in the query are missing.": [
         ""
       ],
-      "Issue 1007 - The hostname provided can't be resolved.": [""],
+      "Issue 1007 - The hostname provided can"t be resolved.": [""],
       "Issue 1008 - The port is closed.": [""],
-      "Issue 1009 - The host might be down, and can't be reached on the provided port.": [
+      "Issue 1009 - The host might be down, and can"t be reached on the provided port.": [
         ""
       ],
       "Invalid certificate": [""],
@@ -83,21 +83,21 @@
       "You cannot use [Columns] in combination with [Group By]/[Metrics]/[Percentage Metrics]. Please choose one or the other.": [
         ""
       ],
-      "Pick a granularity in the Time section or uncheck 'Include Time'": [""],
+      "Pick a granularity in the Time section or uncheck "Include Time"": [""],
       "Time Table View": ["시간 테이블 뷰"],
       "Pick at least one metric": ["적어도 하나의 메트릭을 선택하세요"],
-      "When using 'Group By' you are limited to use a single metric": [
-        "'Group By'를 사용 할 때 오직 하나의 메트릭만 사용 가능합니다"
+      "When using "Group By" you are limited to use a single metric": [
+        ""Group By"를 사용 할 때 오직 하나의 메트릭만 사용 가능합니다"
       ],
       "Pivot Table": ["피봇 테이블"],
-      "Please choose at least one 'Group by' field ": [
-        "적어도 하나의 'Group by'필드를 선택하세요"
+      "Please choose at least one "Group by" field ": [
+        "적어도 하나의 "Group by"필드를 선택하세요"
       ],
       "Please choose at least one metric": [
         "적어도 하나의 메트릭을 선택하세요"
       ],
-      "Group By' and 'Columns' can't overlap": [
-        "Group By' 와 'Columns' 겹칠 수 없습니다"
+      "Group By" and "Columns" can"t overlap": [
+        "Group By" 와 "Columns" 겹칠 수 없습니다"
       ],
       "Treemap": ["트리맵"],
       "Calendar Heatmap": ["달력 히트캡"],
@@ -126,12 +126,12 @@
       "Histogram": [""],
       "Must have at least one numeric column specified": [""],
       "Distribution - Bar Chart": [""],
-      "Can't have overlap between Series and Breakdowns": [""],
+      "Can"t have overlap between Series and Breakdowns": [""],
       "Pick at least one field for [Series]": [""],
       "Sunburst": [""],
       "Sankey": [""],
       "Pick exactly 2 columns as [Source / Target]": [""],
-      "There's a loop in your Sankey, please provide a tree. Here's a faulty link: {}": [
+      "There"s a loop in your Sankey, please provide a tree. Here"s a faulty link: {}": [
         ""
       ],
       "Directed Force Layout": [""],
@@ -144,7 +144,7 @@
       "Horizon Charts": [""],
       "Mapbox": [""],
       "[Longitude] and [Latitude] must be set": [""],
-      "Must have a [Group By] column to have 'count' as the [Label]": [""],
+      "Must have a [Group By] column to have "count" as the [Label]": [""],
       "Choice of [Label] must be present in [Group By]": [""],
       "Choice of [Point Radius] must be present in [Group By]": [""],
       "[Longitude] and [Latitude] columns must be present in [Group By]": [""],
@@ -276,14 +276,14 @@
       "Show Druid Datasource": ["Druid 데이터소스 보기"],
       "Add Druid Datasource": ["Druid 데이터소스 추가"],
       "Edit Druid Datasource": ["Druid 데이터소스 편집"],
-      "The list of charts associated with this table. By altering this datasource, you may change how these associated charts behave. Also note that charts need to point to a datasource, so this form will fail at saving if removing charts from a datasource. If you want to change the datasource for a chart, overwrite the chart from the 'explore view'": [
+      "The list of charts associated with this table. By altering this datasource, you may change how these associated charts behave. Also note that charts need to point to a datasource, so this form will fail at saving if removing charts from a datasource. If you want to change the datasource for a chart, overwrite the chart from the "explore view"": [
         ""
       ],
       "Timezone offset (in hours) for this datasource": [""],
       "Time expression to use as a predicate when retrieving distinct values to populate the filter component. Only applies when `Enable Filter Select` is on. If you enter `7 days ago`, the distinct list of values in the filter will be populated based on the distinct value over the past week": [
         ""
       ],
-      "Whether to populate the filter's dropdown in the explore view's filter section with a list of distinct values fetched from the backend on the fly": [
+      "Whether to populate the filter"s dropdown in the explore view"s filter section with a list of distinct values fetched from the backend on the fly": [
         ""
       ],
       "Redirects to this endpoint when clicking on the datasource from the datasource list": [
@@ -321,8 +321,8 @@
         ""
       ],
       "Empty query?": [""],
-      "Metric '%(metric)s' does not exist": [
-        "메트릭 '%(metric)s' 이 존재하지 않습니다."
+      "Metric "%(metric)s" does not exist": [
+        "메트릭 "%(metric)s" 이 존재하지 않습니다."
       ],
       "Unknown column used in orderby: %(col)": [
         "알 수 없는 칼럼이 orderby에 사용되었습니다: %(col)"
@@ -366,7 +366,7 @@
       "For regular filters, these are the roles this filter will be applied to. For base filters, these are the roles that the filter DOES NOT apply to, e.g. Admin if admin should see all data.": [
         ""
       ],
-      "Filters with the same group key will be ORed together within the group, while different filter groups will be ANDed together. Undefined group keys are treated as unique groups, i.e. are not grouped together. For example, if a table has three filters, of which two are for departments Finance and Marketing (group key = 'department'), and one refers to the region Europe (group key = 'region'), the filter clause would apply the filter (department = 'Finance' OR department = 'Marketing') AND (region = 'Europe').": [
+      "Filters with the same group key will be ORed together within the group, while different filter groups will be ANDed together. Undefined group keys are treated as unique groups, i.e. are not grouped together. For example, if a table has three filters, of which two are for departments Finance and Marketing (group key = "department"), and one refers to the region Europe (group key = "region"), the filter clause would apply the filter (department = "Finance" OR department = "Marketing") AND (region = "Europe").": [
         ""
       ],
       "This is the condition that will be added to the WHERE clause. For example, to only return rows for a particular client, you might define a regular filter with the clause `client_id = 9`. To display no rows unless a user belongs to a RLS filter role, a base filter can be created with the clause `1 = 0` (always false).": [
@@ -392,7 +392,7 @@
       "Redirects to this endpoint when clicking on the table from the table list": [
         ""
       ],
-      "Whether the table was generated by the 'Visualize' flow in SQL Lab": [
+      "Whether the table was generated by the "Visualize" flow in SQL Lab": [
         ""
       ],
       "A set of parameters that become available in the query using Jinja templating syntax": [
@@ -437,7 +437,7 @@
       "Dashboard could not be deleted.": ["대시보드를 삭제할 수 없습니다."],
       "Changing this Dashboard is forbidden": [""],
       "Import dashboard failed for an unknown reason": [""],
-      "You don't have access to this dashboard.": [""],
+      "You don"t have access to this dashboard.": [""],
       "No data in file": ["파일에 데이터가 없습니다"],
       "Table name undefined": ["테이블 명이 정해지지 않았습니다"],
       "Invalid connection string, a valid string usually follows: driver://user:password@database-host/database-name": [
@@ -474,7 +474,7 @@
       "Import database failed for an unknown reason": [""],
       "Unable to resolve hostname \"%(hostname)s\".": [""],
       "The host %(host)s is up, but the port %(port)s is closed.": [""],
-      "The host %(host)s might be down, ond can't be reached on port %(port)s.": [
+      "The host %(host)s might be down, ond can"t be reached on port %(port)s.": [
         ""
       ],
       "Could not load database driver: {}": [""],
@@ -531,7 +531,7 @@
       "Week ending Saturday": [""],
       "Week_ending Sunday": [""],
       "Unknown Presto Error": [""],
-      "We can't seem to resolve the column \"%(column_name)s\" at line %(location)s.": [
+      "We can"t seem to resolve the column \"%(column_name)s\" at line %(location)s.": [
         ""
       ],
       "The table \"%(table_name)s\" does not exist. A valid table must be used to run this query.": [
@@ -664,7 +664,7 @@
       "Show Observation": [""],
       "Error Message": ["에러 메시지"],
       "Log Retentions (days)": ["로그 삭제주기 (일)"],
-      "A semicolon ';' delimited list of email addresses": [""],
+      "A semicolon ";" delimited list of email addresses": [""],
       "How long to keep the logs around for this alert": [""],
       "Once an alert is triggered, how long, in seconds, before Superset nags you again.": [
         ""
@@ -672,7 +672,7 @@
       "A SQL statement that defines whether the alert should get triggered or not. The query is expected to return either NULL or a number value.": [
         ""
       ],
-      "This feature is deprecated and will be removed on 2.0. Take a look at the replacement feature <a href='https://superset.apache.org/docs/installation/alerts-reports'>Alerts & Reports documentation</a>": [
+      "This feature is deprecated and will be removed on 2.0. Take a look at the replacement feature <a href="https://superset.apache.org/docs/installation/alerts-reports">Alerts & Reports documentation</a>": [
         ""
       ],
       "annotation start time or end time is required.": [""],
@@ -693,7 +693,7 @@
       "Table [%{table}s] could not be found, please double check your database connection, schema, and table name, error: {}": [
         ""
       ],
-      "json isn't valid": [""],
+      "json isn"t valid": [""],
       "Export to YAML": [""],
       "Export to YAML?": [""],
       "Delete": ["삭제"],
@@ -717,7 +717,7 @@
         ""
       ],
       "[Missing Dataset]": [""],
-      "You don't have the rights to ": [""],
+      "You don"t have the rights to ": [""],
       "alter this ": [""],
       "chart": [""],
       "create a ": [""],
@@ -732,16 +732,16 @@
         ""
       ],
       "Could not load database driver: %(driver_name)s": [""],
-      "Invalid connection string, a valid string usually follows:\n'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'": [
+      "Invalid connection string, a valid string usually follows:\n"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME"": [
         ""
       ],
       "Malformed request. slice_id or table_name and db_name arguments are expected": [
         ""
       ],
       "Chart %(id)s not found": [""],
-      "Table %(table)s wasn't found in the database %(db)s": [""],
-      "Can't find User '%(name)s', please ask your admin to create one.": [""],
-      "Can't find DruidCluster with cluster_name = '%(name)s'": [""],
+      "Table %(table)s wasn"t found in the database %(db)s": [""],
+      "Can"t find User "%(name)s", please ask your admin to create one.": [""],
+      "Can"t find DruidCluster with cluster_name = "%(name)s"": [""],
       "Data could not be deserialized. You may want to re-run the query.": [""],
       "%(validator)s was unable to check your query.\nPlease recheck your query.\nException: %(ex)s": [
         ""
@@ -751,7 +751,7 @@
       ],
       "Query record was not created as expected.": [""],
       "The parameter %(parameters)s in your query is undefined.": [""],
-      "%(user)s's profile": [""],
+      "%(user)s"s profile": [""],
       "Show CSS Template": ["CSS 템플릿 보기"],
       "Add CSS Template": ["CSS 템플릿 추가"],
       "Edit CSS Template": ["CSS 템플릿 편집"],
@@ -928,7 +928,7 @@
       "Allow Multi Schema Metadata Fetch": [""],
       "Backend": [""],
       "Extra field cannot be decoded by JSON. %(msg)s": [""],
-      "Invalid connection string, a valid string usually follows:'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'<p>Example:'postgresql://user:password@your-postgres-db/database'</p>": [
+      "Invalid connection string, a valid string usually follows:"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME"<p>Example:"postgresql://user:password@your-postgres-db/database"</p>": [
         ""
       ],
       "CSV to Database configuration": [""],
@@ -964,7 +964,7 @@
       "Action": ["활동"],
       "dttm": ["날짜/시간"],
       "Add item": ["테이블 추가"],
-      "The query couldn't be loaded": [""],
+      "The query couldn"t be loaded": [""],
       "Your query has been scheduled. To see details of your query, navigate to Saved queries": [
         ""
       ],
@@ -1041,10 +1041,10 @@
         ""
       ],
       "Shared query": ["Query 공유"],
-      "The datasource couldn't be loaded": [""],
+      "The datasource couldn"t be loaded": [""],
       "An error occurred while creating the data source": [""],
       "An error occurred while fetching function names.": [""],
-      "SQL Lab uses your browser's local storage to store queries and results.\n Currently, you are using ${currentUsage.toFixed(\n            2,\n          )} KB out of ${LOCALSTORAGE_MAX_USAGE_KB} KB. storage space.\n To keep SQL Lab from crashing, please delete some query tabs.\n You can re-access these queries by using the Save feature before you delete the tab. Note that you will need to close other SQL Lab windows before you do this.": [
+      "SQL Lab uses your browser"s local storage to store queries and results.\n Currently, you are using ${currentUsage.toFixed(\n            2,\n          )} KB out of ${LOCALSTORAGE_MAX_USAGE_KB} KB. storage space.\n To keep SQL Lab from crashing, please delete some query tabs.\n You can re-access these queries by using the Save feature before you delete the tab. Note that you will need to close other SQL Lab windows before you do this.": [
         ""
       ],
       "Estimate selected query cost": [""],
@@ -1072,7 +1072,7 @@
       "SQL": [""],
       "No query history yet...": ["Query 실행 이력이 없습니다."],
       "An error occurred when refreshing queries": [""],
-      "It seems you don't have access to any database": [""],
+      "It seems you don"t have access to any database": [""],
       "Filter by user": ["필터"],
       "Filter by database": ["데이터베이스 선택"],
       "Query search string": ["Query 검색"],
@@ -1262,7 +1262,7 @@
       "Type \"%s\" to confirm": [""],
       "DELETE": [""],
       "Click to edit": ["클릭하여 제목 수정하기"],
-      "You don't have the rights to alter this title.": [""],
+      "You don"t have the rights to alter this title.": [""],
       "Unexpected error": [""],
       "This may be triggered by:": [""],
       "Please reach out to the Chart Owner for assistance.": [""],
@@ -1324,7 +1324,7 @@
       "Data source": ["데이터소스"],
       "Added": [""],
       "Components": [""],
-      "Any color palette selected here will override the colors applied to this dashboard's individual charts": [
+      "Any color palette selected here will override the colors applied to this dashboard"s individual charts": [
         ""
       ],
       "Color scheme": [""],
@@ -1382,7 +1382,7 @@
       ],
       "This dashboard is published. Click to make it a draft.": [""],
       "Draft": [""],
-      "Don't refresh": [""],
+      "Don"t refresh": [""],
       "10 seconds": ["10초"],
       "30 seconds": ["30초"],
       "1 minute": ["1분"],
@@ -1456,7 +1456,7 @@
       "Rebuild": [""],
       "New filter set": [""],
       "Filters (%d)": [""],
-      "This filter doesn't exist in dashboard. It will not be applied.": [""],
+      "This filter doesn"t exist in dashboard. It will not be applied.": [""],
       "Filter metadata changed in dashboard. It will not be applied.": [""],
       "None": [""],
       "Please filter set name": [""],
@@ -1605,7 +1605,7 @@
         ""
       ],
       "Last week": ["주"],
-      "The time range for the visualization. All relative times, e.g. \"Last month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using the server's local time (sans timezone). All tooltips and placeholder times are expressed in UTC (sans timezone). The timestamps are then evaluated by the database using the engine's local timezone. Note one can explicitly set the timezone per the ISO 8601 format if specifying either the start and/or end time.": [
+      "The time range for the visualization. All relative times, e.g. \"Last month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using the server"s local time (sans timezone). All tooltips and placeholder times are expressed in UTC (sans timezone). The timestamps are then evaluated by the database using the engine"s local timezone. Note one can explicitly set the timezone per the ISO 8601 format if specifying either the start and/or end time.": [
         ""
       ],
       "Row limit": [""],
@@ -1655,7 +1655,7 @@
       "Edit chart properties": [""],
       "Control labeled ": [""],
       "Open Datasource tab": ["데이터소스 명"],
-      "\n                This filter was inherited from the dashboard's context.\n                It won't be saved when saving the chart.\n              ": [
+      "\n                This filter was inherited from the dashboard"s context.\n                It won"t be saved when saving the chart.\n              ": [
         ""
       ],
       "You do not have permission to edit this chart": [""],
@@ -1663,7 +1663,7 @@
         ""
       ],
       "Configuration": [""],
-      "Duration (in seconds) of the caching timeout for this chart. Note this defaults to the dataset's timeout if undefined.": [
+      "Duration (in seconds) of the caching timeout for this chart. Note this defaults to the dataset"s timeout if undefined.": [
         ""
       ],
       "A list of users who can alter the chart. Searchable by name or username.": [
@@ -1805,7 +1805,7 @@
       "Put your code here": [""],
       "Query": [""],
       "URL": [""],
-      "Templated link, it's possible to include {{ metric }} or other values coming from the controls.": [
+      "Templated link, it"s possible to include {{ metric }} or other values coming from the controls.": [
         ""
       ],
       "Time": [""],
@@ -1914,8 +1914,8 @@
       "Add delivery method": [""],
       "Recipients are separated by \",\" or \";\"": [""],
       "Add": [""],
-      "Edit ${isReport ? 'Report' : 'Alert'}": [""],
-      "Add ${isReport ? 'Report' : 'Alert'}": [""],
+      "Edit ${isReport ? "Report" : "Alert"}": [""],
+      "Add ${isReport ? "Report" : "Alert"}": [""],
       "Report name": ["차트 유형"],
       "Alert name": ["테이블 명"],
       "Alert condition": [""],
@@ -2112,7 +2112,7 @@
       "3. The schemas_allowed_for_file_upload is a comma separated list of schemas that CSVs are allowed to upload to. Specify it as \"schemas_allowed_for_file_upload\": [\"public\", \"csv_upload\"]. If database flavor does not support schema or any schema is allowed to be accessed, just leave the list empty.": [
         ""
       ],
-      "4. The version field is a string specifying this db's version. This should be used with Presto DBs so that the syntax is correct.": [
+      "4. The version field is a string specifying this db"s version. This should be used with Presto DBs so that the syntax is correct.": [
         ""
       ],
       "5. The allows_virtual_table_explore field is a boolean specifying whether or not the Explore button in SQL Lab results is shown.": [
@@ -2202,10 +2202,10 @@
       "Recently edited charts, dashboards, and saved queries will appear here": [
         ""
       ],
-      "${tableName\n                      .split('')\n                      .slice(0, tableName.length - 1)\n                      .join('')}\n                    ": [
+      "${tableName\n                      .split("")\n                      .slice(0, tableName.length - 1)\n                      .join("")}\n                    ": [
         ""
       ],
-      "You don't have any favorites yet!": [""],
+      "You don"t have any favorites yet!": [""],
       "SQL Lab queries": ["SQL Lab"],
       "${tableName}": ["테이블 명"],
       "query": ["Query 공유"],

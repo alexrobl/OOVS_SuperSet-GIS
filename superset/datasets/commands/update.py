@@ -126,7 +126,7 @@ class UpdateDatasetCommand(UpdateMixin, BaseCommand):
         if self._get_duplicates(columns, "column_name"):
             exceptions.append(DatasetColumnsDuplicateValidationError())
         else:
-            # validate invalid id's
+            # validate invalid id"s
             columns_ids: List[int] = [
                 column["id"] for column in columns if "id" in column
             ]
@@ -149,7 +149,7 @@ class UpdateDatasetCommand(UpdateMixin, BaseCommand):
         if self._get_duplicates(metrics, "metric_name"):
             exceptions.append(DatasetMetricsDuplicateValidationError())
         else:
-            # validate invalid id's
+            # validate invalid id"s
             metrics_ids: List[int] = [
                 metric["id"] for metric in metrics if "id" in metric
             ]

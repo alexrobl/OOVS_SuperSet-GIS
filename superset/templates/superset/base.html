@@ -17,7 +17,7 @@
   under the License.
 #}
 {% extends "appbuilder/baselayout.html" %}
-{% from 'superset/partials/asset_bundle.html' import css_bundle, js_bundle with context %}
+{% from "superset/partials/asset_bundle.html" import css_bundle, js_bundle with context %}
 
 {% block head_css %}
   {{ super() }}
@@ -33,6 +33,6 @@
 {% block tail_js %}
   {{ super() }}
   {{ js_bundle("preamble") }}
-  {{ js_bundle('menu') }}
+  {{ js_bundle("menu") }}
   {% include "tail_js_custom_extra.html" %}
 {% endblock %}

@@ -29,7 +29,7 @@ import {
   isTableAnnotationLayer,
   isTimeseriesAnnotationResult,
   TimeseriesDataRecord,
-} from '@superset-ui/core';
+} from "@superset-ui/core";
 
 export function evalFormula(
   formula: FormulaAnnotationLayer,
@@ -57,10 +57,10 @@ export function parseAnnotationOpacity(opacity?: AnnotationOpacity): number {
 }
 
 const NATIVE_COLUMN_NAMES = {
-  descriptionColumns: ['long_descr'],
-  intervalEndColumn: 'end_dttm',
-  timeColumn: 'start_dttm',
-  titleColumn: 'short_descr',
+  descriptionColumns: ["long_descr"],
+  intervalEndColumn: "end_dttm",
+  timeColumn: "start_dttm",
+  titleColumn: "short_descr",
 };
 
 export function extractRecordAnnotations(
@@ -73,23 +73,23 @@ export function extractRecordAnnotations(
     const { records } = result;
     const {
       descriptionColumns = [],
-      intervalEndColumn = '',
-      timeColumn = '',
-      titleColumn = '',
+      intervalEndColumn = "",
+      timeColumn = "",
+      titleColumn = "",
     } = isTableAnnotationLayer(annotationLayer)
       ? annotationLayer
       : NATIVE_COLUMN_NAMES;
 
     return records.map(record => ({
       descriptions: descriptionColumns.map(
-        column => (record[column] || '') as string,
+        column => (record[column] || "") as string,
       ) as string[],
-      intervalEnd: (record[intervalEndColumn] || '') as string,
-      time: (record[timeColumn] || '') as string,
-      title: (record[titleColumn] || '') as string,
+      intervalEnd: (record[intervalEndColumn] || "") as string,
+      time: (record[timeColumn] || "") as string,
+      title: (record[titleColumn] || "") as string,
     }));
   }
-  throw new Error('Please rerun the query.');
+  throw new Error("Please rerun the query.");
 }
 
 export function formatAnnotationLabel(
@@ -104,10 +104,10 @@ export function formatAnnotationLabel(
   );
   if (name) titleLabels.push(name);
   if (title) titleLabels.push(title);
-  if (titleLabels.length > 0) labels.push(titleLabels.join(' - '));
+  if (titleLabels.length > 0) labels.push(titleLabels.join(" - "));
   if (filteredDescriptions.length > 0)
-    labels.push(filteredDescriptions.join('\n'));
-  return labels.join('\n\n');
+    labels.push(filteredDescriptions.join("\n"));
+  return labels.join("\n\n");
 }
 
 export function extractAnnotationLabels(

@@ -70,6 +70,9 @@ REDIS_RESULTS_DB = get_env_variable("REDIS_RESULTS_DB", "1")
 RESULTS_BACKEND = FileSystemCache("/app/superset_home/sqllab")
 
 
+#otras configuraciones
+MAPBOX_API_KEY = get_env_variable("MAPBOX_API_KEY")
+
 class CeleryConfig(object):
     BROKER_URL = f"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_CELERY_DB}"
     CELERY_IMPORTS = ("superset.sql_lab",)

@@ -51,7 +51,7 @@ def has_uuid_column(table_name, bind):
     if has_uuid_column:
         logging.info("Table %s already has uuid column, skipping...", table_name)
     else:
-        logging.info("Table %s doesn't have uuid column, adding...", table_name)
+        logging.info("Table %s doesn"t have uuid column, adding...", table_name)
     return has_uuid_column
 
 
@@ -94,6 +94,6 @@ def upgrade():
 def downgrade() -> None:
     """
     This script fixes b56500de1855_add_uuid_column_to_import_mixin.py by adding any
-    uuid columns that might have been skipped. There's no downgrade.
+    uuid columns that might have been skipped. There"s no downgrade.
     """
     pass

@@ -16,8 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t } from '@superset-ui/core';
-import { ControlPanelConfig, sections } from '@superset-ui/chart-controls';
+import { t } from "@superset-ui/core";
+import { ControlPanelConfig, sections } from "@superset-ui/chart-controls";
 import {
   lineInterpolation,
   showBrush,
@@ -35,27 +35,27 @@ import {
   leftMargin,
   showMarkers,
   timeSeriesSection,
-} from '../NVD3Controls';
+} from "../NVD3Controls";
 
 const config: ControlPanelConfig = {
   controlPanelSections: [
     sections.legacyTimeseriesTime,
     timeSeriesSection[0],
     {
-      label: t('Chart Options'),
+      label: t("Chart Options"),
       expanded: true,
       controlSetRows: [
-        ['color_scheme'],
+        ["color_scheme"],
         [showBrush],
         [
           {
-            name: 'send_time_range',
+            name: "send_time_range",
             config: {
-              type: 'CheckboxControl',
-              label: t('Propagate'),
+              type: "CheckboxControl",
+              label: t("Propagate"),
               renderTrigger: true,
               default: false,
-              description: t('Send range filter events to other charts'),
+              description: t("Send range filter events to other charts"),
             },
           },
         ],
@@ -66,7 +66,7 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('X Axis'),
+      label: t("X Axis"),
       expanded: true,
       controlSetRows: [
         [xAxisLabel],
@@ -77,14 +77,14 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('Y Axis'),
+      label: t("Y Axis"),
       expanded: true,
       controlSetRows: [
         [yAxisLabel],
         [leftMargin],
         [yAxisShowMinmax],
         [yLogScale],
-        ['y_axis_format'],
+        ["y_axis_format"],
         [yAxisBounds],
       ],
     },

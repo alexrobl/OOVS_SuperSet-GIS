@@ -32,8 +32,8 @@ msgstr ""
 #: superset-frontend/src/explore/components/controls/OptionControls/index.tsx:323
 msgid ""
 "\n"
-"                This filter was inherited from the dashboard's context.\n"
-"                It won't be saved when saving the chart.\n"
+"                This filter was inherited from the dashboard"s context.\n"
+"                It won"t be saved when saving the chart.\n"
 "              "
 msgstr ""
 "\n"
@@ -135,15 +135,15 @@ msgstr "!= (não é igual)"
 #, fuzzy
 msgid ""
 "${tableName\n"
-"                      .split('')\n"
+"                      .split("")\n"
 "                      .slice(0, tableName.length - 1)\n"
-"                      .join('')}\n"
+"                      .join("")}\n"
 "                    "
 msgstr ""
 "${tableName\n"
-"                        .split('')\n"
+"                        .split("")\n"
 "                        .slice(0, tableName.length - 1)\n"
-"                        .join('')}\n"
+"                        .join("")}\n"
 "                    "
 
 #: superset/security/analytics_db_safety.py:44
@@ -206,7 +206,7 @@ msgstr "O papel %(role)s foi concedido a %(user)s dando acesso a %(datasource)s"
 
 #: superset/views/core.py:2773
 #, python-format
-msgid "%(user)s's profile"
+msgid "%(user)s"s profile"
 msgstr "Perfil do %(user)s"
 
 #: superset/views/core.py:2442
@@ -561,8 +561,8 @@ msgstr ""
 "granularidade"
 
 #: superset/views/alerts.py:189
-msgid "A semicolon ';' delimited list of email addresses"
-msgstr "Uma lista de emails delimitada por ponto e vírgula ';'"
+msgid "A semicolon ";" delimited list of email addresses"
+msgstr "Uma lista de emails delimitada por ponto e vírgula ";""
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:789
 #: superset/connectors/sqla/views.py:469
@@ -1743,7 +1743,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/ColorSchemeControlWrapper.jsx:56
 msgid ""
 "Any color palette selected here will override the colors applied to this "
-"dashboard's individual charts"
+"dashboard"s individual charts"
 msgstr ""
 "Qualquer cor da paleta selecionada aqui irá sobrescrever as cores "
 "aplicadas aos gráficos individuais deste painel"
@@ -2067,7 +2067,7 @@ msgstr ""
 msgid ""
 "Bounds for the Y-axis. When left empty, the bounds are dynamically "
 "defined based on the min/max of the data. Note that this feature will "
-"only expand the axis range. It won't narrow the data's extent."
+"only expand the axis range. It won"t narrow the data"s extent."
 msgstr ""
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/BoxPlot/index.js:26
@@ -2348,18 +2348,18 @@ msgstr ""
 
 #: superset/views/core.py:2010
 #, python-format
-msgid "Can't find DruidCluster with cluster_name = '%(name)s'"
-msgstr "Não é possível encontrar DruidCluster com cluster_name = '%(name)s'"
+msgid "Can"t find DruidCluster with cluster_name = "%(name)s""
+msgstr "Não é possível encontrar DruidCluster com cluster_name = "%(name)s""
 
 #: superset/views/core.py:1998
 #, python-format
-msgid "Can't find User '%(name)s', please ask your admin to create one."
+msgid "Can"t find User "%(name)s", please ask your admin to create one."
 msgstr ""
-"Não foi possível encontrar o usuário '%(name)s', por favor peça a seu "
+"Não foi possível encontrar o usuário "%(name)s", por favor peça a seu "
 "administrador para criar um."
 
 #: superset/viz.py:1778
-msgid "Can't have overlap between Series and Breakdowns"
+msgid "Can"t have overlap between Series and Breakdowns"
 msgstr "Não pode haver sobreposição entre Series e Breakdowns"
 
 #: superset-frontend/src/SqlLab/components/SaveQuery/index.tsx:173
@@ -2705,7 +2705,7 @@ msgid ""
 " to can be fine tuned as well in the dashboard view.\n"
 "\n"
 "    Note that this plugin is being replaced with the new Filters feature "
-"that lives in the dashboard view itself. It's easier to use and has more "
+"that lives in the dashboard view itself. It"s easier to use and has more "
 "capabilities!"
 msgstr ""
 
@@ -4340,7 +4340,7 @@ msgstr ""
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:91
 msgid ""
 "Default minimal column width in pixels, actual width may still be larger "
-"than this if other columns don't need much space"
+"than this if other columns don"t need much space"
 msgstr ""
 
 #: superset-frontend/src/filters/components/Select/controlPanel.ts:105
@@ -4797,7 +4797,7 @@ msgid "Domain"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/RefreshIntervalModal.tsx:29
-msgid "Don't refresh"
+msgid "Don"t refresh"
 msgstr "Não atualize"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Pie/controlPanel.ts:83
@@ -4950,7 +4950,7 @@ msgstr ""
 #: superset-frontend/src/explore/components/PropertiesModal/index.tsx:282
 msgid ""
 "Duration (in seconds) of the caching timeout for this chart. Note this "
-"defaults to the dataset's timeout if undefined."
+"defaults to the dataset"s timeout if undefined."
 msgstr ""
 "Duração (em segundos) do timeout do cache para este gráfico. Caso este "
 "valor não seja definido será usado o timeout do conjunto de dados."
@@ -6045,18 +6045,18 @@ msgid ""
 "while different filter groups will be ANDed together. Undefined group "
 "keys are treated as unique groups, i.e. are not grouped together. For "
 "example, if a table has three filters, of which two are for departments "
-"Finance and Marketing (group key = 'department'), and one refers to the "
-"region Europe (group key = 'region'), the filter clause would apply the "
-"filter (department = 'Finance' OR department = 'Marketing') AND (region ="
-" 'Europe')."
+"Finance and Marketing (group key = "department"), and one refers to the "
+"region Europe (group key = "region"), the filter clause would apply the "
+"filter (department = "Finance" OR department = "Marketing") AND (region ="
+" "Europe")."
 msgstr ""
 "Filtros com a mesma chave de grupo serão concatenados com OR dentro do "
 "grupo, enquanto que grupos diferentes serão concatenados com AND. Chaves "
 "de grupo indefinidas serão tratadas como grupos únicos, ou seja, não são "
 "agrupadas. Por exemplo, se uma tabela tem três filtros, dos quais dois "
-"são departamentos como Finanças e Marketing (group key = 'region'), a "
-"cláusula de filtro aplicada seria (department = 'Finance' OR department ="
-" 'Marketing') AND (region = 'Europe')."
+"são departamentos como Finanças e Marketing (group key = "region"), a "
+"cláusula de filtro aplicada seria (department = "Finance" OR department ="
+" "Marketing") AND (region = "Europe")."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:794
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:808
@@ -6272,8 +6272,8 @@ msgid "Group By filter plugin"
 msgstr ""
 
 #: superset/viz.py:895
-msgid "Group By' and 'Columns' can't overlap"
-msgstr "Group By' e 'Columns' não podem colidir"
+msgid "Group By" and "Columns" can"t overlap"
+msgstr "Group By" e "Columns" não podem colidir"
 
 #: superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx:83
 msgid "Group By, Metrics or Percentage Metrics must have a value"
@@ -6698,10 +6698,10 @@ msgstr "Certificado inválido"
 #: superset/views/core.py:1375
 msgid ""
 "Invalid connection string, a valid string usually follows:\n"
-"'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'"
+""DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME""
 msgstr ""
 "Texto de conexão inválido, um tempo válido geralmente segue:\n"
-"'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'"
+""DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME""
 
 #: superset/databases/schemas.py:148
 msgid ""
@@ -6714,14 +6714,14 @@ msgstr ""
 #: superset/views/database/validators.py:40
 msgid ""
 "Invalid connection string, a valid string usually "
-"follows:'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-"
-"NAME'<p>Example:'postgresql://user:password@your-postgres-"
-"db/database'</p>"
+"follows:"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-"
+"NAME"<p>Example:"postgresql://user:password@your-postgres-"
+"db/database"</p>"
 msgstr ""
 "Texto de conexão inválido, um texto válido geralmente segue: "
-"'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-"
-"NAME'<p>Exemplo:'postgresql://user:password@your-postgres-"
-"db/database'</p>"
+""DRIVER://USER:PASSWORD@DB-HOST/DATABASE-"
+"NAME"<p>Exemplo:"postgresql://user:password@your-postgres-"
+"db/database"</p>"
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:52
 msgid "Invalid cron expression"
@@ -6833,7 +6833,7 @@ msgstr "Problema 1001 - O banco de dados está sob carga atípica."
 #: superset-frontend/src/SqlLab/components/QuerySearch/index.tsx:180
 #: superset-frontend/src/SqlLab/components/SqlEditorLeftBar/index.jsx:125
 #: superset-frontend/src/components/DatabaseSelector/index.tsx:183
-msgid "It seems you don't have access to any database"
+msgid "It seems you don"t have access to any database"
 msgstr "Parece que você não tem acesso a qualquer banco de dados"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/Regular/Bar/controlPanel.tsx:221
@@ -7599,8 +7599,8 @@ msgstr "Métrica"
 #: superset/connectors/sqla/models.py:1079
 #: superset/connectors/sqla/models.py:1509
 #, python-format
-msgid "Metric '%(metric)s' does not exist"
-msgstr "Métrica '%(metric)s' não existe"
+msgid "Metric "%(metric)s" does not exist"
+msgstr "Métrica "%(metric)s" não existe"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:38
 #, fuzzy
@@ -7921,8 +7921,8 @@ msgid "Must be unique"
 msgstr "Deve ser único"
 
 #: superset/viz.py:2309
-msgid "Must have a [Group By] column to have 'count' as the [Label]"
-msgstr "Deve ter uma coluna [Group By] para ter 'count' como [Label]"
+msgid "Must have a [Group By] column to have "count" as the [Label]"
+msgstr "Deve ter uma coluna [Group By] para ter "count" como [Label]"
 
 #: superset/viz.py:1720
 msgid "Must have at least one numeric column specified"
@@ -8945,8 +8945,8 @@ msgid "Physical dataset"
 msgstr "Conjunto de dados físico"
 
 #: superset/viz.py:742
-msgid "Pick a granularity in the Time section or uncheck 'Include Time'"
-msgstr "Escolha uma granularidade na seção Tempo ou desmarque 'Incluir hora'"
+msgid "Pick a granularity in the Time section or uncheck "Include Time""
+msgstr "Escolha uma granularidade na seção Tempo ou desmarque "Incluir hora""
 
 #: superset/viz.py:1573
 msgid "Pick a metric for left axis!"
@@ -8999,7 +8999,7 @@ msgstr "Escolha exatamente 2 colunas como [Origem / Alvo]"
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:521
 msgid ""
 "Pick one or more columns that should be shown in the annotation. If you "
-"don't select a column all of them will be shown."
+"don"t select a column all of them will be shown."
 msgstr ""
 
 #: superset-frontend/src/explore/controlPanels/Separator.js:37
@@ -9083,8 +9083,8 @@ msgid ""
 msgstr ""
 
 #: superset/viz.py:879
-msgid "Please choose at least one 'Group by' field "
-msgstr "Por favor escolha pelo menos um campo 'Group by'"
+msgid "Please choose at least one "Group by" field "
+msgstr "Por favor escolha pelo menos um campo "Group by""
 
 #: superset/viz.py:891
 msgid "Please choose at least one metric"
@@ -9571,7 +9571,7 @@ msgid "Radar Chart"
 msgstr "Compartilhar gráfico"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Radar/controlPanel.tsx:201
-msgid "Radar render type, whether to display 'circle' shape."
+msgid "Radar render type, whether to display "circle" shape."
 msgstr ""
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Tree/controlPanel.tsx:121
@@ -10308,7 +10308,7 @@ msgstr "Visão SQL Lab"
 #: superset-frontend/src/SqlLab/components/App/index.jsx:91
 #, python-format
 msgid ""
-"SQL Lab uses your browser's local storage to store queries and results.\n"
+"SQL Lab uses your browser"s local storage to store queries and results.\n"
 "Currently, you are using %(currentUsage)s KB out of %(maxStorage)d KB "
 "storage space.\n"
 "To keep SQL Lab from crashing, please delete some query tabs.\n"
@@ -11908,7 +11908,7 @@ msgstr "Tabela"
 
 #: superset/views/core.py:1761
 #, python-format
-msgid "Table %(table)s wasn't found in the database %(db)s"
+msgid "Table %(table)s wasn"t found in the database %(db)s"
 msgstr "Tabela %(table)s não foi encontrada no banco de dados %(db)s"
 
 #: superset/views/database/forms.py:138 superset/views/database/forms.py:291
@@ -12017,7 +12017,7 @@ msgstr "Parâmetros do template"
 
 #: superset-frontend/src/explore/controlPanels/TimeTable.js:52
 msgid ""
-"Templated link, it's possible to include {{ metric }} or other values "
+"Templated link, it"s possible to include {{ metric }} or other values "
 "coming from the controls."
 msgstr ""
 "Link com template, é possível incluir {{metric}} ou outros valores "
@@ -12067,7 +12067,7 @@ msgstr ""
 #: superset/errors.py:118
 #, fuzzy
 msgid ""
-"The CTAS (create table as select) doesn't have a SELECT statement at the "
+"The CTAS (create table as select) doesn"t have a SELECT statement at the "
 "end. Please make sure your query has a SELECT as its last statement. "
 "Then, try running your query again."
 msgstr ""
@@ -12247,7 +12247,7 @@ msgid "The dataset linked to this chart may have been deleted."
 msgstr "A fonte de dados parece ter sido deletada"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1283
-msgid "The datasource couldn't be loaded"
+msgid "The datasource couldn"t be loaded"
 msgstr "A fonte de dados não podê ser carregada"
 
 #: superset/errors.py:92
@@ -12305,7 +12305,7 @@ msgstr "As seguintes tabelas atualizaram os metadados de colunas: %(tables)s"
 
 #: superset/db_engine_specs/mysql.py:134
 #, python-format
-msgid "The host \"%(hostname)s\" might be down and can't be reached."
+msgid "The host \"%(hostname)s\" might be down and can"t be reached."
 msgstr ""
 
 #: superset/db_engine_specs/mssql.py:92
@@ -12314,7 +12314,7 @@ msgstr ""
 #: superset/db_engine_specs/redshift.py:78
 #, python-format
 msgid ""
-"The host \"%(hostname)s\" might be down, and can't be reached on port "
+"The host \"%(hostname)s\" might be down, and can"t be reached on port "
 "%(port)s."
 msgstr ""
 
@@ -12323,7 +12323,7 @@ msgid "The host is invalid. Please verify that this field is entered correctly."
 msgstr ""
 
 #: superset/errors.py:104
-msgid "The host might be down, and can't be reached on the provided port."
+msgid "The host might be down, and can"t be reached on the provided port."
 msgstr ""
 
 #: superset/db_engine_specs/mssql.py:82
@@ -12335,7 +12335,7 @@ msgid "The hostname \"%(hostname)s\" cannot be resolved."
 msgstr ""
 
 #: superset/errors.py:102
-msgid "The hostname provided can't be resolved."
+msgid "The hostname provided can"t be resolved."
 msgstr ""
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/sections.tsx:60
@@ -12353,14 +12353,14 @@ msgid ""
 "datasource, you may change how these associated charts behave. Also note "
 "that charts need to point to a datasource, so this form will fail at "
 "saving if removing charts from a datasource. If you want to change the "
-"datasource for a chart, overwrite the chart from the 'explore view'"
+"datasource for a chart, overwrite the chart from the "explore view""
 msgstr ""
 "A lista de gráficos associados com esta tabela. Ao alterar essa fonte de "
 "dados você pode mudar como esses gráficos associados se comportam. Note "
 "também que os gráficos precisam referenciar uma fonte de dados, então "
 "este formulário não irá salvar se os gráficos forem removidos da fonte de"
 " dados. Se você deseja mudar a fonte de dados para um gráfico, altere o "
-"gráfico em 'explorar visão'"
+"gráfico em "explorar visão""
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:130
 msgid "The maximum number of events to return, equivalent to the number of rows"
@@ -12628,7 +12628,7 @@ msgid "The query contains one or more malformed template parameters."
 msgstr ""
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:106
-msgid "The query couldn't be loaded"
+msgid "The query couldn"t be loaded"
 msgstr "A consulta não pôde ser carregada"
 
 #: superset/errors.py:129
@@ -12788,9 +12788,9 @@ msgstr ""
 msgid ""
 "The time range for the visualization. All relative times, e.g. \"Last "
 "month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using"
-" the server's local time (sans timezone). All tooltips and placeholder "
+" the server"s local time (sans timezone). All tooltips and placeholder "
 "times are expressed in UTC (sans timezone). The timestamps are then "
-"evaluated by the database using the engine's local timezone. Note one can"
+"evaluated by the database using the engine"s local timezone. Note one can"
 " explicitly set the timezone per the ISO 8601 format if specifying either"
 " the start and/or end time."
 msgstr ""
@@ -12828,7 +12828,7 @@ msgstr "O usuário parece ter sido excluído"
 #: superset/db_engine_specs/postgres.py:112
 #, fuzzy, python-format
 msgid "The username \"%(username)s\" does not exist."
-msgstr "Métrica '%(metric)s' não existe"
+msgstr "Métrica "%(metric)s" não existe"
 
 #: superset/errors.py:107
 msgid "The username provided when connecting to a database is not valid."
@@ -13021,7 +13021,7 @@ msgstr "Ocorreu um problema ao deletar as consultas selecionadas: %s"
 
 #: superset/viz.py:1955
 msgid ""
-"There's a loop in your Sankey, please provide a tree. Here's a faulty "
+"There"s a loop in your Sankey, please provide a tree. Here"s a faulty "
 "link: {}"
 msgstr ""
 "Há um loop em seu Sankey, por favor, forneça uma árvore. Aqui está um "
@@ -13088,7 +13088,7 @@ msgid "This chart has been moved to a different filter scope."
 msgstr "Este gráfico foi movido para um escopo de filtro diferente."
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FilterScope/utils.ts:56
-msgid "This chart might be incompatible with the filter (datasets don't match)"
+msgid "This chart might be incompatible with the filter (datasets don"t match)"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/ColorSchemeControl/index.jsx:127
@@ -13171,8 +13171,8 @@ msgstr "Isso define o elemento a ser plotado no gráfico"
 msgid ""
 "This feature is deprecated and will be removed on 2.0. Take a look at the"
 " replacement feature <a "
-"href='https://superset.apache.org/docs/installation/alerts-"
-"reports'>Alerts & Reports documentation</a>"
+"href="https://superset.apache.org/docs/installation/alerts-"
+"reports">Alerts & Reports documentation</a>"
 msgstr ""
 
 #: superset/connectors/sqla/views.py:447
@@ -13184,7 +13184,7 @@ msgstr ""
 "executar uma subconsulta com o texto dessa consulta."
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterSets/FiltersHeader.tsx:105
-msgid "This filter doesn't exist in dashboard. It will not be applied."
+msgid "This filter doesn"t exist in dashboard. It will not be applied."
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterSets/EditSection.tsx:165
@@ -13431,7 +13431,7 @@ msgstr ""
 "Expressão de tempo para usar como um predicado ao recuperar valores "
 "distintos para preencher o componente de filtro. Aplica-se apenas quando "
 "\"Ativar seleção de filtro\" estiver ativado. Se você inserir `7 dias "
-"atrás ', a lista distinta de valores no filtro será preenchida com base "
+"atrás ", a lista distinta de valores no filtro será preenchida com base "
 "no valor distinto na semana passada"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:296
@@ -14215,7 +14215,7 @@ msgstr "Papeis do usuário"
 
 #: superset/errors.py:112
 #, fuzzy
-msgid "User doesn't have the proper permissions."
+msgid "User doesn"t have the proper permissions."
 msgstr "Você não tem o direito de "
 
 #: superset-frontend/src/filters/components/Select/controlPanel.ts:94
@@ -14475,14 +14475,14 @@ msgstr ""
 msgid ""
 "Visualizes how a metric has changed over a time using a color scale and a"
 " calendar view. Gray values are used to indicate missing values and the "
-"linear color scheme is used to encode the magnitude of each day's value."
+"linear color scheme is used to encode the magnitude of each day"s value."
 msgstr ""
 
 #: superset-frontend/plugins/legacy-plugin-chart-country-map/src/index.js:27
 msgid ""
-"Visualizes how a single metric varies across a country's principal "
+"Visualizes how a single metric varies across a country"s principal "
 "subdivisions (states, provinces, etc) on a chloropleth map. Each "
-"subdivision's value is elevated when you hover over the corresponding "
+"subdivision"s value is elevated when you hover over the corresponding "
 "geographic boundary."
 msgstr ""
 
@@ -14495,7 +14495,7 @@ msgstr ""
 
 #: superset-frontend/plugins/legacy-plugin-chart-sankey/src/index.js:29
 msgid ""
-"Visualizes the flow of different group's values through different stages "
+"Visualizes the flow of different group"s values through different stages "
 "of a system. New stages in the pipeline are visualized as nodes or "
 "layers. The thickness of the bars or edges represent the metric being "
 "visualized."
@@ -14546,14 +14546,14 @@ msgstr ""
 
 #: superset/db_engine_specs/bigquery.py:166
 #, fuzzy, python-format
-msgid "We can't seem to resolve column \"%(column)s\" at line %(location)s."
+msgid "We can"t seem to resolve column \"%(column)s\" at line %(location)s."
 msgstr ""
 "Não é possível resolver a coluna \"%(column_name)s\" na linha "
 "%(location)s."
 
 #: superset/db_engine_specs/sqlite.py:63
 #, fuzzy, python-format
-msgid "We can't seem to resolve the column \"%(column_name)s\""
+msgid "We can"t seem to resolve the column \"%(column_name)s\""
 msgstr ""
 "Não é possível resolver a coluna \"%(column_name)s\" na linha "
 "%(location)s."
@@ -14562,7 +14562,7 @@ msgstr ""
 #: superset/db_engine_specs/presto.py:171
 #, python-format
 msgid ""
-"We can't seem to resolve the column \"%(column_name)s\" at line "
+"We can"t seem to resolve the column \"%(column_name)s\" at line "
 "%(location)s."
 msgstr ""
 "Não é possível resolver a coluna \"%(column_name)s\" na linha "
@@ -14704,16 +14704,16 @@ msgstr ""
 "particionado ou indexado."
 
 #: superset/viz.py:834
-msgid "When using 'Group By' you are limited to use a single metric"
-msgstr "Ao usar 'Group By' você está limitado a usar uma única métrica"
+msgid "When using "Group By" you are limited to use a single metric"
+msgstr "Ao usar "Group By" você está limitado a usar uma única métrica"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Gauge/controlPanel.tsx:258
 msgid "Whether the progress bar overlaps when there are multiple groups of data"
 msgstr ""
 
 #: superset/connectors/sqla/views.py:466
-msgid "Whether the table was generated by the 'Visualize' flow in SQL Lab"
-msgstr "Se a tabela foi gerada pelo fluxo 'Visualizar' em SQL Lab"
+msgid "Whether the table was generated by the "Visualize" flow in SQL Lab"
+msgstr "Se a tabela foi gerada pelo fluxo "Visualizar" em SQL Lab"
 
 #: superset/connectors/druid/views.py:98 superset/connectors/sqla/views.py:99
 msgid ""
@@ -14871,11 +14871,11 @@ msgstr "Se é para autocompletar as opções de filtro"
 
 #: superset/connectors/druid/views.py:325 superset/connectors/sqla/views.py:461
 msgid ""
-"Whether to populate the filter's dropdown in the explore view's filter "
+"Whether to populate the filter"s dropdown in the explore view"s filter "
 "section with a list of distinct values fetched from the backend on the "
 "fly"
 msgstr ""
-"Se popula o combo do filtro na seção filtros de 'explorar visão' com uma "
+"Se popula o combo do filtro na seção filtros de "explorar visão" com uma "
 "lista de valores distintos vindos do backend automaticamente"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:163
@@ -15311,26 +15311,26 @@ msgstr "Você não tem permissão para editar esse painel"
 
 #: superset/dashboards/commands/exceptions.py:86
 #, fuzzy
-msgid "You don't have access to this dashboard."
+msgid "You don"t have access to this dashboard."
 msgstr "Você não tem permissão para editar esse painel"
 
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:144
-msgid "You don't have any favorites yet!"
+msgid "You don"t have any favorites yet!"
 msgstr "Você não tem nenhum favorito ainda!"
 
 #: superset/key_value/commands/exceptions.py:45
 #, fuzzy
-msgid "You don't have permission to modify the value."
+msgid "You don"t have permission to modify the value."
 msgstr "Você não tem permissão para editar esse gráfico"
 
 #: superset/views/core.py:618 superset/views/core.py:823
 #: superset/views/core.py:829 superset/views/core.py:999
 #: superset/views/core.py:1017
-msgid "You don't have the rights to "
+msgid "You don"t have the rights to "
 msgstr "Você não tem o direito de "
 
 #: superset-frontend/src/components/EditableTitle/index.tsx:199
-msgid "You don't have the rights to alter this title."
+msgid "You don"t have the rights to alter this title."
 msgstr "Você não tem os direitos de alterar este título."
 
 #: superset/views/core.py:406
@@ -15830,7 +15830,7 @@ msgid "joined"
 msgstr "entrou"
 
 #: superset/views/base.py:527
-msgid "json isn't valid"
+msgid "json isn"t valid"
 msgstr "JSON não é válido"
 
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:233

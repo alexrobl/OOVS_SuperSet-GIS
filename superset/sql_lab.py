@@ -418,7 +418,7 @@ def execute_sql_statements(  # pylint: disable=too-many-arguments, too-many-loca
         statements = [rendered_query]
         logger.info("Query %s: Executing query as a single statement", str(query_id))
 
-    logger.info("Query %s: Set query to 'running'", str(query_id))
+    logger.info("Query %s: Set query to "running"", str(query_id))
     query.status = QueryStatus.RUNNING
     query.start_running_time = now_as_float()
     session.commit()
@@ -574,7 +574,7 @@ def execute_sql_statements(  # pylint: disable=too-many-arguments, too-many-loca
     session.commit()
 
     if return_results:
-        # since we're returning results we need to create non-arrow data
+        # since we"re returning results we need to create non-arrow data
         if use_arrow_data:
             (
                 data,

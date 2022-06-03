@@ -16,33 +16,33 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import buildQuery from '../../src/Gauge/buildQuery';
+import buildQuery from "../../src/Gauge/buildQuery";
 
-describe('Gauge buildQuery', () => {
+describe("Gauge buildQuery", () => {
   const baseFormData = {
-    datasource: '5__table',
-    metric: 'foo',
-    viz_type: 'my_chart',
+    datasource: "5__table",
+    metric: "foo",
+    viz_type: "my_chart",
   };
 
-  it('should build query fields with no group by column', () => {
+  it("should build query fields with no group by column", () => {
     const formData = { ...baseFormData, groupby: undefined };
     const queryContext = buildQuery(formData);
     const [query] = queryContext.queries;
     expect(query.groupby).toEqual([]);
   });
 
-  it('should build query fields with single group by column', () => {
-    const formData = { ...baseFormData, groupby: ['foo'] };
+  it("should build query fields with single group by column", () => {
+    const formData = { ...baseFormData, groupby: ["foo"] };
     const queryContext = buildQuery(formData);
     const [query] = queryContext.queries;
-    expect(query.groupby).toEqual(['foo']);
+    expect(query.groupby).toEqual(["foo"]);
   });
 
-  it('should build query fields with multiple group by columns', () => {
-    const formData = { ...baseFormData, groupby: ['foo', 'bar'] };
+  it("should build query fields with multiple group by columns", () => {
+    const formData = { ...baseFormData, groupby: ["foo", "bar"] };
     const queryContext = buildQuery(formData);
     const [query] = queryContext.queries;
-    expect(query.groupby).toEqual(['foo', 'bar']);
+    expect(query.groupby).toEqual(["foo", "bar"]);
   });
 });

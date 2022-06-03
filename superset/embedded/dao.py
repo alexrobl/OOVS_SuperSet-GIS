@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 
 class EmbeddedDAO(BaseDAO):
     model_cls = EmbeddedDashboard
-    # There isn't really a regular scenario where we would rather get Embedded by id
+    # There isn"t really a regular scenario where we would rather get Embedded by id
     id_column_name = "uuid"
 
     @staticmethod

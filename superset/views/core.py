@@ -226,13 +226,13 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
           Permissions not in the request will be revoked. This endpoint should
           be available to admins only. Expects JSON in the format:
            {
-            'role_name': '{role_name}',
-            'database': [{
-                'datasource_type': '{table|druid}',
-                'name': '{database_name}',
-                'schema': [{
-                    'name': '{schema_name}',
-                    'datasources': ['{datasource name}, {datasource name}']
+            "role_name": "{role_name}",
+            "database": [{
+                "datasource_type": "{table|druid}",
+                "name": "{database_name}",
+                "schema": [{
+                    "name": "{schema_name}",
+                    "datasources": ["{datasource name}, {datasource name}"]
                 }]
             }]
         }
@@ -504,7 +504,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
             return json_error_response("The slice does not exist")
 
         if not slc.datasource:
-            return json_error_response("The slice's datasource does not exist")
+            return json_error_response("The slice"s datasource does not exist")
 
         try:
             viz_obj = get_viz(
@@ -630,7 +630,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
             and not security_manager.can_access("can_csv", "Superset")
         ):
             return json_error_response(
-                _("You don't have the rights to ") + _("download as csv"),
+                _("You don"t have the rights to ") + _("download as csv"),
                 status=403,
             )
 
@@ -854,13 +854,13 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
 
         if action == "overwrite" and not slice_overwrite_perm:
             return json_error_response(
-                _("You don't have the rights to ") + _("alter this ") + _("chart"),
+                _("You don"t have the rights to ") + _("alter this ") + _("chart"),
                 status=403,
             )
 
         if action == "saveas" and not slice_add_perm:
             return json_error_response(
-                _("You don't have the rights to ") + _("create a ") + _("chart"),
+                _("You don"t have the rights to ") + _("create a ") + _("chart"),
                 status=403,
             )
 
@@ -965,7 +965,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
 
     @staticmethod
     def remove_extra_filters(filters: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Extra filters are ones inherited from the dashboard's temporary context
+        """Extra filters are ones inherited from the dashboard"s temporary context
         Those should not be saved when saving the chart"""
         return [f for f in filters if not f.get("isExtra")]
 
@@ -988,7 +988,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
 
         if action == "saveas":
             if "slice_id" in form_data:
-                form_data.pop("slice_id")  # don't save old slice_id
+                form_data.pop("slice_id")  # don"t save old slice_id
             slc = Slice(owners=[g.user] if g.user else [])
 
         form_data["adhoc_filters"] = self.remove_extra_filters(
@@ -1032,7 +1032,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
             dash_overwrite_perm = check_ownership(dash, raise_if_false=False)
             if not dash_overwrite_perm:
                 return json_error_response(
-                    _("You don't have the rights to ")
+                    _("You don"t have the rights to ")
                     + _("alter this ")
                     + _("dashboard"),
                     status=403,
@@ -1050,7 +1050,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
             dash_add_perm = security_manager.can_access("can_write", "Dashboard")
             if not dash_add_perm:
                 return json_error_response(
-                    _("You don't have the rights to ")
+                    _("You don"t have the rights to ")
                     + _("create a ")
                     + _("dashboard"),
                     status=403,
@@ -1273,7 +1273,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
     def save_dash(  # pylint: disable=no-self-use
         self, dashboard_id: int
     ) -> FlaskResponse:
-        """Save a dashboard's metadata"""
+        """Save a dashboard"s metadata"""
         session = db.session()
         dash = session.query(Dashboard).get(dashboard_id)
         check_ownership(dash, raise_if_false=True)
@@ -1371,7 +1371,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
 
             with closing(engine.raw_connection()) as conn:
                 if engine.dialect.do_ping(conn):
-                    return json_success('"OK"')
+                    return json_success(""OK"")
 
                 raise DBAPIError(None, None, None)
         except CertificateException as ex:
@@ -1392,7 +1392,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
             return json_error_response(
                 _(
                     "Invalid connection string, a valid string usually follows:\n"
-                    "'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'"
+                    ""DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME""
                 )
             )
         except DBAPIError:
@@ -1549,7 +1549,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
     @event_logger.log_this
     @expose("/fave_dashboards_by_username/<username>/", methods=["GET"])
     def fave_dashboards_by_username(self, username: str) -> FlaskResponse:
-        """This lets us use a user's username to pull favourite dashboards"""
+        """This lets us use a user"s username to pull favourite dashboards"""
         logger.warning(
             "%s.fave_dashboards_by_username "
             "This API endpoint is deprecated and will be removed in version 3.0.0",
@@ -1807,7 +1807,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
             if not table:
                 return json_error_response(
                     __(
-                        "Table %(table)s wasn't found in the database %(db)s",
+                        "Table %(table)s wasn"t found in the database %(db)s",
                         table=table_name,
                         db=db_name,
                     ),
@@ -1832,7 +1832,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
                     )
 
                 if not slc.datasource:
-                    raise Exception("Slice's datasource does not exist")
+                    raise Exception("Slice"s datasource does not exist")
 
                 obj = get_viz(
                     datasource_type=slc.datasource.type,
@@ -2019,7 +2019,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
             .one_or_none()
         )
         if not table:
-            # Create table if doesn't exist.
+            # Create table if doesn"t exist.
             with db.session.no_autoflush:
                 table = SqlaTable(table_name=table_name, owners=[g.user])
                 table.database_id = database_id
@@ -2123,7 +2123,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
     ) -> FlaskResponse:
         mydb = db.session.query(Database).get(database_id)
 
-        sql = json.loads(request.form.get("sql", '""'))
+        sql = json.loads(request.form.get("sql", """"))
         template_params = json.loads(request.form.get("templateParams") or "{}")
         if template_params:
             template_processor = get_template_processor(mydb)
@@ -2701,7 +2701,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
 
         return self.render_template(
             "superset/basic.html",
-            title=_("%(user)s's profile", user=username).__str__(),
+            title=_("%(user)s"s profile", user=username).__str__(),
             entry="profile",
             bootstrap_data=json.dumps(
                 payload, default=utils.pessimistic_json_iso_dttm_ser

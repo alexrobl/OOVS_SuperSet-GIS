@@ -16,20 +16,20 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { ChartProps, getMetricLabel, DataRecordValue } from '@superset-ui/core';
-import { EChartsCoreOption, TreeSeriesOption } from 'echarts';
+import { ChartProps, getMetricLabel, DataRecordValue } from "@superset-ui/core";
+import { EChartsCoreOption, TreeSeriesOption } from "echarts";
 import {
   TreeSeriesCallbackDataParams,
   TreeSeriesNodeItemOption,
-} from 'echarts/types/src/chart/tree/TreeSeries';
-import { OptionName } from 'echarts/types/src/util/types';
+} from "echarts/types/src/chart/tree/TreeSeries";
+import { OptionName } from "echarts/types/src/util/types";
 import {
   EchartsTreeFormData,
   DEFAULT_FORM_DATA as DEFAULT_GRAPH_FORM_DATA,
   TreeDataRecord,
-} from './types';
-import { DEFAULT_TREE_SERIES_OPTION } from './constants';
-import { EchartsProps } from '../types';
+} from "./types";
+import { DEFAULT_TREE_SERIES_OPTION } from "./constants";
+import { EchartsProps } from "../types";
 
 export function formatTooltip({
   params,
@@ -40,13 +40,13 @@ export function formatTooltip({
 }): string {
   const { value, treeAncestors } = params;
   const treePath = (treeAncestors ?? [])
-    .map(pathInfo => pathInfo?.name || '')
-    .filter(path => path !== '');
+    .map(pathInfo => pathInfo?.name || "")
+    .filter(path => path !== "");
 
   return [
-    `<div>${treePath.join(' ▸ ')}</div>`,
-    value ? `${metricLabel}: ${value}` : '',
-  ].join('');
+    `<div>${treePath.join(" ▸ ")}</div>`,
+    value ? `${metricLabel}: ${value}` : "",
+  ].join("");
 }
 
 export default function transformProps(chartProps: ChartProps): EchartsProps {
@@ -57,7 +57,7 @@ export default function transformProps(chartProps: ChartProps): EchartsProps {
     id,
     parent,
     name,
-    metric = '',
+    metric = "",
     rootNodeId,
     layout,
     orient,
@@ -73,7 +73,7 @@ export default function transformProps(chartProps: ChartProps): EchartsProps {
   const nameColumn = name || id;
 
   function findNodeName(rootNodeId: DataRecordValue): OptionName {
-    let nodeName: DataRecordValue = '';
+    let nodeName: DataRecordValue = "";
     data.some(node => {
       if (node[id]!.toString() === rootNodeId) {
         nodeName = node[nameColumn];
@@ -177,7 +177,7 @@ export default function transformProps(chartProps: ChartProps): EchartsProps {
 
   const series: TreeSeriesOption[] = [
     {
-      type: 'tree',
+      type: "tree",
       data: [finalTree],
       label: {
         ...DEFAULT_TREE_SERIES_OPTION.label,
@@ -201,8 +201,8 @@ export default function transformProps(chartProps: ChartProps): EchartsProps {
     animationEasing: DEFAULT_TREE_SERIES_OPTION.animationEasing,
     series,
     tooltip: {
-      trigger: 'item',
-      triggerOn: 'mousemove',
+      trigger: "item",
+      triggerOn: "mousemove",
       formatter: (params: any) =>
         formatTooltip({
           params,

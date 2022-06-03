@@ -17,7 +17,7 @@
 """empty message
 
 Revision ID: 5ccf602336a0
-Revises: ('130915240929', 'c9495751e314')
+Revises: ("130915240929", "c9495751e314")
 Create Date: 2018-04-12 16:00:47.639218
 
 """

@@ -26,7 +26,7 @@ NONCE=$(echo "$(date "+%Y%m%d%H%M") - ($(date +%M)%20)" | bc)
 
 # Echo only when not in parallel mode
 say() {
-  if [[ $(echo "$INPUT_PARALLEL" | tr '[:lower:]' '[:upper:]') != 'TRUE' ]]; then
+  if [[ $(echo "$INPUT_PARALLEL" | tr "[:lower:]" "[:upper:]") != "TRUE" ]]; then
     echo "$1"
   fi
 }
@@ -78,7 +78,7 @@ build-instrumented-assets() {
   say "::group::Build static assets with JS instrumented for test coverage"
   cache-restore instrumented-assets
   if [[ -f "$ASSETS_MANIFEST" ]]; then
-    echo 'Skip frontend build because instrumented static assets already exist.'
+    echo "Skip frontend build because instrumented static assets already exist."
   else
     npm run build-instrumented
     cache-save instrumented-assets
@@ -108,8 +108,8 @@ setup-mysql() {
     CREATE DATABASE sqllab_test_db DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
     DROP DATABASE IF EXISTS admin_database;
     CREATE DATABASE admin_database DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-    CREATE USER 'superset'@'%' IDENTIFIED BY 'superset';
-    GRANT ALL ON *.* TO 'superset'@'%';
+    CREATE USER "superset"@"%" IDENTIFIED BY "superset";
+    GRANT ALL ON *.* TO "superset"@"%";
     FLUSH PRIVILEGES;
 EOF
   say "::endgroup::"
@@ -168,7 +168,7 @@ cypress-run() {
       --parallel --ci-build-id "${GITHUB_SHA:0:8}-${NONCE}"
   fi
 
-  # don't add quotes to $record because we do want word splitting
+  # don"t add quotes to $record because we do want word splitting
   say "::endgroup::"
 }
 

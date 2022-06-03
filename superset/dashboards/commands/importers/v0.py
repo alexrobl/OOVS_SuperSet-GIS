@@ -94,7 +94,7 @@ def import_dashboard(
     be overridden or just copies over. Slices that belong to this
     dashboard will be wired to existing tables. This function can be used
     to import/export dashboards between multiple superset instances.
-    Audit metadata isn't copied over.
+    Audit metadata isn"t copied over.
     """
 
     def alter_positions(

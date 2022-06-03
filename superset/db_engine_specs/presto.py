@@ -65,11 +65,11 @@ if TYPE_CHECKING:
     from superset.models.core import Database
 
 COLUMN_DOES_NOT_EXIST_REGEX = re.compile(
-    "line (?P<location>.+?): .*Column '(?P<column_name>.+?)' cannot be resolved"
+    "line (?P<location>.+?): .*Column "(?P<column_name>.+?)" cannot be resolved"
 )
 TABLE_DOES_NOT_EXIST_REGEX = re.compile(".*Table (?P<table_name>.+?) does not exist")
 SCHEMA_DOES_NOT_EXIST_REGEX = re.compile(
-    "line (?P<location>.+?): .*Schema '(?P<schema_name>.+?)' does not exist"
+    "line (?P<location>.+?): .*Schema "(?P<schema_name>.+?)" does not exist"
 )
 CONNECTION_ACCESS_DENIED_REGEX = re.compile("Access Denied: Invalid credentials")
 CONNECTION_INVALID_HOSTNAME_REGEX = re.compile(
@@ -83,7 +83,7 @@ CONNECTION_PORT_CLOSED_REGEX = re.compile(
     r"Failed to establish a new connection: \[Errno 61\] Connection refused"
 )
 CONNECTION_UNKNOWN_DATABASE_ERROR = re.compile(
-    r"line (?P<location>.+?): Catalog '(?P<catalog_name>.+?)' does not exist"
+    r"line (?P<location>.+?): Catalog "(?P<catalog_name>.+?)" does not exist"
 )
 
 logger = logging.getLogger(__name__)
@@ -101,7 +101,7 @@ def get_children(column: ResultSetColumnType) -> List[ResultSetColumnType]:
     For rows, we return a list of the columns:
 
         >>> get_children(dict(name="a", type="ROW(BIGINT,FOO VARCHAR)",  is_dttm=False))
-        [{'name': 'a._col0', 'type': 'BIGINT', 'is_dttm': False}, {'name': 'a.foo', 'type': 'VARCHAR', 'is_dttm': False}]  # pylint: disable=line-too-long
+        [{"name": "a._col0", "type": "BIGINT", "is_dttm": False}, {"name": "a.foo", "type": "VARCHAR", "is_dttm": False}]  # pylint: disable=line-too-long
 
     :param column: dictionary representing a Presto column
     :return: list of dictionaries representing children columns
@@ -111,7 +111,7 @@ def get_children(column: ResultSetColumnType) -> List[ResultSetColumnType]:
         raise ValueError
     match = pattern.match(column["type"])
     if not match:
-        raise Exception(f"Unable to parse column type {column['type']}")
+        raise Exception(f"Unable to parse column type {column["type"]}")
 
     group = match.groupdict()
     type_ = group["type"].upper()
@@ -126,13 +126,13 @@ def get_children(column: ResultSetColumnType) -> List[ResultSetColumnType]:
             parts = list(utils.split(child.strip(), " "))
             if len(parts) == 2:
                 name, type_ = parts
-                name = name.strip('"')
+                name = name.strip(""")
             else:
                 name = f"_col{nameless_columns}"
                 type_ = parts[0]
                 nameless_columns += 1
             _column: ResultSetColumnType = {
-                "name": f"{column['name']}.{name.lower()}",
+                "name": f"{column["name"]}.{name.lower()}",
                 "type": type_,
                 "is_dttm": False,
             }
@@ -149,24 +149,24 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
 
     _time_grain_expressions = {
         None: "{col}",
-        "PT1S": "date_trunc('second', CAST({col} AS TIMESTAMP))",
-        "PT1M": "date_trunc('minute', CAST({col} AS TIMESTAMP))",
-        "PT1H": "date_trunc('hour', CAST({col} AS TIMESTAMP))",
-        "P1D": "date_trunc('day', CAST({col} AS TIMESTAMP))",
-        "P1W": "date_trunc('week', CAST({col} AS TIMESTAMP))",
-        "P1M": "date_trunc('month', CAST({col} AS TIMESTAMP))",
-        "P3M": "date_trunc('quarter', CAST({col} AS TIMESTAMP))",
-        "P1Y": "date_trunc('year', CAST({col} AS TIMESTAMP))",
-        "P1W/1970-01-03T00:00:00Z": "date_add('day', 5, date_trunc('week', "
-        "date_add('day', 1, CAST({col} AS TIMESTAMP))))",
-        "1969-12-28T00:00:00Z/P1W": "date_add('day', -1, date_trunc('week', "
-        "date_add('day', 1, CAST({col} AS TIMESTAMP))))",
+        "PT1S": "date_trunc("second", CAST({col} AS TIMESTAMP))",
+        "PT1M": "date_trunc("minute", CAST({col} AS TIMESTAMP))",
+        "PT1H": "date_trunc("hour", CAST({col} AS TIMESTAMP))",
+        "P1D": "date_trunc("day", CAST({col} AS TIMESTAMP))",
+        "P1W": "date_trunc("week", CAST({col} AS TIMESTAMP))",
+        "P1M": "date_trunc("month", CAST({col} AS TIMESTAMP))",
+        "P3M": "date_trunc("quarter", CAST({col} AS TIMESTAMP))",
+        "P1Y": "date_trunc("year", CAST({col} AS TIMESTAMP))",
+        "P1W/1970-01-03T00:00:00Z": "date_add("day", 5, date_trunc("week", "
+        "date_add("day", 1, CAST({col} AS TIMESTAMP))))",
+        "1969-12-28T00:00:00Z/P1W": "date_add("day", -1, date_trunc("week", "
+        "date_add("day", 1, CAST({col} AS TIMESTAMP))))",
     }
 
     custom_errors: Dict[Pattern[str], Tuple[str, SupersetErrorType, Dict[str, Any]]] = {
         COLUMN_DOES_NOT_EXIST_REGEX: (
             __(
-                'We can\'t seem to resolve the column "%(column_name)s" at '
+                "We can\"t seem to resolve the column "%(column_name)s" at "
                 "line %(location)s.",
             ),
             SupersetErrorType.COLUMN_DOES_NOT_EXIST_ERROR,
@@ -174,7 +174,7 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
         ),
         TABLE_DOES_NOT_EXIST_REGEX: (
             __(
-                'The table "%(table_name)s" does not exist. '
+                "The table "%(table_name)s" does not exist. "
                 "A valid table must be used to run this query.",
             ),
             SupersetErrorType.TABLE_DOES_NOT_EXIST_ERROR,
@@ -182,37 +182,37 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
         ),
         SCHEMA_DOES_NOT_EXIST_REGEX: (
             __(
-                'The schema "%(schema_name)s" does not exist. '
+                "The schema "%(schema_name)s" does not exist. "
                 "A valid schema must be used to run this query.",
             ),
             SupersetErrorType.SCHEMA_DOES_NOT_EXIST_ERROR,
             {},
         ),
         CONNECTION_ACCESS_DENIED_REGEX: (
-            __('Either the username "%(username)s" or the password is incorrect.'),
+            __("Either the username "%(username)s" or the password is incorrect."),
             SupersetErrorType.CONNECTION_ACCESS_DENIED_ERROR,
             {},
         ),
         CONNECTION_INVALID_HOSTNAME_REGEX: (
-            __('The hostname "%(hostname)s" cannot be resolved.'),
+            __("The hostname "%(hostname)s" cannot be resolved."),
             SupersetErrorType.CONNECTION_INVALID_HOSTNAME_ERROR,
             {},
         ),
         CONNECTION_HOST_DOWN_REGEX: (
             __(
-                'The host "%(hostname)s" might be down, and can\'t be '
+                "The host "%(hostname)s" might be down, and can\"t be "
                 "reached on port %(port)s."
             ),
             SupersetErrorType.CONNECTION_HOST_DOWN_ERROR,
             {},
         ),
         CONNECTION_PORT_CLOSED_REGEX: (
-            __('Port %(port)s on hostname "%(hostname)s" refused the connection.'),
+            __("Port %(port)s on hostname "%(hostname)s" refused the connection."),
             SupersetErrorType.CONNECTION_PORT_CLOSED_ERROR,
             {},
         ),
         CONNECTION_UNKNOWN_DATABASE_ERROR: (
-            __('Unable to connect to catalog named "%(catalog_name)s".'),
+            __("Unable to connect to catalog named "%(catalog_name)s"."),
             SupersetErrorType.CONNECTION_UNKNOWN_DATABASE_ERROR,
             {},
         ),
@@ -354,7 +354,7 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
         formatted_parent_column_name = parent_column_name
         # Quote the column name if there is a space
         if " " in parent_column_name:
-            formatted_parent_column_name = f'"{parent_column_name}"'
+            formatted_parent_column_name = f""{parent_column_name}""
         full_data_type = f"{formatted_parent_column_name} {parent_data_type}"
         original_result_len = len(result)
         # split on open parenthesis ( to get the structural
@@ -582,7 +582,7 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
         :param column_name: column name
         :return: boolean
         """
-        return column_name.startswith('"') and column_name.endswith('"')
+        return column_name.startswith(""") and column_name.endswith(""")
 
     @classmethod
     def _get_fields(cls, cols: List[Dict[str, Any]]) -> List[ColumnClause]:
@@ -607,9 +607,9 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
             # quote each column name if it is not already quoted
             for index, col_name in enumerate(col_names):
                 if not cls._is_column_name_quoted(col_name):
-                    col_names[index] = '"{}"'.format(col_name)
+                    col_names[index] = ""{}"".format(col_name)
             quoted_col_name = ".".join(
-                col_name if cls._is_column_name_quoted(col_name) else f'"{col_name}"'
+                col_name if cls._is_column_name_quoted(col_name) else f""{col_name}""
                 for col_name in col_names
             )
             # create column clause in the format "name"."name" AS "name.name"
@@ -633,7 +633,7 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
         """
         Include selecting properties of row objects. We cannot easily break arrays into
         rows, so render the whole array in its own row and skip columns that correspond
-        to an array's contents.
+        to an array"s contents.
         """
         cols = cols or []
         presto_cols = cols
@@ -756,12 +756,12 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
         """
         tt = target_type.upper()
         if tt == utils.TemporalType.DATE:
-            return f"""DATE '{dttm.date().isoformat()}'"""
+            return f"""DATE "{dttm.date().isoformat()}""""
         if tt in (
             utils.TemporalType.TIMESTAMP,
             utils.TemporalType.TIMESTAMP_WITH_TIME_ZONE,
         ):
-            return f"""TIMESTAMP '{dttm.isoformat(timespec="microseconds", sep=" ")}'"""
+            return f"""TIMESTAMP "{dttm.isoformat(timespec="microseconds", sep=" ")}""""
         return None
 
     @classmethod
@@ -774,7 +774,7 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
     ) -> List[utils.DatasourceName]:
         datasource_df = database.get_df(
             "SELECT table_schema, table_name FROM INFORMATION_SCHEMA.{}S "
-            "ORDER BY concat(table_schema, '.', table_name)".format(
+            "ORDER BY concat(table_schema, ".", table_name)".format(
                 datasource_type.upper()
             ),
             None,
@@ -801,14 +801,14 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
 
         Example: ColumnA is a row(nested_obj varchar) and ColumnB is an array(int)
         Original data set = [
-            {'ColumnA': ['a1'], 'ColumnB': [1, 2]},
-            {'ColumnA': ['a2'], 'ColumnB': [3, 4]},
+            {"ColumnA": ["a1"], "ColumnB": [1, 2]},
+            {"ColumnA": ["a2"], "ColumnB": [3, 4]},
         ]
         Expanded data set = [
-            {'ColumnA': ['a1'], 'ColumnA.nested_obj': 'a1', 'ColumnB': 1},
-            {'ColumnA': '',     'ColumnA.nested_obj': '',   'ColumnB': 2},
-            {'ColumnA': ['a2'], 'ColumnA.nested_obj': 'a2', 'ColumnB': 3},
-            {'ColumnA': '',     'ColumnA.nested_obj': '',   'ColumnB': 4},
+            {"ColumnA": ["a1"], "ColumnA.nested_obj": "a1", "ColumnB": 1},
+            {"ColumnA": "",     "ColumnA.nested_obj": "",   "ColumnB": 2},
+            {"ColumnA": ["a2"], "ColumnA.nested_obj": "a2", "ColumnB": 3},
+            {"ColumnA": "",     "ColumnA.nested_obj": "",   "ColumnB": 4},
         ]
         :param columns: columns selected in the query
         :param data: original data set
@@ -1054,7 +1054,7 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
         if filters:
             l = []
             for field, value in filters.items():
-                l.append(f"{field} = '{value}'")
+                l.append(f"{field} = "{value}"")
             where_clause = "WHERE " + " AND ".join(l)
 
         presto_version = database.get_extra().get("version")
@@ -1062,7 +1062,7 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
         # Partition select syntax changed in v0.199, so check here.
         # Default to the new syntax if version is unset.
         partition_select_clause = (
-            f'SELECT * FROM "{table_name}$partitions"'
+            f"SELECT * FROM "{table_name}$partitions""
             if not presto_version
             or StrictVersion(presto_version) >= StrictVersion("0.199")
             else f"SHOW PARTITIONS FROM {table_name}"
@@ -1137,8 +1137,8 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
           if there are many partitioning keys
         :type show_first: bool
 
-        >>> latest_partition('foo_table')
-        (['ds'], ('2018-01-01',))
+        >>> latest_partition("foo_table")
+        (["ds"], ("2018-01-01",))
         """
         indexes = database.get_indexes(table_name, schema)
         if not indexes:
@@ -1174,11 +1174,11 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
         A filtering criteria should be passed for all fields that are
         partitioned except for the field to be returned. For example,
         if a table is partitioned by (``ds``, ``event_type`` and
-        ``event_category``) and you want the latest ``ds``, you'll want
+        ``event_category``) and you want the latest ``ds``, you"ll want
         to provide a filter as keyword arguments for both
         ``event_type`` and ``event_category`` as in
-        ``latest_sub_partition('my_table',
-            event_category='page', event_type='click')``
+        ``latest_sub_partition("my_table",
+            event_category="page", event_type="click")``
 
         :param table_name: the name of the table, can be just the table
             name or a fully qualified table name as ``schema_name.table_name``
@@ -1191,8 +1191,8 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
         :param kwargs: keyword arguments define the filtering criteria
             on the partition list. There can be many of these.
         :type kwargs: str
-        >>> latest_sub_partition('sub_partition_table', event_type='click')
-        '2018-01-01'
+        >>> latest_sub_partition("sub_partition_table", event_type="click")
+        "2018-01-01"
         """
         indexes = database.get_indexes(table_name, schema)
         part_fields = indexes[0]["column_names"]
@@ -1232,7 +1232,7 @@ class PrestoEngineSpec(BaseEngineSpec):  # pylint: disable=too-many-public-metho
 
     @classmethod
     def is_readonly_query(cls, parsed_query: ParsedQuery) -> bool:
-        """Pessimistic readonly, 100% sure statement won't mutate anything"""
+        """Pessimistic readonly, 100% sure statement won"t mutate anything"""
         return super().is_readonly_query(parsed_query) or parsed_query.is_show()
 
     @classmethod

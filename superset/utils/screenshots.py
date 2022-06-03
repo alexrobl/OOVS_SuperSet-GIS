@@ -134,7 +134,7 @@ class BaseScreenshot:
         :param cache: The cache to keep the thumbnail payload
         :param window_size: The window size from which will process the thumb
         :param thumb_size: The final thumbnail size
-        :param force: Will force the computation even if it's already cached
+        :param force: Will force the computation even if it"s already cached
         :return: Image payload
         """
         cache_key = self.cache_key(window_size, thumb_size)

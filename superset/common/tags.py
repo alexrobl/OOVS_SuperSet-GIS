@@ -30,42 +30,42 @@ def add_types(engine: Engine, metadata: Metadata) -> None:
       SELECT
         tag.id AS tag_id,
         slices.id AS object_id,
-        'chart' AS object_type
+        "chart" AS object_type
       FROM slices
       JOIN tag
-        ON tag.name = 'type:chart'
+        ON tag.name = "type:chart"
       LEFT OUTER JOIN tagged_object
         ON tagged_object.tag_id = tag.id
         AND tagged_object.object_id = slices.id
-        AND tagged_object.object_type = 'chart'
+        AND tagged_object.object_type = "chart"
       WHERE tagged_object.tag_id IS NULL;
 
       INSERT INTO tagged_object (tag_id, object_id, object_type)
       SELECT
         tag.id AS tag_id,
         dashboards.id AS object_id,
-        'dashboard' AS object_type
+        "dashboard" AS object_type
       FROM dashboards
       JOIN tag
-      ON tag.name = 'type:dashboard'
+      ON tag.name = "type:dashboard"
       LEFT OUTER JOIN tagged_object
         ON tagged_object.tag_id = tag.id
         AND tagged_object.object_id = dashboards.id
-        AND tagged_object.object_type = 'dashboard'
+        AND tagged_object.object_type = "dashboard"
       WHERE tagged_object.tag_id IS NULL;
 
       INSERT INTO tagged_object (tag_id, object_id, object_type)
       SELECT
         tag.id AS tag_id,
         saved_query.id AS object_id,
-        'query' AS object_type
+        "query" AS object_type
       FROM saved_query
       JOIN tag
-      ON tag.name = 'type:query';
+      ON tag.name = "type:query";
       LEFT OUTER JOIN tagged_object
         ON tagged_object.tag_id = tag.id
         AND tagged_object.object_id = saved_query.id
-        AND tagged_object.object_type = 'query'
+        AND tagged_object.object_type = "query"
       WHERE tagged_object.tag_id IS NULL;
 
     """
@@ -172,40 +172,40 @@ def add_owners(engine: Engine, metadata: Metadata) -> None:
       SELECT
         tag.id AS tag_id,
         slices.id AS object_id,
-        'chart' AS object_type
+        "chart" AS object_type
       FROM slices
       JOIN tag
-      ON tag.name = CONCAT('owner:', slices.created_by_fk)
+      ON tag.name = CONCAT("owner:", slices.created_by_fk)
       LEFT OUTER JOIN tagged_object
         ON tagged_object.tag_id = tag.id
         AND tagged_object.object_id = slices.id
-        AND tagged_object.object_type = 'chart'
+        AND tagged_object.object_type = "chart"
       WHERE tagged_object.tag_id IS NULL;
 
       SELECT
         tag.id AS tag_id,
         dashboards.id AS object_id,
-        'dashboard' AS object_type
+        "dashboard" AS object_type
       FROM dashboards
       JOIN tag
-      ON tag.name = CONCAT('owner:', dashboards.created_by_fk)
+      ON tag.name = CONCAT("owner:", dashboards.created_by_fk)
       LEFT OUTER JOIN tagged_object
         ON tagged_object.tag_id = tag.id
         AND tagged_object.object_id = dashboards.id
-        AND tagged_object.object_type = 'dashboard'
+        AND tagged_object.object_type = "dashboard"
       WHERE tagged_object.tag_id IS NULL;
 
       SELECT
         tag.id AS tag_id,
         saved_query.id AS object_id,
-        'query' AS object_type
+        "query" AS object_type
       FROM saved_query
       JOIN tag
-      ON tag.name = CONCAT('owner:', saved_query.created_by_fk)
+      ON tag.name = CONCAT("owner:", saved_query.created_by_fk)
       LEFT OUTER JOIN tagged_object
         ON tagged_object.tag_id = tag.id
         AND tagged_object.object_id = saved_query.id
-        AND tagged_object.object_type = 'query'
+        AND tagged_object.object_type = "query"
       WHERE tagged_object.tag_id IS NULL;
 
     """
@@ -331,7 +331,7 @@ def add_favorites(engine: Engine, metadata: Metadata) -> None:
         LOWER(favstar.class_name) AS object_type
       FROM favstar
       JOIN tag
-      ON tag.name = CONCAT('favorited_by:', favstar.user_id)
+      ON tag.name = CONCAT("favorited_by:", favstar.user_id)
       LEFT OUTER JOIN tagged_object
         ON tagged_object.tag_id = tag.id
         AND tagged_object.object_id = favstar.obj_id

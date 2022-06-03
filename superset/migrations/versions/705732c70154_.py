@@ -17,7 +17,7 @@
 """empty message
 
 Revision ID: 705732c70154
-Revises: ('4451805bbaa1', '1d9e835a84f9')
+Revises: ("4451805bbaa1", "1d9e835a84f9")
 Create Date: 2018-07-22 21:51:19.235558
 
 """

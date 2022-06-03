@@ -65,9 +65,9 @@ def extract_modified_tables(module: ModuleType) -> Set[str]:
     tables: Set[str] = set()
     for function in {"upgrade", "downgrade"}:
         source = getsource(getattr(module, function))
-        tables.update(re.findall(r'alter_table\(\s*"(\w+?)"\s*\)', source, re.DOTALL))
-        tables.update(re.findall(r'add_column\(\s*"(\w+?)"\s*,', source, re.DOTALL))
-        tables.update(re.findall(r'drop_column\(\s*"(\w+?)"\s*,', source, re.DOTALL))
+        tables.update(re.findall(r"alter_table\(\s*"(\w+?)"\s*\)", source, re.DOTALL))
+        tables.update(re.findall(r"add_column\(\s*"(\w+?)"\s*,", source, re.DOTALL))
+        tables.update(re.findall(r"drop_column\(\s*"(\w+?)"\s*,", source, re.DOTALL))
 
     return tables
 
@@ -153,7 +153,7 @@ def main(
     down_revision: str = getattr(module, "down_revision", "")
     if not revision or not down_revision:
         raise Exception(
-            "Not a valid migration script, couldn't find down_revision/revision"
+            "Not a valid migration script, couldn"t find down_revision/revision"
         )
 
     print(f"Migration goes from {down_revision} to {revision}")

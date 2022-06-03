@@ -49,7 +49,7 @@ Superset 1.4 focuses heavily on continuing to polish the core Superset experienc
 
 - Databricks: Superset now supports the new [SQL Endpoints in Databricks](https://docs.databricks.com/sql/admin/sql-endpoints.html). ([#16862](https://github.com/apache/superset/pull/16862))
 
-- Apache Druid: Superset Explore now can take advantage of support for JOIN's in Druid (note: the `DRUID_JOINS` feature flag needs to be 	enabled). ([#16770](https://github.com/apache/superset/pull/16770))
+- Apache Druid: Superset Explore now can take advantage of support for JOIN"s in Druid (note: the `DRUID_JOINS` feature flag needs to be 	enabled). ([#16770](https://github.com/apache/superset/pull/16770))
 
 - AWS Aurora: Superset now has a separate db_engine_spec for Amazon Aurora. ([#16535](https://github.com/apache/superset/pull/16535))
 
@@ -71,7 +71,7 @@ Superset 1.4 focuses heavily on continuing to polish the core Superset experienc
 **Breaking Changes**
 
 - [16660](https://github.com/apache/superset/pull/16660): The `columns` Jinja parameter has been renamed `table_columns` to make the columns query object parameter available in the Jinja context.
-- [16711](https://github.com/apache/superset/pull/16711): The url_param Jinja function will now by default escape the result. For instance, the value `O'Brien` will now be changed to `O''Brien`. To disable this behavior, call `url_param` with `escape_result` set to `False: url_param("my_key", "my default", escape_result=False)`.
+- [16711](https://github.com/apache/superset/pull/16711): The url_param Jinja function will now by default escape the result. For instance, the value `O"Brien` will now be changed to `O""Brien`. To disable this behavior, call `url_param` with `escape_result` set to `False: url_param("my_key", "my default", escape_result=False)`.
 
 **Changelog**
 

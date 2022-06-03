@@ -19,7 +19,7 @@ viz_type: big_number_total
 params:
   adhoc_filters:
   - clause: WHERE
-    comparator: '0'
+    comparator: "0"
     expressionType: SIMPLE
     filterOptionName: filter_3f8ug0vnqk1_oy0mvl0izdc
     isExtra: false

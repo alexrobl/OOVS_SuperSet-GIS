@@ -16,7 +16,7 @@
   specific language governing permissions and limitations
   under the License.
 #}
-{% extends 'appbuilder/general/model/edit.html' %}
+{% extends "appbuilder/general/model/edit.html" %}
 
 {% block tail_js %}
   {{ super() }}
@@ -38,7 +38,7 @@
           method: "GET",
           url: "/superset/schemas_access_for_file_upload",
           data: {db_id: db_id},
-          dataType: 'json',
+          dataType: "json",
           contentType: "application/json; charset=utf-8"
         }).done(function(data) {
           change_schema_field_in_formview(data)
@@ -50,11 +50,11 @@
 
     function change_schema_field_in_formview(schemas_allowed){
         if (schemas_allowed && schemas_allowed.length > 0) {
-            var dropdown_schema_lists = '<select id="schema" name="schema" required>';
+            var dropdown_schema_lists = "<select id="schema" name="schema" required>";
             schemas_allowed.forEach(function(schema_allowed) {
-              dropdown_schema_lists += ('<option value="' + schema_allowed + '">' + schema_allowed + '</option>');
+              dropdown_schema_lists += ("<option value="" + schema_allowed + "">" + schema_allowed + "</option>");
             });
-            dropdown_schema_lists += '</select>';
+            dropdown_schema_lists += "</select>";
             $("#schema").replaceWith(dropdown_schema_lists);
         } else {
             $("#schema").replaceWith(any_schema_is_allowed)

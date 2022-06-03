@@ -274,8 +274,8 @@ msgid ""
 msgstr ""
 
 #: superset/viz.py:713 superset/viz_sip38.py:611
-msgid "Pick a granularity in the Time section or uncheck 'Include Time'"
-msgstr "Escolha uma granularidade na secção Tempo ou desmarque 'Incluir hora'"
+msgid "Pick a granularity in the Time section or uncheck "Include Time""
+msgstr "Escolha uma granularidade na secção Tempo ou desmarque "Incluir hora""
 
 #: superset/viz.py:786 superset/viz_sip38.py:713
 msgid "Time Table View"
@@ -287,15 +287,15 @@ msgid "Pick at least one metric"
 msgstr "Selecione pelo menos uma métrica"
 
 #: superset/viz.py:799 superset/viz_sip38.py:726
-msgid "When using 'Group By' you are limited to use a single metric"
-msgstr "Utilizando 'Agrupar por' só é possível utilizar uma única métrica"
+msgid "When using "Group By" you are limited to use a single metric"
+msgstr "Utilizando "Agrupar por" só é possível utilizar uma única métrica"
 
 #: superset/viz.py:828 superset/viz_sip38.py:755
 msgid "Pivot Table"
 msgstr "Tabela Pivot"
 
 #: superset/viz.py:845 superset/viz_sip38.py:771
-msgid "Please choose at least one 'Group by' field "
+msgid "Please choose at least one "Group by" field "
 msgstr "Selecione pelo menos um campo \"Agrupar por\" "
 
 #: superset/viz.py:857 superset/viz_sip38.py:783
@@ -303,8 +303,8 @@ msgid "Please choose at least one metric"
 msgstr "Selecione pelo menos uma métrica"
 
 #: superset/viz.py:859 superset/viz_sip38.py:785
-msgid "Group By' and 'Columns' can't overlap"
-msgstr "Os campos 'Agrupar por' e 'Colunas' não se podem sobrepor"
+msgid "Group By" and "Columns" can"t overlap"
+msgstr "Os campos "Agrupar por" e "Colunas" não se podem sobrepor"
 
 #: superset/viz.py:954 superset/viz_sip38.py:837
 msgid "Treemap"
@@ -411,7 +411,7 @@ msgid "Distribution - Bar Chart"
 msgstr "Gráfico de barras"
 
 #: superset/viz.py:1645
-msgid "Can't have overlap between Series and Breakdowns"
+msgid "Can"t have overlap between Series and Breakdowns"
 msgstr "Não pode haver sobreposição entre Séries e Desagregação"
 
 #: superset/viz.py:1650 superset/viz_sip38.py:1607
@@ -432,7 +432,7 @@ msgstr "Selecione exatamente 2 colunas [Origem e Alvo]"
 
 #: superset/viz.py:1799 superset/viz_sip38.py:1736
 msgid ""
-"There's a loop in your Sankey, please provide a tree. Here's a faulty link: "
+"There"s a loop in your Sankey, please provide a tree. Here"s a faulty link: "
 "{}"
 msgstr ""
 "Há um loop no gráfico Sankey, por favor, forneça uma ligação correta. Aqui "
@@ -444,8 +444,8 @@ msgid "Directed Force Layout"
 msgstr "Layout de Forças"
 
 #: superset/viz.py:1819 superset/viz_sip38.py:1756
-msgid "Pick exactly 2 columns to 'Group By'"
-msgstr "Selecione exatamente 2 colunas para 'Agrupar por'"
+msgid "Pick exactly 2 columns to "Group By""
+msgstr "Selecione exatamente 2 colunas para "Agrupar por""
 
 #: superset/viz.py:1868 superset/viz_sip38.py:1802
 msgid "Country Map"
@@ -487,8 +487,8 @@ msgstr ""
 "As colunas [Longitude] e [Latitude] devem estar presentes em [Agrupar por]"
 
 #: superset/viz.py:2126 superset/viz_sip38.py:2048
-msgid "Must have a [Group By] column to have 'count' as the [Label]"
-msgstr "Deve ter uma coluna [Agrupar por] para ter 'count' como [Label]"
+msgid "Must have a [Group By] column to have "count" as the [Label]"
+msgstr "Deve ter uma coluna [Agrupar por] para ter "count" como [Label]"
 
 #: superset/viz.py:2146 superset/viz_sip38.py:2068
 msgid "Choice of [Label] must be present in [Group By]"
@@ -1011,7 +1011,7 @@ msgid ""
 "you may change how these associated charts behave. Also note that charts "
 "need to point to a datasource, so this form will fail at saving if removing "
 "charts from a datasource. If you want to change the datasource for a chart, "
-"overwrite the chart from the 'explore view'"
+"overwrite the chart from the "explore view""
 msgstr ""
 "A lista de visualizações associadas a esta tabela. Ao alterar a origem de "
 "dados, o comportamento das visualizações associadas poderá ser alterado. "
@@ -1033,13 +1033,13 @@ msgid ""
 msgstr ""
 "Expressão temporal a ser utilizada como predicado ao recuperar valores "
 "distintos para preencher o componente do filtro. Apenas aplicável quando "
-"\"Permitir Seleção de Filtro\" estiver ativado. Ao inserir `7 dias atrás ', "
+"\"Permitir Seleção de Filtro\" estiver ativado. Ao inserir `7 dias atrás ", "
 "a lista distinta de valores no filtro será preenchida com base no valor "
 "distinto da semana passada"
 
 #: superset/connectors/druid/views.py:305 superset/connectors/sqla/views.py:404
 msgid ""
-"Whether to populate the filter's dropdown in the explore view's filter "
+"Whether to populate the filter"s dropdown in the explore view"s filter "
 "section with a list of distinct values fetched from the backend on the fly"
 msgstr ""
 "Preencher a lista de filtros, na vista de exploração, com valores distintos "
@@ -1173,7 +1173,7 @@ msgstr "Query vazia?"
 #: superset/connectors/sqla/models.py:951
 #: superset/connectors/sqla/models.py:1272
 #, python-format
-msgid "Metric '%(metric)s' does not exist"
+msgid "Metric "%(metric)s" does not exist"
 msgstr ""
 
 #: superset/connectors/sqla/models.py:1100
@@ -1316,9 +1316,9 @@ msgid ""
 "while different filter groups will be ANDed together. Undefined group keys "
 "are treated as unique groups, i.e. are not grouped together. For example, if "
 "a table has three filters, of which two are for departments Finance and "
-"Marketing (group key = 'department'), and one refers to the region Europe "
-"(group key = 'region'), the filter clause would apply the filter (department "
-"= 'Finance' OR department = 'Marketing') AND (region = 'Europe')."
+"Marketing (group key = "department"), and one refers to the region Europe "
+"(group key = "region"), the filter clause would apply the filter (department "
+"= "Finance" OR department = "Marketing") AND (region = "Europe")."
 msgstr ""
 
 #: superset/connectors/sqla/views.py:310
@@ -1397,7 +1397,7 @@ msgid ""
 msgstr "Redireciona para este endpoint ao clicar na tabela da respetiva lista"
 
 #: superset/connectors/sqla/views.py:409
-msgid "Whether the table was generated by the 'Visualize' flow in SQL Lab"
+msgid "Whether the table was generated by the "Visualize" flow in SQL Lab"
 msgstr ""
 
 #: superset-frontend/src/datasource/DatasourceEditor.jsx:612
@@ -1754,7 +1754,7 @@ msgstr ""
 #: superset/db_engine_specs/presto.py:1052
 #, python-format
 msgid ""
-"We can't seem to resolve the column \"%(column_name)s\" at line %(location)s."
+"We can"t seem to resolve the column \"%(column_name)s\" at line %(location)s."
 msgstr ""
 
 #: superset/db_engine_specs/presto.py:1069
@@ -2257,7 +2257,7 @@ msgid "Log Retentions (days)"
 msgstr ""
 
 #: superset/views/alerts.py:173
-msgid "A semicolon ';' delimited list of email addresses"
+msgid "A semicolon ";" delimited list of email addresses"
 msgstr ""
 
 #: superset/views/alerts.py:174
@@ -2375,7 +2375,7 @@ msgstr ""
 "esquema e nome da tabela"
 
 #: superset/views/base.py:373
-msgid "json isn't valid"
+msgid "json isn"t valid"
 msgstr "json não é válido"
 
 #: superset/views/base.py:384
@@ -2460,7 +2460,7 @@ msgstr "Ocorreu um erro desconhecido. (Estado: %s )"
 
 #: superset/views/core.py:756 superset/views/core.py:762
 #: superset/views/core.py:909 superset/views/core.py:927
-msgid "You don't have the rights to "
+msgid "You don"t have the rights to "
 msgstr "Não tem direitos para alterar este título."
 
 #: superset/views/core.py:756 superset/views/core.py:910
@@ -2520,7 +2520,7 @@ msgstr ""
 #: superset/views/core.py:1268
 msgid ""
 "Invalid connection string, a valid string usually follows:\n"
-"'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'"
+""DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME""
 msgstr ""
 
 #: superset/views/core.py:1624
@@ -2537,20 +2537,20 @@ msgstr "Visualização %(id)s não encontrada"
 
 #: superset/views/core.py:1647
 #, python-format
-msgid "Table %(table)s wasn't found in the database %(db)s"
+msgid "Table %(table)s wasn"t found in the database %(db)s"
 msgstr "A tabela %(t)s não foi encontrada na base de dados %(d)s"
 
 #: superset/views/core.py:1917
 #, python-format
-msgid "Can't find User '%(name)s', please ask your admin to create one."
+msgid "Can"t find User "%(name)s", please ask your admin to create one."
 msgstr ""
-"Não foi possível encontrar o utilizador '%(name)s', por favor entre em "
+"Não foi possível encontrar o utilizador "%(name)s", por favor entre em "
 "contacto com o administrador."
 
 #: superset/views/core.py:1929
 #, python-format
-msgid "Can't find DruidCluster with cluster_name = '%(name)s'"
-msgstr "Não foi possível encontrar DruidCluster com cluster_name = '%(name)s'"
+msgid "Can"t find DruidCluster with cluster_name = "%(name)s""
+msgstr "Não foi possível encontrar DruidCluster com cluster_name = "%(name)s""
 
 #: superset/views/core.py:2172
 msgid "Data could not be deserialized. You may want to re-run the query."
@@ -2584,7 +2584,7 @@ msgstr[1] ""
 
 #: superset/views/core.py:2801
 #, python-format
-msgid "%(user)s's profile"
+msgid "%(user)s"s profile"
 msgstr ""
 
 #: superset/views/css_templates.py:39
@@ -3219,9 +3219,9 @@ msgstr ""
 
 #: superset/views/database/validators.py:40
 msgid ""
-"Invalid connection string, a valid string usually follows:'DRIVER://USER:"
-"PASSWORD@DB-HOST/DATABASE-NAME'<p>Example:'postgresql://user:password@your-"
-"postgres-db/database'</p>"
+"Invalid connection string, a valid string usually follows:"DRIVER://USER:"
+"PASSWORD@DB-HOST/DATABASE-NAME"<p>Example:"postgresql://user:password@your-"
+"postgres-db/database"</p>"
 msgstr ""
 
 #: superset/views/database/views.py:114
@@ -3317,7 +3317,7 @@ msgid "Add Item"
 msgstr "Adicionar filtro"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:103
-msgid "The query couldn't be loaded"
+msgid "The query couldn"t be loaded"
 msgstr "Não foi possível carregar a query"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:155
@@ -3487,7 +3487,7 @@ msgid "Sjsonhared query"
 msgstr "query partilhada"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1241
-msgid "The datasource couldn't be loaded"
+msgid "The datasource couldn"t be loaded"
 msgstr "Não foi possível carregar a query"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1271
@@ -3497,7 +3497,7 @@ msgstr "Ocorreu um erro ao criar a origem dos dados"
 
 #: superset-frontend/src/SqlLab/components/App.jsx:76
 msgid ""
-"SQL Lab uses your browser's local storage to store queries and results.\n"
+"SQL Lab uses your browser"s local storage to store queries and results.\n"
 " Currently, you are using ${currentUsage.toFixed(\n"
 "            2,\n"
 "          )} KB out of ${LOCALSTORAGE_MAX_USAGE_KB} KB. storage space.\n"
@@ -3602,7 +3602,7 @@ msgstr "Ainda não há histórico de queries ..."
 #: superset-frontend/src/SqlLab/components/QuerySearch.jsx:193
 #: superset-frontend/src/SqlLab/components/SqlEditorLeftBar.jsx:101
 #: superset-frontend/src/components/DatabaseSelector.tsx:151
-msgid "It seems you don't have access to any database"
+msgid "It seems you don"t have access to any database"
 msgstr "Parece que não tem acesso a nenhuma base de dados"
 
 #: superset-frontend/src/SqlLab/components/QuerySearch.jsx:220
@@ -4348,7 +4348,7 @@ msgstr "Copiado!"
 
 #: superset-frontend/src/components/CopyToClipboard.jsx:93
 msgid "Sorry, your browser does not support copying. Use Ctrl / Cmd + C!"
-msgstr "Desculpe, o seu navegador não suporta 'copiar'. Use Ctrl+C ou Cmd+C!"
+msgstr "Desculpe, o seu navegador não suporta "copiar". Use Ctrl+C ou Cmd+C!"
 
 #: superset-frontend/src/components/DatabaseSelector.tsx:126
 msgid "Error while fetching schema list"
@@ -4406,7 +4406,7 @@ msgid "Click to edit"
 msgstr "clique para editar o título"
 
 #: superset-frontend/src/components/EditableTitle.tsx:183
-msgid "You don't have the rights to alter this title."
+msgid "You don"t have the rights to alter this title."
 msgstr "Não tem direitos para alterar este título."
 
 #: superset-frontend/src/components/ErrorBoundary.jsx:51
@@ -4657,7 +4657,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/ColorSchemeControlWrapper.jsx:53
 msgid ""
 "Any color palette selected here will override the colors applied to this "
-"dashboard's individual charts"
+"dashboard"s individual charts"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/ColorSchemeControlWrapper.jsx:56
@@ -4847,7 +4847,7 @@ msgid "Draft"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/RefreshIntervalModal.tsx:29
-msgid "Don't refresh"
+msgid "Don"t refresh"
 msgstr "Não atualize"
 
 #: superset-frontend/src/dashboard/components/RefreshIntervalModal.tsx:30
@@ -5593,9 +5593,9 @@ msgstr "semana"
 msgid ""
 "The time range for the visualization. All relative times, e.g. \"Last month"
 "\", \"Last 7 days\", \"now\", etc. are evaluated on the server using the "
-"server's local time (sans timezone). All tooltips and placeholder times are "
+"server"s local time (sans timezone). All tooltips and placeholder times are "
 "expressed in UTC (sans timezone). The timestamps are then evaluated by the "
-"database using the engine's local timezone. Note one can explicitly set the "
+"database using the engine"s local timezone. Note one can explicitly set the "
 "timezone per the ISO 8601 format if specifying either the start and/or end "
 "time."
 msgstr ""
@@ -5749,8 +5749,8 @@ msgstr "Lista de Métricas"
 #: superset-frontend/src/explore/components/AdhocFilterPopoverTrigger.tsx:94
 msgid ""
 "\n"
-"                This filter was inherited from the dashboard's context.\n"
-"                It won't be saved when saving the chart.\n"
+"                This filter was inherited from the dashboard"s context.\n"
+"                It won"t be saved when saving the chart.\n"
 "              "
 msgstr ""
 
@@ -5896,7 +5896,7 @@ msgstr "Contribuição"
 #: superset-frontend/src/explore/components/PropertiesModal.tsx:253
 msgid ""
 "Duration (in seconds) of the caching timeout for this chart. Note this "
-"defaults to the dataset's timeout if undefined."
+"defaults to the dataset"s timeout if undefined."
 msgstr "Duração (em segundos) do tempo limite da cache para esta visualização."
 
 #: superset-frontend/src/explore/components/PropertiesModal.tsx:273
@@ -6256,7 +6256,7 @@ msgstr "URL"
 
 #: superset-frontend/src/explore/controlPanels/TimeTable.js:48
 msgid ""
-"Templated link, it's possible to include {{ metric }} or other values coming "
+"Templated link, it"s possible to include {{ metric }} or other values coming "
 "from the controls."
 msgstr ""
 "Ligação predefinida, é possível incluir {{ metric }} ou outros valores "
@@ -6714,11 +6714,11 @@ msgid "Add"
 msgstr ""
 
 #: superset-frontend/src/views/CRUD/alert/AlertReportModal.tsx:1054
-msgid "Edit ${isReport ? 'Report' : 'Alert'}"
+msgid "Edit ${isReport ? "Report" : "Alert"}"
 msgstr ""
 
 #: superset-frontend/src/views/CRUD/alert/AlertReportModal.tsx:1055
-msgid "Add ${isReport ? 'Report' : 'Alert'}"
+msgid "Add ${isReport ? "Report" : "Alert"}"
 msgstr ""
 
 #: superset-frontend/src/views/CRUD/alert/AlertReportModal.tsx:1063
@@ -7167,7 +7167,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/data/components/SyntaxHighlighterCopy/index.tsx:68
 #: superset-frontend/src/views/CRUD/data/savedquery/SavedQueryList.tsx:165
 msgid "Sorry, your browser does not support copying."
-msgstr "Desculpe, o seu navegador não suporta 'copiar'. Use Ctrl+C ou Cmd+C!"
+msgstr "Desculpe, o seu navegador não suporta "copiar". Use Ctrl+C ou Cmd+C!"
 
 #: superset-frontend/src/views/CRUD/data/components/SyntaxHighlighterCopy/index.tsx:73
 msgid "SQL Copied!"
@@ -7387,7 +7387,7 @@ msgstr ""
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal.tsx:678
 msgid ""
-"4. The version field is a string specifying this db's version. This should "
+"4. The version field is a string specifying this db"s version. This should "
 "be used with Presto DBs so that the syntax is correct."
 msgstr ""
 
@@ -7677,14 +7677,14 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:115
 msgid ""
 "${tableName\n"
-"                        .split('')\n"
+"                        .split("")\n"
 "                        .slice(0, tableName.length - 1)\n"
-"                        .join('')}\n"
+"                        .join("")}\n"
 "                    "
 msgstr ""
 
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:135
-msgid "You don't have any favorites yet!"
+msgid "You don"t have any favorites yet!"
 msgstr "Não tem acesso a esta origem de dados"
 
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:147

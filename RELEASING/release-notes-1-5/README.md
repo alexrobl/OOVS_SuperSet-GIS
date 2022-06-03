@@ -67,7 +67,7 @@ when available.
   [Long URL Problem](https://github.com/apache/superset/issues/17086).
 - Previously permanent links to Dashboard and Explore pages were in fact shortened URLS
   that relied on state being stored in the URL (see Long URL Problem above). In
-  addition, the links used numerical ids and didn't check user permissions making it
+  addition, the links used numerical ids and didn"t check user permissions making it
   easy to iterate through links that were stored in the metastore. Now permanent links
   state is stored as JSON objects in the metastore, making it possible to store
   arbitrarily large Dashboard and Explore state in permalinks. In addition, the ids

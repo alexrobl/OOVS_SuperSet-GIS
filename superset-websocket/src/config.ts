@@ -46,26 +46,26 @@ type ConfigType = {
 function defaultConfig(): ConfigType {
   return {
     port: 8080,
-    logLevel: 'info',
+    logLevel: "info",
     logToFile: false,
-    logFilename: 'app.log',
-    redisStreamPrefix: 'async-events-',
+    logFilename: "app.log",
+    redisStreamPrefix: "async-events-",
     redisStreamReadCount: 100,
     redisStreamReadBlockMs: 5000,
-    jwtSecret: '',
-    jwtCookieName: 'async-token',
+    jwtSecret: "",
+    jwtCookieName: "async-token",
     socketResponseTimeoutMs: 60 * 1000,
     pingSocketsIntervalMs: 20 * 1000,
     gcChannelsIntervalMs: 120 * 1000,
     statsd: {
-      host: '127.0.0.1',
+      host: "127.0.0.1",
       port: 8125,
       globalTags: [],
     },
     redis: {
-      host: '127.0.0.1',
+      host: "127.0.0.1",
       port: 6379,
-      password: '',
+      password: "",
       db: 0,
       ssl: false,
     },
@@ -73,20 +73,20 @@ function defaultConfig(): ConfigType {
 }
 
 function configFromFile(): Partial<ConfigType> {
-  const isTest = process.env.NODE_ENV === 'test';
-  const configFile = isTest ? '../config.test.json' : '../config.json';
+  const isTest = process.env.NODE_ENV === "test";
+  const configFile = isTest ? "../config.test.json" : "../config.json";
   try {
     return require(configFile);
   } catch (err) {
-    console.warn('config.json file not found');
+    console.warn("config.json file not found");
     return {};
   }
 }
 
 const isPresent = (s: string) => /\S+/.test(s);
 const toNumber = Number;
-const toBoolean = (s: string) => s.toLowerCase() === 'true';
-const toStringArray = (s: string) => s.split(',');
+const toBoolean = (s: string) => s.toLowerCase() === "true";
+const toStringArray = (s: string) => s.split(",");
 
 function applyEnvOverrides(config: ConfigType): ConfigType {
   const envVarConfigSetter: { [envVar: string]: (val: string) => void } = {

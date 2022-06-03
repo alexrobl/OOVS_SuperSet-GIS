@@ -69,11 +69,11 @@ class EmbeddedDashboardRestApi(BaseSupersetModelRestApi):
     # pylint: disable=arguments-differ, arguments-renamed)
     def get(self, uuid: str) -> Response:
         """Response
-        Returns the dashboard's embedded configuration
+        Returns the dashboard"s embedded configuration
         ---
         get:
           description: >-
-            Returns the dashboard's embedded configuration
+            Returns the dashboard"s embedded configuration
           parameters:
           - in: path
             schema:
@@ -89,13 +89,13 @@ class EmbeddedDashboardRestApi(BaseSupersetModelRestApi):
                     type: object
                     properties:
                       result:
-                        $ref: '#/components/schemas/EmbeddedDashboardResponseSchema'
+                        $ref: "#/components/schemas/EmbeddedDashboardResponseSchema"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             embedded = EmbeddedDAO.find_by_id(uuid)

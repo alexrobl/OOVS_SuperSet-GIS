@@ -16,46 +16,46 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import buildQuery from '../../src/Timeseries/buildQuery';
+import buildQuery from "../../src/Timeseries/buildQuery";
 
-describe('Timeseries buildQuery', () => {
+describe("Timeseries buildQuery", () => {
   const formData = {
-    datasource: '5__table',
-    granularity_sqla: 'ds',
-    metrics: ['bar', 'baz'],
-    viz_type: 'my_chart',
+    datasource: "5__table",
+    granularity_sqla: "ds",
+    metrics: ["bar", "baz"],
+    viz_type: "my_chart",
   };
 
-  it('should build groupby with series in form data', () => {
+  it("should build groupby with series in form data", () => {
     const queryContext = buildQuery(formData);
     const [query] = queryContext.queries;
-    expect(query.metrics).toEqual(['bar', 'baz']);
+    expect(query.metrics).toEqual(["bar", "baz"]);
   });
 
-  it('should order by timeseries limit if orderby unspecified', () => {
+  it("should order by timeseries limit if orderby unspecified", () => {
     const queryContext = buildQuery({
       ...formData,
-      timeseries_limit_metric: 'bar',
+      timeseries_limit_metric: "bar",
       order_desc: true,
     });
     const [query] = queryContext.queries;
-    expect(query.metrics).toEqual(['bar', 'baz']);
-    expect(query.timeseries_limit_metric).toEqual('bar');
+    expect(query.metrics).toEqual(["bar", "baz"]);
+    expect(query.timeseries_limit_metric).toEqual("bar");
     expect(query.order_desc).toEqual(true);
-    expect(query.orderby).toEqual([['bar', false]]);
+    expect(query.orderby).toEqual([["bar", false]]);
   });
 
-  it('should not order by timeseries limit if orderby provided', () => {
+  it("should not order by timeseries limit if orderby provided", () => {
     const queryContext = buildQuery({
       ...formData,
-      timeseries_limit_metric: 'bar',
+      timeseries_limit_metric: "bar",
       order_desc: true,
-      orderby: [['foo', true]],
+      orderby: [["foo", true]],
     });
     const [query] = queryContext.queries;
-    expect(query.metrics).toEqual(['bar', 'baz']);
-    expect(query.timeseries_limit_metric).toEqual('bar');
+    expect(query.metrics).toEqual(["bar", "baz"]);
+    expect(query.timeseries_limit_metric).toEqual("bar");
     expect(query.order_desc).toEqual(true);
-    expect(query.orderby).toEqual([['foo', true]]);
+    expect(query.orderby).toEqual([["foo", true]]);
   });
 });

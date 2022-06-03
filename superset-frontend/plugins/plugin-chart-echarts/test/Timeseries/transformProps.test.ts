@@ -27,24 +27,24 @@ import {
   SqlaFormData,
   supersetTheme,
   TimeseriesAnnotationLayer,
-} from '@superset-ui/core';
-import { EchartsTimeseriesChartProps } from '../../src/types';
-import transformProps from '../../src/Timeseries/transformProps';
+} from "@superset-ui/core";
+import { EchartsTimeseriesChartProps } from "../../src/types";
+import transformProps from "../../src/Timeseries/transformProps";
 
-describe('EchartsTimeseries transformProps', () => {
+describe("EchartsTimeseries transformProps", () => {
   const formData: SqlaFormData = {
-    colorScheme: 'bnbColors',
-    datasource: '3__table',
-    granularity_sqla: 'ds',
-    metric: 'sum__num',
-    groupby: ['foo', 'bar'],
-    viz_type: 'my_viz',
+    colorScheme: "bnbColors",
+    datasource: "3__table",
+    granularity_sqla: "ds",
+    metric: "sum__num",
+    groupby: ["foo", "bar"],
+    viz_type: "my_viz",
   };
   const queriesData = [
     {
       data: [
-        { 'San Francisco': 1, 'New York': 2, __timestamp: 599616000000 },
-        { 'San Francisco': 3, 'New York': 4, __timestamp: 599916000000 },
+        { "San Francisco": 1, "New York": 2, __timestamp: 599616000000 },
+        { "San Francisco": 3, "New York": 4, __timestamp: 599916000000 },
       ],
     },
   ];
@@ -56,7 +56,7 @@ describe('EchartsTimeseries transformProps', () => {
     theme: supersetTheme,
   };
 
-  it('should transform chart props for viz', () => {
+  it("should transform chart props for viz", () => {
     const chartProps = new ChartProps(chartPropsConfig);
     expect(transformProps(chartProps as EchartsTimeseriesChartProps)).toEqual(
       expect.objectContaining({
@@ -64,7 +64,7 @@ describe('EchartsTimeseries transformProps', () => {
         height: 600,
         echartOptions: expect.objectContaining({
           legend: expect.objectContaining({
-            data: ['San Francisco', 'New York'],
+            data: ["San Francisco", "New York"],
           }),
           series: expect.arrayContaining([
             expect.objectContaining({
@@ -72,14 +72,14 @@ describe('EchartsTimeseries transformProps', () => {
                 [599616000000, 1],
                 [599916000000, 3],
               ],
-              name: 'San Francisco',
+              name: "San Francisco",
             }),
             expect.objectContaining({
               data: [
                 [599616000000, 2],
                 [599916000000, 4],
               ],
-              name: 'New York',
+              name: "New York",
             }),
           ]),
         }),
@@ -87,11 +87,11 @@ describe('EchartsTimeseries transformProps', () => {
     );
   });
 
-  it('should add a formula annotation to viz', () => {
+  it("should add a formula annotation to viz", () => {
     const formula: FormulaAnnotationLayer = {
-      name: 'My Formula',
+      name: "My Formula",
       annotationType: AnnotationType.Formula,
-      value: 'x+1',
+      value: "x+1",
       style: AnnotationStyle.Solid,
       show: true,
       showLabel: true,
@@ -109,7 +109,7 @@ describe('EchartsTimeseries transformProps', () => {
         height: 600,
         echartOptions: expect.objectContaining({
           legend: expect.objectContaining({
-            data: ['San Francisco', 'New York', 'My Formula'],
+            data: ["San Francisco", "New York", "My Formula"],
           }),
           series: expect.arrayContaining([
             expect.objectContaining({
@@ -117,21 +117,21 @@ describe('EchartsTimeseries transformProps', () => {
                 [599616000000, 1],
                 [599916000000, 3],
               ],
-              name: 'San Francisco',
+              name: "San Francisco",
             }),
             expect.objectContaining({
               data: [
                 [599616000000, 2],
                 [599916000000, 4],
               ],
-              name: 'New York',
+              name: "New York",
             }),
             expect.objectContaining({
               data: [
                 [599616000000, 599616000001],
                 [599916000000, 599916000001],
               ],
-              name: 'My Formula',
+              name: "My Formula",
             }),
           ]),
         }),
@@ -139,10 +139,10 @@ describe('EchartsTimeseries transformProps', () => {
     );
   });
 
-  it('should add an interval, event and timeseries annotation to viz', () => {
+  it("should add an interval, event and timeseries annotation to viz", () => {
     const event: EventAnnotationLayer = {
       annotationType: AnnotationType.Event,
-      name: 'My Event',
+      name: "My Event",
       show: true,
       showLabel: true,
       sourceType: AnnotationSourceType.Native,
@@ -152,13 +152,13 @@ describe('EchartsTimeseries transformProps', () => {
 
     const interval: IntervalAnnotationLayer = {
       annotationType: AnnotationType.Interval,
-      name: 'My Interval',
+      name: "My Interval",
       show: true,
       showLabel: true,
       sourceType: AnnotationSourceType.Table,
-      titleColumn: '',
-      timeColumn: 'start',
-      intervalEndColumn: '',
+      titleColumn: "",
+      timeColumn: "start",
+      intervalEndColumn: "",
       descriptionColumns: [],
       style: AnnotationStyle.Dashed,
       value: 2,
@@ -166,12 +166,12 @@ describe('EchartsTimeseries transformProps', () => {
 
     const timeseries: TimeseriesAnnotationLayer = {
       annotationType: AnnotationType.Timeseries,
-      name: 'My Timeseries',
+      name: "My Timeseries",
       show: true,
       showLabel: true,
       sourceType: AnnotationSourceType.Line,
       style: AnnotationStyle.Solid,
-      titleColumn: '',
+      titleColumn: "",
       value: 3,
     };
     const chartProps = new ChartProps({
@@ -184,37 +184,37 @@ describe('EchartsTimeseries transformProps', () => {
         {
           ...queriesData[0],
           annotation_data: {
-            'My Event': {
+            "My Event": {
               columns: [
-                'start_dttm',
-                'end_dttm',
-                'short_descr',
-                'long_descr',
-                'json_metadata',
+                "start_dttm",
+                "end_dttm",
+                "short_descr",
+                "long_descr",
+                "json_metadata",
               ],
               records: [
                 {
                   start_dttm: 0,
                   end_dttm: 1000,
-                  short_descr: '',
-                  long_descr: '',
+                  short_descr: "",
+                  long_descr: "",
                   json_metadata: null,
                 },
               ],
             },
-            'My Interval': {
-              columns: ['start', 'end', 'title'],
+            "My Interval": {
+              columns: ["start", "end", "title"],
               records: [
                 {
                   start: 2000,
                   end: 3000,
-                  title: 'My Title',
+                  title: "My Title",
                 },
               ],
             },
-            'My Timeseries': [
+            "My Timeseries": [
               {
-                key: 'My Line',
+                key: "My Line",
                 values: [
                   {
                     x: 10000,
@@ -235,20 +235,20 @@ describe('EchartsTimeseries transformProps', () => {
       expect.objectContaining({
         echartOptions: expect.objectContaining({
           legend: expect.objectContaining({
-            data: ['San Francisco', 'New York', 'My Line'],
+            data: ["San Francisco", "New York", "My Line"],
           }),
           series: expect.arrayContaining([
             expect.objectContaining({
-              type: 'line',
-              id: 'My Line',
+              type: "line",
+              id: "My Line",
             }),
             expect.objectContaining({
-              type: 'line',
-              id: 'Event - My Event',
+              type: "line",
+              id: "Event - My Event",
             }),
             expect.objectContaining({
-              type: 'line',
-              id: 'Interval - My Interval',
+              type: "line",
+              id: "Interval - My Interval",
             }),
           ]),
         }),
@@ -257,7 +257,7 @@ describe('EchartsTimeseries transformProps', () => {
   });
 });
 
-describe('Does transformProps transform series correctly', () => {
+describe("Does transformProps transform series correctly", () => {
   type seriesDataType = [Date, number];
   type labelFormatterType = (params: {
     value: seriesDataType;
@@ -271,12 +271,12 @@ describe('Does transformProps transform series correctly', () => {
   };
 
   const formData: SqlaFormData = {
-    viz_type: 'my_viz',
-    colorScheme: 'bnbColors',
-    datasource: '3__table',
-    granularity_sqla: 'ds',
-    metric: 'sum__num',
-    groupby: ['foo', 'bar'],
+    viz_type: "my_viz",
+    colorScheme: "bnbColors",
+    datasource: "3__table",
+    granularity_sqla: "ds",
+    metric: "sum__num",
+    groupby: ["foo", "bar"],
     showValue: true,
     stack: true,
     onlyTotal: false,
@@ -286,26 +286,26 @@ describe('Does transformProps transform series correctly', () => {
     {
       data: [
         {
-          'San Francisco': 1,
-          'New York': 2,
+          "San Francisco": 1,
+          "New York": 2,
           Boston: 1,
           __timestamp: 599616000000,
         },
         {
-          'San Francisco': 3,
-          'New York': 4,
+          "San Francisco": 3,
+          "New York": 4,
           Boston: 1,
           __timestamp: 599916000000,
         },
         {
-          'San Francisco': 5,
-          'New York': 8,
+          "San Francisco": 5,
+          "New York": 8,
           Boston: 6,
           __timestamp: 600216000000,
         },
         {
-          'San Francisco': 2,
-          'New York': 7,
+          "San Francisco": 2,
+          "New York": 7,
           Boston: 2,
           __timestamp: 600516000000,
         },
@@ -323,7 +323,7 @@ describe('Does transformProps transform series correctly', () => {
   const totalStackedValues = queriesData[0].data.reduce(
     (totals, currentStack) => {
       const total = Object.keys(currentStack).reduce((stackSum, key) => {
-        if (key === '__timestamp') return stackSum;
+        if (key === "__timestamp") return stackSum;
         return stackSum + currentStack[key];
       }, 0);
       totals.push(total);
@@ -332,7 +332,7 @@ describe('Does transformProps transform series correctly', () => {
     [] as number[],
   );
 
-  it('should show labels when showValue is true', () => {
+  it("should show labels when showValue is true", () => {
     const chartProps = new ChartProps(chartPropsConfig);
 
     const transformedSeries = transformProps(
@@ -344,7 +344,7 @@ describe('Does transformProps transform series correctly', () => {
     });
   });
 
-  it('should not show labels when showValue is false', () => {
+  it("should not show labels when showValue is false", () => {
     const updatedChartPropsConfig = {
       ...chartPropsConfig,
       formData: { ...formData, showValue: false },
@@ -361,7 +361,7 @@ describe('Does transformProps transform series correctly', () => {
     });
   });
 
-  it('should show only totals when onlyTotal is true', () => {
+  it("should show only totals when onlyTotal is true", () => {
     const updatedChartPropsConfig = {
       ...chartPropsConfig,
       formData: { ...formData, onlyTotal: true },
@@ -398,7 +398,7 @@ describe('Does transformProps transform series correctly', () => {
         if (seriesIndex === showValueIndexes[dataIndex]) {
           expectedLabel = String(totalStackedValues[dataIndex]);
         } else {
-          expectedLabel = '';
+          expectedLabel = "";
         }
 
         expect(series.label.formatter(params)).toBe(expectedLabel);
@@ -406,7 +406,7 @@ describe('Does transformProps transform series correctly', () => {
     });
   });
 
-  it('should show labels on values >= percentageThreshold if onlyTotal is false', () => {
+  it("should show labels on values >= percentageThreshold if onlyTotal is false", () => {
     const chartProps = new ChartProps(chartPropsConfig);
 
     const transformedSeries = transformProps(
@@ -426,13 +426,13 @@ describe('Does transformProps transform series correctly', () => {
           seriesIndex,
         };
         const expectedLabel =
-          value[1] >= expectedThresholds[dataIndex] ? String(value[1]) : '';
+          value[1] >= expectedThresholds[dataIndex] ? String(value[1]) : "";
         expect(series.label.formatter(params)).toBe(expectedLabel);
       });
     });
   });
 
-  it('should not apply percentage threshold when showValue is true and stack is false', () => {
+  it("should not apply percentage threshold when showValue is true and stack is false", () => {
     const updatedChartPropsConfig = {
       ...chartPropsConfig,
       formData: { ...formData, stack: false },

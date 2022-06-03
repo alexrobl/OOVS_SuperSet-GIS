@@ -343,7 +343,7 @@ else:
         "sync",
         default="",
         help="comma seperated list of element types to synchronize "
-        'e.g. "metrics,columns" deletes metrics and columns in the DB '
+        "e.g. "metrics,columns" deletes metrics and columns in the DB "
         "that are not specified in the YAML file",
     )
     @click.option(

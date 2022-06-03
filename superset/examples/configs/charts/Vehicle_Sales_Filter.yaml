@@ -38,7 +38,7 @@ params:
   granularity_sqla: order_date
   queryFields: {}
   slice_id: 671
-  time_range: '2003-01-01T00:00:00 : 2005-06-01T00:00:00'
+  time_range: "2003-01-01T00:00:00 : 2005-06-01T00:00:00"
   url_params: {}
   viz_type: filter_box
 cache_timeout: null

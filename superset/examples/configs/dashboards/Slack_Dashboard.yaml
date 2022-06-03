@@ -202,7 +202,7 @@ position:
     - CHART-ej0FpkKxzj
     id: ROW-PgcMF2PpB
     meta:
-      '0': ROOT_ID
+      "0": ROOT_ID
       background: BACKGROUND_TRANSPARENT
     parents:
     - ROOT_ID
@@ -227,7 +227,7 @@ position:
     - CHART-tMLHDtzb67
     id: ROW-y62Rf2K3m
     meta:
-      '0': ROOT_ID
+      "0": ROOT_ID
       background: BACKGROUND_TRANSPARENT
     parents:
     - ROOT_ID
@@ -237,39 +237,39 @@ metadata:
   timed_refresh_immune_slices: []
   expanded_slices: {}
   refresh_frequency: 0
-  default_filters: '{}'
+  default_filters: "{}"
   color_scheme: supersetColors
   label_colors:
-    '0': '#1FA8C9'
-    '1': '#454E7C'
-    introductions: '#5AC189'
-    jobs: '#FF7F44'
-    apache-releases: '#666666'
-    commits: '#E04355'
-    dashboard-filters: '#FCC700'
-    announcements: '#A868B7'
-    general: '#3CCCCB'
-    superset_stage_alerts: '#A38F79'
-    contributing: '#8FD3E4'
-    graduation: '#A1A6BD'
-    embedd-dashboards: '#ACE1C4'
-    helm-k8-deployment: '#FEC0A1'
-    visualization_plugins: '#B2B2B2'
-    community-feedback: '#EFA1AA'
-    cypress-tests: '#FDE380'
-    product_feedback: '#D3B3DA'
-    developers: '#9EE5E5'
-    dashboard-level-access: '#D1C6BC'
-    design: '#1FA8C9'
-    feature-requests: '#454E7C'
-    localization: '#5AC189'
-    newsletter: '#FF7F44'
-    beginners: '#666666'
-    github-notifications: '#E04355'
-    superset-champions: '#FCC700'
-    superset_prod_reports: '#A868B7'
-    dashboards: '#3CCCCB'
-    pull-requests: '#A38F79'
-    support: '#8FD3E4'
-    globalnav_search: '#A1A6BD'
+    "0": "#1FA8C9"
+    "1": "#454E7C"
+    introductions: "#5AC189"
+    jobs: "#FF7F44"
+    apache-releases: "#666666"
+    commits: "#E04355"
+    dashboard-filters: "#FCC700"
+    announcements: "#A868B7"
+    general: "#3CCCCB"
+    superset_stage_alerts: "#A38F79"
+    contributing: "#8FD3E4"
+    graduation: "#A1A6BD"
+    embedd-dashboards: "#ACE1C4"
+    helm-k8-deployment: "#FEC0A1"
+    visualization_plugins: "#B2B2B2"
+    community-feedback: "#EFA1AA"
+    cypress-tests: "#FDE380"
+    product_feedback: "#D3B3DA"
+    developers: "#9EE5E5"
+    dashboard-level-access: "#D1C6BC"
+    design: "#1FA8C9"
+    feature-requests: "#454E7C"
+    localization: "#5AC189"
+    newsletter: "#FF7F44"
+    beginners: "#666666"
+    github-notifications: "#E04355"
+    superset-champions: "#FCC700"
+    superset_prod_reports: "#A868B7"
+    dashboards: "#3CCCCB"
+    pull-requests: "#A38F79"
+    support: "#8FD3E4"
+    globalnav_search: "#A1A6BD"
 version: 1.0.0

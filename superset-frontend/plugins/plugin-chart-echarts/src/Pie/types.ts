@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { EChartsCoreOption } from 'echarts';
+import { EChartsCoreOption } from "echarts";
 import {
   ChartDataResponseResult,
   ChartProps,
@@ -24,13 +24,13 @@ import {
   QueryFormColumn,
   QueryFormData,
   SetDataMaskHook,
-} from '@superset-ui/core';
+} from "@superset-ui/core";
 import {
   DEFAULT_LEGEND_FORM_DATA,
   EchartsLegendFormData,
   LegendOrientation,
   LegendType,
-} from '../types';
+} from "../types";
 
 export type EchartsPieFormData = QueryFormData &
   EchartsLegendFormData & {
@@ -53,12 +53,12 @@ export type EchartsPieFormData = QueryFormData &
   };
 
 export enum EchartsPieLabelType {
-  Key = 'key',
-  Value = 'value',
-  Percent = 'percent',
-  KeyValue = 'key_value',
-  KeyPercent = 'key_percent',
-  KeyValuePercent = 'key_value_percent',
+  Key = "key",
+  Value = "value",
+  Percent = "percent",
+  KeyValue = "key_value",
+  KeyPercent = "key_percent",
+  KeyValuePercent = "key_value_percent",
 }
 
 export interface EchartsPieChartProps extends ChartProps<EchartsPieFormData> {
@@ -76,13 +76,13 @@ export const DEFAULT_FORM_DATA: EchartsPieFormData = {
   labelType: EchartsPieLabelType.Key,
   legendOrientation: LegendOrientation.Top,
   legendType: LegendType.Scroll,
-  numberFormat: 'SMART_NUMBER',
+  numberFormat: "SMART_NUMBER",
   outerRadius: 70,
   showLabels: true,
   labelsOutside: true,
   showLabelsThreshold: 5,
   emitFilter: false,
-  dateFormat: 'smart_date',
+  dateFormat: "smart_date",
 };
 
 export interface PieChartTransformedProps {

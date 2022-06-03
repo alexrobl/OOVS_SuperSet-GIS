@@ -248,7 +248,7 @@ def validate_sqlatable(table: models.SqlaTable) -> None:
         if db.session.query(table_query.exists()).scalar():
             raise Exception(get_dataset_exist_error_msg(table.full_name))
 
-    # Fail before adding if the table can't be found
+    # Fail before adding if the table can"t be found
     try:
         table.get_sqla_table_object()
     except Exception as ex:
@@ -530,7 +530,7 @@ def validate_json(form: Form, field: Field) -> None:  # pylint: disable=unused-a
         json.loads(field.data)
     except Exception as ex:
         logger.exception(ex)
-        raise Exception(_("json isn't valid")) from ex
+        raise Exception(_("json isn"t valid")) from ex
 
 
 class YamlExportMixin:  # pylint: disable=too-few-public-methods
@@ -643,7 +643,7 @@ def check_ownership(obj: Any, raise_if_false: bool = True) -> bool:
     Admin have all access, and other users need to be referenced on either
     the created_by field that comes with the ``AuditMixin``, or in a field
     named ``owners`` which is expected to be a one-to-many with the User
-    model. It is meant to be used in the ModelView's pre_update hook in
+    model. It is meant to be used in the ModelView"s pre_update hook in
     which raising will abort the update.
     """
     if not obj:
@@ -652,7 +652,7 @@ def check_ownership(obj: Any, raise_if_false: bool = True) -> bool:
     security_exception = SupersetSecurityException(
         SupersetError(
             error_type=SupersetErrorType.MISSING_OWNERSHIP_ERROR,
-            message="You don't have the rights to alter [{}]".format(obj),
+            message="You don"t have the rights to alter [{}]".format(obj),
             level=ErrorLevel.ERROR,
         )
     )
@@ -706,7 +706,7 @@ FlaskForm.Meta.bind_field = bind_field
 
 @superset_app.after_request
 def apply_http_headers(response: Response) -> Response:
-    """Applies the configuration's http headers to all responses"""
+    """Applies the configuration"s http headers to all responses"""
 
     # HTTP_HEADERS is deprecated, this provides backwards compatibility
     response.headers.extend(  # type: ignore

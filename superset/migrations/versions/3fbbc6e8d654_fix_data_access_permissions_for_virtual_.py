@@ -209,7 +209,7 @@ def upgrade():
             for role in roles:
                 if pvm in role.permissions:
                     role.permissions.remove(pvm)
-            # Now it's safe to remove the pvm pair
+            # Now it"s safe to remove the pvm pair
             session.delete(pvm)
         # finally remove the orphaned view_menu permission
         session.delete(orphaned_faulty_view_menu)

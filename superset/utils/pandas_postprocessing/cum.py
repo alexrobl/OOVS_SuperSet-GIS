@@ -38,8 +38,8 @@ def cum(
 
     :param df: DataFrame on which the cumulative operation will be based.
     :param columns: columns on which to perform a cumulative operation, mapping source
-           column to target column. For instance, `{'y': 'y'}` will replace the column
-           `y` with the cumulative value in `y`, while `{'y': 'y2'}` will add a column
+           column to target column. For instance, `{"y": "y"}` will replace the column
+           `y` with the cumulative value in `y`, while `{"y": "y2"}` will add a column
            `y2` based on cumulative values calculated from `y`, leaving the original
            column `y` unchanged.
     :param operator: cumulative operator, e.g. `sum`, `prod`, `min`, `max`

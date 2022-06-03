@@ -16,50 +16,50 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React from 'react';
-import styled from '@emotion/styled';
-import { List } from 'antd';
-import Layout from '@theme/Layout';
+import React from "react";
+import styled from "@emotion/styled";
+import { List } from "antd";
+import Layout from "@theme/Layout";
 
 const links = [
   [
-    'https://join.slack.com/t/apache-superset/shared_invite/zt-16jvzmoi8-sI7jKWp~xc2zYRe~NqiY9Q',
-    'Slack',
-    'interact with other Superset users and community members',
+    "https://join.slack.com/t/apache-superset/shared_invite/zt-16jvzmoi8-sI7jKWp~xc2zYRe~NqiY9Q",
+    "Slack",
+    "interact with other Superset users and community members",
   ],
   [
-    'https://github.com/apache/superset',
-    'GitHub',
-    'create tickets to report issues, report bugs, and suggest new features',
+    "https://github.com/apache/superset",
+    "GitHub",
+    "create tickets to report issues, report bugs, and suggest new features",
   ],
   [
-    'https://lists.apache.org/list.html?dev@superset.apache.org',
-    'dev@ Mailing List',
-    'participate in conversations with committers and contributors',
+    "https://lists.apache.org/list.html?dev@superset.apache.org",
+    "dev@ Mailing List",
+    "participate in conversations with committers and contributors",
   ],
   [
-    'https://stackoverflow.com/questions/tagged/superset+apache-superset',
-    'Stack Overflow',
-    'our growing knowledge base',
+    "https://stackoverflow.com/questions/tagged/superset+apache-superset",
+    "Stack Overflow",
+    "our growing knowledge base",
   ],
   [
-    'https://www.meetup.com/Global-Apache-Superset-Community-Meetup/',
-    'Superset Meetup Group',
-    'join our monthly virtual meetups and register for any upcoming events',
+    "https://www.meetup.com/Global-Apache-Superset-Community-Meetup/",
+    "Superset Meetup Group",
+    "join our monthly virtual meetups and register for any upcoming events",
   ],
   [
-    'https://github.com/apache/superset/blob/master/RESOURCES/INTHEWILD.md',
-    'Organizations',
-    'a list of some of the organizations using Superset in production',
+    "https://github.com/apache/superset/blob/master/RESOURCES/INTHEWILD.md",
+    "Organizations",
+    "a list of some of the organizations using Superset in production",
   ],
   [
-    'https://github.com/apache-superset/awesome-apache-superset',
-    'Contributors Guide',
-    'Interested in contributing? Learn how to contribute and best practices',
+    "https://github.com/apache-superset/awesome-apache-superset",
+    "Contributors Guide",
+    "Interested in contributing? Learn how to contribute and best practices",
   ],
 ];
 
-const StyledMain = styled('main')`
+const StyledMain = styled("main")`
   padding-bottom: 60px;
   padding-left: 16px;
   padding-right: 16px;
@@ -77,7 +77,7 @@ const StyledMain = styled('main')`
   }
 `;
 
-const StyledGetInvolved = styled('div')`
+const StyledGetInvolved = styled("div")`
   margin-bottom: 25px;
 `;
 
@@ -102,9 +102,9 @@ const Community = () => {
               renderItem={([href, link, post]) => (
                 <List.Item>
                   <a href={href}>{link}</a>
-                  {' '}
+                  {" "}
                   -
-                  {' '}
+                  {" "}
                   {post}
                 </List.Item>
               )}

@@ -21,7 +21,7 @@ default_endpoint: null
 offset: 0
 cache_timeout: null
 schema: null
-sql: ''
+sql: ""
 params: null
 template_params: null
 filter_select_enabled: true
@@ -45,19 +45,19 @@ columns:
   type: STRING
   groupby: true
   filterable: true
-  expression: "CASE \n  WHEN school_degree = 'no high school (secondary school)'\
-    \ THEN 'A. No high school (secondary school)'\n  WHEN school_degree =  'some\
-    \ high school' THEN 'B. Some high school'\n  WHEN school_degree = 'high school\
-    \ diploma or equivalent (GED)' THEN 'C. High school diploma or equivalent (GED)'\
-    \n  WHEN school_degree = 'associate''s degree' THEN 'D. Associate''s degree'\
-    \n  WHEN school_degree = 'some college credit, no degree' THEN 'E. Some college\
-    \ credit, no degree'\n  WHEN school_degree = 'bachelor''s degree' THEN 'F.\
-    \ Bachelor''s degree'\n  WHEN school_degree = 'trade, technical, or vocational\
-    \ training' THEN 'G. Trade, technical, or vocational training'\n  WHEN school_degree\
-    \ = 'master''s degree (non-professional)' THEN 'H. Master''s degree (non-professional)'\
-    \n  WHEN school_degree = 'Ph.D.' THEN 'I. Ph.D.'\n  WHEN school_degree = '\
-    professional degree (MBA, MD, JD, etc.)' THEN 'J. Professional degree (MBA,\
-    \ MD, JD, etc.)'\nEND"
+  expression: "CASE \n  WHEN school_degree = "no high school (secondary school)"\
+    \ THEN "A. No high school (secondary school)"\n  WHEN school_degree =  "some\
+    \ high school" THEN "B. Some high school"\n  WHEN school_degree = "high school\
+    \ diploma or equivalent (GED)" THEN "C. High school diploma or equivalent (GED)"\
+    \n  WHEN school_degree = "associate""s degree" THEN "D. Associate""s degree"\
+    \n  WHEN school_degree = "some college credit, no degree" THEN "E. Some college\
+    \ credit, no degree"\n  WHEN school_degree = "bachelor""s degree" THEN "F.\
+    \ Bachelor""s degree"\n  WHEN school_degree = "trade, technical, or vocational\
+    \ training" THEN "G. Trade, technical, or vocational training"\n  WHEN school_degree\
+    \ = "master""s degree (non-professional)" THEN "H. Master""s degree (non-professional)"\
+    \n  WHEN school_degree = "Ph.D." THEN "I. Ph.D."\n  WHEN school_degree = "\
+    professional degree (MBA, MD, JD, etc.)" THEN "J. Professional degree (MBA,\
+    \ MD, JD, etc.)"\nEND"
   description: Highest Degree Earned
   python_date_format: null
 - column_name: job_location_preference
@@ -67,10 +67,10 @@ columns:
   type: null
   groupby: true
   filterable: true
-  expression: "case \nwhen job_lctn_pref is Null then 'No Answer' \nwhen job_lctn_pref\
-    \ = 'from home' then 'From Home'\nwhen job_lctn_pref = 'no preference' then 'No\
-    \ Preference'\nwhen job_lctn_pref = 'in an office with other developers' then\
-    \ 'In an Office (with Other Developers)'\nelse job_lctn_pref\nend "
+  expression: "case \nwhen job_lctn_pref is Null then "No Answer" \nwhen job_lctn_pref\
+    \ = "from home" then "From Home"\nwhen job_lctn_pref = "no preference" then "No\
+    \ Preference"\nwhen job_lctn_pref = "in an office with other developers" then\
+    \ "In an Office (with Other Developers)"\nelse job_lctn_pref\nend "
   description: null
   python_date_format: null
 - column_name: ethnic_minority
@@ -80,8 +80,8 @@ columns:
   type: STRING
   groupby: true
   filterable: true
-  expression: "CASE \nWHEN is_ethnic_minority = 0 THEN 'No, not an ethnic minority'\
-    \ \nWHEN is_ethnic_minority = 1 THEN 'Yes, an ethnic minority' \nELSE 'No Answer'\n\
+  expression: "CASE \nWHEN is_ethnic_minority = 0 THEN "No, not an ethnic minority"\
+    \ \nWHEN is_ethnic_minority = 1 THEN "Yes, an ethnic minority" \nELSE "No Answer"\n\
     END"
   description: null
   python_date_format: null
@@ -92,8 +92,8 @@ columns:
   type: STRING
   groupby: true
   filterable: true
-  expression: "CASE \nWHEN job_relocate = 0 THEN 'No: Not Willing to' \nWHEN job_relocate\
-    \ = 1 THEN 'Yes: Willing To'\nELSE 'No Answer'\nEND"
+  expression: "CASE \nWHEN job_relocate = 0 THEN "No: Not Willing to" \nWHEN job_relocate\
+    \ = 1 THEN "Yes: Willing To"\nELSE "No Answer"\nEND"
   description: null
   python_date_format: null
 - column_name: developer_type
@@ -103,8 +103,8 @@ columns:
   type: STRING
   groupby: true
   filterable: true
-  expression: CASE WHEN is_software_dev = 0 THEN 'Aspiring Developer' WHEN is_software_dev
-    = 1 THEN 'Currently A Developer' END
+  expression: CASE WHEN is_software_dev = 0 THEN "Aspiring Developer" WHEN is_software_dev
+    = 1 THEN "Currently A Developer" END
   description: null
   python_date_format: null
 - column_name: first_time_developer
@@ -114,8 +114,8 @@ columns:
   type: null
   groupby: true
   filterable: true
-  expression: "CASE \nWHEN is_first_dev_job = 0 THEN 'No' \nWHEN is_first_dev_job\
-    \ = 1 THEN 'Yes' \nELSE 'No Answer'\nEND"
+  expression: "CASE \nWHEN is_first_dev_job = 0 THEN "No" \nWHEN is_first_dev_job\
+    \ = 1 THEN "Yes" \nELSE "No Answer"\nEND"
   description: null
   python_date_format: null
 - column_name: gender
@@ -125,8 +125,8 @@ columns:
   type: STRING
   groupby: true
   filterable: true
-  expression: "CASE \nWHEN gender = 'Male' THEN 'Male'\nWHEN gender = 'Female' THEN\
-    \ 'Female'\nELSE 'Prefer Not to Say'\nEND"
+  expression: "CASE \nWHEN gender = "Male" THEN "Male"\nWHEN gender = "Female" THEN\
+    \ "Female"\nELSE "Prefer Not to Say"\nEND"
   description: null
   python_date_format: null
 - column_name: calc_first_time_dev
@@ -136,8 +136,8 @@ columns:
   type: STRING
   groupby: true
   filterable: true
-  expression: CASE WHEN is_first_dev_job = 0 THEN 'No' WHEN is_first_dev_job = 1 THEN
-    'Yes' END
+  expression: CASE WHEN is_first_dev_job = 0 THEN "No" WHEN is_first_dev_job = 1 THEN
+    "Yes" END
   description: null
   python_date_format: null
 - column_name: yt_codingtuts360

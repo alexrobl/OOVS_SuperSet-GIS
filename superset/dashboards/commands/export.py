@@ -146,7 +146,7 @@ class ExportDashboardsCommand(ExportModelsCommand):
                             yield from ExportDatasetsCommand([dataset_id]).run()
 
         # the mapping between dashboard -> charts is inferred from the position
-        # attribute, so if it's not present we need to add a default config
+        # attribute, so if it"s not present we need to add a default config
         if not payload.get("position"):
             payload["position"] = get_default_position(model.dashboard_title)
 

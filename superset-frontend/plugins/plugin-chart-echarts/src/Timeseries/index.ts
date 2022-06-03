@@ -24,16 +24,16 @@ import {
   FeatureFlag,
   isFeatureEnabled,
   t,
-} from '@superset-ui/core';
-import buildQuery from './buildQuery';
-import controlPanel from './controlPanel';
-import transformProps from './transformProps';
-import thumbnail from './images/thumbnail.png';
+} from "@superset-ui/core";
+import buildQuery from "./buildQuery";
+import controlPanel from "./controlPanel";
+import transformProps from "./transformProps";
+import thumbnail from "./images/thumbnail.png";
 import {
   EchartsTimeseriesChartProps,
   EchartsTimeseriesFormData,
-} from './types';
-import example from './images/Time-series_Chart.jpg';
+} from "./types";
+import example from "./images/Time-series_Chart.jpg";
 
 export default class EchartsTimeseriesChartPlugin extends ChartPlugin<
   EchartsTimeseriesFormData,
@@ -43,17 +43,17 @@ export default class EchartsTimeseriesChartPlugin extends ChartPlugin<
     super({
       buildQuery,
       controlPanel,
-      loadChart: () => import('./EchartsTimeseries'),
+      loadChart: () => import("./EchartsTimeseries"),
       metadata: new ChartMetadata({
         behaviors: [Behavior.INTERACTIVE_CHART],
-        category: t('Evolution'),
-        credits: ['https://echarts.apache.org'],
+        category: t("Evolution"),
+        credits: ["https://echarts.apache.org"],
         description: isFeatureEnabled(FeatureFlag.GENERIC_CHART_AXES)
           ? t(
-              'Swiss army knife for visualizing data. Choose between  step, line, scatter, and bar charts. This viz type has many customization options as well.',
+              "Swiss army knife for visualizing data. Choose between  step, line, scatter, and bar charts. This viz type has many customization options as well.",
             )
           : t(
-              'Swiss army knife for visualizing time series data. Choose between  step, line, scatter, and bar charts. This viz type has many customization options as well.',
+              "Swiss army knife for visualizing time series data. Choose between  step, line, scatter, and bar charts. This viz type has many customization options as well.",
             ),
         exampleGallery: [{ url: example }],
         supportedAnnotationTypes: [
@@ -63,15 +63,15 @@ export default class EchartsTimeseriesChartPlugin extends ChartPlugin<
           AnnotationType.Timeseries,
         ],
         name: isFeatureEnabled(FeatureFlag.GENERIC_CHART_AXES)
-          ? t('Generic Chart')
-          : t('Time-series Chart'),
+          ? t("Generic Chart")
+          : t("Time-series Chart"),
         tags: [
-          t('Advanced-Analytics'),
-          t('Aesthetic'),
-          t('Line'),
-          t('Predictive'),
-          t('Time'),
-          t('Transformable'),
+          t("Advanced-Analytics"),
+          t("Aesthetic"),
+          t("Line"),
+          t("Predictive"),
+          t("Time"),
+          t("Transformable"),
         ],
         thumbnail,
       }),

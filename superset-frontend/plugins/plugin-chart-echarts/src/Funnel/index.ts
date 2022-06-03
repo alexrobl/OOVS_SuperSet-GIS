@@ -16,12 +16,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { Behavior, ChartMetadata, ChartPlugin, t } from '@superset-ui/core';
-import buildQuery from './buildQuery';
-import controlPanel from './controlPanel';
-import transformProps from './transformProps';
-import thumbnail from './images/thumbnail.png';
-import { EchartsFunnelChartProps, EchartsFunnelFormData } from './types';
+import { Behavior, ChartMetadata, ChartPlugin, t } from "@superset-ui/core";
+import buildQuery from "./buildQuery";
+import controlPanel from "./controlPanel";
+import transformProps from "./transformProps";
+import thumbnail from "./images/thumbnail.png";
+import { EchartsFunnelChartProps, EchartsFunnelFormData } from "./types";
 
 export default class EchartsFunnelChartPlugin extends ChartPlugin<
   EchartsFunnelFormData,
@@ -41,22 +41,22 @@ export default class EchartsFunnelChartPlugin extends ChartPlugin<
     super({
       buildQuery,
       controlPanel,
-      loadChart: () => import('./EchartsFunnel'),
+      loadChart: () => import("./EchartsFunnel"),
       metadata: new ChartMetadata({
         behaviors: [Behavior.INTERACTIVE_CHART],
-        category: t('KPI'),
-        credits: ['https://echarts.apache.org'],
+        category: t("KPI"),
+        credits: ["https://echarts.apache.org"],
         description: t(
-          'Showcases how a metric changes as the funnel progresses. This classic chart is useful for visualizing drop-off between stages in a pipeline or lifecycle.',
+          "Showcases how a metric changes as the funnel progresses. This classic chart is useful for visualizing drop-off between stages in a pipeline or lifecycle.",
         ),
-        name: t('Funnel Chart'),
+        name: t("Funnel Chart"),
         tags: [
-          t('Business'),
-          t('ECharts'),
-          t('Progressive'),
-          t('Report'),
-          t('Sequential'),
-          t('Trend'),
+          t("Business"),
+          t("ECharts"),
+          t("Progressive"),
+          t("Report"),
+          t("Sequential"),
+          t("Trend"),
         ],
         thumbnail,
       }),

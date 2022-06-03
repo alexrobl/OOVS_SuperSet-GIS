@@ -65,11 +65,11 @@ class ImportExportRestApi(BaseApi):
                     type: string
                     format: binary
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         timestamp = datetime.now().strftime("%Y%m%dT%H%M%S")
         root = f"assets_export_{timestamp}"
@@ -131,13 +131,13 @@ class ImportExportRestApi(BaseApi):
                       message:
                         type: string
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         upload = request.files.get("bundle")
         if not upload:

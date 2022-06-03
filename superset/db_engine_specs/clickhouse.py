@@ -77,9 +77,9 @@ class ClickHouseEngineSpec(BaseEngineSpec):  # pylint: disable=abstract-method
     ) -> Optional[str]:
         tt = target_type.upper()
         if tt == utils.TemporalType.DATE:
-            return f"toDate('{dttm.date().isoformat()}')"
+            return f"toDate("{dttm.date().isoformat()}")"
         if tt == utils.TemporalType.DATETIME:
-            return f"""toDateTime('{dttm.isoformat(sep=" ", timespec="seconds")}')"""
+            return f"""toDateTime("{dttm.isoformat(sep=" ", timespec="seconds")}")"""
         return None
 
     @classmethod

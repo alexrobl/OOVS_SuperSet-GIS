@@ -34,7 +34,7 @@ Native-filters can also be set to load collapsed, which also improves connected 
 
 ![dashboard native filter collapsed](media/native_filters_collapsed.png)
 
-For charts, we've added a new funnel chart.
+For charts, we"ve added a new funnel chart.
 
 ![funnel chart](media/funnel_chart.png)
 
@@ -54,9 +54,9 @@ Continuing on the theme of making more things accessible directly from the dashb
 The API has received a new endpoint to allow the developer to pass DB-specific parameters instead of the full SQLAlchemy URI.
 
 # Database Connectivity
-We have improved support for Ascend.io's engine spec and fixed a long list of bugs.
+We have improved support for Ascend.io"s engine spec and fixed a long list of bugs.
 
-Also in the works is a new database connection UI, which should make connecting to a database easier without having to put together a SQLAlchemy URI. It's behind a feature flag for now, but it can be turned on in config.py with `FORCE_DATABASE_CONNECTIONS_SSL = True`.
+Also in the works is a new database connection UI, which should make connecting to a database easier without having to put together a SQLAlchemy URI. It"s behind a feature flag for now, but it can be turned on in config.py with `FORCE_DATABASE_CONNECTIONS_SSL = True`.
 
 # PR Highlights
 

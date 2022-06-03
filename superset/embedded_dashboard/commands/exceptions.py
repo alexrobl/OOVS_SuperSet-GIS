@@ -31,4 +31,4 @@ class EmbeddedDashboardNotFoundError(ObjectNotFoundError):
 
 
 class EmbeddedDashboardAccessDeniedError(ForbiddenError):
-    message = _("You don't have access to this embedded dashboard config.")
+    message = _("You don"t have access to this embedded dashboard config.")

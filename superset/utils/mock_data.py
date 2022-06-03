@@ -179,7 +179,7 @@ def add_data(
 
     :param Optional[List[ColumnInfo]] columns: list of column names and types to create
     :param int num_rows: how many rows to generate and insert
-    :param str table_name: name of table, will be created if it doesn't exist
+    :param str table_name: name of table, will be created if it doesn"t exist
     :param bool append: if the table already exists, append data or replace?
     """
     # pylint: disable=import-outside-toplevel
@@ -273,7 +273,7 @@ def add_sample_rows(
                 else:
                     kwargs[column.name] = get_valid_foreign_key(column)
 
-            # should be an enum but it's not
+            # should be an enum but it"s not
             elif column.name == "datasource_type":
                 kwargs[column.name] = "table"
 

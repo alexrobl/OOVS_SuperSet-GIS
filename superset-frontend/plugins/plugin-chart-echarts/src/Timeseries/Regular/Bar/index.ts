@@ -24,19 +24,19 @@ import {
   FeatureFlag,
   isFeatureEnabled,
   t,
-} from '@superset-ui/core';
-import buildQuery from '../../buildQuery';
-import controlPanel from './controlPanel';
-import transformProps from '../../transformProps';
-import thumbnail from './images/thumbnail.png';
+} from "@superset-ui/core";
+import buildQuery from "../../buildQuery";
+import controlPanel from "./controlPanel";
+import transformProps from "../../transformProps";
+import thumbnail from "./images/thumbnail.png";
 import {
   EchartsTimeseriesChartProps,
   EchartsTimeseriesFormData,
   EchartsTimeseriesSeriesType,
-} from '../../types';
-import example1 from './images/Bar1.png';
-import example2 from './images/Bar2.png';
-import example3 from './images/Bar3.png';
+} from "../../types";
+import example1 from "./images/Bar1.png";
+import example2 from "./images/Bar2.png";
+import example3 from "./images/Bar3.png";
 
 const barTransformProps = (chartProps: EchartsTimeseriesChartProps) =>
   transformProps({
@@ -55,15 +55,15 @@ export default class EchartsTimeseriesBarChartPlugin extends ChartPlugin<
     super({
       buildQuery,
       controlPanel,
-      loadChart: () => import('../../EchartsTimeseries'),
+      loadChart: () => import("../../EchartsTimeseries"),
       metadata: new ChartMetadata({
         behaviors: [Behavior.INTERACTIVE_CHART],
-        category: t('Evolution'),
-        credits: ['https://echarts.apache.org'],
+        category: t("Evolution"),
+        credits: ["https://echarts.apache.org"],
         description: isFeatureEnabled(FeatureFlag.GENERIC_CHART_AXES)
-          ? t('Bar Charts are used to show metrics as a series of bars.')
+          ? t("Bar Charts are used to show metrics as a series of bars.")
           : t(
-              'Time-series Bar Charts are used to show the changes in a metric over time as a series of bars.',
+              "Time-series Bar Charts are used to show the changes in a metric over time as a series of bars.",
             ),
         exampleGallery: [
           { url: example1 },
@@ -77,19 +77,19 @@ export default class EchartsTimeseriesBarChartPlugin extends ChartPlugin<
           AnnotationType.Timeseries,
         ],
         name: isFeatureEnabled(FeatureFlag.GENERIC_CHART_AXES)
-          ? t('Bar Chart v2')
-          : t('Time-series Bar Chart v2'),
+          ? t("Bar Chart v2")
+          : t("Time-series Bar Chart v2"),
         tags: [
-          t('ECharts'),
-          t('Predictive'),
-          t('Advanced-Analytics'),
-          t('Aesthetic'),
-          t('Time'),
-          t('Transformable'),
-          t('Stacked'),
-          t('Vertical'),
-          t('Bar'),
-          t('Popular'),
+          t("ECharts"),
+          t("Predictive"),
+          t("Advanced-Analytics"),
+          t("Aesthetic"),
+          t("Time"),
+          t("Transformable"),
+          t("Stacked"),
+          t("Vertical"),
+          t("Bar"),
+          t("Popular"),
         ],
         thumbnail,
       }),

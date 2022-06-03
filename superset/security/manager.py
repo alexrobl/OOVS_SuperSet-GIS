@@ -349,7 +349,7 @@ class SupersetSecurityManager(  # pylint: disable=too-many-public-methods
         and datasource name prefix respectively, i.e., [schema.]datasource.
 
         :param datasource: The Superset datasource
-        :returns: Whether the user can fully access the datasource's schema
+        :returns: Whether the user can fully access the datasource"s schema
         """
 
         return (
@@ -630,7 +630,7 @@ class SupersetSecurityManager(  # pylint: disable=too-many-public-methods
         """
 
         logger.warning(
-            "This method 'merge_perm' is deprecated use add_permission_view_menu"
+            "This method "merge_perm" is deprecated use add_permission_view_menu"
         )
         self.add_permission_view_menu(permission_name, view_menu_name)
 
@@ -669,7 +669,7 @@ class SupersetSecurityManager(  # pylint: disable=too-many-public-methods
                 all_pvs.add((pv.permission.name, pv.view_menu.name))
 
         def merge_pv(view_menu: str, perm: str) -> None:
-            """Create permission view menu only if it doesn't exist"""
+            """Create permission view menu only if it doesn"t exist"""
             if view_menu and perm and (view_menu, perm) not in all_pvs:
                 self.add_permission_view_menu(view_menu, perm)
 
@@ -775,7 +775,7 @@ class SupersetSecurityManager(  # pylint: disable=too-many-public-methods
         """
 
         logger.info("Copy/Merge %s to %s", role_from_name, role_to_name)
-        # If it's a builtin role extract permissions from it
+        # If it"s a builtin role extract permissions from it
         if role_from_name in self.builtin_roles:
             role_from_permissions = self._get_pvms_from_builtin_role(role_from_name)
         else:
@@ -1102,7 +1102,7 @@ class SupersetSecurityManager(  # pylint: disable=too-many-public-methods
         self, username: str, session: Session = None
     ) -> Optional[User]:
         """
-        Retrieves a user by it's username case sensitive. Optional session parameter
+        Retrieves a user by it"s username case sensitive. Optional session parameter
         utility method normally useful for celery tasks where the session
         need to be scoped
         """
@@ -1153,7 +1153,7 @@ class SupersetSecurityManager(  # pylint: disable=too-many-public-methods
         the passed table.
 
         :param BaseDatasource table: The table to check against.
-        :param Optional[str] username: Optional username if there's no user in the Flask
+        :param Optional[str] username: Optional username if there"s no user in the Flask
         global namespace.
         :returns: A list of filters
         """
@@ -1256,7 +1256,7 @@ class SupersetSecurityManager(  # pylint: disable=too-many-public-methods
             raise SupersetSecurityException(
                 SupersetError(
                     error_type=SupersetErrorType.USER_ACTIVITY_SECURITY_ACCESS_ERROR,
-                    message="Access to user's activity data is restricted",
+                    message="Access to user"s activity data is restricted",
                     level=ErrorLevel.ERROR,
                 )
             )
@@ -1399,7 +1399,7 @@ class SupersetSecurityManager(  # pylint: disable=too-many-public-methods
                 raise ValueError("This is not a guest token.")
         except Exception:  # pylint: disable=broad-except
             # The login manager will handle sending 401s.
-            # We don't need to send a special error message.
+            # We don"t need to send a special error message.
             logger.warning("Invalid guest token", exc_info=True)
             return None
         else:

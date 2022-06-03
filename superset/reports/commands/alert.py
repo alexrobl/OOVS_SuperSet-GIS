@@ -112,7 +112,7 @@ class AlertCommand(BaseCommand):
             self._result = 0.0
             return
         try:
-            # Check if it's float or if we can convert it
+            # Check if it"s float or if we can convert it
             self._result = float(rows[0][1])
             return
         except (AssertionError, TypeError, ValueError) as ex:

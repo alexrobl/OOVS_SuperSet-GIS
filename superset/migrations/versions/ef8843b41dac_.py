@@ -17,7 +17,7 @@
 """empty message
 
 Revision ID: ef8843b41dac
-Revises: ('3b626e2a6783', 'ab3d66c4246e')
+Revises: ("3b626e2a6783", "ab3d66c4246e")
 Create Date: 2016-10-02 10:35:38.825231
 
 """

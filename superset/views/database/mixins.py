@@ -132,17 +132,17 @@ class DatabaseMixin:
             "#sqlalchemy.schema.MetaData) call.<br/>"
             "2. The ``metadata_cache_timeout`` is a cache timeout setting "
             "in seconds for metadata fetch of this database. Specify it as "
-            '**"metadata_cache_timeout": {"schema_cache_timeout": 600, '
-            '"table_cache_timeout": 600}**. '
+            "**"metadata_cache_timeout": {"schema_cache_timeout": 600, "
+            ""table_cache_timeout": 600}**. "
             "If unset, cache will not be enabled for the functionality. "
             "A timeout of 0 indicates that the cache never expires.<br/>"
             "3. The ``schemas_allowed_for_file_upload`` is a comma separated list "
             "of schemas that CSVs are allowed to upload to. "
-            'Specify it as **"schemas_allowed_for_file_upload": '
-            '["public", "csv_upload"]**. '
+            "Specify it as **"schemas_allowed_for_file_upload": "
+            "["public", "csv_upload"]**. "
             "If database flavor does not support schema or any schema is allowed "
             "to be accessed, just leave the list empty<br/>"
-            "4. the ``version`` field is a string specifying the this db's version. "
+            "4. the ``version`` field is a string specifying the this db"s version. "
             "This should be used with Presto DBs so that the syntax is correct<br/>"
             "5. The ``allows_virtual_table_explore`` field is a boolean specifying "
             "whether or not the Explore button in SQL Lab results is shown<br/>"
@@ -233,7 +233,7 @@ class DatabaseMixin:
             raise SupersetException(
                 Markup(
                     "Cannot delete a database that has tables attached. "
-                    "Here's the list of associated tables: "
+                    "Here"s the list of associated tables: "
                     + ", ".join("{}".format(table) for table in database.tables)
                 )
             )
@@ -247,7 +247,7 @@ class DatabaseMixin:
                 _("Extra field cannot be decoded by JSON. %(msg)s", msg=str(ex))
             ) from ex
 
-        # this will check whether 'metadata_params' is configured correctly
+        # this will check whether "metadata_params" is configured correctly
         metadata_signature = inspect.signature(MetaData)
         for key in extra.get("metadata_params", {}):
             if key not in metadata_signature.parameters:

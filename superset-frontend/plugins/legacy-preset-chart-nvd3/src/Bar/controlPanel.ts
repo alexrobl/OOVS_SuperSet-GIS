@@ -16,12 +16,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t } from '@superset-ui/core';
+import { t } from "@superset-ui/core";
 import {
   ControlPanelConfig,
   sections,
   sharedControls,
-} from '@superset-ui/chart-controls';
+} from "@superset-ui/chart-controls";
 import {
   lineInterpolation,
   showBrush,
@@ -42,18 +42,18 @@ import {
   reduceXTicks,
   leftMargin,
   timeSeriesSection,
-} from '../NVD3Controls';
+} from "../NVD3Controls";
 
 const config: ControlPanelConfig = {
   controlOverrides: {
     limit: {
-      rerender: ['timeseries_limit_metric', 'order_desc'],
+      rerender: ["timeseries_limit_metric", "order_desc"],
     },
     timeseries_limit_metric: {
-      label: t('Series Limit Sort By'),
+      label: t("Series Limit Sort By"),
       description: t(
-        'Metric used to order the limit if a series limit is present. ' +
-          'If undefined reverts to the first metric (where appropriate).',
+        "Metric used to order the limit if a series limit is present. " +
+          "If undefined reverts to the first metric (where appropriate).",
       ),
       visibility: ({ controls }) => Boolean(controls?.limit.value),
       mapStateToProps: (state, controlState) => {
@@ -69,10 +69,10 @@ const config: ControlPanelConfig = {
       },
     },
     order_desc: {
-      label: t('Series Limit Sort Descending'),
+      label: t("Series Limit Sort Descending"),
       default: false,
       description: t(
-        'Whether to sort descending or ascending if a series limit is present',
+        "Whether to sort descending or ascending if a series limit is present",
       ),
       visibility: ({ controls }) => Boolean(controls?.limit.value),
     },
@@ -81,10 +81,10 @@ const config: ControlPanelConfig = {
     sections.legacyTimeseriesTime,
     timeSeriesSection[0],
     {
-      label: t('Chart Options'),
+      label: t("Chart Options"),
       expanded: true,
       controlSetRows: [
-        ['color_scheme'],
+        ["color_scheme"],
         [showBrush],
         [showLegend],
         [showBarValue],
@@ -96,7 +96,7 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('X Axis'),
+      label: t("X Axis"),
       expanded: true,
       controlSetRows: [
         [xAxisLabel],
@@ -108,14 +108,14 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('Y Axis'),
+      label: t("Y Axis"),
       expanded: true,
       controlSetRows: [
         [yAxisLabel],
         [leftMargin],
         [yAxisShowMinmax],
         [yLogScale],
-        ['y_axis_format'],
+        ["y_axis_format"],
         [yAxisBounds],
       ],
     },

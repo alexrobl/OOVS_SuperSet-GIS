@@ -17,33 +17,33 @@ specific language governing permissions and limitations
 under the License.
 -->
 This data was downloaded from the
-[World's Health Organization's website](https://datacatalog.worldbank.org/dataset/health-nutrition-and-population-statistics)
+[World"s Health Organization"s website](https://datacatalog.worldbank.org/dataset/health-nutrition-and-population-statistics)
 
-Here's the script that was used to massage the data:
+Here"s the script that was used to massage the data:
 
     DIR = ""
-    df_country = pd.read_csv(DIR + '/HNP_Country.csv')
-    df_country.columns = ['country_code'] + list(df_country.columns[1:])
-    df_country = df_country[['country_code', 'Region']]
-    df_country.columns = ['country_code', 'region']
+    df_country = pd.read_csv(DIR + "/HNP_Country.csv")
+    df_country.columns = ["country_code"] + list(df_country.columns[1:])
+    df_country = df_country[["country_code", "Region"]]
+    df_country.columns = ["country_code", "region"]
 
-    df = pd.read_csv(DIR + '/HNP_Data.csv')
-    del df['Unnamed: 60']
-    df.columns = ['country_name', 'country_code'] + list(df.columns[2:])
-    ndf = df.merge(df_country, how='inner')
+    df = pd.read_csv(DIR + "/HNP_Data.csv")
+    del df["Unnamed: 60"]
+    df.columns = ["country_name", "country_code"] + list(df.columns[2:])
+    ndf = df.merge(df_country, how="inner")
 
-    dims = ('country_name', 'country_code', 'region')
+    dims = ("country_name", "country_code", "region")
     vv = [str(i) for i in range(1960, 2015)]
-    mdf = pd.melt(ndf, id_vars=dims + ('Indicator Code',), value_vars=vv)
-    mdf['year'] = mdf.variable + '-01-01'
-    dims = dims + ('year',)
+    mdf = pd.melt(ndf, id_vars=dims + ("Indicator Code",), value_vars=vv)
+    mdf["year"] = mdf.variable + "-01-01"
+    dims = dims + ("year",)
 
-    pdf = mdf.pivot_table(values='value', columns='Indicator Code', index=dims)
+    pdf = mdf.pivot_table(values="value", columns="Indicator Code", index=dims)
     pdf = pdf.reset_index()
-    pdf.to_csv(DIR + '/countries.csv')
-    pdf.to_json(DIR + '/countries.json', orient='records')
+    pdf.to_csv(DIR + "/countries.csv")
+    pdf.to_json(DIR + "/countries.json", orient="records")
 
-Here's the description of the metrics available:
+Here"s the description of the metrics available:
 
 Series | Code Indicator Name
 --- | ---
@@ -87,7 +87,7 @@ SH.DTH.NCOM.ZS | Cause of death, by non-communicable diseases (% of total)
 SH.DTH.NMRT | Number of neonatal deaths
 SH.DYN.AIDS | Adults (ages 15+) living with HIV
 SH.DYN.AIDS.DH | AIDS estimated deaths (UNAIDS estimates)
-SH.DYN.AIDS.FE.ZS | Women's share of population ages 15+ living with HIV (%)
+SH.DYN.AIDS.FE.ZS | Women"s share of population ages 15+ living with HIV (%)
 SH.DYN.AIDS.ZS | Prevalence of HIV, total (% of population ages 15-49)
 SH.DYN.MORT | Mortality rate, under-5 (per 1,000 live births)
 SH.DYN.MORT.FE | Mortality rate, under-5, female (per 1,000 live births)

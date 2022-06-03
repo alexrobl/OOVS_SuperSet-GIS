@@ -29,7 +29,7 @@ def get_language_pack(locale: str) -> Optional[Dict[str, Any]]:
 
     Returns the langugage pack from cache if it exists, caches otherwise
 
-    >>> get_language_pack('fr')['Dashboards']
+    >>> get_language_pack("fr")["Dashboards"]
     "Tableaux de bords"
     """
     pack = ALL_LANGUAGE_PACKS.get(locale)

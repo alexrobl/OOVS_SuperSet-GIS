@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React from 'react';
+import React from "react";
 import {
   t,
   getNumberFormatter,
@@ -26,10 +26,10 @@ import {
   computeMaxFontSize,
   BRAND_COLOR,
   styled,
-} from '@superset-ui/core';
-import { EChartsCoreOption } from 'echarts';
-import Echart from '../components/Echart';
-import { TimeSeriesDatum } from './types';
+} from "@superset-ui/core";
+import { EChartsCoreOption } from "echarts";
+import Echart from "../components/Echart";
+import { TimeSeriesDatum } from "./types";
 
 const defaultNumberFormatter = getNumberFormatter();
 
@@ -66,7 +66,7 @@ type BigNumberVisProps = {
 
 class BigNumberVis extends React.PureComponent<BigNumberVisProps> {
   static defaultProps = {
-    className: '',
+    className: "",
     headerFormatter: defaultNumberFormatter,
     formatTime: smartDateVerboseFormatter,
     headerFontSize: PROPORTION.HEADER,
@@ -75,7 +75,7 @@ class BigNumberVis extends React.PureComponent<BigNumberVisProps> {
     showTimestamp: false,
     showTrendLine: false,
     startYAxisAtZero: true,
-    subheader: '',
+    subheader: "",
     subheaderFontSize: PROPORTION.SUBHEADER,
     timeRangeFixed: false,
   };
@@ -83,17 +83,17 @@ class BigNumberVis extends React.PureComponent<BigNumberVisProps> {
   getClassName() {
     const { className, showTrendLine, bigNumberFallback } = this.props;
     const names = `superset-legacy-chart-big-number ${className} ${
-      bigNumberFallback ? 'is-fallback-value' : ''
+      bigNumberFallback ? "is-fallback-value" : ""
     }`;
     if (showTrendLine) return names;
     return `${names} no-trendline`;
   }
 
   createTemporaryContainer() {
-    const container = document.createElement('div');
+    const container = document.createElement("div");
     container.className = this.getClassName();
-    container.style.position = 'absolute'; // so it won't disrupt page layout
-    container.style.opacity = '0'; // and not visible
+    container.style.position = "absolute"; // so it won"t disrupt page layout
+    container.style.opacity = "0"; // and not visible
     return container;
   }
 
@@ -109,7 +109,7 @@ class BigNumberVis extends React.PureComponent<BigNumberVisProps> {
           formatTime(bigNumberFallback[0]),
         )}
       >
-        {t('Not up to date')}
+        {t("Not up to date")}
       </span>
     );
   }
@@ -118,7 +118,7 @@ class BigNumberVis extends React.PureComponent<BigNumberVisProps> {
     const { timestamp, showTimestamp, formatTime, width } = this.props;
     if (!showTimestamp) return null;
 
-    const text = timestamp === null ? '' : formatTime(timestamp);
+    const text = timestamp === null ? "" : formatTime(timestamp);
 
     const container = this.createTemporaryContainer();
     document.body.append(container);
@@ -126,7 +126,7 @@ class BigNumberVis extends React.PureComponent<BigNumberVisProps> {
       text,
       maxWidth: width,
       maxHeight,
-      className: 'kicker',
+      className: "kicker",
       container,
     });
     container.remove();
@@ -146,7 +146,7 @@ class BigNumberVis extends React.PureComponent<BigNumberVisProps> {
 
   renderHeader(maxHeight: number) {
     const { bigNumber, headerFormatter, width } = this.props;
-    const text = bigNumber === null ? t('No data') : headerFormatter(bigNumber);
+    const text = bigNumber === null ? t("No data") : headerFormatter(bigNumber);
 
     const container = this.createTemporaryContainer();
     document.body.append(container);
@@ -154,7 +154,7 @@ class BigNumberVis extends React.PureComponent<BigNumberVisProps> {
       text,
       maxWidth: width,
       maxHeight,
-      className: 'header-line',
+      className: "header-line",
       container,
     });
     container.remove();
@@ -177,10 +177,10 @@ class BigNumberVis extends React.PureComponent<BigNumberVisProps> {
     let fontSize = 0;
 
     const NO_DATA_OR_HASNT_LANDED = t(
-      'No data after filtering or data is NULL for the latest time record',
+      "No data after filtering or data is NULL for the latest time record",
     );
     const NO_DATA = t(
-      'Try applying different filters or ensuring your datasource has data',
+      "Try applying different filters or ensuring your datasource has data",
     );
     let text = subheader;
     if (bigNumber === null) {
@@ -193,7 +193,7 @@ class BigNumberVis extends React.PureComponent<BigNumberVisProps> {
         text,
         maxWidth: width,
         maxHeight,
-        className: 'subheader-line',
+        className: "subheader-line",
         container,
       });
       container.remove();
@@ -216,7 +216,7 @@ class BigNumberVis extends React.PureComponent<BigNumberVisProps> {
   renderTrendline(maxHeight: number) {
     const { width, trendLineData, echartOptions } = this.props;
 
-    // if can't find any non-null values, no point rendering the trendline
+    // if can"t find any non-null values, no point rendering the trendline
     if (!trendLineData?.some(d => d[1] !== null)) {
       return null;
     }

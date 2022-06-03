@@ -16,8 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { SupersetTheme } from '@superset-ui/core';
-import { GaugeSeriesOption } from 'echarts';
+import { SupersetTheme } from "@superset-ui/core";
+import { GaugeSeriesOption } from "echarts";
 
 export const defaultGaugeSeriesOption = (
   theme: SupersetTheme,
@@ -42,27 +42,27 @@ export const defaultGaugeSeriesOption = (
     },
   },
   detail: {
-    color: 'auto',
+    color: "auto",
   },
 });
 
 export const INTERVAL_GAUGE_SERIES_OPTION: GaugeSeriesOption = {
   splitLine: {
     lineStyle: {
-      color: 'auto',
+      color: "auto",
     },
   },
   axisTick: {
     lineStyle: {
-      color: 'auto',
+      color: "auto",
     },
   },
   axisLabel: {
-    color: 'auto',
+    color: "auto",
   },
   pointer: {
     itemStyle: {
-      color: 'auto',
+      color: "auto",
     },
   },
 };

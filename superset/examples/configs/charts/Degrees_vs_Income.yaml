@@ -19,7 +19,7 @@ viz_type: box_plot
 params:
   adhoc_filters:
   - clause: WHERE
-    comparator: '1'
+    comparator: "1"
     expressionType: SIMPLE
     filterOptionName: filter_s1jzmdwgeg_p3er4w56uy
     isExtra: false
@@ -28,7 +28,7 @@ params:
     sqlExpression: null
     subject: is_software_dev
   - clause: WHERE
-    comparator: '200000'
+    comparator: "200000"
     expressionType: SIMPLE
     filterOptionName: filter_ojzq4njnuog_zj0dux944z
     isExtra: false

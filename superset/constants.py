@@ -34,7 +34,7 @@ class RouteMethod:  # pylint: disable=too-few-public-methods
     Route methods are a FAB concept around ModelView and RestModelView
     classes in FAB. Derivatives can define `include_route_method` and
     `exclude_route_methods` class attribute as a set of methods that
-    will or won't get exposed.
+    will or won"t get exposed.
 
     This class is a collection of static constants to reference common
     route methods, namely the ones defined in the base classes in FAB

@@ -50,12 +50,12 @@ def request(
 ) -> Dict[str, Any]:
     resp = requests.request(
         method,
-        f"https://api.github.com/{endpoint.lstrip('/')}",
+        f"https://api.github.com/{endpoint.lstrip("/")}",
         headers={"Authorization": f"Bearer {github_token}"},
         **kwargs,
     ).json()
     if "message" in resp:
-        raise ClickException(f"{endpoint} >> {resp['message']} <<")
+        raise ClickException(f"{endpoint} >> {resp["message"]} <<")
     return resp
 
 
@@ -171,12 +171,12 @@ def cancel_github_workflows(
         title = "all jobs" if include_last else "all duplicate jobs"
     elif branch_or_pull.isdigit():
         pr = get_pull_request(repo, pull_number=branch_or_pull)
-        title = f"pull request #{pr['number']} - {pr['title']}"
+        title = f"pull request #{pr["number"]} - {pr["title"]}"
     else:
         title = f"branch [{branch_or_pull}]"
 
     print(
-        f"\nCancel {'active' if include_running else 'previous'} "
+        f"\nCancel {"active" if include_running else "previous"} "
         f"workflow runs for {title}\n"
     )
 
@@ -209,7 +209,7 @@ def cancel_github_workflows(
             f"   status: {statuses}\n   event: {events}\n"
         )
     else:
-        print(f"No {' or '.join(statuses)} workflow runs found.\n")
+        print(f"No {" or ".join(statuses)} workflow runs found.\n")
         return
 
     if not include_last:
@@ -217,7 +217,7 @@ def cancel_github_workflows(
         seen = set()
         dups = []
         for item in reversed(runs):
-            key = f'{item["event"]}_{item["head_branch"]}_{item["workflow_id"]}'
+            key = f"{item["event"]}_{item["head_branch"]}_{item["workflow_id"]}"
             if key in seen:
                 dups.append(item)
             else:
@@ -240,11 +240,11 @@ def cancel_github_workflows(
             print("")
             print_commit(head_commit, entry["head_branch"])
         try:
-            print(f"[{entry['status']}] {entry['name']}", end="\r")
+            print(f"[{entry["status"]}] {entry["name"]}", end="\r")
             cancel_run(repo, entry["id"])
-            print(f"[Canceled] {entry['name']}     ")
+            print(f"[Canceled] {entry["name"]}     ")
         except ClickException as error:
-            print(f"[Error: {error.message}] {entry['name']}    ")
+            print(f"[Error: {error.message}] {entry["name"]}    ")
     print("")
 
 

@@ -218,7 +218,7 @@ class DashboardImportException(SupersetException):
 
 class DatasetInvalidPermissionEvaluationException(SupersetException):
     """
-    When a dataset can't compute its permission name
+    When a dataset can"t compute its permission name
     """
 
 

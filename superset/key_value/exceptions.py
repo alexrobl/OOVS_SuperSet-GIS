@@ -47,4 +47,4 @@ class KeyValueUpdateFailedError(UpdateFailedError):
 
 
 class KeyValueAccessDeniedError(ForbiddenError):
-    message = _("You don't have permission to modify the value.")
+    message = _("You don"t have permission to modify the value.")

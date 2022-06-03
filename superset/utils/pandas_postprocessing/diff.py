@@ -37,8 +37,8 @@ def diff(
 
     :param df: DataFrame on which the diff will be based.
     :param columns: columns on which to perform diff, mapping source column to
-           target column. For instance, `{'y': 'y'}` will replace the column `y` with
-           the diff value in `y`, while `{'y': 'y2'}` will add a column `y2` based
+           target column. For instance, `{"y": "y"}` will replace the column `y` with
+           the diff value in `y`, while `{"y": "y2"}` will add a column `y2` based
            on diff values calculated from `y`, leaving the original column `y`
            unchanged.
     :param periods: periods to shift for calculating difference.

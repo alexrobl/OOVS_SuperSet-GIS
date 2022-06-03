@@ -51,7 +51,7 @@ def remove_value_if_too_long():
     session = db.Session(bind=bind)
 
     # it will be easier for users to notice that their field has been deleted rather than truncated
-    # so just remove it if it won't fit back into the 1000 string length column
+    # so just remove it if it won"t fit back into the 1000 string length column
     try:
         rows = (
             session.query(SqlaTable)

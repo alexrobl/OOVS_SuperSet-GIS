@@ -19,7 +19,7 @@ under the License.
 
 # Release Notes for Superset 0.38
 
-## What's new
+## What"s new
 - [New features](#new-features)
 - [Bugfixes](#bugfixes)
 - [Breaking Changes](#breaking-changes)
@@ -211,7 +211,7 @@ Other
 - fix: Implement updates to SQL-based email alerts  (#[10454](https://github.com/apache/superset/pull/10454))
 - fix(presto): Handle ROW data stored as string  (#[10456](https://github.com/apache/superset/pull/10456))
 - fix: change "add new slice" copy to "add new chart"  (#[10457](https://github.com/apache/superset/pull/10457))
-- fix(sqllab): button width isn't wide enough for 'Run Selection'  (#[10461](https://github.com/apache/superset/pull/10461))
+- fix(sqllab): button width isn"t wide enough for "Run Selection"  (#[10461](https://github.com/apache/superset/pull/10461))
 - fix: timeout error message  (#[10478](https://github.com/apache/superset/pull/10478))
 - fix: enforce mandatory chart name on save and edit  (#[10482](https://github.com/apache/superset/pull/10482))
 - fix: More tweaks needed after adding Doctype tag  (#[10504](https://github.com/apache/superset/pull/10504))
@@ -257,7 +257,7 @@ Other
 - fix: use nullpool in the celery workers  (#[10819](https://github.com/apache/superset/pull/10819))
 - fix: Making the database read-only  (#[10823](https://github.com/apache/superset/pull/10823))
 - fix(databases): test connection api endpoint  (#[10824](https://github.com/apache/superset/pull/10824))
-- fix: update the time filter for 'Last Year' option in explore  (#[10829](https://github.com/apache/superset/pull/10829))
+- fix: update the time filter for "Last Year" option in explore  (#[10829](https://github.com/apache/superset/pull/10829))
 - fix(test): missing auth on tests  (#[10842](https://github.com/apache/superset/pull/10842))
 - fix(cypress): wait for filterValues request  (#[10884](https://github.com/apache/superset/pull/10884))
 - fix: superset alerting misc fixes  (#[10891](https://github.com/apache/superset/pull/10891))
@@ -301,13 +301,13 @@ Other
 - fix: alembic migration error msg trying to delete constraint on tables  (#[11115](https://github.com/apache/superset/pull/11115))
 - fix: remove extra flash import  (#[11121](https://github.com/apache/superset/pull/11121))
 - fix: Revert "Replace reactable with DataTable from superset-ui in QueryTable (#10981)"  (#[11125](https://github.com/apache/superset/pull/11125))
-- fix: SpatialControl popover won't open  (#[11127](https://github.com/apache/superset/pull/11127))
+- fix: SpatialControl popover won"t open  (#[11127](https://github.com/apache/superset/pull/11127))
 - fix: Alembic migration 18532d70ab98  (#[11136](https://github.com/apache/superset/pull/11136))
 - fix(examples): missing expressions in birth_names  (#[11141](https://github.com/apache/superset/pull/11141))
 - fix: Fix Time Column dropdown for date filter  (#[11149](https://github.com/apache/superset/pull/11149))
 - fix(dataset): update user list endpoint  (#[11221](https://github.com/apache/superset/pull/11221))
 - fix(crud): set default extra value  (#[11262](https://github.com/apache/superset/pull/11262))
-- fix(sqla): allow 'unknown' type queries in explore view  (#[11365](https://github.com/apache/superset/pull/11365))
+- fix(sqla): allow "unknown" type queries in explore view  (#[11365](https://github.com/apache/superset/pull/11365))
 - fix: prior npm font source had a glitch  (#[11724](https://github.com/apache/superset/pull/11724))
 
 

@@ -25,24 +25,24 @@ from superset.errors import SupersetErrorType
 
 # Regular expressions to catch custom errors
 CONNECTION_ACCESS_DENIED_REGEX = re.compile(
-    'password authentication failed for user "(?P<username>.*?)"'
+    "password authentication failed for user "(?P<username>.*?)""
 )
 CONNECTION_INVALID_HOSTNAME_REGEX = re.compile(
-    'could not translate host name "(?P<hostname>.*?)" to address: '
+    "could not translate host name "(?P<hostname>.*?)" to address: "
     "nodename nor servname provided, or not known"
 )
 CONNECTION_PORT_CLOSED_REGEX = re.compile(
     r"could not connect to server: Connection refused\s+Is the server "
-    r'running on host "(?P<hostname>.*?)" (\(.*?\) )?and accepting\s+TCP/IP '
+    r"running on host "(?P<hostname>.*?)" (\(.*?\) )?and accepting\s+TCP/IP "
     r"connections on port (?P<port>.*?)\?"
 )
 CONNECTION_HOST_DOWN_REGEX = re.compile(
     r"could not connect to server: (?P<reason>.*?)\s+Is the server running on "
-    r'host "(?P<hostname>.*?)" (\(.*?\) )?and accepting\s+TCP/IP '
+    r"host "(?P<hostname>.*?)" (\(.*?\) )?and accepting\s+TCP/IP "
     r"connections on port (?P<port>.*?)\?"
 )
 CONNECTION_UNKNOWN_DATABASE_REGEX = re.compile(
-    'database "(?P<database>.*?)" does not exist'
+    "database "(?P<database>.*?)" does not exist"
 )
 
 
@@ -60,23 +60,23 @@ class RedshiftEngineSpec(PostgresBaseEngineSpec, BasicParametersMixin):
 
     custom_errors: Dict[Pattern[str], Tuple[str, SupersetErrorType, Dict[str, Any]]] = {
         CONNECTION_ACCESS_DENIED_REGEX: (
-            __('Either the username "%(username)s" or the password is incorrect.'),
+            __("Either the username "%(username)s" or the password is incorrect."),
             SupersetErrorType.CONNECTION_ACCESS_DENIED_ERROR,
             {"invalid": ["username", "password"]},
         ),
         CONNECTION_INVALID_HOSTNAME_REGEX: (
-            __('The hostname "%(hostname)s" cannot be resolved.'),
+            __("The hostname "%(hostname)s" cannot be resolved."),
             SupersetErrorType.CONNECTION_INVALID_HOSTNAME_ERROR,
             {"invalid": ["host"]},
         ),
         CONNECTION_PORT_CLOSED_REGEX: (
-            __('Port %(port)s on hostname "%(hostname)s" refused the connection.'),
+            __("Port %(port)s on hostname "%(hostname)s" refused the connection."),
             SupersetErrorType.CONNECTION_PORT_CLOSED_ERROR,
             {"invalid": ["host", "port"]},
         ),
         CONNECTION_HOST_DOWN_REGEX: (
             __(
-                'The host "%(hostname)s" might be down, and can\'t be '
+                "The host "%(hostname)s" might be down, and can\"t be "
                 "reached on port %(port)s."
             ),
             SupersetErrorType.CONNECTION_HOST_DOWN_ERROR,
@@ -84,7 +84,7 @@ class RedshiftEngineSpec(PostgresBaseEngineSpec, BasicParametersMixin):
         ),
         CONNECTION_UNKNOWN_DATABASE_REGEX: (
             __(
-                'We were unable to connect to your database named "%(database)s".'
+                "We were unable to connect to your database named "%(database)s"."
                 " Please verify your database name and try again."
             ),
             SupersetErrorType.CONNECTION_UNKNOWN_DATABASE_ERROR,

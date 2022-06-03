@@ -58,7 +58,7 @@ class SliceMixin:  # pylint: disable=too-few-public-methods
         "description": Markup(
             "The content here can be displayed as widget headers in the "
             "dashboard view. Supports "
-            '<a href="https://daringfireball.net/projects/markdown/"">'
+            "<a href="https://daringfireball.net/projects/markdown/"">"
             "markdown</a>"
         ),
         "params": _(

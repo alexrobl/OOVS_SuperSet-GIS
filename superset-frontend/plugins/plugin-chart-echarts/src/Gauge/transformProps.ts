@@ -25,25 +25,25 @@ import {
   getMetricLabel,
   DataRecordValue,
   getColumnLabel,
-} from '@superset-ui/core';
-import { EChartsCoreOption, GaugeSeriesOption } from 'echarts';
-import { GaugeDataItemOption } from 'echarts/types/src/chart/gauge/GaugeSeries';
-import range from 'lodash/range';
-import { parseNumbersList } from '../utils/controls';
+} from "@superset-ui/core";
+import { EChartsCoreOption, GaugeSeriesOption } from "echarts";
+import { GaugeDataItemOption } from "echarts/types/src/chart/gauge/GaugeSeries";
+import range from "lodash/range";
+import { parseNumbersList } from "../utils/controls";
 import {
   DEFAULT_FORM_DATA as DEFAULT_GAUGE_FORM_DATA,
   EchartsGaugeFormData,
   AxisTickLineStyle,
   GaugeChartTransformedProps,
   EchartsGaugeChartProps,
-} from './types';
+} from "./types";
 import {
   defaultGaugeSeriesOption,
   INTERVAL_GAUGE_SERIES_OPTION,
   OFFSETS,
   FONT_SIZE_MULTIPLIERS,
-} from './constants';
-import { OpacityEnum } from '../constants';
+} from "./constants";
+import { OpacityEnum } from "../constants";
 
 const setIntervalBoundsAndColors = (
   intervals: string,
@@ -54,8 +54,8 @@ const setIntervalBoundsAndColors = (
   let intervalBoundsNonNormalized;
   let intervalColorIndicesArray;
   try {
-    intervalBoundsNonNormalized = parseNumbersList(intervals, ',');
-    intervalColorIndicesArray = parseNumbersList(intervalColorIndices, ',');
+    intervalBoundsNonNormalized = parseNumbersList(intervals, ",");
+    intervalColorIndicesArray = parseNumbersList(intervalColorIndices, ",");
   } catch (error) {
     intervalBoundsNonNormalized = [] as number[];
     intervalColorIndicesArray = [] as number[];
@@ -123,7 +123,7 @@ export default function transformProps(
   );
   const groupbyLabels = groupby.map(getColumnLabel);
   const formatValue = (value: number) =>
-    valueFormatter.replace('{value}', numberFormatter(value));
+    valueFormatter.replace("{value}", numberFormatter(value));
   const axisTickLength = FONT_SIZE_MULTIPLIERS.axisTickLength * fontSize;
   const splitLineLength = FONT_SIZE_MULTIPLIERS.splitLineLength * fontSize;
   const titleOffsetFromTitle =
@@ -142,7 +142,7 @@ export default function transformProps(
     (data_point, index) => {
       const name = groupbyLabels
         .map(column => `${column}: ${data_point[column]}`)
-        .join(', ');
+        .join(", ");
       columnsLabelMap.set(
         name,
         groupbyLabels.map(col => data_point[col]),
@@ -155,14 +155,14 @@ export default function transformProps(
         },
         title: {
           offsetCenter: [
-            '0%',
+            "0%",
             `${index * titleOffsetFromTitle + OFFSETS.titleFromCenter}%`,
           ],
           fontSize,
         },
         detail: {
           offsetCenter: [
-            '0%',
+            "0%",
             `${
               index * titleOffsetFromTitle +
               OFFSETS.titleFromCenter +
@@ -266,14 +266,14 @@ export default function transformProps(
 
   const series: GaugeSeriesOption[] = [
     {
-      type: 'gauge',
+      type: "gauge",
       startAngle,
       endAngle,
       min: minVal,
       max: maxVal,
       progress,
       animation,
-      axisLine: axisLine as GaugeSeriesOption['axisLine'],
+      axisLine: axisLine as GaugeSeriesOption["axisLine"],
       splitLine,
       splitNumber,
       axisLabel,

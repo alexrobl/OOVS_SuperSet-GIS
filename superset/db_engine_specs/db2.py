@@ -50,4 +50,4 @@ class Db2EngineSpec(BaseEngineSpec):
 
     @classmethod
     def epoch_to_dttm(cls) -> str:
-        return "(TIMESTAMP('1970-01-01', '00:00:00') + {col} SECONDS)"
+        return "(TIMESTAMP("1970-01-01", "00:00:00") + {col} SECONDS)"

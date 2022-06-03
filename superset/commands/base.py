@@ -54,8 +54,8 @@ class CreateMixin:  # pylint: disable=too-few-public-methods
         is added unless belonging to the Admin role.
 
         :param user: current user
-        :param owner_ids: list of owners by id's
-        :raises OwnersNotFoundValidationError: if at least one owner can't be resolved
+        :param owner_ids: list of owners by id"s
+        :raises OwnersNotFoundValidationError: if at least one owner can"t be resolved
         :returns: Final list of owners
         """
         return populate_owners(user, owner_ids, default_to_user=True)
@@ -71,8 +71,8 @@ class UpdateMixin:  # pylint: disable=too-few-public-methods
         is added unless belonging to the Admin role.
 
         :param user: current user
-        :param owner_ids: list of owners by id's
-        :raises OwnersNotFoundValidationError: if at least one owner can't be resolved
+        :param owner_ids: list of owners by id"s
+        :raises OwnersNotFoundValidationError: if at least one owner can"t be resolved
         :returns: Final list of owners
         """
         return populate_owners(user, owner_ids, default_to_user=False)

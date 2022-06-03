@@ -49,7 +49,7 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-html[data-theme='dark'] .docusaurus-highlight-code-line {
+html[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -67,7 +67,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   font-weight: 400;
 }
 
-/* Hacks to disable Swagger UI's "try it out" interactive mode */
+/* Hacks to disable Swagger UI"s "try it out" interactive mode */
 .try-out,
 .auth-wrapper,
 .information-container {

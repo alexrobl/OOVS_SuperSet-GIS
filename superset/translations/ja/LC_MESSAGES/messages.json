@@ -60,13 +60,13 @@
       "Issue 1006 - One or more parameters specified in the query are missing.": [
         "Issue 1006 - クエリで指定された1つ以上のパラメーターが見つかりません。"
       ],
-      "Issue 1007 - The hostname provided can't be resolved.": [
+      "Issue 1007 - The hostname provided can"t be resolved.": [
         "Issue 1007 - 指定されたホスト名を解決できません。"
       ],
       "Issue 1008 - The port is closed.": [
         "Issue 1008 - ポートが閉じています。"
       ],
-      "Issue 1009 - The host might be down, and can't be reached on the provided port.": [
+      "Issue 1009 - The host might be down, and can"t be reached on the provided port.": [
         "Issue 1009 - 指定されたポートに到達できません。ホストがダウンしている可能性があります。"
       ],
       "Issue 1010 - Superset encountered an error while running a command.": [
@@ -87,7 +87,7 @@
       "Issue 1015 - Either the database is spelled incorrectly or does not exist.": [
         "Issue 1015 - データベース名が正しくないか、または存在しません。"
       ],
-      "Issue 1017 - User doesn't have the proper permissions.": [
+      "Issue 1017 - User doesn"t have the proper permissions.": [
         "Issue 1017 - ユーザーに適切なアクセス許可がありません。"
       ],
       "Invalid certificate": ["無効な証明書"],
@@ -101,7 +101,7 @@
         "キー %(key)s の安全でないテンプレート値: %(value_type)s"
       ],
       "Unsupported template value for key %(key)s": [""],
-      "SQL Lab timeout. This environment's policy is to kill queries after {} seconds.": [
+      "SQL Lab timeout. This environment"s policy is to kill queries after {} seconds.": [
         "SQL Labタイムアウト。この環境のポリシーは {} 秒後にクエリを強制終了します。"
       ],
       "Only `SELECT` statements are allowed against this database": [
@@ -126,20 +126,20 @@
       "You cannot use [Columns] in combination with [Group By]/[Metrics]/[Percentage Metrics]. Please choose one or the other.": [
         "[Columns] を [Group By]/[Metrics]/[Percentage Metrics] と組み合わせて使用することはできません。どちらか一方を選択してください。"
       ],
-      "Pick a granularity in the Time section or uncheck 'Include Time'": [""],
+      "Pick a granularity in the Time section or uncheck "Include Time"": [""],
       "Time Table View": [""],
       "Pick at least one metric": ["少なくとも1つの指標を選択してください"],
-      "When using 'Group By' you are limited to use a single metric": [
+      "When using "Group By" you are limited to use a single metric": [
         "‘Group By’ を使用する場合、指標は1つに制限されます。"
       ],
       "Pivot Table": ["ピボットテーブル"],
-      "Please choose at least one 'Group by' field ": [
+      "Please choose at least one "Group by" field ": [
         "少なくとも1つの[Group by]フィールドを選択してください "
       ],
       "Please choose at least one metric": [
         "少なくとも1つの指標を選択してください"
       ],
-      "Group By' and 'Columns' can't overlap": [
+      "Group By" and "Columns" can"t overlap": [
         "‘Group by’ と ‘Columns’ は重複できません"
       ],
       "Treemap": ["ツリーマップ"],
@@ -175,12 +175,12 @@
         "少なくとも 1 つの数値列を指定する必要があります。"
       ],
       "Distribution - Bar Chart": ["棒グラフ"],
-      "Can't have overlap between Series and Breakdowns": [""],
+      "Can"t have overlap between Series and Breakdowns": [""],
       "Pick at least one field for [Series]": [""],
       "Sunburst": [""],
       "Sankey": ["サンキー"],
       "Pick exactly 2 columns as [Source / Target]": [""],
-      "There's a loop in your Sankey, please provide a tree. Here's a faulty link: {}": [
+      "There"s a loop in your Sankey, please provide a tree. Here"s a faulty link: {}": [
         ""
       ],
       "Directed Force Layout": [""],
@@ -193,7 +193,7 @@
       "Horizon Charts": [""],
       "Mapbox": [""],
       "[Longitude] and [Latitude] must be set": [""],
-      "Must have a [Group By] column to have 'count' as the [Label]": [
+      "Must have a [Group By] column to have "count" as the [Label]": [
         "[Label] として ’count’ を持つには、[Group By] 列が必要です"
       ],
       "Choice of [Label] must be present in [Group By]": [""],
@@ -329,14 +329,14 @@
       "Show Druid Datasource": [""],
       "Add Druid Datasource": [""],
       "Edit Druid Datasource": [""],
-      "The list of charts associated with this table. By altering this datasource, you may change how these associated charts behave. Also note that charts need to point to a datasource, so this form will fail at saving if removing charts from a datasource. If you want to change the datasource for a chart, overwrite the chart from the 'explore view'": [
+      "The list of charts associated with this table. By altering this datasource, you may change how these associated charts behave. Also note that charts need to point to a datasource, so this form will fail at saving if removing charts from a datasource. If you want to change the datasource for a chart, overwrite the chart from the "explore view"": [
         ""
       ],
       "Timezone offset (in hours) for this datasource": [""],
       "Time expression to use as a predicate when retrieving distinct values to populate the filter component. Only applies when `Enable Filter Select` is on. If you enter `7 days ago`, the distinct list of values in the filter will be populated based on the distinct value over the past week": [
         ""
       ],
-      "Whether to populate the filter's dropdown in the explore view's filter section with a list of distinct values fetched from the backend on the fly": [
+      "Whether to populate the filter"s dropdown in the explore view"s filter section with a list of distinct values fetched from the backend on the fly": [
         ""
       ],
       "Redirects to this endpoint when clicking on the datasource from the datasource list": [
@@ -359,7 +359,7 @@
       "Modified": ["最終更新"],
       "Refreshed metadata from cluster [{}]": [""],
       "Only `SELECT` statements are allowed": [
-        "'SELECT' 操作のみが許可されます"
+        ""SELECT" 操作のみが許可されます"
       ],
       "Only single queries supported": [
         "単一のクエリのみがサポートされています"
@@ -374,7 +374,7 @@
         ""
       ],
       "Empty query?": [""],
-      "Metric '%(metric)s' does not exist": [""],
+      "Metric "%(metric)s" does not exist": [""],
       "Unknown column used in orderby: %(col)s": [""],
       "Time column \"%(col)s\" does not exist in dataset": [""],
       "Filter value list cannot be empty": [""],
@@ -419,7 +419,7 @@
       "For regular filters, these are the roles this filter will be applied to. For base filters, these are the roles that the filter DOES NOT apply to, e.g. Admin if admin should see all data.": [
         ""
       ],
-      "Filters with the same group key will be ORed together within the group, while different filter groups will be ANDed together. Undefined group keys are treated as unique groups, i.e. are not grouped together. For example, if a table has three filters, of which two are for departments Finance and Marketing (group key = 'department'), and one refers to the region Europe (group key = 'region'), the filter clause would apply the filter (department = 'Finance' OR department = 'Marketing') AND (region = 'Europe').": [
+      "Filters with the same group key will be ORed together within the group, while different filter groups will be ANDed together. Undefined group keys are treated as unique groups, i.e. are not grouped together. For example, if a table has three filters, of which two are for departments Finance and Marketing (group key = "department"), and one refers to the region Europe (group key = "region"), the filter clause would apply the filter (department = "Finance" OR department = "Marketing") AND (region = "Europe").": [
         ""
       ],
       "This is the condition that will be added to the WHERE clause. For example, to only return rows for a particular client, you might define a regular filter with the clause `client_id = 9`. To display no rows unless a user belongs to a RLS filter role, a base filter can be created with the clause `1 = 0` (always false).": [
@@ -445,7 +445,7 @@
       "Redirects to this endpoint when clicking on the table from the table list": [
         ""
       ],
-      "Whether the table was generated by the 'Visualize' flow in SQL Lab": [
+      "Whether the table was generated by the "Visualize" flow in SQL Lab": [
         ""
       ],
       "A set of parameters that become available in the query using Jinja templating syntax": [
@@ -504,7 +504,7 @@
       "Import dashboard failed for an unknown reason": [
         "不明な理由でダッシュボードのインポートに失敗しました"
       ],
-      "You don't have access to this dashboard.": [
+      "You don"t have access to this dashboard.": [
         "このダッシュボードにアクセスできません。"
       ],
       "No data in file": ["ファイルにデータがありません"],
@@ -611,20 +611,20 @@
       "Port %(port)s on hostname \"%(hostname)s\" refused the connection.": [
         ""
       ],
-      "The host \"%(hostname)s\" might be down, and can't be reached on port %(port)s.": [
+      "The host \"%(hostname)s\" might be down, and can"t be reached on port %(port)s.": [
         ""
       ],
       "Either the username \"%(username)s\" or the password is incorrect.": [
         ""
       ],
       "Unknown MySQL server host \"%(hostname)s\".": [""],
-      "The host \"%(hostname)s\" might be down and can't be reached.": [""],
+      "The host \"%(hostname)s\" might be down and can"t be reached.": [""],
       "Unable to connect to database \"%(database)s\".": [
         "“%(database)s” に接続できません。"
       ],
       "The username \"%(username)s\" does not exist.": [""],
       "The password provided for username \"%(username)s\" is incorrect.": [""],
-      "We can't seem to resolve the column \"%(column_name)s\" at line %(location)s.": [
+      "We can"t seem to resolve the column \"%(column_name)s\" at line %(location)s.": [
         ""
       ],
       "The table \"%(table_name)s\" does not exist. A valid table must be used to run this query.": [
@@ -837,7 +837,7 @@
       "Show Observation": ["観測値を表示"],
       "Error Message": ["エラーメッセージ"],
       "Log Retentions (days)": [""],
-      "A semicolon ';' delimited list of email addresses": [""],
+      "A semicolon ";" delimited list of email addresses": [""],
       "How long to keep the logs around for this alert": [""],
       "Once an alert is triggered, how long, in seconds, before Superset nags you again.": [
         ""
@@ -845,7 +845,7 @@
       "A SQL statement that defines whether the alert should get triggered or not. The query is expected to return either NULL or a number value.": [
         ""
       ],
-      "This feature is deprecated and will be removed on 2.0. Take a look at the replacement feature <a href='https://superset.apache.org/docs/installation/alerts-reports'>Alerts & Reports documentation</a>": [
+      "This feature is deprecated and will be removed on 2.0. Take a look at the replacement feature <a href="https://superset.apache.org/docs/installation/alerts-reports">Alerts & Reports documentation</a>": [
         ""
       ],
       "annotation start time or end time is required.": [""],
@@ -866,7 +866,7 @@
       "Table [%{table}s] could not be found, please double check your database connection, schema, and table name, error: {}": [
         ""
       ],
-      "json isn't valid": [""],
+      "json isn"t valid": [""],
       "Export to YAML": ["YAMLで出力"],
       "Export to YAML?": ["YAMLで出力しますか？"],
       "Delete": ["削除"],
@@ -890,7 +890,7 @@
         ""
       ],
       "[Missing Dataset]": ["[データセットが見つかりません]"],
-      "You don't have the rights to ": [""],
+      "You don"t have the rights to ": [""],
       "alter this ": [""],
       "chart": ["チャート"],
       "create a ": ["作成日 "],
@@ -911,20 +911,20 @@
       "Could not load database driver: %(driver_name)s": [
         "データベースドライバ: %(driver_name)s 読み込めませんでした"
       ],
-      "Invalid connection string, a valid string usually follows:\n'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'": [
+      "Invalid connection string, a valid string usually follows:\n"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME"": [
         ""
       ],
       "Malformed request. slice_id or table_name and db_name arguments are expected": [
         "不正なリクエスト。 slice_idまたはtable_nameおよびdb_name引数が必要です"
       ],
       "Chart %(id)s not found": ["チャート %(id)s が見つかりません"],
-      "Table %(table)s wasn't found in the database %(db)s": [
+      "Table %(table)s wasn"t found in the database %(db)s": [
         "テーブル %(table)s はデータベース %(db)s にありません"
       ],
-      "Can't find User '%(name)s', please ask your admin to create one.": [
+      "Can"t find User "%(name)s", please ask your admin to create one.": [
         "ユーザー ‘%(name)s’ が見つかりません。管理者に作成を依頼してください。"
       ],
-      "Can't find DruidCluster with cluster_name = '%(name)s'": [""],
+      "Can"t find DruidCluster with cluster_name = "%(name)s"": [""],
       "Data could not be deserialized. You may want to re-run the query.": [""],
       "%(validator)s was unable to check your query.\nPlease recheck your query.\nException: %(ex)s": [
         ""
@@ -934,7 +934,7 @@
       ],
       "Query record was not created as expected.": [""],
       "The parameter %(parameters)s in your query is undefined.": [""],
-      "%(user)s's profile": ["%(user)s' のプロファイル"],
+      "%(user)s"s profile": ["%(user)s" のプロファイル"],
       "Show CSS Template": ["CSSテンプレートを表示"],
       "Add CSS Template": ["CSSテンプレートを追加"],
       "Edit CSS Template": ["CSSテンプレートを編集"],
@@ -1121,7 +1121,7 @@
       "Allow Multi Schema Metadata Fetch": [""],
       "Backend": [""],
       "Extra field cannot be decoded by JSON. %(msg)s": [""],
-      "Invalid connection string, a valid string usually follows:'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'<p>Example:'postgresql://user:password@your-postgres-db/database'</p>": [
+      "Invalid connection string, a valid string usually follows:"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME"<p>Example:"postgresql://user:password@your-postgres-db/database"</p>": [
         ""
       ],
       "CSV to Database configuration": [""],
@@ -1157,7 +1157,7 @@
       "Action": ["アクション"],
       "dttm": [""],
       "Add item": [""],
-      "The query couldn't be loaded": [""],
+      "The query couldn"t be loaded": [""],
       "Your query has been scheduled. To see details of your query, navigate to Saved queries": [
         ""
       ],
@@ -1230,7 +1230,7 @@
         ""
       ],
       "Shared query": ["クエリを共有"],
-      "The datasource couldn't be loaded": [
+      "The datasource couldn"t be loaded": [
         "データ ソースを読み込めませんでした"
       ],
       "An error occurred while creating the data source": [
@@ -1239,7 +1239,7 @@
       "An error occurred while fetching function names.": [
         "関数名の取得中にエラーが発生しました。"
       ],
-      "SQL Lab uses your browser's local storage to store queries and results.\n Currently, you are using ${currentUsage.toFixed(\n            2,\n          )} KB out of ${LOCALSTORAGE_MAX_USAGE_KB} KB. storage space.\n To keep SQL Lab from crashing, please delete some query tabs.\n You can re-access these queries by using the Save feature before you delete the tab. Note that you will need to close other SQL Lab windows before you do this.": [
+      "SQL Lab uses your browser"s local storage to store queries and results.\n Currently, you are using ${currentUsage.toFixed(\n            2,\n          )} KB out of ${LOCALSTORAGE_MAX_USAGE_KB} KB. storage space.\n To keep SQL Lab from crashing, please delete some query tabs.\n You can re-access these queries by using the Save feature before you delete the tab. Note that you will need to close other SQL Lab windows before you do this.": [
         ""
       ],
       "Estimate selected query cost": ["選択したクエリコストの見積"],
@@ -1267,7 +1267,7 @@
       "SQL": [""],
       "No query history yet...": ["クエリ履歴はまだありません。"],
       "An error occurred when refreshing queries": [""],
-      "It seems you don't have access to any database": [""],
+      "It seems you don"t have access to any database": [""],
       "Filter by user": [""],
       "Filter by database": [""],
       "Query search string": [""],
@@ -1466,7 +1466,7 @@
       "Type \"%s\" to confirm": [""],
       "DELETE": ["削除"],
       "Click to edit": [""],
-      "You don't have the rights to alter this title.": [""],
+      "You don"t have the rights to alter this title.": [""],
       "Unexpected error": [""],
       "This may be triggered by:": [""],
       "Please reach out to the Chart Owner for assistance.": [""],
@@ -1545,7 +1545,7 @@
       "Data source": ["データソース"],
       "Added": ["追加済み"],
       "Components": ["構成要素"],
-      "Any color palette selected here will override the colors applied to this dashboard's individual charts": [
+      "Any color palette selected here will override the colors applied to this dashboard"s individual charts": [
         "ここで選択したカラーパレットは、このダッシュボードの個々のグラフに適用される色を上書きします"
       ],
       "Color scheme": ["配色"],
@@ -1556,7 +1556,7 @@
       "Delete this container and save to remove this message.": [
         "このコンテナを削除し、保存してこのメ​​ッセージを削除します。"
       ],
-      "Don't refresh": ["更新しない"],
+      "Don"t refresh": ["更新しない"],
       "10 seconds": ["10秒"],
       "30 seconds": ["30秒"],
       "1 minute": ["1分"],
@@ -1694,7 +1694,7 @@
       "Remove invalid filters": [""],
       "Rebuild": [""],
       "Filters (%d)": ["フィルター (%d)"],
-      "This filter doesn't exist in dashboard. It will not be applied.": [""],
+      "This filter doesn"t exist in dashboard. It will not be applied.": [""],
       "Filter metadata changed in dashboard. It will not be applied.": [""],
       "None": ["なし"],
       "Please filter set name": [""],
@@ -1851,7 +1851,7 @@
         ""
       ],
       "Last week": ["先週"],
-      "The time range for the visualization. All relative times, e.g. \"Last month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using the server's local time (sans timezone). All tooltips and placeholder times are expressed in UTC (sans timezone). The timestamps are then evaluated by the database using the engine's local timezone. Note one can explicitly set the timezone per the ISO 8601 format if specifying either the start and/or end time.": [
+      "The time range for the visualization. All relative times, e.g. \"Last month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using the server"s local time (sans timezone). All tooltips and placeholder times are expressed in UTC (sans timezone). The timestamps are then evaluated by the database using the engine"s local timezone. Note one can explicitly set the timezone per the ISO 8601 format if specifying either the start and/or end time.": [
         "可視化の期間。すべての相対時間( e.g. “Last month”, “Last 7 days”, “now”, etc )はサーバーのローカル時間(sans timezone)を使用して評価されます。すべてのツールヒントとプレースホルダー時間は UTC (sans timezone) で表されます。タイムスタンプは、エンジンのローカルタイムゾーンを使用してデータベースによって評価されます。開始時刻や終了時刻を指定する場合は ISO 8601 形式に従ってタイムゾーンを明示的に設定できます。"
       ],
       "Row limit": [""],
@@ -1925,7 +1925,7 @@
         ""
       ],
       "Configuration": [""],
-      "Duration (in seconds) of the caching timeout for this chart. Note this defaults to the dataset's timeout if undefined.": [
+      "Duration (in seconds) of the caching timeout for this chart. Note this defaults to the dataset"s timeout if undefined.": [
         ""
       ],
       "A list of users who can alter the chart. Searchable by name or username.": [
@@ -2055,7 +2055,7 @@
       "Saved metric": ["保存した指標"],
       "column": [""],
       "aggregate": [""],
-      "\n                This filter was inherited from the dashboard's context.\n                It won't be saved when saving the chart.\n              ": [
+      "\n                This filter was inherited from the dashboard"s context.\n                It won"t be saved when saving the chart.\n              ": [
         ""
       ],
       "Error while fetching data": ["データの取得中にエラーが発生しました"],
@@ -2068,7 +2068,7 @@
       "Put your code here": [""],
       "Query": ["クエリ"],
       "URL": [""],
-      "Templated link, it's possible to include {{ metric }} or other values coming from the controls.": [
+      "Templated link, it"s possible to include {{ metric }} or other values coming from the controls.": [
         ""
       ],
       "Time": ["時間"],
@@ -2189,8 +2189,8 @@
       "Add notification method": [""],
       "Add delivery method": [""],
       "Add": ["追加"],
-      "Edit ${isReport ? 'Report' : 'Alert'}": [""],
-      "Add ${isReport ? 'Report' : 'Alert'}": [""],
+      "Edit ${isReport ? "Report" : "Alert"}": [""],
+      "Add ${isReport ? "Report" : "Alert"}": [""],
       "Report name": ["レポート名"],
       "Alert name": ["アラート名"],
       "Alert condition": ["アラート状態"],
@@ -2415,7 +2415,7 @@
       "3. The schemas_allowed_for_file_upload is a comma separated list of schemas that CSVs are allowed to upload to. Specify it as \"schemas_allowed_for_file_upload\": [\"public\", \"csv_upload\"]. If database flavor does not support schema or any schema is allowed to be accessed, just leave the list empty.": [
         ""
       ],
-      "4. The version field is a string specifying this db's version. This should be used with Presto DBs so that the syntax is correct.": [
+      "4. The version field is a string specifying this db"s version. This should be used with Presto DBs so that the syntax is correct.": [
         ""
       ],
       "5. The allows_virtual_table_explore field is a boolean specifying whether or not the Explore button in SQL Lab results is shown.": [
@@ -2519,10 +2519,10 @@
       "Recently edited charts, dashboards, and saved queries will appear here": [
         "最近編集したグラフ、ダッシュボード、保存したクエリがここに表示されます"
       ],
-      "${tableName\n                      .split('')\n                      .slice(0, tableName.length - 1)\n                      .join('')}\n                    ": [
+      "${tableName\n                      .split("")\n                      .slice(0, tableName.length - 1)\n                      .join("")}\n                    ": [
         ""
       ],
-      "You don't have any favorites yet!": ["まだお気に入りはありません!"],
+      "You don"t have any favorites yet!": ["まだお気に入りはありません!"],
       "SQL Lab queries": ["SQL Labクエリ"],
       "${tableName}": [""],
       "query": ["クエリ"],

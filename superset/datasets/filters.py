@@ -40,7 +40,7 @@ class DatasetCertifiedFilter(BaseFilter):  # pylint: disable=too-few-public-meth
     arg_name = "dataset_is_certified"
 
     def apply(self, query: Query, value: bool) -> Query:
-        check_value = '%"certification":%'
+        check_value = "%"certification":%"
         if value is True:
             return query.filter(SqlaTable.extra.ilike(check_value))
         if value is False:

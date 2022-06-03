@@ -16,36 +16,36 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import buildQuery from '../../src/Tree/buildQuery';
+import buildQuery from "../../src/Tree/buildQuery";
 
-describe('Tree buildQuery', () => {
-  it('should build query', () => {
+describe("Tree buildQuery", () => {
+  it("should build query", () => {
     const formData = {
-      datasource: '5__table',
-      granularity_sqla: 'ds',
-      id: 'id_col',
-      parent: 'relation_col',
-      name: 'name_col',
-      metrics: ['foo', 'bar'],
-      viz_type: 'my_chart',
+      datasource: "5__table",
+      granularity_sqla: "ds",
+      id: "id_col",
+      parent: "relation_col",
+      name: "name_col",
+      metrics: ["foo", "bar"],
+      viz_type: "my_chart",
     };
     const queryContext = buildQuery(formData);
     const [query] = queryContext.queries;
-    expect(query.columns).toEqual(['id_col', 'relation_col', 'name_col']);
-    expect(query.metrics).toEqual(['foo', 'bar']);
+    expect(query.columns).toEqual(["id_col", "relation_col", "name_col"]);
+    expect(query.metrics).toEqual(["foo", "bar"]);
   });
-  it('should build query without name column', () => {
+  it("should build query without name column", () => {
     const formData = {
-      datasource: '5__table',
-      granularity_sqla: 'ds',
-      id: 'id_col',
-      parent: 'relation_col',
-      metrics: ['foo', 'bar'],
-      viz_type: 'my_chart',
+      datasource: "5__table",
+      granularity_sqla: "ds",
+      id: "id_col",
+      parent: "relation_col",
+      metrics: ["foo", "bar"],
+      viz_type: "my_chart",
     };
     const queryContext = buildQuery(formData);
     const [query] = queryContext.queries;
-    expect(query.columns).toEqual(['id_col', 'relation_col']);
-    expect(query.metrics).toEqual(['foo', 'bar']);
+    expect(query.columns).toEqual(["id_col", "relation_col"]);
+    expect(query.metrics).toEqual(["foo", "bar"]);
   });
 });

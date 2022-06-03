@@ -144,11 +144,11 @@ class AnnotationLayerRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             DeleteAnnotationLayerCommand(g.user, pk).run()
@@ -188,7 +188,7 @@ class AnnotationLayerRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/{{self.__class__.__name__}}.post'
+                  $ref: "#/components/schemas/{{self.__class__.__name__}}.post"
           responses:
             201:
               description: Annotation added
@@ -200,15 +200,15 @@ class AnnotationLayerRestApi(BaseSupersetModelRestApi):
                       id:
                         type: number
                       result:
-                        $ref: '#/components/schemas/{{self.__class__.__name__}}.post'
+                        $ref: "#/components/schemas/{{self.__class__.__name__}}.post"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             item = self.add_model_schema.load(request.json)
@@ -259,7 +259,7 @@ class AnnotationLayerRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/{{self.__class__.__name__}}.put'
+                  $ref: "#/components/schemas/{{self.__class__.__name__}}.put"
           responses:
             200:
               description: Annotation changed
@@ -271,15 +271,15 @@ class AnnotationLayerRestApi(BaseSupersetModelRestApi):
                       id:
                         type: number
                       result:
-                        $ref: '#/components/schemas/{{self.__class__.__name__}}.put'
+                        $ref: "#/components/schemas/{{self.__class__.__name__}}.put"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             item = self.edit_model_schema.load(request.json)
@@ -324,7 +324,7 @@ class AnnotationLayerRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_delete_ids_schema'
+                  $ref: "#/components/schemas/get_delete_ids_schema"
           responses:
             200:
               description: CSS templates bulk delete
@@ -336,13 +336,13 @@ class AnnotationLayerRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         item_ids = kwargs["rison"]
         try:

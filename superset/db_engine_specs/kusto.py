@@ -39,7 +39,7 @@ class KustoSqlEngineSpec(BaseEngineSpec):  # pylint: disable=abstract-method
 
     _time_grain_expressions = {
         None: "{col}",
-        "PT1S": "DATEADD(second, DATEDIFF(second, '2000-01-01', {col}), '2000-01-01')",
+        "PT1S": "DATEADD(second, DATEDIFF(second, "2000-01-01", {col}), "2000-01-01")",
         "PT1M": "DATEADD(minute, DATEDIFF(minute, 0, {col}), 0)",
         "PT5M": "DATEADD(minute, DATEDIFF(minute, 0, {col}) / 5 * 5, 0)",
         "PT10M": "DATEADD(minute, DATEDIFF(minute, 0, {col}) / 10 * 10, 0)",
@@ -76,21 +76,21 @@ class KustoSqlEngineSpec(BaseEngineSpec):  # pylint: disable=abstract-method
     ) -> Optional[str]:
         tt = target_type.upper()
         if tt == utils.TemporalType.DATE:
-            return f"CONVERT(DATE, '{dttm.date().isoformat()}', 23)"
+            return f"CONVERT(DATE, "{dttm.date().isoformat()}", 23)"
         if tt == utils.TemporalType.DATETIME:
             datetime_formatted = dttm.isoformat(timespec="milliseconds")
-            return f"""CONVERT(DATETIME, '{datetime_formatted}', 126)"""
+            return f"""CONVERT(DATETIME, "{datetime_formatted}", 126)"""
         if tt == utils.TemporalType.SMALLDATETIME:
             datetime_formatted = dttm.isoformat(sep=" ", timespec="seconds")
-            return f"""CONVERT(SMALLDATETIME, '{datetime_formatted}', 20)"""
+            return f"""CONVERT(SMALLDATETIME, "{datetime_formatted}", 20)"""
         if tt == utils.TemporalType.TIMESTAMP:
             datetime_formatted = dttm.isoformat(sep=" ", timespec="seconds")
-            return f"""CONVERT(TIMESTAMP, '{datetime_formatted}', 20)"""
+            return f"""CONVERT(TIMESTAMP, "{datetime_formatted}", 20)"""
         return None
 
     @classmethod
     def is_readonly_query(cls, parsed_query: ParsedQuery) -> bool:
-        """Pessimistic readonly, 100% sure statement won't mutate anything"""
+        """Pessimistic readonly, 100% sure statement won"t mutate anything"""
         return parsed_query.sql.lower().startswith("select")
 
 
@@ -111,8 +111,8 @@ class KustoKqlEngineSpec(BaseEngineSpec):  # pylint: disable=abstract-method
         "PT1M": "{col}/ time(1min)",
         "PT1H": "{col}/ time(1h)",
         "P1D": "{col}/ time(1d)",
-        "P1M": "datetime_diff('month',CreateDate, datetime(0001-01-01 00:00:00))+1",
-        "P1Y": "datetime_diff('year',CreateDate, datetime(0001-01-01 00:00:00))+1",
+        "P1M": "datetime_diff("month",CreateDate, datetime(0001-01-01 00:00:00))+1",
+        "P1Y": "datetime_diff("year",CreateDate, datetime(0001-01-01 00:00:00))+1",
     }
 
     type_code_map: Dict[int, str] = {}  # loaded from get_datatype only if needed
@@ -145,7 +145,7 @@ class KustoKqlEngineSpec(BaseEngineSpec):  # pylint: disable=abstract-method
     @classmethod
     def is_readonly_query(cls, parsed_query: ParsedQuery) -> bool:
         """
-        Pessimistic readonly, 100% sure statement won't mutate anything.
+        Pessimistic readonly, 100% sure statement won"t mutate anything.
         """
         return KustoKqlEngineSpec.is_select_query(
             parsed_query

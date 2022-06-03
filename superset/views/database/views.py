@@ -131,7 +131,7 @@ class CsvToDatabaseView(SimpleFormView):
 
         if not schema_allows_file_upload(database, csv_table.schema):
             message = _(
-                'Database "%(database_name)s" schema "%(schema_name)s" '
+                "Database "%(database_name)s" schema "%(schema_name)s" "
                 "is not allowed for csv uploads. Please contact your Superset Admin.",
                 database_name=database.database_name,
                 schema_name=csv_table.schema,
@@ -217,8 +217,8 @@ class CsvToDatabaseView(SimpleFormView):
         except Exception as ex:  # pylint: disable=broad-except
             db.session.rollback()
             message = _(
-                'Unable to upload CSV file "%(filename)s" to table '
-                '"%(table_name)s" in database "%(db_name)s". '
+                "Unable to upload CSV file "%(filename)s" to table "
+                ""%(table_name)s" in database "%(db_name)s". "
                 "Error message: %(error_msg)s",
                 filename=form.csv_file.data.filename,
                 table_name=form.name.data,
@@ -232,8 +232,8 @@ class CsvToDatabaseView(SimpleFormView):
 
         # Go back to welcome page / splash screen
         message = _(
-            'CSV file "%(csv_filename)s" uploaded to table "%(table_name)s" in '
-            'database "%(db_name)s"',
+            "CSV file "%(csv_filename)s" uploaded to table "%(table_name)s" in "
+            "database "%(db_name)s"",
             csv_filename=form.csv_file.data.filename,
             table_name=str(csv_table),
             db_name=sqla_table.database.database_name,
@@ -267,7 +267,7 @@ class ExcelToDatabaseView(SimpleFormView):
 
         if not schema_allows_file_upload(database, excel_table.schema):
             message = _(
-                'Database "%(database_name)s" schema "%(schema_name)s" '
+                "Database "%(database_name)s" schema "%(schema_name)s" "
                 "is not allowed for excel uploads. Please contact your Superset Admin.",
                 database_name=database.database_name,
                 schema_name=excel_table.schema,
@@ -354,8 +354,8 @@ class ExcelToDatabaseView(SimpleFormView):
         except Exception as ex:  # pylint: disable=broad-except
             db.session.rollback()
             message = _(
-                'Unable to upload Excel file "%(filename)s" to table '
-                '"%(table_name)s" in database "%(db_name)s". '
+                "Unable to upload Excel file "%(filename)s" to table "
+                ""%(table_name)s" in database "%(db_name)s". "
                 "Error message: %(error_msg)s",
                 filename=form.excel_file.data.filename,
                 table_name=form.name.data,
@@ -369,8 +369,8 @@ class ExcelToDatabaseView(SimpleFormView):
 
         # Go back to welcome page / splash screen
         message = _(
-            'Excel file "%(excel_filename)s" uploaded to table "%(table_name)s" in '
-            'database "%(db_name)s"',
+            "Excel file "%(excel_filename)s" uploaded to table "%(table_name)s" in "
+            "database "%(db_name)s"",
             excel_filename=form.excel_file.data.filename,
             table_name=str(excel_table),
             db_name=sqla_table.database.database_name,
@@ -427,7 +427,7 @@ class ColumnarToDatabaseView(SimpleFormView):
 
         if not schema_allows_file_upload(database, columnar_table.schema):
             message = _(
-                'Database "%(database_name)s" schema "%(schema_name)s" '
+                "Database "%(database_name)s" schema "%(schema_name)s" "
                 "is not allowed for columnar uploads. "
                 "Please contact your Superset Admin.",
                 database_name=database.database_name,
@@ -495,8 +495,8 @@ class ColumnarToDatabaseView(SimpleFormView):
         except Exception as ex:  # pylint: disable=broad-except
             db.session.rollback()
             message = _(
-                'Unable to upload Columnar file "%(filename)s" to table '
-                '"%(table_name)s" in database "%(db_name)s". '
+                "Unable to upload Columnar file "%(filename)s" to table "
+                ""%(table_name)s" in database "%(db_name)s". "
                 "Error message: %(error_msg)s",
                 filename=[file.filename for file in form.columnar_file.data],
                 table_name=form.name.data,
@@ -510,8 +510,8 @@ class ColumnarToDatabaseView(SimpleFormView):
 
         # Go back to welcome page / splash screen
         message = _(
-            'Columnar file "%(columnar_filename)s" uploaded to table "%(table_name)s" '
-            'in database "%(db_name)s"',
+            "Columnar file "%(columnar_filename)s" uploaded to table "%(table_name)s" "
+            "in database "%(db_name)s"",
             columnar_filename=[file.filename for file in form.columnar_file.data],
             table_name=str(columnar_table),
             db_name=sqla_table.database.database_name,

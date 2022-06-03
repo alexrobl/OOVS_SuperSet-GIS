@@ -34,16 +34,16 @@ class DrillEngineSpec(BaseEngineSpec):
 
     _time_grain_expressions = {
         None: "{col}",
-        "PT1S": "NEARESTDATE({col}, 'SECOND')",
-        "PT1M": "NEARESTDATE({col}, 'MINUTE')",
-        "PT15M": "NEARESTDATE({col}, 'QUARTER_HOUR')",
-        "PT30M": "NEARESTDATE({col}, 'HALF_HOUR')",
-        "PT1H": "NEARESTDATE({col}, 'HOUR')",
-        "P1D": "NEARESTDATE({col}, 'DAY')",
-        "P1W": "NEARESTDATE({col}, 'WEEK_SUNDAY')",
-        "P1M": "NEARESTDATE({col}, 'MONTH')",
-        "P3M": "NEARESTDATE({col}, 'QUARTER')",
-        "P1Y": "NEARESTDATE({col}, 'YEAR')",
+        "PT1S": "NEARESTDATE({col}, "SECOND")",
+        "PT1M": "NEARESTDATE({col}, "MINUTE")",
+        "PT15M": "NEARESTDATE({col}, "QUARTER_HOUR")",
+        "PT30M": "NEARESTDATE({col}, "HALF_HOUR")",
+        "PT1H": "NEARESTDATE({col}, "HOUR")",
+        "P1D": "NEARESTDATE({col}, "DAY")",
+        "P1W": "NEARESTDATE({col}, "WEEK_SUNDAY")",
+        "P1M": "NEARESTDATE({col}, "MONTH")",
+        "P3M": "NEARESTDATE({col}, "QUARTER")",
+        "P1Y": "NEARESTDATE({col}, "YEAR")",
     }
 
     # Returns a function to convert a Unix timestamp in milliseconds to a date
@@ -61,10 +61,10 @@ class DrillEngineSpec(BaseEngineSpec):
     ) -> Optional[str]:
         tt = target_type.upper()
         if tt == utils.TemporalType.DATE:
-            return f"TO_DATE('{dttm.date().isoformat()}', 'yyyy-MM-dd')"
+            return f"TO_DATE("{dttm.date().isoformat()}", "yyyy-MM-dd")"
         if tt == utils.TemporalType.TIMESTAMP:
             datetime_formatted = dttm.isoformat(sep=" ", timespec="seconds")
-            return f"""TO_TIMESTAMP('{datetime_formatted}', 'yyyy-MM-dd HH:mm:ss')"""
+            return f"""TO_TIMESTAMP("{datetime_formatted}", "yyyy-MM-dd HH:mm:ss")"""
         return None
 
     @classmethod

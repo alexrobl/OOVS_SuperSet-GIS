@@ -16,11 +16,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React, { useCallback } from 'react';
-import Echart from '../components/Echart';
-import { EventHandlers } from '../types';
-import { extractTreePathInfo } from './constants';
-import { TreemapTransformedProps } from './types';
+import React, { useCallback } from "react";
+import Echart from "../components/Echart";
+import { EventHandlers } from "../types";
+import { extractTreePathInfo } from "./constants";
+import { TreemapTransformedProps } from "./types";
 
 export default function EchartsTreemap({
   height,
@@ -50,11 +50,11 @@ export default function EchartsTreemap({
                   if (val === null || val === undefined)
                     return {
                       col,
-                      op: 'IS NULL',
+                      op: "IS NULL",
                     };
                   return {
                     col,
-                    op: 'IN',
+                    op: "IN",
                     val: val as (string | number | boolean)[],
                   };
                 }),
@@ -76,7 +76,7 @@ export default function EchartsTreemap({
         return;
       }
       const { treePath } = extractTreePathInfo(treePathInfo);
-      const name = treePath.join(',');
+      const name = treePath.join(",");
       const values = Object.values(selectedValues);
       if (values.includes(name)) {
         handleChange(values.filter(v => v !== name));

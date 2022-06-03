@@ -104,7 +104,7 @@ class UpdateChartCommand(UpdateMixin, BaseCommand):
             except ValidationError as ex:
                 exceptions.append(ex)
 
-        # Validate/Populate dashboards only if it's a list
+        # Validate/Populate dashboards only if it"s a list
         if dashboard_ids is not None:
             dashboards = DashboardDAO.find_by_ids(dashboard_ids)
             if len(dashboards) != len(dashboard_ids):

@@ -43,7 +43,7 @@ OBJECT_DOES_NOT_EXIST_REGEX = re.compile(
 
 SYNTAX_ERROR_REGEX = re.compile(
     "syntax error line (?P<line>.+?) at position (?P<position>.+?) "
-    "unexpected '(?P<syntax_error>.+?)'."
+    "unexpected "(?P<syntax_error>.+?)"."
 )
 
 
@@ -77,22 +77,22 @@ class SnowflakeEngineSpec(PostgresBaseEngineSpec):
 
     _time_grain_expressions = {
         None: "{col}",
-        "PT1S": "DATE_TRUNC('SECOND', {col})",
-        "PT1M": "DATE_TRUNC('MINUTE', {col})",
+        "PT1S": "DATE_TRUNC("SECOND", {col})",
+        "PT1M": "DATE_TRUNC("MINUTE", {col})",
         "PT5M": "DATEADD(MINUTE, FLOOR(DATE_PART(MINUTE, {col}) / 5) * 5, \
-                DATE_TRUNC('HOUR', {col}))",
+                DATE_TRUNC("HOUR", {col}))",
         "PT10M": "DATEADD(MINUTE, FLOOR(DATE_PART(MINUTE, {col}) / 10) * 10, \
-                 DATE_TRUNC('HOUR', {col}))",
+                 DATE_TRUNC("HOUR", {col}))",
         "PT15M": "DATEADD(MINUTE, FLOOR(DATE_PART(MINUTE, {col}) / 15) * 15, \
-                 DATE_TRUNC('HOUR', {col}))",
+                 DATE_TRUNC("HOUR", {col}))",
         "PT30M": "DATEADD(MINUTE, FLOOR(DATE_PART(MINUTE, {col}) / 30) * 30, \
-                  DATE_TRUNC('HOUR', {col}))",
-        "PT1H": "DATE_TRUNC('HOUR', {col})",
-        "P1D": "DATE_TRUNC('DAY', {col})",
-        "P1W": "DATE_TRUNC('WEEK', {col})",
-        "P1M": "DATE_TRUNC('MONTH', {col})",
-        "P3M": "DATE_TRUNC('QUARTER', {col})",
-        "P1Y": "DATE_TRUNC('YEAR', {col})",
+                  DATE_TRUNC("HOUR", {col}))",
+        "PT1H": "DATE_TRUNC("HOUR", {col})",
+        "P1D": "DATE_TRUNC("DAY", {col})",
+        "P1W": "DATE_TRUNC("WEEK", {col})",
+        "P1M": "DATE_TRUNC("MONTH", {col})",
+        "P3M": "DATE_TRUNC("QUARTER", {col})",
+        "P1Y": "DATE_TRUNC("YEAR", {col})",
     }
 
     custom_errors: Dict[Pattern[str], Tuple[str, SupersetErrorType, Dict[str, Any]]] = {
@@ -104,7 +104,7 @@ class SnowflakeEngineSpec(PostgresBaseEngineSpec):
         SYNTAX_ERROR_REGEX: (
             __(
                 "Please check your query for syntax errors at or "
-                'near "%(syntax_error)s". Then, try running your query again.'
+                "near "%(syntax_error)s". Then, try running your query again."
             ),
             SupersetErrorType.SYNTAX_ERROR,
             {},
@@ -124,11 +124,11 @@ class SnowflakeEngineSpec(PostgresBaseEngineSpec):
 
     @classmethod
     def epoch_to_dttm(cls) -> str:
-        return "DATEADD(S, {col}, '1970-01-01')"
+        return "DATEADD(S, {col}, "1970-01-01")"
 
     @classmethod
     def epoch_ms_to_dttm(cls) -> str:
-        return "DATEADD(MS, {col}, '1970-01-01')"
+        return "DATEADD(MS, {col}, "1970-01-01")"
 
     @classmethod
     def convert_dttm(
@@ -136,17 +136,17 @@ class SnowflakeEngineSpec(PostgresBaseEngineSpec):
     ) -> Optional[str]:
         tt = target_type.upper()
         if tt == utils.TemporalType.DATE:
-            return f"TO_DATE('{dttm.date().isoformat()}')"
+            return f"TO_DATE("{dttm.date().isoformat()}")"
         if tt == utils.TemporalType.DATETIME:
-            return f"""CAST('{dttm.isoformat(timespec="microseconds")}' AS DATETIME)"""
+            return f"""CAST("{dttm.isoformat(timespec="microseconds")}" AS DATETIME)"""
         if tt == utils.TemporalType.TIMESTAMP:
-            return f"""TO_TIMESTAMP('{dttm.isoformat(timespec="microseconds")}')"""
+            return f"""TO_TIMESTAMP("{dttm.isoformat(timespec="microseconds")}")"""
         return None
 
     @staticmethod
     def mutate_db_for_connection_test(database: "Database") -> None:
         """
-        By default, snowflake doesn't validate if the user/role has access to the chosen
+        By default, snowflake doesn"t validate if the user/role has access to the chosen
         database.
 
         :param database: instance to be mutated
@@ -251,7 +251,7 @@ class SnowflakeEngineSpec(PostgresBaseEngineSpec):
         if missing:
             errors.append(
                 SupersetError(
-                    message=f'One or more parameters are missing: {", ".join(missing)}',
+                    message=f"One or more parameters are missing: {", ".join(missing)}",
                     error_type=SupersetErrorType.CONNECTION_MISSING_PARAMETERS_ERROR,
                     level=ErrorLevel.WARNING,
                     extra={"missing": missing},

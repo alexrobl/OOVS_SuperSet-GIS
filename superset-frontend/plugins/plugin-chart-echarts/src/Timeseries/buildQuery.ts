@@ -23,7 +23,7 @@ import {
   normalizeOrderBy,
   PostProcessingPivot,
   QueryFormData,
-} from '@superset-ui/core';
+} from "@superset-ui/core";
 import {
   rollingWindowOperator,
   timeCompareOperator,
@@ -35,14 +35,14 @@ import {
   prophetOperator,
   timeComparePivotOperator,
   flattenOperator,
-} from '@superset-ui/chart-controls';
+} from "@superset-ui/chart-controls";
 
 export default function buildQuery(formData: QueryFormData) {
   const { x_axis, groupby } = formData;
   const is_timeseries = x_axis === DTTM_ALIAS || !x_axis;
   return buildQueryContext(formData, baseQueryObject => {
     /* the `pivotOperatorInRuntime` determines how to pivot the dataframe returned from the raw query.
-       1. If it's a time compared query, there will return a pivoted dataframe that append time compared metrics. for instance:
+       1. If it"s a time compared query, there will return a pivoted dataframe that append time compared metrics. for instance:
 
                             MAX(value) MAX(value)__1 year ago MIN(value) MIN(value)__1 year ago
           city               LA                     LA         LA                     LA
@@ -51,7 +51,7 @@ export default function buildQuery(formData: QueryFormData) {
           2015-02-01      407.0                  649.0        4.0                    3.0
           2015-03-01      318.0                  465.0        0.0                    3.0
 
-       2. If it's a normal query, there will return a pivoted dataframe.
+       2. If it"s a normal query, there will return a pivoted dataframe.
 
                      MAX(value)  MIN(value)
           city               LA          LA

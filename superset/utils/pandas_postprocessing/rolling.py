@@ -44,8 +44,8 @@ def rolling(  # pylint: disable=too-many-arguments
 
     :param df: DataFrame on which the rolling period will be based.
     :param columns: columns on which to perform rolling, mapping source column to
-           target column. For instance, `{'y': 'y'}` will replace the column `y` with
-           the rolling value in `y`, while `{'y': 'y2'}` will add a column `y2` based
+           target column. For instance, `{"y": "y"}` will replace the column `y` with
+           the rolling value in `y`, while `{"y": "y2"}` will add a column `y2` based
            on rolling values calculated from `y`, leaving the original column `y`
            unchanged.
     :param rolling_type: Type of rolling window. Any numpy function will work.

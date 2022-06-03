@@ -24,16 +24,16 @@ import {
   Behavior,
   isFeatureEnabled,
   FeatureFlag,
-} from '@superset-ui/core';
-import buildQuery from '../buildQuery';
-import controlPanel from './controlPanel';
-import transformProps from '../transformProps';
-import thumbnail from './images/thumbnail.png';
+} from "@superset-ui/core";
+import buildQuery from "../buildQuery";
+import controlPanel from "./controlPanel";
+import transformProps from "../transformProps";
+import thumbnail from "./images/thumbnail.png";
 import {
   EchartsTimeseriesChartProps,
   EchartsTimeseriesFormData,
-} from '../types';
-import example1 from './images/Area1.png';
+} from "../types";
+import example1 from "./images/Area1.png";
 
 const areaTransformProps = (chartProps: EchartsTimeseriesChartProps) =>
   transformProps({
@@ -49,17 +49,17 @@ export default class EchartsAreaChartPlugin extends ChartPlugin<
     super({
       buildQuery,
       controlPanel,
-      loadChart: () => import('../EchartsTimeseries'),
+      loadChart: () => import("../EchartsTimeseries"),
       metadata: new ChartMetadata({
         behaviors: [Behavior.INTERACTIVE_CHART],
-        category: t('Evolution'),
-        credits: ['https://echarts.apache.org'],
+        category: t("Evolution"),
+        credits: ["https://echarts.apache.org"],
         description: isFeatureEnabled(FeatureFlag.GENERIC_CHART_AXES)
           ? t(
-              'Area charts are similar to line charts in that they represent variables with the same scale, but area charts stack the metrics on top of each other.',
+              "Area charts are similar to line charts in that they represent variables with the same scale, but area charts stack the metrics on top of each other.",
             )
           : t(
-              'Time-series Area chart are similar to line chart in that they represent variables with the same scale, but area charts stack the metrics on top of each other. An area chart in Superset can be stream, stack, or expand.',
+              "Time-series Area chart are similar to line chart in that they represent variables with the same scale, but area charts stack the metrics on top of each other. An area chart in Superset can be stream, stack, or expand.",
             ),
         exampleGallery: [{ url: example1 }],
         supportedAnnotationTypes: [
@@ -69,18 +69,18 @@ export default class EchartsAreaChartPlugin extends ChartPlugin<
           AnnotationType.Timeseries,
         ],
         name: isFeatureEnabled(FeatureFlag.GENERIC_CHART_AXES)
-          ? t('Area Chart v2')
-          : t('Time-series Area Chart'),
+          ? t("Area Chart v2")
+          : t("Time-series Area Chart"),
         tags: [
-          t('ECharts'),
-          t('Predictive'),
-          t('Advanced-Analytics'),
-          t('Aesthetic'),
-          t('Time'),
-          t('Line'),
-          t('Transformable'),
-          t('Stacked'),
-          t('Popular'),
+          t("ECharts"),
+          t("Predictive"),
+          t("Advanced-Analytics"),
+          t("Aesthetic"),
+          t("Time"),
+          t("Line"),
+          t("Transformable"),
+          t("Stacked"),
+          t("Popular"),
         ],
         thumbnail,
       }),

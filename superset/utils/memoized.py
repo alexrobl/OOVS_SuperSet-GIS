@@ -19,7 +19,7 @@ from typing import Any, Callable, Dict, Optional, Tuple, Type
 
 
 class _memoized:
-    """Decorator that caches a function's return value each time it is called
+    """Decorator that caches a function"s return value each time it is called
 
     If called later with the same arguments, the cached value is returned, and
     not re-evaluated.
@@ -55,7 +55,7 @@ class _memoized:
         return value
 
     def __repr__(self) -> str:
-        """Return the function's docstring."""
+        """Return the function"s docstring."""
         return self.func.__doc__ or ""
 
     def __get__(

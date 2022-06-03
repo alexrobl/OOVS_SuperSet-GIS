@@ -40,7 +40,7 @@ def get_form_data(
     chart_id: int, dashboard: Optional[Dashboard] = None
 ) -> Dict[str, Any]:
     """
-    Build `form_data` for chart GET request from dashboard's `default_filters`.
+    Build `form_data` for chart GET request from dashboard"s `default_filters`.
 
     When a dashboard has `default_filters` they need to be added  as extra
     filters in the GET request for charts.
@@ -93,13 +93,13 @@ class Strategy:  # pylint: disable=too-few-public-methods
     Strategies can be configured in `superset/config.py`:
 
         CELERYBEAT_SCHEDULE = {
-            'cache-warmup-hourly': {
-                'task': 'cache-warmup',
-                'schedule': crontab(minute=1, hour='*'),  # @hourly
-                'kwargs': {
-                    'strategy_name': 'top_n_dashboards',
-                    'top_n': 10,
-                    'since': '7 days ago',
+            "cache-warmup-hourly": {
+                "task": "cache-warmup",
+                "schedule": crontab(minute=1, hour="*"),  # @hourly
+                "kwargs": {
+                    "strategy_name": "top_n_dashboards",
+                    "top_n": 10,
+                    "since": "7 days ago",
                 },
             },
         }
@@ -120,10 +120,10 @@ class DummyStrategy(Strategy):  # pylint: disable=too-few-public-methods
     This is a dummy strategy that will fetch all charts. Can be configured by:
 
         CELERYBEAT_SCHEDULE = {
-            'cache-warmup-hourly': {
-                'task': 'cache-warmup',
-                'schedule': crontab(minute=1, hour='*'),  # @hourly
-                'kwargs': {'strategy_name': 'dummy'},
+            "cache-warmup-hourly": {
+                "task": "cache-warmup",
+                "schedule": crontab(minute=1, hour="*"),  # @hourly
+                "kwargs": {"strategy_name": "dummy"},
             },
         }
 
@@ -143,13 +143,13 @@ class TopNDashboardsStrategy(Strategy):  # pylint: disable=too-few-public-method
     Warm up charts in the top-n dashboards.
 
         CELERYBEAT_SCHEDULE = {
-            'cache-warmup-hourly': {
-                'task': 'cache-warmup',
-                'schedule': crontab(minute=1, hour='*'),  # @hourly
-                'kwargs': {
-                    'strategy_name': 'top_n_dashboards',
-                    'top_n': 5,
-                    'since': '7 days ago',
+            "cache-warmup-hourly": {
+                "task": "cache-warmup",
+                "schedule": crontab(minute=1, hour="*"),  # @hourly
+                "kwargs": {
+                    "strategy_name": "top_n_dashboards",
+                    "top_n": 5,
+                    "since": "7 days ago",
                 },
             },
         }
@@ -190,12 +190,12 @@ class DashboardTagsStrategy(Strategy):  # pylint: disable=too-few-public-methods
     Warm up charts in dashboards with custom tags.
 
         CELERYBEAT_SCHEDULE = {
-            'cache-warmup-hourly': {
-                'task': 'cache-warmup',
-                'schedule': crontab(minute=1, hour='*'),  # @hourly
-                'kwargs': {
-                    'strategy_name': 'dashboard_tags',
-                    'tags': ['core', 'warmup'],
+            "cache-warmup-hourly": {
+                "task": "cache-warmup",
+                "schedule": crontab(minute=1, hour="*"),  # @hourly
+                "kwargs": {
+                    "strategy_name": "dashboard_tags",
+                    "tags": ["core", "warmup"],
                 },
             },
         }

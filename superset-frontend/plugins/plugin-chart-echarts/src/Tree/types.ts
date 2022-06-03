@@ -16,38 +16,38 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { TreeSeriesNodeItemOption } from 'echarts/types/src/chart/tree/TreeSeries';
+import { TreeSeriesNodeItemOption } from "echarts/types/src/chart/tree/TreeSeries";
 
 export type EchartsTreeFormData = {
   id: string;
   parent: string;
   name: string;
   rootNodeId?: string | number;
-  orient: 'LR' | 'RL' | 'TB' | 'BT';
+  orient: "LR" | "RL" | "TB" | "BT";
   symbol: string;
   symbolSize: number;
   colorScheme?: string;
   metric?: string;
-  layout: 'orthogonal' | 'radial';
-  roam: boolean | 'scale' | 'move';
-  nodeLabelPosition: 'top' | 'bottom' | 'left' | 'right';
-  childLabelPosition: 'top' | 'bottom' | 'left' | 'right';
-  emphasis: 'none' | 'ancestor' | 'descendant';
+  layout: "orthogonal" | "radial";
+  roam: boolean | "scale" | "move";
+  nodeLabelPosition: "top" | "bottom" | "left" | "right";
+  childLabelPosition: "top" | "bottom" | "left" | "right";
+  emphasis: "none" | "ancestor" | "descendant";
 };
 
 export const DEFAULT_FORM_DATA: EchartsTreeFormData = {
-  id: '',
-  parent: '',
-  name: '',
-  rootNodeId: '',
-  layout: 'orthogonal',
-  orient: 'LR',
-  symbol: 'emptyCircle',
+  id: "",
+  parent: "",
+  name: "",
+  rootNodeId: "",
+  layout: "orthogonal",
+  orient: "LR",
+  symbol: "emptyCircle",
   symbolSize: 7,
   roam: true,
-  nodeLabelPosition: 'left',
-  childLabelPosition: 'bottom',
-  emphasis: 'descendant',
+  nodeLabelPosition: "left",
+  childLabelPosition: "bottom",
+  emphasis: "descendant",
 };
 
 export type TreeDataRecord = Record<string, string | number> & {

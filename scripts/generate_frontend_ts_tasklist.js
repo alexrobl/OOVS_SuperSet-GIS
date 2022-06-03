@@ -44,7 +44,7 @@ while (directories.length) {
   const curDirectory = directories.pop();
   process.chdir(curDirectory);
   // Check for existence of js, jsx, ts, and tsx files. Show a filled box if only ts and tsx,
-  // show an empty box if any js or jsx, and don't print the line if neither exist in the
+  // show an empty box if any js or jsx, and don"t print the line if neither exist in the
   // directory.
   const hasTypescriptFiles =
     getFilesByExtensions("./", [".ts", ".tsx"]).length > 0;
@@ -68,7 +68,7 @@ while (directories.length) {
   directories = directories.concat(
     getDirectories("./")
       .reverse() // For ABC order when pushed into the Array
-      .filter((name) => name !== "node_modules") // Don't include node_modules in our packages
+      .filter((name) => name !== "node_modules") // Don"t include node_modules in our packages
       .map((directory) => `${curDirectory}/${directory}`)
   );
   process.chdir(DEFAULT_DIRECTORY);

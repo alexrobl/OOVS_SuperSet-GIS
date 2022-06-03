@@ -16,9 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React from 'react';
-import { EchartsProps } from '../types';
-import Echart from '../components/Echart';
+import React from "react";
+import { EchartsProps } from "../types";
+import Echart from "../components/Echart";
 
 export default function EchartsGraph({
   height,

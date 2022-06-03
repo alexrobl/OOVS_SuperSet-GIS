@@ -21,8 +21,8 @@ import {
   ChartProps,
   QueryFormColumn,
   QueryFormData,
-} from '@superset-ui/core';
-import { DEFAULT_LEGEND_FORM_DATA, EChartTransformedProps } from '../types';
+} from "@superset-ui/core";
+import { DEFAULT_LEGEND_FORM_DATA, EChartTransformedProps } from "../types";
 
 export type AxisTickLineStyle = {
   width: number;
@@ -61,7 +61,7 @@ export const DEFAULT_FORM_DATA: Partial<EchartsGaugeFormData> = {
   minVal: 0,
   maxVal: 100,
   fontSize: 15,
-  numberFormat: 'SMART_NUMBER',
+  numberFormat: "SMART_NUMBER",
   animation: true,
   showProgress: true,
   overlap: true,
@@ -72,9 +72,9 @@ export const DEFAULT_FORM_DATA: Partial<EchartsGaugeFormData> = {
   startAngle: 225,
   endAngle: -45,
   showPointer: true,
-  intervals: '',
-  intervalColorIndices: '',
-  valueFormatter: '{value}',
+  intervals: "",
+  intervalColorIndices: "",
+  valueFormatter: "{value}",
   emitFilter: false,
 };
 

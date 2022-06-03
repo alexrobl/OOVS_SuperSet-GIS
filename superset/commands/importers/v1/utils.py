@@ -66,7 +66,7 @@ def load_metadata(contents: Dict[str, str]) -> Dict[str, str]:
     try:
         MetadataSchema().load(metadata)
     except ValidationError as ex:
-        # if the version doesn't match raise an exception so that the
+        # if the version doesn"t match raise an exception so that the
         # dispatcher can try a different command version
         if "version" in ex.messages:
             raise IncorrectVersionError(ex.messages["version"][0]) from ex
@@ -135,7 +135,7 @@ def load_configs(
 def is_valid_config(file_name: str) -> bool:
     path = Path(file_name)
 
-    # ignore system files that might've been added to the bundle
+    # ignore system files that might"ve been added to the bundle
     if path.name.startswith(".") or path.name.startswith("_"):
         return False
 

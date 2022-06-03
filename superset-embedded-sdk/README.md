@@ -20,7 +20,7 @@ under the License.
 # Superset Embedded SDK
 
 The Embedded SDK allows you to embed dashboards from Superset into your own app,
-using your app's authentication.
+using your app"s authentication.
 
 Embedding is done by inserting an iframe, containing a Superset page, into the host application.
 
@@ -60,7 +60,7 @@ You can also load the Embedded SDK from a CDN. The SDK will be available as `sup
 
 Embedded resources use a special auth token called a Guest Token to grant Superset access to your users,
 without requiring your users to log in to Superset directly. Your backend must create a Guest Token
-by requesting Superset's `POST /security/guest_token` endpoint, and pass that guest token to your frontend.
+by requesting Superset"s `POST /security/guest_token` endpoint, and pass that guest token to your frontend.
 
 The Embedding SDK takes the guest token and use it to embed a dashboard.
 
@@ -85,7 +85,7 @@ Example `POST /security/guest_token` payload:
     "id": "abc123"
   }],
   "rls": [
-    { "clause": "publisher = 'Nintendo'" }
+    { "clause": "publisher = "Nintendo"" }
   ]
 }
 ```

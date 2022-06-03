@@ -208,9 +208,9 @@ def _append_columns(
     :param base_df: DataFrame which to use as the base
     :param append_df: DataFrame from which to select data.
     :param columns: columns on which to append, mapping source column to
-           target column. For instance, `{'y': 'y'}` will replace the values in
+           target column. For instance, `{"y": "y"}` will replace the values in
            column `y` in `base_df` with the values in `y` in `append_df`,
-           while `{'y': 'y2'}` will add a column `y2` to `base_df` based
+           while `{"y": "y2"}` will add a column `y2` to `base_df` based
            on values in column `y` in `append_df`, leaving the original column `y`
            in `base_df` unchanged.
     :return: new DataFrame with combined data from `base_df` and `append_df`

@@ -16,15 +16,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { TreeSeriesOption } from 'echarts';
+import { TreeSeriesOption } from "echarts";
 
 export const DEFAULT_TREE_SERIES_OPTION: TreeSeriesOption = {
   label: {
-    position: 'left',
+    position: "left",
     fontSize: 15,
   },
   animation: true,
   animationDuration: 500,
-  animationEasing: 'cubicOut',
-  lineStyle: { color: 'source', width: 1.5 },
+  animationEasing: "cubicOut",
+  lineStyle: { color: "source", width: 1.5 },
 };

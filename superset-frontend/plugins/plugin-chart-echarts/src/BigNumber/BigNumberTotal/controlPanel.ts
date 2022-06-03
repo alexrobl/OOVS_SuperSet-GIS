@@ -16,37 +16,37 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { smartDateFormatter, t } from '@superset-ui/core';
+import { smartDateFormatter, t } from "@superset-ui/core";
 import {
   ControlPanelConfig,
   D3_FORMAT_DOCS,
   D3_TIME_FORMAT_OPTIONS,
   sections,
-} from '@superset-ui/chart-controls';
-import { headerFontSize, subheaderFontSize } from '../sharedControls';
+} from "@superset-ui/chart-controls";
+import { headerFontSize, subheaderFontSize } from "../sharedControls";
 
 export default {
   controlPanelSections: [
     sections.legacyTimeseriesTime,
     {
-      label: t('Query'),
+      label: t("Query"),
       expanded: true,
-      controlSetRows: [['metric'], ['adhoc_filters']],
+      controlSetRows: [["metric"], ["adhoc_filters"]],
     },
     {
-      label: t('Display settings'),
+      label: t("Display settings"),
       expanded: true,
-      tabOverride: 'data',
+      tabOverride: "data",
       controlSetRows: [
         [
           {
-            name: 'subheader',
+            name: "subheader",
             config: {
-              type: 'TextControl',
-              label: t('Subheader'),
+              type: "TextControl",
+              label: t("Subheader"),
               renderTrigger: true,
               description: t(
-                'Description text that shows up below your Big Number',
+                "Description text that shows up below your Big Number",
               ),
             },
           },
@@ -54,19 +54,19 @@ export default {
       ],
     },
     {
-      label: t('Chart Options'),
+      label: t("Chart Options"),
       expanded: true,
       controlSetRows: [
         [headerFontSize],
         [subheaderFontSize],
-        ['y_axis_format'],
+        ["y_axis_format"],
         [
           {
-            name: 'time_format',
+            name: "time_format",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('Date format'),
+              label: t("Date format"),
               renderTrigger: true,
               choices: D3_TIME_FORMAT_OPTIONS,
               description: D3_FORMAT_DOCS,
@@ -76,14 +76,14 @@ export default {
         ],
         [
           {
-            name: 'force_timestamp_formatting',
+            name: "force_timestamp_formatting",
             config: {
-              type: 'CheckboxControl',
-              label: t('Force date format'),
+              type: "CheckboxControl",
+              label: t("Force date format"),
               renderTrigger: true,
               default: false,
               description: t(
-                'Use date formatting even when metric value is not a timestamp',
+                "Use date formatting even when metric value is not a timestamp",
               ),
             },
           },
@@ -93,7 +93,7 @@ export default {
   ],
   controlOverrides: {
     y_axis_format: {
-      label: t('Number format'),
+      label: t("Number format"),
     },
   },
 } as ControlPanelConfig;

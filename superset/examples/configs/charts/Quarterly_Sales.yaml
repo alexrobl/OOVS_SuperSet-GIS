@@ -26,15 +26,15 @@ params:
   granularity_sqla: order_date
   groupby: []
   label_colors:
-    Classic Cars: '#5AC189'
-    Motorcycles: '#666666'
-    Planes: '#FCC700'
-    QuantityOrdered: '#454E7C'
-    SUM(Sales): '#1FA8C9'
-    Ships: '#A868B7'
-    Trains: '#3CCCCB'
-    Trucks and Buses: '#E04355'
-    Vintage Cars: '#FF7F44'
+    Classic Cars: "#5AC189"
+    Motorcycles: "#666666"
+    Planes: "#FCC700"
+    QuantityOrdered: "#454E7C"
+    SUM(Sales): "#1FA8C9"
+    Ships: "#A868B7"
+    Trains: "#3CCCCB"
+    Trucks and Buses: "#E04355"
+    Vintage Cars: "#FF7F44"
   left_margin: auto
   line_interpolation: linear
   metrics:
@@ -72,7 +72,7 @@ params:
   time_range: No filter
   url_params: {}
   viz_type: bar
-  x_axis_format: '%m/%d/%Y'
+  x_axis_format: "%m/%d/%Y"
   x_axis_label: Quarter starting
   x_ticks_layout: auto
   y_axis_bounds:

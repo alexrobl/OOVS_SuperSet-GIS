@@ -108,7 +108,7 @@ class CssTemplateRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_delete_ids_schema'
+                  $ref: "#/components/schemas/get_delete_ids_schema"
           responses:
             200:
               description: CSS templates bulk delete
@@ -120,13 +120,13 @@ class CssTemplateRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         item_ids = kwargs["rison"]
         try:

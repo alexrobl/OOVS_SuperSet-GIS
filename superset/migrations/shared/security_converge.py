@@ -165,7 +165,7 @@ def add_pvms(
     session: Session, pvm_data: Dict[str, Tuple[str, ...]], commit: bool = False
 ) -> List[PermissionView]:
     """
-    Checks if exists and adds new Permissions, Views and PermissionView's
+    Checks if exists and adds new Permissions, Views and PermissionView"s
     """
     pvms = []
     for view_name, permissions in pvm_data.items():
@@ -186,8 +186,8 @@ def _delete_old_permissions(
     """
     Delete old permissions:
     - Delete the PermissionView
-    - Deletes the Permission if it's an orphan now
-    - Deletes the ViewMenu if it's an orphan now
+    - Deletes the Permission if it"s an orphan now
+    - Deletes the ViewMenu if it"s an orphan now
     """
     # Delete old permissions
     for old_pvm, new_pvms in pvm_map.items():

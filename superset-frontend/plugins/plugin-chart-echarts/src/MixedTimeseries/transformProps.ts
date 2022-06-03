@@ -30,16 +30,16 @@ import {
   isIntervalAnnotationLayer,
   isTimeseriesAnnotationLayer,
   TimeseriesDataRecord,
-} from '@superset-ui/core';
-import { EChartsCoreOption, SeriesOption } from 'echarts';
+} from "@superset-ui/core";
+import { EChartsCoreOption, SeriesOption } from "echarts";
 import {
   DEFAULT_FORM_DATA,
   EchartsMixedTimeseriesFormData,
   EchartsMixedTimeseriesChartTransformedProps,
   EchartsMixedTimeseriesProps,
-} from './types';
-import { ForecastSeriesEnum } from '../types';
-import { parseYAxisBound } from '../utils/controls';
+} from "./types";
+import { ForecastSeriesEnum } from "../types";
+import { parseYAxisBound } from "../utils/controls";
 import {
   currentSeries,
   dedupSeries,
@@ -47,16 +47,16 @@ import {
   getAxisType,
   getColtypesMapping,
   getLegendProps,
-} from '../utils/series';
-import { extractAnnotationLabels } from '../utils/annotation';
+} from "../utils/series";
+import { extractAnnotationLabels } from "../utils/annotation";
 import {
   extractForecastSeriesContext,
   extractForecastValuesFromTooltipParams,
   formatForecastTooltipSeries,
   rebaseForecastDatum,
-} from '../utils/forecast';
-import { convertInteger } from '../utils/convertInteger';
-import { defaultGrid, defaultTooltip, defaultYAxis } from '../defaults';
+} from "../utils/forecast";
+import { convertInteger } from "../utils/convertInteger";
+import { defaultGrid, defaultTooltip, defaultYAxis } from "../defaults";
 import {
   getPadding,
   getTooltipTimeFormatter,
@@ -66,8 +66,8 @@ import {
   transformIntervalAnnotation,
   transformSeries,
   transformTimeseriesAnnotation,
-} from '../Timeseries/transformers';
-import { TIMESERIES_CONSTANTS, TIMEGRAIN_TO_TIMESTAMP } from '../constants';
+} from "../Timeseries/transformers";
+import { TIMESERIES_CONSTANTS, TIMEGRAIN_TO_TIMESTAMP } from "../constants";
 
 export default function transformProps(
   chartProps: EchartsMixedTimeseriesProps,
@@ -159,9 +159,9 @@ export default function transformProps(
   const xAxisDataType = dataTypes?.[xAxisCol];
   const xAxisType = getAxisType(xAxisDataType);
   const series: SeriesOption[] = [];
-  const formatter = getNumberFormatter(contributionMode ? ',.0%' : yAxisFormat);
+  const formatter = getNumberFormatter(contributionMode ? ",.0%" : yAxisFormat);
   const formatterSecondary = getNumberFormatter(
-    contributionMode ? ',.0%' : yAxisFormatSecondary,
+    contributionMode ? ",.0%" : yAxisFormatSecondary,
   );
 
   const primarySeries = new Set<string>();
@@ -266,7 +266,7 @@ export default function transformProps(
   let [min, max] = (yAxisBounds || []).map(parseYAxisBound);
 
   // default to 0-100% range when doing row-level contribution chart
-  if (contributionMode === 'row' && stack) {
+  if (contributionMode === "row" && stack) {
     if (min === undefined) min = 0;
     if (max === undefined) max = 1;
   }
@@ -298,7 +298,7 @@ export default function transformProps(
     const label = datum.name as string;
     return {
       ...acc,
-      [label]: label.split(', '),
+      [label]: label.split(", "),
     };
   }, {}) as Record<string, DataRecordValue[]>;
 
@@ -306,7 +306,7 @@ export default function transformProps(
     const label = datum.name as string;
     return {
       ...acc,
-      [label]: label.split(', '),
+      [label]: label.split(", "),
     };
   }, {}) as Record<string, DataRecordValue[]>;
 
@@ -323,20 +323,20 @@ export default function transformProps(
       type: xAxisType,
       name: xAxisTitle,
       nameGap: convertInteger(xAxisTitleMargin),
-      nameLocation: 'middle',
+      nameLocation: "middle",
       axisLabel: {
         formatter: xAxisFormatter,
         rotate: xAxisLabelRotation,
       },
       minInterval:
-        xAxisType === 'time' && timeGrainSqla
+        xAxisType === "time" && timeGrainSqla
           ? TIMEGRAIN_TO_TIMESTAMP[timeGrainSqla]
           : 0,
     },
     yAxis: [
       {
         ...defaultYAxis,
-        type: logAxis ? 'log' : 'value',
+        type: logAxis ? "log" : "value",
         min,
         max,
         minorTick: { show: true },
@@ -345,12 +345,12 @@ export default function transformProps(
         scale: truncateYAxis,
         name: yAxisTitle,
         nameGap: convertInteger(yAxisTitleMargin),
-        nameLocation: yAxisTitlePosition === 'Left' ? 'middle' : 'end',
+        nameLocation: yAxisTitlePosition === "Left" ? "middle" : "end",
         alignTicks,
       },
       {
         ...defaultYAxis,
-        type: logAxisSecondary ? 'log' : 'value',
+        type: logAxisSecondary ? "log" : "value",
         min,
         max,
         minorTick: { show: true },
@@ -365,7 +365,7 @@ export default function transformProps(
     tooltip: {
       ...defaultTooltip,
       appendToBody: true,
-      trigger: richTooltip ? 'axis' : 'item',
+      trigger: richTooltip ? "axis" : "item",
       formatter: (params: any) => {
         const xValue: number = richTooltip
           ? params[0].value[0]
@@ -393,7 +393,7 @@ export default function transformProps(
             rows.push(`<span style="opacity: 0.7">${content}</span>`);
           }
         });
-        return rows.join('<br />');
+        return rows.join("<br />");
       },
     },
     legend: {
@@ -403,10 +403,10 @@ export default function transformProps(
         .concat(rawSeriesB)
         .filter(
           entry =>
-            extractForecastSeriesContext((entry.name || '') as string).type ===
+            extractForecastSeriesContext((entry.name || "") as string).type ===
             ForecastSeriesEnum.Observation,
         )
-        .map(entry => entry.name || '')
+        .map(entry => entry.name || "")
         .concat(extractAnnotationLabels(annotationLayers, annotationData)),
     },
     series: dedupSeries(series),
@@ -418,8 +418,8 @@ export default function transformProps(
         dataZoom: {
           yAxisIndex: false,
           title: {
-            zoom: 'zoom area',
-            back: 'restore zoom',
+            zoom: "zoom area",
+            back: "restore zoom",
           },
         },
       },
@@ -427,7 +427,7 @@ export default function transformProps(
     dataZoom: zoomable
       ? [
           {
-            type: 'slider',
+            type: "slider",
             start: TIMESERIES_CONSTANTS.dataZoomStart,
             end: TIMESERIES_CONSTANTS.dataZoomEnd,
             bottom: TIMESERIES_CONSTANTS.zoomBottom,

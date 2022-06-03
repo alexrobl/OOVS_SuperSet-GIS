@@ -51,7 +51,7 @@ def upgrade():
 
     dashboards = (
         session.query(Dashboard)
-        .filter(Dashboard.json_metadata.like('%"filter_configuration"%'))
+        .filter(Dashboard.json_metadata.like("%"filter_configuration"%"))
         .all()
     )
     changes = 0
@@ -79,7 +79,7 @@ def downgrade():
 
     dashboards = (
         session.query(Dashboard)
-        .filter(Dashboard.json_metadata.like('%"native_filter_configuration"%'))
+        .filter(Dashboard.json_metadata.like("%"native_filter_configuration"%"))
         .all()
     )
     changes = 0

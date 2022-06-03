@@ -25,25 +25,25 @@ import {
   NumberFormats,
   NumberFormatter,
   getColumnLabel,
-} from '@superset-ui/core';
-import { CallbackDataParams } from 'echarts/types/src/util/types';
-import { EChartsCoreOption, FunnelSeriesOption } from 'echarts';
+} from "@superset-ui/core";
+import { CallbackDataParams } from "echarts/types/src/util/types";
+import { EChartsCoreOption, FunnelSeriesOption } from "echarts";
 import {
   DEFAULT_FORM_DATA as DEFAULT_FUNNEL_FORM_DATA,
   EchartsFunnelChartProps,
   EchartsFunnelFormData,
   EchartsFunnelLabelTypeType,
   FunnelChartTransformedProps,
-} from './types';
-import { DEFAULT_LEGEND_FORM_DATA } from '../types';
+} from "./types";
+import { DEFAULT_LEGEND_FORM_DATA } from "../types";
 import {
   extractGroupbyLabel,
   getChartPadding,
   getLegendProps,
   sanitizeHtml,
-} from '../utils/series';
-import { defaultGrid, defaultTooltip } from '../defaults';
-import { OpacityEnum } from '../constants';
+} from "../utils/series";
+import { defaultGrid, defaultTooltip } from "../defaults";
+import { OpacityEnum } from "../constants";
 
 const percentFormatter = getNumberFormatter(NumberFormats.PERCENT_2_POINT);
 
@@ -53,12 +53,12 @@ export function formatFunnelLabel({
   numberFormatter,
   sanitizeName = false,
 }: {
-  params: Pick<CallbackDataParams, 'name' | 'value' | 'percent'>;
+  params: Pick<CallbackDataParams, "name" | "value" | "percent">;
   labelType: EchartsFunnelLabelTypeType;
   numberFormatter: NumberFormatter;
   sanitizeName?: boolean;
 }): string {
-  const { name: rawName = '', value, percent } = params;
+  const { name: rawName = "", value, percent } = params;
   const name = sanitizeName ? sanitizeHtml(rawName) : rawName;
   const formattedValue = numberFormatter(value as number);
   const formattedPercent = percentFormatter((percent as number) / 100);
@@ -98,7 +98,7 @@ export default function transformProps(
     legendMargin,
     legendOrientation,
     legendType,
-    metric = '',
+    metric = "",
     numberFormat,
     showLabels,
     showLegend,
@@ -178,25 +178,25 @@ export default function transformProps(
 
   const series: FunnelSeriesOption[] = [
     {
-      type: 'funnel',
+      type: "funnel",
       ...getChartPadding(showLegend, legendOrientation, legendMargin),
       animation: true,
-      minSize: '0%',
-      maxSize: '100%',
+      minSize: "0%",
+      maxSize: "100%",
       sort,
       orient,
       gap,
-      funnelAlign: 'center',
+      funnelAlign: "center",
       labelLine: { show: !!labelLine },
       label: {
         ...defaultLabel,
-        position: labelLine ? 'outer' : 'inner',
-        textBorderColor: 'transparent',
+        position: labelLine ? "outer" : "inner",
+        textBorderColor: "transparent",
       },
       emphasis: {
         label: {
           show: true,
-          fontWeight: 'bold',
+          fontWeight: "bold",
         },
       },
       // @ts-ignore
@@ -210,7 +210,7 @@ export default function transformProps(
     },
     tooltip: {
       ...defaultTooltip,
-      trigger: 'item',
+      trigger: "item",
       formatter: (params: any) =>
         formatFunnelLabel({
           params,

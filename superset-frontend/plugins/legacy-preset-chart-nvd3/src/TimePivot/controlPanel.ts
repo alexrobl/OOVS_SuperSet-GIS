@@ -16,12 +16,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t } from '@superset-ui/core';
+import { t } from "@superset-ui/core";
 import {
   ControlPanelConfig,
   D3_FORMAT_OPTIONS,
   sections,
-} from '@superset-ui/chart-controls';
+} from "@superset-ui/chart-controls";
 import {
   lineInterpolation,
   showLegend,
@@ -34,33 +34,33 @@ import {
   yAxisShowMinmax,
   yAxisLabel,
   leftMargin,
-} from '../NVD3Controls';
+} from "../NVD3Controls";
 
 const config: ControlPanelConfig = {
   controlPanelSections: [
     sections.legacyTimeseriesTime,
     {
-      label: t('Query'),
+      label: t("Query"),
       expanded: true,
       controlSetRows: [
-        ['metric'],
-        ['adhoc_filters'],
+        ["metric"],
+        ["adhoc_filters"],
         [
           {
-            name: 'freq',
+            name: "freq",
             config: {
-              type: 'SelectControl',
-              label: t('Frequency'),
-              default: 'W-MON',
+              type: "SelectControl",
+              label: t("Frequency"),
+              default: "W-MON",
               freeForm: true,
               clearable: false,
               choices: [
-                ['AS', 'Year (freq=AS)'],
-                ['52W-MON', '52 weeks starting Monday (freq=52W-MON)'],
-                ['W-SUN', '1 week starting Sunday (freq=W-SUN)'],
-                ['W-MON', '1 week starting Monday (freq=W-MON)'],
-                ['D', 'Day (freq=D)'],
-                ['4W-MON', '4 weeks (freq=4W-MON)'],
+                ["AS", "Year (freq=AS)"],
+                ["52W-MON", "52 weeks starting Monday (freq=52W-MON)"],
+                ["W-SUN", "1 week starting Sunday (freq=W-SUN)"],
+                ["W-MON", "1 week starting Monday (freq=W-MON)"],
+                ["D", "Day (freq=D)"],
+                ["4W-MON", "4 weeks (freq=4W-MON)"],
               ],
               description: t(
                 `The periodicity over which to pivot time. Users can provide
@@ -69,7 +69,7 @@ const config: ControlPanelConfig = {
               ),
               tooltipOnClick: () => {
                 window.open(
-                  'https://pandas.pydata.org/pandas-docs/stable/timeseries.html#offset-aliases',
+                  "https://pandas.pydata.org/pandas-docs/stable/timeseries.html#offset-aliases",
                 );
               },
             },
@@ -78,16 +78,16 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('Chart Options'),
+      label: t("Chart Options"),
       expanded: true,
       controlSetRows: [
         [showLegend],
         [lineInterpolation],
-        ['color_picker', null],
+        ["color_picker", null],
       ],
     },
     {
-      label: t('X Axis'),
+      label: t("X Axis"),
       expanded: true,
       controlSetRows: [
         [xAxisLabel],
@@ -98,7 +98,7 @@ const config: ControlPanelConfig = {
             name: xAxisFormat.name,
             config: {
               ...xAxisFormat.config,
-              default: 'SMART_NUMBER',
+              default: "SMART_NUMBER",
               choices: D3_FORMAT_OPTIONS,
             },
           },
@@ -106,14 +106,14 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('Y Axis'),
+      label: t("Y Axis"),
       expanded: true,
       controlSetRows: [
         [yAxisLabel],
         [leftMargin],
         [yAxisShowMinmax],
         [yLogScale],
-        ['y_axis_format'],
+        ["y_axis_format"],
         [yAxisBounds],
       ],
     },

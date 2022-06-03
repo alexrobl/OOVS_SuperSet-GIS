@@ -44,63 +44,63 @@ logger = logging.getLogger()
 
 # Regular expressions to catch custom errors
 CONNECTION_INVALID_USERNAME_REGEX = re.compile(
-    'role "(?P<username>.*?)" does not exist'
+    "role "(?P<username>.*?)" does not exist"
 )
 CONNECTION_INVALID_PASSWORD_REGEX = re.compile(
-    'password authentication failed for user "(?P<username>.*?)"'
+    "password authentication failed for user "(?P<username>.*?)""
 )
 CONNECTION_INVALID_PASSWORD_NEEDED_REGEX = re.compile("no password supplied")
 CONNECTION_INVALID_HOSTNAME_REGEX = re.compile(
-    'could not translate host name "(?P<hostname>.*?)" to address: '
+    "could not translate host name "(?P<hostname>.*?)" to address: "
     "nodename nor servname provided, or not known"
 )
 CONNECTION_PORT_CLOSED_REGEX = re.compile(
     r"could not connect to server: Connection refused\s+Is the server "
-    r'running on host "(?P<hostname>.*?)" (\(.*?\) )?and accepting\s+TCP/IP '
+    r"running on host "(?P<hostname>.*?)" (\(.*?\) )?and accepting\s+TCP/IP "
     r"connections on port (?P<port>.*?)\?"
 )
 CONNECTION_HOST_DOWN_REGEX = re.compile(
     r"could not connect to server: (?P<reason>.*?)\s+Is the server running on "
-    r'host "(?P<hostname>.*?)" (\(.*?\) )?and accepting\s+TCP/IP '
+    r"host "(?P<hostname>.*?)" (\(.*?\) )?and accepting\s+TCP/IP "
     r"connections on port (?P<port>.*?)\?"
 )
 CONNECTION_UNKNOWN_DATABASE_REGEX = re.compile(
-    'database "(?P<database>.*?)" does not exist'
+    "database "(?P<database>.*?)" does not exist"
 )
 COLUMN_DOES_NOT_EXIST_REGEX = re.compile(
-    r'postgresql error: column "(?P<column_name>.+?)" '
+    r"postgresql error: column "(?P<column_name>.+?)" "
     r"does not exist\s+LINE (?P<location>\d+?)"
 )
 
-SYNTAX_ERROR_REGEX = re.compile('syntax error at or near "(?P<syntax_error>.*?)"')
+SYNTAX_ERROR_REGEX = re.compile("syntax error at or near "(?P<syntax_error>.*?)"")
 
 
 class PostgresBaseEngineSpec(BaseEngineSpec):
-    """Abstract class for Postgres 'like' databases"""
+    """Abstract class for Postgres "like" databases"""
 
     engine = ""
     engine_name = "PostgreSQL"
 
     _time_grain_expressions = {
         None: "{col}",
-        "PT1S": "DATE_TRUNC('second', {col})",
-        "PT1M": "DATE_TRUNC('minute', {col})",
-        "PT1H": "DATE_TRUNC('hour', {col})",
-        "P1D": "DATE_TRUNC('day', {col})",
-        "P1W": "DATE_TRUNC('week', {col})",
-        "P1M": "DATE_TRUNC('month', {col})",
-        "P3M": "DATE_TRUNC('quarter', {col})",
-        "P1Y": "DATE_TRUNC('year', {col})",
+        "PT1S": "DATE_TRUNC("second", {col})",
+        "PT1M": "DATE_TRUNC("minute", {col})",
+        "PT1H": "DATE_TRUNC("hour", {col})",
+        "P1D": "DATE_TRUNC("day", {col})",
+        "P1W": "DATE_TRUNC("week", {col})",
+        "P1M": "DATE_TRUNC("month", {col})",
+        "P3M": "DATE_TRUNC("quarter", {col})",
+        "P1Y": "DATE_TRUNC("year", {col})",
     }
 
     custom_errors: Dict[Pattern[str], Tuple[str, SupersetErrorType, Dict[str, Any]]] = {
         CONNECTION_INVALID_USERNAME_REGEX: (
-            __('The username "%(username)s" does not exist.'),
+            __("The username "%(username)s" does not exist."),
             SupersetErrorType.CONNECTION_INVALID_USERNAME_ERROR,
             {"invalid": ["username"]},
         ),
         CONNECTION_INVALID_PASSWORD_REGEX: (
-            __('The password provided for username "%(username)s" is incorrect.'),
+            __("The password provided for username "%(username)s" is incorrect."),
             SupersetErrorType.CONNECTION_INVALID_PASSWORD_ERROR,
             {"invalid": ["username", "password"]},
         ),
@@ -110,31 +110,31 @@ class PostgresBaseEngineSpec(BaseEngineSpec):
             {"invalid": ["password"]},
         ),
         CONNECTION_INVALID_HOSTNAME_REGEX: (
-            __('The hostname "%(hostname)s" cannot be resolved.'),
+            __("The hostname "%(hostname)s" cannot be resolved."),
             SupersetErrorType.CONNECTION_INVALID_HOSTNAME_ERROR,
             {"invalid": ["host"]},
         ),
         CONNECTION_PORT_CLOSED_REGEX: (
-            __('Port %(port)s on hostname "%(hostname)s" refused the connection.'),
+            __("Port %(port)s on hostname "%(hostname)s" refused the connection."),
             SupersetErrorType.CONNECTION_PORT_CLOSED_ERROR,
             {"invalid": ["host", "port"]},
         ),
         CONNECTION_HOST_DOWN_REGEX: (
             __(
-                'The host "%(hostname)s" might be down, and can\'t be '
+                "The host "%(hostname)s" might be down, and can\"t be "
                 "reached on port %(port)s."
             ),
             SupersetErrorType.CONNECTION_HOST_DOWN_ERROR,
             {"invalid": ["host", "port"]},
         ),
         CONNECTION_UNKNOWN_DATABASE_REGEX: (
-            __('Unable to connect to database "%(database)s".'),
+            __("Unable to connect to database "%(database)s"."),
             SupersetErrorType.CONNECTION_UNKNOWN_DATABASE_ERROR,
             {"invalid": ["database"]},
         ),
         COLUMN_DOES_NOT_EXIST_REGEX: (
             __(
-                'We can\'t seem to resolve the column "%(column_name)s" at '
+                "We can\"t seem to resolve the column "%(column_name)s" at "
                 "line %(location)s.",
             ),
             SupersetErrorType.COLUMN_DOES_NOT_EXIST_ERROR,
@@ -143,7 +143,7 @@ class PostgresBaseEngineSpec(BaseEngineSpec):
         SYNTAX_ERROR_REGEX: (
             __(
                 "Please check your query for syntax errors at or "
-                'near "%(syntax_error)s". Then, try running your query again.'
+                "near "%(syntax_error)s". Then, try running your query again."
             ),
             SupersetErrorType.SYNTAX_ERROR,
             {},
@@ -160,7 +160,7 @@ class PostgresBaseEngineSpec(BaseEngineSpec):
 
     @classmethod
     def epoch_to_dttm(cls) -> str:
-        return "(timestamp 'epoch' + {col} * interval '1 second')"
+        return "(timestamp "epoch" + {col} * interval "1 second")"
 
 
 class PostgresEngineSpec(PostgresBaseEngineSpec, BasicParametersMixin):
@@ -240,10 +240,10 @@ class PostgresEngineSpec(PostgresBaseEngineSpec, BasicParametersMixin):
     ) -> Optional[str]:
         tt = target_type.upper()
         if tt == utils.TemporalType.DATE:
-            return f"TO_DATE('{dttm.date().isoformat()}', 'YYYY-MM-DD')"
+            return f"TO_DATE("{dttm.date().isoformat()}", "YYYY-MM-DD")"
         if "TIMESTAMP" in tt or "DATETIME" in tt:
             dttm_formatted = dttm.isoformat(sep=" ", timespec="microseconds")
-            return f"""TO_TIMESTAMP('{dttm_formatted}', 'YYYY-MM-DD HH24:MI:SS.US')"""
+            return f"""TO_TIMESTAMP("{dttm_formatted}", "YYYY-MM-DD HH24:MI:SS.US")"""
         return None
 
     @staticmethod
@@ -315,7 +315,7 @@ class PostgresEngineSpec(PostgresBaseEngineSpec, BasicParametersMixin):
             cursor.execute(
                 "SELECT pg_terminate_backend(pid) "
                 "FROM pg_stat_activity "
-                f"WHERE pid='{cancel_query_id}'"
+                f"WHERE pid="{cancel_query_id}""
             )
         except Exception:  # pylint: disable=broad-except
             return False

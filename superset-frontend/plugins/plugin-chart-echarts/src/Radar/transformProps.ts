@@ -25,26 +25,26 @@ import {
   getNumberFormatter,
   getTimeFormatter,
   NumberFormatter,
-} from '@superset-ui/core';
-import { CallbackDataParams } from 'echarts/types/src/util/types';
-import { RadarSeriesDataItemOption } from 'echarts/types/src/chart/radar/RadarSeries';
-import { EChartsCoreOption, RadarSeriesOption } from 'echarts';
+} from "@superset-ui/core";
+import { CallbackDataParams } from "echarts/types/src/util/types";
+import { RadarSeriesDataItemOption } from "echarts/types/src/chart/radar/RadarSeries";
+import { EChartsCoreOption, RadarSeriesOption } from "echarts";
 import {
   DEFAULT_FORM_DATA as DEFAULT_RADAR_FORM_DATA,
   EchartsRadarChartProps,
   EchartsRadarFormData,
   EchartsRadarLabelType,
   RadarChartTransformedProps,
-} from './types';
-import { DEFAULT_LEGEND_FORM_DATA } from '../types';
+} from "./types";
+import { DEFAULT_LEGEND_FORM_DATA } from "../types";
 import {
   extractGroupbyLabel,
   getChartPadding,
   getColtypesMapping,
   getLegendProps,
-} from '../utils/series';
-import { defaultGrid, defaultTooltip } from '../defaults';
-import { OpacityEnum } from '../constants';
+} from "../utils/series";
+import { defaultGrid, defaultTooltip } from "../defaults";
+import { OpacityEnum } from "../constants";
 
 export function formatLabel({
   params,
@@ -55,7 +55,7 @@ export function formatLabel({
   labelType: EchartsRadarLabelType;
   numberFormatter: NumberFormatter;
 }): string {
-  const { name = '', value } = params;
+  const { name = "", value } = params;
   const formattedValue = numberFormatter(value as number);
 
   switch (labelType) {
@@ -203,13 +203,13 @@ export default function transformProps(
 
   const series: RadarSeriesOption[] = [
     {
-      type: 'radar',
+      type: "radar",
       ...getChartPadding(showLegend, legendOrientation, legendMargin),
       animation: false,
       emphasis: {
         label: {
           show: true,
-          fontWeight: 'bold',
+          fontWeight: "bold",
           backgroundColor: theme.colors.grayscale.light5,
         },
       },
@@ -223,7 +223,7 @@ export default function transformProps(
     },
     tooltip: {
       ...defaultTooltip,
-      trigger: 'item',
+      trigger: "item",
     },
     legend: {
       ...getLegendProps(legendType, legendOrientation, showLegend),
@@ -231,7 +231,7 @@ export default function transformProps(
     },
     series,
     radar: {
-      shape: isCircle ? 'circle' : 'polygon',
+      shape: isCircle ? "circle" : "polygon",
       indicator,
     },
   };

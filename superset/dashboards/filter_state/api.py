@@ -74,7 +74,7 @@ class DashboardFilterStateRestApi(TemporaryCacheRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/TemporaryCachePostSchema'
+                  $ref: "#/components/schemas/TemporaryCachePostSchema"
           responses:
             201:
               description: The value was stored successfully.
@@ -87,13 +87,13 @@ class DashboardFilterStateRestApi(TemporaryCacheRestApi):
                         type: string
                         description: The key to retrieve the value.
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         return super().post(pk)
 
@@ -128,7 +128,7 @@ class DashboardFilterStateRestApi(TemporaryCacheRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/TemporaryCachePutSchema'
+                  $ref: "#/components/schemas/TemporaryCachePutSchema"
           responses:
             200:
               description: The value was stored successfully.
@@ -141,15 +141,15 @@ class DashboardFilterStateRestApi(TemporaryCacheRestApi):
                         type: string
                         description: The key to retrieve the value.
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         return super().put(pk, key)
 
@@ -187,15 +187,15 @@ class DashboardFilterStateRestApi(TemporaryCacheRestApi):
                         type: string
                         description: The stored value
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         return super().get(pk, key)
 
@@ -234,14 +234,14 @@ class DashboardFilterStateRestApi(TemporaryCacheRestApi):
                         type: string
                         description: The result of the operation
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         return super().delete(pk, key)

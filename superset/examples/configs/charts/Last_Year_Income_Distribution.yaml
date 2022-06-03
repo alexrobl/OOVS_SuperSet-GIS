@@ -28,7 +28,7 @@ params:
     sqlExpression: null
     subject: developer_type
   - clause: WHERE
-    comparator: '100000'
+    comparator: "100000"
     expressionType: SIMPLE
     filterOptionName: filter_khdc3iypzjg_3g6h02b4f2p
     isExtra: false
@@ -43,7 +43,7 @@ params:
   granularity_sqla: time_start
   groupby: []
   label_colors: {}
-  link_length: '10'
+  link_length: "10"
   queryFields:
     groupby: groupby
   row_limit: null

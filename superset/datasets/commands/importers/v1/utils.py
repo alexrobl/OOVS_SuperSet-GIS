@@ -132,9 +132,9 @@ def import_dataset(
     try:
         table_exists = dataset.database.has_table_by_name(dataset.table_name)
     except Exception:  # pylint: disable=broad-except
-        # MySQL doesn't play nice with GSheets table names
+        # MySQL doesn"t play nice with GSheets table names
         logger.warning(
-            "Couldn't check if table %s exists, assuming it does", dataset.table_name
+            "Couldn"t check if table %s exists, assuming it does", dataset.table_name
         )
         table_exists = True
 

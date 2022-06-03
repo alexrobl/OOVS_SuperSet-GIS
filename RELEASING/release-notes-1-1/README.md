@@ -35,13 +35,13 @@ The migration to Apache ECharts continues with the addition of a [new force-dire
 
 ![Force Directed Graph](media/force_directed_graph.jpg)
 
-The ECharts library included with Superset was also bumped to 5.0.2, which includes some [fixes to pie charts.](https://github.com/apache/superset/pull/13052) The overall improvement of chart options and quality can be expected to continue in future releases. New 'sort by' controls have also been [added](https://github.com/apache/superset/pull/13049) to [many charts](https://github.com/apache/superset/pull/13057).
+The ECharts library included with Superset was also bumped to 5.0.2, which includes some [fixes to pie charts.](https://github.com/apache/superset/pull/13052) The overall improvement of chart options and quality can be expected to continue in future releases. New "sort by" controls have also been [added](https://github.com/apache/superset/pull/13049) to [many charts](https://github.com/apache/superset/pull/13057).
 
 The dashboard native filter feature, [while still behind a feature flag in this release,](https://github.com/apache/superset/blob/master/RELEASING/release-notes-1-0/README.md#feature-flags) has been improved and is ready to test out.
 
 ![Native Filter](media/native_filters.jpg)
 
-Since the 1.0 release, we have seen a surge of support from the community around updating Superset's [documentation](https://superset.apache.org/docs/intro) and adding more tests to the UI. Thanks to all who contributed in this area. This is what open-source software is all about!
+Since the 1.0 release, we have seen a surge of support from the community around updating Superset"s [documentation](https://superset.apache.org/docs/intro) and adding more tests to the UI. Thanks to all who contributed in this area. This is what open-source software is all about!
 
 # Dashboard Level Security
 
@@ -49,7 +49,7 @@ Dashboard providers in an organization with many subgroups need the ability mana
 
 ![SIP 51](media/sip_51.jpg)
 
-In 1.1, some key steps were taken towards the vision laid out in SIP-51. **Note that this functionality is still hidden behind feature flags and is an active area of development.** You can view a list of relevant PR's in [PR Highlights](#pr-highlights)
+In 1.1, some key steps were taken towards the vision laid out in SIP-51. **Note that this functionality is still hidden behind feature flags and is an active area of development.** You can view a list of relevant PR"s in [PR Highlights](#pr-highlights)
 
 
 # Database Connectivity

@@ -38,7 +38,7 @@ def upgrade():
 
 def downgrade():
     try:
-        # sqlite doesn't like dropping the columns
+        # sqlite doesn"t like dropping the columns
         op.drop_column("query", "tmp_schema_name")
     except Exception:
         pass

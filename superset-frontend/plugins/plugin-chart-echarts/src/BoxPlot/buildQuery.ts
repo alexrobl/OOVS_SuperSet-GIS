@@ -16,9 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { buildQueryContext } from '@superset-ui/core';
-import { boxplotOperator } from '@superset-ui/chart-controls';
-import { BoxPlotQueryFormData } from './types';
+import { buildQueryContext } from "@superset-ui/core";
+import { boxplotOperator } from "@superset-ui/chart-controls";
+import { BoxPlotQueryFormData } from "./types";
 
 export default function buildQuery(formData: BoxPlotQueryFormData) {
   const { columns = [], granularity_sqla, groupby = [] } = formData;

@@ -16,28 +16,28 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React, { useRef, useState } from 'react';
-import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
+import React, { useRef, useState } from "react";
+import Layout from "@theme/Layout";
+import Link from "@docusaurus/Link";
 import {
   Button, Col, Row, Carousel,
-} from 'antd';
-import styled from '@emotion/styled';
-import { supersetTheme } from '@superset-ui/style';
+} from "antd";
+import styled from "@emotion/styled";
+import { supersetTheme } from "@superset-ui/style";
 import {
   DeploymentUnitOutlined,
   FireOutlined,
   DotChartOutlined,
   DatabaseOutlined,
-} from '@ant-design/icons';
-import GitHubButton from 'react-github-btn';
-import 'antd/dist/antd.css';
-import { mq } from '../utils';
-import { Databases } from '../resources/data';
+} from "@ant-design/icons";
+import GitHubButton from "react-github-btn";
+import "antd/dist/antd.css";
+import { mq } from "../utils";
+import { Databases } from "../resources/data";
 
 const { colors } = supersetTheme;
 
-const StyledMain = styled('main')`
+const StyledMain = styled("main")`
   text-align: center;
   .alert-color {
     color: ${colors.alert.base};
@@ -69,13 +69,13 @@ const StyledMain = styled('main')`
   }
 `;
 
-const StyledTitleContainer = styled('div')`
+const StyledTitleContainer = styled("div")`
   position: relative;
   padding-top: 60px;
   padding-bottom: 80px;
   padding-left: 20px;
   padding-right: 20px;
-  background-image: url('img/data-point.jpg');
+  background-image: url("img/data-point.jpg");
   background-size: cover;
   background-position-x: right;
   .github-section {
@@ -116,12 +116,12 @@ const StyledTitleContainer = styled('div')`
   }
 `;
 
-const StyledHeading = styled('h2')`
+const StyledHeading = styled("h2")`
   font-size: 55px;
   text-align: center;
 `;
 
-const StyledFeatures = styled('div')`
+const StyledFeatures = styled("div")`
   background: #fff;
   padding: 5vw 0;
   margin-top: 0px;
@@ -159,7 +159,7 @@ const StyledFeatures = styled('div')`
   }
 `;
 
-const StyledIntegrations = styled('div')`
+const StyledIntegrations = styled("div")`
   background: white;
   margin-bottom: 64px;
   .databaseSub {
@@ -185,7 +185,7 @@ const StyledIntegrations = styled('div')`
   }
 `;
 
-const CarouselSection = styled('div')`
+const CarouselSection = styled("div")`
   .toggleContainer {
     display: flex;
     flex-direction: column;
@@ -398,7 +398,7 @@ export default function Home(): JSX.Element {
             <div className="toggleContainer">
               <div className="toggleBtns">
                 <div
-                  className={`toggle ${slideIndex === 0 ? 'active' : null}`}
+                  className={`toggle ${slideIndex === 0 ? "active" : null}`}
                   onClick={() => slider.current.goTo(0)}
                   role="button"
                 >
@@ -409,7 +409,7 @@ export default function Home(): JSX.Element {
                 </div>
 
                 <div
-                  className={`toggle ${slideIndex === 1 ? 'active' : null}`}
+                  className={`toggle ${slideIndex === 1 ? "active" : null}`}
                   onClick={() => slider.current.goTo(1)}
                   role="button"
                 >
@@ -417,7 +417,7 @@ export default function Home(): JSX.Element {
                   <span>View your data through interactive dashboards</span>
                 </div>
                 <div
-                  className={`toggle ${slideIndex === 2 ? 'active' : null}`}
+                  className={`toggle ${slideIndex === 2 ? "active" : null}`}
                   onClick={() => slider.current.goTo(2)}
                   role="button"
                 >
@@ -446,7 +446,7 @@ export default function Home(): JSX.Element {
                     title, imgName: imageName, width, height,
                   }) => (
                     <li>
-                      <StyledDatabaseImg src={`img/databases/${imageName}`} title={title} width={width || 'auto'} height={height || '50px'}/>
+                      <StyledDatabaseImg src={`img/databases/${imageName}`} title={title} width={width || "auto"} height={height || "50px"}/>
                     </li>
                   ),
                 )}
@@ -454,9 +454,9 @@ export default function Home(): JSX.Element {
               <span className="databaseSub">
                 ... and many other
                 <a href="docs/databases/installing-database-drivers">
-                  {' '}
+                  {" "}
                   compatible databases
-                  {' '}
+                  {" "}
                 </a>
               </span>
             </StyledIntegrations>

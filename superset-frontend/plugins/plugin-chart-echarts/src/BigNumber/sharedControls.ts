@@ -18,37 +18,37 @@
  */
 
 // These are control configurations that are shared ONLY within the BigNumberWithTrendline viz plugin repo.
-import { t } from '@superset-ui/core';
-import { CustomControlItem } from '@superset-ui/chart-controls';
+import { t } from "@superset-ui/core";
+import { CustomControlItem } from "@superset-ui/chart-controls";
 
 export const headerFontSize: CustomControlItem = {
-  name: 'header_font_size',
+  name: "header_font_size",
   config: {
-    type: 'SelectControl',
-    label: t('Big Number Font Size'),
+    type: "SelectControl",
+    label: t("Big Number Font Size"),
     renderTrigger: true,
     clearable: false,
     default: 0.4,
     // Values represent the percentage of space a header should take
     options: [
       {
-        label: t('Tiny'),
+        label: t("Tiny"),
         value: 0.2,
       },
       {
-        label: t('Small'),
+        label: t("Small"),
         value: 0.3,
       },
       {
-        label: t('Normal'),
+        label: t("Normal"),
         value: 0.4,
       },
       {
-        label: t('Large'),
+        label: t("Large"),
         value: 0.5,
       },
       {
-        label: t('Huge'),
+        label: t("Huge"),
         value: 0.6,
       },
     ],
@@ -56,33 +56,33 @@ export const headerFontSize: CustomControlItem = {
 };
 
 export const subheaderFontSize: CustomControlItem = {
-  name: 'subheader_font_size',
+  name: "subheader_font_size",
   config: {
-    type: 'SelectControl',
-    label: t('Subheader Font Size'),
+    type: "SelectControl",
+    label: t("Subheader Font Size"),
     renderTrigger: true,
     clearable: false,
     default: 0.15,
     // Values represent the percentage of space a subheader should take
     options: [
       {
-        label: t('Tiny'),
+        label: t("Tiny"),
         value: 0.125,
       },
       {
-        label: t('Small'),
+        label: t("Small"),
         value: 0.15,
       },
       {
-        label: t('Normal'),
+        label: t("Normal"),
         value: 0.2,
       },
       {
-        label: t('Large'),
+        label: t("Large"),
         value: 0.3,
       },
       {
-        label: t('Huge'),
+        label: t("Huge"),
         value: 0.4,
       },
     ],

@@ -26,7 +26,7 @@ jobs:
         script: |
           const pattern = /^\/testenv (up|down)/
           const result = pattern.exec(context.payload.comment.body)
-          return result === null ? 'noop' : result[1]
+          return result === null ? "noop" : result[1]
 
     - name: Eval comment body for feature flags
       uses: actions/github-script@v3
@@ -46,14 +46,14 @@ jobs:
 
     - name: Limit to committers
       if: >
-        steps.eval-body.outputs.result != 'noop' &&
-        github.event.comment.author_association != 'MEMBER' &&
-        github.event.comment.author_association != 'OWNER'
+        steps.eval-body.outputs.result != "noop" &&
+        github.event.comment.author_association != "MEMBER" &&
+        github.event.comment.author_association != "OWNER"
       uses: actions/github-script@v3
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
-          const errMsg = '@${{ github.event.comment.user.login }} Ephemeral environment creation is currently limited to committers.'
+          const errMsg = "@${{ github.event.comment.user.login }} Ephemeral environment creation is currently limited to committers."
           github.issues.createComment({
             issue_number: ${{ github.event.issue.number }},
             owner: context.repo.owner,
@@ -64,7 +64,7 @@ jobs:
 
   ephemeral_env_up:
     needs: ephemeral_env_comment
-    if: needs.ephemeral_env_comment.outputs.slash-command == 'up'
+    if: needs.ephemeral_env_comment.outputs.slash-command == "up"
     name: Spin up an ephemeral environment
     runs-on: ubuntu-latest
 
@@ -94,12 +94,12 @@ jobs:
         --image-ids imageTag=pr-${{ github.event.issue.number }}
 
     - name: Fail on missing container image
-      if: steps.check-image.outcome == 'failure'
+      if: steps.check-image.outcome == "failure"
       uses: actions/github-script@v3
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
-          const errMsg = '@${{ github.event.comment.user.login }} Container image not yet published for this PR. Please try again when build is complete.'
+          const errMsg = "@${{ github.event.comment.user.login }} Container image not yet published for this PR. Please try again when build is complete."
           github.issues.createComment({
             issue_number: ${{ github.event.issue.number }},
             owner: context.repo.owner,
@@ -118,15 +118,15 @@ jobs:
 
     - name: Update env vars in the Amazon ECS task definition
       run: |
-        cat <<< "$(jq '.containerDefinitions[0].environment += ${{ needs.ephemeral_env_comment.outputs.feature-flags }}' < ${{ steps.task-def.outputs.task-definition }})" > ${{ steps.task-def.outputs.task-definition }}
+        cat <<< "$(jq ".containerDefinitions[0].environment += ${{ needs.ephemeral_env_comment.outputs.feature-flags }}" < ${{ steps.task-def.outputs.task-definition }})" > ${{ steps.task-def.outputs.task-definition }}
 
     - name: Describe ECS service
       id: describe-services
       run: |
-        echo "::set-output name=active::$(aws ecs describe-services --cluster superset-ci --services pr-${{ github.event.issue.number }}-service | jq '.services[] | select(.status == "ACTIVE") | any')"
+        echo "::set-output name=active::$(aws ecs describe-services --cluster superset-ci --services pr-${{ github.event.issue.number }}-service | jq ".services[] | select(.status == "ACTIVE") | any")"
 
     - name: Create ECS service
-      if: steps.describe-services.outputs.active != 'true'
+      if: steps.describe-services.outputs.active != "true"
       id: create-service
       env:
         ECR_SUBNETS: subnet-0e15a5034b4121710,subnet-0e8efef4a72224974
@@ -155,17 +155,17 @@ jobs:
     - name: List tasks
       id: list-tasks
       run: |
-        echo "::set-output name=task::$(aws ecs list-tasks --cluster superset-ci --service-name pr-${{ github.event.issue.number }}-service | jq '.taskArns | first')"
+        echo "::set-output name=task::$(aws ecs list-tasks --cluster superset-ci --service-name pr-${{ github.event.issue.number }}-service | jq ".taskArns | first")"
 
     - name: Get network interface
       id: get-eni
       run: |
-        echo "::set-output name=eni::$(aws ecs describe-tasks --cluster superset-ci --tasks ${{ steps.list-tasks.outputs.task }} | jq '.tasks | .[0] | .attachments | .[0] | .details | map(select(.name=="networkInterfaceId")) | .[0] | .value')"
+        echo "::set-output name=eni::$(aws ecs describe-tasks --cluster superset-ci --tasks ${{ steps.list-tasks.outputs.task }} | jq ".tasks | .[0] | .attachments | .[0] | .details | map(select(.name=="networkInterfaceId")) | .[0] | .value")"
 
     - name: Get public IP
       id: get-ip
       run: |
-        echo "::set-output name=ip::$(aws ec2 describe-network-interfaces --network-interface-ids ${{ steps.get-eni.outputs.eni }} | jq -r '.NetworkInterfaces | first | .Association.PublicIp')"
+        echo "::set-output name=ip::$(aws ec2 describe-network-interfaces --network-interface-ids ${{ steps.get-eni.outputs.eni }} | jq -r ".NetworkInterfaces | first | .Association.PublicIp")"
 
     - name: Comment (success)
       if: ${{ success() }}
@@ -177,7 +177,7 @@ jobs:
             issue_number: ${{ github.event.issue.number }},
             owner: context.repo.owner,
             repo: context.repo.repo,
-            body: '@${{ github.event.comment.user.login }} Ephemeral environment spinning up at http://${{ steps.get-ip.outputs.ip }}:8080. Credentials are `admin`/`admin`. Please allow several minutes for bootstrapping and startup.'
+            body: "@${{ github.event.comment.user.login }} Ephemeral environment spinning up at http://${{ steps.get-ip.outputs.ip }}:8080. Credentials are `admin`/`admin`. Please allow several minutes for bootstrapping and startup."
           })
 
     - name: Comment (failure)
@@ -190,5 +190,5 @@ jobs:
             issue_number: ${{ github.event.issue.number }},
             owner: context.repo.owner,
             repo: context.repo.repo,
-            body: '@${{ github.event.comment.user.login }} Ephemeral environment creation failed. Please check the Actions logs for details.'
+            body: "@${{ github.event.comment.user.login }} Ephemeral environment creation failed. Please check the Actions logs for details."
           })

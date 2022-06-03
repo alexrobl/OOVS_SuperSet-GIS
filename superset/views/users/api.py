@@ -50,9 +50,9 @@ class CurrentUserRestApi(BaseApi):
                     type: object
                     properties:
                       result:
-                        $ref: '#/components/schemas/UserResponseSchema'
+                        $ref: "#/components/schemas/UserResponseSchema"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
         """
         try:
             if g.user is None or g.user.is_anonymous:
@@ -80,9 +80,9 @@ class CurrentUserRestApi(BaseApi):
                     type: object
                     properties:
                       result:
-                        $ref: '#/components/schemas/UserResponseSchema'
+                        $ref: "#/components/schemas/UserResponseSchema"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
         """
         try:
             if g.user is None or g.user.is_anonymous:

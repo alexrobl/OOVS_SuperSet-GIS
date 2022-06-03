@@ -69,7 +69,7 @@ def import_dataset(
 
     Metrics and columns and datasource will be overridden if exists.
     This function can be used to import/export dashboards between multiple
-    superset instances. Audit metadata isn't copied over.
+    superset instances. Audit metadata isn"t copied over.
     """
 
     lookup_database: Callable[[BaseDatasource], Optional[Database]]
@@ -141,7 +141,7 @@ def import_datasource(  # pylint: disable=too-many-arguments
 
     Metrics and columns and datasource will be overrided if exists.
     This function can be used to import/export datasources between multiple
-    superset instances. Audit metadata isn't copies over.
+    superset instances. Audit metadata isn"t copies over.
     """
     make_transient(i_datasource)
     logger.info("Started import of the datasource: %s", i_datasource.to_json())
@@ -261,7 +261,7 @@ class ImportDatasetsCommand(BaseCommand):
                 import_from_dict(db.session, config, sync=self.sync)
             else:  # list
                 for dataset in config:
-                    # UI exports don't have the database metadata, so we assume
+                    # UI exports don"t have the database metadata, so we assume
                     # the DB exists and has the same name
                     params = json.loads(dataset["params"])
                     database = (

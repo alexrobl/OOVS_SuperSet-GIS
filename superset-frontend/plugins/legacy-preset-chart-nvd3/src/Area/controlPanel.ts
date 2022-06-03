@@ -16,8 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t } from '@superset-ui/core';
-import { ControlPanelConfig, sections } from '@superset-ui/chart-controls';
+import { t } from "@superset-ui/core";
+import { ControlPanelConfig, sections } from "@superset-ui/chart-controls";
 import {
   lineInterpolation,
   showBrush,
@@ -32,42 +32,42 @@ import {
   xAxisShowMinmax,
   richTooltip,
   timeSeriesSection,
-} from '../NVD3Controls';
+} from "../NVD3Controls";
 
 const config: ControlPanelConfig = {
   controlPanelSections: [
     sections.legacyTimeseriesTime,
     timeSeriesSection[0],
     {
-      label: t('Chart Options'),
+      label: t("Chart Options"),
       expanded: true,
       controlSetRows: [
         [showBrush, showLegend],
         [
           lineInterpolation,
           {
-            name: 'stacked_style',
+            name: "stacked_style",
             config: {
-              type: 'SelectControl',
-              label: t('Stacked Style'),
+              type: "SelectControl",
+              label: t("Stacked Style"),
               renderTrigger: true,
               choices: [
-                ['stack', 'stack'],
-                ['stream', 'stream'],
-                ['expand', 'expand'],
+                ["stack", "stack"],
+                ["stream", "stream"],
+                ["expand", "expand"],
               ],
-              default: 'stack',
-              description: '',
+              default: "stack",
+              description: "",
             },
           },
         ],
-        ['color_scheme'],
+        ["color_scheme"],
         [richTooltip, showControls],
       ],
     },
     {
-      label: t('X Axis'),
-      tabOverride: 'customize',
+      label: t("X Axis"),
+      tabOverride: "customize",
       expanded: true,
       controlSetRows: [
         [xAxisLabel, bottomMargin],
@@ -76,11 +76,11 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('Y Axis'),
-      tabOverride: 'customize',
+      label: t("Y Axis"),
+      tabOverride: "customize",
       expanded: true,
       controlSetRows: [
-        ['y_axis_format', yAxisBounds],
+        ["y_axis_format", yAxisBounds],
         [yLogScale, null],
       ],
     },

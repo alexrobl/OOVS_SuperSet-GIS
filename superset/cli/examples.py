@@ -45,7 +45,7 @@ def load_examples_run(
         print("Loading energy related dataset")
         examples.load_energy(only_metadata, force)
 
-    print("Loading [World Bank's Health Nutrition and Population Stats]")
+    print("Loading [World Bank"s Health Nutrition and Population Stats]")
     examples.load_world_bank_health_n_pop(only_metadata, force)
 
     print("Loading [Birth names]")

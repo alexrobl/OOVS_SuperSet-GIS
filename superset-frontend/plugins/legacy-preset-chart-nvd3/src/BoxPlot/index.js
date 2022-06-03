@@ -16,14 +16,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t, ChartMetadata, ChartPlugin } from '@superset-ui/core';
-import transformProps from '../transformProps';
-import thumbnail from './images/thumbnail.png';
+import { t, ChartMetadata, ChartPlugin } from "@superset-ui/core";
+import transformProps from "../transformProps";
+import thumbnail from "./images/thumbnail.png";
 
 const metadata = new ChartMetadata({
-  credits: ['http://nvd3.org'],
-  description: '',
-  name: t('Box Plot'),
+  credits: ["http://nvd3.org"],
+  description: "",
+  name: t("Box Plot"),
   thumbnail,
   useLegacyApi: true,
 });
@@ -31,7 +31,7 @@ const metadata = new ChartMetadata({
 export default class BoxPlotChartPlugin extends ChartPlugin {
   constructor() {
     super({
-      loadChart: () => import('../ReactNVD3'),
+      loadChart: () => import("../ReactNVD3"),
       metadata,
       transformProps,
     });

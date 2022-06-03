@@ -16,34 +16,34 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t, ChartMetadata, ChartPlugin } from '@superset-ui/core';
-import controlPanel from './controlPanel';
-import transformProps from './transformProps';
-import thumbnail from './images/thumbnail.png';
-import buildQuery from './buildQuery';
+import { t, ChartMetadata, ChartPlugin } from "@superset-ui/core";
+import controlPanel from "./controlPanel";
+import transformProps from "./transformProps";
+import thumbnail from "./images/thumbnail.png";
+import buildQuery from "./buildQuery";
 
 export default class EchartsGraphChartPlugin extends ChartPlugin {
   constructor() {
     super({
       buildQuery,
       controlPanel,
-      loadChart: () => import('./EchartsGraph'),
+      loadChart: () => import("./EchartsGraph"),
       metadata: new ChartMetadata({
-        category: t('Flow'),
-        credits: ['https://echarts.apache.org'],
+        category: t("Flow"),
+        credits: ["https://echarts.apache.org"],
         description: t(
-          'Displays connections between entities in a graph structure. Useful for mapping relationships and showing which nodes are important in a network. Graph charts can be configured to be force-directed or circulate. If your data has a geospatial component, try the deck.gl Arc chart.',
+          "Displays connections between entities in a graph structure. Useful for mapping relationships and showing which nodes are important in a network. Graph charts can be configured to be force-directed or circulate. If your data has a geospatial component, try the deck.gl Arc chart.",
         ),
-        name: t('Graph Chart'),
+        name: t("Graph Chart"),
         tags: [
-          t('Aesthetic'),
-          t('Circular'),
-          t('Comparison'),
-          t('Directional'),
-          t('ECharts'),
-          t('Relational'),
-          t('Structural'),
-          t('Transformable'),
+          t("Aesthetic"),
+          t("Circular"),
+          t("Comparison"),
+          t("Directional"),
+          t("ECharts"),
+          t("Relational"),
+          t("Structural"),
+          t("Transformable"),
         ],
         thumbnail,
       }),

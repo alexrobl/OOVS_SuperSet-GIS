@@ -103,11 +103,11 @@ class ChartDataRestApi(ChartRestApi):
                   schema:
                     $ref: "#/components/schemas/ChartDataAsyncResponseSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         chart = self.datamodel.get(pk, self._base_filters)
         if not chart:
@@ -200,11 +200,11 @@ class ChartDataRestApi(ChartRestApi):
                   schema:
                     $ref: "#/components/schemas/ChartDataAsyncResponseSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         json_body = None
         if request.is_json:
@@ -275,15 +275,15 @@ class ChartDataRestApi(ChartRestApi):
                   schema:
                     $ref: "#/components/schemas/ChartDataResponseSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             cached_data = self._load_query_context_form_from_cache(cache_key)

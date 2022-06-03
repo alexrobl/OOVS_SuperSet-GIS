@@ -78,7 +78,7 @@ DEPRECATED_EXTRAS_FIELDS = (
 
 class QueryObject:  # pylint: disable=too-many-instance-attributes
     """
-    The query object's schema matches the interfaces of DB connectors like sqla
+    The query object"s schema matches the interfaces of DB connectors like sqla
     and druid. The query objects are constructed on the client.
     """
 
@@ -172,7 +172,7 @@ class QueryObject:  # pylint: disable=too-many-instance-attributes
         self.annotation_layers = [
             layer
             for layer in (annotation_layers or [])
-            # formula annotations don't affect the payload, hence can be dropped
+            # formula annotations don"t affect the payload, hence can be dropped
             if layer["annotationType"] != "FORMULA"
         ]
 
@@ -185,9 +185,9 @@ class QueryObject:  # pylint: disable=too-many-instance-attributes
 
     def _set_metrics(self, metrics: Optional[List[Metric]] = None) -> None:
         # Support metric reference/definition in the format of
-        #   1. 'metric_name'   - name of predefined metric
-        #   2. { label: 'label_name' }  - legacy format for a predefined metric
-        #   3. { expressionType: 'SIMPLE' | 'SQL', ... } - adhoc metric
+        #   1. "metric_name"   - name of predefined metric
+        #   2. { label: "label_name" }  - legacy format for a predefined metric
+        #   3. { expressionType: "SIMPLE" | "SQL", ... } - adhoc metric
         def is_str_or_adhoc(metric: Metric) -> bool:
             return isinstance(metric, str) or is_adhoc_metric(metric)
 
@@ -289,7 +289,7 @@ class QueryObject:  # pylint: disable=too-many-instance-attributes
                 _(
                     "Duplicate column/metric labels: %(labels)s. Please make "
                     "sure all columns and metrics have a unique label.",
-                    labels=", ".join(f'"{x}"' for x in dup_labels),
+                    labels=", ".join(f""{x}"" for x in dup_labels),
                 )
             )
 
@@ -311,7 +311,7 @@ class QueryObject:  # pylint: disable=too-many-instance-attributes
                 _(
                     "The following entries in `series_columns` are missing "
                     "in `columns`: %(columns)s. ",
-                    columns=", ".join(f'"{x}"' for x in missing_series),
+                    columns=", ".join(f""{x}"" for x in missing_series),
                 )
             )
 

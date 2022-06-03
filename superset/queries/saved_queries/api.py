@@ -170,7 +170,7 @@ class SavedQueryRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_delete_ids_schema'
+                  $ref: "#/components/schemas/get_delete_ids_schema"
           responses:
             200:
               description: Saved queries bulk delete
@@ -182,13 +182,13 @@ class SavedQueryRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         item_ids = kwargs["rison"]
         try:
@@ -223,7 +223,7 @@ class SavedQueryRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_export_ids_schema'
+                  $ref: "#/components/schemas/get_export_ids_schema"
           responses:
             200:
               description: A zip file with saved query(ies) and database(s) as YAML
@@ -233,13 +233,13 @@ class SavedQueryRestApi(BaseSupersetModelRestApi):
                     type: string
                     format: binary
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         token = request.args.get("token")
         requested_ids = kwargs["rison"]
@@ -314,13 +314,13 @@ class SavedQueryRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         upload = request.files.get("formData")
         if not upload:

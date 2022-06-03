@@ -16,17 +16,17 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { ChartProps, supersetTheme } from '@superset-ui/core';
-import { EchartsTreemapChartProps } from '../../src/Treemap/types';
-import transformProps from '../../src/Treemap/transformProps';
+import { ChartProps, supersetTheme } from "@superset-ui/core";
+import { EchartsTreemapChartProps } from "../../src/Treemap/types";
+import transformProps from "../../src/Treemap/transformProps";
 
-describe('Treemap transformProps', () => {
+describe("Treemap transformProps", () => {
   const formData = {
-    colorScheme: 'bnbColors',
-    datasource: '3__table',
-    granularity_sqla: 'ds',
-    metric: 'sum__num',
-    groupby: ['foo', 'bar'],
+    colorScheme: "bnbColors",
+    datasource: "3__table",
+    granularity_sqla: "ds",
+    metric: "sum__num",
+    groupby: ["foo", "bar"],
   };
   const chartProps = new ChartProps({
     formData,
@@ -35,15 +35,15 @@ describe('Treemap transformProps', () => {
     queriesData: [
       {
         data: [
-          { foo: 'Sylvester', bar: 'bar1', sum__num: 10 },
-          { foo: 'Arnold', bar: 'bar2', sum__num: 2.5 },
+          { foo: "Sylvester", bar: "bar1", sum__num: 10 },
+          { foo: "Arnold", bar: "bar2", sum__num: 2.5 },
         ],
       },
     ],
     theme: supersetTheme,
   });
 
-  it('should transform chart props for viz', () => {
+  it("should transform chart props for viz", () => {
     expect(transformProps(chartProps as EchartsTreemapChartProps)).toEqual(
       expect.objectContaining({
         width: 800,
@@ -53,13 +53,13 @@ describe('Treemap transformProps', () => {
             expect.objectContaining({
               data: expect.arrayContaining([
                 expect.objectContaining({
-                  name: 'sum__num',
+                  name: "sum__num",
                   children: expect.arrayContaining([
                     expect.objectContaining({
-                      name: 'Sylvester',
+                      name: "Sylvester",
                       children: expect.arrayContaining([
                         expect.objectContaining({
-                          name: 'bar1',
+                          name: "bar1",
                           value: 10,
                         }),
                       ]),

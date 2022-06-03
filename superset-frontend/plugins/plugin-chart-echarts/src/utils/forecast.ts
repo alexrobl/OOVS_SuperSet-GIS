@@ -16,15 +16,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { DataRecord, DTTM_ALIAS, NumberFormatter } from '@superset-ui/core';
-import { OptionName } from 'echarts/types/src/util/types';
-import { TooltipMarker } from 'echarts/types/src/util/format';
+import { DataRecord, DTTM_ALIAS, NumberFormatter } from "@superset-ui/core";
+import { OptionName } from "echarts/types/src/util/types";
+import { TooltipMarker } from "echarts/types/src/util/format";
 import {
   ForecastSeriesContext,
   ForecastSeriesEnum,
   ForecastValue,
-} from '../types';
-import { sanitizeHtml } from './series';
+} from "../types";
+import { sanitizeHtml } from "./series";
 
 const seriesTypeRegex = new RegExp(
   `(.+)(${ForecastSeriesEnum.ForecastLower}|${ForecastSeriesEnum.ForecastTrend}|${ForecastSeriesEnum.ForecastUpper})$`,
@@ -63,7 +63,7 @@ export const extractForecastValuesFromTooltipParams = (
     if (numericValue) {
       if (!(context.name in values))
         values[context.name] = {
-          marker: marker || '',
+          marker: marker || "",
         };
       const forecastValues = values[context.name];
       if (context.type === ForecastSeriesEnum.Observation)
@@ -99,7 +99,7 @@ export const formatForecastTooltipSeries = ({
     row += `${formatter(observation)}`;
   }
   if (forecastTrend) {
-    if (isObservation) row += ', ';
+    if (isObservation) row += ", ";
     row += `ŷ = ${formatter(forecastTrend)}`;
   }
   if (forecastLower && forecastUpper)

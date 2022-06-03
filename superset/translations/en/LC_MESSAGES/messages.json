@@ -70,14 +70,14 @@
       "You cannot use [Columns] in combination with [Group By]/[Metrics]/[Percentage Metrics]. Please choose one or the other.": [
         ""
       ],
-      "Pick a granularity in the Time section or uncheck 'Include Time'": [""],
+      "Pick a granularity in the Time section or uncheck "Include Time"": [""],
       "Time Table View": [""],
       "Pick at least one metric": [""],
-      "When using 'Group By' you are limited to use a single metric": [""],
+      "When using "Group By" you are limited to use a single metric": [""],
       "Pivot Table": [""],
-      "Please choose at least one 'Group by' field ": [""],
+      "Please choose at least one "Group by" field ": [""],
       "Please choose at least one metric": [""],
-      "Group By' and 'Columns' can't overlap": [""],
+      "Group By" and "Columns" can"t overlap": [""],
       "Treemap": [""],
       "Calendar Heatmap": [""],
       "Bubble Chart": [""],
@@ -105,16 +105,16 @@
       "Histogram": [""],
       "Must have at least one numeric column specified": [""],
       "Distribution - Bar Chart": [""],
-      "Can't have overlap between Series and Breakdowns": [""],
+      "Can"t have overlap between Series and Breakdowns": [""],
       "Pick at least one field for [Series]": [""],
       "Sunburst": [""],
       "Sankey": [""],
       "Pick exactly 2 columns as [Source / Target]": [""],
-      "There's a loop in your Sankey, please provide a tree. Here's a faulty link: {}": [
+      "There"s a loop in your Sankey, please provide a tree. Here"s a faulty link: {}": [
         ""
       ],
       "Directed Force Layout": [""],
-      "Pick exactly 2 columns to 'Group By'": [""],
+      "Pick exactly 2 columns to "Group By"": [""],
       "Country Map": [""],
       "World Map": [""],
       "Filters": [""],
@@ -124,7 +124,7 @@
       "Horizon Charts": [""],
       "Mapbox": [""],
       "[Longitude] and [Latitude] must be set": [""],
-      "Must have a [Group By] column to have 'count' as the [Label]": [""],
+      "Must have a [Group By] column to have "count" as the [Label]": [""],
       "Choice of [Label] must be present in [Group By]": [""],
       "Choice of [Point Radius] must be present in [Group By]": [""],
       "[Longitude] and [Latitude] columns must be present in [Group By]": [""],
@@ -249,14 +249,14 @@
       "Show Druid Datasource": [""],
       "Add Druid Datasource": [""],
       "Edit Druid Datasource": [""],
-      "The list of charts associated with this table. By altering this datasource, you may change how these associated charts behave. Also note that charts need to point to a datasource, so this form will fail at saving if removing charts from a datasource. If you want to change the datasource for a chart, overwrite the chart from the 'explore view'": [
+      "The list of charts associated with this table. By altering this datasource, you may change how these associated charts behave. Also note that charts need to point to a datasource, so this form will fail at saving if removing charts from a datasource. If you want to change the datasource for a chart, overwrite the chart from the "explore view"": [
         ""
       ],
       "Timezone offset (in hours) for this datasource": [""],
       "Time expression to use as a predicate when retrieving distinct values to populate the filter component. Only applies when `Enable Filter Select` is on. If you enter `7 days ago`, the distinct list of values in the filter will be populated based on the distinct value over the past week": [
         ""
       ],
-      "Whether to populate the filter's dropdown in the explore view's filter section with a list of distinct values fetched from the backend on the fly": [
+      "Whether to populate the filter"s dropdown in the explore view"s filter section with a list of distinct values fetched from the backend on the fly": [
         ""
       ],
       "Redirects to this endpoint when clicking on the datasource from the datasource list": [
@@ -289,7 +289,7 @@
         ""
       ],
       "Empty query?": [""],
-      "Metric '%(metric)s' does not exist": [""],
+      "Metric "%(metric)s" does not exist": [""],
       "Invalid filter operation type: %(op)s": [""],
       "Error in jinja expression in WHERE clause: %(msg)s": [""],
       "Error in jinja expression in HAVING clause: %(msg)s": [""],
@@ -324,7 +324,7 @@
       "For regular filters, these are the roles this filter will be applied to. For base filters, these are the roles that the filter DOES NOT apply to, e.g. Admin if admin should see all data.": [
         ""
       ],
-      "Filters with the same group key will be ORed together within the group, while different filter groups will be ANDed together. Undefined group keys are treated as unique groups, i.e. are not grouped together. For example, if a table has three filters, of which two are for departments Finance and Marketing (group key = 'department'), and one refers to the region Europe (group key = 'region'), the filter clause would apply the filter (department = 'Finance' OR department = 'Marketing') AND (region = 'Europe').": [
+      "Filters with the same group key will be ORed together within the group, while different filter groups will be ANDed together. Undefined group keys are treated as unique groups, i.e. are not grouped together. For example, if a table has three filters, of which two are for departments Finance and Marketing (group key = "department"), and one refers to the region Europe (group key = "region"), the filter clause would apply the filter (department = "Finance" OR department = "Marketing") AND (region = "Europe").": [
         ""
       ],
       "This is the condition that will be added to the WHERE clause. For example, to only return rows for a particular client, you might define a regular filter with the clause `client_id = 9`. To display no rows unless a user belongs to a RLS filter role, a base filter can be created with the clause `1 = 0` (always false).": [
@@ -350,7 +350,7 @@
       "Redirects to this endpoint when clicking on the table from the table list": [
         ""
       ],
-      "Whether the table was generated by the 'Visualize' flow in SQL Lab": [
+      "Whether the table was generated by the "Visualize" flow in SQL Lab": [
         ""
       ],
       "A set of parameters that become available in the query using Jinja templating syntax": [
@@ -442,7 +442,7 @@
       "Changing this dataset is forbidden": [""],
       "Import dataset failed for an unknown reason": [""],
       "Unknown Presto Error": [""],
-      "We can't seem to resolve the column \"%(column_name)s\" at line %(location)s.": [
+      "We can"t seem to resolve the column \"%(column_name)s\" at line %(location)s.": [
         ""
       ],
       "The table \"%(table_name)s\" does not exist. A valid table must be used to run this query.": [
@@ -562,7 +562,7 @@
       "Show Observation": [""],
       "Error Message": [""],
       "Log Retentions (days)": [""],
-      "A semicolon ';' delimited list of email addresses": [""],
+      "A semicolon ";" delimited list of email addresses": [""],
       "How long to keep the logs around for this alert": [""],
       "Once an alert is triggered, how long, in seconds, before Superset nags you again.": [
         ""
@@ -589,7 +589,7 @@
       "Table [%{table}s] could not be found, please double check your database connection, schema, and table name, error: {}": [
         ""
       ],
-      "json isn't valid": [""],
+      "json isn"t valid": [""],
       "Export to YAML": [""],
       "Export to YAML?": [""],
       "Delete": [""],
@@ -613,7 +613,7 @@
         ""
       ],
       "Error occurred when opening the chart: %(error)s": [""],
-      "You don't have the rights to ": [""],
+      "You don"t have the rights to ": [""],
       "alter this ": [""],
       "chart": [""],
       "create a ": [""],
@@ -627,16 +627,16 @@
         ""
       ],
       "Could not load database driver: %(driver_name)s": [""],
-      "Invalid connection string, a valid string usually follows:\n'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'": [
+      "Invalid connection string, a valid string usually follows:\n"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME"": [
         ""
       ],
       "Malformed request. slice_id or table_name and db_name arguments are expected": [
         ""
       ],
       "Chart %(id)s not found": [""],
-      "Table %(table)s wasn't found in the database %(db)s": [""],
-      "Can't find User '%(name)s', please ask your admin to create one.": [""],
-      "Can't find DruidCluster with cluster_name = '%(name)s'": [""],
+      "Table %(table)s wasn"t found in the database %(db)s": [""],
+      "Can"t find User "%(name)s", please ask your admin to create one.": [""],
+      "Can"t find DruidCluster with cluster_name = "%(name)s"": [""],
       "Data could not be deserialized. You may want to re-run the query.": [""],
       "%(validator)s was unable to check your query.\nPlease recheck your query.\nException: %(ex)s": [
         ""
@@ -649,7 +649,7 @@
         "",
         "The following parameters in your query are undefined: %(parameters)s."
       ],
-      "%(user)s's profile": [""],
+      "%(user)s"s profile": [""],
       "Show CSS Template": [""],
       "Add CSS Template": [""],
       "Edit CSS Template": [""],
@@ -820,7 +820,7 @@
       "Allow Multi Schema Metadata Fetch": [""],
       "Backend": [""],
       "Extra field cannot be decoded by JSON. %(msg)s": [""],
-      "Invalid connection string, a valid string usually follows:'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'<p>Example:'postgresql://user:password@your-postgres-db/database'</p>": [
+      "Invalid connection string, a valid string usually follows:"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME"<p>Example:"postgresql://user:password@your-postgres-db/database"</p>": [
         ""
       ],
       "CSV to Database configuration": [""],
@@ -856,7 +856,7 @@
       "Action": [""],
       "dttm": [""],
       "Add item": [""],
-      "The query couldn't be loaded": [""],
+      "The query couldn"t be loaded": [""],
       "Your query has been scheduled. To see details of your query, navigate to Saved queries": [
         ""
       ],
@@ -926,9 +926,9 @@
         ""
       ],
       "Shared query": [""],
-      "The datasource couldn't be loaded": [""],
+      "The datasource couldn"t be loaded": [""],
       "An error occurred while creating the data source": [""],
-      "SQL Lab uses your browser's local storage to store queries and results.\n Currently, you are using ${currentUsage.toFixed(\n            2,\n          )} KB out of ${LOCALSTORAGE_MAX_USAGE_KB} KB. storage space.\n To keep SQL Lab from crashing, please delete some query tabs.\n You can re-access these queries by using the Save feature before you delete the tab. Note that you will need to close other SQL Lab windows before you do this.": [
+      "SQL Lab uses your browser"s local storage to store queries and results.\n Currently, you are using ${currentUsage.toFixed(\n            2,\n          )} KB out of ${LOCALSTORAGE_MAX_USAGE_KB} KB. storage space.\n To keep SQL Lab from crashing, please delete some query tabs.\n You can re-access these queries by using the Save feature before you delete the tab. Note that you will need to close other SQL Lab windows before you do this.": [
         ""
       ],
       "Estimate selected query cost": [""],
@@ -956,7 +956,7 @@
       "Source SQL": [""],
       "SQL": [""],
       "No query history yet...": [""],
-      "It seems you don't have access to any database": [""],
+      "It seems you don"t have access to any database": [""],
       "An error occurred when refreshing queries": [""],
       "Filter by user": [""],
       "Filter by database": [""],
@@ -1147,7 +1147,7 @@
       "Type \"%s\" to confirm": [""],
       "DELETE": [""],
       "Click to edit": [""],
-      "You don't have the rights to alter this title.": [""],
+      "You don"t have the rights to alter this title.": [""],
       "Unexpected error": [""],
       "Click to favorite/unfavorite": [""],
       "An error occurred while fetching dashboards": [""],
@@ -1209,7 +1209,7 @@
       "Data source": [""],
       "Added": [""],
       "Components": [""],
-      "Any color palette selected here will override the colors applied to this dashboard's individual charts": [
+      "Any color palette selected here will override the colors applied to this dashboard"s individual charts": [
         ""
       ],
       "Color scheme": [""],
@@ -1262,7 +1262,7 @@
       ],
       "This dashboard is published. Click to make it a draft.": [""],
       "Draft": [""],
-      "Don't refresh": [""],
+      "Don"t refresh": [""],
       "10 seconds": [""],
       "30 seconds": [""],
       "1 minute": [""],
@@ -1463,7 +1463,7 @@
         ""
       ],
       "Last week": [""],
-      "The time range for the visualization. All relative times, e.g. \"Last month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using the server's local time (sans timezone). All tooltips and placeholder times are expressed in UTC (sans timezone). The timestamps are then evaluated by the database using the engine's local timezone. Note one can explicitly set the timezone per the ISO 8601 format if specifying either the start and/or end time.": [
+      "The time range for the visualization. All relative times, e.g. \"Last month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using the server"s local time (sans timezone). All tooltips and placeholder times are expressed in UTC (sans timezone). The timestamps are then evaluated by the database using the engine"s local timezone. Note one can explicitly set the timezone per the ISO 8601 format if specifying either the start and/or end time.": [
         ""
       ],
       "Row limit": [""],
@@ -1517,7 +1517,7 @@
         ""
       ],
       "Configuration": [""],
-      "Duration (in seconds) of the caching timeout for this chart. Note this defaults to the dataset's timeout if undefined.": [
+      "Duration (in seconds) of the caching timeout for this chart. Note this defaults to the dataset"s timeout if undefined.": [
         ""
       ],
       "A list of users who can alter the chart. Searchable by name or username.": [
@@ -1623,7 +1623,7 @@
       "choose WHERE or HAVING...": [""],
       "Filters by columns": [""],
       "Filters by metrics": [""],
-      "\n                This filter was inherited from the dashboard's context.\n                It won't be saved when saving the chart.\n              ": [
+      "\n                This filter was inherited from the dashboard"s context.\n                It won"t be saved when saving the chart.\n              ": [
         ""
       ],
       "%s aggregates(s)": [""],
@@ -1640,7 +1640,7 @@
       "Put your code here": [""],
       "Query": [""],
       "URL": [""],
-      "Templated link, it's possible to include {{ metric }} or other values coming from the controls.": [
+      "Templated link, it"s possible to include {{ metric }} or other values coming from the controls.": [
         ""
       ],
       "Time": [""],
@@ -1744,8 +1744,8 @@
       "Add delivery method": [""],
       "Recipients are separated by \",\" or \";\"": [""],
       "Add": [""],
-      "Edit ${isReport ? 'Report' : 'Alert'}": [""],
-      "Add ${isReport ? 'Report' : 'Alert'}": [""],
+      "Edit ${isReport ? "Report" : "Alert"}": [""],
+      "Add ${isReport ? "Report" : "Alert"}": [""],
       "Report name": [""],
       "Alert name": [""],
       "Alert condition": [""],
@@ -1926,7 +1926,7 @@
       "3. The schemas_allowed_for_file_upload is a comma separated list of schemas that CSVs are allowed to upload to. Specify it as \"schemas_allowed_for_file_upload\": [\"public\", \"csv_upload\"]. If database flavor does not support schema or any schema is allowed to be accessed, just leave the list empty.": [
         ""
       ],
-      "4. The version field is a string specifying this db's version. This should be used with Presto DBs so that the syntax is correct.": [
+      "4. The version field is a string specifying this db"s version. This should be used with Presto DBs so that the syntax is correct.": [
         ""
       ],
       "5. The allows_virtual_table_explore field is a boolean specifying whether or not the Explore button in SQL Lab results is shown.": [
@@ -2004,10 +2004,10 @@
       "Recently edited charts, dashboards, and saved queries will appear here": [
         ""
       ],
-      "${tableName\n                        .split('')\n                        .slice(0, tableName.length - 1)\n                        .join('')}\n                    ": [
+      "${tableName\n                        .split("")\n                        .slice(0, tableName.length - 1)\n                        .join("")}\n                    ": [
         ""
       ],
-      "You don't have any favorites yet!": [""],
+      "You don"t have any favorites yet!": [""],
       "SQL Lab queries": [""],
       "${tableName}": [""],
       "query": [""],

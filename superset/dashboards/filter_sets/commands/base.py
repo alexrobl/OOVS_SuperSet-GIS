@@ -81,7 +81,7 @@ class BaseFilterSetCommand:
                 elif not self.is_user_dashboard_owner():
                     raise FilterSetForbiddenError(
                         str(self._filter_set_id),
-                        "The user is not an owner of the filter_set's dashboard",
+                        "The user is not an owner of the filter_set"s dashboard",
                     )
         except NotAuthorizedException as err:
             raise FilterSetForbiddenError(

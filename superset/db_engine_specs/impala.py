@@ -24,20 +24,20 @@ from superset.utils import core as utils
 
 
 class ImpalaEngineSpec(BaseEngineSpec):
-    """Engine spec for Cloudera's Impala"""
+    """Engine spec for Cloudera"s Impala"""
 
     engine = "impala"
     engine_name = "Apache Impala"
 
     _time_grain_expressions = {
         None: "{col}",
-        "PT1M": "TRUNC({col}, 'MI')",
-        "PT1H": "TRUNC({col}, 'HH')",
-        "P1D": "TRUNC({col}, 'DD')",
-        "P1W": "TRUNC({col}, 'WW')",
-        "P1M": "TRUNC({col}, 'MONTH')",
-        "P3M": "TRUNC({col}, 'Q')",
-        "P1Y": "TRUNC({col}, 'YYYY')",
+        "PT1M": "TRUNC({col}, "MI")",
+        "PT1H": "TRUNC({col}, "HH")",
+        "P1D": "TRUNC({col}, "DD")",
+        "P1W": "TRUNC({col}, "WW")",
+        "P1M": "TRUNC({col}, "MONTH")",
+        "P3M": "TRUNC({col}, "Q")",
+        "P1Y": "TRUNC({col}, "YYYY")",
     }
 
     @classmethod
@@ -50,9 +50,9 @@ class ImpalaEngineSpec(BaseEngineSpec):
     ) -> Optional[str]:
         tt = target_type.upper()
         if tt == utils.TemporalType.DATE:
-            return f"CAST('{dttm.date().isoformat()}' AS DATE)"
+            return f"CAST("{dttm.date().isoformat()}" AS DATE)"
         if tt == utils.TemporalType.TIMESTAMP:
-            return f"""CAST('{dttm.isoformat(timespec="microseconds")}' AS TIMESTAMP)"""
+            return f"""CAST("{dttm.isoformat(timespec="microseconds")}" AS TIMESTAMP)"""
         return None
 
     @classmethod

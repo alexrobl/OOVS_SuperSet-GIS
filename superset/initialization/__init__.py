@@ -108,7 +108,7 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
 
     def init_views(self) -> None:
         #
-        # We're doing local imports, as several of them import
+        # We"re doing local imports, as several of them import
         # models which in turn try to import
         # the global Flask app
         #
@@ -490,7 +490,7 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
         if not issubclass(custom_sm, SupersetSecurityManager):
             raise Exception(
                 """Your CUSTOM_SECURITY_MANAGER must now extend SupersetSecurityManager,
-                 not FAB's security manager.
+                 not FAB"s security manager.
                  See [4565] in UPDATING.md"""
             )
 

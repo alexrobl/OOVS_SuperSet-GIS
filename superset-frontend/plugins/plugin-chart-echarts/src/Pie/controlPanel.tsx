@@ -16,8 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React from 'react';
-import { t, validateNonEmpty } from '@superset-ui/core';
+import React from "react";
+import { t, validateNonEmpty } from "@superset-ui/core";
 import {
   ControlPanelConfig,
   ControlPanelsContainerProps,
@@ -26,9 +26,9 @@ import {
   D3_TIME_FORMAT_OPTIONS,
   sections,
   emitFilterControl,
-} from '@superset-ui/chart-controls';
-import { DEFAULT_FORM_DATA } from './types';
-import { legendSection } from '../controls';
+} from "@superset-ui/chart-controls";
+import { DEFAULT_FORM_DATA } from "./types";
+import { legendSection } from "../controls";
 
 const {
   donut,
@@ -45,23 +45,23 @@ const config: ControlPanelConfig = {
   controlPanelSections: [
     sections.legacyRegularTime,
     {
-      label: t('Query'),
+      label: t("Query"),
       expanded: true,
       controlSetRows: [
-        ['groupby'],
-        ['metric'],
-        ['adhoc_filters'],
+        ["groupby"],
+        ["metric"],
+        ["adhoc_filters"],
         emitFilterControl,
-        ['row_limit'],
+        ["row_limit"],
         [
           {
-            name: 'sort_by_metric',
+            name: "sort_by_metric",
             config: {
               default: true,
-              type: 'CheckboxControl',
-              label: t('Sort by metric'),
+              type: "CheckboxControl",
+              label: t("Sort by metric"),
               description: t(
-                'Whether to sort results by the selected metric in descending order.',
+                "Whether to sort results by the selected metric in descending order.",
               ),
             },
           },
@@ -69,99 +69,99 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('Chart Options'),
+      label: t("Chart Options"),
       expanded: true,
       controlSetRows: [
-        ['color_scheme'],
+        ["color_scheme"],
         [
           {
-            name: 'show_labels_threshold',
+            name: "show_labels_threshold",
             config: {
-              type: 'TextControl',
-              label: t('Percentage threshold'),
+              type: "TextControl",
+              label: t("Percentage threshold"),
               renderTrigger: true,
               isFloat: true,
               default: 5,
               description: t(
-                'Minimum threshold in percentage points for showing labels.',
+                "Minimum threshold in percentage points for showing labels.",
               ),
             },
           },
         ],
         ...legendSection,
         // eslint-disable-next-line react/jsx-key
-        [<div className="section-header">{t('Labels')}</div>],
+        [<div className="section-header">{t("Labels")}</div>],
         [
           {
-            name: 'label_type',
+            name: "label_type",
             config: {
-              type: 'SelectControl',
-              label: t('Label Type'),
+              type: "SelectControl",
+              label: t("Label Type"),
               default: labelType,
               renderTrigger: true,
               choices: [
-                ['key', 'Category Name'],
-                ['value', 'Value'],
-                ['percent', 'Percentage'],
-                ['key_value', 'Category and Value'],
-                ['key_percent', 'Category and Percentage'],
-                ['key_value_percent', 'Category, Value and Percentage'],
+                ["key", "Category Name"],
+                ["value", "Value"],
+                ["percent", "Percentage"],
+                ["key_value", "Category and Value"],
+                ["key_percent", "Category and Percentage"],
+                ["key_value_percent", "Category, Value and Percentage"],
               ],
-              description: t('What should be shown on the label?'),
+              description: t("What should be shown on the label?"),
             },
           },
         ],
         [
           {
-            name: 'number_format',
+            name: "number_format",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('Number format'),
+              label: t("Number format"),
               renderTrigger: true,
               default: numberFormat,
               choices: D3_FORMAT_OPTIONS,
               description: `${t(
-                'D3 format syntax: https://github.com/d3/d3-format',
-              )} ${t('Only applies when "Label Type" is set to show values.')}`,
+                "D3 format syntax: https://github.com/d3/d3-format",
+              )} ${t("Only applies when "Label Type" is set to show values.")}`,
             },
           },
         ],
         [
           {
-            name: 'date_format',
+            name: "date_format",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('Date format'),
+              label: t("Date format"),
               renderTrigger: true,
               choices: D3_TIME_FORMAT_OPTIONS,
-              default: 'smart_date',
+              default: "smart_date",
               description: D3_FORMAT_DOCS,
             },
           },
         ],
         [
           {
-            name: 'show_labels',
+            name: "show_labels",
             config: {
-              type: 'CheckboxControl',
-              label: t('Show Labels'),
+              type: "CheckboxControl",
+              label: t("Show Labels"),
               renderTrigger: true,
               default: showLabels,
-              description: t('Whether to display the labels.'),
+              description: t("Whether to display the labels."),
             },
           },
         ],
         [
           {
-            name: 'labels_outside',
+            name: "labels_outside",
             config: {
-              type: 'CheckboxControl',
-              label: t('Put labels outside'),
+              type: "CheckboxControl",
+              label: t("Put labels outside"),
               default: labelsOutside,
               renderTrigger: true,
-              description: t('Put the labels outside of the pie?'),
+              description: t("Put the labels outside of the pie?"),
               visibility: ({ controls }: ControlPanelsContainerProps) =>
                 Boolean(controls?.show_labels?.value),
             },
@@ -169,14 +169,14 @@ const config: ControlPanelConfig = {
         ],
         [
           {
-            name: 'label_line',
+            name: "label_line",
             config: {
-              type: 'CheckboxControl',
-              label: t('Label Line'),
+              type: "CheckboxControl",
+              label: t("Label Line"),
               default: labelLine,
               renderTrigger: true,
               description: t(
-                'Draw line from Pie to label when labels outside?',
+                "Draw line from Pie to label when labels outside?",
               ),
               visibility: ({ controls }: ControlPanelsContainerProps) =>
                 Boolean(controls?.show_labels?.value),
@@ -185,57 +185,57 @@ const config: ControlPanelConfig = {
         ],
         [
           {
-            name: 'show_total',
+            name: "show_total",
             config: {
-              type: 'CheckboxControl',
-              label: t('Show Total'),
+              type: "CheckboxControl",
+              label: t("Show Total"),
               default: false,
               renderTrigger: true,
-              description: t('Whether to display the aggregate count'),
+              description: t("Whether to display the aggregate count"),
             },
           },
         ],
         // eslint-disable-next-line react/jsx-key
-        [<div className="section-header">{t('Pie shape')}</div>],
+        [<div className="section-header">{t("Pie shape")}</div>],
         [
           {
-            name: 'outerRadius',
+            name: "outerRadius",
             config: {
-              type: 'SliderControl',
-              label: t('Outer Radius'),
+              type: "SliderControl",
+              label: t("Outer Radius"),
               renderTrigger: true,
               min: 10,
               max: 100,
               step: 1,
               default: outerRadius,
-              description: t('Outer edge of Pie chart'),
+              description: t("Outer edge of Pie chart"),
             },
           },
         ],
         [
           {
-            name: 'donut',
+            name: "donut",
             config: {
-              type: 'CheckboxControl',
-              label: t('Donut'),
+              type: "CheckboxControl",
+              label: t("Donut"),
               default: donut,
               renderTrigger: true,
-              description: t('Do you want a donut or a pie?'),
+              description: t("Do you want a donut or a pie?"),
             },
           },
         ],
         [
           {
-            name: 'innerRadius',
+            name: "innerRadius",
             config: {
-              type: 'SliderControl',
-              label: t('Inner Radius'),
+              type: "SliderControl",
+              label: t("Inner Radius"),
               renderTrigger: true,
               min: 0,
               max: 100,
               step: 1,
               default: innerRadius,
-              description: t('Inner radius of donut hole'),
+              description: t("Inner radius of donut hole"),
               visibility: ({ controls }: ControlPanelsContainerProps) =>
                 Boolean(controls?.donut?.value),
             },

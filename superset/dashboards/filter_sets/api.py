@@ -133,11 +133,11 @@ class FilterSetRestApi(BaseSupersetModelRestApi):
     @rison(get_list_schema)
     def get_list(self, dashboard_id: int, **kwargs: Any) -> Response:
         """
-            Gets a dashboard's Filter sets
+            Gets a dashboard"s Filter sets
          ---
         get:
           description: >-
-            Get a dashboard's list of filter sets
+            Get a dashboard"s list of filter sets
           parameters:
           - in: path
             schema:
@@ -174,14 +174,14 @@ class FilterSetRestApi(BaseSupersetModelRestApi):
             302:
               description: Redirects to the current digest
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
         """
         if not DashboardDAO.find_by_id(cast(int, dashboard_id)):
-            return self.response(404, message="dashboard '%s' not found" % dashboard_id)
+            return self.response(404, message="dashboard "%s" not found" % dashboard_id)
         rison_data = kwargs.setdefault("rison", {})
         rison_data.setdefault("filters", [])
         rison_data["filters"].append(
@@ -200,11 +200,11 @@ class FilterSetRestApi(BaseSupersetModelRestApi):
     @requires_json
     def post(self, dashboard_id: int) -> Response:
         """
-            Creates a new Dashboard's Filter Set
+            Creates a new Dashboard"s Filter Set
         ---
         post:
           description: >-
-            Create a new Dashboard's Filter Set.
+            Create a new Dashboard"s Filter Set.
           parameters:
           - in: path
             schema:
@@ -217,7 +217,7 @@ class FilterSetRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/{{self.__class__.__name__}}.post'
+                  $ref: "#/components/schemas/{{self.__class__.__name__}}.post"
           responses:
             201:
               description: Filter set added
@@ -229,17 +229,17 @@ class FilterSetRestApi(BaseSupersetModelRestApi):
                       id:
                         type: number
                       result:
-                        $ref: '#/components/schemas/{{self.__class__.__name__}}.post'
+                        $ref: "#/components/schemas/{{self.__class__.__name__}}.post"
             302:
               description: Redirects to the current digest
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             item = self.add_model_schema.load(request.json)
@@ -266,11 +266,11 @@ class FilterSetRestApi(BaseSupersetModelRestApi):
     )
     @requires_json
     def put(self, dashboard_id: int, pk: int) -> Response:
-        """Changes a Dashboard's Filter set
+        """Changes a Dashboard"s Filter set
         ---
         put:
           description: >-
-            Changes a Dashboard's Filter set.
+            Changes a Dashboard"s Filter set.
           parameters:
           - in: path
             schema:
@@ -286,7 +286,7 @@ class FilterSetRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/{{self.__class__.__name__}}.put'
+                  $ref: "#/components/schemas/{{self.__class__.__name__}}.put"
           responses:
             200:
               description: Filter set changed
@@ -298,19 +298,19 @@ class FilterSetRestApi(BaseSupersetModelRestApi):
                       id:
                         type: number
                       result:
-                        $ref: '#/components/schemas/{{self.__class__.__name__}}.put'
+                        $ref: "#/components/schemas/{{self.__class__.__name__}}.put"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             item = self.edit_model_schema.load(request.json)
@@ -338,7 +338,7 @@ class FilterSetRestApi(BaseSupersetModelRestApi):
     )
     def delete(self, dashboard_id: int, pk: int) -> Response:
         """
-            Deletes a Dashboard's FilterSet
+            Deletes a Dashboard"s FilterSet
         ---
         delete:
           description: >-
@@ -363,15 +363,15 @@ class FilterSetRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             changed_model = DeleteFilterSetCommand(g.user, dashboard_id, pk).run()

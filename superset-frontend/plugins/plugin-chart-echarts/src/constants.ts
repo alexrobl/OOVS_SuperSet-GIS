@@ -17,11 +17,11 @@
  * under the License.
  */
 
-import { TimeGranularity } from '@superset-ui/core';
-import { LabelPositionEnum } from './types';
+import { TimeGranularity } from "@superset-ui/core";
+import { LabelPositionEnum } from "./types";
 
 // eslint-disable-next-line import/prefer-default-export
-export const NULL_STRING = '<NULL>';
+export const NULL_STRING = "<NULL>";
 
 export const TIMESERIES_CONSTANTS = {
   gridOffsetRight: 40,
@@ -40,19 +40,19 @@ export const TIMESERIES_CONSTANTS = {
 };
 
 export const LABEL_POSITION: [LabelPositionEnum, string][] = [
-  [LabelPositionEnum.Top, 'Top'],
-  [LabelPositionEnum.Left, 'Left'],
-  [LabelPositionEnum.Right, 'Right'],
-  [LabelPositionEnum.Bottom, 'Bottom'],
-  [LabelPositionEnum.Inside, 'Inside'],
-  [LabelPositionEnum.InsideBottomLeft, 'Inside left'],
-  [LabelPositionEnum.InsideBottomRight, 'Inside right'],
-  [LabelPositionEnum.InsideTop, 'Inside top'],
-  [LabelPositionEnum.InsideBottom, 'Inside bottom'],
-  [LabelPositionEnum.InsideTopLeft, 'Inside top left'],
-  [LabelPositionEnum.InsideBottomLeft, 'Inside bottom left'],
-  [LabelPositionEnum.InsideTopRight, 'Inside top right'],
-  [LabelPositionEnum.InsideBottomRight, 'Inside bottom right'],
+  [LabelPositionEnum.Top, "Top"],
+  [LabelPositionEnum.Left, "Left"],
+  [LabelPositionEnum.Right, "Right"],
+  [LabelPositionEnum.Bottom, "Bottom"],
+  [LabelPositionEnum.Inside, "Inside"],
+  [LabelPositionEnum.InsideBottomLeft, "Inside left"],
+  [LabelPositionEnum.InsideBottomRight, "Inside right"],
+  [LabelPositionEnum.InsideTop, "Inside top"],
+  [LabelPositionEnum.InsideBottom, "Inside bottom"],
+  [LabelPositionEnum.InsideTopLeft, "Inside top left"],
+  [LabelPositionEnum.InsideBottomLeft, "Inside bottom left"],
+  [LabelPositionEnum.InsideTopRight, "Inside top right"],
+  [LabelPositionEnum.InsideBottomRight, "Inside bottom right"],
 ];
 
 export enum OpacityEnum {

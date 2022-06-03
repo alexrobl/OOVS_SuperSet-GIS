@@ -96,21 +96,21 @@
       "You cannot use [Columns] in combination with [Group By]/[Metrics]/[Percentage Metrics]. Please choose one or the other.": [
         "Você não pode usar [Columns] em combinação com [Group By]/[Metrics]/[Percentage Metrics]. Por favor escolha um ou o outro."
       ],
-      "Pick a granularity in the Time section or uncheck 'Include Time'": [
-        "Escolha uma granularidade na seção Tempo ou desmarque 'Incluir hora'"
+      "Pick a granularity in the Time section or uncheck "Include Time"": [
+        "Escolha uma granularidade na seção Tempo ou desmarque "Incluir hora""
       ],
       "Time Table View": ["Visão da tabela de tempo"],
       "Pick at least one metric": ["Escolha pelo menos uma métrica"],
-      "When using 'Group By' you are limited to use a single metric": [
-        "Ao usar 'Group By' você está limitado a usar uma única métrica"
+      "When using "Group By" you are limited to use a single metric": [
+        "Ao usar "Group By" você está limitado a usar uma única métrica"
       ],
       "Pivot Table": ["Tabela pivot"],
-      "Please choose at least one 'Group by' field ": [
-        "Por favor escolha pelo menos um campo 'Group by'"
+      "Please choose at least one "Group by" field ": [
+        "Por favor escolha pelo menos um campo "Group by""
       ],
       "Please choose at least one metric": ["Escolha pelo menos uma métrica"],
-      "Group By' and 'Columns' can't overlap": [
-        "Group By' e 'Columns' não podem colidir"
+      "Group By" and "Columns" can"t overlap": [
+        "Group By" e "Columns" não podem colidir"
       ],
       "Treemap": ["Treemap"],
       "Calendar Heatmap": ["Calendário Heatmap"],
@@ -159,7 +159,7 @@
         "Deve ter pelo menos uma coluna numérica"
       ],
       "Distribution - Bar Chart": ["Distribuição - Gráfico de barras"],
-      "Can't have overlap between Series and Breakdowns": [
+      "Can"t have overlap between Series and Breakdowns": [
         "Não pode haver sobreposição entre Series e Breakdowns"
       ],
       "Pick at least one field for [Series]": [
@@ -170,12 +170,12 @@
       "Pick exactly 2 columns as [Source / Target]": [
         "Escolha exatamente 2 colunas como [Origem / Alvo]"
       ],
-      "There's a loop in your Sankey, please provide a tree. Here's a faulty link: {}": [
+      "There"s a loop in your Sankey, please provide a tree. Here"s a faulty link: {}": [
         "Há um loop em seu Sankey, por favor, forneça uma árvore. Aqui está um link defeituoso: {}"
       ],
       "Directed Force Layout": ["Layout de Força Dirigida"],
-      "Pick exactly 2 columns to 'Group By'": [
-        "Escolha exatamente 2 colunas para 'Agrupar por'"
+      "Pick exactly 2 columns to "Group By"": [
+        "Escolha exatamente 2 colunas para "Agrupar por""
       ],
       "Country Map": ["Mapa do País"],
       "World Map": ["Mapa mundial"],
@@ -190,8 +190,8 @@
       "[Longitude] and [Latitude] must be set": [
         "[Longitude] e [Latitude] devem ser configuradas"
       ],
-      "Must have a [Group By] column to have 'count' as the [Label]": [
-        "Deve ter uma coluna [Group By] para ter 'count' como [Label]"
+      "Must have a [Group By] column to have "count" as the [Label]": [
+        "Deve ter uma coluna [Group By] para ter "count" como [Label]"
       ],
       "Choice of [Label] must be present in [Group By]": [
         "A escolha de [Label] deve estar presente em [Group By]"
@@ -385,17 +385,17 @@
       "Show Druid Datasource": ["Mostrar fonte de dados Druid"],
       "Add Druid Datasource": ["Adicionar fonte de dados Druid"],
       "Edit Druid Datasource": ["Editar fonte de dados Druid"],
-      "The list of charts associated with this table. By altering this datasource, you may change how these associated charts behave. Also note that charts need to point to a datasource, so this form will fail at saving if removing charts from a datasource. If you want to change the datasource for a chart, overwrite the chart from the 'explore view'": [
-        "A lista de gráficos associados com esta tabela. Ao alterar essa fonte de dados você pode mudar como esses gráficos associados se comportam. Note também que os gráficos precisam referenciar uma fonte de dados, então este formulário não irá salvar se os gráficos forem removidos da fonte de dados. Se você deseja mudar a fonte de dados para um gráfico, altere o gráfico em 'explorar visão'"
+      "The list of charts associated with this table. By altering this datasource, you may change how these associated charts behave. Also note that charts need to point to a datasource, so this form will fail at saving if removing charts from a datasource. If you want to change the datasource for a chart, overwrite the chart from the "explore view"": [
+        "A lista de gráficos associados com esta tabela. Ao alterar essa fonte de dados você pode mudar como esses gráficos associados se comportam. Note também que os gráficos precisam referenciar uma fonte de dados, então este formulário não irá salvar se os gráficos forem removidos da fonte de dados. Se você deseja mudar a fonte de dados para um gráfico, altere o gráfico em "explorar visão""
       ],
       "Timezone offset (in hours) for this datasource": [
         "Deslocamento do fuso horário (em horas) para esta fonte de dados"
       ],
       "Time expression to use as a predicate when retrieving distinct values to populate the filter component. Only applies when `Enable Filter Select` is on. If you enter `7 days ago`, the distinct list of values in the filter will be populated based on the distinct value over the past week": [
-        "Expressão de tempo para usar como um predicado ao recuperar valores distintos para preencher o componente de filtro. Aplica-se apenas quando \"Ativar seleção de filtro\" estiver ativado. Se você inserir `7 dias atrás ', a lista distinta de valores no filtro será preenchida com base no valor distinto na semana passada"
+        "Expressão de tempo para usar como um predicado ao recuperar valores distintos para preencher o componente de filtro. Aplica-se apenas quando \"Ativar seleção de filtro\" estiver ativado. Se você inserir `7 dias atrás ", a lista distinta de valores no filtro será preenchida com base no valor distinto na semana passada"
       ],
-      "Whether to populate the filter's dropdown in the explore view's filter section with a list of distinct values fetched from the backend on the fly": [
-        "Se popula o combo do filtro na seção filtros de 'explorar visão' com uma lista de valores distintos vindos do backend automaticamente"
+      "Whether to populate the filter"s dropdown in the explore view"s filter section with a list of distinct values fetched from the backend on the fly": [
+        "Se popula o combo do filtro na seção filtros de "explorar visão" com uma lista de valores distintos vindos do backend automaticamente"
       ],
       "Redirects to this endpoint when clicking on the datasource from the datasource list": [
         "Redireciona para este endpoint ao clicar na fonte de dados dentro da lista de fonte de dados"
@@ -441,7 +441,7 @@
         "Coluna datetime não fornecida como parte da configuração da tabela e é obrigatória para este tipo de gráfico"
       ],
       "Empty query?": ["Consulta vazia?"],
-      "Metric '%(metric)s' does not exist": ["Métrica '%(metric)s' não existe"],
+      "Metric "%(metric)s" does not exist": ["Métrica "%(metric)s" não existe"],
       "Invalid filter operation type: %(op)s": [
         "Tipo de operação do filtro inválido: %(op)s"
       ],
@@ -490,8 +490,8 @@
       "For regular filters, these are the roles this filter will be applied to. For base filters, these are the roles that the filter DOES NOT apply to, e.g. Admin if admin should see all data.": [
         "Para os filtros regulares, estes são os papeis aos quais este filtro será aplicado. Para filtros base, esses são os papeis não impactados pelo filtro, ex. Admin se o admin deve ver todos os dados."
       ],
-      "Filters with the same group key will be ORed together within the group, while different filter groups will be ANDed together. Undefined group keys are treated as unique groups, i.e. are not grouped together. For example, if a table has three filters, of which two are for departments Finance and Marketing (group key = 'department'), and one refers to the region Europe (group key = 'region'), the filter clause would apply the filter (department = 'Finance' OR department = 'Marketing') AND (region = 'Europe').": [
-        "Filtros com a mesma chave de grupo serão concatenados com OR dentro do grupo, enquanto que grupos diferentes serão concatenados com AND. Chaves de grupo indefinidas serão tratadas como grupos únicos, ou seja, não são agrupadas. Por exemplo, se uma tabela tem três filtros, dos quais dois são departamentos como Finanças e Marketing (group key = 'region'), a cláusula de filtro aplicada seria (department = 'Finance' OR department = 'Marketing') AND (region = 'Europe')."
+      "Filters with the same group key will be ORed together within the group, while different filter groups will be ANDed together. Undefined group keys are treated as unique groups, i.e. are not grouped together. For example, if a table has three filters, of which two are for departments Finance and Marketing (group key = "department"), and one refers to the region Europe (group key = "region"), the filter clause would apply the filter (department = "Finance" OR department = "Marketing") AND (region = "Europe").": [
+        "Filtros com a mesma chave de grupo serão concatenados com OR dentro do grupo, enquanto que grupos diferentes serão concatenados com AND. Chaves de grupo indefinidas serão tratadas como grupos únicos, ou seja, não são agrupadas. Por exemplo, se uma tabela tem três filtros, dos quais dois são departamentos como Finanças e Marketing (group key = "region"), a cláusula de filtro aplicada seria (department = "Finance" OR department = "Marketing") AND (region = "Europe")."
       ],
       "This is the condition that will be added to the WHERE clause. For example, to only return rows for a particular client, you might define a regular filter with the clause `client_id = 9`. To display no rows unless a user belongs to a RLS filter role, a base filter can be created with the clause `1 = 0` (always false).": [
         "Esta é a condição que será adicionada a cláusula WHERE. Por exemplo, para apenas retornar linhas para um cliente particular, você pode definir um filtro regular com a cláusula `client_id = 9`. Para mostrar nenhuma linha a não ser que o usuário pertença ao papel de filtro RLS, um filtro base pode ser criado com a cláusula `1 = 0` (sempre falso)."
@@ -518,8 +518,8 @@
       "Redirects to this endpoint when clicking on the table from the table list": [
         "Redireciona para este ponto final ao clicar na tabela da lista da tabela"
       ],
-      "Whether the table was generated by the 'Visualize' flow in SQL Lab": [
-        "Se a tabela foi gerada pelo fluxo 'Visualizar' em SQL Lab"
+      "Whether the table was generated by the "Visualize" flow in SQL Lab": [
+        "Se a tabela foi gerada pelo fluxo "Visualizar" em SQL Lab"
       ],
       "A set of parameters that become available in the query using Jinja templating syntax": [
         "Um conjunto de parâmetros que ficam disponíveis na consulta usando a sintaxe de template Jinja"
@@ -687,7 +687,7 @@
         "A importação do conjunto de dados falhou por razão desconhecida"
       ],
       "Unknown Presto Error": ["Erro Presto desconhecido"],
-      "We can't seem to resolve the column \"%(column_name)s\" at line %(location)s.": [
+      "We can"t seem to resolve the column \"%(column_name)s\" at line %(location)s.": [
         "Não é possível resolver a coluna \"%(column_name)s\" na linha %(location)s."
       ],
       "The table \"%(table_name)s\" does not exist. A valid table must be used to run this query.": [
@@ -904,8 +904,8 @@
       "Show Observation": ["Mostrar observações"],
       "Error Message": ["Mensagem de erro"],
       "Log Retentions (days)": ["Retenção do log (dias)"],
-      "A semicolon ';' delimited list of email addresses": [
-        "Uma lista de emails delimitada por ponto e vírgula ';'"
+      "A semicolon ";" delimited list of email addresses": [
+        "Uma lista de emails delimitada por ponto e vírgula ";""
       ],
       "How long to keep the logs around for this alert": [
         "Manter os logs disponíveis por quanto tempo para este alerta"
@@ -939,7 +939,7 @@
       "Table [%{table}s] could not be found, please double check your database connection, schema, and table name, error: {}": [
         "Não foi possível localizar a tabela [%{table}s], por favor revise sua conexão com o banco de dados, esquema e nome da tabela. Erro: {}"
       ],
-      "json isn't valid": ["JSON não é válido"],
+      "json isn"t valid": ["JSON não é válido"],
       "Export to YAML": ["Exportar para YAML"],
       "Export to YAML?": ["Exportar para YAML?"],
       "Delete": ["Deletar"],
@@ -971,7 +971,7 @@
         "Ocorreu um erro desconhecido. Por favor contate seu administrador Superset"
       ],
       "Error occurred when opening the chart: %(error)s": [""],
-      "You don't have the rights to ": ["Você não tem o direito de "],
+      "You don"t have the rights to ": ["Você não tem o direito de "],
       "alter this ": ["alterar este"],
       "chart": ["gráfico"],
       "create a ": ["criar um"],
@@ -991,21 +991,21 @@
       "Could not load database driver: %(driver_name)s": [
         "Não foi possível carregar o driver do banco de dados: %(driver_name)s"
       ],
-      "Invalid connection string, a valid string usually follows:\n'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'": [
-        "Texto de conexão inválido, um tempo válido geralmente segue:\n'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'"
+      "Invalid connection string, a valid string usually follows:\n"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME"": [
+        "Texto de conexão inválido, um tempo válido geralmente segue:\n"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME""
       ],
       "Malformed request. slice_id or table_name and db_name arguments are expected": [
         "Requisição mal formada. Os argumentos slice_id ou table_name e db_name são esperados"
       ],
       "Chart %(id)s not found": ["Gráfico %(id)s não encontrado"],
-      "Table %(table)s wasn't found in the database %(db)s": [
+      "Table %(table)s wasn"t found in the database %(db)s": [
         "Tabela %(table)s não foi encontrada no banco de dados %(db)s"
       ],
-      "Can't find User '%(name)s', please ask your admin to create one.": [
-        "Não foi possível encontrar o usuário '%(name)s', por favor peça a seu administrador para criar um."
+      "Can"t find User "%(name)s", please ask your admin to create one.": [
+        "Não foi possível encontrar o usuário "%(name)s", por favor peça a seu administrador para criar um."
       ],
-      "Can't find DruidCluster with cluster_name = '%(name)s'": [
-        "Não é possível encontrar DruidCluster com cluster_name = '%(name)s'"
+      "Can"t find DruidCluster with cluster_name = "%(name)s"": [
+        "Não é possível encontrar DruidCluster com cluster_name = "%(name)s""
       ],
       "Data could not be deserialized. You may want to re-run the query.": [
         "Os dados não puderam ser desserializados. Você pode querer executar a consulta novamente."
@@ -1023,7 +1023,7 @@
         "O parâmetro %(parameters)s na sua consulta está indefinido.",
         "Os seguintes parâmetros estão indefinidos na sua consulta: %(parameters)s"
       ],
-      "%(user)s's profile": ["Perfil do %(user)s"],
+      "%(user)s"s profile": ["Perfil do %(user)s"],
       "Show CSS Template": ["Mostrar modelo CSS"],
       "Add CSS Template": ["Adicionar modelo CSS"],
       "Edit CSS Template": ["Editar modelo CSS"],
@@ -1246,8 +1246,8 @@
       "Extra field cannot be decoded by JSON. %(msg)s": [
         "Campo Extra não pode ser decodificado por JSON. %(msg)s"
       ],
-      "Invalid connection string, a valid string usually follows:'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'<p>Example:'postgresql://user:password@your-postgres-db/database'</p>": [
-        "Texto de conexão inválido, um texto válido geralmente segue: 'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'<p>Exemplo:'postgresql://user:password@your-postgres-db/database'</p>"
+      "Invalid connection string, a valid string usually follows:"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME"<p>Example:"postgresql://user:password@your-postgres-db/database"</p>": [
+        "Texto de conexão inválido, um texto válido geralmente segue: "DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME"<p>Exemplo:"postgresql://user:password@your-postgres-db/database"</p>"
       ],
       "CSV to Database configuration": ["Configuração CSV para banco de dados"],
       "Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed for csv uploads. Please contact your Superset Admin.": [
@@ -1284,7 +1284,7 @@
       "Action": ["Ação"],
       "dttm": ["DTTM"],
       "Add item": ["Adicionar item"],
-      "The query couldn't be loaded": ["A consulta não pôde ser carregada"],
+      "The query couldn"t be loaded": ["A consulta não pôde ser carregada"],
       "Your query has been scheduled. To see details of your query, navigate to Saved queries": [
         "Sua consulta foi agendada. Para ver os detalhes da sua consulta, navegue para Consultas salvas"
       ],
@@ -1362,13 +1362,13 @@
         "Ocorreu um erro ao remover o esquema da tabela. Por favor entre em contato com seu administrador."
       ],
       "Shared query": ["Consulta compartilhada"],
-      "The datasource couldn't be loaded": [
+      "The datasource couldn"t be loaded": [
         "A fonte de dados não podê ser carregada"
       ],
       "An error occurred while creating the data source": [
         "Ocorreu um erro ao criar a fonte de dados"
       ],
-      "SQL Lab uses your browser's local storage to store queries and results.\n Currently, you are using ${currentUsage.toFixed(\n            2,\n          )} KB out of ${LOCALSTORAGE_MAX_USAGE_KB} KB. storage space.\n To keep SQL Lab from crashing, please delete some query tabs.\n You can re-access these queries by using the Save feature before you delete the tab. Note that you will need to close other SQL Lab windows before you do this.": [
+      "SQL Lab uses your browser"s local storage to store queries and results.\n Currently, you are using ${currentUsage.toFixed(\n            2,\n          )} KB out of ${LOCALSTORAGE_MAX_USAGE_KB} KB. storage space.\n To keep SQL Lab from crashing, please delete some query tabs.\n You can re-access these queries by using the Save feature before you delete the tab. Note that you will need to close other SQL Lab windows before you do this.": [
         "SQL Lab usa o armazenamento local do seu browser para salvar as consultas e resultados.\n Atualmente você está utilizando ${currentUsage.toFixed(\n            2,\n          )} KB de ${LOCALSTORAGE_MAX_USAGE_KB} KB de espaço de armazenamento..\nVocê pode acessar novamente essas consultas usando a funcionalidade de Salvar antes de deletar a aba. Note que você precisará fechar as outras janelas SQL Lab antes de fazer isso."
       ],
       "Estimate selected query cost": [
@@ -1408,7 +1408,7 @@
       "Source SQL": ["Fonte SQL"],
       "SQL": ["SQL"],
       "No query history yet...": ["Ainda não há histórico de consultas ..."],
-      "It seems you don't have access to any database": [
+      "It seems you don"t have access to any database": [
         "Parece que você não tem acesso a qualquer banco de dados"
       ],
       "An error occurred when refreshing queries": [
@@ -1643,7 +1643,7 @@
       "Type \"%s\" to confirm": ["Digite \"%s\" para confirmar"],
       "DELETE": ["DELETAR"],
       "Click to edit": ["Clique para editar"],
-      "You don't have the rights to alter this title.": [
+      "You don"t have the rights to alter this title.": [
         "Você não tem os direitos de alterar este título."
       ],
       "Unexpected error": ["Erro inesperado"],
@@ -1731,7 +1731,7 @@
       "Data source": ["Fonte de dados"],
       "Added": ["Adicionado"],
       "Components": ["Componentes"],
-      "Any color palette selected here will override the colors applied to this dashboard's individual charts": [
+      "Any color palette selected here will override the colors applied to this dashboard"s individual charts": [
         "Qualquer cor da paleta selecionada aqui irá sobrescrever as cores aplicadas aos gráficos individuais deste painel"
       ],
       "Color scheme": ["Esquema de cores"],
@@ -1796,7 +1796,7 @@
         "Este painel está publicado"
       ],
       "Draft": ["Rascunho"],
-      "Don't refresh": ["Não atualize"],
+      "Don"t refresh": ["Não atualize"],
       "10 seconds": ["10 segundos"],
       "30 seconds": ["30 segundos"],
       "1 minute": ["1 minuto"],
@@ -2047,7 +2047,7 @@
         "O tempo de granularidade para a visualização. Isso aplica uma transformação de data para alterar sua coluna de tempo e define uma nova granularidade de tempo. As opções aqui são definidas por base de banco de dados por base no código-fonte Superset."
       ],
       "Last week": ["Semana passada"],
-      "The time range for the visualization. All relative times, e.g. \"Last month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using the server's local time (sans timezone). All tooltips and placeholder times are expressed in UTC (sans timezone). The timestamps are then evaluated by the database using the engine's local timezone. Note one can explicitly set the timezone per the ISO 8601 format if specifying either the start and/or end time.": [
+      "The time range for the visualization. All relative times, e.g. \"Last month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using the server"s local time (sans timezone). All tooltips and placeholder times are expressed in UTC (sans timezone). The timestamps are then evaluated by the database using the engine"s local timezone. Note one can explicitly set the timezone per the ISO 8601 format if specifying either the start and/or end time.": [
         "A faixa de tempo para a visualização. Todos os tempos relativos, ex. \"Último mês\", \"Últimos 7 dias\", \"agora\", etc. são avaliados no servidor usando o local time (sans timezone) do servidor. Todos os tempos dos tooltips e placeholders são expressos em UTC (sans timezone). Os timestamps são então avaliados pelo banco de dados usando o timezone local do banco. Note que alguém pode configurar explicitamente o timezone usando o formato ISO 8601 se especificar o tempo de início e/ou fim."
       ],
       "Row limit": ["Limite de linha"],
@@ -2111,7 +2111,7 @@
         "A descrição pode ser mostrada como cabeçalho do elemento visual na visão do painel. Suporta markdown."
       ],
       "Configuration": ["Configurações"],
-      "Duration (in seconds) of the caching timeout for this chart. Note this defaults to the dataset's timeout if undefined.": [
+      "Duration (in seconds) of the caching timeout for this chart. Note this defaults to the dataset"s timeout if undefined.": [
         "Duração (em segundos) do timeout do cache para este gráfico. Caso este valor não seja definido será usado o timeout do conjunto de dados."
       ],
       "A list of users who can alter the chart. Searchable by name or username.": [
@@ -2253,7 +2253,7 @@
       "choose WHERE or HAVING...": ["escolha WHERE ou HAVING..."],
       "Filters by columns": ["filtra pelas colunas"],
       "Filters by metrics": ["fitra pelas métricas"],
-      "\n                This filter was inherited from the dashboard's context.\n                It won't be saved when saving the chart.\n              ": [
+      "\n                This filter was inherited from the dashboard"s context.\n                It won"t be saved when saving the chart.\n              ": [
         "\nEste filtro foi herdado do contexto do painel.\n Não será salvo ao salvar o gráfico."
       ],
       "%s aggregates(s)": ["%s agregado(s)"],
@@ -2272,7 +2272,7 @@
       "Put your code here": ["Coloque seu código aqui"],
       "Query": ["Consulta"],
       "URL": ["URL"],
-      "Templated link, it's possible to include {{ metric }} or other values coming from the controls.": [
+      "Templated link, it"s possible to include {{ metric }} or other values coming from the controls.": [
         "Link com template, é possível incluir {{metric}} ou outros valores provenientes dos controles."
       ],
       "Time": ["Tempo"],
@@ -2408,11 +2408,11 @@
         "Recipientes são separados por \",\" or \";\""
       ],
       "Add": ["Adicionar"],
-      "Edit ${isReport ? 'Report' : 'Alert'}": [
-        "Editar ${isReport ? 'Report' : 'Alert'}"
+      "Edit ${isReport ? "Report" : "Alert"}": [
+        "Editar ${isReport ? "Report" : "Alert"}"
       ],
-      "Add ${isReport ? 'Report' : 'Alert'}": [
-        "Adicionar ${isReport ? 'Report' : 'Alert'}"
+      "Add ${isReport ? "Report" : "Alert"}": [
+        "Adicionar ${isReport ? "Report" : "Alert"}"
       ],
       "Report name": ["Nome do relatório"],
       "Alert name": ["Nome do alerta"],
@@ -2664,11 +2664,11 @@
       "3. The schemas_allowed_for_file_upload is a comma separated list of schemas that CSVs are allowed to upload to. Specify it as \"schemas_allowed_for_file_upload\": [\"public\", \"csv_upload\"]. If database flavor does not support schema or any schema is allowed to be accessed, just leave the list empty.": [
         "3. O schemas_allowed_for_file_upload é uma lista de esquemas separada por vírgula nos quais é permitida a carga de CSVs. Especifique como \"schemas_allowed_for_file_upload\": [\"public\", \"csv_upload\"]. Se o banco de dados não suporta esquema ou a carga é permitida em qualque esquema, apenas deixe a lista vazia."
       ],
-      "4. The version field is a string specifying this db's version. This should be used with Presto DBs so that the syntax is correct.": [
+      "4. The version field is a string specifying this db"s version. This should be used with Presto DBs so that the syntax is correct.": [
         "4. O campo de versão é um texto especificando a versão do banco de dados. Isto deve ser utilizado com os bancos de dados Presto para garantir que a sintaxe esteja correta."
       ],
       "5. The allows_virtual_table_explore field is a boolean specifying whether or not the Explore button in SQL Lab results is shown.": [
-        "5. O campo allows_virtual_table_explore é um boolean especificando se o botão 'Explorar' nos resultados do SQL Lab deve ser mostrado."
+        "5. O campo allows_virtual_table_explore é um boolean especificando se o botão "Explorar" nos resultados do SQL Lab deve ser mostrado."
       ],
       "Error while saving dataset: %s": [
         "Erro ao salvar conjunto de dados: %s"
@@ -2772,10 +2772,10 @@
       "Recently edited charts, dashboards, and saved queries will appear here": [
         "Gráficos editados, paineis e consultas salvas vistas recentemente vão aparecer aqui"
       ],
-      "${tableName\n                        .split('')\n                        .slice(0, tableName.length - 1)\n                        .join('')}\n                    ": [
-        "${tableName\n                        .split('')\n                        .slice(0, tableName.length - 1)\n                        .join('')}\n                    "
+      "${tableName\n                        .split("")\n                        .slice(0, tableName.length - 1)\n                        .join("")}\n                    ": [
+        "${tableName\n                        .split("")\n                        .slice(0, tableName.length - 1)\n                        .join("")}\n                    "
       ],
-      "You don't have any favorites yet!": [
+      "You don"t have any favorites yet!": [
         "Você não tem nenhum favorito ainda!"
       ],
       "SQL Lab queries": ["Visão SQL Lab"],

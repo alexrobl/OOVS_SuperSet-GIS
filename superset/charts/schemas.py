@@ -114,7 +114,7 @@ dashboards_description = "A list of dashboards to include this new chart to."
 changed_on_description = "The ISO date that the chart was last changed."
 slice_url_description = "The URL of the chart."
 form_data_description = (
-    "Form data from the Explore controls used to form the chart's data query."
+    "Form data from the Explore controls used to form the chart"s data query."
 )
 description_markeddown_description = "Sanitized HTML version of the chart description."
 owners_name_description = "Name of an owner of the chart."
@@ -390,8 +390,8 @@ class ChartDataRollingOptionsSchema(ChartDataPostProcessingOperationOptionsSchem
     columns = (
         fields.Dict(
             description="columns on which to perform rolling, mapping source column to "
-            "target column. For instance, `{'y': 'y'}` will replace the "
-            "column `y` with the rolling value in `y`, while `{'y': 'y2'}` "
+            "target column. For instance, `{"y": "y"}` will replace the "
+            "column `y` with the rolling value in `y`, while `{"y": "y2"}` "
             "will add a column `y2` based on rolling values calculated "
             "from `y`, leaving the original column `y` unchanged.",
             example={"weekly_rolling_sales": "sales"},
@@ -495,7 +495,7 @@ class ChartDataSelectOptionsSchema(ChartDataPostProcessingOperationOptionsSchema
     rename = fields.List(
         fields.Dict(),
         description="columns which to rename, mapping source column to target column. "
-        "For instance, `{'y': 'y2'}` will rename the column `y` to `y2`.",
+        "For instance, `{"y": "y2"}` will rename the column `y` to `y2`.",
         example=[{"age": "average_age"}],
     )
 
@@ -835,12 +835,12 @@ class ChartDataExtrasSchema(Schema):
 
     relative_start = fields.String(
         description="Start time for relative time deltas. "
-        'Default: `config["DEFAULT_RELATIVE_START_TIME"]`',
+        "Default: `config["DEFAULT_RELATIVE_START_TIME"]`",
         validate=validate.OneOf(choices=("today", "now")),
     )
     relative_end = fields.String(
         description="End time for relative time deltas. "
-        'Default: `config["DEFAULT_RELATIVE_START_TIME"]`',
+        "Default: `config["DEFAULT_RELATIVE_START_TIME"]`",
         validate=validate.OneOf(choices=("today", "now")),
     )
     where = fields.String(
@@ -1103,7 +1103,7 @@ class ChartDataQueryObjectSchema(Schema):
         allow_none=True,
     )
     row_limit = fields.Integer(
-        description='Maximum row count (0=disabled). Default: `config["ROW_LIMIT"]`',
+        description="Maximum row count (0=disabled). Default: `config["ROW_LIMIT"]`",
         allow_none=True,
         validate=[
             Range(min=0, error=_("`row_limit` must be greater than or equal to 0"))
@@ -1230,7 +1230,7 @@ class AnnotationDataSchema(Schema):
         fields.Dict(
             keys=fields.String(),
         ),
-        description="records mapping the column name to it's value",
+        description="records mapping the column name to it"s value",
         required=True,
     )
 

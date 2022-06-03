@@ -57,7 +57,7 @@ def contribution(
             if col not in numeric_columns:
                 raise InvalidPostProcessingError(
                     _(
-                        'Column "%(column)s" is not numeric or does not '
+                        "Column "%(column)s" is not numeric or does not "
                         "exists in the query results.",
                         column=col,
                     )

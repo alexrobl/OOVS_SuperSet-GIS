@@ -23,34 +23,34 @@ import {
   QueryFormColumn,
   QueryFormData,
   TimeGranularity,
-} from '@superset-ui/core';
-import { sections } from '@superset-ui/chart-controls';
+} from "@superset-ui/core";
+import { sections } from "@superset-ui/chart-controls";
 import {
   DEFAULT_LEGEND_FORM_DATA,
   EchartsLegendFormData,
   EChartTransformedProps,
   EchartsTitleFormData,
   DEFAULT_TITLE_FORM_DATA,
-} from '../types';
+} from "../types";
 
 export enum EchartsTimeseriesContributionType {
-  Row = 'row',
-  Column = 'column',
+  Row = "row",
+  Column = "column",
 }
 
 export enum OrientationType {
-  vertical = 'vertical',
-  horizontal = 'horizontal',
+  vertical = "vertical",
+  horizontal = "horizontal",
 }
 
 export enum EchartsTimeseriesSeriesType {
-  Line = 'line',
-  Scatter = 'scatter',
-  Smooth = 'smooth',
-  Bar = 'bar',
-  Start = 'start',
-  Middle = 'middle',
-  End = 'end',
+  Line = "line",
+  Scatter = "scatter",
+  Smooth = "smooth",
+  Bar = "bar",
+  Start = "start",
+  Middle = "middle",
+  End = "end",
 }
 
 export type EchartsTimeseriesFormData = QueryFormData & {
@@ -114,7 +114,7 @@ export const DEFAULT_FORM_DATA: EchartsTimeseriesFormData = {
   rowLimit: 10000,
   seriesType: EchartsTimeseriesSeriesType.Line,
   stack: false,
-  tooltipTimeFormat: 'smart_date',
+  tooltipTimeFormat: "smart_date",
   truncateYAxis: false,
   yAxisBounds: [null, null],
   zoomable: false,

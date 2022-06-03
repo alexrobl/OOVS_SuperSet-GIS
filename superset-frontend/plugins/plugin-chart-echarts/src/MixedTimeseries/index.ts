@@ -24,15 +24,15 @@ import {
   FeatureFlag,
   isFeatureEnabled,
   t,
-} from '@superset-ui/core';
-import buildQuery from './buildQuery';
-import controlPanel from './controlPanel';
-import transformProps from './transformProps';
-import thumbnail from './images/thumbnail.png';
+} from "@superset-ui/core";
+import buildQuery from "./buildQuery";
+import controlPanel from "./controlPanel";
+import transformProps from "./transformProps";
+import thumbnail from "./images/thumbnail.png";
 import {
   EchartsMixedTimeseriesFormData,
   EchartsMixedTimeseriesProps,
-} from './types';
+} from "./types";
 
 export default class EchartsTimeseriesChartPlugin extends ChartPlugin<
   EchartsMixedTimeseriesFormData,
@@ -52,17 +52,17 @@ export default class EchartsTimeseriesChartPlugin extends ChartPlugin<
     super({
       buildQuery,
       controlPanel,
-      loadChart: () => import('./EchartsMixedTimeseries'),
+      loadChart: () => import("./EchartsMixedTimeseries"),
       metadata: new ChartMetadata({
         behaviors: [Behavior.INTERACTIVE_CHART],
-        category: t('Evolution'),
-        credits: ['https://echarts.apache.org'],
+        category: t("Evolution"),
+        credits: ["https://echarts.apache.org"],
         description: isFeatureEnabled(FeatureFlag.GENERIC_CHART_AXES)
           ? t(
-              'Visualize two different series using the same x-axis. Note that both series can be visualized with a different chart type (e.g. 1 using bars and 1 using a line).',
+              "Visualize two different series using the same x-axis. Note that both series can be visualized with a different chart type (e.g. 1 using bars and 1 using a line).",
             )
           : t(
-              'Visualize two different time series using the same x-axis. Note that each time series can be visualized differently (e.g. 1 using bars and 1 using a line).',
+              "Visualize two different time series using the same x-axis. Note that each time series can be visualized differently (e.g. 1 using bars and 1 using a line).",
             ),
         supportedAnnotationTypes: [
           AnnotationType.Event,
@@ -71,18 +71,18 @@ export default class EchartsTimeseriesChartPlugin extends ChartPlugin<
           AnnotationType.Timeseries,
         ],
         name: isFeatureEnabled(FeatureFlag.GENERIC_CHART_AXES)
-          ? t('Mixed Chart')
-          : t('Mixed Time-Series'),
+          ? t("Mixed Chart")
+          : t("Mixed Time-Series"),
         thumbnail,
         tags: [
-          t('Advanced-Analytics'),
-          t('Aesthetic'),
-          t('ECharts'),
-          t('Experimental'),
-          t('Line'),
-          t('Multi-Variables'),
-          t('Time'),
-          t('Transformable'),
+          t("Advanced-Analytics"),
+          t("Aesthetic"),
+          t("ECharts"),
+          t("Experimental"),
+          t("Line"),
+          t("Multi-Variables"),
+          t("Time"),
+          t("Transformable"),
         ],
       }),
       // @ts-ignore

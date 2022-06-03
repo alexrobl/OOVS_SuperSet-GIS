@@ -83,7 +83,7 @@ class ExploreFormDataRestApi(BaseApi, ABC):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/FormDataPostSchema'
+                  $ref: "#/components/schemas/FormDataPostSchema"
           responses:
             201:
               description: The form_data was stored successfully.
@@ -96,13 +96,13 @@ class ExploreFormDataRestApi(BaseApi, ABC):
                         type: string
                         description: The key to retrieve the form_data.
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             item = self.add_model_schema.load(request.json)
@@ -155,7 +155,7 @@ class ExploreFormDataRestApi(BaseApi, ABC):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/FormDataPutSchema'
+                  $ref: "#/components/schemas/FormDataPutSchema"
           responses:
             200:
               description: The form_data was stored successfully.
@@ -168,15 +168,15 @@ class ExploreFormDataRestApi(BaseApi, ABC):
                         type: string
                         description: The key to retrieve the form_data.
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             item = self.edit_model_schema.load(request.json)
@@ -234,15 +234,15 @@ class ExploreFormDataRestApi(BaseApi, ABC):
                         type: string
                         description: The stored form_data
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             args = CommandParameters(actor=g.user, key=key)
@@ -290,15 +290,15 @@ class ExploreFormDataRestApi(BaseApi, ABC):
                         type: string
                         description: The result of the operation
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             args = CommandParameters(actor=g.user, key=key)

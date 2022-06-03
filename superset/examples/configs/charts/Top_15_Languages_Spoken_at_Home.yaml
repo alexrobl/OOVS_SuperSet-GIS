@@ -19,12 +19,12 @@ viz_type: table
 params:
   adhoc_filters:
   - clause: WHERE
-    comparator: 'NULL'
+    comparator: "NULL"
     expressionType: SIMPLE
     filterOptionName: filter_ameaka2efjv_rfv1et5nwng
     isExtra: false
     isNew: false
-    operator: '!='
+    operator: "!="
     sqlExpression: null
     subject: lang_at_home
   all_columns: []
@@ -42,7 +42,7 @@ params:
     groupby: groupby
     metrics: metrics
   query_mode: aggregate
-  row_limit: '15'
+  row_limit: "15"
   show_cell_bars: true
   slice_id: 1386
   table_timestamp_format: smart_date

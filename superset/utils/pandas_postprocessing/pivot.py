@@ -60,7 +60,7 @@ def pivot(  # pylint: disable=too-many-arguments,too-many-locals
            config.
     :param marginal_distributions: Add totals for row/column. Default to False
     :param marginal_distribution_name: Name of row/column with marginal distribution.
-           Default to 'All'.
+           Default to "All".
     :param flatten_columns: Convert column names to strings
     :param reset_index: Convert index to column
     :return: A pivot table
@@ -80,7 +80,7 @@ def pivot(  # pylint: disable=too-many-arguments,too-many-locals
 
     aggregate_funcs = _get_aggregate_funcs(df, aggregates)
 
-    # TODO (villebro): Pandas 1.0.3 doesn't yet support NamedAgg in pivot_table.
+    # TODO (villebro): Pandas 1.0.3 doesn"t yet support NamedAgg in pivot_table.
     #  Remove once/if support is added.
     aggfunc = {na.column: na.aggfunc for na in aggregate_funcs.values()}
 

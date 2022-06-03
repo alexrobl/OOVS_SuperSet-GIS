@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { QueryFormData } from '@superset-ui/core';
+import { QueryFormData } from "@superset-ui/core";
 
 export const retainFormDataSuffix = (
   formData: QueryFormData,
@@ -25,9 +25,9 @@ export const retainFormDataSuffix = (
   /*
    * retain controls by suffix and return a new formData
    * eg:
-   * > const fd = { metrics: ['foo', 'bar'], metrics_b: ['zee'], limit: 100, ... }
-   * > removeFormDataSuffix(fd, '_b')
-   * { metrics: ['zee'], limit: 100, ... }
+   * > const fd = { metrics: ["foo", "bar"], metrics_b: ["zee"], limit: 100, ... }
+   * > removeFormDataSuffix(fd, "_b")
+   * { metrics: ["zee"], limit: 100, ... }
    * */
   const newFormData = {};
 
@@ -59,9 +59,9 @@ export const removeFormDataSuffix = (
   /*
    * remove unused controls by suffix and return a new formData
    * eg:
-   * > const fd = { metrics: ['foo', 'bar'], metrics_b: ['zee'], limit: 100, ... }
-   * > removeUnusedFormData(fd, '_b')
-   * { metrics: ['foo', 'bar'], limit: 100, ... }
+   * > const fd = { metrics: ["foo", "bar"], metrics_b: ["zee"], limit: 100, ... }
+   * > removeUnusedFormData(fd, "_b")
+   * { metrics: ["foo", "bar"], limit: 100, ... }
    * */
   const newFormData = {};
   Object.entries(formData).forEach(([key, value]) => {

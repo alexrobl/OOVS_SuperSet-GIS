@@ -44,7 +44,7 @@ def get_indexes_metadata(
 
 def get_col_type(col: Dict[Any, Any]) -> str:
     try:
-        dtype = f"{col['type']}"
+        dtype = f"{col["type"]}"
     except Exception:  # pylint: disable=broad-except
         # sqla.types.JSON __str__ has a bug, so using __class__.
         dtype = col["type"].__class__.__name__
@@ -106,7 +106,7 @@ def get_table_metadata(
 
 def make_url_safe(raw_url: Union[str, URL]) -> URL:
     """
-    Wrapper for SQLAlchemy's make_url(), which tends to raise too detailed of
+    Wrapper for SQLAlchemy"s make_url(), which tends to raise too detailed of
     errors, which inevitably find their way into server logs. ArgumentErrors
     tend to contain usernames and passwords, which makes them non-log-friendly
     :param raw_url:

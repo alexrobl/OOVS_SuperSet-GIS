@@ -30,7 +30,7 @@ down_revision = "bb51420eaf83"
 
 def upgrade():
     try:
-        # Trying since sqlite doesn't like constraints
+        # Trying since sqlite doesn"t like constraints
         op.drop_constraint("tables_table_name_key", "tables", type_="unique")
         op.create_unique_constraint(
             "_customer_location_uc", "tables", ["database_id", "schema", "table_name"]
@@ -41,7 +41,7 @@ def upgrade():
 
 def downgrade():
     try:
-        # Trying since sqlite doesn't like constraints
+        # Trying since sqlite doesn"t like constraints
         op.drop_constraint("_customer_location_uc", "tables", type_="unique")
     except Exception:
         pass

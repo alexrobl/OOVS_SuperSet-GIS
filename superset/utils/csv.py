@@ -30,7 +30,7 @@ negative_number_re = re.compile(r"^-[0-9.]+$")
 #     2. two double quotes immediately followed by one of -, @, +, |, =, %
 #     3. one or more spaces immediately followed by one of -, @, +, |, =, %
 #
-problematic_chars_re = re.compile(r'^(?:"{2}|\s{1,})(?=[\-@+|=%])|^[\-@+|=%]')
+problematic_chars_re = re.compile(r"^(?:"{2}|\s{1,})(?=[\-@+|=%])|^[\-@+|=%]")
 
 
 def escape_value(value: str) -> str:
@@ -53,7 +53,7 @@ def escape_value(value: str) -> str:
         # claim a preceding space will work here too, however,
         # when uploading a csv file in Google sheets, a leading
         # space was ignored and code was still evaluated.
-        value = "'" + value
+        value = """ + value
 
     return value
 

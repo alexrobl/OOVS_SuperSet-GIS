@@ -20,7 +20,7 @@ run_git_tag () {
   if [ "$DRY_RUN" = "false" ] && [ "$SKIP_TAG" = "false" ]
   then
     git tag -a -f latest "${GITHUB_TAG_NAME}" -m "latest tag"
-    echo "${GITHUB_TAG_NAME} has been tagged 'latest'"
+    echo "${GITHUB_TAG_NAME} has been tagged "latest""
   fi
   exit 0
 }
@@ -30,7 +30,7 @@ DRY_RUN=false
 
 # get params passed in with script when it was run
 # --dry-run is optional and returns the value of SKIP_TAG, but does not run the git tag statement
-# A tag name is required as a param. A SHA won't work. You must first tag a sha with a release number
+# A tag name is required as a param. A SHA won"t work. You must first tag a sha with a release number
 # and then run this script
 while [[ $# -gt 0 ]]
 do
@@ -67,48 +67,48 @@ then
 fi
 
 ## split the current GITHUB_TAG_NAME into an array at the dot
-IFS=$'.'
-THIS_TAG_NAME=(${GITHUB_TAG_NAME})  || echo 'not found'
+IFS=$"."
+THIS_TAG_NAME=(${GITHUB_TAG_NAME})  || echo "not found"
 
-# look up the 'latest' tag on git
-LATEST_TAG_LIST=$(git show-ref latest && git show --pretty=tformat:%d -s latest | grep tag:) || echo 'not found'
+# look up the "latest" tag on git
+LATEST_TAG_LIST=$(git show-ref latest && git show --pretty=tformat:%d -s latest | grep tag:) || echo "not found"
 
-# if 'latest' tag doesn't exist, then set this commit to latest
+# if "latest" tag doesn"t exist, then set this commit to latest
 if [[ -z "$LATEST_TAG_LIST" ]]
 then
   # move on to next task
-  echo "there are no latest tags yet, so I'm going to start by tagging this sha as the latest"
+  echo "there are no latest tags yet, so I"m going to start by tagging this sha as the latest"
   run_git_tag
 fi
 
 ## get all tags that use the same sha as the latest tag. split at comma.
-IFS=$','
+IFS=$","
 LATEST_TAGS=($LATEST_TAG_LIST)
 
-## loop over those tags and only take action on the one that isn't tagged 'latest'
+## loop over those tags and only take action on the one that isn"t tagged "latest"
 ## that one will have the version number tag
 for (( i=0; i<${#LATEST_TAGS[@]}; i++ ))
 do
   if [[ ${LATEST_TAGS[$i]} != *"latest"* ]]
   then
     ## extract just the version from this tag
-    LATEST_RELEASE_TAG=$(echo "${LATEST_TAGS[$i]}" | sed -E -e 's/tag:|\(|\)|[[:space:]]*//g')
+    LATEST_RELEASE_TAG=$(echo "${LATEST_TAGS[$i]}" | sed -E -e "s/tag:|\(|\)|[[:space:]]*//g")
 
     # check that this only contains a proper semantic version
     if ! [[ ${LATEST_RELEASE_TAG} =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
     then
-      echo "'Latest' has been associated with tag ${LATEST_RELEASE_TAG} which is not a valid release version. Looking for another."
+      echo ""Latest" has been associated with tag ${LATEST_RELEASE_TAG} which is not a valid release version. Looking for another."
       continue
     fi
     echo "The current release with the latest tag is version ${LATEST_RELEASE_TAG}"
 
     ## remove the sha from the latest tag and split into an array- split at the dot
-    IFS=$'.'
+    IFS=$"."
     LATEST_RELEASE_TAG_SPLIT=(${LATEST_RELEASE_TAG})
 
     for (( j=0; j<${#THIS_TAG_NAME[@]}; j++ ))
     do
-      ## if this value is greater than the latest release, then tag it, if it's lower, then stop, if it's
+      ## if this value is greater than the latest release, then tag it, if it"s lower, then stop, if it"s
       ## the same then move on to the next index
       if [[ ${THIS_TAG_NAME[$j]} -gt ${LATEST_RELEASE_TAG_SPLIT[$j]} ]]
       then
@@ -124,5 +124,5 @@ do
 done
 
 echo "This release tag ${GITHUB_TAG_NAME} is not the latest. Not tagging."
-# if you've gotten this far, then we don't want to run any tags in the next step
+# if you"ve gotten this far, then we don"t want to run any tags in the next step
 echo "::set-output name=SKIP_TAG::true"

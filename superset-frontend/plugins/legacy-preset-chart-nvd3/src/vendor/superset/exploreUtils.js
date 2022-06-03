@@ -17,16 +17,16 @@
  * under the License.
  */
 /* eslint camelcase: 0 */
-import URI from 'urijs';
-import safeStringify from 'fast-safe-stringify';
+import URI from "urijs";
+import safeStringify from "fast-safe-stringify";
 
 const MAX_URL_LENGTH = 8000;
 
-export function getURIDirectory(formData, endpointType = 'base') {
+export function getURIDirectory(formData, endpointType = "base") {
   // Building the directory part of the URI
-  let directory = '/superset/explore/';
-  if (['json', 'csv', 'query', 'results', 'samples'].includes(endpointType)) {
-    directory = '/superset/explore_json/';
+  let directory = "/superset/explore/";
+  if (["json", "csv", "query", "results", "samples"].includes(endpointType)) {
+    directory = "/superset/explore_json/";
   }
 
   return directory;
@@ -42,15 +42,15 @@ export function getExploreLongUrl(
     return null;
   }
 
-  const uri = new URI('/');
+  const uri = new URI("/");
   const directory = getURIDirectory(formData, endpointType);
   const search = uri.search(true);
   Object.keys(extraSearch).forEach(key => {
     search[key] = extraSearch[key];
   });
   search.form_data = safeStringify(formData);
-  if (endpointType === 'standalone') {
-    search.standalone = 'true';
+  if (endpointType === "standalone") {
+    search.standalone = "true";
   }
   const url = uri.directory(directory).search(search).toString();
   if (!allowOverflow && url.length > MAX_URL_LENGTH) {

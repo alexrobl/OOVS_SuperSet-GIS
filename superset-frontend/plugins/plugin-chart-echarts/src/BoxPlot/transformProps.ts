@@ -23,23 +23,23 @@ import {
   getMetricLabel,
   getNumberFormatter,
   getTimeFormatter,
-} from '@superset-ui/core';
-import { EChartsCoreOption, BoxplotSeriesOption } from 'echarts';
-import { CallbackDataParams } from 'echarts/types/src/util/types';
+} from "@superset-ui/core";
+import { EChartsCoreOption, BoxplotSeriesOption } from "echarts";
+import { CallbackDataParams } from "echarts/types/src/util/types";
 import {
   BoxPlotChartTransformedProps,
   BoxPlotQueryFormData,
   EchartsBoxPlotChartProps,
-} from './types';
+} from "./types";
 import {
   extractGroupbyLabel,
   getColtypesMapping,
   sanitizeHtml,
-} from '../utils/series';
-import { convertInteger } from '../utils/convertInteger';
-import { defaultGrid, defaultTooltip, defaultYAxis } from '../defaults';
-import { getPadding } from '../Timeseries/transformers';
-import { OpacityEnum } from '../constants';
+} from "../utils/series";
+import { convertInteger } from "../utils/convertInteger";
+import { defaultGrid, defaultTooltip, defaultYAxis } from "../defaults";
+import { getPadding } from "../Timeseries/transformers";
+import { OpacityEnum } from "../constants";
 
 export default function transformProps(
   chartProps: EchartsBoxPlotChartProps,
@@ -57,7 +57,7 @@ export default function transformProps(
     dateFormat,
     xTicksLayout,
     emitFilter,
-    legendOrientation = 'top',
+    legendOrientation = "top",
     xAxisTitle,
     yAxisTitle,
     xAxisTitleMargin,
@@ -126,15 +126,15 @@ export default function transformProps(
           filterState.selectedValues &&
           !filterState.selectedValues.includes(name);
         return {
-          name: 'outlier',
-          type: 'scatter',
+          name: "outlier",
+          type: "scatter",
           data: outlierDatum.map(val => [name, val]),
           tooltip: {
             formatter: (param: { data: [string, number] }) => {
               const [outlierName, stats] = param.data;
               const headline = groupbyLabels.length
                 ? `<p><strong>${sanitizeHtml(outlierName)}</strong></p>`
-                : '';
+                : "";
               return `${headline}${numberFormatter(stats)}`;
             },
           },
@@ -179,16 +179,16 @@ export default function transformProps(
   );
 
   let axisLabel;
-  if (xTicksLayout === '45°') axisLabel = { rotate: -45 };
-  else if (xTicksLayout === '90°') axisLabel = { rotate: -90 };
-  else if (xTicksLayout === 'flat') axisLabel = { rotate: 0 };
-  else if (xTicksLayout === 'staggered') axisLabel = { rotate: -45 };
+  if (xTicksLayout === "45°") axisLabel = { rotate: -45 };
+  else if (xTicksLayout === "90°") axisLabel = { rotate: -90 };
+  else if (xTicksLayout === "flat") axisLabel = { rotate: 0 };
+  else if (xTicksLayout === "staggered") axisLabel = { rotate: -45 };
   else axisLabel = { show: true };
 
   const series: BoxplotSeriesOption[] = [
     {
-      name: 'boxplot',
-      type: 'boxplot',
+      name: "boxplot",
+      type: "boxplot",
       data: transformedData,
       tooltip: {
         formatter: (param: CallbackDataParams) => {
@@ -212,7 +212,7 @@ export default function transformProps(
           } = param;
           const headline = name
             ? `<p><strong>${sanitizeHtml(name)}</strong></p>`
-            : '';
+            : "";
           const stats = [
             `Max: ${numberFormatter(value[5])}`,
             `3rd Quartile: ${numberFormatter(value[4])}`,
@@ -225,7 +225,7 @@ export default function transformProps(
           if (value[8].length > 0) {
             stats.push(`# Outliers: ${numberFormatter(value[8].length)}`);
           }
-          return headline + stats.join('<br/>');
+          return headline + stats.join("<br/>");
         },
       },
     },
@@ -251,26 +251,26 @@ export default function transformProps(
       ...chartPadding,
     },
     xAxis: {
-      type: 'category',
+      type: "category",
       data: transformedData.map(row => row.name),
       axisLabel,
       name: xAxisTitle,
       nameGap: convertInteger(xAxisTitleMargin),
-      nameLocation: 'middle',
+      nameLocation: "middle",
     },
     yAxis: {
       ...defaultYAxis,
-      type: 'value',
+      type: "value",
       axisLabel: { formatter: numberFormatter },
       name: yAxisTitle,
       nameGap: convertInteger(yAxisTitleMargin),
-      nameLocation: yAxisTitlePosition === 'Left' ? 'middle' : 'end',
+      nameLocation: yAxisTitlePosition === "Left" ? "middle" : "end",
     },
     tooltip: {
       ...defaultTooltip,
-      trigger: 'item',
+      trigger: "item",
       axisPointer: {
-        type: 'shadow',
+        type: "shadow",
       },
     },
     series,

@@ -48,7 +48,7 @@ params:
     groupby: groupby
     metrics: metrics
   row_limit: null
-  series_height: '25'
+  series_height: "25"
   slice_id: 2811
   time_range: No filter
   url_params: {}

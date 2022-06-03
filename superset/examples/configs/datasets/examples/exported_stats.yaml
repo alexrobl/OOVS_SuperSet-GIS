@@ -21,7 +21,7 @@ default_endpoint: null
 offset: 0
 cache_timeout: null
 schema: null
-sql: ''
+sql: ""
 params: null
 template_params: null
 filter_select_enabled: true
@@ -45,7 +45,7 @@ columns:
   type: BIGINT
   groupby: true
   filterable: true
-  expression: 'total_membership - LAG(total_membership) OVER (ORDER BY date)'
+  expression: "total_membership - LAG(total_membership) OVER (ORDER BY date)"
   description: null
   python_date_format: null
 - column_name: percent_of_messages_private_channels

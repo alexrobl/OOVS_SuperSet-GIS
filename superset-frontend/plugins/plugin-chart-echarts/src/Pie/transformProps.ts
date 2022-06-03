@@ -26,27 +26,27 @@ import {
   NumberFormats,
   NumberFormatter,
   t,
-} from '@superset-ui/core';
-import { CallbackDataParams } from 'echarts/types/src/util/types';
-import { EChartsCoreOption, PieSeriesOption } from 'echarts';
+} from "@superset-ui/core";
+import { CallbackDataParams } from "echarts/types/src/util/types";
+import { EChartsCoreOption, PieSeriesOption } from "echarts";
 import {
   DEFAULT_FORM_DATA as DEFAULT_PIE_FORM_DATA,
   EchartsPieChartProps,
   EchartsPieFormData,
   EchartsPieLabelType,
   PieChartTransformedProps,
-} from './types';
-import { DEFAULT_LEGEND_FORM_DATA } from '../types';
+} from "./types";
+import { DEFAULT_LEGEND_FORM_DATA } from "../types";
 import {
   extractGroupbyLabel,
   getChartPadding,
   getColtypesMapping,
   getLegendProps,
   sanitizeHtml,
-} from '../utils/series';
-import { defaultGrid, defaultTooltip } from '../defaults';
-import { OpacityEnum } from '../constants';
-import { convertInteger } from '../utils/convertInteger';
+} from "../utils/series";
+import { defaultGrid, defaultTooltip } from "../defaults";
+import { OpacityEnum } from "../constants";
+import { convertInteger } from "../utils/convertInteger";
 
 const percentFormatter = getNumberFormatter(NumberFormats.PERCENT_2_POINT);
 
@@ -56,12 +56,12 @@ export function formatPieLabel({
   numberFormatter,
   sanitizeName = false,
 }: {
-  params: Pick<CallbackDataParams, 'name' | 'value' | 'percent'>;
+  params: Pick<CallbackDataParams, "name" | "value" | "percent">;
   labelType: EchartsPieLabelType;
   numberFormatter: NumberFormatter;
   sanitizeName?: boolean;
 }): string {
-  const { name: rawName = '', value, percent } = params;
+  const { name: rawName = "", value, percent } = params;
   const name = sanitizeName ? sanitizeHtml(rawName) : rawName;
   const formattedValue = numberFormatter(value as number);
   const formattedPercent = percentFormatter((percent as number) / 100);
@@ -104,8 +104,8 @@ function getTotalValuePadding({
     left?: string;
     top?: string;
   } = {
-    top: donut ? 'middle' : '0',
-    left: 'center',
+    top: donut ? "middle" : "0",
+    left: "center",
   };
   const LEGEND_HEIGHT = 15;
   const LEGEND_WIDTH = 215;
@@ -117,7 +117,7 @@ function getTotalValuePadding({
   if (chartPadding.bottom) {
     padding.top = donut
       ? `${50 - ((chartPadding.bottom + LEGEND_HEIGHT) / height / 2) * 100}%`
-      : '0';
+      : "0";
   }
   if (chartPadding.left) {
     padding.left = `${
@@ -151,7 +151,7 @@ export default function transformProps(
     legendMargin,
     legendOrientation,
     legendType,
-    metric = '',
+    metric = "",
     numberFormat,
     dateFormat,
     outerRadius,
@@ -212,7 +212,7 @@ export default function transformProps(
       filterState.selectedValues && !filterState.selectedValues.includes(name);
     const value = datum[metricLabel];
 
-    if (typeof value === 'number' || typeof value === 'string') {
+    if (typeof value === "number" || typeof value === "string") {
       totalValue += convertInteger(value);
     }
 
@@ -262,29 +262,29 @@ export default function transformProps(
 
   const series: PieSeriesOption[] = [
     {
-      type: 'pie',
+      type: "pie",
       ...chartPadding,
       animation: false,
       radius: [`${donut ? innerRadius : 0}%`, `${outerRadius}%`],
-      center: ['50%', '50%'],
+      center: ["50%", "50%"],
       avoidLabelOverlap: true,
       labelLine: labelsOutside && labelLine ? { show: true } : { show: false },
       minShowLabelAngle,
       label: labelsOutside
         ? {
             ...defaultLabel,
-            position: 'outer',
-            alignTo: 'none',
+            position: "outer",
+            alignTo: "none",
             bleedMargin: 5,
           }
         : {
             ...defaultLabel,
-            position: 'inner',
+            position: "inner",
           },
       emphasis: {
         label: {
           show: true,
-          fontWeight: 'bold',
+          fontWeight: "bold",
           backgroundColor: theme.colors.grayscale.light5,
         },
       },
@@ -298,7 +298,7 @@ export default function transformProps(
     },
     tooltip: {
       ...defaultTooltip,
-      trigger: 'item',
+      trigger: "item",
       formatter: (params: any) =>
         formatPieLabel({
           params,
@@ -313,12 +313,12 @@ export default function transformProps(
     },
     graphic: showTotal
       ? {
-          type: 'text',
+          type: "text",
           ...getTotalValuePadding({ chartPadding, donut, width, height }),
           style: {
-            text: t('Total: %s', numberFormatter(totalValue)),
+            text: t("Total: %s", numberFormatter(totalValue)),
             fontSize: 16,
-            fontWeight: 'bold',
+            fontWeight: "bold",
           },
           z: 10,
         }

@@ -97,7 +97,7 @@ class ImportModelsCommand(BaseCommand):
     def _prevent_overwrite_existing_model(  # pylint: disable=invalid-name
         self, exceptions: List[ValidationError]
     ) -> None:
-        """check if the object exists and shouldn't be overwritten"""
+        """check if the object exists and shouldn"t be overwritten"""
         if not self.overwrite:
             existing_uuids = self._get_uuids()
             for file_name, config in self._configs.items():

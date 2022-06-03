@@ -24,17 +24,17 @@ import {
   FeatureFlag,
   isFeatureEnabled,
   t,
-} from '@superset-ui/core';
-import buildQuery from '../buildQuery';
-import controlPanel from './controlPanel';
-import transformProps from '../transformProps';
-import thumbnail from './images/thumbnail.png';
+} from "@superset-ui/core";
+import buildQuery from "../buildQuery";
+import controlPanel from "./controlPanel";
+import transformProps from "../transformProps";
+import thumbnail from "./images/thumbnail.png";
 import {
   EchartsTimeseriesChartProps,
   EchartsTimeseriesFormData,
-} from '../types';
-import example1 from './images/Step1.png';
-import example2 from './images/Step2.png';
+} from "../types";
+import example1 from "./images/Step1.png";
+import example2 from "./images/Step2.png";
 
 export default class EchartsTimeseriesStepChartPlugin extends ChartPlugin<
   EchartsTimeseriesFormData,
@@ -44,17 +44,17 @@ export default class EchartsTimeseriesStepChartPlugin extends ChartPlugin<
     super({
       buildQuery,
       controlPanel,
-      loadChart: () => import('../EchartsTimeseries'),
+      loadChart: () => import("../EchartsTimeseries"),
       metadata: new ChartMetadata({
         behaviors: [Behavior.INTERACTIVE_CHART],
-        category: t('Evolution'),
-        credits: ['https://echarts.apache.org'],
+        category: t("Evolution"),
+        credits: ["https://echarts.apache.org"],
         description: isFeatureEnabled(FeatureFlag.GENERIC_CHART_AXES)
           ? t(
-              'Stepped-line graph (also called step chart) is a variation of line chart but with the line forming a series of steps between data points. A step chart can be useful when you want to show the changes that occur at irregular intervals.',
+              "Stepped-line graph (also called step chart) is a variation of line chart but with the line forming a series of steps between data points. A step chart can be useful when you want to show the changes that occur at irregular intervals.",
             )
           : t(
-              'Time-series Stepped-line graph (also called step chart) is a variation of line chart but with the line forming a series of steps between data points. A step chart can be useful when you want to show the changes that occur at irregular intervals.',
+              "Time-series Stepped-line graph (also called step chart) is a variation of line chart but with the line forming a series of steps between data points. A step chart can be useful when you want to show the changes that occur at irregular intervals.",
             ),
         exampleGallery: [{ url: example1 }, { url: example2 }],
         supportedAnnotationTypes: [
@@ -64,16 +64,16 @@ export default class EchartsTimeseriesStepChartPlugin extends ChartPlugin<
           AnnotationType.Timeseries,
         ],
         name: isFeatureEnabled(FeatureFlag.GENERIC_CHART_AXES)
-          ? t('Stepped Line')
-          : t('Time-series Stepped Line'),
+          ? t("Stepped Line")
+          : t("Time-series Stepped Line"),
         tags: [
-          t('ECharts'),
-          t('Predictive'),
-          t('Advanced-Analytics'),
-          t('Aesthetic'),
-          t('Time'),
-          t('Transformable'),
-          t('Stacked'),
+          t("ECharts"),
+          t("Predictive"),
+          t("Advanced-Analytics"),
+          t("Aesthetic"),
+          t("Time"),
+          t("Transformable"),
+          t("Stacked"),
         ],
         thumbnail,
       }),

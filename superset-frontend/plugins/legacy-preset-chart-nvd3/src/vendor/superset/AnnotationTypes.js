@@ -27,22 +27,22 @@ function extractTypes(metadata) {
 
 export const ANNOTATION_TYPES_METADATA = {
   FORMULA: {
-    value: 'FORMULA',
-    label: 'Formula',
+    value: "FORMULA",
+    label: "Formula",
   },
   EVENT: {
-    value: 'EVENT',
-    label: 'Event',
+    value: "EVENT",
+    label: "Event",
     supportNativeSource: true,
   },
   INTERVAL: {
-    value: 'INTERVAL',
-    label: 'Interval',
+    value: "INTERVAL",
+    label: "Interval",
     supportNativeSource: true,
   },
   TIME_SERIES: {
-    value: 'TIME_SERIES',
-    label: 'Time Series',
+    value: "TIME_SERIES",
+    label: "Time Series",
   },
 };
 
@@ -52,8 +52,8 @@ export const DEFAULT_ANNOTATION_TYPE = ANNOTATION_TYPES.FORMULA;
 
 export const ANNOTATION_SOURCE_TYPES_METADATA = {
   NATIVE: {
-    value: 'NATIVE',
-    label: 'Superset annotation',
+    value: "NATIVE",
+    label: "Superset annotation",
   },
 };
 
@@ -66,10 +66,10 @@ export function requiresQuery(annotationSourceType) {
 }
 
 const NATIVE_COLUMN_NAMES = {
-  descriptionColumns: ['long_descr'],
-  intervalEndColumn: 'end_dttm',
-  timeColumn: 'start_dttm',
-  titleColumn: 'short_descr',
+  descriptionColumns: ["long_descr"],
+  intervalEndColumn: "end_dttm",
+  timeColumn: "start_dttm",
+  titleColumn: "short_descr",
 };
 
 export function applyNativeColumns(annotation) {

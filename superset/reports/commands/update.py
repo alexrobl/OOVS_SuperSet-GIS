@@ -96,7 +96,7 @@ class UpdateReportScheduleCommand(UpdateMixin, BaseReportScheduleCommand):
 
         if report_type == ReportScheduleType.ALERT:
             database_id = self._properties.get("database")
-            # If database_id was sent let's validate it exists
+            # If database_id was sent let"s validate it exists
             if database_id:
                 database = DatabaseDAO.find_by_id(database_id)
                 if not database:

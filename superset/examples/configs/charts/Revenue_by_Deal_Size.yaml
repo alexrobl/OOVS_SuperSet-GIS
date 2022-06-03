@@ -61,7 +61,7 @@ params:
   show_brush: auto
   show_legend: true
   time_grain_sqla: P1M
-  time_range: '2003-01-01T00:00:00 : 2005-06-01T00:00:00'
+  time_range: "2003-01-01T00:00:00 : 2005-06-01T00:00:00"
   url_params: {}
   viz_type: bar
   x_axis_format: smart_date

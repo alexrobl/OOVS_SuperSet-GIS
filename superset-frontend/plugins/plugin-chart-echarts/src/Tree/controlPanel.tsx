@@ -16,14 +16,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React from 'react';
-import { FeatureFlag, isFeatureEnabled, t } from '@superset-ui/core';
+import React from "react";
+import { FeatureFlag, isFeatureEnabled, t } from "@superset-ui/core";
 import {
   ControlPanelConfig,
   sections,
   sharedControls,
-} from '@superset-ui/chart-controls';
-import { DEFAULT_FORM_DATA } from './types';
+} from "@superset-ui/chart-controls";
+import { DEFAULT_FORM_DATA } from "./types";
 
 const requiredEntity = {
   ...sharedControls.entity,
@@ -39,245 +39,245 @@ const controlPanel: ControlPanelConfig = {
   controlPanelSections: [
     sections.legacyRegularTime,
     {
-      label: t('Query'),
+      label: t("Query"),
       expanded: true,
       controlSetRows: [
         [
           {
-            name: 'id',
+            name: "id",
             config: {
               ...requiredEntity,
-              label: t('Id'),
-              description: t('Name of the id column'),
+              label: t("Id"),
+              description: t("Name of the id column"),
             },
           },
         ],
         [
           {
-            name: 'parent',
+            name: "parent",
             config: {
               ...requiredEntity,
-              label: t('Parent'),
+              label: t("Parent"),
               description: t(
-                'Name of the column containing the id of the parent node',
+                "Name of the column containing the id of the parent node",
               ),
             },
           },
         ],
         [
           {
-            name: 'name',
+            name: "name",
             config: {
               ...optionalEntity,
-              label: t('Name'),
-              description: t('Optional name of the data column.'),
+              label: t("Name"),
+              description: t("Optional name of the data column."),
             },
           },
         ],
         [
           {
-            name: 'root_node_id',
+            name: "root_node_id",
             config: {
               ...optionalEntity,
               renderTrigger: true,
-              type: 'TextControl',
-              label: t('Root node id'),
-              description: t('Id of root node of the tree.'),
+              type: "TextControl",
+              label: t("Root node id"),
+              description: t("Id of root node of the tree."),
             },
           },
         ],
         [
           {
-            name: 'metric',
+            name: "metric",
             config: {
               ...optionalEntity,
               type: isFeatureEnabled(FeatureFlag.ENABLE_EXPLORE_DRAG_AND_DROP)
-                ? 'DndMetricSelect'
-                : 'MetricsControl',
-              label: t('Metric'),
-              description: t('Metric for node values'),
+                ? "DndMetricSelect"
+                : "MetricsControl",
+              label: t("Metric"),
+              description: t("Metric for node values"),
             },
           },
         ],
-        ['adhoc_filters'],
-        ['row_limit'],
+        ["adhoc_filters"],
+        ["row_limit"],
       ],
     },
     {
-      label: t('Chart options'),
+      label: t("Chart options"),
       expanded: true,
       controlSetRows: [
-        [<div className="section-header">{t('Layout')}</div>],
+        [<div className="section-header">{t("Layout")}</div>],
         [
           {
-            name: 'layout',
+            name: "layout",
             config: {
-              type: 'RadioButtonControl',
+              type: "RadioButtonControl",
               renderTrigger: true,
-              label: t('Tree layout'),
+              label: t("Tree layout"),
               default: DEFAULT_FORM_DATA.layout,
               options: [
-                ['orthogonal', t('Orthogonal')],
-                ['radial', t('Radial')],
+                ["orthogonal", t("Orthogonal")],
+                ["radial", t("Radial")],
               ],
-              description: t('Layout type of tree'),
+              description: t("Layout type of tree"),
             },
           },
         ],
 
         [
           {
-            name: 'orient',
+            name: "orient",
             config: {
-              type: 'RadioButtonControl',
+              type: "RadioButtonControl",
               renderTrigger: true,
-              label: t('Tree orientation'),
+              label: t("Tree orientation"),
               default: DEFAULT_FORM_DATA.orient,
               options: [
-                ['LR', t('Left to Right')],
-                ['RL', t('Right to Left')],
-                ['TB', t('Top to Bottom')],
-                ['BT', t('Bottom to Top')],
+                ["LR", t("Left to Right")],
+                ["RL", t("Right to Left")],
+                ["TB", t("Top to Bottom")],
+                ["BT", t("Bottom to Top")],
               ],
-              description: t('Orientation of tree'),
+              description: t("Orientation of tree"),
               visibility({ form_data: { layout } }) {
-                return (layout || DEFAULT_FORM_DATA.layout) === 'orthogonal';
+                return (layout || DEFAULT_FORM_DATA.layout) === "orthogonal";
               },
             },
           },
         ],
         [
           {
-            name: 'node_label_position',
+            name: "node_label_position",
             config: {
-              type: 'RadioButtonControl',
+              type: "RadioButtonControl",
               renderTrigger: true,
-              label: t('Node label position'),
+              label: t("Node label position"),
               default: DEFAULT_FORM_DATA.nodeLabelPosition,
               options: [
-                ['left', t('left')],
-                ['top', t('top')],
-                ['right', t('right')],
-                ['bottom', t('bottom')],
+                ["left", t("left")],
+                ["top", t("top")],
+                ["right", t("right")],
+                ["bottom", t("bottom")],
               ],
-              description: t('Position of intermidiate node label on tree'),
+              description: t("Position of intermidiate node label on tree"),
             },
           },
         ],
         [
           {
-            name: 'child_label_position',
+            name: "child_label_position",
             config: {
-              type: 'RadioButtonControl',
+              type: "RadioButtonControl",
               renderTrigger: true,
-              label: t('Child label position'),
+              label: t("Child label position"),
               default: DEFAULT_FORM_DATA.childLabelPosition,
               options: [
-                ['left', t('left')],
-                ['top', t('top')],
-                ['right', t('right')],
-                ['bottom', t('bottom')],
+                ["left", t("left")],
+                ["top", t("top")],
+                ["right", t("right")],
+                ["bottom", t("bottom")],
               ],
-              description: t('Position of child node label on tree'),
+              description: t("Position of child node label on tree"),
             },
           },
         ],
         [
           {
-            name: 'emphasis',
+            name: "emphasis",
             config: {
-              type: 'RadioButtonControl',
+              type: "RadioButtonControl",
               renderTrigger: true,
-              label: t('Emphasis'),
+              label: t("Emphasis"),
               default: DEFAULT_FORM_DATA.emphasis,
               options: [
-                ['ancestor', t('ancestor')],
-                ['descendant', t('descendant')],
+                ["ancestor", t("ancestor")],
+                ["descendant", t("descendant")],
               ],
-              description: t('Which relatives to highlight on hover'),
+              description: t("Which relatives to highlight on hover"),
               visibility({ form_data: { layout } }) {
-                return (layout || DEFAULT_FORM_DATA.layout) === 'orthogonal';
+                return (layout || DEFAULT_FORM_DATA.layout) === "orthogonal";
               },
             },
           },
         ],
         [
           {
-            name: 'symbol',
+            name: "symbol",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               renderTrigger: true,
-              label: t('Symbol'),
+              label: t("Symbol"),
               default: DEFAULT_FORM_DATA.symbol,
               options: [
                 {
-                  label: t('Empty circle'),
-                  value: 'emptyCircle',
+                  label: t("Empty circle"),
+                  value: "emptyCircle",
                 },
                 {
-                  label: t('Circle'),
-                  value: 'circle',
+                  label: t("Circle"),
+                  value: "circle",
                 },
                 {
-                  label: t('Rectangle'),
-                  value: 'rect',
+                  label: t("Rectangle"),
+                  value: "rect",
                 },
                 {
-                  label: t('Triangle'),
-                  value: 'triangle',
+                  label: t("Triangle"),
+                  value: "triangle",
                 },
                 {
-                  label: t('Diamond'),
-                  value: 'diamond',
+                  label: t("Diamond"),
+                  value: "diamond",
                 },
                 {
-                  label: t('Pin'),
-                  value: 'pin',
+                  label: t("Pin"),
+                  value: "pin",
                 },
                 {
-                  label: t('Arrow'),
-                  value: 'arrow',
+                  label: t("Arrow"),
+                  value: "arrow",
                 },
                 {
-                  label: t('None'),
-                  value: 'none',
+                  label: t("None"),
+                  value: "none",
                 },
               ],
-              description: t('Layout type of tree'),
+              description: t("Layout type of tree"),
             },
           },
         ],
         [
           {
-            name: 'symbolSize',
+            name: "symbolSize",
             config: {
-              type: 'SliderControl',
-              label: t('Symbol size'),
+              type: "SliderControl",
+              label: t("Symbol size"),
               renderTrigger: true,
               min: 5,
               max: 30,
               step: 2,
               default: DEFAULT_FORM_DATA.symbolSize,
-              description: t('Size of edge symbols'),
+              description: t("Size of edge symbols"),
             },
           },
         ],
         [
           {
-            name: 'roam',
+            name: "roam",
             config: {
-              type: 'SelectControl',
-              label: t('Enable graph roaming'),
+              type: "SelectControl",
+              label: t("Enable graph roaming"),
               renderTrigger: true,
               default: DEFAULT_FORM_DATA.roam,
               choices: [
-                [false, t('Disabled')],
-                ['scale', t('Scale only')],
-                ['move', t('Move only')],
-                [true, t('Scale and Move')],
+                [false, t("Disabled")],
+                ["scale", t("Scale only")],
+                ["move", t("Move only")],
+                [true, t("Scale and Move")],
               ],
               description: t(
-                'Whether to enable changing graph position and scaling.',
+                "Whether to enable changing graph position and scaling.",
               ),
             },
           },

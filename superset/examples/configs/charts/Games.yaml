@@ -52,9 +52,9 @@ params:
     optionName: metric_pkpvgdsf70d_pnqv77v0x2p
     sqlExpression: null
   order_by_cols:
-  - '["global_sales", false]'
+  - "["global_sales", false]"
   order_desc: true
-  page_length: '15'
+  page_length: "15"
   percent_metrics: []
   queryFields:
     groupby: groupby

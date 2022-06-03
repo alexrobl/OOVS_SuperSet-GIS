@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t } from '@superset-ui/core';
+import { t } from "@superset-ui/core";
 import {
   D3_FORMAT_DOCS,
   D3_FORMAT_OPTIONS,
@@ -25,39 +25,39 @@ import {
   sections,
   emitFilterControl,
   ControlPanelConfig,
-} from '@superset-ui/chart-controls';
+} from "@superset-ui/chart-controls";
 
 const config: ControlPanelConfig = {
   controlPanelSections: [
     sections.legacyTimeseriesTime,
     {
-      label: t('Query'),
+      label: t("Query"),
       expanded: true,
       controlSetRows: [
-        ['metrics'],
-        ['adhoc_filters'],
+        ["metrics"],
+        ["adhoc_filters"],
         emitFilterControl,
-        ['groupby'],
-        ['columns'], // TODO: this should be migrated to `series_columns`
-        ['series_limit'],
-        ['series_limit_metric'],
+        ["groupby"],
+        ["columns"], // TODO: this should be migrated to `series_columns`
+        ["series_limit"],
+        ["series_limit_metric"],
         [
           {
-            name: 'whiskerOptions',
+            name: "whiskerOptions",
             config: {
               clearable: false,
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('Whisker/outlier options'),
-              default: 'Tukey',
+              label: t("Whisker/outlier options"),
+              default: "Tukey",
               description: t(
-                'Determines how whiskers and outliers are calculated.',
+                "Determines how whiskers and outliers are calculated.",
               ),
               choices: formatSelectOptions([
-                'Tukey',
-                'Min/max (no outliers)',
-                '2/98 percentiles',
-                '9/91 percentiles',
+                "Tukey",
+                "Min/max (no outliers)",
+                "2/98 percentiles",
+                "9/91 percentiles",
               ]),
             },
           },
@@ -66,56 +66,56 @@ const config: ControlPanelConfig = {
     },
     sections.titleControls,
     {
-      label: t('Chart Options'),
+      label: t("Chart Options"),
       expanded: true,
       controlSetRows: [
-        ['color_scheme'],
+        ["color_scheme"],
         [
           {
-            name: 'x_ticks_layout',
+            name: "x_ticks_layout",
             config: {
-              type: 'SelectControl',
-              label: t('X Tick Layout'),
+              type: "SelectControl",
+              label: t("X Tick Layout"),
               choices: formatSelectOptions([
-                'auto',
-                'flat',
-                '45°',
-                '90°',
-                'staggered',
+                "auto",
+                "flat",
+                "45°",
+                "90°",
+                "staggered",
               ]),
-              default: 'auto',
+              default: "auto",
               clearable: false,
               renderTrigger: true,
-              description: t('The way the ticks are laid out on the X-axis'),
+              description: t("The way the ticks are laid out on the X-axis"),
             },
           },
         ],
         [
           {
-            name: 'number_format',
+            name: "number_format",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('Number format'),
+              label: t("Number format"),
               renderTrigger: true,
-              default: 'SMART_NUMBER',
+              default: "SMART_NUMBER",
               choices: D3_FORMAT_OPTIONS,
               description: `${t(
-                'D3 format syntax: https://github.com/d3/d3-format',
-              )} ${t('Only applies when "Label Type" is set to show values.')}`,
+                "D3 format syntax: https://github.com/d3/d3-format",
+              )} ${t("Only applies when "Label Type" is set to show values.")}`,
             },
           },
         ],
         [
           {
-            name: 'date_format',
+            name: "date_format",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('Date format'),
+              label: t("Date format"),
               renderTrigger: true,
               choices: D3_TIME_FORMAT_OPTIONS,
-              default: 'smart_date',
+              default: "smart_date",
               description: D3_FORMAT_DOCS,
             },
           },
@@ -125,14 +125,14 @@ const config: ControlPanelConfig = {
   ],
   controlOverrides: {
     groupby: {
-      label: t('Dimensions'),
-      description: t('Categories to group by on the x-axis.'),
+      label: t("Dimensions"),
+      description: t("Categories to group by on the x-axis."),
     },
     columns: {
-      label: t('Distribute across'),
+      label: t("Distribute across"),
       multi: true,
       description: t(
-        'Columns to calculate distribution across. Defaults to temporal column if left empty.',
+        "Columns to calculate distribution across. Defaults to temporal column if left empty.",
       ),
     },
   },

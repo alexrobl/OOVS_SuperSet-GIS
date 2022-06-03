@@ -71,9 +71,9 @@ class CacheRestApi(BaseSupersetModelRestApi):
             201:
               description: cache was successfully invalidated
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             datasources = CacheInvalidationRequestSchema().load(request.json)

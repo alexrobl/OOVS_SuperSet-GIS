@@ -184,10 +184,10 @@ class SqlJsonExecutionContext:  # pylint: disable=too-many-instance-attributes
         try:
             if hasattr(self, "query"):
                 if self.query.id:
-                    return "query '{}' - '{}'".format(self.query.id, self.query.sql)
+                    return "query "{}" - "{}"".format(self.query.id, self.query.sql)
         except DetachedInstanceError:
             pass
-        return "query '{}'".format(self.sql)
+        return "query "{}"".format(self.sql)
 
 
 class CreateTableAsSelect:  # pylint: disable=too-few-public-methods

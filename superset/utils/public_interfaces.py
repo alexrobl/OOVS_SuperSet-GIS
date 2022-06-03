@@ -70,5 +70,5 @@ def get_warning_message(obj: Callable[..., Any], expected_hash: str) -> str:
         f"line {lineno}) has a public interface which has currently been "
         "modified. This MUST only be released in a new major version of "
         "Superset according to SIP-57. To remove this warning message "
-        f"update the associated hash to '{expected_hash}'.\n\n{code}"
+        f"update the associated hash to "{expected_hash}".\n\n{code}"
     )

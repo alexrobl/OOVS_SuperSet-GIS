@@ -38,7 +38,7 @@ if TYPE_CHECKING:
     from superset.models.core import Database
 
 
-SYNTAX_ERROR_REGEX = re.compile('SQLError: near "(?P<server_error>.*?)": syntax error')
+SYNTAX_ERROR_REGEX = re.compile("SQLError: near "(?P<server_error>.*?)": syntax error")
 
 ma_plugin = MarshmallowPlugin()
 
@@ -72,7 +72,7 @@ class GSheetsEngineSpec(SqliteEngineSpec):
     custom_errors: Dict[Pattern[str], Tuple[str, SupersetErrorType, Dict[str, Any]]] = {
         SYNTAX_ERROR_REGEX: (
             __(
-                'Please check your query for syntax errors near "%(server_error)s". '
+                "Please check your query for syntax errors near "%(server_error)s". "
                 "Then, try running your query again.",
             ),
             SupersetErrorType.SYNTAX_ERROR,
@@ -102,7 +102,7 @@ class GSheetsEngineSpec(SqliteEngineSpec):
         engine = cls.get_engine(database, schema=schema_name)
         with closing(engine.raw_connection()) as conn:
             cursor = conn.cursor()
-            cursor.execute(f'SELECT GET_METADATA("{table_name}")')
+            cursor.execute(f"SELECT GET_METADATA("{table_name}")")
             results = cursor.fetchone()[0]
 
         try:
@@ -211,7 +211,7 @@ class GSheetsEngineSpec(SqliteEngineSpec):
                 return errors
 
             try:
-                results = conn.execute(f'SELECT * FROM "{url}" LIMIT 1')
+                results = conn.execute(f"SELECT * FROM "{url}" LIMIT 1")
                 results.fetchall()
             except Exception:  # pylint: disable=broad-except
                 errors.append(

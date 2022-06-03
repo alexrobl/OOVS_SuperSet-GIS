@@ -69,7 +69,7 @@ class ExportDatabasesCommand(ExportModelsCommand):
         )
 
         # https://github.com/apache/superset/pull/16756 renamed ``allow_csv_upload``
-        # to ``allow_file_upload`, but we can't change the V1 schema
+        # to ``allow_file_upload`, but we can"t change the V1 schema
         replacements = {"allow_file_upload": "allow_csv_upload"}
         # this preserves key order, which is important
         payload = {replacements.get(key, key): value for key, value in payload.items()}

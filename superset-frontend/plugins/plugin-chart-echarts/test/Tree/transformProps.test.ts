@@ -16,19 +16,19 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { ChartProps, supersetTheme } from '@superset-ui/core';
-import transformProps from '../../src/Tree/transformProps';
+import { ChartProps, supersetTheme } from "@superset-ui/core";
+import transformProps from "../../src/Tree/transformProps";
 
-describe('EchartsTree transformProps', () => {
+describe("EchartsTree transformProps", () => {
   const formData = {
-    colorScheme: 'bnbColors',
-    datasource: '3__table',
-    granularity_sqla: 'ds',
-    metric: 'count',
-    id: 'id_column',
-    parent: 'relation_column',
-    name: 'name_column',
-    rootNodeId: '1',
+    colorScheme: "bnbColors",
+    datasource: "3__table",
+    granularity_sqla: "ds",
+    metric: "count",
+    id: "id_column",
+    parent: "relation_column",
+    name: "name_column",
+    rootNodeId: "1",
   };
   const chartPropsConfig = {
     formData,
@@ -36,33 +36,33 @@ describe('EchartsTree transformProps', () => {
     height: 600,
     theme: supersetTheme,
   };
-  it('should transform when parent present before child', () => {
+  it("should transform when parent present before child", () => {
     const queriesData = [
       {
-        colnames: ['id_column', 'relation_column', 'name_column', 'count'],
+        colnames: ["id_column", "relation_column", "name_column", "count"],
         data: [
           {
-            id_column: '1',
+            id_column: "1",
             relation_column: null,
-            name_column: 'root',
+            name_column: "root",
             count: 10,
           },
           {
-            id_column: '2',
-            relation_column: '1',
-            name_column: 'first_child',
+            id_column: "2",
+            relation_column: "1",
+            name_column: "first_child",
             count: 10,
           },
           {
-            id_column: '3',
-            relation_column: '2',
-            name_column: 'second_child',
+            id_column: "3",
+            relation_column: "2",
+            name_column: "second_child",
             count: 10,
           },
           {
-            id_column: '4',
-            relation_column: '3',
-            name_column: 'third_child',
+            id_column: "4",
+            relation_column: "3",
+            name_column: "third_child",
             count: 10,
           },
         ],
@@ -79,17 +79,17 @@ describe('EchartsTree transformProps', () => {
             expect.objectContaining({
               data: [
                 {
-                  name: 'root',
+                  name: "root",
                   children: [
                     {
-                      name: 'first_child',
+                      name: "first_child",
                       value: 10,
                       children: [
                         {
-                          name: 'second_child',
+                          name: "second_child",
                           value: 10,
                           children: [
-                            { name: 'third_child', value: 10, children: [] },
+                            { name: "third_child", value: 10, children: [] },
                           ],
                         },
                       ],
@@ -103,33 +103,33 @@ describe('EchartsTree transformProps', () => {
       }),
     );
   });
-  it('should transform when child is present before parent', () => {
+  it("should transform when child is present before parent", () => {
     const queriesData = [
       {
-        colnames: ['id_column', 'relation_column', 'name_column', 'count'],
+        colnames: ["id_column", "relation_column", "name_column", "count"],
         data: [
           {
-            id_column: '1',
+            id_column: "1",
             relation_column: null,
-            name_column: 'root',
+            name_column: "root",
             count: 10,
           },
           {
-            id_column: '2',
-            relation_column: '4',
-            name_column: 'second_child',
+            id_column: "2",
+            relation_column: "4",
+            name_column: "second_child",
             count: 20,
           },
           {
-            id_column: '3',
-            relation_column: '4',
-            name_column: 'second_child',
+            id_column: "3",
+            relation_column: "4",
+            name_column: "second_child",
             count: 30,
           },
           {
-            id_column: '4',
-            relation_column: '1',
-            name_column: 'first_child',
+            id_column: "4",
+            relation_column: "1",
+            name_column: "first_child",
             count: 40,
           },
         ],
@@ -146,19 +146,19 @@ describe('EchartsTree transformProps', () => {
             expect.objectContaining({
               data: [
                 {
-                  name: 'root',
+                  name: "root",
                   children: [
                     {
-                      name: 'first_child',
+                      name: "first_child",
                       value: 40,
                       children: [
                         {
-                          name: 'second_child',
+                          name: "second_child",
                           value: 20,
                           children: [],
                         },
                         {
-                          name: 'second_child',
+                          name: "second_child",
                           value: 30,
                           children: [],
                         },
@@ -173,16 +173,16 @@ describe('EchartsTree transformProps', () => {
       }),
     );
   });
-  it('ignore node if not attached to root', () => {
+  it("ignore node if not attached to root", () => {
     const formData = {
-      colorScheme: 'bnbColors',
-      datasource: '3__table',
-      granularity_sqla: 'ds',
-      metric: 'count',
-      id: 'id_column',
-      parent: 'relation_column',
-      name: 'name_column',
-      rootNodeId: '2',
+      colorScheme: "bnbColors",
+      datasource: "3__table",
+      granularity_sqla: "ds",
+      metric: "count",
+      id: "id_column",
+      parent: "relation_column",
+      name: "name_column",
+      rootNodeId: "2",
     };
     const chartPropsConfig = {
       formData,
@@ -192,30 +192,30 @@ describe('EchartsTree transformProps', () => {
     };
     const queriesData = [
       {
-        colnames: ['id_column', 'relation_column', 'name_column', 'count'],
+        colnames: ["id_column", "relation_column", "name_column", "count"],
         data: [
           {
-            id_column: '1',
+            id_column: "1",
             relation_column: null,
-            name_column: 'root',
+            name_column: "root",
             count: 10,
           },
           {
-            id_column: '2',
-            relation_column: '1',
-            name_column: 'first_child',
+            id_column: "2",
+            relation_column: "1",
+            name_column: "first_child",
             count: 10,
           },
           {
-            id_column: '3',
-            relation_column: '2',
-            name_column: 'second_child',
+            id_column: "3",
+            relation_column: "2",
+            name_column: "second_child",
             count: 10,
           },
           {
-            id_column: '4',
-            relation_column: '3',
-            name_column: 'third_child',
+            id_column: "4",
+            relation_column: "3",
+            name_column: "third_child",
             count: 20,
           },
         ],
@@ -232,14 +232,14 @@ describe('EchartsTree transformProps', () => {
             expect.objectContaining({
               data: [
                 {
-                  name: 'first_child',
+                  name: "first_child",
                   children: [
                     {
-                      name: 'second_child',
+                      name: "second_child",
                       value: 10,
                       children: [
                         {
-                          name: 'third_child',
+                          name: "third_child",
                           value: 20,
                           children: [],
                         },
@@ -254,15 +254,15 @@ describe('EchartsTree transformProps', () => {
       }),
     );
   });
-  it('should transform props if name column is not specified', () => {
+  it("should transform props if name column is not specified", () => {
     const formData = {
-      colorScheme: 'bnbColors',
-      datasource: '3__table',
-      granularity_sqla: 'ds',
-      metric: 'count',
-      id: 'id_column',
-      parent: 'relation_column',
-      rootNodeId: '1',
+      colorScheme: "bnbColors",
+      datasource: "3__table",
+      granularity_sqla: "ds",
+      metric: "count",
+      id: "id_column",
+      parent: "relation_column",
+      rootNodeId: "1",
     };
     const chartPropsConfig = {
       formData,
@@ -272,26 +272,26 @@ describe('EchartsTree transformProps', () => {
     };
     const queriesData = [
       {
-        colnames: ['id_column', 'relation_column', 'count'],
+        colnames: ["id_column", "relation_column", "count"],
         data: [
           {
-            id_column: '1',
+            id_column: "1",
             relation_column: null,
             count: 10,
           },
           {
-            id_column: '2',
-            relation_column: '1',
+            id_column: "2",
+            relation_column: "1",
             count: 10,
           },
           {
-            id_column: '3',
-            relation_column: '2',
+            id_column: "3",
+            relation_column: "2",
             count: 10,
           },
           {
-            id_column: '4',
-            relation_column: '3',
+            id_column: "4",
+            relation_column: "3",
             count: 20,
           },
         ],
@@ -308,18 +308,18 @@ describe('EchartsTree transformProps', () => {
             expect.objectContaining({
               data: [
                 {
-                  name: '1',
+                  name: "1",
                   children: [
                     {
-                      name: '2',
+                      name: "2",
                       value: 10,
                       children: [
                         {
-                          name: '3',
+                          name: "3",
                           value: 10,
                           children: [
                             {
-                              name: '4',
+                              name: "4",
                               value: 20,
                               children: [],
                             },
@@ -336,15 +336,15 @@ describe('EchartsTree transformProps', () => {
       }),
     );
   });
-  it('should find root node with null parent when root node name is not provided', () => {
+  it("should find root node with null parent when root node name is not provided", () => {
     const formData = {
-      colorScheme: 'bnbColors',
-      datasource: '3__table',
-      granularity_sqla: 'ds',
-      metric: 'count',
-      id: 'id_column',
-      parent: 'relation_column',
-      name: 'name_column',
+      colorScheme: "bnbColors",
+      datasource: "3__table",
+      granularity_sqla: "ds",
+      metric: "count",
+      id: "id_column",
+      parent: "relation_column",
+      name: "name_column",
     };
     const chartPropsConfig = {
       formData,
@@ -354,30 +354,30 @@ describe('EchartsTree transformProps', () => {
     };
     const queriesData = [
       {
-        colnames: ['id_column', 'relation_column', 'name_column', 'count'],
+        colnames: ["id_column", "relation_column", "name_column", "count"],
         data: [
           {
-            id_column: '2',
-            relation_column: '4',
-            name_column: 'second_child',
+            id_column: "2",
+            relation_column: "4",
+            name_column: "second_child",
             count: 20,
           },
           {
-            id_column: '3',
-            relation_column: '4',
-            name_column: 'second_child',
+            id_column: "3",
+            relation_column: "4",
+            name_column: "second_child",
             count: 30,
           },
           {
-            id_column: '4',
-            relation_column: '1',
-            name_column: 'first_child',
+            id_column: "4",
+            relation_column: "1",
+            name_column: "first_child",
             count: 40,
           },
           {
-            id_column: '1',
+            id_column: "1",
             relation_column: null,
-            name_column: 'root',
+            name_column: "root",
             count: 10,
           },
         ],
@@ -394,19 +394,19 @@ describe('EchartsTree transformProps', () => {
             expect.objectContaining({
               data: [
                 {
-                  name: 'root',
+                  name: "root",
                   children: [
                     {
-                      name: 'first_child',
+                      name: "first_child",
                       value: 40,
                       children: [
                         {
-                          name: 'second_child',
+                          name: "second_child",
                           value: 20,
                           children: [],
                         },
                         {
-                          name: 'second_child',
+                          name: "second_child",
                           value: 30,
                           children: [],
                         },

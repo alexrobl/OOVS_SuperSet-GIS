@@ -16,12 +16,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t, ChartMetadata, ChartPlugin, Behavior } from '@superset-ui/core';
-import controlPanel from './controlPanel';
-import transformProps from './transformProps';
-import thumbnail from './images/thumbnail.png';
-import buildQuery from './buildQuery';
-import { EchartsGaugeChartProps, EchartsGaugeFormData } from './types';
+import { t, ChartMetadata, ChartPlugin, Behavior } from "@superset-ui/core";
+import controlPanel from "./controlPanel";
+import transformProps from "./transformProps";
+import thumbnail from "./images/thumbnail.png";
+import buildQuery from "./buildQuery";
+import { EchartsGaugeChartProps, EchartsGaugeFormData } from "./types";
 
 export default class EchartsGaugeChartPlugin extends ChartPlugin<
   EchartsGaugeFormData,
@@ -31,21 +31,21 @@ export default class EchartsGaugeChartPlugin extends ChartPlugin<
     super({
       buildQuery,
       controlPanel,
-      loadChart: () => import('./EchartsGauge'),
+      loadChart: () => import("./EchartsGauge"),
       metadata: new ChartMetadata({
         behaviors: [Behavior.INTERACTIVE_CHART],
-        category: t('KPI'),
-        credits: ['https://echarts.apache.org'],
+        category: t("KPI"),
+        credits: ["https://echarts.apache.org"],
         description: t(
-          'Uses a gauge to showcase progress of a metric towards a target. The position of the dial represents the progress and the terminal value in the gauge represents the target value.',
+          "Uses a gauge to showcase progress of a metric towards a target. The position of the dial represents the progress and the terminal value in the gauge represents the target value.",
         ),
-        name: t('Gauge Chart'),
+        name: t("Gauge Chart"),
         tags: [
-          t('Multi-Variables'),
-          t('Business'),
-          t('Comparison'),
-          t('ECharts'),
-          t('Report'),
+          t("Multi-Variables"),
+          t("Business"),
+          t("Comparison"),
+          t("ECharts"),
+          t("Report"),
         ],
         thumbnail,
       }),

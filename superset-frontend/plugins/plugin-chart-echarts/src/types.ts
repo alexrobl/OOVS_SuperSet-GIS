@@ -20,10 +20,10 @@ import {
   DataRecordValue,
   QueryFormColumn,
   SetDataMaskHook,
-} from '@superset-ui/core';
-import { EChartsCoreOption, ECharts } from 'echarts';
-import { TooltipMarker } from 'echarts/types/src/util/format';
-import { OptionName } from 'echarts/types/src/util/types';
+} from "@superset-ui/core";
+import { EChartsCoreOption, ECharts } from "echarts";
+import { TooltipMarker } from "echarts/types/src/util/format";
+import { OptionName } from "echarts/types/src/util/types";
 
 export type EchartsStylesProps = {
   height: number;
@@ -45,10 +45,10 @@ export interface EchartsHandler {
 }
 
 export enum ForecastSeriesEnum {
-  Observation = '',
-  ForecastTrend = '__yhat',
-  ForecastUpper = '__yhat_upper',
-  ForecastLower = '__yhat_lower',
+  Observation = "",
+  ForecastTrend = "__yhat",
+  ForecastUpper = "__yhat_upper",
+  ForecastLower = "__yhat_lower",
 }
 
 export type ForecastSeriesContext = {
@@ -57,15 +57,15 @@ export type ForecastSeriesContext = {
 };
 
 export enum LegendOrientation {
-  Top = 'top',
-  Bottom = 'bottom',
-  Left = 'left',
-  Right = 'right',
+  Top = "top",
+  Bottom = "bottom",
+  Left = "left",
+  Right = "right",
 }
 
 export enum LegendType {
-  Scroll = 'scroll',
-  Plain = 'plain',
+  Scroll = "scroll",
+  Plain = "plain",
 }
 
 export type ForecastValue = {
@@ -93,19 +93,19 @@ export const DEFAULT_LEGEND_FORM_DATA: EchartsLegendFormData = {
 export type EventHandlers = Record<string, { (props: any): void }>;
 
 export enum LabelPositionEnum {
-  Top = 'top',
-  Left = 'left',
-  Right = 'right',
-  Bottom = 'bottom',
-  Inside = 'inside',
-  InsideLeft = 'insideLeft',
-  InsideRight = 'insideRight',
-  InsideTop = 'insideTop',
-  InsideBottom = 'insideBottom',
-  InsideTopLeft = 'insideTopLeft',
-  InsideBottomLeft = 'insideBottomLeft',
-  InsideTopRight = 'insideTopRight',
-  InsideBottomRight = 'insideBottomRight',
+  Top = "top",
+  Left = "left",
+  Right = "right",
+  Bottom = "bottom",
+  Inside = "inside",
+  InsideLeft = "insideLeft",
+  InsideRight = "insideRight",
+  InsideTop = "insideTop",
+  InsideBottom = "insideBottom",
+  InsideTopLeft = "insideTopLeft",
+  InsideBottomLeft = "insideBottomLeft",
+  InsideTopRight = "insideTopRight",
+  InsideBottomRight = "insideBottomRight",
 }
 
 export interface EChartTransformedProps<F> {
@@ -130,11 +130,11 @@ export interface EchartsTitleFormData {
 }
 
 export const DEFAULT_TITLE_FORM_DATA: EchartsTitleFormData = {
-  xAxisTitle: '',
+  xAxisTitle: "",
   xAxisTitleMargin: 0,
-  yAxisTitle: '',
+  yAxisTitle: "",
   yAxisTitleMargin: 0,
-  yAxisTitlePosition: 'Top',
+  yAxisTitlePosition: "Top",
 };
 
-export * from './Timeseries/types';
+export * from "./Timeseries/types";

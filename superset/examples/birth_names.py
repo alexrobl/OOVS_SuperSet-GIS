@@ -146,7 +146,7 @@ def _add_table_metrics(datasource: SqlaTable) -> None:
         columns.append(
             TableColumn(
                 column_name="num_california",
-                expression=f"CASE WHEN {col_state} = 'CA' THEN {col_num} ELSE 0 END",
+                expression=f"CASE WHEN {col_state} = "CA" THEN {col_num} ELSE 0 END",
             )
         )
 
@@ -450,7 +450,7 @@ def create_slices(tbl: SqlaTable, admin_owner: bool) -> Tuple[List[Slice], List[
                     "expressionType": "SIMPLE",
                     "column": {
                         "column_name": "num_california",
-                        "expression": "CASE WHEN state = 'CA' THEN num ELSE 0 END",
+                        "expression": "CASE WHEN state = "CA" THEN num ELSE 0 END",
                     },
                     "aggregate": "SUM",
                     "label": "SUM(num_california)",
@@ -470,7 +470,7 @@ def create_slices(tbl: SqlaTable, admin_owner: bool) -> Tuple[List[Slice], List[
                         "expressionType": "SIMPLE",
                         "column": {
                             "column_name": "num_california",
-                            "expression": "CASE WHEN state = 'CA' THEN num ELSE 0 END",
+                            "expression": "CASE WHEN state = "CA" THEN num ELSE 0 END",
                         },
                         "aggregate": "SUM",
                         "label": "SUM(num_california)",
@@ -483,7 +483,7 @@ def create_slices(tbl: SqlaTable, admin_owner: bool) -> Tuple[List[Slice], List[
                     "expressionType": "SIMPLE",
                     "column": {
                         "column_name": "num_california",
-                        "expression": "CASE WHEN state = 'CA' THEN num ELSE 0 END",
+                        "expression": "CASE WHEN state = "CA" THEN num ELSE 0 END",
                     },
                     "aggregate": "SUM",
                     "label": "SUM(num_california)",
@@ -504,7 +504,7 @@ def create_slices(tbl: SqlaTable, admin_owner: bool) -> Tuple[List[Slice], List[
                     "expressionType": "SIMPLE",
                     "column": {
                         "column_name": "num_california",
-                        "expression": "CASE WHEN state = 'CA' THEN num ELSE 0 END",
+                        "expression": "CASE WHEN state = "CA" THEN num ELSE 0 END",
                     },
                     "aggregate": "SUM",
                     "label": "SUM(num_california)",
@@ -845,7 +845,7 @@ def create_dashboard(slices: List[Slice]) -> Dashboard:
         )
     )
     # pylint: enable=line-too-long
-    # dashboard v2 doesn't allow add markup slice
+    # dashboard v2 doesn"t allow add markup slice
     dash.slices = [slc for slc in slices if slc.viz_type != "markup"]
     update_slice_ids(pos)
     dash.dashboard_title = "USA Births Names"

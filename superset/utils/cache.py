@@ -181,11 +181,11 @@ def etag_cache(
                 try:
                     raise_for_access(*args, **kwargs)
                 except Exception:  # pylint: disable=broad-except
-                    # If there's no access, bypass the cache and let the function
+                    # If there"s no access, bypass the cache and let the function
                     # handle the response.
                     return f(*args, **kwargs)
 
-            # for POST requests we can't set cache headers, use the response
+            # for POST requests we can"t set cache headers, use the response
             # cache nor use conditional requests; this will still use the
             # dataframe cache in `superset/viz.py`, though.
             if request.method == "POST" or (skip and skip(*args, **kwargs)):
@@ -208,7 +208,7 @@ def etag_cache(
                 logger.exception("Exception possibly due to cache backend.")
 
             # Check if the cache is stale. Default the content_changed_time to now
-            # if we don't know when it was last modified.
+            # if we don"t know when it was last modified.
             content_changed_time = datetime.utcnow()
             if get_last_modified:
                 content_changed_time = get_last_modified(*args, **kwargs)
@@ -226,7 +226,7 @@ def etag_cache(
                 response = f(*args, **kwargs)
 
                 # add headers for caching: Last Modified, Expires and ETag
-                # always revalidate the cache if we're checking permissions or
+                # always revalidate the cache if we"re checking permissions or
                 # if the response was modified
                 if get_last_modified or raise_for_access:
                     # `Cache-Control: no-cache` asks the browser to always store

@@ -40,14 +40,14 @@ class TrinoEngineSpec(BaseEngineSpec):
 
     _time_grain_expressions = {
         None: "{col}",
-        "PT1S": "date_trunc('second', CAST({col} AS TIMESTAMP))",
-        "PT1M": "date_trunc('minute', CAST({col} AS TIMESTAMP))",
-        "PT1H": "date_trunc('hour', CAST({col} AS TIMESTAMP))",
-        "P1D": "date_trunc('day', CAST({col} AS TIMESTAMP))",
-        "P1W": "date_trunc('week', CAST({col} AS TIMESTAMP))",
-        "P1M": "date_trunc('month', CAST({col} AS TIMESTAMP))",
-        "P3M": "date_trunc('quarter', CAST({col} AS TIMESTAMP))",
-        "P1Y": "date_trunc('year', CAST({col} AS TIMESTAMP))",
+        "PT1S": "date_trunc("second", CAST({col} AS TIMESTAMP))",
+        "PT1M": "date_trunc("minute", CAST({col} AS TIMESTAMP))",
+        "PT1H": "date_trunc("hour", CAST({col} AS TIMESTAMP))",
+        "P1D": "date_trunc("day", CAST({col} AS TIMESTAMP))",
+        "P1W": "date_trunc("week", CAST({col} AS TIMESTAMP))",
+        "P1M": "date_trunc("month", CAST({col} AS TIMESTAMP))",
+        "P3M": "date_trunc("quarter", CAST({col} AS TIMESTAMP))",
+        "P1Y": "date_trunc("year", CAST({col} AS TIMESTAMP))",
         # "1969-12-28T00:00:00Z/P1W",  # Week starting Sunday
         # "1969-12-29T00:00:00Z/P1W",  # Week starting Monday
         # "P1W/1970-01-03T00:00:00Z",  # Week ending Saturday
@@ -71,12 +71,12 @@ class TrinoEngineSpec(BaseEngineSpec):
         """
         tt = target_type.upper()
         if tt == utils.TemporalType.DATE:
-            return f"DATE '{dttm.date().isoformat()}'"
+            return f"DATE "{dttm.date().isoformat()}""
         if tt in (
             utils.TemporalType.TIMESTAMP,
             utils.TemporalType.TIMESTAMP_WITH_TIME_ZONE,
         ):
-            return f"""TIMESTAMP '{dttm.isoformat(timespec="microseconds", sep=" ")}'"""
+            return f"""TIMESTAMP "{dttm.isoformat(timespec="microseconds", sep=" ")}""""
         return None
 
     @classmethod
@@ -254,8 +254,8 @@ class TrinoEngineSpec(BaseEngineSpec):
                     trino_auth = allowed_extra_auths.get(auth_method)
                 else:
                     raise ValueError(
-                        f"For security reason, custom authentication '{auth_method}' "
-                        f"must be listed in 'ALLOWED_EXTRA_AUTHENTICATIONS' config"
+                        f"For security reason, custom authentication "{auth_method}" "
+                        f"must be listed in "ALLOWED_EXTRA_AUTHENTICATIONS" config"
                     )
 
             connect_args["auth"] = trino_auth(**auth_params)

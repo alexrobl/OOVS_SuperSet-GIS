@@ -50,7 +50,7 @@ CONNECTION_DATABASE_PERMISSIONS_REGEX = re.compile(
 )
 
 TABLE_DOES_NOT_EXIST_REGEX = re.compile(
-    'Table name "(?P<table>.*?)" missing dataset while no default '
+    "Table name "(?P<table>.*?)" missing dataset while no default "
     "dataset is set in the request"
 )
 
@@ -64,7 +64,7 @@ SCHEMA_DOES_NOT_EXIST_REGEX = re.compile(
 )
 
 SYNTAX_ERROR_REGEX = re.compile(
-    'Syntax error: Expected end of input but got identifier "(?P<syntax_error>.+?)"'
+    "Syntax error: Expected end of input but got identifier "(?P<syntax_error>.+?)""
 )
 
 ma_plugin = MarshmallowPlugin()
@@ -84,7 +84,7 @@ class BigQueryParametersType(TypedDict):
 
 
 class BigQueryEngineSpec(BaseEngineSpec):
-    """Engine spec for Google's BigQuery
+    """Engine spec for Google"s BigQuery
 
     As contributed by @mxmzdlv on issue #945"""
 
@@ -96,7 +96,7 @@ class BigQueryEngineSpec(BaseEngineSpec):
     default_driver = "bigquery"
     sqlalchemy_uri_placeholder = "bigquery://{project_id}"
 
-    # BigQuery doesn't maintain context when running multiple statements in the
+    # BigQuery doesn"t maintain context when running multiple statements in the
     # same cursor, so we need to run all statements at once
     run_multiple_statements_as_one = True
 
@@ -157,20 +157,20 @@ class BigQueryEngineSpec(BaseEngineSpec):
         ),
         TABLE_DOES_NOT_EXIST_REGEX: (
             __(
-                'The table "%(table)s" does not exist. '
+                "The table "%(table)s" does not exist. "
                 "A valid table must be used to run this query.",
             ),
             SupersetErrorType.TABLE_DOES_NOT_EXIST_ERROR,
             {},
         ),
         COLUMN_DOES_NOT_EXIST_REGEX: (
-            __('We can\'t seem to resolve column "%(column)s" at line %(location)s.'),
+            __("We can\"t seem to resolve column "%(column)s" at line %(location)s."),
             SupersetErrorType.COLUMN_DOES_NOT_EXIST_ERROR,
             {},
         ),
         SCHEMA_DOES_NOT_EXIST_REGEX: (
             __(
-                'The schema "%(schema)s" does not exist. '
+                "The schema "%(schema)s" does not exist. "
                 "A valid schema must be used to run this query."
             ),
             SupersetErrorType.SCHEMA_DOES_NOT_EXIST_ERROR,
@@ -179,7 +179,7 @@ class BigQueryEngineSpec(BaseEngineSpec):
         SYNTAX_ERROR_REGEX: (
             __(
                 "Please check your query for syntax errors at or near "
-                '"%(syntax_error)s". Then, try running your query again.'
+                ""%(syntax_error)s". Then, try running your query again."
             ),
             SupersetErrorType.SYNTAX_ERROR,
             {},
@@ -192,13 +192,13 @@ class BigQueryEngineSpec(BaseEngineSpec):
     ) -> Optional[str]:
         tt = target_type.upper()
         if tt == utils.TemporalType.DATE:
-            return f"CAST('{dttm.date().isoformat()}' AS DATE)"
+            return f"CAST("{dttm.date().isoformat()}" AS DATE)"
         if tt == utils.TemporalType.DATETIME:
-            return f"""CAST('{dttm.isoformat(timespec="microseconds")}' AS DATETIME)"""
+            return f"""CAST("{dttm.isoformat(timespec="microseconds")}" AS DATETIME)"""
         if tt == utils.TemporalType.TIME:
-            return f"""CAST('{dttm.strftime("%H:%M:%S.%f")}' AS TIME)"""
+            return f"""CAST("{dttm.strftime("%H:%M:%S.%f")}" AS TIME)"""
         if tt == utils.TemporalType.TIMESTAMP:
-            return f"""CAST('{dttm.isoformat(timespec="microseconds")}' AS TIMESTAMP)"""
+            return f"""CAST("{dttm.isoformat(timespec="microseconds")}" AS TIMESTAMP)"""
         return None
 
     @classmethod
@@ -257,8 +257,8 @@ class BigQueryEngineSpec(BaseEngineSpec):
         """
         normalized_idxs = []
         # Fixing a bug/behavior observed in pybigquery==0.4.15 where
-        # the index's `column_names` == [None]
-        # Here we're returning only non-None indexes
+        # the index"s `column_names` == [None]
+        # Here we"re returning only non-None indexes
         for ix in indexes:
             column_names = ix.get("column_names") or []
             ix["column_names"] = [col for col in column_names if col is not None]

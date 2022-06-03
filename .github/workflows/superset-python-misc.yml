@@ -29,14 +29,14 @@ jobs:
         continue-on-error: true
         run: ./scripts/ci_check_no_file_changes.sh python
       - name: Setup Python
-        if: steps.check.outcome == 'failure'
+        if: steps.check.outcome == "failure"
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-          cache: 'pip'
-          cache-dependency-path: 'requirements/testing.txt'
+          cache: "pip"
+          cache-dependency-path: "requirements/testing.txt"
       - name: Install dependencies
-        if: steps.check.outcome == 'failure'
+        if: steps.check.outcome == "failure"
         uses: ./.github/actions/cached-dependencies
         with:
           run: |
@@ -45,7 +45,7 @@ jobs:
             pip install wheel
             pip install -r requirements/testing.txt
       - name: pylint
-        if: steps.check.outcome == 'failure'
+        if: steps.check.outcome == "failure"
         # `-j 0` run Pylint in parallel
         run: pylint -j 0 superset
 
@@ -65,7 +65,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-          cache: 'pip'
+          cache: "pip"
           cache-dependency-path: |
             requirements/base.txt
             requirements/integration.txt
@@ -97,8 +97,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-          cache: 'pip'
-          cache-dependency-path: 'requirements/base.txt'
+          cache: "pip"
+          cache-dependency-path: "requirements/base.txt"
       - name: Install dependencies
         uses: ./.github/actions/cached-dependencies
         with:

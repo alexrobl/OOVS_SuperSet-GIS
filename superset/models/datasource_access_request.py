@@ -77,7 +77,7 @@ class DatasourceAccessRequest(Model, AuditMixinNullable):
                 f"datasource_id={self.datasource_id}&"
                 f"created_by={self.created_by.username}&role_to_grant={role.name}"
             )
-            link = '<a href="{}">Grant {} Role</a>'.format(href, role.name)
+            link = "<a href="{}">Grant {} Role</a>".format(href, role.name)
             action_list = action_list + "<li>" + link + "</li>"
         return "<ul>" + action_list + "</ul>"
 
@@ -90,7 +90,7 @@ class DatasourceAccessRequest(Model, AuditMixinNullable):
                 f"datasource_id={self.datasource_id}&"
                 f"created_by={self.created_by.username}&role_to_extend={role.name}"
             )
-            link = '<a href="{}">Extend {} Role</a>'.format(href, role.name)
+            link = "<a href="{}">Extend {} Role</a>".format(href, role.name)
             if role.name in self.ROLES_DENYLIST:
                 link = "{} Role".format(role.name)
             action_list = action_list + "<li>" + link + "</li>"

@@ -16,9 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React from 'react';
-import { FeatureFlag, isFeatureEnabled, t } from '@superset-ui/core';
-import { cloneDeep } from 'lodash';
+import React from "react";
+import { FeatureFlag, isFeatureEnabled, t } from "@superset-ui/core";
+import { cloneDeep } from "lodash";
 import {
   ControlPanelConfig,
   ControlPanelSectionConfig,
@@ -27,11 +27,11 @@ import {
   emitFilterControl,
   sections,
   sharedControls,
-} from '@superset-ui/chart-controls';
+} from "@superset-ui/chart-controls";
 
-import { DEFAULT_FORM_DATA } from './types';
-import { EchartsTimeseriesSeriesType } from '../Timeseries/types';
-import { legendSection, richTooltipSection, xAxisControl } from '../controls';
+import { DEFAULT_FORM_DATA } from "./types";
+import { EchartsTimeseriesSeriesType } from "../Timeseries/types";
+import { legendSection, richTooltipSection, xAxisControl } from "../controls";
 
 const {
   area,
@@ -103,10 +103,10 @@ function createQuerySection(
         {
           name: `order_desc${controlSuffix}`,
           config: {
-            type: 'CheckboxControl',
-            label: t('Sort Descending'),
+            type: "CheckboxControl",
+            label: t("Sort Descending"),
             default: orderDesc,
-            description: t('Whether to sort descending or ascending'),
+            description: t("Whether to sort descending or ascending"),
           },
         },
       ],
@@ -133,20 +133,20 @@ function createCustomizeSection(
       {
         name: `seriesType${controlSuffix}`,
         config: {
-          type: 'SelectControl',
-          label: t('Series type'),
+          type: "SelectControl",
+          label: t("Series type"),
           renderTrigger: true,
           default: seriesType,
           choices: [
-            [EchartsTimeseriesSeriesType.Line, 'Line'],
-            [EchartsTimeseriesSeriesType.Scatter, 'Scatter'],
-            [EchartsTimeseriesSeriesType.Smooth, 'Smooth Line'],
-            [EchartsTimeseriesSeriesType.Bar, 'Bar'],
-            [EchartsTimeseriesSeriesType.Start, 'Step - start'],
-            [EchartsTimeseriesSeriesType.Middle, 'Step - middle'],
-            [EchartsTimeseriesSeriesType.End, 'Step - end'],
+            [EchartsTimeseriesSeriesType.Line, "Line"],
+            [EchartsTimeseriesSeriesType.Scatter, "Scatter"],
+            [EchartsTimeseriesSeriesType.Smooth, "Smooth Line"],
+            [EchartsTimeseriesSeriesType.Bar, "Bar"],
+            [EchartsTimeseriesSeriesType.Start, "Step - start"],
+            [EchartsTimeseriesSeriesType.Middle, "Step - middle"],
+            [EchartsTimeseriesSeriesType.End, "Step - end"],
           ],
-          description: t('Series chart type (line, bar etc)'),
+          description: t("Series chart type (line, bar etc)"),
         },
       },
     ],
@@ -154,11 +154,11 @@ function createCustomizeSection(
       {
         name: `stack${controlSuffix}`,
         config: {
-          type: 'CheckboxControl',
-          label: t('Stack series'),
+          type: "CheckboxControl",
+          label: t("Stack series"),
           renderTrigger: true,
           default: stack,
-          description: t('Stack series on top of each other'),
+          description: t("Stack series on top of each other"),
         },
       },
     ],
@@ -166,12 +166,12 @@ function createCustomizeSection(
       {
         name: `area${controlSuffix}`,
         config: {
-          type: 'CheckboxControl',
-          label: t('Area chart'),
+          type: "CheckboxControl",
+          label: t("Area chart"),
           renderTrigger: true,
           default: area,
           description: t(
-            'Draw area under curves. Only applicable for line types.',
+            "Draw area under curves. Only applicable for line types.",
           ),
         },
       },
@@ -180,12 +180,12 @@ function createCustomizeSection(
       {
         name: `show_value${controlSuffix}`,
         config: {
-          type: 'CheckboxControl',
-          label: t('Show Values'),
+          type: "CheckboxControl",
+          label: t("Show Values"),
           renderTrigger: true,
           default: showValues,
           description: t(
-            'Whether to display the numerical values within the cells',
+            "Whether to display the numerical values within the cells",
           ),
         },
       },
@@ -194,14 +194,14 @@ function createCustomizeSection(
       {
         name: `opacity${controlSuffix}`,
         config: {
-          type: 'SliderControl',
-          label: t('Opacity'),
+          type: "SliderControl",
+          label: t("Opacity"),
           renderTrigger: true,
           min: 0,
           max: 1,
           step: 0.1,
           default: opacity,
-          description: t('Opacity of area chart.'),
+          description: t("Opacity of area chart."),
         },
       },
     ],
@@ -209,12 +209,12 @@ function createCustomizeSection(
       {
         name: `markerEnabled${controlSuffix}`,
         config: {
-          type: 'CheckboxControl',
-          label: t('Marker'),
+          type: "CheckboxControl",
+          label: t("Marker"),
           renderTrigger: true,
           default: markerEnabled,
           description: t(
-            'Draw a marker on data points. Only applicable for line types.',
+            "Draw a marker on data points. Only applicable for line types.",
           ),
         },
       },
@@ -223,14 +223,14 @@ function createCustomizeSection(
       {
         name: `markerSize${controlSuffix}`,
         config: {
-          type: 'SliderControl',
-          label: t('Marker size'),
+          type: "SliderControl",
+          label: t("Marker size"),
           renderTrigger: true,
           min: 0,
           max: 100,
           default: markerSize,
           description: t(
-            'Size of marker. Also applies to forecast observations.',
+            "Size of marker. Also applies to forecast observations.",
           ),
         },
       },
@@ -239,16 +239,16 @@ function createCustomizeSection(
       {
         name: `yAxisIndex${controlSuffix}`,
         config: {
-          type: 'SelectControl',
-          label: t('Y Axis'),
+          type: "SelectControl",
+          label: t("Y Axis"),
           choices: [
-            [0, t('Primary')],
-            [1, t('Secondary')],
+            [0, t("Primary")],
+            [1, t("Secondary")],
           ],
           default: yAxisIndex,
           clearable: false,
           renderTrigger: true,
-          description: t('Primary or secondary y-axis'),
+          description: t("Primary or secondary y-axis"),
         },
       },
     ],
@@ -280,27 +280,27 @@ const config: ControlPanelConfig = {
     sections.legacyTimeseriesTime,
     isFeatureEnabled(FeatureFlag.GENERIC_CHART_AXES)
       ? {
-          label: t('Shared query fields'),
+          label: t("Shared query fields"),
           expanded: true,
           controlSetRows: [[xAxisControl]],
         }
       : null,
-    createQuerySection(t('Query A'), ''),
-    createAdvancedAnalyticsSection(t('Advanced analytics Query A'), ''),
-    createQuerySection(t('Query B'), '_b'),
-    createAdvancedAnalyticsSection(t('Advanced analytics Query B'), '_b'),
+    createQuerySection(t("Query A"), ""),
+    createAdvancedAnalyticsSection(t("Advanced analytics Query A"), ""),
+    createQuerySection(t("Query B"), "_b"),
+    createAdvancedAnalyticsSection(t("Advanced analytics Query B"), "_b"),
     {
-      label: t('Annotations and Layers'),
+      label: t("Annotations and Layers"),
       expanded: false,
       controlSetRows: [
         [
           {
-            name: 'annotation_layers',
+            name: "annotation_layers",
             config: {
-              type: 'AnnotationLayerControl',
-              label: '',
+              type: "AnnotationLayerControl",
+              label: "",
               default: annotationLayers,
-              description: t('Annotation Layers'),
+              description: t("Annotation Layers"),
             },
           },
         ],
@@ -308,89 +308,89 @@ const config: ControlPanelConfig = {
     },
     sections.titleControls,
     {
-      label: t('Chart Options'),
+      label: t("Chart Options"),
       expanded: true,
       controlSetRows: [
-        ['color_scheme'],
-        ...createCustomizeSection(t('Query A'), ''),
-        ...createCustomizeSection(t('Query B'), 'B'),
+        ["color_scheme"],
+        ...createCustomizeSection(t("Query A"), ""),
+        ...createCustomizeSection(t("Query B"), "B"),
         [
           {
-            name: 'zoomable',
+            name: "zoomable",
             config: {
-              type: 'CheckboxControl',
-              label: t('Data Zoom'),
+              type: "CheckboxControl",
+              label: t("Data Zoom"),
               default: zoomable,
               renderTrigger: true,
-              description: t('Enable data zooming controls'),
+              description: t("Enable data zooming controls"),
             },
           },
         ],
         ...legendSection,
-        [<div className="section-header">{t('X Axis')}</div>],
-        ['x_axis_time_format'],
+        [<div className="section-header">{t("X Axis")}</div>],
+        ["x_axis_time_format"],
         [
           {
-            name: 'xAxisLabelRotation',
+            name: "xAxisLabelRotation",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
               clearable: false,
-              label: t('Rotate x axis label'),
+              label: t("Rotate x axis label"),
               choices: [
-                [0, '0°'],
-                [45, '45°'],
+                [0, "0°"],
+                [45, "45°"],
               ],
               default: xAxisLabelRotation,
               renderTrigger: true,
               description: t(
-                'Input field supports custom rotation. e.g. 30 for 30°',
+                "Input field supports custom rotation. e.g. 30 for 30°",
               ),
             },
           },
         ],
         ...richTooltipSection,
         // eslint-disable-next-line react/jsx-key
-        [<div className="section-header">{t('Y Axis')}</div>],
+        [<div className="section-header">{t("Y Axis")}</div>],
         [
           {
-            name: 'minorSplitLine',
+            name: "minorSplitLine",
             config: {
-              type: 'CheckboxControl',
-              label: t('Minor Split Line'),
+              type: "CheckboxControl",
+              label: t("Minor Split Line"),
               renderTrigger: true,
               default: minorSplitLine,
-              description: t('Draw split lines for minor y-axis ticks'),
+              description: t("Draw split lines for minor y-axis ticks"),
             },
           },
         ],
         [
           {
-            name: 'truncateYAxis',
+            name: "truncateYAxis",
             config: {
-              type: 'CheckboxControl',
-              label: t('Truncate Y Axis'),
+              type: "CheckboxControl",
+              label: t("Truncate Y Axis"),
               default: truncateYAxis,
               renderTrigger: true,
               description: t(
-                'Truncate Y Axis. Can be overridden by specifying a min or max bound.',
+                "Truncate Y Axis. Can be overridden by specifying a min or max bound.",
               ),
             },
           },
         ],
         [
           {
-            name: 'y_axis_bounds',
+            name: "y_axis_bounds",
             config: {
-              type: 'BoundsControl',
-              label: t('Y Axis Bounds'),
+              type: "BoundsControl",
+              label: t("Y Axis Bounds"),
               renderTrigger: true,
               default: yAxisBounds,
               description: t(
-                'Bounds for the Y-axis. When left empty, the bounds are ' +
-                  'dynamically defined based on the min/max of the data. Note that ' +
-                  "this feature will only expand the axis range. It won't " +
-                  "narrow the data's extent.",
+                "Bounds for the Y-axis. When left empty, the bounds are " +
+                  "dynamically defined based on the min/max of the data. Note that " +
+                  "this feature will only expand the axis range. It won"t " +
+                  "narrow the data"s extent.",
               ),
             },
           },
@@ -400,19 +400,19 @@ const config: ControlPanelConfig = {
             name: `y_axis_format`,
             config: {
               ...sharedControls.y_axis_format,
-              label: t('Primary y-axis format'),
+              label: t("Primary y-axis format"),
             },
           },
         ],
         [
           {
-            name: 'logAxis',
+            name: "logAxis",
             config: {
-              type: 'CheckboxControl',
-              label: t('Logarithmic y-axis'),
+              type: "CheckboxControl",
+              label: t("Logarithmic y-axis"),
               renderTrigger: true,
               default: logAxis,
-              description: t('Logarithmic scale on primary y-axis'),
+              description: t("Logarithmic scale on primary y-axis"),
             },
           },
         ],
@@ -421,31 +421,31 @@ const config: ControlPanelConfig = {
             name: `y_axis_format_secondary`,
             config: {
               ...sharedControls.y_axis_format,
-              label: t('Secondary y-axis format'),
+              label: t("Secondary y-axis format"),
             },
           },
         ],
         [
           {
-            name: 'yAxisTitleSecondary',
+            name: "yAxisTitleSecondary",
             config: {
-              type: 'TextControl',
-              label: t('Secondary y-axis title'),
+              type: "TextControl",
+              label: t("Secondary y-axis title"),
               renderTrigger: true,
-              default: '',
-              description: t('Logarithmic y-axis'),
+              default: "",
+              description: t("Logarithmic y-axis"),
             },
           },
         ],
         [
           {
-            name: 'logAxisSecondary',
+            name: "logAxisSecondary",
             config: {
-              type: 'CheckboxControl',
-              label: t('Logarithmic y-axis'),
+              type: "CheckboxControl",
+              label: t("Logarithmic y-axis"),
               renderTrigger: true,
               default: logAxis,
-              description: t('Logarithmic scale on secondary y-axis'),
+              description: t("Logarithmic scale on secondary y-axis"),
             },
           },
         ],

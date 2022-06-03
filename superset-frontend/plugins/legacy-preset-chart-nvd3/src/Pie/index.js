@@ -16,15 +16,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t, ChartMetadata, ChartPlugin } from '@superset-ui/core';
-import transformProps from '../transformProps';
-import thumbnail from './images/thumbnail.png';
-import controlPanel from './controlPanel';
+import { t, ChartMetadata, ChartPlugin } from "@superset-ui/core";
+import transformProps from "../transformProps";
+import thumbnail from "./images/thumbnail.png";
+import controlPanel from "./controlPanel";
 
 const metadata = new ChartMetadata({
-  credits: ['http://nvd3.org'],
-  description: '',
-  name: t('Pie Chart'),
+  credits: ["http://nvd3.org"],
+  description: "",
+  name: t("Pie Chart"),
   thumbnail,
   useLegacyApi: true,
 });
@@ -32,7 +32,7 @@ const metadata = new ChartMetadata({
 export default class PieChartPlugin extends ChartPlugin {
   constructor() {
     super({
-      loadChart: () => import('../ReactNVD3'),
+      loadChart: () => import("../ReactNVD3"),
       metadata,
       transformProps,
       controlPanel,

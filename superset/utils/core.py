@@ -390,7 +390,7 @@ except NameError:
 
 
 def flasher(msg: str, severity: str = "message") -> None:
-    """Flask's flash if available, logging call if not"""
+    """Flask"s flash if available, logging call if not"""
     try:
         flash(msg, severity)
     except RuntimeError:
@@ -407,7 +407,7 @@ def parse_js_uri_path_item(
 
     :param item: a uri path component
     :param unquote: Perform unquoting of string using urllib.parse.unquote_plus()
-    :param eval_undefined: When set to True and item is either 'null'  or 'undefined',
+    :param eval_undefined: When set to True and item is either "null"  or "undefined",
     assume item is undefined and return None.
     :return: Either None, the original item or unquoted item
     """
@@ -418,13 +418,13 @@ def parse_js_uri_path_item(
 def cast_to_num(value: Optional[Union[float, int, str]]) -> Optional[Union[float, int]]:
     """Casts a value to an int/float
 
-    >>> cast_to_num('1 ')
+    >>> cast_to_num("1 ")
     1.0
-    >>> cast_to_num(' 2')
+    >>> cast_to_num(" 2")
     2.0
-    >>> cast_to_num('5')
+    >>> cast_to_num("5")
     5
-    >>> cast_to_num('5.2')
+    >>> cast_to_num("5.2")
     5.2
     >>> cast_to_num(10)
     10
@@ -432,12 +432,12 @@ def cast_to_num(value: Optional[Union[float, int, str]]) -> Optional[Union[float
     10.1
     >>> cast_to_num(None) is None
     True
-    >>> cast_to_num('this is not a string') is None
+    >>> cast_to_num("this is not a string") is None
     True
 
     :param value: value to be converted to numeric representation
     :returns: value cast to `int` if value is all digits, `float` if `value` is
-              decimal value and `None`` if it can't be converted
+              decimal value and `None`` if it can"t be converted
     """
     if value is None:
         return None
@@ -460,16 +460,16 @@ def cast_to_boolean(value: Any) -> Optional[bool]:
     False
     >>> cast_to_boolean(0.5)
     True
-    >>> cast_to_boolean('true')
+    >>> cast_to_boolean("true")
     True
-    >>> cast_to_boolean('false')
+    >>> cast_to_boolean("false")
     False
-    >>> cast_to_boolean('False')
+    >>> cast_to_boolean("False")
     False
     >>> cast_to_boolean(None)
 
     :param value: value to be converted to boolean representation
-    :returns: value cast to `bool`. when value is 'true' or value that are not 0
+    :returns: value cast to `bool`. when value is "true" or value that are not 0
               converted into True. Return `None` if value is `None`
     """
     if value is None:
@@ -529,9 +529,9 @@ def format_timedelta(time_delta: timedelta) -> str:
 
     >>> td = timedelta(0) - timedelta(days=1, hours=5,minutes=6)
     >>> str(td)
-    '-2 days, 18:54:00'
+    "-2 days, 18:54:00"
     >>> format_timedelta(td)
-    '-1 day, 5:06:00'
+    "-1 day, 5:06:00"
     """
     if time_delta < timedelta(0):
         return "-" + str(abs(time_delta))
@@ -571,8 +571,8 @@ def json_iso_dttm_ser(obj: Any, pessimistic: bool = False) -> str:
     json serializer that deals with dates
 
     >>> dttm = datetime(1970, 1, 1)
-    >>> json.dumps({'dttm': dttm}, default=json_iso_dttm_ser)
-    '{"dttm": "1970-01-01T00:00:00"}'
+    >>> json.dumps({"dttm": dttm}, default=json_iso_dttm_ser)
+    "{"dttm": "1970-01-01T00:00:00"}"
     """
     val = base_json_conv(obj)
     if val is not None:
@@ -621,9 +621,9 @@ def error_msg_from_exception(ex: Exception) -> str:
 
     TODO(bkyryliuk): parse the Presto error message from the connection
                      created via create_engine.
-    engine = create_engine('presto://localhost:3506/silver') -
+    engine = create_engine("presto://localhost:3506/silver") -
       gives an e.message as the str(dict)
-    presto.connect('localhost', port=3506, catalog='silver') - as a dict.
+    presto.connect("localhost", port=3506, catalog="silver") - as a dict.
     The latter version is parsed correctly by this function.
     """
     msg = ""
@@ -787,7 +787,7 @@ class SigalrmTimeout:
                 signal.signal(signal.SIGALRM, self.handle_timeout)
                 signal.alarm(self.seconds)
         except ValueError as ex:
-            logger.warning("timeout can't be used in the current context")
+            logger.warning("timeout can"t be used in the current context")
             logger.exception(ex)
 
     def __exit__(  # pylint: disable=redefined-outer-name,redefined-builtin
@@ -796,7 +796,7 @@ class SigalrmTimeout:
         try:
             signal.alarm(0)
         except ValueError as ex:
-            logger.warning("timeout can't be used in the current context")
+            logger.warning("timeout can"t be used in the current context")
             logger.exception(ex)
 
 
@@ -832,12 +832,12 @@ def pessimistic_connection_handling(some_engine: Engine) -> None:
     @event.listens_for(some_engine, "engine_connect")
     def ping_connection(connection: Connection, branch: bool) -> None:
         if branch:
-            # 'branch' refers to a sub-connection of a connection,
-            # we don't want to bother pinging on these.
+            # "branch" refers to a sub-connection of a connection,
+            # we don"t want to bother pinging on these.
             return
 
-        # turn off 'close with result'.  This flag is only used with
-        # 'connectionless' execution, otherwise will be False in any case
+        # turn off "close with result".  This flag is only used with
+        # "connectionless" execution, otherwise will be False in any case
         save_should_close_with_result = connection.should_close_with_result
         connection.should_close_with_result = False
 
@@ -847,9 +847,9 @@ def pessimistic_connection_handling(some_engine: Engine) -> None:
             # appropriately formatted for the backend
             connection.scalar(select([1]))
         except exc.DBAPIError as err:
-            # catch SQLAlchemy's DBAPIError, which is a wrapper
-            # for the DBAPI's exception.  It includes a .connection_invalidated
-            # attribute which specifies if this connection is a 'disconnect'
+            # catch SQLAlchemy"s DBAPIError, which is a wrapper
+            # for the DBAPI"s exception.  It includes a .connection_invalidated
+            # attribute which specifies if this connection is a "disconnect"
             # condition, which is based on inspection of the original exception
             # by the dialect in use.
             if err.connection_invalidated:
@@ -861,7 +861,7 @@ def pessimistic_connection_handling(some_engine: Engine) -> None:
             else:
                 raise
         finally:
-            # restore 'close with result'
+            # restore "close with result"
             connection.should_close_with_result = save_should_close_with_result
 
 
@@ -907,7 +907,7 @@ def send_email_smtp(  # pylint: disable=invalid-name,too-many-arguments,too-many
     """
     Send an email with html content, eg:
     send_email_smtp(
-        'test@example.com', 'foo', '<b>Foo</b> bar',['/dev/null'], dryrun=True)
+        "test@example.com", "foo", "<b>Foo</b> bar",["/dev/null"], dryrun=True)
     """
     smtp_mail_from = config["SMTP_MAIL_FROM"]
     smtp_mail_to = get_email_address_list(to)
@@ -925,7 +925,7 @@ def send_email_smtp(  # pylint: disable=invalid-name,too-many-arguments,too-many
         recipients = recipients + smtp_mail_cc
 
     if bcc:
-        # don't add bcc in header
+        # don"t add bcc in header
         smtp_mail_bcc = get_email_address_list(bcc)
         recipients = recipients + smtp_mail_bcc
 
@@ -940,7 +940,7 @@ def send_email_smtp(  # pylint: disable=invalid-name,too-many-arguments,too-many
             msg.attach(
                 MIMEApplication(
                     f.read(),
-                    Content_Disposition="attachment; filename='%s'" % basename,
+                    Content_Disposition="attachment; filename="%s"" % basename,
                     Name=basename,
                 )
             )
@@ -949,7 +949,7 @@ def send_email_smtp(  # pylint: disable=invalid-name,too-many-arguments,too-many
     for name, body in (data or {}).items():
         msg.attach(
             MIMEApplication(
-                body, Content_Disposition="attachment; filename='%s'" % name, Name=name
+                body, Content_Disposition="attachment; filename="%s"" % name, Name=name
             )
         )
 
@@ -1020,7 +1020,7 @@ def choicify(values: Iterable[Any]) -> List[Tuple[Any, Any]]:
 def zlib_compress(data: Union[bytes, str]) -> bytes:
     """
     Compress things in a py2/3 safe fashion
-    >>> json_str = '{"test": 1}'
+    >>> json_str = "{"test": 1}"
     >>> blob = zlib_compress(json_str)
     """
     if isinstance(data, str):
@@ -1031,7 +1031,7 @@ def zlib_compress(data: Union[bytes, str]) -> bytes:
 def zlib_decompress(blob: bytes, decode: Optional[bool] = True) -> Union[bytes, str]:
     """
     Decompress things to a string in a py2/3 safe fashion
-    >>> json_str = '{"test": 1}'
+    >>> json_str = "{"test": 1}"
     >>> blob = zlib_compress(json_str)
     >>> got_str = zlib_decompress(blob)
     >>> got_str == json_str
@@ -1147,7 +1147,7 @@ def merge_extra_filters(form_data: Dict[str, Any]) -> None:
             "__time_origin": "druid_time_origin",
             "__granularity": "granularity",
         }
-        # Grab list of existing filters 'keyed' on the column and operator
+        # Grab list of existing filters "keyed" on the column and operator
 
         def get_filter_key(f: Dict[str, Any]) -> str:
             if "expressionType" in f:
@@ -1184,7 +1184,7 @@ def merge_extra_filters(form_data: Dict[str, Any]) -> None:
                     if isinstance(filtr["val"], list):
                         if isinstance(existing_filters[filter_key], list):
                             # Add filters for unequal lists
-                            # order doesn't matter
+                            # order doesn"t matter
                             if set(existing_filters[filter_key]) != set(filtr["val"]):
                                 adhoc_filters.append(simple_filter_to_adhoc(filtr))
                         else:
@@ -1421,7 +1421,7 @@ def split_adhoc_filters_into_base_filters(  # pylint: disable=invalid-name
 
 
 def get_username() -> Optional[str]:
-    """Get username if within the flask context, otherwise return noffin'"""
+    """Get username if within the flask context, otherwise return noffin""""
     try:
         return g.user.username
     except Exception:  # pylint: disable=broad-except
@@ -1528,7 +1528,7 @@ def get_stacktrace() -> Optional[str]:
 
 
 def split(
-    string: str, delimiter: str = " ", quote: str = '"', escaped_quote: str = r"\""
+    string: str, delimiter: str = " ", quote: str = """, escaped_quote: str = r"\""
 ) -> Iterator[str]:
     """
     A split function that is aware of quotes and parentheses.
@@ -1605,7 +1605,7 @@ def get_column_names_from_columns(columns: List[Column]) -> List[str]:
 
 def get_column_name_from_metric(metric: Metric) -> Optional[str]:
     """
-    Extract the column that a metric is referencing. If the metric isn't
+    Extract the column that a metric is referencing. If the metric isn"t
     a simple metric, always returns `None`.
 
     :param metric: Ad-hoc metric
@@ -1760,7 +1760,7 @@ def get_time_filter_status(
     return applied, rejected
 
 
-def format_list(items: Sequence[str], sep: str = ", ", quote: str = '"') -> str:
+def format_list(items: Sequence[str], sep: str = ", ", quote: str = """) -> str:
     quote_escaped = "\\" + quote
     return sep.join(f"{quote}{x.replace(quote, quote_escaped)}{quote}" for x in items)
 
@@ -1821,19 +1821,19 @@ def parse_boolean_string(bool_str: Optional[str]) -> bool:
 
     >>> parse_boolean_string(None)
     False
-    >>> parse_boolean_string('false')
+    >>> parse_boolean_string("false")
     False
-    >>> parse_boolean_string('true')
+    >>> parse_boolean_string("true")
     True
-    >>> parse_boolean_string('False')
+    >>> parse_boolean_string("False")
     False
-    >>> parse_boolean_string('True')
+    >>> parse_boolean_string("True")
     True
-    >>> parse_boolean_string('foo')
+    >>> parse_boolean_string("foo")
     False
-    >>> parse_boolean_string('0')
+    >>> parse_boolean_string("0")
     False
-    >>> parse_boolean_string('1')
+    >>> parse_boolean_string("1")
     True
 
     :param bool_str: string representation of a value that is assumed to be boolean

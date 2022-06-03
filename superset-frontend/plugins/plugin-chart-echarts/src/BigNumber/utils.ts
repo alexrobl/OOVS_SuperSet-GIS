@@ -17,16 +17,16 @@
  * under the License.
  */
 
-import moment from 'moment';
+import moment from "moment";
 import {
   getTimeFormatter,
   getTimeFormatterForGranularity,
   smartDateFormatter,
   TimeGranularity,
-} from '@superset-ui/core';
+} from "@superset-ui/core";
 
 export const parseMetricValue = (metricValue: number | string | null) => {
-  if (typeof metricValue === 'string') {
+  if (typeof metricValue === "string") {
     const dateObject = moment.utc(metricValue, moment.ISO_8601, true);
     if (dateObject.isValid()) {
       return dateObject.valueOf();

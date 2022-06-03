@@ -20,15 +20,15 @@ import {
   DatasourceType,
   supersetTheme,
   TimeGranularity,
-} from '@superset-ui/core';
-import transformProps from '../../src/BigNumber/BigNumberWithTrendline/transformProps';
+} from "@superset-ui/core";
+import transformProps from "../../src/BigNumber/BigNumberWithTrendline/transformProps";
 import {
   BigNumberDatum,
   BigNumberWithTrendlineChartProps,
-} from '../../src/BigNumber/types';
+} from "../../src/BigNumber/types";
 
 const formData = {
-  metric: 'value',
+  metric: "value",
   colorPicker: {
     r: 0,
     g: 122,
@@ -36,15 +36,15 @@ const formData = {
     a: 1,
   },
   compareLag: 1,
-  timeGrainSqla: 'P3M' as TimeGranularity,
-  compareSuffix: 'over last quarter',
-  viz_type: 'big_number',
-  yAxisFormat: '.3s',
-  datasource: 'test_datasource',
+  timeGrainSqla: "P3M" as TimeGranularity,
+  compareSuffix: "over last quarter",
+  viz_type: "big_number",
+  yAxisFormat: ".3s",
+  datasource: "test_datasource",
 };
 
 const rawFormData = {
-  metric: 'value',
+  metric: "value",
   color_picker: {
     r: 0,
     g: 122,
@@ -52,10 +52,10 @@ const rawFormData = {
     a: 1,
   },
   compare_lag: 1,
-  time_grain_sqla: 'P3M' as TimeGranularity,
-  compare_suffix: 'over last quarter',
-  viz_type: 'big_number',
-  y_axis_format: '.3s',
+  time_grain_sqla: "P3M" as TimeGranularity,
+  compare_suffix: "over last quarter",
+  viz_type: "big_number",
+  y_axis_format: ".3s",
 };
 
 function generateProps(
@@ -69,7 +69,7 @@ function generateProps(
     annotationData: {},
     datasource: {
       id: 0,
-      name: '',
+      name: "",
       type: DatasourceType.Table,
       columns: [],
       metrics: [],
@@ -97,7 +97,7 @@ function generateProps(
   };
 }
 
-describe('BigNumberWithTrendline', () => {
+describe("BigNumberWithTrendline", () => {
   const props = generateProps(
     [
       {
@@ -112,8 +112,8 @@ describe('BigNumberWithTrendline', () => {
     { showTrendLine: true },
   );
 
-  describe('transformProps()', () => {
-    it('should fallback and format time', () => {
+  describe("transformProps()", () => {
+    it("should fallback and format time", () => {
       const transformed = transformProps(props);
       // the first item is the last item sorted by __timestamp
       const lastDatum = transformed.trendLineData?.pop();
@@ -127,28 +127,28 @@ describe('BigNumberWithTrendline', () => {
       expect(transformed.bigNumberFallback).not.toBeNull();
 
       // should successfully formatTime by ganularity
-      expect(transformed.formatTime(new Date('2020-01-01'))).toStrictEqual(
-        '2020-01-01 00:00:00',
+      expect(transformed.formatTime(new Date("2020-01-01"))).toStrictEqual(
+        "2020-01-01 00:00:00",
       );
     });
 
-    it('should respect datasource d3 format', () => {
+    it("should respect datasource d3 format", () => {
       const propsWithDatasource = {
         ...props,
         datasource: {
           ...props.datasource,
           metrics: [
             {
-              label: 'value',
-              metric_name: 'value',
-              d3format: '.2f',
+              label: "value",
+              metric_name: "value",
+              d3format: ".2f",
             },
           ],
         },
       };
       const transformed = transformProps(propsWithDatasource);
       expect(transformed.headerFormatter(transformed.bigNumber)).toStrictEqual(
-        '1.23',
+        "1.23",
       );
     });
   });

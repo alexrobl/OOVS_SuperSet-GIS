@@ -24,7 +24,7 @@ import {
   PostProcessingPivot,
   QueryFormData,
   QueryObject,
-} from '@superset-ui/core';
+} from "@superset-ui/core";
 import {
   pivotOperator,
   renameOperator,
@@ -34,11 +34,11 @@ import {
   rollingWindowOperator,
   timeCompareOperator,
   resampleOperator,
-} from '@superset-ui/chart-controls';
+} from "@superset-ui/chart-controls";
 import {
   retainFormDataSuffix,
   removeFormDataSuffix,
-} from '../utils/formDataSuffix';
+} from "../utils/formDataSuffix";
 
 export default function buildQuery(formData: QueryFormData) {
   const { x_axis: index } = formData;
@@ -48,8 +48,8 @@ export default function buildQuery(formData: QueryFormData) {
     is_timeseries,
   };
 
-  const formData1 = removeFormDataSuffix(baseFormData, '_b');
-  const formData2 = retainFormDataSuffix(baseFormData, '_b');
+  const formData1 = removeFormDataSuffix(baseFormData, "_b");
+  const formData2 = retainFormDataSuffix(baseFormData, "_b");
 
   const queryContexts = [formData1, formData2].map(fd =>
     buildQueryContext(fd, baseQueryObject => {

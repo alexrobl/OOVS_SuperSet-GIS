@@ -312,15 +312,15 @@ class DashboardRestApi(BaseSupersetModelRestApi):
                     type: object
                     properties:
                       result:
-                        $ref: '#/components/schemas/DashboardGetResponseSchema'
+                        $ref: "#/components/schemas/DashboardGetResponseSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
         """
         result = self.dashboard_get_response_schema.dump(dash)
         return self.response(200, result=result)
@@ -344,12 +344,12 @@ class DashboardRestApi(BaseSupersetModelRestApi):
         log_to_statsd=False,
     )
     def get_datasets(self, id_or_slug: str) -> Response:
-        """Gets a dashboard's datasets
+        """Gets a dashboard"s datasets
         ---
         get:
           description: >-
-            Returns a list of a dashboard's datasets. Each dataset includes only
-            the information necessary to render the dashboard's charts.
+            Returns a list of a dashboard"s datasets. Each dataset includes only
+            the information necessary to render the dashboard"s charts.
           parameters:
           - in: path
             schema:
@@ -367,15 +367,15 @@ class DashboardRestApi(BaseSupersetModelRestApi):
                       result:
                         type: array
                         items:
-                          $ref: '#/components/schemas/DashboardDatasetSchema'
+                          $ref: "#/components/schemas/DashboardDatasetSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
         """
         try:
             datasets = DashboardDAO.get_datasets_for_dashboard(id_or_slug)
@@ -428,15 +428,15 @@ class DashboardRestApi(BaseSupersetModelRestApi):
                       result:
                         type: array
                         items:
-                          $ref: '#/components/schemas/ChartEntityResponseSchema'
+                          $ref: "#/components/schemas/ChartEntityResponseSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
         """
         try:
             charts = DashboardDAO.get_charts_for_dashboard(id_or_slug)
@@ -476,7 +476,7 @@ class DashboardRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/{{self.__class__.__name__}}.post'
+                  $ref: "#/components/schemas/{{self.__class__.__name__}}.post"
           responses:
             201:
               description: Dashboard added
@@ -488,15 +488,15 @@ class DashboardRestApi(BaseSupersetModelRestApi):
                       id:
                         type: number
                       result:
-                        $ref: '#/components/schemas/{{self.__class__.__name__}}.post'
+                        $ref: "#/components/schemas/{{self.__class__.__name__}}.post"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             item = self.add_model_schema.load(request.json)
@@ -543,7 +543,7 @@ class DashboardRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/{{self.__class__.__name__}}.put'
+                  $ref: "#/components/schemas/{{self.__class__.__name__}}.put"
           responses:
             200:
               description: Dashboard changed
@@ -555,21 +555,21 @@ class DashboardRestApi(BaseSupersetModelRestApi):
                       id:
                         type: number
                       result:
-                        $ref: '#/components/schemas/{{self.__class__.__name__}}.put'
+                        $ref: "#/components/schemas/{{self.__class__.__name__}}.put"
                       last_modified_time:
                         type: number
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             item = self.edit_model_schema.load(request.json)
@@ -633,15 +633,15 @@ class DashboardRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             DeleteDashboardCommand(g.user, pk).run()
@@ -680,7 +680,7 @@ class DashboardRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_delete_ids_schema'
+                  $ref: "#/components/schemas/get_delete_ids_schema"
           responses:
             200:
               description: Dashboard bulk delete
@@ -692,15 +692,15 @@ class DashboardRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         item_ids = kwargs["rison"]
         try:
@@ -741,7 +741,7 @@ class DashboardRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_export_ids_schema'
+                  $ref: "#/components/schemas/get_export_ids_schema"
           responses:
             200:
               description: Dashboard export
@@ -750,15 +750,15 @@ class DashboardRestApi(BaseSupersetModelRestApi):
                   schema:
                     type: string
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         requested_ids = kwargs["rison"]
         token = request.args.get("token")
@@ -835,7 +835,7 @@ class DashboardRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/thumbnail_query_schema'
+                  $ref: "#/components/schemas/thumbnail_query_schema"
           responses:
             200:
               description: Dashboard thumbnail image
@@ -856,13 +856,13 @@ class DashboardRestApi(BaseSupersetModelRestApi):
             302:
               description: Redirects to the current digest
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         dashboard = self.datamodel.get(pk, self._base_filters)
         if not dashboard:
@@ -921,7 +921,7 @@ class DashboardRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_fav_star_ids_schema'
+                  $ref: "#/components/schemas/get_fav_star_ids_schema"
           responses:
             200:
               description:
@@ -930,13 +930,13 @@ class DashboardRestApi(BaseSupersetModelRestApi):
                   schema:
                     $ref: "#/components/schemas/GetFavStarIdsSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         requested_ids = kwargs["rison"]
         dashboards = DashboardDAO.find_by_ids(requested_ids)
@@ -996,13 +996,13 @@ class DashboardRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         upload = request.files.get("formData")
         if not upload:
@@ -1042,11 +1042,11 @@ class DashboardRestApi(BaseSupersetModelRestApi):
     @with_dashboard
     def get_embedded(self, dashboard: Dashboard) -> Response:
         """Response
-        Returns the dashboard's embedded configuration
+        Returns the dashboard"s embedded configuration
         ---
         get:
           description: >-
-            Returns the dashboard's embedded configuration
+            Returns the dashboard"s embedded configuration
           parameters:
           - in: path
             schema:
@@ -1062,11 +1062,11 @@ class DashboardRestApi(BaseSupersetModelRestApi):
                     type: object
                     properties:
                       result:
-                        $ref: '#/components/schemas/EmbeddedDashboardResponseSchema'
+                        $ref: "#/components/schemas/EmbeddedDashboardResponseSchema"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         if not dashboard.embedded:
             return self.response(404)
@@ -1085,11 +1085,11 @@ class DashboardRestApi(BaseSupersetModelRestApi):
     @with_dashboard
     def set_embedded(self, dashboard: Dashboard) -> Response:
         """Response
-        Sets a dashboard's embedded configuration.
+        Sets a dashboard"s embedded configuration.
         ---
         post:
           description: >-
-            Sets a dashboard's embedded configuration.
+            Sets a dashboard"s embedded configuration.
           parameters:
           - in: path
             schema:
@@ -1111,14 +1111,14 @@ class DashboardRestApi(BaseSupersetModelRestApi):
                     type: object
                     properties:
                       result:
-                        $ref: '#/components/schemas/EmbeddedDashboardResponseSchema'
+                        $ref: "#/components/schemas/EmbeddedDashboardResponseSchema"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         put:
           description: >-
-            Sets a dashboard's embedded configuration.
+            Sets a dashboard"s embedded configuration.
           parameters:
           - in: path
             schema:
@@ -1140,11 +1140,11 @@ class DashboardRestApi(BaseSupersetModelRestApi):
                     type: object
                     properties:
                       result:
-                        $ref: '#/components/schemas/EmbeddedDashboardResponseSchema'
+                        $ref: "#/components/schemas/EmbeddedDashboardResponseSchema"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             body = self.embedded_config_schema.load(request.json)
@@ -1166,11 +1166,11 @@ class DashboardRestApi(BaseSupersetModelRestApi):
     @with_dashboard
     def delete_embedded(self, dashboard: Dashboard) -> Response:
         """Response
-        Removes a dashboard's embedded configuration.
+        Removes a dashboard"s embedded configuration.
         ---
         delete:
           description: >-
-            Removes a dashboard's embedded configuration.
+            Removes a dashboard"s embedded configuration.
           parameters:
           - in: path
             schema:
@@ -1188,9 +1188,9 @@ class DashboardRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         for embedded in dashboard.embedded:
             DashboardDAO.delete(embedded)

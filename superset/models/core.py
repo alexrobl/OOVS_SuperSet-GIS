@@ -216,7 +216,7 @@ class Database(
 
     @property
     def disable_data_preview(self) -> bool:
-        # this will prevent any 'trash value' strings from going through
+        # this will prevent any "trash value" strings from going through
         if self.get_extra().get("disable_data_preview", False) is not True:
             return False
         return True

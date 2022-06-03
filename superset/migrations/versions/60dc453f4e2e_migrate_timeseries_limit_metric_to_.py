@@ -53,7 +53,7 @@ def upgrade():
 
     where_clause = and_(
         Slice.viz_type == "pivot_table_v2",
-        Slice.params.like('%"timeseries_limit_metric%'),
+        Slice.params.like("%"timeseries_limit_metric%"),
     )
     slices = session.query(Slice).filter(where_clause)
     total = slices.count()
@@ -70,5 +70,5 @@ def upgrade():
 
 
 def downgrade():
-    # slices can't be downgraded
+    # slices can"t be downgraded
     pass

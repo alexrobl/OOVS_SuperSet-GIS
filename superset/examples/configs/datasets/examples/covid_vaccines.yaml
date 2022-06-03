@@ -21,7 +21,7 @@ default_endpoint: null
 offset: 0
 cache_timeout: null
 schema: null
-sql: ''
+sql: ""
 params: null
 template_params: null
 filter_select_enabled: true
@@ -45,11 +45,11 @@ columns:
   type: STRING
   groupby: true
   filterable: true
-  expression: "CASE \nWHEN stage_of_development = 'Pre-clinical' THEN '0. Pre-clinical'\n\
-    WHEN stage_of_development = 'Phase I' THEN '1. Phase I' \nWHEN stage_of_development\
-    \ = 'Phase I/II' or stage_of_development = 'Phase II' THEN '2. Phase II or\
-    \ Combined I/II'\nWHEN stage_of_development = 'Phase III' THEN '3. Phase III'\n\
-    WHEN stage_of_development = 'Authorized' THEN '4. Authorized'\nEND"
+  expression: "CASE \nWHEN stage_of_development = "Pre-clinical" THEN "0. Pre-clinical"\n\
+    WHEN stage_of_development = "Phase I" THEN "1. Phase I" \nWHEN stage_of_development\
+    \ = "Phase I/II" or stage_of_development = "Phase II" THEN "2. Phase II or\
+    \ Combined I/II"\nWHEN stage_of_development = "Phase III" THEN "3. Phase III"\n\
+    WHEN stage_of_development = "Authorized" THEN "4. Authorized"\nEND"
   description: null
   python_date_format: null
 - column_name: fda_approved_indications

@@ -16,11 +16,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React from 'react';
-import { reactify, styled } from '@superset-ui/core';
-import PropTypes from 'prop-types';
-import Component from './NVD3Vis';
-import { hideTooltips, removeTooltip } from './utils';
+import React from "react";
+import { reactify, styled } from "@superset-ui/core";
+import PropTypes from "prop-types";
+import Component from "./NVD3Vis";
+import { hideTooltips, removeTooltip } from "./utils";
 
 function componentWillUnmount() {
   const { id } = this.props;
@@ -166,7 +166,7 @@ export default styled(NVD3)`
     padding: ${({ theme }) => theme.gridUnit * 2}px;
     color: ${({ theme }) => theme.colors.grayscale.light5};
     &:after {
-      content: '\\25BC';
+      content: "\\25BC";
       font-size: ${({ theme }) => theme.typography.sizes.m};
       color: ${({ theme }) => theme.colors.grayscale.base};
       position: absolute;

@@ -28,14 +28,14 @@ import {
   smartDateVerboseFormatter,
   NumberFormatter,
   TimeFormatter,
-} from '@superset-ui/core';
-import { EChartsCoreOption, graphic } from 'echarts';
+} from "@superset-ui/core";
+import { EChartsCoreOption, graphic } from "echarts";
 import {
   BigNumberDatum,
   BigNumberWithTrendlineChartProps,
   TimeSeriesDatum,
-} from '../types';
-import { getDateFormatter, parseMetricValue } from '../utils';
+} from "../types";
+import { getDateFormatter, parseMetricValue } from "../utils";
 
 const defaultNumberFormatter = getNumberFormatter();
 export function renderTooltipFactory(
@@ -48,7 +48,7 @@ export function renderTooltipFactory(
       <br />
       <strong>
         ${
-          params[0].data[1] === null ? t('N/A') : formatValue(params[0].data[1])
+          params[0].data[1] === null ? t("N/A") : formatValue(params[0].data[1])
         }
       </strong>
     `;
@@ -67,14 +67,14 @@ export default function transformProps(
   const {
     colorPicker,
     compareLag: compareLag_,
-    compareSuffix = '',
+    compareSuffix = "",
     timeFormat,
     headerFontSize,
-    metric = 'value',
+    metric = "value",
     showTimestamp,
     showTrendLine,
     startYAxisAtZero,
-    subheader = '',
+    subheader = "",
     subheaderFontSize,
     forceTimestampFormatting,
     yAxisFormat,
@@ -137,11 +137,11 @@ export default function transformProps(
     trendLineData = showTrendLine ? sortedData : undefined;
   }
 
-  let className = '';
+  let className = "";
   if (percentChange > 0) {
-    className = 'positive';
+    className = "positive";
   } else if (percentChange < 0) {
-    className = 'negative';
+    className = "negative";
   }
 
   let metricEntry;
@@ -182,9 +182,9 @@ export default function transformProps(
         series: [
           {
             data: trendLineData,
-            type: 'line',
+            type: "line",
             smooth: true,
-            symbol: 'circle',
+            symbol: "circle",
             showSymbol: false,
             color: mainColor,
             areaStyle: {
@@ -205,7 +205,7 @@ export default function transformProps(
           min: trendLineData[0][0],
           max: trendLineData[trendLineData.length - 1][0],
           show: false,
-          type: 'value',
+          type: "value",
         },
         yAxis: {
           scale: !startYAxisAtZero,
@@ -220,7 +220,7 @@ export default function transformProps(
         tooltip: {
           appendToBody: true,
           show: true,
-          trigger: 'axis',
+          trigger: "axis",
           confine: true,
           formatter: renderTooltipFactory(formatTime, headerFormatter),
         },

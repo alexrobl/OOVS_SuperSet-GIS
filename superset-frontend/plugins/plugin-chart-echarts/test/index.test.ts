@@ -23,10 +23,10 @@ import {
   EchartsGraphChartPlugin,
   EchartsFunnelChartPlugin,
   EchartsTreemapChartPlugin,
-} from '../src';
+} from "../src";
 
-describe('@superset-ui/plugin-chart-echarts', () => {
-  it('exists', () => {
+describe("@superset-ui/plugin-chart-echarts", () => {
+  it("exists", () => {
     expect(EchartsBoxPlotChartPlugin).toBeDefined();
     expect(EchartsPieChartPlugin).toBeDefined();
     expect(EchartsTimeseriesChartPlugin).toBeDefined();

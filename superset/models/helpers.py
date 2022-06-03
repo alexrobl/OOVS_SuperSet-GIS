@@ -343,7 +343,7 @@ class ImportExportMixin:
 
     def reset_ownership(self) -> None:
         """object will belong to the user the current user"""
-        # make sure the object doesn't have relations to a user
+        # make sure the object doesn"t have relations to a user
         # it will be filled by appbuilder on save
         self.created_by = None
         self.changed_by = None
@@ -365,7 +365,7 @@ def _user_link(user: User) -> Union[Markup, str]:
     if not user:
         return ""
     url = "/superset/profile/{}/".format(user.username)
-    return Markup('<a href="{}">{}</a>'.format(url, escape(user) or ""))
+    return Markup("<a href="{}">{}</a>".format(url, escape(user) or ""))
 
 
 class AuditMixinNullable(AuditMixin):
@@ -414,7 +414,7 @@ class AuditMixinNullable(AuditMixin):
 
     @renders("changed_on")
     def changed_on_(self) -> Markup:
-        return Markup(f'<span class="no-wrap">{self.changed_on}</span>')
+        return Markup(f"<span class="no-wrap">{self.changed_on}</span>")
 
     @renders("changed_on")
     def changed_on_delta_humanized(self) -> str:
@@ -439,7 +439,7 @@ class AuditMixinNullable(AuditMixin):
 
     @renders("changed_on")
     def modified(self) -> Markup:
-        return Markup(f'<span class="no-wrap">{self.changed_on_humanized}</span>')
+        return Markup(f"<span class="no-wrap">{self.changed_on_humanized}</span>")
 
 
 class QueryResult:  # pylint: disable=too-few-public-methods

@@ -77,7 +77,7 @@ class DashboardPermalinkRestApi(BaseApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/DashboardPermalinkPostSchema'
+                  $ref: "#/components/schemas/DashboardPermalinkPostSchema"
           responses:
             201:
               description: The permanent link was stored successfully.
@@ -93,13 +93,13 @@ class DashboardPermalinkRestApi(BaseApi):
                         type: string
                         description: permanent link.
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             state = self.add_model_schema.load(request.json)
@@ -151,15 +151,15 @@ class DashboardPermalinkRestApi(BaseApi):
                         type: object
                         description: The stored state
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             value = GetDashboardPermalinkCommand(actor=g.user, key=key).run()

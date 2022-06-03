@@ -82,7 +82,7 @@ def pivot_df(  # pylint: disable=too-many-locals, too-many-arguments, too-many-s
     else:
         axis = {"columns": 1, "rows": 0}
 
-    # pivot data; we'll compute totals and subtotals later
+    # pivot data; we"ll compute totals and subtotals later
     if rows or columns:
         # pivoting with null values will create an empty df
         df = df.fillna("NULL")
@@ -94,7 +94,7 @@ def pivot_df(  # pylint: disable=too-many-locals, too-many-arguments, too-many-s
             margins=False,
         )
     else:
-        # if there's no rows nor columns we have a single value; update
+        # if there"s no rows nor columns we have a single value; update
         # the index with the metric name so it shows up in the table
         df.index = pd.Index([*df.index[:-1], metric_name], name="metric")
 
@@ -111,7 +111,7 @@ def pivot_df(  # pylint: disable=too-many-locals, too-many-arguments, too-many-s
     # combining metrics changes the column hierarchy, moving the metric
     # from the top to the bottom, eg:
     #
-    # ('SUM(col)', 'age', 'name') => ('age', 'name', 'SUM(col)')
+    # ("SUM(col)", "age", "name") => ("age", "name", "SUM(col)")
     if combine_metrics and isinstance(df.columns, pd.MultiIndex):
         # move metrics to the lowest level
         new_order = [*range(1, df.columns.nlevels), 0]
@@ -297,7 +297,7 @@ def table(
             try:
                 df[column] = df[column].apply(format_.format)
             except Exception:  # pylint: disable=broad-except
-                # if we can't format the column for any reason, send as is
+                # if we can"t format the column for any reason, send as is
                 pass
 
     return df
@@ -329,7 +329,7 @@ def apply_post_process(
         elif query["result_format"] == ChartDataResultFormat.CSV:
             df = pd.read_csv(StringIO(query["data"]))
         else:
-            raise Exception(f"Result format {query['result_format']} not supported")
+            raise Exception(f"Result format {query["result_format"]} not supported")
 
         processed_df = post_processor(df, form_data, datasource)
 

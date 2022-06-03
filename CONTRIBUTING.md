@@ -109,13 +109,13 @@ little bit helps, and credit will always be given.
 
 ## Orientation
 
-Here's a list of repositories that contain Superset-related packages:
+Here"s a list of repositories that contain Superset-related packages:
 
 - [apache/superset](https://github.com/apache/superset)
   is the main repository containing the `apache-superset` Python package
   distributed on
   [pypi](https://pypi.org/project/apache-superset/). This repository
-  also includes Superset's main TypeScript/JavaScript bundles and react apps under
+  also includes Superset"s main TypeScript/JavaScript bundles and react apps under
   the [superset-frontend](https://github.com/apache/superset/tree/master/superset-frontend)
   folder.
 - [github.com/apache-superset](https://github.com/apache-superset) is the
@@ -166,7 +166,7 @@ articles. See [Documentation](#documentation) for more details.
 ### Add Translations
 
 If you are proficient in a non-English language, you can help translate
-text strings from Superset's UI. You can jump in to the existing
+text strings from Superset"s UI. You can jump in to the existing
 language dictionaries at
 `superset/translations/<language_code>/LC_MESSAGES/messages.po`, or
 even create a dictionary for a new language altogether.
@@ -192,7 +192,7 @@ The purpose is to separate problem from possible solutions.
 
 In general, small PRs are always easier to review than large PRs. The best practice is to break your work into smaller independent PRs and refer to the same issue. This will greatly reduce turnaround time.
 
-If you wish to share your work which is not ready to merge yet, create a [Draft PR](https://github.blog/2019-02-14-introducing-draft-pull-requests/). This will enable maintainers and the CI runner to prioritize mature PR's.
+If you wish to share your work which is not ready to merge yet, create a [Draft PR](https://github.blog/2019-02-14-introducing-draft-pull-requests/). This will enable maintainers and the CI runner to prioritize mature PR"s.
 
 Finally, never submit a PR that will put master branch in broken state. If the PR is part of multiple PRs to complete a large feature and cannot work on its own, you can create a feature branch and merge all related PRs into the feature branch before creating a PR from feature branch to master.
 
@@ -213,7 +213,7 @@ Finally, never submit a PR that will put master branch in broken state. If the P
   - `perf` (performance-related change)
   - `build` (build tooling, Docker configuration change)
   - `ci` (test runner, GitHub Actions workflow changes)
-  - `other` (changes that don't correspond to the above -- should be rare!)
+  - `other` (changes that don"t correspond to the above -- should be rare!)
   - Examples:
     - `feat: export charts as ZIP files`
     - `perf(api): improve API info performance`
@@ -238,7 +238,7 @@ Finally, never submit a PR that will put master branch in broken state. If the P
 
 - Use constructive tone when writing reviews.
 - If there are changes required, state clearly what needs to be done before the PR can be approved.
-- If you are asked to update your pull request with some changes there's no need to create a new one. Push your changes to the same branch.
+- If you are asked to update your pull request with some changes there"s no need to create a new one. Push your changes to the same branch.
 - The committers reserve the right to reject any PR and in some cases may request the author to file an issue.
 
 #### Test Environments
@@ -350,7 +350,7 @@ If the PR passes CI tests and does not have any `need:` labels, it is ready for 
 
 If an issue/PR has been inactive for >=30 days, it will be closed. If it does not have any status label, add `inactive`.
 
-When creating a PR, if you're aiming to have it included in a specific release, please tag it with the version label. For example, to have a PR considered for inclusion in Superset 1.1 use the label `v1.1`.
+When creating a PR, if you"re aiming to have it included in a specific release, please tag it with the version label. For example, to have a PR considered for inclusion in Superset 1.1 use the label `v1.1`.
 
 ## Reporting a Security Vulnerability
 
@@ -371,13 +371,13 @@ Reverting changes that are causing issues in the master branch is a normal and e
 
 Should you decide that reverting is desirable, it is the responsibility of the Contributor performing the revert to:
 
-- **Contact the interested parties:** The PR's author and the engineer who merged the work should both be contacted and informed of the revert.
+- **Contact the interested parties:** The PR"s author and the engineer who merged the work should both be contacted and informed of the revert.
 - **Provide concise reproduction steps:** Ensure that the issue can be clearly understood and duplicated by the original author of the PR.
 - **Put the revert through code review:** The revert must be approved by another committer.
 
 ## Setup Local Environment for Development
 
-First, [fork the repository on GitHub](https://help.github.com/articles/about-forks/), then clone it. You can clone the main repository directly, but you won't be able to send pull requests.
+First, [fork the repository on GitHub](https://help.github.com/articles/about-forks/), then clone it. You can clone the main repository directly, but you won"t be able to send pull requests.
 
 ```bash
 git clone git@github.com:your-username/superset.git
@@ -393,15 +393,15 @@ documentation subsection. Find out more about it in `docs/README.md`
 
 #### Images
 
-If you're adding new images to the documentation, you'll notice that the images
+If you"re adding new images to the documentation, you"ll notice that the images
 referenced in the rst, e.g.
 
     .. image:: _static/images/tutorial/tutorial_01_sources_database.png
 
-aren't actually stored in that directory. Instead, you should add and commit
+aren"t actually stored in that directory. Instead, you should add and commit
 images (and any other static assets) to the `superset-frontend/src/assets/images` directory.
 When the docs are deployed to https://superset.apache.org/, images
-are copied from there to the `_static/images` directory, just like they're referenced
+are copied from there to the `_static/images` directory, just like they"re referenced
 in the docs.
 
 For example, the image referenced above actually lives in `superset-frontend/src/assets/images/tutorial`. Since the image is moved during the documentation build process, the docs reference the image in `_static/images/tutorial` instead.
@@ -462,7 +462,7 @@ $ make superset
 $ make pre-commit
 ```
 
-**Note: the FLASK_APP env var should not need to be set, as it's currently controlled
+**Note: the FLASK_APP env var should not need to be set, as it"s currently controlled
 via `.flaskenv`, however if needed, it should be set to `superset.app:create_app()`**
 
 If you have made changes to the FAB-managed templates, which are not built the same way as the newer, React-powered front-end assets, you need to start the app without the `--with-threads` argument like so:
@@ -491,7 +491,7 @@ To bring all dependencies up to date as per the restrictions defined in `setup.p
 $ pip-compile-multi
 ```
 
-This should be done periodically, but it is recommended to do thorough manual testing of the application to ensure no breaking changes have been introduced that aren't caught by the unit and integration tests.
+This should be done periodically, but it is recommended to do thorough manual testing of the application to ensure no breaking changes have been introduced that aren"t caught by the unit and integration tests.
 
 #### Logging to the browser console
 
@@ -514,7 +514,7 @@ You can log anything to the browser console, including objects:
 
 ```python
 from superset import app
-app.logger.error('An exception occurred!')
+app.logger.error("An exception occurred!")
 app.logger.info(form_data)
 ```
 
@@ -575,7 +575,7 @@ The dev server by default starts at `http://localhost:9000` and proxies the back
 
 So a typical development workflow is the following:
 
-1. [run Superset locally](#flask-server) using Flask, on port `8088` — but don't access it directly,<br/>
+1. [run Superset locally](#flask-server) using Flask, on port `8088` — but don"t access it directly,<br/>
    ```bash
    # Install Superset and dependencies, plus load your virtual environment first, as detailed above.
    FLASK_ENV=development superset run -p 8088 --with-threads --reload --debugger
@@ -586,7 +586,7 @@ So a typical development workflow is the following:
    ```
 3. access `http://localhost:9000` (the Webpack server, _not_ Flask) in your web browser. This will use the hot-reloading front-end assets from the Webpack development server while redirecting back-end queries to Flask/Superset: your changes on Superset codebase — either front or back-end — will then be reflected live in the browser.
 
-It's possible to change the Webpack server settings:
+It"s possible to change the Webpack server settings:
 
 ```bash
 # Start the dev server at http://localhost:9000
@@ -627,7 +627,7 @@ Superset supports a server-wide feature flag system, which eases the incremental
 
 ```python
 FEATURE_FLAGS = {
-    'SCOPED_FILTER': True,
+    "SCOPED_FILTER": True,
 }
 ```
 
@@ -640,8 +640,8 @@ export enum FeatureFlag {
 ```
 
 `superset/config.py` contains `DEFAULT_FEATURE_FLAGS` which will be overwritten by
-those specified under FEATURE_FLAGS in `superset_config.py`. For example, `DEFAULT_FEATURE_FLAGS = { 'FOO': True, 'BAR': False }` in `superset/config.py` and `FEATURE_FLAGS = { 'BAR': True, 'BAZ': True }` in `superset_config.py` will result
-in combined feature flags of `{ 'FOO': True, 'BAR': True, 'BAZ': True }`.
+those specified under FEATURE_FLAGS in `superset_config.py`. For example, `DEFAULT_FEATURE_FLAGS = { "FOO": True, "BAR": False }` in `superset/config.py` and `FEATURE_FLAGS = { "BAR": True, "BAZ": True }` in `superset_config.py` will result
+in combined feature flags of `{ "FOO": True, "BAR": True, "BAZ": True }`.
 
 The current status of the usability of each flag (stable vs testing, etc) can be found in `RESOURCES/FEATURE_FLAGS.md`.
 
@@ -794,7 +794,7 @@ To run all integration tests for example, run this script from the root director
 scripts/tests/run.sh
 ```
 
-You can run unit tests found in './tests/unit_tests' for example with pytest. It is a simple way to run an isolated test that doesn't need any database setup
+You can run unit tests found in "./tests/unit_tests" for example with pytest. It is a simple way to run an isolated test that doesn"t need any database setup
 
 ```bash
 pytest ./link_to_test.py
@@ -929,7 +929,7 @@ apt install -y net-tools
 pip install debugpy
 ```
 
-Find the PID for the Flask process. Make sure to use the first PID. The Flask app will re-spawn a sub-process every time you change any of the python code. So it's important to use the first PID.
+Find the PID for the Flask process. Make sure to use the first PID. The Flask app will re-spawn a sub-process every time you change any of the python code. So it"s important to use the first PID.
 
 ```bash
 ps -ef
@@ -982,11 +982,11 @@ You are now ready to attach a debugger to the process. Using VSCode you can conf
 }
 ```
 
-VSCode will not stop on breakpoints right away. We've attached to PID 6 however it does not yet know of any sub-processes. In order to "wake up" the debugger you need to modify a python file. This will trigger Flask to reload the code and create a new sub-process. This new sub-process will be detected by VSCode and breakpoints will be activated.
+VSCode will not stop on breakpoints right away. We"ve attached to PID 6 however it does not yet know of any sub-processes. In order to "wake up" the debugger you need to modify a python file. This will trigger Flask to reload the code and create a new sub-process. This new sub-process will be detected by VSCode and breakpoints will be activated.
 
 ### Debugging Server App in Kubernetes Environment
 
-To debug Flask running in POD inside kubernetes cluster. You'll need to make sure the pod runs as root and is granted the SYS_TRACE capability.These settings should not be used in production environments.
+To debug Flask running in POD inside kubernetes cluster. You"ll need to make sure the pod runs as root and is granted the SYS_TRACE capability.These settings should not be used in production environments.
 
 ```
   securityContext:
@@ -1017,7 +1017,7 @@ cd superset-frontend
 npm run storybook
 ```
 
-When contributing new React components to Superset, please try to add a Story alongside the component's `jsx/tsx` file.
+When contributing new React components to Superset, please try to add a Story alongside the component"s `jsx/tsx` file.
 
 ## Translating
 
@@ -1028,7 +1028,7 @@ In Python files, we import the magic `_` function using:
 from flask_babel import lazy_gettext as _
 ```
 
-then wrap our translatable strings with it, e.g. `_('Translate me')`.
+then wrap our translatable strings with it, e.g. `_("Translate me")`.
 During extraction, string literals passed to `_` will be added to the
 generated `.po` file for each language for later translation.
 
@@ -1051,9 +1051,9 @@ of the navigation bar.
 
 ```python
 LANGUAGES = {
-    'en': {'flag': 'us', 'name': 'English'},
-    'fr': {'flag': 'fr', 'name': 'French'},
-    'zh': {'flag': 'cn', 'name': 'Chinese'},
+    "en": {"flag": "us", "name": "English"},
+    "fr": {"flag": "fr", "name": "French"},
+    "zh": {"flag": "cn", "name": "Chinese"},
 }
 ```
 
@@ -1068,7 +1068,7 @@ This script will
 2. update language files with the new extracted strings.
 
 You can then translate the strings gathered in files located under
-`superset/translation`, where there's one per language. You can use [Poedit](https://poedit.net/features)
+`superset/translation`, where there"s one per language. You can use [Poedit](https://poedit.net/features)
 to translate the `po` file more conveniently.
 There are some [tutorials in the wiki](https://wiki.lxde.org/en/Translate_*.po_files_with_Poedit).
 
@@ -1124,14 +1124,14 @@ Then, [Updating language files](#updating-language-files).
    For example:
 
    ```python
-   ADDITIONAL_MODULE_DS_MAP = {'superset.my_models': ['MyDatasource', 'MyOtherDatasource']}
+   ADDITIONAL_MODULE_DS_MAP = {"superset.my_models": ["MyDatasource", "MyOtherDatasource"]}
    ```
 
-   This means it'll register MyDatasource and MyOtherDatasource in superset.my_models module in the source registry.
+   This means it"ll register MyDatasource and MyOtherDatasource in superset.my_models module in the source registry.
 
 ### Visualization Plugins
 
-The topic of authoring new plugins, whether you'd like to contribute
+The topic of authoring new plugins, whether you"d like to contribute
 it back or not has been well documented in the
 [the documentation](https://superset.apache.org/docs/contributing/creating-viz-plugins), and in [this blog post](https://preset.io/blog/building-custom-viz-plugins-in-superset-v2).
 
@@ -1158,7 +1158,7 @@ Submissions will be considered for submission (or removal) on a case-by-case bas
 1. Generate the migration file
 
    ```bash
-   superset db migrate -m 'add_metadata_column_to_annotation_model'
+   superset db migrate -m "add_metadata_column_to_annotation_model"
    ```
 
    This will generate a file in `migrations/version/{SHA}_this_will_be_in_the_migration_filename.py`.
@@ -1185,7 +1185,7 @@ Submissions will be considered for submission (or removal) on a case-by-case bas
 
    [Example commit](https://github.com/apache/superset/pull/5745/commits/6220966e2a0a0cf3e6d87925491f8920fe8a3458)
 
-1. Test the migration's `down` method
+1. Test the migration"s `down` method
 
    ```bash
    superset db downgrade
@@ -1201,13 +1201,13 @@ Submissions will be considered for submission (or removal) on a case-by-case bas
 
 ### Merging DB migrations
 
-When two DB migrations collide, you'll get an error message like this one:
+When two DB migrations collide, you"ll get an error message like this one:
 
 ```text
 alembic.util.exc.CommandError: Multiple head revisions are present for
-given argument 'head'; please specify a specific target
-revision, '<branchname>@head' to narrow to a specific head,
-or 'heads' for all heads`
+given argument "head"; please specify a specific target
+revision, "<branchname>@head" to narrow to a specific head,
+or "heads" for all heads`
 ```
 
 To fix it:
@@ -1265,21 +1265,21 @@ To fix it:
 
 ### SQL Lab Async
 
-It's possible to configure a local database to operate in `async` mode,
+It"s possible to configure a local database to operate in `async` mode,
 to work on `async` related features.
 
-To do this, you'll need to:
+To do this, you"ll need to:
 
 - Add an additional database entry. We recommend you copy the connection
   string from the database labeled `main`, and then enable `SQL Lab` and the
-  features you want to use. Don't forget to check the `Async` box
-- Configure a results backend, here's a local `FileSystemCache` example,
+  features you want to use. Don"t forget to check the `Async` box
+- Configure a results backend, here"s a local `FileSystemCache` example,
   not recommended for production,
   but perfect for testing (stores cache in `/tmp`)
 
   ```python
   from cachelib.file import FileSystemCache
-  RESULTS_BACKEND = FileSystemCache('/tmp/sqllab')
+  RESULTS_BACKEND = FileSystemCache("/tmp/sqllab")
   ```
 
 - Start up a celery worker
@@ -1290,7 +1290,7 @@ To do this, you'll need to:
 
 Note that:
 
-- for changes that affect the worker logic, you'll have to
+- for changes that affect the worker logic, you"ll have to
   restart the `celery worker` process for the changes to be reflected.
 - The message queue used is a `sqlite` database using the `SQLAlchemy`
   experimental broker. Ok for testing, but not recommended in production
@@ -1300,7 +1300,7 @@ Note that:
 
 ### Async Chart Queries
 
-It's possible to configure database queries for charts to operate in `async` mode. This is especially useful for dashboards with many charts that may otherwise be affected by browser connection limits. To enable async queries for dashboards and Explore, the following dependencies are required:
+It"s possible to configure database queries for charts to operate in `async` mode. This is especially useful for dashboards with many charts that may otherwise be affected by browser connection limits. To enable async queries for dashboards and Explore, the following dependencies are required:
 
 - Redis 5.0+ (the feature utilizes [Redis Streams](https://redis.io/topics/streams-intro))
 - Cache backends enabled via the `CACHE_CONFIG` and `DATA_CACHE_CONFIG` config settings
@@ -1313,10 +1313,10 @@ The following configuration settings are available for async queries (see config
 - `GLOBAL_ASYNC_QUERIES_REDIS_STREAM_PREFIX` - the prefix used with Redis Streams
 - `GLOBAL_ASYNC_QUERIES_REDIS_STREAM_LIMIT` - the maximum number of events for each user-specific event stream (FIFO eviction)
 - `GLOBAL_ASYNC_QUERIES_REDIS_STREAM_LIMIT_FIREHOSE` - the maximum number of events for all users (FIFO eviction)
-- `GLOBAL_ASYNC_QUERIES_JWT_COOKIE_NAME` - the async query feature uses a [JWT](https://tools.ietf.org/html/rfc7519) cookie for authentication, this setting is the cookie's name
+- `GLOBAL_ASYNC_QUERIES_JWT_COOKIE_NAME` - the async query feature uses a [JWT](https://tools.ietf.org/html/rfc7519) cookie for authentication, this setting is the cookie"s name
 - `GLOBAL_ASYNC_QUERIES_JWT_COOKIE_SECURE` - JWT cookie secure option
 - `GLOBAL_ASYNC_QUERIES_JWT_COOKIE_DOMAIN` - JWT cookie domain option ([see docs for set_cookie](https://tedboy.github.io/flask/interface_api.response_object.html#flask.Response.set_cookie))
-- `GLOBAL_ASYNC_QUERIES_JWT_SECRET` - JWT's use a secret key to sign and validate the contents. This value should be at least 32 bytes and have sufficient randomness for proper security
+- `GLOBAL_ASYNC_QUERIES_JWT_SECRET` - JWT"s use a secret key to sign and validate the contents. This value should be at least 32 bytes and have sufficient randomness for proper security
 - `GLOBAL_ASYNC_QUERIES_TRANSPORT` - available options: "polling" (HTTP, default), "ws" (WebSocket, requires running superset-websocket server)
 - `GLOBAL_ASYNC_QUERIES_POLLING_DELAY` - the time (in ms) between polling requests
 

@@ -14,12 +14,12 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
-slice_name: 'Top 10 Games: Proportion of Sales in Markets'
+slice_name: "Top 10 Games: Proportion of Sales in Markets"
 viz_type: dist_bar
 params:
   adhoc_filters:
   - clause: WHERE
-    comparator: '10'
+    comparator: "10"
     expressionType: SIMPLE
     filterOptionName: filter_juemdnqji5_d6fm8tuf4rc
     isExtra: false

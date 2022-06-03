@@ -170,7 +170,7 @@ class MetadataResult:
 
 
 class AnnotationDatasource(BaseDatasource):
-    """Dummy object so we can query annotations using 'Viz' objects just like
+    """Dummy object so we can query annotations using "Viz" objects just like
     regular datasources.
     """
 
@@ -401,10 +401,10 @@ class TableColumn(Model, BaseColumn, CertificationMixin):
                 if tf == "epoch_s":
                     return str(seconds_since_epoch)
                 return str(seconds_since_epoch * 1000)
-            return f"'{dttm.strftime(tf)}'"
+            return f""{dttm.strftime(tf)}""
 
         # TODO(john-bodley): SIP-15 will explicitly require a type conversion.
-        return f"""'{dttm.strftime("%Y-%m-%d %H:%M:%S.%f")}'"""
+        return f""""{dttm.strftime("%Y-%m-%d %H:%M:%S.%f")}""""
 
     @property
     def data(self) -> Dict[str, Any]:
@@ -768,7 +768,7 @@ class SqlaTable(Model, BaseDatasource):  # pylint: disable=too-many-public-metho
             .filter(cls.table_name == datasource_name)
             .filter(Database.database_name == database_name)
         )
-        # Handling schema being '' or None, which is easier to handle
+        # Handling schema being "" or None, which is easier to handle
         # in python than in the SQLA query in a multi-dialect way
         for tbl in query.all():
             if schema == (tbl.schema or None):
@@ -778,7 +778,7 @@ class SqlaTable(Model, BaseDatasource):  # pylint: disable=too-many-public-metho
     @property
     def link(self) -> Markup:
         name = escape(self.name)
-        anchor = f'<a target="_blank" href="{self.explore_url}">{name}</a>'
+        anchor = f"<a target="_blank" href="{self.explore_url}">{name}</a>"
         return Markup(anchor)
 
     def get_schema_perm(self) -> Optional[str]:
@@ -926,7 +926,7 @@ class SqlaTable(Model, BaseDatasource):  # pylint: disable=too-many-public-metho
         return df[column_name].to_list()
 
     def mutate_query_from_config(self, sql: str) -> str:
-        """Apply config's SQL_QUERY_MUTATOR
+        """Apply config"s SQL_QUERY_MUTATOR
 
         Typically adds comments to the query with context"""
         sql_query_mutator = config["SQL_QUERY_MUTATOR"]
@@ -971,7 +971,7 @@ class SqlaTable(Model, BaseDatasource):  # pylint: disable=too-many-public-metho
     ) -> Tuple[Union[TableClause, Alias], Optional[str]]:
         """
         Return where to select the columns and metrics from. Either a physical table
-        or a virtual table with it's own subquery. If the FROM is referencing a
+        or a virtual table with it"s own subquery. If the FROM is referencing a
         CTE, the CTE is returned as the second value in the return tuple.
         """
         if not self.is_virtual:
@@ -1143,7 +1143,7 @@ class SqlaTable(Model, BaseDatasource):  # pylint: disable=too-many-public-metho
         Flask global namespace.
 
         :param template_processor: The template processor to apply to the filters.
-        :param username: Optional username if there's no user in the Flask global
+        :param username: Optional username if there"s no user in the Flask global
         namespace.
         :returns: A list of SQL clauses to be ANDed together.
         """
@@ -1162,7 +1162,7 @@ class SqlaTable(Model, BaseDatasource):  # pylint: disable=too-many-public-metho
             if is_feature_enabled("EMBEDDED_SUPERSET"):
                 for rule in security_manager.get_guest_rls_filters(self):
                     clause = self.text(
-                        f"({template_processor.process_template(rule['clause'])})"
+                        f"({template_processor.process_template(rule["clause"])})"
                     )
                     all_filters.append(clause)
 
@@ -1283,7 +1283,7 @@ class SqlaTable(Model, BaseDatasource):  # pylint: disable=too-many-public-metho
                 metrics_exprs.append(metrics_by_name[metric].get_sqla_col())
             else:
                 raise QueryObjectValidationError(
-                    _("Metric '%(metric)s' does not exist", metric=metric)
+                    _("Metric "%(metric)s" does not exist", metric=metric)
                 )
 
         if metrics_exprs:
@@ -1393,7 +1393,7 @@ class SqlaTable(Model, BaseDatasource):  # pylint: disable=too-many-public-metho
             if granularity not in columns_by_name or not dttm_col:
                 raise QueryObjectValidationError(
                     _(
-                        'Time column "%(col)s" does not exist in dataset',
+                        "Time column "%(col)s" does not exist in dataset",
                         col=granularity,
                     )
                 )
@@ -1763,7 +1763,7 @@ class SqlaTable(Model, BaseDatasource):  # pylint: disable=too-many-public-metho
             ob = metrics_by_name[series_limit_metric].get_sqla_col()
         else:
             raise QueryObjectValidationError(
-                _("Metric '%(metric)s' does not exist", metric=series_limit_metric)
+                _("Metric "%(metric)s" does not exist", metric=series_limit_metric)
             )
         return ob
 
@@ -2126,7 +2126,7 @@ class SqlaTable(Model, BaseDatasource):  # pylint: disable=too-many-public-metho
         inspector = inspect(target)
         session = inspector.session
 
-        # Forces an update to the table's changed_on value when a metric or column on the
+        # Forces an update to the table"s changed_on value when a metric or column on the
         # table is updated. This busts the cache key for all charts that use the table.
         session.execute(update(SqlaTable).where(SqlaTable.id == target.table.id))
 
@@ -2308,7 +2308,7 @@ class SqlaTable(Model, BaseDatasource):  # pylint: disable=too-many-public-metho
                     sqla_table.database,
                     referenced_tables,
                     default_schema=sqla_table.schema,
-                    # sync metadata is expensive, we'll do it in another process
+                    # sync metadata is expensive, we"ll do it in another process
                     # e.g. when users open a Table page
                     sync_columns=False,
                     default_props=dict(
@@ -2343,7 +2343,7 @@ class SqlaTable(Model, BaseDatasource):  # pylint: disable=too-many-public-metho
         """
         session = inspect(self).session
         # make sure database points to the right instance, in case only
-        # `table.database_id` is updated and the changes haven't been
+        # `table.database_id` is updated and the changes haven"t been
         # consolidated by SQLA
         if self.database_id and (
             not self.database or self.database.id != self.database_id
@@ -2371,7 +2371,7 @@ class SqlaTable(Model, BaseDatasource):  # pylint: disable=too-many-public-metho
                 clone_model(
                     column,
                     ignore=["uuid"],
-                    # `created_by` will always be left empty because it'd always
+                    # `created_by` will always be left empty because it"d always
                     # be created via some sort of automated system.
                     # But keep `changed_by` in case someone manually changes
                     # column attributes such as `is_dttm`.

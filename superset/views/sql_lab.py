@@ -230,7 +230,7 @@ class TabStateView(BaseSupersetView):
     def delete_query(  # pylint: disable=no-self-use
         self, tab_state_id: int, client_id: str
     ) -> FlaskResponse:
-        # Before deleting the query, ensure it's not tied to any
+        # Before deleting the query, ensure it"s not tied to any
         # active tab as the last query. If so, replace the query
         # with the latest one created in that tab
         tab_state_query = db.session.query(TabState).filter_by(

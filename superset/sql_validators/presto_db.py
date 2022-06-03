@@ -37,7 +37,7 @@ class PrestoSQLValidationError(Exception):
 
 
 class PrestoDBSQLValidator(BaseSQLValidator):
-    """Validate SQL queries using Presto's built-in EXPLAIN subtype"""
+    """Validate SQL queries using Presto"s built-in EXPLAIN subtype"""
 
     name = "PrestoDBSQLValidator"
 
@@ -67,8 +67,8 @@ class PrestoDBSQLValidator(BaseSQLValidator):
         # to presto to validate
         sql = f"EXPLAIN (TYPE VALIDATE) {sql}"
 
-        # Invoke the query against presto. NB this deliberately doesn't use the
-        # engine spec's handle_cursor implementation since we don't record
+        # Invoke the query against presto. NB this deliberately doesn"t use the
+        # engine spec"s handle_cursor implementation since we don"t record
         # these EXPLAIN queries done in validation as proper Query objects
         # in the superset ORM.
         # pylint: disable=import-outside-toplevel
@@ -90,7 +90,7 @@ class PrestoDBSQLValidator(BaseSQLValidator):
             return None
         except DatabaseError as db_error:
             # The pyhive presto client yields EXPLAIN (TYPE VALIDATE) responses
-            # as though they were normal queries. In other words, it doesn't
+            # as though they were normal queries. In other words, it doesn"t
             # know that errors here are not exceptional. To map this back to
             # ordinary control flow, we have to trap the category of exception
             # raised by the underlying client, match the exception arguments

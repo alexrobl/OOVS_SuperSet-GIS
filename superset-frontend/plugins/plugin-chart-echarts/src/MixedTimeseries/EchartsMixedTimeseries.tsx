@@ -16,11 +16,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React, { useCallback } from 'react';
-import { EchartsMixedTimeseriesChartTransformedProps } from './types';
-import Echart from '../components/Echart';
-import { EventHandlers } from '../types';
-import { currentSeries } from '../utils/series';
+import React, { useCallback } from "react";
+import { EchartsMixedTimeseriesChartTransformedProps } from "./types";
+import Echart from "../components/Echart";
+import { EventHandlers } from "../types";
+import { currentSeries } from "../utils/series";
 
 export default function EchartsMixedTimeseries({
   height,
@@ -67,11 +67,11 @@ export default function EchartsMixedTimeseries({
                     if (val === null || val === undefined)
                       return {
                         col,
-                        op: 'IS NULL',
+                        op: "IS NULL",
                       };
                     return {
                       col,
-                      op: 'IN',
+                      op: "IN",
                       val: val as (string | number | boolean)[],
                     };
                   }),
@@ -100,7 +100,7 @@ export default function EchartsMixedTimeseries({
       }
     },
     mouseout: () => {
-      currentSeries.name = '';
+      currentSeries.name = "";
     },
     mouseover: params => {
       currentSeries.name = params.seriesName;

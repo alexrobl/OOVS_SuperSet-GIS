@@ -55,7 +55,7 @@ class EmbeddedView(BaseSupersetView):
 
         # Log in as an anonymous user, just for this view.
         # This view needs to be visible to all users,
-        # and building the page fails if g.user and/or ctx.user aren't present.
+        # and building the page fails if g.user and/or ctx.user aren"t present.
         login_manager: LoginManager = security_manager.lm
         login_manager.reload_user(AnonymousUserMixin())
 

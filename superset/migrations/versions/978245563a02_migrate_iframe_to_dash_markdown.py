@@ -83,7 +83,7 @@ def create_new_markdown_component(chart_position, url):
         "meta": {
             "width": chart_position["meta"]["width"],
             "height": chart_position["meta"]["height"],
-            "code": f'<iframe src="{url}" width="100%" height="100%"></iframe>',
+            "code": f"<iframe src="{url}" width="100%" height="100%"></iframe>",
         },
     }
 

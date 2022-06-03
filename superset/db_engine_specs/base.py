@@ -121,7 +121,7 @@ class TimestampExpression(ColumnClause):  # pylint: disable=abstract-method
         """Sqlalchemy class that can be can be used to render native column elements
         respeting engine-specific quoting rules as part of a string-based expression.
 
-        :param expr: Sql expression with '{col}' denoting the locations where the col
+        :param expr: Sql expression with "{col}" denoting the locations where the col
         object will be rendered.
         :param col: the target column
         """
@@ -304,7 +304,7 @@ class BaseEngineSpec:  # pylint: disable=too-many-public-methods
     allows_alias_to_source_column = True
 
     # Whether ORDER BY clause must appear in SELECT
-    # if TRUE, then it doesn't have to.
+    # if TRUE, then it doesn"t have to.
     allows_hidden_ordeby_agg = True
 
     # Whether ORDER BY clause can use sql caculated expression
@@ -479,7 +479,7 @@ class BaseEngineSpec:  # pylint: disable=too-many-public-methods
         prog = re.compile(r"(.*\/)?(P|PT)([0-9\.]+)(S|M|H|D|W|M|Y)(\/.*)?")
         result = prog.match(val[0])
 
-        # for any time grains that don't match the format, put them at the end
+        # for any time grains that don"t match the format, put them at the end
         if result is None:
             return pos["LAST"]
 
@@ -804,7 +804,7 @@ class BaseEngineSpec:  # pylint: disable=too-many-public-methods
         Upload data from a Pandas DataFrame to a database.
 
         For regular engines this calls the `pandas.DataFrame.to_sql` method. Can be
-        overridden for engines that don't work well with this method, e.g. Hive and
+        overridden for engines that don"t work well with this method, e.g. Hive and
         BigQuery.
 
         Note this method does not create metadata for the table.
@@ -848,7 +848,7 @@ class BaseEngineSpec:  # pylint: disable=too-many-public-methods
         """Returns a list of all tables or views in database.
 
         :param database: Database instance
-        :param datasource_type: Datasource_type can be 'table' or 'view'
+        :param datasource_type: Datasource_type can be "table" or "view"
         :return: List of all datasources in database or schema
         """
         # TODO: Fix circular import caused by importing Database
@@ -940,15 +940,15 @@ class BaseEngineSpec:  # pylint: disable=too-many-public-methods
         ``selected_schema`` is the schema currently active presumably in
         the SQL Lab dropdown. Based on that, for some database engine,
         we can return a new altered URI that connects straight to the
-        active schema, meaning the users won't have to prefix the object
+        active schema, meaning the users won"t have to prefix the object
         names by the schema name.
 
         Some databases engines have 2 level of namespacing: database and
         schema (postgres, oracle, mssql, ...)
-        For those it's probably better to not alter the database
-        component of the URI with the schema name, it won't work.
+        For those it"s probably better to not alter the database
+        component of the URI with the schema name, it won"t work.
 
-        Some database drivers like presto accept '{catalog}/{schema}' in
+        Some database drivers like presto accept "{catalog}/{schema}" in
         the database component of the URL, that can be handled here.
         """
 
@@ -1025,7 +1025,7 @@ class BaseEngineSpec:  # pylint: disable=too-many-public-methods
             comment = inspector.get_table_comment(table_name, schema)
             comment = comment.get("text") if isinstance(comment, dict) else None
         except NotImplementedError:
-            # It's expected that some dialects don't implement the comment method
+            # It"s expected that some dialects don"t implement the comment method
             pass
         except Exception as ex:  # pylint: disable=broad-except
             logger.error("Unexpected error while fetching table comment", exc_info=True)
@@ -1315,9 +1315,9 @@ class BaseEngineSpec:  # pylint: disable=too-many-public-methods
         Most engines support mixed case aliases that can include numbers
         and special characters, like commas, parentheses etc. For engines that
         have restrictions on what types of aliases are supported, this method
-        can be overridden to ensure that labels conform to the engine's
+        can be overridden to ensure that labels conform to the engine"s
         limitations. Mutated labels should be deterministic (input label A always
-        yields output label X) and unique (input labels A and B don't yield the same
+        yields output label X) and unique (input labels A and B don"t yield the same
         output label X).
 
         :param label: Preferred expression label
@@ -1442,7 +1442,7 @@ class BaseEngineSpec:  # pylint: disable=too-many-public-methods
 
     @classmethod
     def is_readonly_query(cls, parsed_query: ParsedQuery) -> bool:
-        """Pessimistic readonly, 100% sure statement won't mutate anything"""
+        """Pessimistic readonly, 100% sure statement won"t mutate anything"""
         return (
             parsed_query.is_select()
             or parsed_query.is_explain()
@@ -1601,7 +1601,7 @@ class BasicParametersMixin:
         parameters: BasicParametersType,
         encryted_extra: Optional[Dict[str, str]] = None,
     ) -> str:
-        # make a copy so that we don't update the original
+        # make a copy so that we don"t update the original
         query = parameters.get("query", {}).copy()
         if parameters.get("encryption"):
             if not cls.encryption_parameters:
@@ -1662,7 +1662,7 @@ class BasicParametersMixin:
         if missing:
             errors.append(
                 SupersetError(
-                    message=f'One or more parameters are missing: {", ".join(missing)}',
+                    message=f"One or more parameters are missing: {", ".join(missing)}",
                     error_type=SupersetErrorType.CONNECTION_MISSING_PARAMETERS_ERROR,
                     level=ErrorLevel.WARNING,
                     extra={"missing": missing},
@@ -1675,7 +1675,7 @@ class BasicParametersMixin:
         if not is_hostname_valid(host):
             errors.append(
                 SupersetError(
-                    message="The hostname provided can't be resolved.",
+                    message="The hostname provided can"t be resolved.",
                     error_type=SupersetErrorType.CONNECTION_INVALID_HOSTNAME_ERROR,
                     level=ErrorLevel.ERROR,
                     extra={"invalid": ["host"]},

@@ -102,7 +102,7 @@ class Slice(  # pylint: disable=too-many-public-methods
         "SqlaTable",
         foreign_keys=[datasource_id],
         primaryjoin="and_(Slice.datasource_id == SqlaTable.id, "
-        "Slice.datasource_type == 'table')",
+        "Slice.datasource_type == "table")",
         remote_side="SqlaTable.id",
         lazy="subquery",
     )
@@ -255,7 +255,7 @@ class Slice(  # pylint: disable=too-many-public-methods
         try:
             form_data = json.loads(self.params)
         except Exception as ex:  # pylint: disable=broad-except
-            logger.error("Malformed json in slice's params", exc_info=True)
+            logger.error("Malformed json in slice"s params", exc_info=True)
             logger.exception(ex)
         form_data.update(
             {
@@ -277,7 +277,7 @@ class Slice(  # pylint: disable=too-many-public-methods
                     **json.loads(self.query_context)
                 )
             except json.decoder.JSONDecodeError as ex:
-                logger.error("Malformed json in slice's query context", exc_info=True)
+                logger.error("Malformed json in slice"s query context", exc_info=True)
                 logger.exception(ex)
         return None
 
@@ -313,7 +313,7 @@ class Slice(  # pylint: disable=too-many-public-methods
     @property
     def slice_link(self) -> Markup:
         name = escape(self.chart)
-        return Markup(f'<a href="{self.url}">{name}</a>')
+        return Markup(f"<a href="{self.url}">{name}</a>")
 
     @property
     def changed_by_url(self) -> str:

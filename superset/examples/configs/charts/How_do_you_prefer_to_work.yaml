@@ -19,7 +19,7 @@ viz_type: heatmap
 params:
   adhoc_filters:
   - clause: WHERE
-    comparator: '0'
+    comparator: "0"
     expressionType: SIMPLE
     filterOptionName: filter_v65f0j14bk_35oi0g94srk
     isExtra: false
@@ -28,21 +28,21 @@ params:
     sqlExpression: null
     subject: is_software_dev
   - clause: WHERE
-    comparator: 'NULL'
+    comparator: "NULL"
     expressionType: SIMPLE
     filterOptionName: filter_qb5ionb8wcq_ki4aimey4do
     isExtra: false
     isNew: false
-    operator: '!='
+    operator: "!="
     sqlExpression: null
     subject: school_degree
   - clause: WHERE
-    comparator: 'NULL'
+    comparator: "NULL"
     expressionType: SIMPLE
     filterOptionName: filter_3n0z71frg5c_xqnl179to7
     isExtra: false
     isNew: false
-    operator: '!='
+    operator: "!="
     sqlExpression: null
     subject: job_pref
   all_columns_x: job_pref

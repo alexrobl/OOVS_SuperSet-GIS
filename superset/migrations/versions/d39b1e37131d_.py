@@ -17,7 +17,7 @@
 """empty message
 
 Revision ID: d39b1e37131d
-Revises: ('a9c47e2c1547', 'ddd6ebdd853b')
+Revises: ("a9c47e2c1547", "ddd6ebdd853b")
 Create Date: 2017-09-19 15:09:14.292633
 
 """

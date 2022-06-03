@@ -20,13 +20,13 @@ import {
   buildQueryContext,
   DTTM_ALIAS,
   QueryFormData,
-} from '@superset-ui/core';
+} from "@superset-ui/core";
 import {
   flattenOperator,
   pivotOperator,
   resampleOperator,
   rollingWindowOperator,
-} from '@superset-ui/chart-controls';
+} from "@superset-ui/chart-controls";
 
 export default function buildQuery(formData: QueryFormData) {
   return buildQueryContext(formData, baseQueryObject => {

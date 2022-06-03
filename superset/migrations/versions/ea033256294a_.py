@@ -17,7 +17,7 @@
 """empty message
 
 Revision ID: ea033256294a
-Revises: ('732f1c06bcbf', 'b318dfe5fb6c')
+Revises: ("732f1c06bcbf", "b318dfe5fb6c")
 Create Date: 2017-03-16 14:55:59.431283
 
 """

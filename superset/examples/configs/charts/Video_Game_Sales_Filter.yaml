@@ -46,8 +46,8 @@ params:
   queryFields: {}
   time_range: No filter
   url_params:
-    preselect_filters: '{"1389": {"platform": ["PS", "PS2", "PS3", "PS4"], "genre":
-      null, "__time_range": "No filter"}}'
+    preselect_filters: "{"1389": {"platform": ["PS", "PS2", "PS3", "PS4"], "genre":
+      null, "__time_range": "No filter"}}"
   viz_type: filter_box
 cache_timeout: null
 uuid: fd9ce7ec-ae08-4f71-93e0-7c26b132b2e6

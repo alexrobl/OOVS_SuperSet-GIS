@@ -17,7 +17,7 @@
  * under the License.
  */
 
-import { validateNumber } from '@superset-ui/core';
+import { validateNumber } from "@superset-ui/core";
 
 // eslint-disable-next-line import/prefer-default-export
 export function parseYAxisBound(
@@ -29,10 +29,10 @@ export function parseYAxisBound(
   return Number(bound);
 }
 
-export function parseNumbersList(value: string, delim = ';') {
+export function parseNumbersList(value: string, delim = ";") {
   if (!value || !value.trim()) return [];
   return value.split(delim).map(num => {
-    if (validateNumber(num)) throw new Error('All values must be numeric');
+    if (validateNumber(num)) throw new Error("All values must be numeric");
     return Number(num);
   });
 }

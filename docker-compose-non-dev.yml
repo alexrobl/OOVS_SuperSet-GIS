@@ -33,12 +33,24 @@ services:
       - redis:/data
 
   db:
+    # env_file: docker/.env-non-dev
+    # # Cambio por mi imagen
+    # image: kartoza/postgis:10.0-2.4
+    # container_name: superset_db
+    # restart: unless-stopped
+    # volumes:
+    #   - db_home:/var/lib/postgresql/data
+    # ports:
+    #   - 5432:5432
+    # imagen original sin soporte espacial
     env_file: docker/.env-non-dev
-    image: postgres:10
+    image: kartoza/postgis:10.0-2.4
     container_name: superset_db
     restart: unless-stopped
     volumes:
-      - db_home:/var/lib/postgresql/data
+      - db_home:/var/lib/postgresql
+    ports:
+      - 5432:5432
 
   superset:
     env_file: docker/.env-non-dev

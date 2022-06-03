@@ -17,8 +17,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t, validateNonEmpty } from '@superset-ui/core';
-import { ControlPanelConfig, sections } from '@superset-ui/chart-controls';
+import { t, validateNonEmpty } from "@superset-ui/core";
+import { ControlPanelConfig, sections } from "@superset-ui/chart-controls";
 import {
   lineInterpolation,
   showLegend,
@@ -33,7 +33,7 @@ import {
   yAxisBounds,
   yAxis2ShowMinmax,
   yAxis2Bounds,
-} from '../NVD3Controls';
+} from "../NVD3Controls";
 
 export type Result = {
   id: unknown;
@@ -48,20 +48,20 @@ const config: ControlPanelConfig = {
   controlPanelSections: [
     {
       ...sections.legacyRegularTime,
-      controlSetRows: [['time_range']],
+      controlSetRows: [["time_range"]],
     },
     {
-      label: t('Chart Options'),
-      tabOverride: 'customize',
+      label: t("Chart Options"),
+      tabOverride: "customize",
       expanded: true,
       controlSetRows: [
-        ['color_scheme'],
+        ["color_scheme"],
         [
           {
-            name: 'prefix_metric_with_slice_name',
+            name: "prefix_metric_with_slice_name",
             config: {
-              type: 'CheckboxControl',
-              label: t('Prefix metric name with slice name'),
+              type: "CheckboxControl",
+              label: t("Prefix metric name with slice name"),
               default: false,
               renderTrigger: true,
             },
@@ -74,7 +74,7 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('X Axis'),
+      label: t("X Axis"),
       expanded: true,
       controlSetRows: [
         [xAxisLabel],
@@ -85,23 +85,23 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('Y Axis Left'),
+      label: t("Y Axis Left"),
       expanded: true,
       controlSetRows: [
         [
           {
-            name: 'line_charts',
+            name: "line_charts",
             config: {
-              type: 'SelectAsyncControl',
+              type: "SelectAsyncControl",
               multi: true,
-              label: t('Left Axis chart(s)'),
+              label: t("Left Axis chart(s)"),
               validators: [validateNonEmpty],
               default: [],
-              description: t('Choose one or more charts for left axis'),
+              description: t("Choose one or more charts for left axis"),
               dataEndpoint:
-                '/sliceasync/api/read?_flt_0_viz_type=line&_flt_7_viz_type=line_multi',
-              placeholder: t('Select charts'),
-              onAsyncErrorMessage: t('Error while fetching charts'),
+                "/sliceasync/api/read?_flt_0_viz_type=line&_flt_7_viz_type=line_multi",
+              placeholder: t("Select charts"),
+              onAsyncErrorMessage: t("Error while fetching charts"),
               mutator: (data?: Data) => {
                 if (!data || !data.result) {
                   return [];
@@ -114,29 +114,29 @@ const config: ControlPanelConfig = {
             },
           },
         ],
-        ['y_axis_format'],
+        ["y_axis_format"],
         [yAxisShowMinmax],
         [yAxisBounds],
       ],
     },
     {
-      label: t('Y Axis Right'),
+      label: t("Y Axis Right"),
       expanded: false,
       controlSetRows: [
         [
           {
-            name: 'line_charts_2',
+            name: "line_charts_2",
             config: {
-              type: 'SelectAsyncControl',
+              type: "SelectAsyncControl",
               multi: true,
-              label: t('Right Axis chart(s)'),
+              label: t("Right Axis chart(s)"),
               validators: [],
               default: [],
-              description: t('Choose one or more charts for right axis'),
+              description: t("Choose one or more charts for right axis"),
               dataEndpoint:
-                '/sliceasync/api/read?_flt_0_viz_type=line&_flt_7_viz_type=line_multi',
-              placeholder: t('Select charts'),
-              onAsyncErrorMessage: t('Error while fetching charts'),
+                "/sliceasync/api/read?_flt_0_viz_type=line&_flt_7_viz_type=line_multi",
+              placeholder: t("Select charts"),
+              onAsyncErrorMessage: t("Error while fetching charts"),
               mutator: (data: Data) => {
                 if (!data || !data.result) {
                   return [];
@@ -155,15 +155,15 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('Query'),
+      label: t("Query"),
       expanded: true,
-      controlSetRows: [['adhoc_filters']],
+      controlSetRows: [["adhoc_filters"]],
     },
     sections.annotations,
   ],
   controlOverrides: {
     y_axis_format: {
-      label: t('Left Axis Format'),
+      label: t("Left Axis Format"),
     },
   },
 };

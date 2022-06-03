@@ -62,7 +62,7 @@ published_description = (
     "the list of all dashboards."
 )
 charts_description = (
-    "The names of the dashboard's charts. Names are used for legacy reasons."
+    "The names of the dashboard"s charts. Names are used for legacy reasons."
 )
 certified_by_description = "Person or group that has certified this dashboard"
 certification_details_description = "Details of the certification"

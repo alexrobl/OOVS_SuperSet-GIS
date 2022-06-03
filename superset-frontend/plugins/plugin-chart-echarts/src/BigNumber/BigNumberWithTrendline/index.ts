@@ -16,33 +16,33 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t, ChartMetadata, ChartPlugin } from '@superset-ui/core';
-import controlPanel from './controlPanel';
-import transformProps from './transformProps';
-import buildQuery from './buildQuery';
-import example from './images/Big_Number_Trendline.jpg';
-import thumbnail from './images/thumbnail.png';
+import { t, ChartMetadata, ChartPlugin } from "@superset-ui/core";
+import controlPanel from "./controlPanel";
+import transformProps from "./transformProps";
+import buildQuery from "./buildQuery";
+import example from "./images/Big_Number_Trendline.jpg";
+import thumbnail from "./images/thumbnail.png";
 import {
   BigNumberWithTrendlineChartProps,
   BigNumberWithTrendlineFormData,
-} from '../types';
+} from "../types";
 
 const metadata = new ChartMetadata({
-  category: t('KPI'),
+  category: t("KPI"),
   description: t(
-    'Showcases a single number accompanied by a simple line chart, to call attention to an important metric along with its change over time or other dimension.',
+    "Showcases a single number accompanied by a simple line chart, to call attention to an important metric along with its change over time or other dimension.",
   ),
   exampleGallery: [{ url: example }],
-  name: t('Big Number with Trendline'),
+  name: t("Big Number with Trendline"),
   tags: [
-    t('Advanced-Analytics'),
-    t('Formattable'),
-    t('Line'),
-    t('Percentages'),
-    t('Popular'),
-    t('Report'),
-    t('Description'),
-    t('Trend'),
+    t("Advanced-Analytics"),
+    t("Formattable"),
+    t("Line"),
+    t("Percentages"),
+    t("Popular"),
+    t("Report"),
+    t("Description"),
+    t("Trend"),
   ],
   thumbnail,
 });
@@ -53,7 +53,7 @@ export default class BigNumberWithTrendlineChartPlugin extends ChartPlugin<
 > {
   constructor() {
     super({
-      loadChart: () => import('../BigNumberViz'),
+      loadChart: () => import("../BigNumberViz"),
       metadata,
       buildQuery,
       transformProps,

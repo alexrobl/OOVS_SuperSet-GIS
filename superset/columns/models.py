@@ -21,7 +21,7 @@ This model was introduced in SIP-68 (https://github.com/apache/superset/issues/1
 and represents a "column" in a table or dataset. In addition to a column, new models for
 tables, metrics, and datasets were also introduced.
 
-These models are not fully implemented, and shouldn't be used yet.
+These models are not fully implemented, and shouldn"t be used yet.
 """
 import sqlalchemy as sa
 from flask_appbuilder import Model
@@ -55,7 +55,7 @@ class Column(
 
     # Assuming the column is an aggregation, is it additive? Useful for determining which
     # aggregations can be done on the metric. Eg, ``COUNT(DISTINCT user_id)`` is not
-    # additive, so it shouldn't be used in a ``SUM``.
+    # additive, so it shouldn"t be used in a ``SUM``.
     is_additive = sa.Column(sa.Boolean, default=False)
 
     # Is this column an aggregation (metric)?
@@ -101,7 +101,7 @@ class Column(
     # Columns are defined by expressions. For tables, these are the actual columns names,
     # and should match the ``name`` attribute. For datasets, these can be any valid SQL
     # expression. If the SQL expression is an aggregation the column is a metric,
-    # otherwise it's a computed column.
+    # otherwise it"s a computed column.
     expression = sa.Column(sa.Text)
     unit = sa.Column(sa.Text)
 

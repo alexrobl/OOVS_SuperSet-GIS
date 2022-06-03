@@ -110,7 +110,7 @@ class TimeStamp(TypeDecorator):
         Used for in-line rendering of TIMESTAMP data type
         as Presto does not support automatic casting.
         """
-        return f"TIMESTAMP '{value}'"
+        return f"TIMESTAMP "{value}""
 
 
 class Date(TypeDecorator):
@@ -126,4 +126,4 @@ class Date(TypeDecorator):
         Used for in-line rendering of DATE data type
         as Presto does not support automatic casting.
         """
-        return f"DATE '{value}'"
+        return f"DATE "{value}""

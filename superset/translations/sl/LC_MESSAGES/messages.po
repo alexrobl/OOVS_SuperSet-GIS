@@ -34,8 +34,8 @@ msgstr ""
 #, fuzzy
 msgid ""
 "\n"
-"                This filter was inherited from the dashboard's context.\n"
-"                It won't be saved when saving the chart.\n"
+"                This filter was inherited from the dashboard"s context.\n"
+"                It won"t be saved when saving the chart.\n"
 "              "
 msgstr ""
 "\r\n"
@@ -146,15 +146,15 @@ msgstr "!= (ni enako)"
 #, fuzzy
 msgid ""
 "${tableName\n"
-"                      .split('')\n"
+"                      .split("")\n"
 "                      .slice(0, tableName.length - 1)\n"
-"                      .join('')}\n"
+"                      .join("")}\n"
 "                    "
 msgstr ""
 "${tableName\r\n"
-"                        .split('')\r\n"
+"                        .split("")\r\n"
 "                        .slice(0, tableName.length - 1)\r\n"
-"                        .join('')}\r\n"
+"                        .join("")}\r\n"
 "                    "
 
 #: superset/security/analytics_db_safety.py:44
@@ -219,7 +219,7 @@ msgstr ""
 
 #: superset/views/core.py:2773
 #, python-format
-msgid "%(user)s's profile"
+msgid "%(user)s"s profile"
 msgstr "Profil uporabnika: %(user)s"
 
 #: superset/views/core.py:2442
@@ -571,8 +571,8 @@ msgid "A reference to the [Time] configuration, taking granularity into account"
 msgstr "Sklic na nastavitve za [Čas], ki upošteva granulacijo"
 
 #: superset/views/alerts.py:189
-msgid "A semicolon ';' delimited list of email addresses"
-msgstr "S podpičjem ';' ločen seznam naslovov e-pošte"
+msgid "A semicolon ";" delimited list of email addresses"
+msgstr "S podpičjem ";" ločen seznam naslovov e-pošte"
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:789
 #: superset/connectors/sqla/views.py:469
@@ -1734,7 +1734,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/ColorSchemeControlWrapper.jsx:56
 msgid ""
 "Any color palette selected here will override the colors applied to this "
-"dashboard's individual charts"
+"dashboard"s individual charts"
 msgstr ""
 "Na tem mestu izbrana barvna shema bo nadomestila barve posameznih "
 "grafikonov v tej nadzorni plošči"
@@ -2044,7 +2044,7 @@ msgstr "Iz dna proti vrhu"
 msgid ""
 "Bounds for the Y-axis. When left empty, the bounds are dynamically "
 "defined based on the min/max of the data. Note that this feature will "
-"only expand the axis range. It won't narrow the data's extent."
+"only expand the axis range. It won"t narrow the data"s extent."
 msgstr ""
 "Meje Y-osi. Če je prazno, se meje nastavijo dinamično na podlagi "
 "min./max. vrednosti podatkov. Funkcija omeji le prikaz, obseg podatkov pa"
@@ -2113,7 +2113,7 @@ msgstr "Izberi hkrati"
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Bullet/index.js:30
 #: superset/viz.py:1190
 msgid "Bullet Chart"
-msgstr "'Bullet' grafikon"
+msgstr ""Bullet" grafikon"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/index.js:32
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/index.js:40
@@ -2321,18 +2321,18 @@ msgstr "Najvišjega zavihka ni mogoče premakniti v gnezdene zavihke"
 
 #: superset/views/core.py:2010
 #, python-format
-msgid "Can't find DruidCluster with cluster_name = '%(name)s'"
-msgstr "Ni mogoče najti DruidCluster s cluster_name = '%(name)s'"
+msgid "Can"t find DruidCluster with cluster_name = "%(name)s""
+msgstr "Ni mogoče najti DruidCluster s cluster_name = "%(name)s""
 
 #: superset/views/core.py:1998
 #, python-format
-msgid "Can't find User '%(name)s', please ask your admin to create one."
+msgid "Can"t find User "%(name)s", please ask your admin to create one."
 msgstr ""
-"Uporabnika '%(name)s' ni mogoče najti. Prosite administratorja, da ga "
+"Uporabnika "%(name)s" ni mogoče najti. Prosite administratorja, da ga "
 "ustvari."
 
 #: superset/viz.py:1778
-msgid "Can't have overlap between Series and Breakdowns"
+msgid "Can"t have overlap between Series and Breakdowns"
 msgstr "Ne sme imeti prekrivanja med podatkovnimi serijami in členitvami"
 
 #: superset-frontend/src/SqlLab/components/SaveQuery/index.tsx:173
@@ -2671,7 +2671,7 @@ msgid ""
 " to can be fine tuned as well in the dashboard view.\n"
 "\n"
 "    Note that this plugin is being replaced with the new Filters feature "
-"that lives in the dashboard view itself. It's easier to use and has more "
+"that lives in the dashboard view itself. It"s easier to use and has more "
 "capabilities!"
 msgstr ""
 "Komponenta grafikona, ki omogoča dodajanje vmesnika filtrov po meri v "
@@ -4273,7 +4273,7 @@ msgstr "Privzeta dolžina"
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:91
 msgid ""
 "Default minimal column width in pixels, actual width may still be larger "
-"than this if other columns don't need much space"
+"than this if other columns don"t need much space"
 msgstr ""
 "Privzeta min. širina stolpca v pikslih. Dejanska širina bo lahko večja, "
 "če drugi stolpci ne potrebujejo veliko prostora"
@@ -4740,7 +4740,7 @@ msgid "Domain"
 msgstr "Domena"
 
 #: superset-frontend/src/dashboard/components/RefreshIntervalModal.tsx:29
-msgid "Don't refresh"
+msgid "Don"t refresh"
 msgstr "Ne osvežuj"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Pie/controlPanel.ts:83
@@ -4892,7 +4892,7 @@ msgstr ""
 #: superset-frontend/src/explore/components/PropertiesModal/index.tsx:282
 msgid ""
 "Duration (in seconds) of the caching timeout for this chart. Note this "
-"defaults to the dataset's timeout if undefined."
+"defaults to the dataset"s timeout if undefined."
 msgstr ""
 "Časovna veljavnost (v sekundah) predpomnjenja za ta grafikon. Če ni "
 "definirana, je uporabljena vrednost za podatkovni set."
@@ -5955,19 +5955,19 @@ msgid ""
 "while different filter groups will be ANDed together. Undefined group "
 "keys are treated as unique groups, i.e. are not grouped together. For "
 "example, if a table has three filters, of which two are for departments "
-"Finance and Marketing (group key = 'department'), and one refers to the "
-"region Europe (group key = 'region'), the filter clause would apply the "
-"filter (department = 'Finance' OR department = 'Marketing') AND (region ="
-" 'Europe')."
+"Finance and Marketing (group key = "department"), and one refers to the "
+"region Europe (group key = "region"), the filter clause would apply the "
+"filter (department = "Finance" OR department = "Marketing") AND (region ="
+" "Europe")."
 msgstr ""
 "Filtri z enakim skupinskim ključem bodo znotraj skupine združeni z OR "
 "funkcijo, medtem ko bodo različne skupine združene z AND funkcijo. "
 "Nedefinirani skupinski ključi so obravnavani kot unikatne skupine in niso"
 " združeni v svojo skupino. Npr., če ima tabela tri filtre, pri čemer sta "
-"dva za oddelka marketinga in financ (skupinski ključ = 'oddelek') tretji "
-"pa se nanaša na regijo Evropa (skupinski ključ = 'regija'), bo filtrski "
-"izraz (oddelek = 'Finance' OR oddelek = 'Marketing') AND (regija = "
-"'Evropa')."
+"dva za oddelka marketinga in financ (skupinski ključ = "oddelek") tretji "
+"pa se nanaša na regijo Evropa (skupinski ključ = "regija"), bo filtrski "
+"izraz (oddelek = "Finance" OR oddelek = "Marketing") AND (regija = "
+""Evropa")."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:794
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:808
@@ -6176,8 +6176,8 @@ msgid "Group By filter plugin"
 msgstr "Vtičnik za filter za združevanje"
 
 #: superset/viz.py:895
-msgid "Group By' and 'Columns' can't overlap"
-msgstr "'Združevanje' in 'Stolpci' se ne smeta prekrivati"
+msgid "Group By" and "Columns" can"t overlap"
+msgstr ""Združevanje" in "Stolpci" se ne smeta prekrivati"
 
 #: superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx:83
 msgid "Group By, Metrics or Percentage Metrics must have a value"
@@ -6588,10 +6588,10 @@ msgstr "Neveljaven certifikat"
 #: superset/views/core.py:1375
 msgid ""
 "Invalid connection string, a valid string usually follows:\n"
-"'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'"
+""DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME""
 msgstr ""
 "Neveljaven niz povezave, veljaven niz običajno sledi:\n"
-"'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'"
+""DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME""
 
 #: superset/databases/schemas.py:148
 msgid ""
@@ -6604,13 +6604,13 @@ msgstr ""
 #: superset/views/database/validators.py:40
 msgid ""
 "Invalid connection string, a valid string usually "
-"follows:'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-"
-"NAME'<p>Example:'postgresql://user:password@your-postgres-"
-"db/database'</p>"
+"follows:"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-"
+"NAME"<p>Example:"postgresql://user:password@your-postgres-"
+"db/database"</p>"
 msgstr ""
 "Neveljaven niz povezave. Veljaven niz običajno sledi "
-"zapisu:'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-"
-"NAME'<p>Primer:'postgresql://user:password@your-postgres-db/database'</p>"
+"zapisu:"DRIVER://USER:PASSWORD@DB-HOST/DATABASE-"
+"NAME"<p>Primer:"postgresql://user:password@your-postgres-db/database"</p>"
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:52
 msgid "Invalid cron expression"
@@ -6720,7 +6720,7 @@ msgstr "Težava 1001 - podatkovni vir je neobičajno obremenjen."
 #: superset-frontend/src/SqlLab/components/QuerySearch/index.tsx:180
 #: superset-frontend/src/SqlLab/components/SqlEditorLeftBar/index.jsx:125
 #: superset-frontend/src/components/DatabaseSelector/index.tsx:183
-msgid "It seems you don't have access to any database"
+msgid "It seems you don"t have access to any database"
 msgstr "Zdi se, da nimate dostopa do nobene podatkovne baz"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/Regular/Bar/controlPanel.tsx:221
@@ -7469,8 +7469,8 @@ msgstr "Mera"
 #: superset/connectors/sqla/models.py:1079
 #: superset/connectors/sqla/models.py:1509
 #, python-format
-msgid "Metric '%(metric)s' does not exist"
-msgstr "Mera '%(metric)s' ne obstaja"
+msgid "Metric "%(metric)s" does not exist"
+msgstr "Mera "%(metric)s" ne obstaja"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:38
 msgid "Metric ascending"
@@ -7784,7 +7784,7 @@ msgid "Must be unique"
 msgstr "Mora biti unikaten"
 
 #: superset/viz.py:2309
-msgid "Must have a [Group By] column to have 'count' as the [Label]"
+msgid "Must have a [Group By] column to have "count" as the [Label]"
 msgstr "Mora imeti stolpec [Združevanje], da ima število (count) kot [Oznaka]"
 
 #: superset/viz.py:1720
@@ -8778,8 +8778,8 @@ msgid "Physical dataset"
 msgstr "Fizičen podatkovni set"
 
 #: superset/viz.py:742
-msgid "Pick a granularity in the Time section or uncheck 'Include Time'"
-msgstr "Izberite granulacijo v razdelku 'Čas' ali odstranite 'Vključi čas'"
+msgid "Pick a granularity in the Time section or uncheck "Include Time""
+msgstr "Izberite granulacijo v razdelku "Čas" ali odstranite "Vključi čas""
 
 #: superset/viz.py:1573
 msgid "Pick a metric for left axis!"
@@ -8832,7 +8832,7 @@ msgstr "Izberite natanko dva stolpca za [Izvor / Cilj]"
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:521
 msgid ""
 "Pick one or more columns that should be shown in the annotation. If you "
-"don't select a column all of them will be shown."
+"don"t select a column all of them will be shown."
 msgstr ""
 "Izberite enega ali več stolpcev, ki bodo prikazani v oznakah. Če ne "
 "izberete stolpca, bodo prikazani vsi."
@@ -8919,8 +8919,8 @@ msgstr ""
 "\"%(server_error)s\". Potem ponovno poženite poizvedbo."
 
 #: superset/viz.py:879
-msgid "Please choose at least one 'Group by' field "
-msgstr "Izberite vsaj eno 'Group by' polje "
+msgid "Please choose at least one "Group by" field "
+msgstr "Izberite vsaj eno "Group by" polje "
 
 #: superset/viz.py:891
 msgid "Please choose at least one metric"
@@ -9397,7 +9397,7 @@ msgid "Radar Chart"
 msgstr "Radarski grafikon"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Radar/controlPanel.tsx:201
-msgid "Radar render type, whether to display 'circle' shape."
+msgid "Radar render type, whether to display "circle" shape."
 msgstr "Način prikaza radarja - če se prikaže okrogla oblika."
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Tree/controlPanel.tsx:121
@@ -10117,7 +10117,7 @@ msgstr "Pogled SQL laboratorija"
 #: superset-frontend/src/SqlLab/components/App/index.jsx:91
 #, python-format
 msgid ""
-"SQL Lab uses your browser's local storage to store queries and results.\n"
+"SQL Lab uses your browser"s local storage to store queries and results.\n"
 "Currently, you are using %(currentUsage)s KB out of %(maxStorage)d KB "
 "storage space.\n"
 "To keep SQL Lab from crashing, please delete some query tabs.\n"
@@ -11675,7 +11675,7 @@ msgstr "Tabela"
 
 #: superset/views/core.py:1761
 #, python-format
-msgid "Table %(table)s wasn't found in the database %(db)s"
+msgid "Table %(table)s wasn"t found in the database %(db)s"
 msgstr "Tabela %(table)s ni bila najdena v podatkovni bazi %(db)s"
 
 #: superset/views/database/forms.py:138 superset/views/database/forms.py:291
@@ -11783,7 +11783,7 @@ msgstr "Parametri predlog"
 
 #: superset-frontend/src/explore/controlPanels/TimeTable.js:52
 msgid ""
-"Templated link, it's possible to include {{ metric }} or other values "
+"Templated link, it"s possible to include {{ metric }} or other values "
 "coming from the controls."
 msgstr ""
 "Vzorčna povezava, vključiti je mogoče {{ metric }} ali drugo vrednost iz "
@@ -11834,7 +11834,7 @@ msgstr ""
 
 #: superset/errors.py:118
 msgid ""
-"The CTAS (create table as select) doesn't have a SELECT statement at the "
+"The CTAS (create table as select) doesn"t have a SELECT statement at the "
 "end. Please make sure your query has a SELECT as its last statement. "
 "Then, try running your query again."
 msgstr ""
@@ -12011,7 +12011,7 @@ msgid "The dataset linked to this chart may have been deleted."
 msgstr "Podatkovni set, povezan s tem grafikonom, je bil izbrisan."
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1283
-msgid "The datasource couldn't be loaded"
+msgid "The datasource couldn"t be loaded"
 msgstr "Podatkovnega vira ni mogoče naložiti"
 
 #: superset/errors.py:92
@@ -12045,7 +12045,7 @@ msgstr "Objekt engine_params se razširi v klic sqlalchemy.create_engine."
 msgid ""
 "The following entries in `series_columns` are missing in `columns`: "
 "%(columns)s. "
-msgstr "V 'columns' manjkajo naslednji vnosi iz 'series_columns': %(columns)s. "
+msgstr "V "columns" manjkajo naslednji vnosi iz "series_columns": %(columns)s. "
 
 #: superset/connectors/sqla/views.py:612
 #, python-format
@@ -12064,7 +12064,7 @@ msgstr "Metapodatke stolpcev so posodobile naslednje tabele: %(tables)s"
 
 #: superset/db_engine_specs/mysql.py:134
 #, python-format
-msgid "The host \"%(hostname)s\" might be down and can't be reached."
+msgid "The host \"%(hostname)s\" might be down and can"t be reached."
 msgstr "Gostitelj \"%(hostname)s\" mogoče ne deluje in ga ni mogoče doseči."
 
 #: superset/db_engine_specs/mssql.py:92
@@ -12073,7 +12073,7 @@ msgstr "Gostitelj \"%(hostname)s\" mogoče ne deluje in ga ni mogoče doseči."
 #: superset/db_engine_specs/redshift.py:78
 #, python-format
 msgid ""
-"The host \"%(hostname)s\" might be down, and can't be reached on port "
+"The host \"%(hostname)s\" might be down, and can"t be reached on port "
 "%(port)s."
 msgstr ""
 "Gostitelj \"%(hostname)s\" mogoče ne deluje in ga ni mogoče doseči na "
@@ -12084,7 +12084,7 @@ msgid "The host is invalid. Please verify that this field is entered correctly."
 msgstr ""
 
 #: superset/errors.py:104
-msgid "The host might be down, and can't be reached on the provided port."
+msgid "The host might be down, and can"t be reached on the provided port."
 msgstr "Gostitelj mogoče ne deluje in ga ni mogoče doseči preko podanih vrat."
 
 #: superset/db_engine_specs/mssql.py:82
@@ -12096,7 +12096,7 @@ msgid "The hostname \"%(hostname)s\" cannot be resolved."
 msgstr "Imena gostitelja \"%(hostname)s\" ni mogoče razrešiti."
 
 #: superset/errors.py:102
-msgid "The hostname provided can't be resolved."
+msgid "The hostname provided can"t be resolved."
 msgstr "Imena gostitelja ni mogoče razrešiti."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/sections.tsx:60
@@ -12114,7 +12114,7 @@ msgid ""
 "datasource, you may change how these associated charts behave. Also note "
 "that charts need to point to a datasource, so this form will fail at "
 "saving if removing charts from a datasource. If you want to change the "
-"datasource for a chart, overwrite the chart from the 'explore view'"
+"datasource for a chart, overwrite the chart from the "explore view""
 msgstr ""
 "Seznam grafikonov, povezanih s to tabelo. S spreminjanjem podatkovnega "
 "vira lahko spremenite, kako se povezani grafikoni obnašajo. Poleg tega "
@@ -12393,7 +12393,7 @@ msgid "The query contains one or more malformed template parameters."
 msgstr "Poizvedba vsebuje enega ali več parametrov predlog z napačno obliko."
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:106
-msgid "The query couldn't be loaded"
+msgid "The query couldn"t be loaded"
 msgstr "Poizvedbe ni mogoče naložiti"
 
 #: superset/errors.py:129
@@ -12558,9 +12558,9 @@ msgstr ""
 msgid ""
 "The time range for the visualization. All relative times, e.g. \"Last "
 "month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using"
-" the server's local time (sans timezone). All tooltips and placeholder "
+" the server"s local time (sans timezone). All tooltips and placeholder "
 "times are expressed in UTC (sans timezone). The timestamps are then "
-"evaluated by the database using the engine's local timezone. Note one can"
+"evaluated by the database using the engine"s local timezone. Note one can"
 " explicitly set the timezone per the ISO 8601 format if specifying either"
 " the start and/or end time."
 msgstr ""
@@ -12787,9 +12787,9 @@ msgstr "Prišlo je do napake pri pridobivanju shranjenih poizvedb: %s"
 
 #: superset/viz.py:1955
 msgid ""
-"There's a loop in your Sankey, please provide a tree. Here's a faulty "
+"There"s a loop in your Sankey, please provide a tree. Here"s a faulty "
 "link: {}"
-msgstr "V 'Sankey' je zanka, določite drevo. To je okvarjena povezava: {}"
+msgstr "V "Sankey" je zanka, določite drevo. To je okvarjena povezava: {}"
 
 #: superset/connectors/sqla/views.py:341
 msgid "These are the tables this filter will be applied to."
@@ -12853,7 +12853,7 @@ msgid "This chart has been moved to a different filter scope."
 msgstr "Ta grafikon je bil prestavljen v drug doseg filtrov."
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FilterScope/utils.ts:56
-msgid "This chart might be incompatible with the filter (datasets don't match)"
+msgid "This chart might be incompatible with the filter (datasets don"t match)"
 msgstr ""
 "Ta grafikon je lahko nekompatibilen s filtrom (podatkovni seti se ne "
 "ujemajo)"
@@ -12937,12 +12937,12 @@ msgstr "Določa stopnjo hierarhije"
 msgid ""
 "This feature is deprecated and will be removed on 2.0. Take a look at the"
 " replacement feature <a "
-"href='https://superset.apache.org/docs/installation/alerts-"
-"reports'>Alerts & Reports documentation</a>"
+"href="https://superset.apache.org/docs/installation/alerts-"
+"reports">Alerts & Reports documentation</a>"
 msgstr ""
 "Ta funkcija je zastarela in bo odstranjena v verziji 2.0. Oglejte si "
-"zamenjavo <a href='https://superset.apache.org/docs/installation/alerts-"
-"reports'>Dokumentacija za Opozorila & Poročila</a>"
+"zamenjavo <a href="https://superset.apache.org/docs/installation/alerts-"
+"reports">Dokumentacija za Opozorila & Poročila</a>"
 
 #: superset/connectors/sqla/views.py:447
 msgid ""
@@ -12953,7 +12953,7 @@ msgstr ""
 "izvedel poizvedbo za ta niz kot podpoizvedbo."
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterSets/FiltersHeader.tsx:105
-msgid "This filter doesn't exist in dashboard. It will not be applied."
+msgid "This filter doesn"t exist in dashboard. It will not be applied."
 msgstr "Ta filter ne obstaja v nadzorni plošči in ne bo uveljavljen."
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterSets/EditSection.tsx:165
@@ -12970,8 +12970,8 @@ msgid ""
 "the clause `1 = 0` (always false)."
 msgstr ""
 "To je pogoj, ki bo dodan WHERE stavku. Npr., če želite dobiti vrstice za "
-"določeno stranko, lahko definirate regularni filter z izrazom 'id_stranke"
-" = 9'. Če ne želimo prikazati vrstic, razen če uporabnik pripada RLS "
+"določeno stranko, lahko definirate regularni filter z izrazom "id_stranke"
+" = 9". Če ne želimo prikazati vrstic, razen če uporabnik pripada RLS "
 "vlogi, lahko filter ustvarimo z izrazom `1 = 0` (vedno neresnično)."
 
 #: superset/views/dashboard/mixin.py:47
@@ -13967,7 +13967,7 @@ msgid "User Roles"
 msgstr "Vloge uporabnikov"
 
 #: superset/errors.py:112
-msgid "User doesn't have the proper permissions."
+msgid "User doesn"t have the proper permissions."
 msgstr "Uporabnik nima ustreznih dovoljenj."
 
 #: superset-frontend/src/filters/components/Select/controlPanel.ts:94
@@ -14236,7 +14236,7 @@ msgstr ""
 msgid ""
 "Visualizes how a metric has changed over a time using a color scale and a"
 " calendar view. Gray values are used to indicate missing values and the "
-"linear color scheme is used to encode the magnitude of each day's value."
+"linear color scheme is used to encode the magnitude of each day"s value."
 msgstr ""
 "Prikaže kako se je mera spreminjala s časom s pomočjo barvne lestvice in "
 "koledarskega pogleda. Sive vrednosti ponazarjajo manjkajoče vrednosti. "
@@ -14244,9 +14244,9 @@ msgstr ""
 
 #: superset-frontend/plugins/legacy-plugin-chart-country-map/src/index.js:27
 msgid ""
-"Visualizes how a single metric varies across a country's principal "
+"Visualizes how a single metric varies across a country"s principal "
 "subdivisions (states, provinces, etc) on a chloropleth map. Each "
-"subdivision's value is elevated when you hover over the corresponding "
+"subdivision"s value is elevated when you hover over the corresponding "
 "geographic boundary."
 msgstr ""
 "Prikaže kako se posamezna mera spreminja glede na območja države (dežele,"
@@ -14264,7 +14264,7 @@ msgstr ""
 
 #: superset-frontend/plugins/legacy-plugin-chart-sankey/src/index.js:29
 msgid ""
-"Visualizes the flow of different group's values through different stages "
+"Visualizes the flow of different group"s values through different stages "
 "of a system. New stages in the pipeline are visualized as nodes or "
 "layers. The thickness of the bars or edges represent the metric being "
 "visualized."
@@ -14319,21 +14319,21 @@ msgstr ""
 
 #: superset/db_engine_specs/bigquery.py:166
 #, python-format
-msgid "We can't seem to resolve column \"%(column)s\" at line %(location)s."
+msgid "We can"t seem to resolve column \"%(column)s\" at line %(location)s."
 msgstr ""
 "Zdi se, da ni mogoče razrešiti stolpca \"%(column)s\" v vrstici "
 "%(location)s."
 
 #: superset/db_engine_specs/sqlite.py:63
 #, python-format
-msgid "We can't seem to resolve the column \"%(column_name)s\""
+msgid "We can"t seem to resolve the column \"%(column_name)s\""
 msgstr "Zdi se, da ni mogoče razrešiti stolpca \"%(column_name)s\""
 
 #: superset/db_engine_specs/postgres.py:150
 #: superset/db_engine_specs/presto.py:171
 #, python-format
 msgid ""
-"We can't seem to resolve the column \"%(column_name)s\" at line "
+"We can"t seem to resolve the column \"%(column_name)s\" at line "
 "%(location)s."
 msgstr ""
 "Zdi se, da ni mogoče razrešiti stolpca \"%(column_name)s\" v vrstici "
@@ -14481,17 +14481,17 @@ msgstr ""
 " čas na particioniranem ali indeksiranem časovnem polju."
 
 #: superset/viz.py:834
-msgid "When using 'Group By' you are limited to use a single metric"
-msgstr "Ko uporabljate 'Group By', ste omejeni na uporabo ene mere"
+msgid "When using "Group By" you are limited to use a single metric"
+msgstr "Ko uporabljate "Group By", ste omejeni na uporabo ene mere"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Gauge/controlPanel.tsx:258
 msgid "Whether the progress bar overlaps when there are multiple groups of data"
 msgstr "Če želite prekrivanje območij, ko imate več skupin podatkov"
 
 #: superset/connectors/sqla/views.py:466
-msgid "Whether the table was generated by the 'Visualize' flow in SQL Lab"
+msgid "Whether the table was generated by the "Visualize" flow in SQL Lab"
 msgstr ""
-"Če želite, da je tabela ustvarjena s postopkom 'Vizualizacija' v SQL "
+"Če želite, da je tabela ustvarjena s postopkom "Vizualizacija" v SQL "
 "laboratoriju"
 
 #: superset/connectors/druid/views.py:98 superset/connectors/sqla/views.py:99
@@ -14661,7 +14661,7 @@ msgstr "Če želite napolniti možnosti za samodokončanje filtrov"
 
 #: superset/connectors/druid/views.py:325 superset/connectors/sqla/views.py:461
 msgid ""
-"Whether to populate the filter's dropdown in the explore view's filter "
+"Whether to populate the filter"s dropdown in the explore view"s filter "
 "section with a list of distinct values fetched from the backend on the "
 "fly"
 msgstr ""
@@ -15095,26 +15095,26 @@ msgid "You do not have permissions to edit this dashboard."
 msgstr "Nimate dovoljenj za urejanje te nadzorne plošče."
 
 #: superset/dashboards/commands/exceptions.py:86
-msgid "You don't have access to this dashboard."
+msgid "You don"t have access to this dashboard."
 msgstr "Nimate dostopa do te nadzorne plošče."
 
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:144
-msgid "You don't have any favorites yet!"
+msgid "You don"t have any favorites yet!"
 msgstr "Priljubljenih še niste izbrali!"
 
 #: superset/key_value/commands/exceptions.py:45
 #, fuzzy
-msgid "You don't have permission to modify the value."
+msgid "You don"t have permission to modify the value."
 msgstr "Nimate dovoljenja za urejanje tega grafikona"
 
 #: superset/views/core.py:618 superset/views/core.py:823
 #: superset/views/core.py:829 superset/views/core.py:999
 #: superset/views/core.py:1017
-msgid "You don't have the rights to "
+msgid "You don"t have the rights to "
 msgstr "Nimate pravic za "
 
 #: superset-frontend/src/components/EditableTitle/index.tsx:199
-msgid "You don't have the rights to alter this title."
+msgid "You don"t have the rights to alter this title."
 msgstr "Nimate pravic za spreminjanje tega naslova."
 
 #: superset/views/core.py:406
@@ -15607,7 +15607,7 @@ msgid "joined"
 msgstr "pridružen"
 
 #: superset/views/base.py:527
-msgid "json isn't valid"
+msgid "json isn"t valid"
 msgstr "json ni veljaven"
 
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:233

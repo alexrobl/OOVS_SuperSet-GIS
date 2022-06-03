@@ -24,7 +24,7 @@ acquire_rat_jar () {
 
   JAR="$rat_jar"
 
-  # Download rat launch jar if it hasn't been downloaded yet
+  # Download rat launch jar if it hasn"t been downloaded yet
   if [ ! -f "$JAR" ]; then
     # Download
     printf "Attempting to fetch rat\n"

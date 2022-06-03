@@ -84,7 +84,7 @@ class DatabaseNotFoundValidationError(ValidationError):
 
 class DashboardsNotFoundValidationError(ValidationError):
     """
-    Marshmallow validation error for dashboards don't exist
+    Marshmallow validation error for dashboards don"t exist
     """
 
     def __init__(self) -> None:
@@ -93,7 +93,7 @@ class DashboardsNotFoundValidationError(ValidationError):
 
 class DatasourceTypeUpdateRequiredValidationError(ValidationError):
     """
-    Marshmallow validation error for dashboards don't exist
+    Marshmallow validation error for dashboards don"t exist
     """
 
     def __init__(self) -> None:
@@ -128,7 +128,7 @@ class ChartDeleteFailedReportsExistError(ChartDeleteFailedError):
 
 
 class ChartAccessDeniedError(ForbiddenError):
-    message = _("You don't have access to this chart.")
+    message = _("You don"t have access to this chart.")
 
 
 class ChartForbiddenError(ForbiddenError):

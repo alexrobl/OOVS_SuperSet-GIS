@@ -61,7 +61,7 @@ class GitChangeLog:
     """
     Helper class to output a list of logs entries on a superset changelog format
 
-    We want to map a git author to a github login, for that we call github's API
+    We want to map a git author to a github login, for that we call github"s API
     """
 
     def __init__(
@@ -138,7 +138,7 @@ class GitChangeLog:
         title = pr_info.title if pr_info else git_log.message
         pr_type = re.match(SUPERSET_PULL_REQUEST_TYPES, title)
         if pr_type:
-            pr_type = pr_type.group().strip('"')
+            pr_type = pr_type.group().strip(""")
 
         labels = (" | ").join([label.name for label in pr_info.labels])
         is_risky = self._is_risk_pull_request(pr_info.labels)
@@ -173,9 +173,9 @@ class GitChangeLog:
         github_login: str,
     ) -> None:
         formatted_pr = (
-            f"- [#{pr_info.get('id')}]"
-            f"(https://github.com/{SUPERSET_REPO}/pull/{pr_info.get('id')}) "
-            f"{pr_info.get('title')} (@{github_login})\n"
+            f"- [#{pr_info.get("id")}]"
+            f"(https://github.com/{SUPERSET_REPO}/pull/{pr_info.get("id")}) "
+            f"{pr_info.get("title")} (@{github_login})\n"
         )
         if pr_info.get("has_migrations"):
             changelog["Database Migrations"] += formatted_pr
@@ -206,8 +206,8 @@ class GitChangeLog:
                     result += (
                         f"- [#{log.pr_number}]"
                         f"(https://github.com/{SUPERSET_REPO}/pull/{log.pr_number}) "
-                        f"{pr_info.get('title')} (@{github_login})  "
-                        f"{pr_info.get('labels')} \n"
+                        f"{pr_info.get("title")} (@{github_login})  "
+                        f"{pr_info.get("labels")} \n"
                     )
             else:
                 self._parse_change_log(changelog, pr_info, github_login)
@@ -279,15 +279,15 @@ class GitLogs:
             sys.exit(1)
 
     def _git_logs(self) -> List[str]:
-        # let's get current git ref so we can revert it back
+        # let"s get current git ref so we can revert it back
         current_git_ref = self._git_get_current_head()
         self._git_checkout(self._git_ref)
         output = (
-            os.popen('git --no-pager log --pretty=format:"%h|%an|%ae|%ad|%s|"')
+            os.popen("git --no-pager log --pretty=format:"%h|%an|%ae|%ad|%s|"")
             .read()
             .split("\n")
         )
-        # revert to git ref, let's be nice
+        # revert to git ref, let"s be nice
         self._git_checkout(current_git_ref)
         return output
 
@@ -316,9 +316,9 @@ class BaseParameters:
 
 
 def print_title(message: str) -> None:
-    print(f"{50*'-'}")
+    print(f"{50*"-"}")
     print(message)
-    print(f"{50*'-'}")
+    print(f"{50*"-"}")
 
 
 @click.group()
@@ -388,7 +388,7 @@ def change_log(
             writer = lib_csv.DictWriter(
                 csv_file,
                 delimiter=",",
-                quotechar='"',
+                quotechar=""",
                 quoting=lib_csv.QUOTE_ALL,
                 fieldnames=field_names,
             )

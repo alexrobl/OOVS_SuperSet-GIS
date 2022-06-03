@@ -31,7 +31,7 @@ jobs:
           fi
 
           URL="https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files"
-          FILES=$(curl -s -X GET -G $URL | jq -r '.[] | .filename')
+          FILES=$(curl -s -X GET -G $URL | jq -r ".[] | .filename")
 
           cat<<EOF
           CHANGED FILES:
@@ -51,7 +51,7 @@ jobs:
         run: ./scripts/check_license.sh
 
   prefer_typescript:
-    if: github.ref == 'ref/heads/master' && github.event_name == 'pull_request'
+    if: github.ref == "ref/heads/master" && github.event_name == "pull_request"
     name: Prefer Typescript
     runs-on: ubuntu-latest
     steps:
@@ -70,13 +70,13 @@ jobs:
         id: check
         run: |
           js_files_added() {
-            jq -r '
+            jq -r "
               map(
                 select(
                   endswith(".js") or endswith(".jsx")
                 )
               ) | join("\n")
-            ' ${HOME}/files_added.json
+            " ${HOME}/files_added.json
           }
           echo ::set-output name=js_files_added::$(js_files_added)
 

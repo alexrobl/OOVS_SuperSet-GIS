@@ -23,9 +23,9 @@ import {
   QueryFormColumn,
   QueryFormData,
   SetDataMaskHook,
-} from '@superset-ui/core';
-import { EChartsCoreOption } from 'echarts';
-import { EchartsTitleFormData, DEFAULT_TITLE_FORM_DATA } from '../types';
+} from "@superset-ui/core";
+import { EChartsCoreOption } from "echarts";
+import { EchartsTitleFormData, DEFAULT_TITLE_FORM_DATA } from "../types";
 
 export type BoxPlotQueryFormData = QueryFormData & {
   numberFormat?: string;
@@ -35,17 +35,17 @@ export type BoxPlotQueryFormData = QueryFormData & {
 } & EchartsTitleFormData;
 
 export type BoxPlotFormDataWhiskerOptions =
-  | 'Tukey'
-  | 'Min/max (no outliers)'
-  | '2/98 percentiles'
-  | '9/91 percentiles';
+  | "Tukey"
+  | "Min/max (no outliers)"
+  | "2/98 percentiles"
+  | "9/91 percentiles";
 
 export type BoxPlotFormXTickLayout =
-  | '45°'
-  | '90°'
-  | 'auto'
-  | 'flat'
-  | 'staggered';
+  | "45°"
+  | "90°"
+  | "auto"
+  | "flat"
+  | "staggered";
 
 // @ts-ignore
 export const DEFAULT_FORM_DATA: BoxPlotQueryFormData = {

@@ -72,7 +72,7 @@ class AdvancedDataTypeRestApi(BaseApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/advanced_data_type_convert_schema'
+                  $ref: "#/components/schemas/advanced_data_type_convert_schema"
           responses:
             200:
               description: >-
@@ -80,15 +80,15 @@ class AdvancedDataTypeRestApi(BaseApi):
               content:
                 application/json:
                   schema:
-                    $ref: '#/components/schemas/AdvancedDataTypeSchema'
+                    $ref: "#/components/schemas/AdvancedDataTypeSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         item = kwargs["rison"]
         advanced_data_type = item["type"]
@@ -138,11 +138,11 @@ class AdvancedDataTypeRestApi(BaseApi):
                         items:
                           type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
 
         return self.response(200, result=list(ADVANCED_DATA_TYPES.keys()))

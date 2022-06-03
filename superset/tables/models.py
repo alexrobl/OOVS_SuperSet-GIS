@@ -21,7 +21,7 @@ This model was introduced in SIP-68 (https://github.com/apache/superset/issues/1
 and represents a "table" in a given database -- either a physical table or a view. In
 addition to a table, new models for columns, metrics, and datasets were also introduced.
 
-These models are not fully implemented, and shouldn't be used yet.
+These models are not fully implemented, and shouldn"t be used yet.
 """
 
 from typing import Any, Dict, Iterable, List, Optional, TYPE_CHECKING

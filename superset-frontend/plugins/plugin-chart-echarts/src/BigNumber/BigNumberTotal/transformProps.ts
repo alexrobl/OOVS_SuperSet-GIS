@@ -22,16 +22,16 @@ import {
   getMetricLabel,
   extractTimegrain,
   QueryFormData,
-} from '@superset-ui/core';
-import { BigNumberTotalChartProps } from '../types';
-import { getDateFormatter, parseMetricValue } from '../utils';
+} from "@superset-ui/core";
+import { BigNumberTotalChartProps } from "../types";
+import { getDateFormatter, parseMetricValue } from "../utils";
 
 export default function transformProps(chartProps: BigNumberTotalChartProps) {
   const { width, height, queriesData, formData, rawFormData } = chartProps;
   const {
     headerFontSize,
-    metric = 'value',
-    subheader = '',
+    metric = "value",
+    subheader = "",
     subheaderFontSize,
     forceTimestampFormatting,
     timeFormat,

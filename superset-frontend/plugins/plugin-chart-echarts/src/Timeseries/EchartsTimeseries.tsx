@@ -16,14 +16,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React, { useCallback, useRef } from 'react';
-import { ViewRootGroup } from 'echarts/types/src/util/types';
-import GlobalModel from 'echarts/types/src/model/Global';
-import ComponentModel from 'echarts/types/src/model/Component';
-import { EchartsHandler, EventHandlers } from '../types';
-import Echart from '../components/Echart';
-import { TimeseriesChartTransformedProps } from './types';
-import { currentSeries } from '../utils/series';
+import React, { useCallback, useRef } from "react";
+import { ViewRootGroup } from "echarts/types/src/util/types";
+import GlobalModel from "echarts/types/src/model/Global";
+import ComponentModel from "echarts/types/src/model/Component";
+import { EchartsHandler, EventHandlers } from "../types";
+import Echart from "../components/Echart";
+import { TimeseriesChartTransformedProps } from "./types";
+import { currentSeries } from "../utils/series";
 
 const TIMER_DURATION = 300;
 // @ts-ignore
@@ -41,28 +41,28 @@ export default function EchartsTimeseries({
   const { emitFilter, stack } = formData;
   const echartRef = useRef<EchartsHandler | null>(null);
   const lastTimeRef = useRef(Date.now());
-  const lastSelectedLegend = useRef('');
+  const lastSelectedLegend = useRef("");
   const clickTimer = useRef<ReturnType<typeof setTimeout>>();
 
   const handleDoubleClickChange = useCallback(
     (name?: string) => {
       const echartInstance = echartRef.current?.getEchartInstance();
       if (!name) {
-        currentSeries.legend = '';
+        currentSeries.legend = "";
         echartInstance?.dispatchAction({
-          type: 'legendAllSelect',
+          type: "legendAllSelect",
         });
       } else {
         legendData.forEach(datum => {
           if (datum === name) {
             currentSeries.legend = datum;
             echartInstance?.dispatchAction({
-              type: 'legendSelect',
+              type: "legendSelect",
               name: datum,
             });
           } else {
             echartInstance?.dispatchAction({
-              type: 'legendUnSelect',
+              type: "legendUnSelect",
               name: datum,
             });
           }
@@ -104,11 +104,11 @@ export default function EchartsTimeseries({
                   if (val === null || val === undefined)
                     return {
                       col,
-                      op: 'IS NULL',
+                      op: "IS NULL",
                     };
                   return {
                     col,
-                    op: 'IN',
+                    op: "IN",
                     val: val as (string | number | boolean)[],
                   };
                 }),
@@ -140,7 +140,7 @@ export default function EchartsTimeseries({
       }, TIMER_DURATION);
     },
     mouseout: () => {
-      currentSeries.name = '';
+      currentSeries.name = "";
     },
     mouseover: params => {
       currentSeries.name = params.seriesName;
@@ -174,9 +174,9 @@ export default function EchartsTimeseries({
       }
       const pointInPixel = [params.offsetX, params.offsetY];
       const echartInstance = echartRef.current?.getEchartInstance();
-      if (echartInstance?.containPixel('grid', pointInPixel)) {
-        // do not trigger if click unstacked chart's blank area
-        if (!stack && params.target?.type === 'ec-polygon') return;
+      if (echartInstance?.containPixel("grid", pointInPixel)) {
+        // do not trigger if click unstacked chart"s blank area
+        if (!stack && params.target?.type === "ec-polygon") return;
         // @ts-ignore
         const globalModel = echartInstance.getModel();
         const model = getModelInfo(params.target, globalModel);

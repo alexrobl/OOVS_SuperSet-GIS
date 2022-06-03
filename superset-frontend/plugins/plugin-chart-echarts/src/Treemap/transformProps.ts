@@ -26,10 +26,10 @@ import {
   getTimeFormatter,
   NumberFormats,
   NumberFormatter,
-} from '@superset-ui/core';
-import { groupBy, isNumber, transform } from 'lodash';
-import { TreemapSeriesNodeItemOption } from 'echarts/types/src/chart/treemap/TreemapSeries';
-import { EChartsCoreOption, TreemapSeriesOption } from 'echarts';
+} from "@superset-ui/core";
+import { groupBy, isNumber, transform } from "lodash";
+import { TreemapSeriesNodeItemOption } from "echarts/types/src/chart/treemap/TreemapSeries";
+import { EChartsCoreOption, TreemapSeriesOption } from "echarts";
 import {
   DEFAULT_FORM_DATA as DEFAULT_TREEMAP_FORM_DATA,
   EchartsTreemapChartProps,
@@ -37,9 +37,9 @@ import {
   EchartsTreemapLabelType,
   TreemapSeriesCallbackDataParams,
   TreemapTransformedProps,
-} from './types';
-import { formatSeriesName, getColtypesMapping } from '../utils/series';
-import { defaultTooltip } from '../defaults';
+} from "./types";
+import { formatSeriesName, getColtypesMapping } from "../utils/series";
+import { defaultTooltip } from "../defaults";
 import {
   COLOR_SATURATION,
   BORDER_WIDTH,
@@ -47,8 +47,8 @@ import {
   LABEL_FONTSIZE,
   extractTreePathInfo,
   BORDER_COLOR,
-} from './constants';
-import { OpacityEnum } from '../constants';
+} from "./constants";
+import { OpacityEnum } from "../constants";
 
 export function formatLabel({
   params,
@@ -59,7 +59,7 @@ export function formatLabel({
   labelType: EchartsTreemapLabelType;
   numberFormatter: NumberFormatter;
 }): string {
-  const { name = '', value } = params;
+  const { name = "", value } = params;
   const formattedValue = numberFormatter(value as number);
 
   switch (labelType) {
@@ -86,7 +86,7 @@ export function formatTooltip({
   const { metricLabel, treePath } = extractTreePathInfo(treePathInfo);
   const percentFormatter = getNumberFormatter(NumberFormats.PERCENT_2_POINT);
 
-  let formattedPercent = '';
+  let formattedPercent = "";
   // the last item is current node, here we should find the parent node
   const currentNode = treePathInfo[treePathInfo.length - 1];
   const parentNode = treePathInfo[treePathInfo.length - 2];
@@ -100,10 +100,10 @@ export function formatTooltip({
   // groupby1/groupby2/...
   // metric: value (percent of parent)
   return [
-    `<div>${treePath.join(' ▸ ')}</div>`,
+    `<div>${treePath.join(" ▸ ")}</div>`,
     `${metricLabel}: ${formattedValue}`,
-    formattedPercent ? ` (${formattedPercent})` : '',
-  ].join('');
+    formattedPercent ? ` (${formattedPercent})` : "",
+  ].join("");
 }
 
 export default function transformProps(
@@ -118,7 +118,7 @@ export default function transformProps(
   const {
     colorScheme,
     groupby = [],
-    metric = '',
+    metric = "",
     labelType,
     labelPosition,
     numberFormat,
@@ -169,7 +169,7 @@ export default function transformProps(
               name,
               value: isNumber(datum[metric]) ? (datum[metric] as number) : 0,
             };
-            const joinedName = path.concat(name).join(',');
+            const joinedName = path.concat(name).join(",");
             // map(joined_name: [columnLabel_1, columnLabel_2, ...])
             columnsLabelMap.set(joinedName, path.concat(name));
             if (
@@ -267,9 +267,9 @@ export default function transformProps(
 
   const series: TreemapSeriesOption[] = [
     {
-      type: 'treemap',
-      width: '100%',
-      height: '100%',
+      type: "treemap",
+      width: "100%",
+      height: "100%",
       nodeClick: undefined,
       roam: !dashboardId,
       breadcrumb: {
@@ -292,7 +292,7 @@ export default function transformProps(
       upperLabel: {
         show: showUpperLabels,
         formatter,
-        textBorderColor: 'transparent',
+        textBorderColor: "transparent",
         fontSize: LABEL_FONTSIZE,
       },
       data: transformedData,
@@ -302,7 +302,7 @@ export default function transformProps(
   const echartOptions: EChartsCoreOption = {
     tooltip: {
       ...defaultTooltip,
-      trigger: 'item',
+      trigger: "item",
       formatter: (params: any) =>
         formatTooltip({
           params,

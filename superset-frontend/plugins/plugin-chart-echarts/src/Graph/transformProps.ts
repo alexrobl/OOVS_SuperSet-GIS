@@ -22,35 +22,35 @@ import {
   getMetricLabel,
   DataRecord,
   DataRecordValue,
-} from '@superset-ui/core';
-import { EChartsCoreOption, GraphSeriesOption } from 'echarts';
-import { extent as d3Extent } from 'd3-array';
-import { GraphEdgeItemOption } from 'echarts/types/src/chart/graph/GraphSeries';
+} from "@superset-ui/core";
+import { EChartsCoreOption, GraphSeriesOption } from "echarts";
+import { extent as d3Extent } from "d3-array";
+import { GraphEdgeItemOption } from "echarts/types/src/chart/graph/GraphSeries";
 import {
   EchartsGraphFormData,
   EChartGraphNode,
   DEFAULT_FORM_DATA as DEFAULT_GRAPH_FORM_DATA,
   EdgeSymbol,
-} from './types';
-import { DEFAULT_GRAPH_SERIES_OPTION } from './constants';
-import { EchartsProps } from '../types';
-import { getChartPadding, getLegendProps, sanitizeHtml } from '../utils/series';
+} from "./types";
+import { DEFAULT_GRAPH_SERIES_OPTION } from "./constants";
+import { EchartsProps } from "../types";
+import { getChartPadding, getLegendProps, sanitizeHtml } from "../utils/series";
 
 type EdgeWithStyles = GraphEdgeItemOption & {
-  lineStyle: Exclude<GraphEdgeItemOption['lineStyle'], undefined>;
-  emphasis: Exclude<GraphEdgeItemOption['emphasis'], undefined>;
-  select: Exclude<GraphEdgeItemOption['select'], undefined>;
+  lineStyle: Exclude<GraphEdgeItemOption["lineStyle"], undefined>;
+  emphasis: Exclude<GraphEdgeItemOption["emphasis"], undefined>;
+  select: Exclude<GraphEdgeItemOption["select"], undefined>;
 };
 
 function verifyEdgeSymbol(symbol: string): EdgeSymbol {
-  if (symbol === 'none' || symbol === 'circle' || symbol === 'arrow') {
+  if (symbol === "none" || symbol === "circle" || symbol === "arrow") {
     return symbol;
   }
-  return 'none';
+  return "none";
 }
 
 function parseEdgeSymbol(symbols?: string | null): [EdgeSymbol, EdgeSymbol] {
-  const [start, end] = (symbols || '').split(',');
+  const [start, end] = (symbols || "").split(",");
   return [verifyEdgeSymbol(start), verifyEdgeSymbol(end)];
 }
 
@@ -152,7 +152,7 @@ function getCategoryName(columnName: string, name?: DataRecordValue) {
     return `${columnName}: true`;
   }
   if (name == null) {
-    return 'N/A';
+    return "N/A";
   }
   return String(name);
 }
@@ -167,7 +167,7 @@ export default function transformProps(chartProps: ChartProps): EchartsProps {
     sourceCategory,
     targetCategory,
     colorScheme,
-    metric = '',
+    metric = "",
     layout,
     roam,
     draggable,
@@ -196,7 +196,7 @@ export default function transformProps(chartProps: ChartProps): EchartsProps {
 
   /**
    * Get the node id of an existing node,
-   * or create a new node if it doesn't exist.
+   * or create a new node if it doesn"t exist.
    */
   function getOrCreateNode(name: string, category?: string) {
     if (!(name in nodes)) {
@@ -262,7 +262,7 @@ export default function transformProps(chartProps: ChartProps): EchartsProps {
   const series: GraphSeriesOption[] = [
     {
       zoom: DEFAULT_GRAPH_SERIES_OPTION.zoom,
-      type: 'graph',
+      type: "graph",
       categories: categoryList.map(c => ({
         name: c,
         itemStyle: { color: colorFn(c, sliceId) },

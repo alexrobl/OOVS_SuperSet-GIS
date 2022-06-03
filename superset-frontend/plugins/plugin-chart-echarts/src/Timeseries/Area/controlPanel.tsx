@@ -16,8 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React from 'react';
-import { FeatureFlag, isFeatureEnabled, t } from '@superset-ui/core';
+import React from "react";
+import { FeatureFlag, isFeatureEnabled, t } from "@superset-ui/core";
 import {
   ControlPanelConfig,
   ControlPanelsContainerProps,
@@ -25,19 +25,19 @@ import {
   emitFilterControl,
   sections,
   sharedControls,
-} from '@superset-ui/chart-controls';
+} from "@superset-ui/chart-controls";
 
 import {
   DEFAULT_FORM_DATA,
   EchartsTimeseriesContributionType,
   EchartsTimeseriesSeriesType,
-} from '../types';
+} from "../types";
 import {
   legendSection,
   richTooltipSection,
   showValueSection,
   xAxisControl,
-} from '../../controls';
+} from "../../controls";
 
 const {
   contributionMode,
@@ -57,34 +57,34 @@ const config: ControlPanelConfig = {
   controlPanelSections: [
     sections.legacyTimeseriesTime,
     {
-      label: t('Query'),
+      label: t("Query"),
       expanded: true,
       controlSetRows: [
         isFeatureEnabled(FeatureFlag.GENERIC_CHART_AXES) ? [xAxisControl] : [],
-        ['metrics'],
-        ['groupby'],
+        ["metrics"],
+        ["groupby"],
         [
           {
-            name: 'contributionMode',
+            name: "contributionMode",
             config: {
-              type: 'SelectControl',
-              label: t('Contribution Mode'),
+              type: "SelectControl",
+              label: t("Contribution Mode"),
               default: contributionMode,
               choices: [
-                [null, 'None'],
-                [EchartsTimeseriesContributionType.Row, 'Row'],
-                [EchartsTimeseriesContributionType.Column, 'Series'],
+                [null, "None"],
+                [EchartsTimeseriesContributionType.Row, "Row"],
+                [EchartsTimeseriesContributionType.Column, "Series"],
               ],
-              description: t('Calculate contribution per series or row'),
+              description: t("Calculate contribution per series or row"),
             },
           },
         ],
-        ['adhoc_filters'],
+        ["adhoc_filters"],
         emitFilterControl,
-        ['limit'],
-        ['timeseries_limit_metric'],
-        ['order_desc'],
-        ['row_limit'],
+        ["limit"],
+        ["timeseries_limit_metric"],
+        ["order_desc"],
+        ["row_limit"],
       ],
     },
     sections.advancedAnalyticsControls,
@@ -92,42 +92,42 @@ const config: ControlPanelConfig = {
     sections.forecastIntervalControls,
     sections.titleControls,
     {
-      label: t('Chart Options'),
+      label: t("Chart Options"),
       expanded: true,
       controlSetRows: [
-        ['color_scheme'],
+        ["color_scheme"],
         [
           {
-            name: 'seriesType',
+            name: "seriesType",
             config: {
-              type: 'SelectControl',
-              label: t('Series Style'),
+              type: "SelectControl",
+              label: t("Series Style"),
               renderTrigger: true,
               default: seriesType,
               choices: [
-                [EchartsTimeseriesSeriesType.Line, 'Line'],
-                [EchartsTimeseriesSeriesType.Smooth, 'Smooth Line'],
-                [EchartsTimeseriesSeriesType.Start, 'Step - start'],
-                [EchartsTimeseriesSeriesType.Middle, 'Step - middle'],
-                [EchartsTimeseriesSeriesType.End, 'Step - end'],
+                [EchartsTimeseriesSeriesType.Line, "Line"],
+                [EchartsTimeseriesSeriesType.Smooth, "Smooth Line"],
+                [EchartsTimeseriesSeriesType.Start, "Step - start"],
+                [EchartsTimeseriesSeriesType.Middle, "Step - middle"],
+                [EchartsTimeseriesSeriesType.End, "Step - end"],
               ],
-              description: t('Series chart type (line, bar etc)'),
+              description: t("Series chart type (line, bar etc)"),
             },
           },
         ],
         [
           {
-            name: 'opacity',
+            name: "opacity",
             config: {
-              type: 'SliderControl',
-              label: t('Area chart opacity'),
+              type: "SliderControl",
+              label: t("Area chart opacity"),
               renderTrigger: true,
               min: 0,
               max: 1,
               step: 0.1,
               default: opacity,
               description: t(
-                'Opacity of Area Chart. Also applies to confidence band.',
+                "Opacity of Area Chart. Also applies to confidence band.",
               ),
             },
           },
@@ -135,30 +135,30 @@ const config: ControlPanelConfig = {
         ...showValueSection,
         [
           {
-            name: 'markerEnabled',
+            name: "markerEnabled",
             config: {
-              type: 'CheckboxControl',
-              label: t('Marker'),
+              type: "CheckboxControl",
+              label: t("Marker"),
               renderTrigger: true,
               default: markerEnabled,
               description: t(
-                'Draw a marker on data points. Only applicable for line types.',
+                "Draw a marker on data points. Only applicable for line types.",
               ),
             },
           },
         ],
         [
           {
-            name: 'markerSize',
+            name: "markerSize",
             config: {
-              type: 'SliderControl',
-              label: t('Marker Size'),
+              type: "SliderControl",
+              label: t("Marker Size"),
               renderTrigger: true,
               min: 0,
               max: 20,
               default: markerSize,
               description: t(
-                'Size of marker. Also applies to forecast observations.',
+                "Size of marker. Also applies to forecast observations.",
               ),
               visibility: ({ controls }: ControlPanelsContainerProps) =>
                 Boolean(controls?.markerEnabled?.value),
@@ -167,105 +167,105 @@ const config: ControlPanelConfig = {
         ],
         [
           {
-            name: 'zoomable',
+            name: "zoomable",
             config: {
-              type: 'CheckboxControl',
-              label: t('Data Zoom'),
+              type: "CheckboxControl",
+              label: t("Data Zoom"),
               default: zoomable,
               renderTrigger: true,
-              description: t('Enable data zooming controls'),
+              description: t("Enable data zooming controls"),
             },
           },
         ],
         ...legendSection,
-        [<div className="section-header">{t('X Axis')}</div>],
+        [<div className="section-header">{t("X Axis")}</div>],
         [
           {
-            name: 'x_axis_time_format',
+            name: "x_axis_time_format",
             config: {
               ...sharedControls.x_axis_time_format,
-              default: 'smart_date',
+              default: "smart_date",
               description: `${D3_TIME_FORMAT_DOCS}. ${t(
-                'When using other than adaptive formatting, labels may overlap.',
+                "When using other than adaptive formatting, labels may overlap.",
               )}`,
             },
           },
         ],
         [
           {
-            name: 'xAxisLabelRotation',
+            name: "xAxisLabelRotation",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
               clearable: false,
-              label: t('Rotate x axis label'),
+              label: t("Rotate x axis label"),
               choices: [
-                [0, '0°'],
-                [45, '45°'],
+                [0, "0°"],
+                [45, "45°"],
               ],
               default: xAxisLabelRotation,
               renderTrigger: true,
               description: t(
-                'Input field supports custom rotation. e.g. 30 for 30°',
+                "Input field supports custom rotation. e.g. 30 for 30°",
               ),
             },
           },
         ],
         ...richTooltipSection,
         // eslint-disable-next-line react/jsx-key
-        [<div className="section-header">{t('Y Axis')}</div>],
-        ['y_axis_format'],
+        [<div className="section-header">{t("Y Axis")}</div>],
+        ["y_axis_format"],
         [
           {
-            name: 'logAxis',
+            name: "logAxis",
             config: {
-              type: 'CheckboxControl',
-              label: t('Logarithmic y-axis'),
+              type: "CheckboxControl",
+              label: t("Logarithmic y-axis"),
               renderTrigger: true,
               default: logAxis,
-              description: t('Logarithmic y-axis'),
+              description: t("Logarithmic y-axis"),
             },
           },
         ],
         [
           {
-            name: 'minorSplitLine',
+            name: "minorSplitLine",
             config: {
-              type: 'CheckboxControl',
-              label: t('Minor Split Line'),
+              type: "CheckboxControl",
+              label: t("Minor Split Line"),
               renderTrigger: true,
               default: minorSplitLine,
-              description: t('Draw split lines for minor y-axis ticks'),
+              description: t("Draw split lines for minor y-axis ticks"),
             },
           },
         ],
         [
           {
-            name: 'truncateYAxis',
+            name: "truncateYAxis",
             config: {
-              type: 'CheckboxControl',
-              label: t('Truncate Y Axis'),
+              type: "CheckboxControl",
+              label: t("Truncate Y Axis"),
               default: truncateYAxis,
               renderTrigger: true,
               description: t(
-                'Truncate Y Axis. Can be overridden by specifying a min or max bound.',
+                "Truncate Y Axis. Can be overridden by specifying a min or max bound.",
               ),
             },
           },
         ],
         [
           {
-            name: 'y_axis_bounds',
+            name: "y_axis_bounds",
             config: {
-              type: 'BoundsControl',
-              label: t('Y Axis Bounds'),
+              type: "BoundsControl",
+              label: t("Y Axis Bounds"),
               renderTrigger: true,
               default: yAxisBounds,
               description: t(
-                'Bounds for the Y-axis. When left empty, the bounds are ' +
-                  'dynamically defined based on the min/max of the data. Note that ' +
-                  "this feature will only expand the axis range. It won't " +
-                  "narrow the data's extent.",
+                "Bounds for the Y-axis. When left empty, the bounds are " +
+                  "dynamically defined based on the min/max of the data. Note that " +
+                  "this feature will only expand the axis range. It won"t " +
+                  "narrow the data"s extent.",
               ),
               visibility: ({ controls }: ControlPanelsContainerProps) =>
                 Boolean(controls?.truncateYAxis?.value),

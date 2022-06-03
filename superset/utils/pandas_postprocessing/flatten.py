@@ -35,7 +35,7 @@ def flatten(
     Convert N-dimensional DataFrame to a flat DataFrame
 
     :param df: N-dimensional DataFrame.
-    :param reset_index: Convert index to column when df.index isn't RangeIndex
+    :param reset_index: Convert index to column when df.index isn"t RangeIndex
     :param drop_levels: index of level or names of level might be dropped
                         if df is N-dimensional
     :return: a flat DataFrame

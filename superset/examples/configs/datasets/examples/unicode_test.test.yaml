@@ -45,7 +45,7 @@ columns:
   type: VARCHAR(100)
   groupby: true
   filterable: true
-  expression: ''
+  expression: ""
   description: null
   python_date_format: null
 - column_name: phrase
@@ -55,7 +55,7 @@ columns:
   type: VARCHAR(500)
   groupby: true
   filterable: true
-  expression: ''
+  expression: ""
   description: null
   python_date_format: null
 - column_name: short_phrase
@@ -65,7 +65,7 @@ columns:
   type: VARCHAR(10)
   groupby: true
   filterable: true
-  expression: ''
+  expression: ""
   description: null
   python_date_format: null
 - column_name: dttm
@@ -75,7 +75,7 @@ columns:
   type: DATE
   groupby: true
   filterable: true
-  expression: ''
+  expression: ""
   description: null
   python_date_format: null
 - column_name: value
@@ -85,7 +85,7 @@ columns:
   type: FLOAT
   groupby: true
   filterable: true
-  expression: ''
+  expression: ""
   description: null
   python_date_format: null
 version: 1.0.0

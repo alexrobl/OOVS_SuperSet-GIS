@@ -100,7 +100,7 @@ class TestConnectionDatabaseCommand(BaseCommand):
                     )
 
                 except (sqlite3.ProgrammingError, RuntimeError):
-                    # SQLite can't run on a separate thread, so ``func_timeout`` fails
+                    # SQLite can"t run on a separate thread, so ``func_timeout`` fails
                     # RuntimeError catches the equivalent error from duckdb.
                     alive = engine.dialect.do_ping(engine)
                 except FunctionTimedOut as ex:

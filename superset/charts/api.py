@@ -257,7 +257,7 @@ class ChartRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/{{self.__class__.__name__}}.post'
+                  $ref: "#/components/schemas/{{self.__class__.__name__}}.post"
           responses:
             201:
               description: Chart added
@@ -269,15 +269,15 @@ class ChartRestApi(BaseSupersetModelRestApi):
                       id:
                         type: number
                       result:
-                        $ref: '#/components/schemas/{{self.__class__.__name__}}.post'
+                        $ref: "#/components/schemas/{{self.__class__.__name__}}.post"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             item = self.add_model_schema.load(request.json)
@@ -324,7 +324,7 @@ class ChartRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/{{self.__class__.__name__}}.put'
+                  $ref: "#/components/schemas/{{self.__class__.__name__}}.put"
           responses:
             200:
               description: Chart changed
@@ -336,19 +336,19 @@ class ChartRestApi(BaseSupersetModelRestApi):
                       id:
                         type: number
                       result:
-                        $ref: '#/components/schemas/{{self.__class__.__name__}}.put'
+                        $ref: "#/components/schemas/{{self.__class__.__name__}}.put"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             item = self.edit_model_schema.load(request.json)
@@ -405,15 +405,15 @@ class ChartRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             DeleteChartCommand(g.user, pk).run()
@@ -452,7 +452,7 @@ class ChartRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_delete_ids_schema'
+                  $ref: "#/components/schemas/get_delete_ids_schema"
           responses:
             200:
               description: Charts bulk delete
@@ -464,15 +464,15 @@ class ChartRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             403:
-              $ref: '#/components/responses/403'
+              $ref: "#/components/responses/403"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         item_ids = kwargs["rison"]
         try:
@@ -515,7 +515,7 @@ class ChartRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/screenshot_query_schema'
+                  $ref: "#/components/schemas/screenshot_query_schema"
           responses:
             202:
               description: Chart async result
@@ -524,18 +524,18 @@ class ChartRestApi(BaseSupersetModelRestApi):
                   schema:
                     $ref: "#/components/schemas/ChartCacheScreenshotResponseSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         rison_dict = kwargs["rison"]
         window_size = rison_dict.get("window_size") or (800, 600)
 
-        # Don't shrink the image if thumb_size is not specified
+        # Don"t shrink the image if thumb_size is not specified
         thumb_size = rison_dict.get("thumb_size") or window_size
 
         chart = self.datamodel.get(pk, self._base_filters)
@@ -596,13 +596,13 @@ class ChartRestApi(BaseSupersetModelRestApi):
                    type: string
                    format: binary
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         chart = self.datamodel.get(pk, self._base_filters)
 
@@ -653,13 +653,13 @@ class ChartRestApi(BaseSupersetModelRestApi):
             302:
               description: Redirects to the current digest
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         chart = self.datamodel.get(pk, self._base_filters)
         if not chart:
@@ -718,7 +718,7 @@ class ChartRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_export_ids_schema'
+                  $ref: "#/components/schemas/get_export_ids_schema"
           responses:
             200:
               description: A zip file with chart(s), dataset(s) and database(s) as YAML
@@ -728,13 +728,13 @@ class ChartRestApi(BaseSupersetModelRestApi):
                     type: string
                     format: binary
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         token = request.args.get("token")
         requested_ids = kwargs["rison"]
@@ -784,7 +784,7 @@ class ChartRestApi(BaseSupersetModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_fav_star_ids_schema'
+                  $ref: "#/components/schemas/get_fav_star_ids_schema"
           responses:
             200:
               description:
@@ -793,13 +793,13 @@ class ChartRestApi(BaseSupersetModelRestApi):
                   schema:
                     $ref: "#/components/schemas/GetFavStarIdsSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         requested_ids = kwargs["rison"]
         charts = ChartDAO.find_by_ids(requested_ids)
@@ -857,13 +857,13 @@ class ChartRestApi(BaseSupersetModelRestApi):
                       message:
                         type: string
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             422:
-              $ref: '#/components/responses/422'
+              $ref: "#/components/responses/422"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         upload = request.files.get("formData")
         if not upload:

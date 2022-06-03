@@ -16,19 +16,19 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t, ChartMetadata, ChartPlugin } from '@superset-ui/core';
-import transformProps from '../transformProps';
-import thumbnail from './images/thumbnail.png';
-import controlPanel from './controlPanel';
+import { t, ChartMetadata, ChartPlugin } from "@superset-ui/core";
+import transformProps from "../transformProps";
+import thumbnail from "./images/thumbnail.png";
+import controlPanel from "./controlPanel";
 
 const metadata = new ChartMetadata({
-  category: t('KPI'),
-  credits: ['http://nvd3.org'],
+  category: t("KPI"),
+  credits: ["http://nvd3.org"],
   description: t(
-    'Showcases the progress of a single metric against a given target. The higher the fill, the closer the metric is to the target.',
+    "Showcases the progress of a single metric against a given target. The higher the fill, the closer the metric is to the target.",
   ),
-  name: t('Bullet Chart'),
-  tags: [t('Business'), t('Legacy'), t('Report'), t('nvd3')],
+  name: t("Bullet Chart"),
+  tags: [t("Business"), t("Legacy"), t("Report"), t("nvd3")],
   thumbnail,
   useLegacyApi: true,
 });
@@ -36,7 +36,7 @@ const metadata = new ChartMetadata({
 export default class BulletChartPlugin extends ChartPlugin {
   constructor() {
     super({
-      loadChart: () => import('../ReactNVD3'),
+      loadChart: () => import("../ReactNVD3"),
       metadata,
       transformProps,
       controlPanel,

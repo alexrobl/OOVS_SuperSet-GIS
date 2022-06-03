@@ -19,7 +19,7 @@ viz_type: pie
 params:
   adhoc_filters:
   - clause: WHERE
-    comparator: '0'
+    comparator: "0"
     expressionType: SIMPLE
     filterOptionName: filter_qzz67uip1ue_jw3rr6tzo3a
     isExtra: false

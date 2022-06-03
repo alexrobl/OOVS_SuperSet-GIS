@@ -54,7 +54,7 @@ def parse_event(event_data: Tuple[str, Dict[str, Any]]) -> Dict[str, Any]:
 
 
 def increment_id(redis_id: str) -> str:
-    # redis stream IDs are in this format: '1607477697866-0'
+    # redis stream IDs are in this format: "1607477697866-0"
     try:
         prefix, last = redis_id[:-1], int(redis_id[-1])
         return prefix + str(last + 1)
@@ -188,7 +188,7 @@ class AsyncQueryManager:
         event_data = {"data": json.dumps({**job_metadata, **updates})}
 
         full_stream_name = f"{self._stream_prefix}full"
-        scoped_stream_name = f"{self._stream_prefix}{job_metadata['channel_id']}"
+        scoped_stream_name = f"{self._stream_prefix}{job_metadata["channel_id"]}"
 
         logger.debug("********** logging event data to stream %s", scoped_stream_name)
         logger.debug(event_data)

@@ -336,7 +336,7 @@ class BaseDatasource(
             except DatasetNotFoundError:
                 query_context = None
 
-            # legacy charts don't have query_context charts
+            # legacy charts don"t have query_context charts
             if query_context:
                 column_names.update(
                     [
@@ -456,7 +456,7 @@ class BaseDatasource(
     def query(self, query_obj: QueryObjectDict) -> QueryResult:
         """Executes the query and returns a dataframe
 
-        query_obj is a dictionary representing Superset's query interface.
+        query_obj is a dictionary representing Superset"s query interface.
         Should return a ``superset.models.helpers.QueryResult``
         """
         raise NotImplementedError()
@@ -522,8 +522,8 @@ class BaseDatasource(
     def update_from_object(self, obj: Dict[str, Any]) -> None:
         """Update datasource from a data structure
 
-        The UI's table editor crafts a complex data structure that
-        contains most of the datasource's properties as well as
+        The UI"s table editor crafts a complex data structure that
+        contains most of the datasource"s properties as well as
         an array of metrics and columns objects. This method
         receives the object from the UI and syncs the datasource to
         match it. Since the fields are different for the different
@@ -699,11 +699,11 @@ class BaseMetric(AuditMixinNullable, ImportExportMixin):
 
     datasource_name = Column(
         String(255),
-        ForeignKey('datasources.datasource_name'))
+        ForeignKey("datasources.datasource_name"))
     datasource = relationship(
         # needs to be altered to point to {Connector}Datasource
-        'BaseDatasource',
-        backref=backref('metrics', cascade='all, delete-orphan'),
+        "BaseDatasource",
+        backref=backref("metrics", cascade="all, delete-orphan"),
         enable_typechecks=False)
     """
 

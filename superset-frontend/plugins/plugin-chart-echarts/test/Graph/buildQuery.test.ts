@@ -16,80 +16,80 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import buildQuery from '../../src/Graph/buildQuery';
+import buildQuery from "../../src/Graph/buildQuery";
 
-describe('Graph buildQuery', () => {
+describe("Graph buildQuery", () => {
   const formData = {
-    datasource: '5__table',
-    granularity_sqla: 'ds',
-    source: 'dummy_source',
-    target: 'dummy_target',
-    metrics: ['foo', 'bar'],
-    viz_type: 'my_chart',
+    datasource: "5__table",
+    granularity_sqla: "ds",
+    source: "dummy_source",
+    target: "dummy_target",
+    metrics: ["foo", "bar"],
+    viz_type: "my_chart",
   };
 
-  it('should build groupby with source and target categories', () => {
+  it("should build groupby with source and target categories", () => {
     const formDataWithCategories = {
       ...formData,
-      source: 'dummy_source',
-      target: 'dummy_target',
-      source_category: 'dummy_source_category',
-      target_category: 'dummy_target_category',
+      source: "dummy_source",
+      target: "dummy_target",
+      source_category: "dummy_source_category",
+      target_category: "dummy_target_category",
     };
     const queryContext = buildQuery(formDataWithCategories);
     const [query] = queryContext.queries;
     expect(query.columns).toEqual([
-      'dummy_source',
-      'dummy_target',
-      'dummy_source_category',
-      'dummy_target_category',
+      "dummy_source",
+      "dummy_target",
+      "dummy_source_category",
+      "dummy_target_category",
     ]);
-    expect(query.metrics).toEqual(['foo', 'bar']);
+    expect(query.metrics).toEqual(["foo", "bar"]);
   });
 
-  it('should build groupby with source category', () => {
+  it("should build groupby with source category", () => {
     const formDataWithCategories = {
       ...formData,
-      source: 'dummy_source',
-      target: 'dummy_target',
-      source_category: 'dummy_source_category',
+      source: "dummy_source",
+      target: "dummy_target",
+      source_category: "dummy_source_category",
     };
     const queryContext = buildQuery(formDataWithCategories);
     const [query] = queryContext.queries;
     expect(query.columns).toEqual([
-      'dummy_source',
-      'dummy_target',
-      'dummy_source_category',
+      "dummy_source",
+      "dummy_target",
+      "dummy_source_category",
     ]);
-    expect(query.metrics).toEqual(['foo', 'bar']);
+    expect(query.metrics).toEqual(["foo", "bar"]);
   });
 
-  it('should build groupby with target category', () => {
+  it("should build groupby with target category", () => {
     const formDataWithCategories = {
       ...formData,
-      source: 'dummy_source',
-      target: 'dummy_target',
-      target_category: 'dummy_target_category',
+      source: "dummy_source",
+      target: "dummy_target",
+      target_category: "dummy_target_category",
     };
     const queryContext = buildQuery(formDataWithCategories);
     const [query] = queryContext.queries;
     expect(query.columns).toEqual([
-      'dummy_source',
-      'dummy_target',
-      'dummy_target_category',
+      "dummy_source",
+      "dummy_target",
+      "dummy_target_category",
     ]);
-    expect(query.metrics).toEqual(['foo', 'bar']);
+    expect(query.metrics).toEqual(["foo", "bar"]);
   });
 
-  it('should build groupby without any category', () => {
+  it("should build groupby without any category", () => {
     const formDataWithCategories = {
       ...formData,
-      source: 'dummy_source',
-      target: 'dummy_target',
+      source: "dummy_source",
+      target: "dummy_target",
     };
     const queryContext = buildQuery(formDataWithCategories);
     const [query] = queryContext.queries;
-    expect(query.columns).toEqual(['dummy_source', 'dummy_target']);
-    expect(query.metrics).toEqual(['foo', 'bar']);
+    expect(query.columns).toEqual(["dummy_source", "dummy_target"]);
+    expect(query.metrics).toEqual(["foo", "bar"]);
   });
 });

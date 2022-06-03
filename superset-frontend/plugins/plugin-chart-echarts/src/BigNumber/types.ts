@@ -22,7 +22,7 @@ import {
   ChartProps,
   QueryFormData,
   QueryFormMetric,
-} from '@superset-ui/core';
+} from "@superset-ui/core";
 
 export interface BigNumberDatum {
   [key: string]: number | null;

@@ -172,7 +172,7 @@ class CsvToDatabaseForm(UploadToDatabaseForm):
     )
     mangle_dupe_cols = BooleanField(
         _("Mangle Duplicate Columns"),
-        description=_('Specify duplicate columns as "X.0, X.1".'),
+        description=_("Specify duplicate columns as "X.0, X.1"."),
     )
     usecols = JsonListField(
         _("Use Columns"),
@@ -237,9 +237,9 @@ class CsvToDatabaseForm(UploadToDatabaseForm):
         default=config["CSV_DEFAULT_NA_NAMES"],
         description=_(
             "Json list of the values that should be treated as null. "
-            'Examples: [""], ["None", "N/A"], ["nan", "null"]. '
+            "Examples: [""], ["None", "N/A"], ["nan", "null"]. "
             "Warning: Hive database supports only single value. "
-            'Use [""] for empty string.'
+            "Use [""] for empty string."
         ),
     )
 
@@ -328,7 +328,7 @@ class ExcelToDatabaseForm(UploadToDatabaseForm):
     )
     mangle_dupe_cols = BooleanField(
         _("Mangle Duplicate Columns"),
-        description=_('Specify duplicate columns as "X.0, X.1".'),
+        description=_("Specify duplicate columns as "X.0, X.1"."),
     )
     skiprows = IntegerField(
         _("Skip Rows"),
@@ -373,9 +373,9 @@ class ExcelToDatabaseForm(UploadToDatabaseForm):
         default=config["CSV_DEFAULT_NA_NAMES"],
         description=_(
             "Json list of the values that should be treated as null. "
-            'Examples: [""], ["None", "N/A"], ["nan", "null"]. '
+            "Examples: [""], ["None", "N/A"], ["nan", "null"]. "
             "Warning: Hive database supports only single value. "
-            'Use [""] for empty string.'
+            "Use [""] for empty string."
         ),
     )
 

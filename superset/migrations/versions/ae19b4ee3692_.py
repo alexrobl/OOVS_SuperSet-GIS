@@ -17,7 +17,7 @@
 """empty message
 
 Revision ID: ae19b4ee3692
-Revises: ('175ea3592453', '2e5a0ee25ed4')
+Revises: ("175ea3592453", "2e5a0ee25ed4")
 Create Date: 2020-09-01 16:23:12.203310
 
 """

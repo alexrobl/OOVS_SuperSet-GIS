@@ -16,15 +16,15 @@
   specific language governing permissions and limitations
   under the License.
 #}
-{% extends 'appbuilder/init.html' %}
-{% import 'appbuilder/baselib.html' as baselib %}
+{% extends "appbuilder/init.html" %}
+{% import "appbuilder/baselib.html" as baselib %}
 
 {% block body %}
-    {% include 'appbuilder/general/confirm.html' %}
-    {% include 'appbuilder/general/alert.html' %}
+    {% include "appbuilder/general/confirm.html" %}
+    {% include "appbuilder/general/alert.html" %}
 
     {% block navbar %}
-      {% include 'appbuilder/navbar.html' %}
+      {% include "appbuilder/navbar.html" %}
     {% endblock %}
 
     {% block uncontained %}{% endblock %}
@@ -32,7 +32,7 @@
     <div class="container">
       <div class="row">
           {% block messages %}
-            {% include 'superset/flash_wrapper.html' %}
+            {% include "superset/flash_wrapper.html" %}
           {% endblock %}
           {% block content %}
           {% endblock %}
@@ -48,7 +48,7 @@
         <footer>
           <div class="img-rounded nav-fixed-bottom">
               <div class="container-fluid">
-                  {% include 'appbuilder/footer.html' %}
+                  {% include "appbuilder/footer.html" %}
               </div>
           </div>
         </footer>

@@ -78,7 +78,7 @@ class PinotEngineSpec(BaseEngineSpec):  # pylint: disable=abstract-method
         type_: Optional[str] = None,
     ) -> TimestampExpression:
         if not pdf:
-            raise NotImplementedError(f"Empty date format for '{col}'")
+            raise NotImplementedError(f"Empty date format for "{col}"")
         is_epoch = pdf in ("epoch_s", "epoch_ms")
 
         # The DATETIMECONVERT pinot udf is documented at
@@ -102,21 +102,21 @@ class PinotEngineSpec(BaseEngineSpec):  # pylint: disable=abstract-method
         if time_grain:
             granularity = cls.get_time_grain_expressions().get(time_grain)
             if not granularity:
-                raise NotImplementedError(f"No pinot grain spec for '{time_grain}'")
+                raise NotImplementedError(f"No pinot grain spec for "{time_grain}"")
         else:
             return TimestampExpression("{{col}}", col)
 
         # In pinot the output is a string since there is no timestamp column like pg
         if cls._use_date_trunc_function.get(time_grain):
             if is_epoch:
-                time_expr = f"DATETRUNC('{granularity}', {{col}}, '{seconds_or_ms}')"
+                time_expr = f"DATETRUNC("{granularity}", {{col}}, "{seconds_or_ms}")"
             else:
                 time_expr = (
-                    f"ToDateTime(DATETRUNC('{granularity}', "
-                    + f"FromDateTime({{col}}, '{java_date_format}'), "
-                    + f"'MILLISECONDS'), '{java_date_format}')"
+                    f"ToDateTime(DATETRUNC("{granularity}", "
+                    + f"FromDateTime({{col}}, "{java_date_format}"), "
+                    + f""MILLISECONDS"), "{java_date_format}")"
                 )
         else:
-            time_expr = f"DATETIMECONVERT({{col}}, '{tf}', '{tf}', '{granularity}')"
+            time_expr = f"DATETIMECONVERT({{col}}, "{tf}", "{tf}", "{granularity}")"
 
         return TimestampExpression(time_expr, col)

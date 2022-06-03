@@ -16,105 +16,105 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { smartDateFormatter, t } from '@superset-ui/core';
+import { smartDateFormatter, t } from "@superset-ui/core";
 import {
   ControlPanelConfig,
   D3_FORMAT_DOCS,
   D3_TIME_FORMAT_OPTIONS,
   formatSelectOptions,
   sections,
-} from '@superset-ui/chart-controls';
-import React from 'react';
-import { headerFontSize, subheaderFontSize } from '../sharedControls';
+} from "@superset-ui/chart-controls";
+import React from "react";
+import { headerFontSize, subheaderFontSize } from "../sharedControls";
 
 const config: ControlPanelConfig = {
   controlPanelSections: [
     sections.legacyTimeseriesTime,
     {
-      label: t('Query'),
+      label: t("Query"),
       expanded: true,
-      controlSetRows: [['metric'], ['adhoc_filters']],
+      controlSetRows: [["metric"], ["adhoc_filters"]],
     },
     {
-      label: t('Options'),
-      tabOverride: 'data',
+      label: t("Options"),
+      tabOverride: "data",
       expanded: true,
       controlSetRows: [
         [
           {
-            name: 'compare_lag',
+            name: "compare_lag",
             config: {
-              type: 'TextControl',
-              label: t('Comparison Period Lag'),
+              type: "TextControl",
+              label: t("Comparison Period Lag"),
               isInt: true,
               description: t(
-                'Based on granularity, number of time periods to compare against',
+                "Based on granularity, number of time periods to compare against",
               ),
             },
           },
         ],
         [
           {
-            name: 'compare_suffix',
+            name: "compare_suffix",
             config: {
-              type: 'TextControl',
-              label: t('Comparison suffix'),
-              description: t('Suffix to apply after the percentage display'),
+              type: "TextControl",
+              label: t("Comparison suffix"),
+              description: t("Suffix to apply after the percentage display"),
             },
           },
         ],
         [
           {
-            name: 'show_timestamp',
+            name: "show_timestamp",
             config: {
-              type: 'CheckboxControl',
-              label: t('Show Timestamp'),
+              type: "CheckboxControl",
+              label: t("Show Timestamp"),
               renderTrigger: true,
               default: false,
-              description: t('Whether to display the timestamp'),
+              description: t("Whether to display the timestamp"),
             },
           },
         ],
         [
           {
-            name: 'show_trend_line',
+            name: "show_trend_line",
             config: {
-              type: 'CheckboxControl',
-              label: t('Show Trend Line'),
+              type: "CheckboxControl",
+              label: t("Show Trend Line"),
               renderTrigger: true,
               default: true,
-              description: t('Whether to display the trend line'),
+              description: t("Whether to display the trend line"),
             },
           },
         ],
         [
           {
-            name: 'start_y_axis_at_zero',
+            name: "start_y_axis_at_zero",
             config: {
-              type: 'CheckboxControl',
-              label: t('Start y-axis at 0'),
+              type: "CheckboxControl",
+              label: t("Start y-axis at 0"),
               renderTrigger: true,
               default: true,
               description: t(
-                'Start y-axis at zero. Uncheck to start y-axis at minimum value in the data.',
+                "Start y-axis at zero. Uncheck to start y-axis at minimum value in the data.",
               ),
             },
           },
         ],
         [
           {
-            name: 'time_range_fixed',
+            name: "time_range_fixed",
             config: {
-              type: 'CheckboxControl',
-              label: t('Fix to selected Time Range'),
+              type: "CheckboxControl",
+              label: t("Fix to selected Time Range"),
               description: t(
-                'Fix the trend line to the full time range specified in case filtered results do not include the start or end dates',
+                "Fix the trend line to the full time range specified in case filtered results do not include the start or end dates",
               ),
               renderTrigger: true,
               visibility(props) {
                 const { time_range: timeRange } = props.form_data;
                 // only display this option when a time range is selected
-                return !!timeRange && timeRange !== 'No filter';
+                return !!timeRange && timeRange !== "No filter";
               },
             },
           },
@@ -122,20 +122,20 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('Chart Options'),
+      label: t("Chart Options"),
       expanded: true,
       controlSetRows: [
-        ['color_picker', null],
+        ["color_picker", null],
         [headerFontSize],
         [subheaderFontSize],
-        ['y_axis_format'],
+        ["y_axis_format"],
         [
           {
-            name: 'time_format',
+            name: "time_format",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('Date format'),
+              label: t("Date format"),
               renderTrigger: true,
               choices: D3_TIME_FORMAT_OPTIONS,
               description: D3_FORMAT_DOCS,
@@ -145,14 +145,14 @@ const config: ControlPanelConfig = {
         ],
         [
           {
-            name: 'force_timestamp_formatting',
+            name: "force_timestamp_formatting",
             config: {
-              type: 'CheckboxControl',
-              label: t('Force date format'),
+              type: "CheckboxControl",
+              label: t("Force date format"),
               renderTrigger: true,
               default: false,
               description: t(
-                'Use date formatting even when metric value is not a timestamp',
+                "Use date formatting even when metric value is not a timestamp",
               ),
             },
           },
@@ -160,105 +160,105 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('Advanced Analytics'),
+      label: t("Advanced Analytics"),
       expanded: false,
       controlSetRows: [
         // eslint-disable-next-line react/jsx-key
-        [<div className="section-header">{t('Rolling Window')}</div>],
+        [<div className="section-header">{t("Rolling Window")}</div>],
         [
           {
-            name: 'rolling_type',
+            name: "rolling_type",
             config: {
-              type: 'SelectControl',
-              label: t('Rolling Function'),
-              default: 'None',
+              type: "SelectControl",
+              label: t("Rolling Function"),
+              default: "None",
               choices: formatSelectOptions([
-                'None',
-                'mean',
-                'sum',
-                'std',
-                'cumsum',
+                "None",
+                "mean",
+                "sum",
+                "std",
+                "cumsum",
               ]),
               description: t(
-                'Defines a rolling window function to apply, works along ' +
-                  'with the [Periods] text box',
+                "Defines a rolling window function to apply, works along " +
+                  "with the [Periods] text box",
               ),
             },
           },
         ],
         [
           {
-            name: 'rolling_periods',
+            name: "rolling_periods",
             config: {
-              type: 'TextControl',
-              label: t('Periods'),
+              type: "TextControl",
+              label: t("Periods"),
               isInt: true,
               description: t(
-                'Defines the size of the rolling window function, ' +
-                  'relative to the time granularity selected',
+                "Defines the size of the rolling window function, " +
+                  "relative to the time granularity selected",
               ),
             },
           },
         ],
         [
           {
-            name: 'min_periods',
+            name: "min_periods",
             config: {
-              type: 'TextControl',
-              label: t('Min Periods'),
+              type: "TextControl",
+              label: t("Min Periods"),
               isInt: true,
               description: t(
-                'The minimum number of rolling periods required to show ' +
-                  'a value. For instance if you do a cumulative sum on 7 days ' +
-                  'you may want your "Min Period" to be 7, so that all data points ' +
-                  'shown are the total of 7 periods. This will hide the "ramp up" ' +
-                  'taking place over the first 7 periods',
+                "The minimum number of rolling periods required to show " +
+                  "a value. For instance if you do a cumulative sum on 7 days " +
+                  "you may want your "Min Period" to be 7, so that all data points " +
+                  "shown are the total of 7 periods. This will hide the "ramp up" " +
+                  "taking place over the first 7 periods",
               ),
             },
           },
         ],
-        [<div className="section-header">{t('Resample')}</div>],
+        [<div className="section-header">{t("Resample")}</div>],
         [
           {
-            name: 'resample_rule',
+            name: "resample_rule",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('Rule'),
+              label: t("Rule"),
               default: null,
               choices: [
-                ['1T', '1 minutely frequency'],
-                ['1H', '1 hourly frequency'],
-                ['1D', '1 calendar day frequency'],
-                ['7D', '7 calendar day frequency'],
-                ['1MS', '1 month start frequency'],
-                ['1M', '1 month end frequency'],
-                ['1AS', '1 year start frequency'],
-                ['1A', '1 year end frequency'],
+                ["1T", "1 minutely frequency"],
+                ["1H", "1 hourly frequency"],
+                ["1D", "1 calendar day frequency"],
+                ["7D", "7 calendar day frequency"],
+                ["1MS", "1 month start frequency"],
+                ["1M", "1 month end frequency"],
+                ["1AS", "1 year start frequency"],
+                ["1A", "1 year end frequency"],
               ],
-              description: t('Pandas resample rule'),
+              description: t("Pandas resample rule"),
             },
           },
         ],
         [
           {
-            name: 'resample_method',
+            name: "resample_method",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('Fill method'),
+              label: t("Fill method"),
               default: null,
               choices: [
-                ['asfreq', 'Null imputation'],
-                ['zerofill', 'Zero imputation'],
-                ['linear', 'Linear interpolation'],
-                ['ffill', 'Forward values'],
-                ['bfill', 'Backward values'],
-                ['median', 'Median values'],
-                ['mean', 'Mean values'],
-                ['sum', 'Sum values'],
+                ["asfreq", "Null imputation"],
+                ["zerofill", "Zero imputation"],
+                ["linear", "Linear interpolation"],
+                ["ffill", "Forward values"],
+                ["bfill", "Backward values"],
+                ["median", "Median values"],
+                ["mean", "Mean values"],
+                ["sum", "Sum values"],
               ],
-              description: t('Pandas resample method'),
+              description: t("Pandas resample method"),
             },
           },
         ],
@@ -267,7 +267,7 @@ const config: ControlPanelConfig = {
   ],
   controlOverrides: {
     y_axis_format: {
-      label: t('Number format'),
+      label: t("Number format"),
     },
   },
 };

@@ -31,7 +31,7 @@ serviceAccount:
   create: false
 
 # Install additional packages and do any other bootstrap configuration in this script
-# For production clusters it's recommended to build own image with this step done in CI
+# For production clusters it"s recommended to build own image with this step done in CI
 bootstrapScript: |
   #!/bin/bash
   rm -rf /var/lib/apt/lists/* && \
@@ -43,12 +43,12 @@ bootstrapScript: |
 ## The name of the secret which we will use to generate a superset_config.py file
 ## Note: this secret must have the key superset_config.py in it and can include other files as well
 ##
-configFromSecret: '{{ template "superset.fullname" . }}-config'
+configFromSecret: "{{ template "superset.fullname" . }}-config"
 
 ## The name of the secret which we will use to populate env vars in deployed pods
 ## This can be useful for secret keys, etc.
 ##
-envFromSecret: '{{ template "superset.fullname" . }}-env'
+envFromSecret: "{{ template "superset.fullname" . }}-env"
 ## This can be a list of template strings
 envFromSecrets: []
 
@@ -100,7 +100,7 @@ extraSecrets: {}
 extraVolumes: []
  # - name: customConfig
  #   configMap:
- #     name: '{{ template "superset.fullname" . }}-custom-config'
+ #     name: "{{ template "superset.fullname" . }}-custom-config"
  # - name: additionalSecret
  #   secret:
  #     secretName: my-secret
@@ -142,15 +142,15 @@ configOverrides: {}
   #       }
   #   ]
   #   # Map Authlib roles to superset roles
-  #   AUTH_ROLE_ADMIN = 'Admin'
-  #   AUTH_ROLE_PUBLIC = 'Public'
+  #   AUTH_ROLE_ADMIN = "Admin"
+  #   AUTH_ROLE_PUBLIC = "Public"
   #   # Will allow user self registration, allowing to create Flask users from Authorized User
   #   AUTH_USER_REGISTRATION = True
   #   # The default user self registration role
   #   AUTH_USER_REGISTRATION_ROLE = "Admin"
   # secret: |
   #   # Generate your own secret key for encryption. Use openssl rand -base64 42 to generate a good key
-  #   SECRET_KEY = 'YOUR_OWN_RANDOM_GENERATED_SECRET_KEY'
+  #   SECRET_KEY = "YOUR_OWN_RANDOM_GENERATED_SECRET_KEY"
 # Same as above but the values are files
 configOverridesFiles: {}
   # extend_timeout: extend_timeout.py
@@ -202,7 +202,7 @@ resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
-  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # lines, adjust them as necessary, and remove the curly braces after "resources:".
   # limits:
   #   cpu: 100m
   #   memory: 128Mi
@@ -228,11 +228,11 @@ supersetNode:
     - ". {{ .Values.configMountPath }}/superset_bootstrap.sh; /usr/bin/run-server.sh"
   connections:
     # Change in case of bringing your own redis and then also set redis.enabled:false
-    redis_host: '{{ template "superset.fullname" . }}-redis-headless'
+    redis_host: "{{ template "superset.fullname" . }}-redis-headless"
     # redis_password: superset
     redis_port: "6379"
     # You need to change below configuration incase bringing own PostgresSQL instance and also set postgresql.enabled:false
-    db_host: '{{ template "superset.fullname" . }}-postgresql'
+    db_host: "{{ template "superset.fullname" . }}-postgresql"
     db_port: "5432"
     db_user: superset
     db_pass: superset
@@ -245,8 +245,8 @@ supersetNode:
       imagePullPolicy: "{{ .Values.initImage.pullPolicy }}"
       envFrom:
         - secretRef:
-            name: '{{ tpl .Values.envFromSecret . }}'
-      command: [ "/bin/sh", "-c", "until nc -zv $DB_HOST $DB_PORT -w1; do echo 'waiting for db'; sleep 1; done" ]
+            name: "{{ tpl .Values.envFromSecret . }}"
+      command: [ "/bin/sh", "-c", "until nc -zv $DB_HOST $DB_PORT -w1; do echo "waiting for db"; sleep 1; done" ]
   ## Annotations to be added to supersetNode deployment
   deploymentAnnotations: {}
   ## Annotations to be added to supersetNode pods
@@ -267,8 +267,8 @@ supersetWorker:
       imagePullPolicy: "{{ .Values.initImage.pullPolicy }}"
       envFrom:
         - secretRef:
-            name: '{{ tpl .Values.envFromSecret . }}'
-      command: [ "/bin/sh", "-c", "until nc -zv $DB_HOST $DB_PORT -w1; do echo 'waiting for db'; sleep 1; done" ]
+            name: "{{ tpl .Values.envFromSecret . }}"
+      command: [ "/bin/sh", "-c", "until nc -zv $DB_HOST $DB_PORT -w1; do echo "waiting for db"; sleep 1; done" ]
   ## Annotations to be added to supersetWorker deployment
   deploymentAnnotations: {}
   ## Annotations to be added to supersetWorker pods
@@ -291,8 +291,8 @@ supersetCeleryBeat:
       imagePullPolicy: "{{ .Values.initImage.pullPolicy }}"
       envFrom:
         - secretRef:
-            name: '{{ tpl .Values.envFromSecret . }}'
-      command: [ "/bin/sh", "-c", "until nc -zv $DB_HOST $DB_PORT -w1; do echo 'waiting for db'; sleep 1; done" ]
+            name: "{{ tpl .Values.envFromSecret . }}"
+      command: [ "/bin/sh", "-c", "until nc -zv $DB_HOST $DB_PORT -w1; do echo "waiting for db"; sleep 1; done" ]
   ## Annotations to be added to supersetCeleryBeat deployment
   deploymentAnnotations: {}
   ## Annotations to be added to supersetCeleryBeat pods
@@ -333,8 +333,8 @@ init:
       imagePullPolicy: "{{ .Values.initImage.pullPolicy }}"
       envFrom:
         - secretRef:
-            name: '{{ tpl .Values.envFromSecret . }}'
-      command: [ "/bin/sh", "-c", "until nc -zv $DB_HOST $DB_PORT -w1; do echo 'waiting for db'; sleep 1; done" ]
+            name: "{{ tpl .Values.envFromSecret . }}"
+      command: [ "/bin/sh", "-c", "until nc -zv $DB_HOST $DB_PORT -w1; do echo "waiting for db"; sleep 1; done" ]
   initscript: |-
     #!/bin/sh
     set -eu

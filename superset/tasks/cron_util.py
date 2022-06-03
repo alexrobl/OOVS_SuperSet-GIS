@@ -36,9 +36,9 @@ def cron_schedule_window(cron: str, timezone: str) -> Iterator[datetime]:
     except UnknownTimeZoneError:
         # fallback to default timezone
         tz = pytz_timezone("UTC")
-        logger.warning("Timezone %s was invalid. Falling back to 'UTC'", timezone)
+        logger.warning("Timezone %s was invalid. Falling back to "UTC"", timezone)
     utc = pytz_timezone("UTC")
-    # convert the current time to the user's local time for comparison
+    # convert the current time to the user"s local time for comparison
     time_now = time_now.astimezone(tz)
     start_at = time_now - timedelta(seconds=1)
     stop_at = time_now + timedelta(seconds=window_size)

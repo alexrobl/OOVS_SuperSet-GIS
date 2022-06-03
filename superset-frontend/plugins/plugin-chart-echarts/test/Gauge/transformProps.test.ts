@@ -16,25 +16,25 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { ChartProps, SqlaFormData, supersetTheme } from '@superset-ui/core';
-import transformProps from '../../src/Gauge/transformProps';
-import { EchartsGaugeChartProps } from '../../src/Gauge/types';
+import { ChartProps, SqlaFormData, supersetTheme } from "@superset-ui/core";
+import transformProps from "../../src/Gauge/transformProps";
+import { EchartsGaugeChartProps } from "../../src/Gauge/types";
 
-describe('Echarts Gauge transformProps', () => {
+describe("Echarts Gauge transformProps", () => {
   const baseFormData: SqlaFormData = {
-    datasource: '26__table',
-    viz_type: 'gauge_chart',
-    metric: 'count',
+    datasource: "26__table",
+    viz_type: "gauge_chart",
+    metric: "count",
     adhocFilters: [],
     rowLimit: 10,
     minVal: 0,
     maxVal: 100,
     startAngle: 225,
     endAngle: -45,
-    colorScheme: 'SUPERSET_DEFAULT',
+    colorScheme: "SUPERSET_DEFAULT",
     fontSize: 14,
-    numberFormat: 'SMART_NUMBER',
-    valueFormatter: '{value}',
+    numberFormat: "SMART_NUMBER",
+    valueFormatter: "{value}",
     showPointer: true,
     animation: true,
     showAxisTick: false,
@@ -45,11 +45,11 @@ describe('Echarts Gauge transformProps', () => {
     roundCap: false,
   };
 
-  it('should transform chart props for no group by column', () => {
+  it("should transform chart props for no group by column", () => {
     const formData: SqlaFormData = { ...baseFormData, groupby: [] };
     const queriesData = [
       {
-        colnames: ['count'],
+        colnames: ["count"],
         data: [
           {
             count: 16595,
@@ -77,16 +77,16 @@ describe('Echarts Gauge transformProps', () => {
               data: [
                 {
                   value: 16595,
-                  name: '',
+                  name: "",
                   itemStyle: {
-                    color: '#1f77b4',
+                    color: "#1f77b4",
                   },
                   title: {
-                    offsetCenter: ['0%', '20%'],
+                    offsetCenter: ["0%", "20%"],
                     fontSize: 14,
                   },
                   detail: {
-                    offsetCenter: ['0%', '32.6%'],
+                    offsetCenter: ["0%", "32.6%"],
                     fontSize: 16.8,
                   },
                 },
@@ -98,14 +98,14 @@ describe('Echarts Gauge transformProps', () => {
     );
   });
 
-  it('should transform chart props for single group by column', () => {
+  it("should transform chart props for single group by column", () => {
     const formData: SqlaFormData = {
       ...baseFormData,
-      groupby: ['year'],
+      groupby: ["year"],
     };
     const queriesData = [
       {
-        colnames: ['year', 'count'],
+        colnames: ["year", "count"],
         data: [
           {
             year: 1988,
@@ -138,31 +138,31 @@ describe('Echarts Gauge transformProps', () => {
               data: [
                 {
                   value: 15,
-                  name: 'year: 1988',
+                  name: "year: 1988",
                   itemStyle: {
-                    color: '#1f77b4',
+                    color: "#1f77b4",
                   },
                   title: {
-                    offsetCenter: ['0%', '20%'],
+                    offsetCenter: ["0%", "20%"],
                     fontSize: 14,
                   },
                   detail: {
-                    offsetCenter: ['0%', '32.6%'],
+                    offsetCenter: ["0%", "32.6%"],
                     fontSize: 16.8,
                   },
                 },
                 {
                   value: 219,
-                  name: 'year: 1995',
+                  name: "year: 1995",
                   itemStyle: {
-                    color: '#ff7f0e',
+                    color: "#ff7f0e",
                   },
                   title: {
-                    offsetCenter: ['0%', '48%'],
+                    offsetCenter: ["0%", "48%"],
                     fontSize: 14,
                   },
                   detail: {
-                    offsetCenter: ['0%', '60.6%'],
+                    offsetCenter: ["0%", "60.6%"],
                     fontSize: 16.8,
                   },
                 },
@@ -174,23 +174,23 @@ describe('Echarts Gauge transformProps', () => {
     );
   });
 
-  it('should transform chart props for multiple group by columns', () => {
+  it("should transform chart props for multiple group by columns", () => {
     const formData: SqlaFormData = {
       ...baseFormData,
-      groupby: ['year', 'platform'],
+      groupby: ["year", "platform"],
     };
     const queriesData = [
       {
-        colnames: ['year', 'platform', 'count'],
+        colnames: ["year", "platform", "count"],
         data: [
           {
             year: 2011,
-            platform: 'PC',
+            platform: "PC",
             count: 140,
           },
           {
             year: 2008,
-            platform: 'PC',
+            platform: "PC",
             count: 76,
           },
         ],
@@ -216,31 +216,31 @@ describe('Echarts Gauge transformProps', () => {
               data: [
                 {
                   value: 140,
-                  name: 'year: 2011, platform: PC',
+                  name: "year: 2011, platform: PC",
                   itemStyle: {
-                    color: '#1f77b4',
+                    color: "#1f77b4",
                   },
                   title: {
-                    offsetCenter: ['0%', '20%'],
+                    offsetCenter: ["0%", "20%"],
                     fontSize: 14,
                   },
                   detail: {
-                    offsetCenter: ['0%', '32.6%'],
+                    offsetCenter: ["0%", "32.6%"],
                     fontSize: 16.8,
                   },
                 },
                 {
                   value: 76,
-                  name: 'year: 2008, platform: PC',
+                  name: "year: 2008, platform: PC",
                   itemStyle: {
-                    color: '#ff7f0e',
+                    color: "#ff7f0e",
                   },
                   title: {
-                    offsetCenter: ['0%', '48%'],
+                    offsetCenter: ["0%", "48%"],
                     fontSize: 14,
                   },
                   detail: {
-                    offsetCenter: ['0%', '60.6%'],
+                    offsetCenter: ["0%", "60.6%"],
                     fontSize: 16.8,
                   },
                 },
@@ -252,25 +252,25 @@ describe('Echarts Gauge transformProps', () => {
     );
   });
 
-  it('should transform chart props for intervals', () => {
+  it("should transform chart props for intervals", () => {
     const formData: SqlaFormData = {
       ...baseFormData,
-      groupby: ['year', 'platform'],
-      intervals: '50,100',
-      intervalColorIndices: '1,2',
+      groupby: ["year", "platform"],
+      intervals: "50,100",
+      intervalColorIndices: "1,2",
     };
     const queriesData = [
       {
-        colnames: ['year', 'platform', 'count'],
+        colnames: ["year", "platform", "count"],
         data: [
           {
             year: 2011,
-            platform: 'PC',
+            platform: "PC",
             count: 140,
           },
           {
             year: 2008,
-            platform: 'PC',
+            platform: "PC",
             count: 76,
           },
         ],
@@ -297,8 +297,8 @@ describe('Echarts Gauge transformProps', () => {
                 lineStyle: {
                   width: 14,
                   color: [
-                    [0.5, '#1f77b4'],
-                    [1, '#ff7f0e'],
+                    [0.5, "#1f77b4"],
+                    [1, "#ff7f0e"],
                   ],
                 },
                 roundCap: false,
@@ -306,31 +306,31 @@ describe('Echarts Gauge transformProps', () => {
               data: [
                 {
                   value: 140,
-                  name: 'year: 2011, platform: PC',
+                  name: "year: 2011, platform: PC",
                   itemStyle: {
-                    color: '#1f77b4',
+                    color: "#1f77b4",
                   },
                   title: {
-                    offsetCenter: ['0%', '20%'],
+                    offsetCenter: ["0%", "20%"],
                     fontSize: 14,
                   },
                   detail: {
-                    offsetCenter: ['0%', '32.6%'],
+                    offsetCenter: ["0%", "32.6%"],
                     fontSize: 16.8,
                   },
                 },
                 {
                   value: 76,
-                  name: 'year: 2008, platform: PC',
+                  name: "year: 2008, platform: PC",
                   itemStyle: {
-                    color: '#ff7f0e',
+                    color: "#ff7f0e",
                   },
                   title: {
-                    offsetCenter: ['0%', '48%'],
+                    offsetCenter: ["0%", "48%"],
                     fontSize: 14,
                   },
                   detail: {
-                    offsetCenter: ['0%', '60.6%'],
+                    offsetCenter: ["0%", "60.6%"],
                     fontSize: 16.8,
                   },
                 },

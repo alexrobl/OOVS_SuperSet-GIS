@@ -18,10 +18,10 @@
 #}
 
 <!DOCTYPE html>
-{% import 'appbuilder/general/lib.html' as lib %}
-{% from 'superset/partials/asset_bundle.html' import css_bundle, js_bundle with context %}
+{% import "appbuilder/general/lib.html" as lib %}
+{% from "superset/partials/asset_bundle.html" import css_bundle, js_bundle with context %}
 
-{% set favicons = appbuilder.app.config['FAVICONS'] %}
+{% set favicons = appbuilder.app.config["FAVICONS"] %}
 <html>
   <head>
     <title>
@@ -60,14 +60,14 @@
       type="hidden"
       name="csrf_token"
       id="csrf_token"
-      value="{{ csrf_token() if csrf_token else '' }}"
+      value="{{ csrf_token() if csrf_token else "" }}"
     >
   </head>
 
   <body {% if standalone_mode %}class="standalone"{% endif %}>
     {% block navbar %}
       {% if not standalone_mode %}
-        {% include 'appbuilder/navbar.html' %}
+        {% include "appbuilder/navbar.html" %}
       {% endif %}
     {% endblock %}
 
@@ -98,7 +98,7 @@
 
     {% block tail_js %}
       {% if not standalone_mode %}
-        {{ js_bundle('menu') }}
+        {{ js_bundle("menu") }}
       {% endif %}
       {% if entry %}
         {{ js_bundle(entry) }}

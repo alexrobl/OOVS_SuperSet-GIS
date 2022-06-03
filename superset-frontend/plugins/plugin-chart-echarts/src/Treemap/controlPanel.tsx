@@ -16,8 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React from 'react';
-import { t } from '@superset-ui/core';
+import React from "react";
+import { t } from "@superset-ui/core";
 import {
   ControlPanelConfig,
   D3_FORMAT_DOCS,
@@ -25,8 +25,8 @@ import {
   D3_TIME_FORMAT_OPTIONS,
   sections,
   emitFilterControl,
-} from '@superset-ui/chart-controls';
-import { DEFAULT_FORM_DATA } from './types';
+} from "@superset-ui/chart-controls";
+import { DEFAULT_FORM_DATA } from "./types";
 
 const { labelType, numberFormat, showLabels, showUpperLabels, dateFormat } =
   DEFAULT_FORM_DATA;
@@ -35,98 +35,98 @@ const config: ControlPanelConfig = {
   controlPanelSections: [
     sections.legacyRegularTime,
     {
-      label: t('Query'),
+      label: t("Query"),
       expanded: true,
       controlSetRows: [
-        ['groupby'],
-        ['metric'],
-        ['row_limit'],
+        ["groupby"],
+        ["metric"],
+        ["row_limit"],
         [
           {
-            name: 'sort_by_metric',
+            name: "sort_by_metric",
             config: {
-              type: 'CheckboxControl',
-              label: t('Sort by metric'),
+              type: "CheckboxControl",
+              label: t("Sort by metric"),
               description: t(
-                'Whether to sort results by the selected metric in descending order.',
+                "Whether to sort results by the selected metric in descending order.",
               ),
             },
           },
         ],
-        ['adhoc_filters'],
+        ["adhoc_filters"],
         emitFilterControl,
       ],
     },
     {
-      label: t('Chart Options'),
+      label: t("Chart Options"),
       expanded: true,
       controlSetRows: [
-        ['color_scheme'],
-        [<div className="section-header">{t('Labels')}</div>],
+        ["color_scheme"],
+        [<div className="section-header">{t("Labels")}</div>],
         [
           {
-            name: 'show_labels',
+            name: "show_labels",
             config: {
-              type: 'CheckboxControl',
-              label: t('Show Labels'),
+              type: "CheckboxControl",
+              label: t("Show Labels"),
               renderTrigger: true,
               default: showLabels,
-              description: t('Whether to display the labels.'),
+              description: t("Whether to display the labels."),
             },
           },
         ],
         [
           {
-            name: 'show_upper_labels',
+            name: "show_upper_labels",
             config: {
-              type: 'CheckboxControl',
-              label: t('Show Upper Labels'),
+              type: "CheckboxControl",
+              label: t("Show Upper Labels"),
               renderTrigger: true,
               default: showUpperLabels,
-              description: t('Show labels when the node has children.'),
+              description: t("Show labels when the node has children."),
             },
           },
         ],
         [
           {
-            name: 'label_type',
+            name: "label_type",
             config: {
-              type: 'SelectControl',
-              label: t('Label Type'),
+              type: "SelectControl",
+              label: t("Label Type"),
               default: labelType,
               renderTrigger: true,
               choices: [
-                ['Key', 'Key'],
-                ['value', 'Value'],
-                ['key_value', 'Category and Value'],
+                ["Key", "Key"],
+                ["value", "Value"],
+                ["key_value", "Category and Value"],
               ],
-              description: t('What should be shown on the label?'),
+              description: t("What should be shown on the label?"),
             },
           },
         ],
         [
           {
-            name: 'number_format',
+            name: "number_format",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('Number format'),
+              label: t("Number format"),
               renderTrigger: true,
               default: numberFormat,
               choices: D3_FORMAT_OPTIONS,
               description: `${t(
-                'D3 format syntax: https://github.com/d3/d3-format. ',
-              )} ${t('Only applies when "Label Type" is set to show values.')}`,
+                "D3 format syntax: https://github.com/d3/d3-format. ",
+              )} ${t("Only applies when "Label Type" is set to show values.")}`,
             },
           },
         ],
         [
           {
-            name: 'date_format',
+            name: "date_format",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('Date format'),
+              label: t("Date format"),
               renderTrigger: true,
               choices: D3_TIME_FORMAT_OPTIONS,
               default: dateFormat,

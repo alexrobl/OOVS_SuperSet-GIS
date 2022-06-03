@@ -39,11 +39,11 @@ def populate_owners(
     default_to_user: bool,
 ) -> List[User]:
     """
-    Helper function for commands, will fetch all users from owners id's
+    Helper function for commands, will fetch all users from owners id"s
     :param user: current user
-    :param owner_ids: list of owners by id's
+    :param owner_ids: list of owners by id"s
     :param default_to_user: make user the owner if `owner_ids` is None or empty
-    :raises OwnersNotFoundValidationError: if at least one owner id can't be resolved
+    :raises OwnersNotFoundValidationError: if at least one owner id can"t be resolved
     :returns: Final list of owners
     """
     owner_ids = owner_ids or []
@@ -53,7 +53,7 @@ def populate_owners(
     if user.id not in owner_ids and "admin" not in [
         role.name.lower() for role in user.roles
     ]:
-        # make sure non-admins can't remove themselves as owner by mistake
+        # make sure non-admins can"t remove themselves as owner by mistake
         owners.append(user)
     for owner_id in owner_ids:
         owner = security_manager.get_user_by_id(owner_id)
@@ -65,9 +65,9 @@ def populate_owners(
 
 def populate_roles(role_ids: Optional[List[int]] = None) -> List[Role]:
     """
-    Helper function for commands, will fetch all roles from roles id's
+    Helper function for commands, will fetch all roles from roles id"s
      :raises RolesNotFoundValidationError: If a role in the input list is not found
-    :param role_ids: A List of roles by id's
+    :param role_ids: A List of roles by id"s
     """
     roles: List[Role] = []
     if role_ids:

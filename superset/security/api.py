@@ -57,7 +57,7 @@ class ResourceSchema(PermissiveSchema):
     def convert_enum_to_value(  # pylint: disable=no-self-use
         self, data: Dict[str, Any], **kwargs: Any  # pylint: disable=unused-argument
     ) -> Dict[str, Any]:
-        # we don't care about the enum, we want the value inside
+        # we don"t care about the enum, we want the value inside
         data["type"] = data["type"].value
         return data
 
@@ -104,9 +104,9 @@ class SecurityRestApi(BaseApi):
                         result:
                           type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         return self.response(200, result=generate_csrf())
 
@@ -139,18 +139,18 @@ class SecurityRestApi(BaseApi):
                         token:
                           type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             body = guest_token_create_schema.load(request.json)
             self.appbuilder.sm.validate_guest_token_resources(body["resources"])
 
             # todo validate stuff:
-            # make sure username doesn't reference an existing user
+            # make sure username doesn"t reference an existing user
             # check rls rules for validity?
             token = self.appbuilder.sm.create_guest_access_token(
                 body["user"], body["resources"], body["rls"]

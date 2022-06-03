@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# Make sure you've followed the instructions on `RELEASING/README.md`
+# Make sure you"ve followed the instructions on `RELEASING/README.md`
 # and are on the correct branch
 cd ${SUPERSET_REPO_DIR}
 git branch

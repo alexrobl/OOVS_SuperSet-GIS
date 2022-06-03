@@ -39,7 +39,7 @@ def select(
     :param exclude: columns to exclude from selection. If columns are renamed, the new
                     column name should be referenced here.
     :param rename: columns which to rename, mapping source column to target column.
-                   For instance, `{'y': 'y2'}` will rename the column `y` to
+                   For instance, `{"y": "y2"}` will rename the column `y` to
                    `y2`.
     :return: Subset of columns in original DataFrame
     :raises InvalidPostProcessingError: If the request in incorrect

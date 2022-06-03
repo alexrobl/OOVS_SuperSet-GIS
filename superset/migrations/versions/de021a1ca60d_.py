@@ -17,7 +17,7 @@
 """empty message
 
 Revision ID: de021a1ca60d
-Revises: ('0b1f1ab473c0', 'cefabc8f7d38')
+Revises: ("0b1f1ab473c0", "cefabc8f7d38")
 Create Date: 2018-12-18 22:45:55.783083
 
 """

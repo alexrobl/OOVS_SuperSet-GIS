@@ -41,7 +41,7 @@ params:
     expressionType: SIMPLE
     hasCustomLabel: true
     isNew: false
-    label: '# of Products Sold'
+    label: "# of Products Sold"
     optionName: metric_skdbciwba6g_z1r5w1pxlqj
     sqlExpression: null
   order_by_cols: []

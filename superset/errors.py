@@ -102,9 +102,9 @@ ISSUE_CODES = {
     1004: _("The column was deleted or renamed in the database."),
     1005: _("The table was deleted or renamed in the database."),
     1006: _("One or more parameters specified in the query are missing."),
-    1007: _("The hostname provided can't be resolved."),
+    1007: _("The hostname provided can"t be resolved."),
     1008: _("The port is closed."),
-    1009: _("The host might be down, and can't be reached on the provided port."),
+    1009: _("The host might be down, and can"t be reached on the provided port."),
     1010: _("Superset encountered an error while running a command."),
     1011: _("Superset encountered an unexpected error."),
     1012: _("The username provided when connecting to a database is not valid."),
@@ -112,14 +112,14 @@ ISSUE_CODES = {
     1014: _("Either the username or the password is wrong."),
     1015: _("Either the database is spelled incorrectly or does not exist."),
     1016: _("The schema was deleted or renamed in the database."),
-    1017: _("User doesn't have the proper permissions."),
+    1017: _("User doesn"t have the proper permissions."),
     1018: _("One or more parameters needed to configure a database are missing."),
     1019: _("The submitted payload has the incorrect format."),
     1020: _("The submitted payload has the incorrect schema."),
     1021: _("Results backend needed for asynchronous queries is not configured."),
     1022: _("Database does not allow data manipulation."),
     1023: _(
-        "The CTAS (create table as select) doesn't have a "
+        "The CTAS (create table as select) doesn"t have a "
         "SELECT statement at the end. Please make sure your query has a "
         "SELECT as its last statement. Then, try running your query again."
     ),

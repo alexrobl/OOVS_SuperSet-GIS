@@ -16,14 +16,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React from 'react';
+import React from "react";
 import {
   ChartDataResponseResult,
   GenericDataType,
   QueryFormMetric,
   t,
   validateNumber,
-} from '@superset-ui/core';
+} from "@superset-ui/core";
 import {
   ControlPanelConfig,
   D3_FORMAT_DOCS,
@@ -33,24 +33,24 @@ import {
   sharedControls,
   emitFilterControl,
   ControlFormItemSpec,
-} from '@superset-ui/chart-controls';
-import { DEFAULT_FORM_DATA } from './types';
-import { LABEL_POSITION } from '../constants';
-import { legendSection } from '../controls';
+} from "@superset-ui/chart-controls";
+import { DEFAULT_FORM_DATA } from "./types";
+import { LABEL_POSITION } from "../constants";
+import { legendSection } from "../controls";
 
 const { labelType, labelPosition, numberFormat, showLabels, isCircle } =
   DEFAULT_FORM_DATA;
 
 const radarMetricMaxValue: { name: string; config: ControlFormItemSpec } = {
-  name: 'radarMetricMaxValue',
+  name: "radarMetricMaxValue",
   config: {
-    controlType: 'InputNumber',
-    label: t('Max'),
+    controlType: "InputNumber",
+    label: t("Max"),
     description: t(
-      'The maximum value of metrics. It is an optional configuration',
+      "The maximum value of metrics. It is an optional configuration",
     ),
     width: 120,
-    placeholder: 'auto',
+    placeholder: "auto",
     debounceDelay: 400,
     validators: [validateNumber],
   },
@@ -60,17 +60,17 @@ const config: ControlPanelConfig = {
   controlPanelSections: [
     sections.legacyRegularTime,
     {
-      label: t('Query'),
+      label: t("Query"),
       expanded: true,
       controlSetRows: [
-        ['groupby'],
-        ['metrics'],
-        ['timeseries_limit_metric'],
-        ['adhoc_filters'],
+        ["groupby"],
+        ["metrics"],
+        ["timeseries_limit_metric"],
+        ["adhoc_filters"],
         emitFilterControl,
         [
           {
-            name: 'row_limit',
+            name: "row_limit",
             config: {
               ...sharedControls.row_limit,
               default: 10,
@@ -80,47 +80,47 @@ const config: ControlPanelConfig = {
       ],
     },
     {
-      label: t('Chart Options'),
+      label: t("Chart Options"),
       expanded: true,
       controlSetRows: [
-        ['color_scheme'],
+        ["color_scheme"],
         ...legendSection,
-        [<div className="section-header">{t('Labels')}</div>],
+        [<div className="section-header">{t("Labels")}</div>],
         [
           {
-            name: 'show_labels',
+            name: "show_labels",
             config: {
-              type: 'CheckboxControl',
-              label: t('Show Labels'),
+              type: "CheckboxControl",
+              label: t("Show Labels"),
               renderTrigger: true,
               default: showLabels,
-              description: t('Whether to display the labels.'),
+              description: t("Whether to display the labels."),
             },
           },
         ],
         [
           {
-            name: 'label_type',
+            name: "label_type",
             config: {
-              type: 'SelectControl',
-              label: t('Label Type'),
+              type: "SelectControl",
+              label: t("Label Type"),
               default: labelType,
               renderTrigger: true,
               choices: [
-                ['value', 'Value'],
-                ['key_value', 'Category and Value'],
+                ["value", "Value"],
+                ["key_value", "Category and Value"],
               ],
-              description: t('What should be shown on the label?'),
+              description: t("What should be shown on the label?"),
             },
           },
         ],
         [
           {
-            name: 'label_position',
+            name: "label_position",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: false,
-              label: t('Label position'),
+              label: t("Label position"),
               renderTrigger: true,
               choices: LABEL_POSITION,
               default: labelPosition,
@@ -130,42 +130,42 @@ const config: ControlPanelConfig = {
         ],
         [
           {
-            name: 'number_format',
+            name: "number_format",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('Number format'),
+              label: t("Number format"),
               renderTrigger: true,
               default: numberFormat,
               choices: D3_FORMAT_OPTIONS,
               description: `${t(
-                'D3 format syntax: https://github.com/d3/d3-format. ',
-              )} ${t('Only applies when "Label Type" is set to show values.')}`,
+                "D3 format syntax: https://github.com/d3/d3-format. ",
+              )} ${t("Only applies when "Label Type" is set to show values.")}`,
             },
           },
         ],
         [
           {
-            name: 'date_format',
+            name: "date_format",
             config: {
-              type: 'SelectControl',
+              type: "SelectControl",
               freeForm: true,
-              label: t('Date format'),
+              label: t("Date format"),
               renderTrigger: true,
               choices: D3_TIME_FORMAT_OPTIONS,
-              default: 'smart_date',
+              default: "smart_date",
               description: D3_FORMAT_DOCS,
             },
           },
         ],
-        [<div className="section-header">{t('Radar')}</div>],
+        [<div className="section-header">{t("Radar")}</div>],
         [
           {
-            name: 'column_config',
+            name: "column_config",
             config: {
-              type: 'ColumnConfigControl',
-              label: t('Customize Metrics'),
-              description: t('Further customize how to display each metric'),
+              type: "ColumnConfigControl",
+              label: t("Customize Metrics"),
+              description: t("Further customize how to display each metric"),
               renderTrigger: true,
               configFormLayout: {
                 [GenericDataType.NUMERIC]: [[radarMetricMaxValue]],
@@ -178,7 +178,7 @@ const config: ControlPanelConfig = {
                   (explore?.controls?.metrics?.value as QueryFormMetric[]) ??
                   [];
                 const metricColumn = values.map(value => {
-                  if (typeof value === 'string') {
+                  if (typeof value === "string") {
                     return value;
                   }
                   return value.label;
@@ -195,14 +195,14 @@ const config: ControlPanelConfig = {
         ],
         [
           {
-            name: 'is_circle',
+            name: "is_circle",
             config: {
-              type: 'CheckboxControl',
-              label: t('Circle radar shape'),
+              type: "CheckboxControl",
+              label: t("Circle radar shape"),
               renderTrigger: true,
               default: isCircle,
               description: t(
-                "Radar render type, whether to display 'circle' shape.",
+                "Radar render type, whether to display "circle" shape.",
               ),
             },
           },

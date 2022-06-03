@@ -16,8 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t, ChartMetadata, ChartPlugin } from '@superset-ui/core';
-import transformProps from '../transformProps';
+import { t, ChartMetadata, ChartPlugin } from "@superset-ui/core";
+import transformProps from "../transformProps';
 import example1 from './images/example1.jpg';
 import example2 from './images/example2.jpg';
 import example3 from './images/example3.jpg';

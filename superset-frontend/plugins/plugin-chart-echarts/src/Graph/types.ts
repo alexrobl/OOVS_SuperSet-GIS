@@ -16,17 +16,17 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { QueryFormData } from '@superset-ui/core';
-import { GraphNodeItemOption } from 'echarts/types/src/chart/graph/GraphSeries';
-import { SeriesTooltipOption } from 'echarts/types/src/util/types';
+import { QueryFormData } from "@superset-ui/core";
+import { GraphNodeItemOption } from "echarts/types/src/chart/graph/GraphSeries";
+import { SeriesTooltipOption } from "echarts/types/src/util/types";
 import {
   DEFAULT_LEGEND_FORM_DATA,
   EchartsLegendFormData,
   LegendOrientation,
   LegendType,
-} from '../types';
+} from "../types";
 
-export type EdgeSymbol = 'none' | 'circle' | 'arrow';
+export type EdgeSymbol = "none" | "circle" | "arrow";
 
 export type EchartsGraphFormData = QueryFormData &
   EchartsLegendFormData & {
@@ -36,10 +36,10 @@ export type EchartsGraphFormData = QueryFormData &
     targetCategory?: string;
     colorScheme?: string;
     metric?: string;
-    layout?: 'none' | 'circular' | 'force';
-    roam: boolean | 'scale' | 'move';
+    layout?: "none" | "circular" | "force";
+    roam: boolean | "scale" | "move";
     draggable: boolean;
-    selectedMode?: boolean | 'multiple' | 'single';
+    selectedMode?: boolean | "multiple" | "single";
     showSymbolThreshold: number;
     repulsion: number;
     gravity: number;
@@ -50,24 +50,24 @@ export type EchartsGraphFormData = QueryFormData &
     friction: number;
   };
 
-export type EChartGraphNode = Omit<GraphNodeItemOption, 'value'> & {
+export type EChartGraphNode = Omit<GraphNodeItemOption, "value"> & {
   value: number;
-  tooltip?: Pick<SeriesTooltipOption, 'formatter'>;
+  tooltip?: Pick<SeriesTooltipOption, "formatter">;
 };
 
 // @ts-ignore
 export const DEFAULT_FORM_DATA: EchartsGraphFormData = {
   ...DEFAULT_LEGEND_FORM_DATA,
-  source: '',
-  target: '',
-  layout: 'force',
+  source: "",
+  target: "",
+  layout: "force",
   roam: true,
   draggable: false,
-  selectedMode: 'single',
+  selectedMode: "single",
   showSymbolThreshold: 0,
   repulsion: 1000,
   gravity: 0.3,
-  edgeSymbol: 'none,arrow',
+  edgeSymbol: "none,arrow",
   edgeLength: 400,
   baseEdgeWidth: 3,
   baseNodeSize: 20,

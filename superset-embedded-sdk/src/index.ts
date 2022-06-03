@@ -17,14 +17,14 @@
  * under the License.
  */
 
-import { IFRAME_COMMS_MESSAGE_TYPE } from './const';
+import { IFRAME_COMMS_MESSAGE_TYPE } from "./const";
 
 // We can swap this out for the actual switchboard package once it gets published
-import { Switchboard } from '@superset-ui/switchboard';
-import { getGuestTokenRefreshTiming } from './guestTokenRefresh';
+import { Switchboard } from "@superset-ui/switchboard";
+import { getGuestTokenRefreshTiming } from "./guestTokenRefresh";
 
 /**
- * The function to fetch a guest token from your Host App's backend server.
+ * The function to fetch a guest token from your Host App"s backend server.
  * The Host App backend must supply an API endpoint
  * which returns a guest token with appropriate resource access.
  */
@@ -43,7 +43,7 @@ export type EmbedDashboardParams = {
   supersetDomain: string
   /** The html element within which to mount the iframe */
   mountPoint: HTMLElement
-  /** A function to fetch a guest token from the Host App's backend server */
+  /** A function to fetch a guest token from the Host App"s backend server */
   fetchGuestToken: GuestTokenFetchFn
   /** The dashboard UI config: hideTitle, hideTab, hideChartControls **/
   dashboardUiConfig?: UiConfigType
@@ -77,7 +77,7 @@ export async function embedDashboard({
     }
   }
 
-  log('embedding');
+  log("embedding");
 
   function calculateConfig() {
     let configNumber = 0
@@ -97,10 +97,10 @@ export async function embedDashboard({
 
   async function mountIframe(): Promise<Switchboard> {
     return new Promise(resolve => {
-      const iframe = document.createElement('iframe');
+      const iframe = document.createElement("iframe");
       const dashboardConfig = dashboardUiConfig ? `?uiConfig=${calculateConfig()}` : ""
 
-      // setup the iframe's sandbox configuration
+      // setup the iframe"s sandbox configuration
       iframe.sandbox.add("allow-same-origin"); // needed for postMessage to work
       iframe.sandbox.add("allow-scripts"); // obviously the iframe needs scripts
       iframe.sandbox.add("allow-presentation"); // for fullscreen charts
@@ -110,7 +110,7 @@ export async function embedDashboard({
       // iframe.sandbox.add("allow-forms");
 
       // add the event listener before setting src, to be 100% sure that we capture the load event
-      iframe.addEventListener('load', () => {
+      iframe.addEventListener("load", () => {
         // MessageChannel allows us to send and receive messages smoothly between our window and the iframe
         // See https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API
         const commsChannel = new MessageChannel();
@@ -119,21 +119,21 @@ export async function embedDashboard({
 
         // Send one of the message channel ports to the iframe to initialize embedded comms
         // See https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
-        // we know the content window isn't null because we are in the load event handler.
+        // we know the content window isn"t null because we are in the load event handler.
         iframe.contentWindow!.postMessage(
           { type: IFRAME_COMMS_MESSAGE_TYPE, handshake: "port transfer" },
           supersetDomain,
           [theirPort],
         )
-        log('sent message channel to the iframe');
+        log("sent message channel to the iframe");
 
         // return our port from the promise
-        resolve(new Switchboard({ port: ourPort, name: 'superset-embedded-sdk', debug }));
+        resolve(new Switchboard({ port: ourPort, name: "superset-embedded-sdk", debug }));
       });
 
       iframe.src = `${supersetDomain}/embedded/${id}${dashboardConfig}`;
       mountPoint.replaceChildren(iframe);
-      log('placed the iframe')
+      log("placed the iframe")
     });
   }
 
@@ -142,23 +142,23 @@ export async function embedDashboard({
     mountIframe(),
   ]);
 
-  ourPort.emit('guestToken', { guestToken });
-  log('sent guest token');
+  ourPort.emit("guestToken", { guestToken });
+  log("sent guest token");
 
   async function refreshGuestToken() {
     const newGuestToken = await fetchGuestToken();
-    ourPort.emit('guestToken', { guestToken: newGuestToken });
+    ourPort.emit("guestToken", { guestToken: newGuestToken });
     setTimeout(refreshGuestToken, getGuestTokenRefreshTiming(newGuestToken));
   }
 
   setTimeout(refreshGuestToken, getGuestTokenRefreshTiming(guestToken));
 
   function unmount() {
-    log('unmounting');
+    log("unmounting");
     mountPoint.replaceChildren();
   }
 
-  const getScrollSize = () => ourPort.get<Size>('getScrollSize');
+  const getScrollSize = () => ourPort.get<Size>("getScrollSize");
 
   return {
     getScrollSize,

@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { EChartsCoreOption } from 'echarts';
+import { EChartsCoreOption } from "echarts";
 import {
   AnnotationLayer,
   TimeGranularity,
@@ -26,18 +26,18 @@ import {
   ChartProps,
   ChartDataResponseResult,
   QueryFormColumn,
-} from '@superset-ui/core';
+} from "@superset-ui/core";
 import {
   DEFAULT_LEGEND_FORM_DATA,
   EchartsLegendFormData,
   EchartsTitleFormData,
   DEFAULT_TITLE_FORM_DATA,
-} from '../types';
+} from "../types";
 import {
   DEFAULT_FORM_DATA as TIMESERIES_DEFAULTS,
   EchartsTimeseriesContributionType,
   EchartsTimeseriesSeriesType,
-} from '../Timeseries/types';
+} from "../Timeseries/types";
 
 export type EchartsMixedTimeseriesFormData = QueryFormData & {
   annotationLayers: AnnotationLayer[];

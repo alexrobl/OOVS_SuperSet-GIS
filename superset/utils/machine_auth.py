@@ -83,7 +83,7 @@ class MachineAuthProvider:
         for name, value in response.headers:
             if name.lower() == "set-cookie":
                 # This yields a MultiDict, which is ordered -- something like
-                # MultiDict([('session', 'value-we-want), ('HttpOnly', ''), etc...
+                # MultiDict([("session", "value-we-want), ("HttpOnly", ""), etc...
                 # Therefore, we just need to grab the first tuple and add it to our
                 # final dict
                 cookie = parse_cookie(value)

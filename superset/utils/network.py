@@ -52,9 +52,9 @@ def is_hostname_valid(host: str) -> bool:
 
 def is_host_up(host: str) -> bool:
     """
-    Ping a host to see if it's up.
+    Ping a host to see if it"s up.
 
-    Note that if we don't get a response the host might still be up,
+    Note that if we don"t get a response the host might still be up,
     since many firewalls block ICMP packets.
     """
     param = "-n" if platform.system().lower() == "windows" else "-c"

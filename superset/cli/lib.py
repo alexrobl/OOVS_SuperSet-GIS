@@ -31,7 +31,7 @@ if feature_flags_func:
         feature_flags = feature_flags_func(feature_flags)
     except Exception:  # pylint: disable=broad-except
         # bypass any feature flags that depend on context
-        # that's not available
+        # that"s not available
         pass
 
 

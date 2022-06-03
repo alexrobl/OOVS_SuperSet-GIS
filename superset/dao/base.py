@@ -39,7 +39,7 @@ class BaseDAO:
 
     model_cls: Optional[Type[Model]] = None
     """
-    Child classes need to state the Model class so they don't need to implement basic
+    Child classes need to state the Model class so they don"t need to implement basic
     create, update and delete methods
     """
     base_filter: Optional[BaseFilter] = None

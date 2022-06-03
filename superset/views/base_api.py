@@ -87,13 +87,13 @@ def requires_json(f: Callable[..., Any]) -> Callable[..., Any]:
 
 def requires_form_data(f: Callable[..., Any]) -> Callable[..., Any]:
     """
-    Require 'multipart/form-data' as request MIME type
+    Require "multipart/form-data" as request MIME type
     """
 
     def wraps(self: "BaseSupersetModelRestApi", *args: Any, **kwargs: Any) -> Response:
         if not request.mimetype == "multipart/form-data":
             raise InvalidPayloadFormatError(
-                message="Request MIME type is not 'multipart/form-data'"
+                message="Request MIME type is not "multipart/form-data""
             )
         return f(self, *args, **kwargs)
 
@@ -156,7 +156,7 @@ class BaseFavoriteFilter(BaseFilter):  # pylint: disable=too-few-public-methods
 
 class BaseSupersetModelRestApi(ModelRestApi):
     """
-    Extends FAB's ModelResApi to implement specific superset generic functionality
+    Extends FAB"s ModelResApi to implement specific superset generic functionality
     """
 
     csrf_exempt = False
@@ -346,7 +346,7 @@ class BaseSupersetModelRestApi(ModelRestApi):
 
     def incr_stats(self, action: str, func_name: str) -> None:
         """
-        Proxy function for statsd.incr to impose a key structure for REST API's
+        Proxy function for statsd.incr to impose a key structure for REST API"s
 
         :param action: String with an action name eg: error, success
         :param func_name: The function name
@@ -355,7 +355,7 @@ class BaseSupersetModelRestApi(ModelRestApi):
 
     def timing_stats(self, action: str, func_name: str, value: float) -> None:
         """
-        Proxy function for statsd.incr to impose a key structure for REST API's
+        Proxy function for statsd.incr to impose a key structure for REST API"s
 
         :param action: String with an action name eg: error, success
         :param func_name: The function name
@@ -486,7 +486,7 @@ class BaseSupersetModelRestApi(ModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_related_schema'
+                  $ref: "#/components/schemas/get_related_schema"
           responses:
             200:
               description: Related column data
@@ -496,13 +496,13 @@ class BaseSupersetModelRestApi(ModelRestApi):
                   schema:
                     $ref: "#/components/schemas/RelatedResponseSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         if column_name not in self.allowed_rel_fields:
             self.incr_stats("error", self.related.__name__)
@@ -565,7 +565,7 @@ class BaseSupersetModelRestApi(ModelRestApi):
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/get_related_schema'
+                  $ref: "#/components/schemas/get_related_schema"
           responses:
             200:
               description: Distinct field data
@@ -575,13 +575,13 @@ class BaseSupersetModelRestApi(ModelRestApi):
                   schema:
                     $ref: "#/components/schemas/DistincResponseSchema"
             400:
-              $ref: '#/components/responses/400'
+              $ref: "#/components/responses/400"
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             404:
-              $ref: '#/components/responses/404'
+              $ref: "#/components/responses/404"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         if column_name not in self.allowed_distinct_fields:
             self.incr_stats("error", self.related.__name__)

@@ -22,10 +22,10 @@ import React, {
   useMemo,
   forwardRef,
   useImperativeHandle,
-} from 'react';
-import { styled } from '@superset-ui/core';
-import { ECharts, init } from 'echarts';
-import { EchartsHandler, EchartsProps, EchartsStylesProps } from '../types';
+} from "react";
+import { styled } from "@superset-ui/core";
+import { ECharts, init } from "echarts";
+import { EchartsHandler, EchartsProps, EchartsStylesProps } from "../types";
 
 const Styles = styled.div<EchartsStylesProps>`
   height: ${({ height }) => height};
@@ -78,14 +78,14 @@ function Echart(
   useEffect(() => {
     if (!chartRef.current) return;
     chartRef.current.dispatchAction({
-      type: 'downplay',
+      type: "downplay",
       dataIndex: previousSelection.current.filter(
         value => !currentSelection.includes(value),
       ),
     });
     if (currentSelection.length) {
       chartRef.current.dispatchAction({
-        type: 'highlight',
+        type: "highlight",
         dataIndex: currentSelection,
       });
     }

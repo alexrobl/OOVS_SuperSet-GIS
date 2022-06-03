@@ -39,7 +39,7 @@ assists people when migrating to a new version.
 - [19168](https://github.com/apache/superset/pull/19168): Celery upgrade to 5.X resulted in breaking changes to its command line invocation. Please follow [these](https://docs.celeryq.dev/en/stable/whatsnew-5.2.html#step-1-adjust-your-command-line-invocation) instructions for adjustments. Also consider migrating you Celery config per [here](https://docs.celeryq.dev/en/stable/userguide/configuration.html#conf-old-settings-map).
 - [19142](https://github.com/apache/superset/pull/19142): The `VERSIONED_EXPORT` config key is now `True` by default.
 - [19113](https://github.com/apache/superset/pull/19113): The `ENABLE_JAVASCRIPT_CONTROLS` config key has moved from an app config to a feature flag. Any deployments who overrode this setting will now need to override the feature flag from here onward.
-- [19107](https://github.com/apache/superset/pull/19107): The `SQLLAB_BACKEND_PERSISTENCE` feature flag is now `True` by default, which enables persisting SQL Lab tabs in the backend instead of the browser's `localStorage`.
+- [19107](https://github.com/apache/superset/pull/19107): The `SQLLAB_BACKEND_PERSISTENCE` feature flag is now `True` by default, which enables persisting SQL Lab tabs in the backend instead of the browser"s `localStorage`.
 - [19083](https://github.com/apache/superset/pull/19083): Updates the mutator function in the config file to take a SQL argument and a list of kwargs. Any `SQL_QUERY_MUTATOR` config function overrides will need to be updated to match the new set of params. It is advised regardless of the dictionary args that you list in your function arguments, to keep `**kwargs` as the last argument to allow for any new kwargs to be passed in.
 - [19049](https://github.com/apache/superset/pull/19049): The `APP_ICON_WIDTH` config key has been removed. Superset should now be able to handle different logo sizes without having to explicitly set an `APP_ICON_WIDTH`. This might affect the size of existing custom logos as the UI will now resize them according to the specified space of maximum 148px and not according to the value of `APP_ICON_WIDTH`.
 - [19017](https://github.com/apache/superset/pull/19017): Removes Python 3.7 support.
@@ -74,9 +74,9 @@ assists people when migrating to a new version.
 
 ### Other
 
-- [17589](https://github.com/apache/superset/pull/17589): It is now possible to limit access to users' recent activity data by setting the `ENABLE_BROAD_ACTIVITY_ACCESS` config flag to false, or customizing the `raise_for_user_activity_access` method in the security manager.
-- [17536](https://github.com/apache/superset/pull/17536): introduced a key-value endpoint to store dashboard filter state. This endpoint is backed by Flask-Caching and the default configuration assumes that the values will be stored in the file system. If you are already using another cache backend like Redis or Memcached, you'll probably want to change this setting in `superset_config.py`. The key is `FILTER_STATE_CACHE_CONFIG` and the available settings can be found in Flask-Caching [docs](https://flask-caching.readthedocs.io/en/latest/).
-- [17882](https://github.com/apache/superset/pull/17882): introduced a key-value endpoint to store Explore form data. This endpoint is backed by Flask-Caching and the default configuration assumes that the values will be stored in the file system. If you are already using another cache backend like Redis or Memcached, you'll probably want to change this setting in `superset_config.py`. The key is `EXPLORE_FORM_DATA_CACHE_CONFIG` and the available settings can be found in Flask-Caching [docs](https://flask-caching.readthedocs.io/en/latest/).
+- [17589](https://github.com/apache/superset/pull/17589): It is now possible to limit access to users" recent activity data by setting the `ENABLE_BROAD_ACTIVITY_ACCESS` config flag to false, or customizing the `raise_for_user_activity_access` method in the security manager.
+- [17536](https://github.com/apache/superset/pull/17536): introduced a key-value endpoint to store dashboard filter state. This endpoint is backed by Flask-Caching and the default configuration assumes that the values will be stored in the file system. If you are already using another cache backend like Redis or Memcached, you"ll probably want to change this setting in `superset_config.py`. The key is `FILTER_STATE_CACHE_CONFIG` and the available settings can be found in Flask-Caching [docs](https://flask-caching.readthedocs.io/en/latest/).
+- [17882](https://github.com/apache/superset/pull/17882): introduced a key-value endpoint to store Explore form data. This endpoint is backed by Flask-Caching and the default configuration assumes that the values will be stored in the file system. If you are already using another cache backend like Redis or Memcached, you"ll probably want to change this setting in `superset_config.py`. The key is `EXPLORE_FORM_DATA_CACHE_CONFIG` and the available settings can be found in Flask-Caching [docs](https://flask-caching.readthedocs.io/en/latest/).
 
 ## 1.4.1
 
@@ -94,7 +94,7 @@ assists people when migrating to a new version.
 ### Breaking Changes
 
 - [16660](https://github.com/apache/superset/pull/16660): The `columns` Jinja parameter has been renamed `table_columns` to make the `columns` query object parameter available in the Jinja context.
-- [16711](https://github.com/apache/superset/pull/16711): The `url_param` Jinja function will now by default escape the result. For instance, the value `O'Brien` will now be changed to `O''Brien`. To disable this behavior, call `url_param` with `escape_result` set to `False`: `url_param("my_key", "my default", escape_result=False)`.
+- [16711](https://github.com/apache/superset/pull/16711): The `url_param` Jinja function will now by default escape the result. For instance, the value `O"Brien` will now be changed to `O""Brien`. To disable this behavior, call `url_param` with `escape_result` set to `False`: `url_param("my_key", "my default", escape_result=False)`.
 
 ### Potential Downtime
 
@@ -144,7 +144,7 @@ assists people when migrating to a new version.
 ### Potential Downtime
 
 - [13111](https://github.com/apache/superset/pull/13111) has a database migration that replaces `directed_force` charts with newer `graph_chart` charts based on Apache ECharts.
-- [13216](https://github.com/apache/superset/pull/13216) adds a UUID column to models that are missing it. The original migration script that added the column would incorrectly complete when the column couldn't be added, resulting in a broken schema. The script is optimized for MySQL and Postgres, so depending on the database and the number of objects this migration might take considerable time.
+- [13216](https://github.com/apache/superset/pull/13216) adds a UUID column to models that are missing it. The original migration script that added the column would incorrectly complete when the column couldn"t be added, resulting in a broken schema. The script is optimized for MySQL and Postgres, so depending on the database and the number of objects this migration might take considerable time.
 - [12960](https://github.com/apache/superset/pull/12960) populates the granularity parameter in existing charts. Depending on the number of charts without a `granularity` or `granularity_sqla param` this might take considerable time.
 - [13052](https://github.com/apache/superset/pull/13052) updates the label in existing pie charts, setting `label_type` from `pie_label_type`. Depending on the number of pie charts this might take considerable time.
 - [12680](https://github.com/apache/superset/pull/12680) creates a new table, `dashboard_roles`, for role based dashboard level access.
@@ -152,12 +152,12 @@ assists people when migrating to a new version.
 
 ### Deprecations
 
-- [12552](https://github.com/apache/superset/pull/12552) removes the use of unclear time offsets, eg, "30 days". An error message is displayed if the user doesn't specify "ago" or "later", instructing the user of the correct format.
+- [12552](https://github.com/apache/superset/pull/12552) removes the use of unclear time offsets, eg, "30 days". An error message is displayed if the user doesn"t specify "ago" or "later", instructing the user of the correct format.
 - [12627](https://github.com/apache/superset/pull/12627) deprecates the legacy alerts module.
 
 ### Other
 
-- [shillelagh](https://github.com/betodealmeida/shillelagh/) is now the recommended module to connect Superset to Google Spreadsheets since it's more robust and has extensive test coverage. You should uninstall the `gsheetsdb` module and install the `shillelagh` module in its place. Shillelagh is a drop-in replacement, so no modifications are needed to be done on existing queries, datasets, or charts.
+- [shillelagh](https://github.com/betodealmeida/shillelagh/) is now the recommended module to connect Superset to Google Spreadsheets since it"s more robust and has extensive test coverage. You should uninstall the `gsheetsdb` module and install the `shillelagh` module in its place. Shillelagh is a drop-in replacement, so no modifications are needed to be done on existing queries, datasets, or charts.
 
 ## 1.0.0
 
@@ -222,7 +222,7 @@ assists people when migrating to a new version.
 
 - [10562](https://github.com/apache/superset/pull/10562): EMAIL_REPORTS_WEBDRIVER is deprecated use WEBDRIVER_TYPE instead.
 
-- [10567](https://github.com/apache/superset/pull/10567): Default WEBDRIVER_OPTION_ARGS are Chrome-specific. If you're using FF, should be `--headless` only
+- [10567](https://github.com/apache/superset/pull/10567): Default WEBDRIVER_OPTION_ARGS are Chrome-specific. If you"re using FF, should be `--headless` only
 
 - [10241](https://github.com/apache/superset/pull/10241): change on Alpha role, users started to have access to "Annotation Layers", "Css Templates" and "Import Dashboards".
 
@@ -236,7 +236,7 @@ assists people when migrating to a new version.
 
 ## 0.37.0
 
-- [9964](https://github.com/apache/superset/pull/9964): Breaking change on Flask-AppBuilder 3. If you're using OAuth, find out what needs to be changed [here](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/README.rst#change-log).
+- [9964](https://github.com/apache/superset/pull/9964): Breaking change on Flask-AppBuilder 3. If you"re using OAuth, find out what needs to be changed [here](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/README.rst#change-log).
 
 - [10233](https://github.com/apache/superset/pull/10233): a change which deprecates the `ENABLE_FLASK_COMPRESS` config option in favor of the Flask-Compress `COMPRESS_REGISTER` config option which serves the same purpose.
 
@@ -288,8 +288,8 @@ assists people when migrating to a new version.
   to create and associate it by default to the `Admin` role. Note that, by default, all non `Admin` users will
   not be able to access queries they do not own.
 
-- [8901](https://github.com/apache/superset/pull/8901): The datasource's update
-  timestamp has been added to the query object's cache key to ensure updates to
+- [8901](https://github.com/apache/superset/pull/8901): The datasource"s update
+  timestamp has been added to the query object"s cache key to ensure updates to
   datasources are always reflected in associated query results. As a consequence all
   previously cached results will be invalidated when updating to the next version.
 
@@ -332,7 +332,7 @@ assists people when migrating to a new version.
   `OVERRIDE_HTTP_HEADERS` instead of `HTTP_HEADERS`. `HTTP_HEADERS` will still
   work but may be removed in a future update.
 
-- We're deprecating the concept of "restricted metric", this feature
+- We"re deprecating the concept of "restricted metric", this feature
   was not fully working anyhow.
 - [8117](https://github.com/apache/superset/pull/8117): If you are
   using `ENABLE_PROXY_FIX = True`, review the newly-introduced variable,
@@ -402,12 +402,12 @@ assists people when migrating to a new version.
 
 ## Superset 0.31.0
 
-- If you use `Hive` or `Presto`, we've moved some dependencies that were
+- If you use `Hive` or `Presto`, we"ve moved some dependencies that were
   in the main package as optional now. To get these packages,
   run `pip install superset[presto]` and/or `pip install superset[hive]` as
   required.
 
-- Similarly, if you use Celery's `flower`, `gsheetsdb`, `thrift` or
+- Similarly, if you use Celery"s `flower`, `gsheetsdb`, `thrift` or
   `thrift-sasl`, those dependencies have now been made optional in our
   package, meaning you may have to install them in your environment post
   0.31.0
@@ -425,7 +425,7 @@ assists people when migrating to a new version.
 
 - 0.30.0 includes a db_migration that removes allow_run_sync. This may
   require downtime because during the migration if the db is migrated first,
-  superset will get 500 errors when the code can't find the field (until
+  superset will get 500 errors when the code can"t find the field (until
   the deploy finishes).
 
 ## Superset 0.29.0
@@ -459,7 +459,7 @@ assists people when migrating to a new version.
 - Superset 0.27 start to use nested layout for dashboard builder, which is not
   backward-compatible with earlier dashboard grid data. We provide migration script
   to automatically convert dashboard grid to nested layout data. To be safe, please
-  take a database backup prior to this upgrade. It's the only way people could go
+  take a database backup prior to this upgrade. It"s the only way people could go
   back to a previous state.
 
 ## Superset 0.26.0
@@ -483,12 +483,12 @@ The PRs below have more information around the breaking changes:
   incompatible database migration that requires downtime. Once the
   db migration succeeds, the web server needs to be restarted with the
   new version. The previous version will fail
-- [4565](https://github.com/apache/superset/pull/4565) : we've
+- [4565](https://github.com/apache/superset/pull/4565) : we"ve
   changed the security model a bit where in the past you would have to
   define your authentication scheme by inheriting from Flask
-  App Builder's
+  App Builder"s
   `from flask_appbuilder.security.sqla.manager import SecurityManager`,
-  you now have to derive Superset's
+  you now have to derive Superset"s
   own derivative `superset.security.SupersetSecurityManager`. This
   can provide you with more hooks to define your own logic and/or defer
   permissions to another system as needed. For all implementation, you

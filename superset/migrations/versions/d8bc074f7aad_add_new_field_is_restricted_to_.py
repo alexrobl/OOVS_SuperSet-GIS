@@ -14,7 +14,7 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
-"""Add new field 'is_restricted' to SqlMetric and DruidMetric
+"""Add new field "is_restricted" to SqlMetric and DruidMetric
 
 Revision ID: d8bc074f7aad
 Revises: 1226819ee0e3
@@ -61,7 +61,7 @@ def upgrade():
     bind = op.get_bind()
     session = db.Session(bind=bind)
 
-    # don't use models.DruidMetric
+    # don"t use models.DruidMetric
     # because it assumes the context is consistent with the application
     for obj in session.query(DruidMetric).all():
         obj.is_restricted = False

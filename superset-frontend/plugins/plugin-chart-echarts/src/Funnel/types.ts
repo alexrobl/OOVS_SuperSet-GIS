@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { EChartsCoreOption } from 'echarts';
+import { EChartsCoreOption } from "echarts";
 import {
   ChartDataResponseResult,
   ChartProps,
@@ -24,13 +24,13 @@ import {
   QueryFormColumn,
   QueryFormData,
   SetDataMaskHook,
-} from '@superset-ui/core';
+} from "@superset-ui/core";
 import {
   DEFAULT_LEGEND_FORM_DATA,
   EchartsLegendFormData,
   LegendOrientation,
   LegendType,
-} from '../types';
+} from "../types";
 
 export type EchartsFunnelFormData = QueryFormData &
   EchartsLegendFormData & {
@@ -42,8 +42,8 @@ export type EchartsFunnelFormData = QueryFormData &
     showLabels: boolean;
     numberFormat: string;
     gap: number;
-    sort: 'descending' | 'ascending' | 'none' | undefined;
-    orient: 'vertical' | 'horizontal' | undefined;
+    sort: "descending" | "ascending" | "none" | undefined;
+    orient: "vertical" | "horizontal" | undefined;
     emitFilter: boolean;
   };
 
@@ -70,10 +70,10 @@ export const DEFAULT_FORM_DATA: EchartsFunnelFormData = {
   labelType: EchartsFunnelLabelTypeType.Key,
   legendOrientation: LegendOrientation.Top,
   legendType: LegendType.Scroll,
-  numberFormat: 'SMART_NUMBER',
+  numberFormat: "SMART_NUMBER",
   showLabels: true,
-  sort: 'descending',
-  orient: 'vertical',
+  sort: "descending",
+  orient: "vertical",
   gap: 0,
   emitFilter: false,
 };

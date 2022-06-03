@@ -39,30 +39,30 @@ class SqliteEngineSpec(BaseEngineSpec):
 
     _time_grain_expressions = {
         None: "{col}",
-        "PT1S": "DATETIME(STRFTIME('%Y-%m-%dT%H:%M:%S', {col}))",
-        "PT1M": "DATETIME(STRFTIME('%Y-%m-%dT%H:%M:00', {col}))",
-        "PT1H": "DATETIME(STRFTIME('%Y-%m-%dT%H:00:00', {col}))",
-        "P1D": "DATETIME({col}, 'start of day')",
-        "P1W": "DATETIME({col}, 'start of day', -strftime('%w', {col}) || ' days')",
-        "P1M": "DATETIME({col}, 'start of month')",
+        "PT1S": "DATETIME(STRFTIME("%Y-%m-%dT%H:%M:%S", {col}))",
+        "PT1M": "DATETIME(STRFTIME("%Y-%m-%dT%H:%M:00", {col}))",
+        "PT1H": "DATETIME(STRFTIME("%Y-%m-%dT%H:00:00", {col}))",
+        "P1D": "DATETIME({col}, "start of day")",
+        "P1W": "DATETIME({col}, "start of day", -strftime("%w", {col}) || " days")",
+        "P1M": "DATETIME({col}, "start of month")",
         "P3M": (
-            "DATETIME({col}, 'start of month', "
-            "printf('-%d month', (strftime('%m', {col}) - 1) % 3))"
+            "DATETIME({col}, "start of month", "
+            "printf("-%d month", (strftime("%m", {col}) - 1) % 3))"
         ),
-        "P1Y": "DATETIME({col}, 'start of year')",
-        "P1W/1970-01-03T00:00:00Z": "DATETIME({col}, 'start of day', 'weekday 6')",
-        "P1W/1970-01-04T00:00:00Z": "DATETIME({col}, 'start of day', 'weekday 0')",
+        "P1Y": "DATETIME({col}, "start of year")",
+        "P1W/1970-01-03T00:00:00Z": "DATETIME({col}, "start of day", "weekday 6")",
+        "P1W/1970-01-04T00:00:00Z": "DATETIME({col}, "start of day", "weekday 0")",
         "1969-12-28T00:00:00Z/P1W": (
-            "DATETIME({col}, 'start of day', 'weekday 0', '-7 days')"
+            "DATETIME({col}, "start of day", "weekday 0", "-7 days")"
         ),
         "1969-12-29T00:00:00Z/P1W": (
-            "DATETIME({col}, 'start of day', 'weekday 1', '-7 days')"
+            "DATETIME({col}, "start of day", "weekday 1", "-7 days")"
         ),
     }
 
     custom_errors: Dict[Pattern[str], Tuple[str, SupersetErrorType, Dict[str, Any]]] = {
         COLUMN_DOES_NOT_EXIST_REGEX: (
-            __('We can\'t seem to resolve the column "%(column_name)s"'),
+            __("We can\"t seem to resolve the column "%(column_name)s""),
             SupersetErrorType.COLUMN_DOES_NOT_EXIST_ERROR,
             {},
         ),
@@ -70,7 +70,7 @@ class SqliteEngineSpec(BaseEngineSpec):
 
     @classmethod
     def epoch_to_dttm(cls) -> str:
-        return "datetime({col}, 'unixepoch')"
+        return "datetime({col}, "unixepoch")"
 
     @classmethod
     def get_all_datasource_names(
@@ -110,7 +110,7 @@ class SqliteEngineSpec(BaseEngineSpec):
     ) -> Optional[str]:
         tt = target_type.upper()
         if tt in (utils.TemporalType.TEXT, utils.TemporalType.DATETIME):
-            return f"""'{dttm.isoformat(sep=" ", timespec="microseconds")}'"""
+            return f""""{dttm.isoformat(sep=" ", timespec="microseconds")}""""
         return None
 
     @classmethod

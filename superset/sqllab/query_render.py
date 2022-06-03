@@ -121,7 +121,7 @@ class SqlQueryRenderImpl(SqlQueryRender):
             suggestion_help_msg=__(
                 "Please check your query and confirm that all template "
                 "parameters are surround by double braces, for example, "
-                '"{{ ds }}". Then, try running your query again.'
+                ""{{ ds }}". Then, try running your query again."
             ),
         ) from ex
 

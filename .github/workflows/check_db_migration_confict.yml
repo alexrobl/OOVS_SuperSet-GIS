@@ -17,15 +17,15 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             // API reference: https://octokit.github.io/rest.js
-            const currentBranch = context.ref.replace('refs/heads/', '');
+            const currentBranch = context.ref.replace("refs/heads/", "");
 
             // Find all pull requests to current branch
             const opts = github.pulls.list.endpoint.merge({
               owner: context.repo.owner,
               repo: context.repo.repo,
               base: context.ref,
-              state: 'open',
-              sort: 'updated',
+              state: "open",
+              sort: "updated",
               per_page: 100,
             });
             const pulls = await github.paginate(opts);
@@ -41,7 +41,7 @@ jobs:
               });
               const files = await github.paginate(listFilesOpts);
               if (
-                files.some(x => x.contents_url.includes('/contents/superset/migrations'))
+                files.some(x => x.contents_url.includes("/contents/superset/migrations"))
               ) {
                 console.log(`PR #${pull.number} "${pull.title}" also added db migration`)
                 await github.issues.createComment({
@@ -52,9 +52,9 @@ jobs:
                   body:
                     `# 🙅‍♂️ 🙅‍♂️ 🙅‍♂️ 🙅‍♂️ 🙅‍♂️ 🙅‍♂️ 🙅‍♂️ 🙅‍♂️ 🙅‍♂️ 🙅‍♂️ 🙅‍♂️ 🙅‍♂️ 🙅‍♂️ 🙅‍♂️ 🙅‍♂️ 🙅‍♂️` +
                     `❗ @${pull.user.login} Your base branch \`${currentBranch}\` has ` +
-                    'also updated `superset/migrations`.\n' +
-                    '\n' +
-                    '**Please consider rebasing your branch and [resolving potential db migration conflicts](https://github.com/apache/superset/blob/master/CONTRIBUTING.md#merging-db-migrations).**',
+                    "also updated `superset/migrations`.\n" +
+                    "\n" +
+                    "**Please consider rebasing your branch and [resolving potential db migration conflicts](https://github.com/apache/superset/blob/master/CONTRIBUTING.md#merging-db-migrations).**",
                 });
               }
             }

@@ -25,7 +25,7 @@ from superset.errors import SupersetErrorType
 from superset.utils import core as utils
 
 SYNTAX_ERROR_REGEX = re.compile(
-    ": mismatched input '(?P<syntax_error>.*?)'. Expecting: "
+    ": mismatched input "(?P<syntax_error>.*?)". Expecting: "
 )
 
 
@@ -36,25 +36,25 @@ class AthenaEngineSpec(BaseEngineSpec):
 
     _time_grain_expressions = {
         None: "{col}",
-        "PT1S": "date_trunc('second', CAST({col} AS TIMESTAMP))",
-        "PT1M": "date_trunc('minute', CAST({col} AS TIMESTAMP))",
-        "PT1H": "date_trunc('hour', CAST({col} AS TIMESTAMP))",
-        "P1D": "date_trunc('day', CAST({col} AS TIMESTAMP))",
-        "P1W": "date_trunc('week', CAST({col} AS TIMESTAMP))",
-        "P1M": "date_trunc('month', CAST({col} AS TIMESTAMP))",
-        "P3M": "date_trunc('quarter', CAST({col} AS TIMESTAMP))",
-        "P1Y": "date_trunc('year', CAST({col} AS TIMESTAMP))",
-        "P1W/1970-01-03T00:00:00Z": "date_add('day', 5, date_trunc('week', \
-                                    date_add('day', 1, CAST({col} AS TIMESTAMP))))",
-        "1969-12-28T00:00:00Z/P1W": "date_add('day', -1, date_trunc('week', \
-                                    date_add('day', 1, CAST({col} AS TIMESTAMP))))",
+        "PT1S": "date_trunc("second", CAST({col} AS TIMESTAMP))",
+        "PT1M": "date_trunc("minute", CAST({col} AS TIMESTAMP))",
+        "PT1H": "date_trunc("hour", CAST({col} AS TIMESTAMP))",
+        "P1D": "date_trunc("day", CAST({col} AS TIMESTAMP))",
+        "P1W": "date_trunc("week", CAST({col} AS TIMESTAMP))",
+        "P1M": "date_trunc("month", CAST({col} AS TIMESTAMP))",
+        "P3M": "date_trunc("quarter", CAST({col} AS TIMESTAMP))",
+        "P1Y": "date_trunc("year", CAST({col} AS TIMESTAMP))",
+        "P1W/1970-01-03T00:00:00Z": "date_add("day", 5, date_trunc("week", \
+                                    date_add("day", 1, CAST({col} AS TIMESTAMP))))",
+        "1969-12-28T00:00:00Z/P1W": "date_add("day", -1, date_trunc("week", \
+                                    date_add("day", 1, CAST({col} AS TIMESTAMP))))",
     }
 
     custom_errors: Dict[Pattern[str], Tuple[str, SupersetErrorType, Dict[str, Any]]] = {
         SYNTAX_ERROR_REGEX: (
             __(
                 "Please check your query for syntax errors at or "
-                'near "%(syntax_error)s". Then, try running your query again.'
+                "near "%(syntax_error)s". Then, try running your query again."
             ),
             SupersetErrorType.SYNTAX_ERROR,
             {},
@@ -67,10 +67,10 @@ class AthenaEngineSpec(BaseEngineSpec):
     ) -> Optional[str]:
         tt = target_type.upper()
         if tt == utils.TemporalType.DATE:
-            return f"DATE '{dttm.date().isoformat()}'"
+            return f"DATE "{dttm.date().isoformat()}""
         if tt == utils.TemporalType.TIMESTAMP:
             datetime_formatted = dttm.isoformat(sep=" ", timespec="milliseconds")
-            return f"""TIMESTAMP '{datetime_formatted}'"""
+            return f"""TIMESTAMP "{datetime_formatted}""""
         return None
 
     @classmethod

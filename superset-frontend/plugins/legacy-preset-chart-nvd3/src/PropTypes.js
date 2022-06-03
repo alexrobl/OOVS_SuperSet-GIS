@@ -17,12 +17,12 @@
  * under the License.
  */
 /* eslint-disable react/sort-prop-types */
-import PropTypes from 'prop-types';
-import { ANNOTATION_TYPES } from './vendor/superset/AnnotationTypes';
+import PropTypes from "prop-types";
+import { ANNOTATION_TYPES } from "./vendor/superset/AnnotationTypes";
 
 export const numberOrAutoType = PropTypes.oneOfType([
   PropTypes.number,
-  PropTypes.oneOf(['auto']),
+  PropTypes.oneOf(["auto"]),
 ]);
 
 export const stringOrObjectWithLabelType = PropTypes.oneOfType([

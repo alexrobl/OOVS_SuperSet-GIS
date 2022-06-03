@@ -16,21 +16,21 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { ChartProps, SqlaFormData, supersetTheme } from '@superset-ui/core';
-import { EchartsBoxPlotChartProps } from '../../src/BoxPlot/types';
-import transformProps from '../../src/BoxPlot/transformProps';
+import { ChartProps, SqlaFormData, supersetTheme } from "@superset-ui/core";
+import { EchartsBoxPlotChartProps } from "../../src/BoxPlot/types";
+import transformProps from "../../src/BoxPlot/transformProps";
 
-describe('BoxPlot transformProps', () => {
+describe("BoxPlot transformProps", () => {
   const formData: SqlaFormData = {
-    datasource: '5__table',
-    granularity_sqla: 'ds',
-    time_grain_sqla: 'P1Y',
+    datasource: "5__table",
+    granularity_sqla: "ds",
+    time_grain_sqla: "P1Y",
     columns: [],
-    metrics: ['AVG(averageprice)'],
-    groupby: ['type', 'region'],
-    whiskerOptions: 'Tukey',
-    yAxisFormat: 'SMART_NUMBER',
-    viz_type: 'my_chart',
+    metrics: ["AVG(averageprice)"],
+    groupby: ["type", "region"],
+    whiskerOptions: "Tukey",
+    yAxisFormat: "SMART_NUMBER",
+    viz_type: "my_chart",
   };
   const chartProps = new ChartProps({
     formData,
@@ -40,28 +40,28 @@ describe('BoxPlot transformProps', () => {
       {
         data: [
           {
-            type: 'organic',
-            region: 'Charlotte',
-            'AVG(averageprice)__mean': 1.9405512820512825,
-            'AVG(averageprice)__median': 1.9025,
-            'AVG(averageprice)__max': 2.505,
-            'AVG(averageprice)__min': 1.4775,
-            'AVG(averageprice)__q1': 1.73875,
-            'AVG(averageprice)__q3': 2.105,
-            'AVG(averageprice)__count': 39,
-            'AVG(averageprice)__outliers': [2.735],
+            type: "organic",
+            region: "Charlotte",
+            "AVG(averageprice)__mean": 1.9405512820512825,
+            "AVG(averageprice)__median": 1.9025,
+            "AVG(averageprice)__max": 2.505,
+            "AVG(averageprice)__min": 1.4775,
+            "AVG(averageprice)__q1": 1.73875,
+            "AVG(averageprice)__q3": 2.105,
+            "AVG(averageprice)__count": 39,
+            "AVG(averageprice)__outliers": [2.735],
           },
           {
-            type: 'organic',
-            region: 'Hartford Springfield',
-            'AVG(averageprice)__mean': 2.231141025641026,
-            'AVG(averageprice)__median': 2.265,
-            'AVG(averageprice)__max': 2.595,
-            'AVG(averageprice)__min': 1.862,
-            'AVG(averageprice)__q1': 2.1285,
-            'AVG(averageprice)__q3': 2.32625,
-            'AVG(averageprice)__count': 39,
-            'AVG(averageprice)__outliers': [],
+            type: "organic",
+            region: "Hartford Springfield",
+            "AVG(averageprice)__mean": 2.231141025641026,
+            "AVG(averageprice)__median": 2.265,
+            "AVG(averageprice)__max": 2.595,
+            "AVG(averageprice)__min": 1.862,
+            "AVG(averageprice)__q1": 2.1285,
+            "AVG(averageprice)__q3": 2.32625,
+            "AVG(averageprice)__count": 39,
+            "AVG(averageprice)__outliers": [],
           },
         ],
       },
@@ -69,7 +69,7 @@ describe('BoxPlot transformProps', () => {
     theme: supersetTheme,
   });
 
-  it('should transform chart props for viz', () => {
+  it("should transform chart props for viz", () => {
     expect(transformProps(chartProps as EchartsBoxPlotChartProps)).toEqual(
       expect.objectContaining({
         width: 800,
@@ -77,10 +77,10 @@ describe('BoxPlot transformProps', () => {
         echartOptions: expect.objectContaining({
           series: expect.arrayContaining([
             expect.objectContaining({
-              name: 'boxplot',
+              name: "boxplot",
               data: expect.arrayContaining([
                 expect.objectContaining({
-                  name: 'organic, Charlotte',
+                  name: "organic, Charlotte",
                   value: [
                     1.4775,
                     1.73875,
@@ -93,7 +93,7 @@ describe('BoxPlot transformProps', () => {
                   ],
                 }),
                 expect.objectContaining({
-                  name: 'organic, Hartford Springfield',
+                  name: "organic, Hartford Springfield",
                   value: [
                     1.862,
                     2.1285,
@@ -108,8 +108,8 @@ describe('BoxPlot transformProps', () => {
               ]),
             }),
             expect.objectContaining({
-              name: 'outlier',
-              data: [['organic, Charlotte', 2.735]],
+              name: "outlier",
+              data: [["organic, Charlotte", 2.735]],
             }),
           ]),
         }),

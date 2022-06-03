@@ -72,7 +72,7 @@ def upgrade():
     - If the dataset has the main dttm column set, use it.
     - Otherwise, find all the dttm columns in the dataset and use the first one (this
       matches the behavior of Explore view on the frontend)
-    - If no dttm columns exist in the dataset, don't change the chart.
+    - If no dttm columns exist in the dataset, don"t change the chart.
     """
     bind = op.get_bind()
     session = db.Session(bind=bind)
@@ -83,7 +83,7 @@ def upgrade():
         session.query(Slice)
         .filter(
             and_(
-                Slice.datasource_type == "table", Slice.params.notlike('%"granularity%')
+                Slice.datasource_type == "table", Slice.params.notlike("%"granularity%")
             )
         )
         .all()
@@ -129,6 +129,6 @@ def upgrade():
 
 def downgrade():
     """
-    It's impossible to downgrade this migration.
+    It"s impossible to downgrade this migration.
     """
     pass

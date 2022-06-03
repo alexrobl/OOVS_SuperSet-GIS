@@ -17,7 +17,7 @@
 """empty message
 
 Revision ID: 45e7da7cfeba
-Revises: ('e553e78e90c5', 'c82ee8a39623')
+Revises: ("e553e78e90c5", "c82ee8a39623")
 Create Date: 2019-02-16 17:44:44.493427
 
 """

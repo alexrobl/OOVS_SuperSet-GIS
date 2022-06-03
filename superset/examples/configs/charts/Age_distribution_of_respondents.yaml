@@ -25,7 +25,7 @@ params:
   granularity_sqla: time_start
   groupby: null
   label_colors: {}
-  link_length: '25'
+  link_length: "25"
   queryFields:
     groupby: groupby
   row_limit: 10000

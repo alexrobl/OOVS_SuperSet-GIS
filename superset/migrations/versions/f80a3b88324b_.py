@@ -17,7 +17,7 @@
 """empty message
 
 Revision ID: f80a3b88324b
-Revises: ('978245563a02', 'f120347acb39')
+Revises: ("978245563a02", "f120347acb39")
 Create Date: 2020-08-12 15:47:56.580191
 
 """

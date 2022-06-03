@@ -19,7 +19,7 @@ viz_type: treemap
 params:
   adhoc_filters:
   - clause: WHERE
-    comparator: '0'
+    comparator: "0"
     expressionType: SIMPLE
     filterOptionName: filter_s1jzmdwgeg_p3er4w56uy
     isExtra: false
@@ -28,12 +28,12 @@ params:
     sqlExpression: null
     subject: is_software_dev
   - clause: WHERE
-    comparator: 'NULL'
+    comparator: "NULL"
     expressionType: SIMPLE
     filterOptionName: filter_rdlajraxs0f_lgyfv4rvdh
     isExtra: false
     isNew: false
-    operator: '!='
+    operator: "!="
     sqlExpression: null
     subject: job_pref
   color_scheme: supersetColors

@@ -16,7 +16,7 @@
 # under the License.
 """Sync DB with the models.py.
 
-Sqlite doesn't support alter on tables, that's why most of the operations
+Sqlite doesn"t support alter on tables, that"s why most of the operations
 are surrounded with try except.
 
 Revision ID: 3b626e2a6783

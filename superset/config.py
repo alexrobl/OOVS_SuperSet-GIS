@@ -127,7 +127,7 @@ ALEMBIC_SKIP_LOG_CONFIG = False
 
 # Depending on the context in which this config is loaded, the
 # version_info.json file may or may not be available, as it is
-# generated on install via setup.py. In the event that we're
+# generated on install via setup.py. In the event that we"re
 # actually running Superset, we will have already installed,
 # therefore it WILL exist. When unit tests are running, however,
 # it WILL NOT exist, so we fall back to reading package.json
@@ -182,26 +182,26 @@ SECRET_KEY = CHANGE_ME_SECRET_KEY
 
 # The SQLAlchemy connection string.
 SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(DATA_DIR, "superset.db")
-# SQLALCHEMY_DATABASE_URI = 'mysql://myapp@localhost/myapp'
-# SQLALCHEMY_DATABASE_URI = 'postgresql://root:password@localhost/myapp'
+# SQLALCHEMY_DATABASE_URI = "mysql://myapp@localhost/myapp"
+# SQLALCHEMY_DATABASE_URI = "postgresql://root:password@localhost/myapp"
 
 # In order to hook up a custom password store for all SQLACHEMY connections
-# implement a function that takes a single argument of type 'sqla.engine.url',
+# implement a function that takes a single argument of type "sqla.engine.url",
 # returns a password and set SQLALCHEMY_CUSTOM_PASSWORD_STORE.
 #
 # e.g.:
 # def lookup_password(url):
-#     return 'secret'
+#     return "secret"
 # SQLALCHEMY_CUSTOM_PASSWORD_STORE = lookup_password
 SQLALCHEMY_CUSTOM_PASSWORD_STORE = None
 
 #
-# The EncryptedFieldTypeAdapter is used whenever we're building SqlAlchemy models
+# The EncryptedFieldTypeAdapter is used whenever we"re building SqlAlchemy models
 # which include sensitive fields that should be app-encrypted BEFORE sending
 # to the DB.
 #
-# Note: the default impl leverages SqlAlchemyUtils' EncryptedType, which defaults
-#  to AES-128 under the covers using the app's SECRET_KEY as key material.
+# Note: the default impl leverages SqlAlchemyUtils" EncryptedType, which defaults
+#  to AES-128 under the covers using the app"s SECRET_KEY as key material.
 #
 SQLALCHEMY_ENCRYPTED_FIELD_TYPE_ADAPTER = (  # pylint: disable=invalid-name
     SQLAlchemyUtilsAdapter
@@ -229,7 +229,7 @@ PROFILING = False
 
 # Superset allows server-side python stacktraces to be surfaced to the
 # user when this feature is on. This may has security implications
-# and it's more secure to turn it off in production settings.
+# and it"s more secure to turn it off in production settings.
 SHOW_STACKTRACE = True
 
 # Use all X-Forwarded headers when ENABLE_PROXY_FIX is True.
@@ -247,7 +247,7 @@ APP_NAME = "Superset"
 APP_ICON = "/static/assets/images/superset-logo-horiz.png"
 
 # Specify where clicking the logo would take the user
-# e.g. setting it to '/' would take the user to '/superset/welcome/'
+# e.g. setting it to "/" would take the user to "/superset/welcome/"
 LOGO_TARGET_PATH = None
 
 # Specify tooltip that should appear when hovering over the App Icon/Logo
@@ -263,7 +263,7 @@ FAB_API_SWAGGER_UI = True
 # Druid query timezone
 # tz.tzutc() : Using utc timezone
 # tz.tzlocal() : Using local timezone
-# tz.gettz('Asia/Shanghai') : Using the time zone with specific name
+# tz.gettz("Asia/Shanghai") : Using the time zone with specific name
 # [TimeZone List]
 # See: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 # other tz can be overridden by providing a local_config
@@ -282,10 +282,10 @@ DRUID_ANALYSIS_TYPES = ["cardinality"]
 AUTH_TYPE = AUTH_DB
 
 # Uncomment to setup Full admin role name
-# AUTH_ROLE_ADMIN = 'Admin'
+# AUTH_ROLE_ADMIN = "Admin"
 
 # Uncomment to setup Public role name, no authentication needed
-# AUTH_ROLE_PUBLIC = 'Public'
+# AUTH_ROLE_PUBLIC = "Public"
 
 # Will allow user self registration
 # AUTH_USER_REGISTRATION = True
@@ -298,8 +298,8 @@ AUTH_TYPE = AUTH_DB
 
 # Uncomment to setup OpenID providers example for OpenID authentication
 # OPENID_PROVIDERS = [
-#    { 'name': 'Yahoo', 'url': 'https://open.login.yahoo.com/' },
-#    { 'name': 'Flickr', 'url': 'https://www.flickr.com/<username>' },
+#    { "name": "Yahoo", "url": "https://open.login.yahoo.com/" },
+#    { "name": "Flickr", "url": "https://www.flickr.com/<username>" },
 
 # ---------------------------------------------------
 # Roles config
@@ -342,9 +342,9 @@ LANGUAGES = {}
 # ---------------------------------------------------
 # Feature flags that are set by default go here. Their values can be
 # overwritten by those specified under FEATURE_FLAGS in superset_config.py
-# For example, DEFAULT_FEATURE_FLAGS = { 'FOO': True, 'BAR': False } here
-# and FEATURE_FLAGS = { 'BAR': True, 'BAZ': True } in superset_config.py
-# will result in combined feature flags of { 'FOO': True, 'BAR': True, 'BAZ': True }
+# For example, DEFAULT_FEATURE_FLAGS = { "FOO": True, "BAR": False } here
+# and FEATURE_FLAGS = { "BAR": True, "BAZ": True } in superset_config.py
+# will result in combined feature flags of { "FOO": True, "BAR": True, "BAZ": True }
 DEFAULT_FEATURE_FLAGS: Dict[str, bool] = {
     # allow dashboard to use sub-domains to send chart request
     # you also need ENABLE_CORS and
@@ -363,7 +363,7 @@ DEFAULT_FEATURE_FLAGS: Dict[str, bool] = {
     # For some security concerns, you may need to enforce CSRF protection on
     # all query request to explore_json endpoint. In Superset, we use
     # `flask-csrf <https://sjl.bitbucket.io/flask-csrf/>`_ add csrf protection
-    # for all POST requests, but this protection doesn't apply to GET method.
+    # for all POST requests, but this protection doesn"t apply to GET method.
     # When ENABLE_EXPLORE_JSON_CSRF_PROTECTION is set to true, your users cannot
     # make GET request to explore_json. explore_json accepts both GET and POST request.
     # See `PR 7935 <https://github.com/apache/superset/pull/7935>`_ for more details.
@@ -378,7 +378,7 @@ DEFAULT_FEATURE_FLAGS: Dict[str, bool] = {
     "KV_STORE": False,
     # When this feature is enabled, nested types in Presto will be
     # expanded into extra columns and/or arrays. This is experimental,
-    # and doesn't work with all nested types.
+    # and doesn"t work with all nested types.
     "PRESTO_EXPAND_DATA": False,
     # Exposes API endpoint to compute thumbnails
     "THUMBNAILS": False,
@@ -410,8 +410,8 @@ DEFAULT_FEATURE_FLAGS: Dict[str, bool] = {
     # Enabling ALERTS_ATTACH_REPORTS, the system sends email and slack message
     # with screenshot and link
     # Disables ALERTS_ATTACH_REPORTS, the system DOES NOT generate screenshot
-    # for report with type 'alert' and sends email and slack message with only link;
-    # for report with type 'report' still send with email and slack message with
+    # for report with type "alert" and sends email and slack message with only link;
+    # for report with type "report" still send with email and slack message with
     # screenshot and link
     "ALERTS_ATTACH_REPORTS": True,
     # FORCE_DATABASE_CONNECTIONS_SSL is depreciated.
@@ -430,7 +430,7 @@ DEFAULT_FEATURE_FLAGS: Dict[str, bool] = {
     "RLS_IN_SQLLAB": False,
 }
 
-# Feature flags may also be set via 'SUPERSET_FEATURE_' prefixed environment vars.
+# Feature flags may also be set via "SUPERSET_FEATURE_" prefixed environment vars.
 DEFAULT_FEATURE_FLAGS.update(
     {
         k[len("SUPERSET_FEATURE_") :]: parse_boolean_string(v)
@@ -454,15 +454,15 @@ FEATURE_FLAGS: Dict[str, bool] = {}
 # from flask import g, request
 # def GET_FEATURE_FLAGS_FUNC(feature_flags_dict: Dict[str, bool]) -> Dict[str, bool]:
 #     if hasattr(g, "user") and g.user.is_active:
-#         feature_flags_dict['some_feature'] = g.user and g.user.get_id() == 5
+#         feature_flags_dict["some_feature"] = g.user and g.user.get_id() == 5
 #     return feature_flags_dict
 GET_FEATURE_FLAGS_FUNC: Optional[Callable[[Dict[str, bool]], Dict[str, bool]]] = None
 # A function that receives a feature flag name and an optional default value.
-# Has a similar utility to GET_FEATURE_FLAGS_FUNC but it's useful to not force the
+# Has a similar utility to GET_FEATURE_FLAGS_FUNC but it"s useful to not force the
 # evaluation of all feature flags when just evaluating a single one.
 #
 # Note that the default `get_feature_flags` will evaluate each feature with this
-# callable when the config key is set, so don't use both GET_FEATURE_FLAGS_FUNC
+# callable when the config key is set, so don"t use both GET_FEATURE_FLAGS_FUNC
 # and IS_FEATURE_ENABLED_FUNC in conjunction.
 IS_FEATURE_ENABLED_FUNC: Optional[Callable[[str, Optional[bool]], bool]] = None
 # A function that expands/overrides the frontend `bootstrap_data.common` object.
@@ -483,13 +483,13 @@ COMMON_BOOTSTRAP_OVERRIDES_FUNC: Callable[
 # example code for "My custom warm to hot" color scheme
 # EXTRA_CATEGORICAL_COLOR_SCHEMES = [
 #     {
-#         "id": 'myVisualizationColors',
-#         "description": '',
-#         "label": 'My Visualization Colors',
+#         "id": "myVisualizationColors",
+#         "description": "",
+#         "label": "My Visualization Colors",
 #         "isDefault": True,
 #         "colors":
-#          ['#006699', '#009DD9', '#5AAA46', '#44AAAA', '#DDAA77', '#7799BB', '#88AA77',
-#          '#552288', '#5AAA46', '#CC7788', '#EEDD55', '#9977BB', '#BBAA44', '#DDCCDD']
+#          ["#006699", "#009DD9", "#5AAA46", "#44AAAA", "#DDAA77", "#7799BB", "#88AA77",
+#          "#552288", "#5AAA46", "#CC7788", "#EEDD55", "#9977BB", "#BBAA44", "#DDCCDD"]
 #     }]
 
 # This is merely a default
@@ -501,13 +501,13 @@ EXTRA_CATEGORICAL_COLOR_SCHEMES: List[Dict[str, Any]] = []
 #   "borderRadius": 4,
 #   "colors": {
 #     "primary": {
-#       "base": 'red',
+#       "base": "red",
 #     },
 #     "secondary": {
-#       "base": 'green',
+#       "base": "green",
 #     },
 #     "grayscale": {
-#       "base": 'orange',
+#       "base": "orange",
 #     }
 #   }
 # }
@@ -517,14 +517,14 @@ THEME_OVERRIDES: Dict[str, Any] = {}
 # EXTRA_SEQUENTIAL_COLOR_SCHEMES is used for adding custom sequential color schemes
 # EXTRA_SEQUENTIAL_COLOR_SCHEMES =  [
 #     {
-#         "id": 'warmToHot',
-#         "description": '',
+#         "id": "warmToHot",
+#         "description": "",
 #         "isDiverging": True,
-#         "label": 'My custom warm to hot',
+#         "label": "My custom warm to hot",
 #         "isDefault": True,
 #         "colors":
-#          ['#552288', '#5AAA46', '#CC7788', '#EEDD55', '#9977BB', '#BBAA44', '#DDCCDD',
-#          '#006699', '#009DD9', '#5AAA46', '#44AAAA', '#DDAA77', '#7799BB', '#88AA77']
+#          ["#552288", "#5AAA46", "#CC7788", "#EEDD55", "#9977BB", "#BBAA44", "#DDCCDD",
+#          "#006699", "#009DD9", "#5AAA46", "#44AAAA", "#DDAA77", "#7799BB", "#88AA77"]
 #     }]
 
 # This is merely a default
@@ -605,7 +605,7 @@ CORS_OPTIONS: Dict[Any, Any] = {}
 # than 6 slices in dashboard, a lot of time fetch requests are queued up and wait for
 # next available socket. PR #5039 is trying to allow domain sharding for Superset,
 # and this feature will be enabled by configuration only (by default Superset
-# doesn't allow cross-domain request).
+# doesn"t allow cross-domain request).
 SUPERSET_WEBSERVER_DOMAINS = None
 
 # Allowed format types for upload on Database view
@@ -625,21 +625,21 @@ CSV_EXPORT = {"encoding": "utf-8"}
 # List of time grains to disable in the application (see list of builtin
 # time grains in superset/db_engine_specs.builtin_time_grains).
 # For example: to disable 1 second time grain:
-# TIME_GRAIN_DENYLIST = ['PT1S']
+# TIME_GRAIN_DENYLIST = ["PT1S"]
 TIME_GRAIN_DENYLIST: List[str] = []
 
 # Additional time grains to be supported using similar definitions as in
 # superset/db_engine_specs.builtin_time_grains.
 # For example: To add a new 2 second time grain:
-# TIME_GRAIN_ADDONS = {'PT2S': '2 second'}
+# TIME_GRAIN_ADDONS = {"PT2S": "2 second"}
 TIME_GRAIN_ADDONS: Dict[str, str] = {}
 
 # Implementation of additional time grains per engine.
 # The column to be truncated is denoted `{col}` in the expression.
 # For example: To implement 2 second time grain on clickhouse engine:
 # TIME_GRAIN_ADDON_EXPRESSIONS = {
-#     'clickhouse': {
-#         'PT2S': 'toDateTime(intDiv(toUInt32(toDateTime({col})), 2)*2)'
+#     "clickhouse": {
+#         "PT2S": "toDateTime(intDiv(toUInt32(toDateTime({col})), 2)*2)"
 #     }
 # }
 TIME_GRAIN_ADDON_EXPRESSIONS: Dict[str, Dict[str, str]] = {}
@@ -647,7 +647,7 @@ TIME_GRAIN_ADDON_EXPRESSIONS: Dict[str, Dict[str, str]] = {}
 # ---------------------------------------------------
 # List of viz_types not allowed in your environment
 # For example: Disable pivot table and treemap:
-#  VIZ_TYPE_DENYLIST = ['pivot_table', 'treemap']
+#  VIZ_TYPE_DENYLIST = ["pivot_table", "treemap"]
 # ---------------------------------------------------
 
 VIZ_TYPE_DENYLIST: List[str] = []
@@ -728,7 +728,7 @@ DASHBOARD_AUTO_REFRESH_MODE: Literal["fetch", "force"] = "force"
 
 
 # Default celery config is to use SQLA as a broker, in a production setting
-# you'll want to use a proper broker as specified here:
+# you"ll want to use a proper broker as specified here:
 # http://docs.celeryproject.org/en/latest/getting-started/brokers/index.html
 
 
@@ -845,15 +845,15 @@ SQLLAB_CTAS_NO_LIMIT = False
 # This is move involved example where depending on the database you can leverage data
 # available to assign schema for the CTA query:
 # def compute_schema_name(database: Database, user: User, schema: str, sql: str) -> str:
-#     if database.name == 'mysql_payments_slave':
-#         return 'tmp_superset_schema'
-#     if database.name == 'presto_gold':
+#     if database.name == "mysql_payments_slave":
+#         return "tmp_superset_schema"
+#     if database.name == "presto_gold":
 #         return user.username
-#     if database.name == 'analytics':
-#         if 'analytics' in [r.name for r in user.roles]:
-#             return 'analytics_cta'
+#     if database.name == "analytics":
+#         if "analytics" in [r.name for r in user.roles]:
+#             return "analytics_cta"
 #         else:
-#             return f'tmp_{schema}'
+#             return f"tmp_{schema}"
 # Function accepts database object, user object, schema name and sql that will be run.
 SQLLAB_CTAS_SCHEMA_NAME_FUNC: Optional[
     Callable[["Database", "models.User", str, str], str]
@@ -870,7 +870,7 @@ RESULTS_BACKEND: Optional[BaseCache] = None
 RESULTS_BACKEND_USE_MSGPACK = True
 
 # The S3 bucket where you want to store your external hive tables created
-# from CSV files. For example, 'companyname-superset'
+# from CSV files. For example, "companyname-superset"
 CSV_TO_HIVE_UPLOAD_S3_BUCKET = None
 
 # The directory within the bucket specified above that will
@@ -899,7 +899,7 @@ UPLOADED_CSV_HIVE_NAMESPACE: Optional[str] = None
 # Allowed schemas will be a union of schemas_allowed_for_file_upload
 # db configuration and a result of this function.
 
-# mypy doesn't catch that if case ensures list content being always str
+# mypy doesn"t catch that if case ensures list content being always str
 ALLOWED_USER_CSV_SCHEMA_FUNC: Callable[["Database", "models.User"], List[str]] = (
     lambda database, user: [UPLOADED_CSV_HIVE_NAMESPACE]
     if UPLOADED_CSV_HIVE_NAMESPACE
@@ -914,7 +914,7 @@ CSV_DEFAULT_NA_NAMES = list(STR_NA_VALUES)
 # meaning values for existing keys get overwritten by the content of this
 # dictionary. Exposing functionality through JINJA_CONTEXT_ADDONS has security
 # implications as it opens a window for a user to execute untrusted code.
-# It's important to make sure that the objects exposed (as well as objects attached
+# It"s important to make sure that the objects exposed (as well as objects attached
 # to those objets) are harmless. We recommend only exposing simple/pure functions that
 # return native types.
 JINJA_CONTEXT_ADDONS: Dict[str, Callable[..., Any]] = {}
@@ -922,7 +922,7 @@ JINJA_CONTEXT_ADDONS: Dict[str, Callable[..., Any]] = {}
 # A dictionary of macro template processors (by engine) that gets merged into global
 # template processors. The existing template processors get updated with this
 # dictionary, which means the existing keys get overwritten by the content of this
-# dictionary. The customized addons don't necessarily need to use Jinja templating
+# dictionary. The customized addons don"t necessarily need to use Jinja templating
 # language. This allows you to define custom logic to process templates on a per-engine
 # basis. Example value = `{"presto": CustomPrestoTemplateProcessor}`
 CUSTOM_TEMPLATE_PROCESSORS: Dict[str, Type[BaseTemplateProcessor]] = {}
@@ -939,7 +939,7 @@ CONFIG_PATH_ENV_VAR = "SUPERSET_CONFIG_PATH"
 # example: FLASK_APP_MUTATOR = lambda x: x.before_request = f
 FLASK_APP_MUTATOR = None
 
-# Set this to false if you don't want users to be able to request/grant
+# Set this to false if you don"t want users to be able to request/grant
 # datasource access requests from/to other users.
 ENABLE_ACCESS_REQUEST = False
 
@@ -1024,7 +1024,7 @@ DASHBOARD_TEMPLATE_ID = None
 #           uri.username = user.email
 #       return uri, params
 #
-# Note that the returned uri and params are passed directly to sqlalchemy's
+# Note that the returned uri and params are passed directly to sqlalchemy"s
 # as such `create_engine(url, **params)`
 DB_CONNECTION_MUTATOR = None
 
@@ -1123,8 +1123,8 @@ DOCUMENTATION_TEXT = "Documentation"
 DOCUMENTATION_ICON = None  # Recommended size: 16x16
 
 # What is the Last N days relative in the time selector to:
-# 'today' means it is midnight (00:00:00) in the local timezone
-# 'now' means it is relative to the query issue time
+# "today" means it is midnight (00:00:00) in the local timezone
+# "now" means it is relative to the query issue time
 # If both start and end time is set to now, this will make the time
 # filter a moving window. By only setting the end time to now,
 # start time will be set to midnight, while end will be relative to
@@ -1183,7 +1183,7 @@ RLS_FORM_QUERY_REL_FIELDS: Optional[Dict[str, List[List[Any]]]] = None
 #
 SESSION_COOKIE_HTTPONLY = True  # Prevent cookie from being read by frontend JS?
 SESSION_COOKIE_SECURE = False  # Prevent cookie from being transmitted over non-tls?
-SESSION_COOKIE_SAMESITE = "Lax"  # One of [None, 'None', 'Lax', 'Strict']
+SESSION_COOKIE_SAMESITE = "Lax"  # One of [None, "None", "Lax", "Strict"]
 
 # Cache static resources.
 SEND_FILE_MAX_AGE_DEFAULT = int(timedelta(days=365).total_seconds())
@@ -1292,7 +1292,7 @@ ADVANCED_DATA_TYPES: Dict[str, AdvancedDataType] = {
 # -------------------------------------------------------------------
 # *                WARNING:  STOP EDITING  HERE                    *
 # -------------------------------------------------------------------
-# Don't add config values below this line since local configs won't be
+# Don"t add config values below this line since local configs won"t be
 # able to override them.
 if CONFIG_PATH_ENV_VAR in os.environ:
     # Explicitly import config module that is not necessarily in pythonpath; useful

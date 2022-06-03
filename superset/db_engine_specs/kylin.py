@@ -45,8 +45,8 @@ class KylinEngineSpec(BaseEngineSpec):  # pylint: disable=abstract-method
     ) -> Optional[str]:
         tt = target_type.upper()
         if tt == utils.TemporalType.DATE:
-            return f"CAST('{dttm.date().isoformat()}' AS DATE)"
+            return f"CAST("{dttm.date().isoformat()}" AS DATE)"
         if tt == utils.TemporalType.TIMESTAMP:
             datetime_fomatted = dttm.isoformat(sep=" ", timespec="seconds")
-            return f"""CAST('{datetime_fomatted}' AS TIMESTAMP)"""
+            return f"""CAST("{datetime_fomatted}" AS TIMESTAMP)"""
         return None

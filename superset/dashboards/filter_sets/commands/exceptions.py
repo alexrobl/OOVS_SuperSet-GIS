@@ -35,7 +35,7 @@ class FilterSetNotFoundError(ObjectNotFoundError):
 
 
 class FilterSetCreateFailedError(CreateFailedError):
-    base_message = 'CreateFilterSetCommand of dashboard "%s" failed: '
+    base_message = "CreateFilterSetCommand of dashboard "%s" failed: "
 
     def __init__(
         self, dashboard_id: str, reason: str = "", exception: Optional[Exception] = None
@@ -44,7 +44,7 @@ class FilterSetCreateFailedError(CreateFailedError):
 
 
 class FilterSetUpdateFailedError(UpdateFailedError):
-    base_message = 'UpdateFilterSetCommand of filter_set "%s" failed: '
+    base_message = "UpdateFilterSetCommand of filter_set "%s" failed: "
 
     def __init__(
         self, filterset_id: str, reason: str = "", exception: Optional[Exception] = None
@@ -53,7 +53,7 @@ class FilterSetUpdateFailedError(UpdateFailedError):
 
 
 class FilterSetDeleteFailedError(DeleteFailedError):
-    base_message = 'DeleteFilterSetCommand of filter_set "%s" failed: '
+    base_message = "DeleteFilterSetCommand of filter_set "%s" failed: "
 
     def __init__(
         self, filterset_id: str, reason: str = "", exception: Optional[Exception] = None
@@ -86,7 +86,7 @@ class DashboardIdInconsistencyError(FilterSetCreateFailedError):
 
 
 class FilterSetForbiddenError(ForbiddenError):
-    message_format = 'Changing FilterSet "{}" is forbidden: {}'
+    message_format = "Changing FilterSet "{}" is forbidden: {}"
 
     def __init__(
         self, filterset_id: str, reason: str = "", exception: Optional[Exception] = None

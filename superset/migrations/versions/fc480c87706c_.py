@@ -17,7 +17,7 @@
 """empty message
 
 Revision ID: fc480c87706c
-Revises: ('4451805bbaa1', '1d9e835a84f9')
+Revises: ("4451805bbaa1", "1d9e835a84f9")
 Create Date: 2018-07-22 11:50:54.174443
 
 """

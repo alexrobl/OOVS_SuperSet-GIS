@@ -41,12 +41,12 @@ class AsyncEventsRestApi(BaseApi):
     @permission_name("list")
     def events(self) -> Response:
         """
-        Reads off of the Redis async events stream, using the user's JWT token and
+        Reads off of the Redis async events stream, using the user"s JWT token and
         optional query params for last event received.
         ---
         get:
           description: >-
-            Reads off of the Redis events stream, using the user's JWT token and
+            Reads off of the Redis events stream, using the user"s JWT token and
             optional query params for last event received.
           parameters:
           - in: query
@@ -84,9 +84,9 @@ class AsyncEventsRestApi(BaseApi):
                                 result_url:
                                   type: string
             401:
-              $ref: '#/components/responses/401'
+              $ref: "#/components/responses/401"
             500:
-              $ref: '#/components/responses/500'
+              $ref: "#/components/responses/500"
         """
         try:
             async_channel_id = async_query_manager.parse_jwt_from_request(request)[

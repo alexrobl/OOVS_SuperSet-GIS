@@ -16,7 +16,7 @@
 # under the License.
 dashboard_title: Sales Dashboard
 description: null
-css: ''
+css: ""
 slug: null
 uuid: 04f79081-fb49-7bac-7f14-cc76cd2ad93b
 position:
@@ -384,9 +384,9 @@ metadata:
   timed_refresh_immune_slices: []
   expanded_slices: {}
   refresh_frequency: 0
-  default_filters: '{"671": {"__time_range": "No filter"}}'
+  default_filters: "{"671": {"__time_range": "No filter"}}"
   filter_scopes:
-    '671':
+    "671":
       ProductLine:
         scope:
         - TAB-4fthLQmdX
@@ -401,15 +401,15 @@ metadata:
         immune: []
   color_scheme: supersetColors
   label_colors:
-    Medium: '#1FA8C9'
-    Small: '#454E7C'
-    Large: '#5AC189'
-    SUM(SALES): '#1FA8C9'
-    Classic Cars: '#454E7C'
-    Vintage Cars: '#5AC189'
-    Motorcycles: '#FF7F44'
-    Trucks and Buses: '#666666'
-    Planes: '#E04355'
-    Ships: '#FCC700'
-    Trains: '#A868B7'
+    Medium: "#1FA8C9"
+    Small: "#454E7C"
+    Large: "#5AC189"
+    SUM(SALES): "#1FA8C9"
+    Classic Cars: "#454E7C"
+    Vintage Cars: "#5AC189"
+    Motorcycles: "#FF7F44"
+    Trucks and Buses: "#666666"
+    Planes: "#E04355"
+    Ships: "#FCC700"
+    Trains: "#A868B7"
 version: 1.0.0

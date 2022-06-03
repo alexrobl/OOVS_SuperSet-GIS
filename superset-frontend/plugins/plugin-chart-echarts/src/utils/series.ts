@@ -26,11 +26,11 @@ import {
   GenericDataType,
   NumberFormatter,
   TimeFormatter,
-} from '@superset-ui/core';
-import { format, LegendComponentOption, SeriesOption } from 'echarts';
-import { NULL_STRING, TIMESERIES_CONSTANTS } from '../constants';
-import { LegendOrientation, LegendType } from '../types';
-import { defaultLegendPadding } from '../defaults';
+} from "@superset-ui/core";
+import { format, LegendComponentOption, SeriesOption } from "echarts";
+import { NULL_STRING, TIMESERIES_CONSTANTS } from "../constants";
+import { LegendOrientation, LegendType } from "../types";
+import { defaultLegendPadding } from "../defaults";
 
 function isDefined<T>(value: T | undefined | null): boolean {
   return value !== undefined && value !== null;
@@ -95,7 +95,7 @@ export function formatSeriesName(
   if (name === undefined || name === null) {
     return NULL_STRING;
   }
-  if (typeof name === 'boolean') {
+  if (typeof name === "boolean") {
     return name.toString();
   }
   if (name instanceof Date || coltype === GenericDataType.TEMPORAL) {
@@ -103,7 +103,7 @@ export function formatSeriesName(
 
     return timeFormatter ? timeFormatter(d) : d.toISOString();
   }
-  if (typeof name === 'number') {
+  if (typeof name === "number") {
     return numberFormatter ? numberFormatter(name) : name.toString();
   }
   return name;
@@ -112,7 +112,7 @@ export function formatSeriesName(
 export const getColtypesMapping = ({
   coltypes = [],
   colnames = [],
-}: Pick<ChartDataResponseResult, 'coltypes' | 'colnames'>): Record<
+}: Pick<ChartDataResponseResult, "coltypes" | "colnames">): Record<
   string,
   GenericDataType
 > =>
@@ -142,7 +142,7 @@ export function extractGroupbyLabel({
         ...(coltypeMapping[val] && { coltype: coltypeMapping[val] }),
       }),
     )
-    .join(', ');
+    .join(", ");
 }
 
 export function getLegendProps(
@@ -155,8 +155,8 @@ export function getLegendProps(
     orient: [LegendOrientation.Top, LegendOrientation.Bottom].includes(
       orientation,
     )
-      ? 'horizontal'
-      : 'vertical',
+      ? "horizontal"
+      : "vertical",
     show,
     type,
   };
@@ -197,7 +197,7 @@ export function getChartPadding(
   } else if (
     margin === null ||
     margin === undefined ||
-    typeof margin === 'string'
+    typeof margin === "string"
   ) {
     legendMargin = defaultLegendPadding[orientation];
   } else {
@@ -221,7 +221,7 @@ export function dedupSeries(series: SeriesOption[]): SeriesOption[] {
     if (id === undefined) return row;
     id = String(id);
     const count = counter.get(id) || 0;
-    const suffix = count > 0 ? ` (${count})` : '';
+    const suffix = count > 0 ? ` (${count})` : "";
     counter.set(id, count + 1);
     return {
       ...row,
@@ -236,18 +236,18 @@ export function sanitizeHtml(text: string): string {
 
 // TODO: Better use other method to maintain this state
 export const currentSeries = {
-  name: '',
-  legend: '',
+  name: "",
+  legend: "",
 };
 
 export function getAxisType(
   dataType?: GenericDataType,
-): 'time' | 'value' | 'category' {
+): "time" | "value" | "category" {
   if (dataType === GenericDataType.TEMPORAL) {
-    return 'time';
+    return "time";
   }
   if (dataType === GenericDataType.NUMERIC) {
-    return 'value';
+    return "value";
   }
-  return 'category';
+  return "category";
 }
